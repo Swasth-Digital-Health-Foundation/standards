@@ -3638,7 +3638,7 @@ components:
            description: Total Approved Amount category wise
         claim_approval_type:
            type: string
-           $ref: 'https://www.hl7.org/fhir/valueset-ex-paymenttype'
+           $ref: 'https://www.hl7.org/fhir/valueset-ex-paymenttype.json'
            description: Whether this represents partial or complete payment of the benefits payable.
         approved_amount:
            type: number
@@ -4230,7 +4230,7 @@ components:
        
         claim_approval_type:
            type: string
-           $ref: 'https://www.hl7.org/fhir/valueset-ex-paymenttype'
+           $ref: 'https://www.hl7.org/fhir/valueset-ex-paymenttype.json'
            description: Whether this represents partial or complete payment of the benefits payable.
         approved_amount:
            type: number
