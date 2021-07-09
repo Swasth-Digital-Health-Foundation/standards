@@ -11,7 +11,7 @@ info:
     url: 'http://www.apache.org/licenses/LICENSE-2.0.html'
   version: 1.0.0
 externalDocs:
-  description: Health Claims Platform Technical Standards
+  description: Health Claims Exchange Platform Technical Standards
   url: >-
     https://docs.google.com/document/d/1oe9a6zDhhaz65Q_KiWp_wv2g4PWZW_gZjI9PO4vjAQ0/edit#
 servers:
@@ -1654,7 +1654,6 @@ paths:
                 - tpaTMSId
                 - payerId
                 - tpaId
-                - tpaTMSId
                 - header
                 - detail
               type: object
@@ -1764,9 +1763,7 @@ paths:
                 - payerId
                 - tpaId
                 - transactionId
-                - tpaTMSId
                 - transactionstatus
-            
               type: object
               properties:
                 requestId:
@@ -1790,7 +1787,6 @@ paths:
                   description: payer tenant Id
                 tpaId:
                   type: string
-                 
                 transactionId:
                   type: string
                 transactionstatus:
@@ -1887,9 +1883,7 @@ paths:
                 - payerId
                 - tpaId
                 - transactionId
-                - tpaTMSId
                 - transactionstatus
-            
               type: object
               properties:
                 requestId:
@@ -2006,10 +2000,7 @@ paths:
                 - tpaId
                 - payerTMSId
                 - transactionId
-                - tpaTMSId
                 - transactionstatus
-                
-            
               type: object
               properties:
                 requestId:
@@ -3484,8 +3475,6 @@ components:
         - claim_status
         - use
         - priority
-        - preauth_response_outcome
-        - claimResponse_item_adjudication_reason 
         - approved_amount_category_wise
         - claim_approval_type
         - approved_amount
@@ -3638,8 +3627,7 @@ components:
            description: Total Approved Amount category wise
         claim_approval_type:
            type: string
-           $ref: 'https://www.hl7.org/fhir/valueset-ex-paymenttype.json'
-           description: Whether this represents partial or complete payment of the benefits payable.
+           description: Whether this represents partial or complete payment of the benefits payable according to the payment type valueset at https://www.hl7.org/fhir/valueset-ex-paymenttype.
         approved_amount:
            type: number
            multipleOf: 0.01
@@ -3747,7 +3735,6 @@ components:
         - claim_status
         - claimperiod
         - claim_type
-        - payee_type
         - priority
         - admissiondatetime
         - dischargedatetime
@@ -4070,13 +4057,10 @@ components:
         - claimResponse_item_adjudication_reason
         - adjudication_category
         - payer_type
-        - payee_type
         - claim_payee_id
         - claim_status
         - use
         - priority
-        - claim_response_outcome
-        - claimResponse_item_adjudication_reason 
         - claim_payment_summary_category
         - total_amount
         - approved_amount_category_wise
@@ -4226,12 +4210,9 @@ components:
            type: string
         claim_payment_summary_categories:
            type: string
-           
-       
         claim_approval_type:
            type: string
-           $ref: 'https://www.hl7.org/fhir/valueset-ex-paymenttype.json'
-           description: Whether this represents partial or complete payment of the benefits payable.
+           description: Whether this represents partial or complete payment of the benefits payable according to the payment type valueset at https://www.hl7.org/fhir/valueset-ex-paymenttype
         approved_amount:
            type: number
            multipleOf: 0.01
@@ -4415,10 +4396,8 @@ components:
           format: date
         provider_id:
           type: string
-          
         recipient_id:
           type: string
-      
  
     PaymentReconciliation:
       required:
@@ -4430,7 +4409,6 @@ components:
         - payor_allocated_claim_identifier 
         - payment_reconciliation_created_date
         - payment_reconciliation_identifier
-        - payment_reconciliation_status
         - payer_id
         - payment_reconciliation_outcome
         - payment_date
@@ -4442,7 +4420,6 @@ components:
         - payment_reconciliation_process_note
         - payment_process_note_text
         - payment_process_note_type
-   
       type: object
       properties:
        payment_reconciliation_id:
@@ -4495,17 +4472,13 @@ components:
           type: string
        payment_reconciliation_related_previous:
           type: string
-        
        beneficiary_id:
           type: string
-          
-      payment_reconciliation_process_note:
+       payment_reconciliation_process_note:
           type: string
-
-      payment_process_note_text:
+       payment_process_note_text:
           type: string
-
-      payment_process_note_type:
+       payment_process_note_type:
           type: string
       
     item:
