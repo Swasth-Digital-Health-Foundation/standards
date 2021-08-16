@@ -5,7 +5,7 @@ info:
     The Health Claims Platform (HCP) is a digital infrastructure designed to
     enable automated, data-driven management of health insurance claims in an
     open ecosystem. These API specifications enable all actors to interact with
-    the HCP
+    the HCP.
   license:
     name: Apache 2.0
     url: 'http://www.apache.org/licenses/LICENSE-2.0.html'
@@ -22,183 +22,21 @@ servers:
 tags:
   - name: Coverage Eligibility APIs
     description: >-
-      APIs for coverage eligibility request & response
+      APIs covering the Coverage Eligibility request & response use cases
   - name: Claims APIs
     description: >-
       APIs for Pre-Auth & Claim submission workflows and search
   - name: Payment APIs
     description: >-
       APIs for sending payment notices, reconcilation and for querying payment status
-  - name: Registry APIs
-    description: This registry stores key details about the providers,Payer,Exchange,Obderver and Regulator.
 paths:
-
-  /oraganisation/create:
-    post:
-      tags:
-        - Registry APIs
-      description: Create Provider Registry Details
-      security:
-        - bearer_auth: []
-      requestBody:
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                requestId:
-                  type: string
-                  format: uuid
-                timestamp:
-                  type: string
-                  format: date-time
-                provider:
-                  $ref: '#/components/schemas/OrganisationRegistry'
-      responses:
-        '200':
-          description: OK
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/SuccessResponse'
-        '400':
-          description: The request was formatted incorrectly
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ErrorResponse'
-        '404':
-          description: The Request was not found
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ErrorResponse'
-        '500':
-          description: Downstream systems down/unhandled exceptions.
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ErrorResponse'
-  /organisation/search:
-    post:
-      tags:
-        - Registry APIs
-      description: Get Provider Registry Details
-      security:
-        - bearer_auth: []
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/OrganisationSearchRegistry'
-      responses:
-        '200':
-          description: OK
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/SuccessResponse'
-        '400':
-          description: The request was formatted incorrectly
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ErrorResponse'
-        '404':
-          description: The Request was not found
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ErrorResponse'
-        '500':
-          description: Downstream systems down/unhandled exceptions.
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ErrorResponse'
-  /organisation/update:
-    put:
-      tags:
-        - Registry APIs
-      description: Update Provider Registry Details
-      security:
-        - bearer_auth: []
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/OrganisationUpdateRegistry'
-      responses:
-        '200':
-          description: OK
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/SuccessResponse'
-        '400':
-          description: The request was formatted incorrectly
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ErrorResponse'
-        '404':
-          description: The Request was not found
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ErrorResponse'
-        '500':
-          description: Downstream systems down/unhandled exceptions.
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ErrorResponse'
-  /organisation/{participant-code}:
-    delete:
-      tags:
-        - Registry APIs
-      description: Delete Provider Registry Details
-      security:
-        - bearer_auth: []
-      parameters:
-        - in: path
-          name: participant-code
-          schema:
-            type: string
-          required: true
-      responses:
-        '200':
-          description: OK
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/SuccessResponse'
-        '400':
-          description: The request was formatted incorrectly
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ErrorResponse'
-        '404':
-          description: The Request was not found
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ErrorResponse'
-        '500':
-          description: Downstream systems down/unhandled exceptions.
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ErrorResponse'
-                
   /coverageeligibility/check:
     post:
       tags:
         - Coverage Eligibility APIs
       description: >-
-        This API is intended for the provider TMS to post coverage eligibility
-        request to the HCP gateway
+        This API is for the providers to post coverage eligibility
+        request to the HCP gateway and for HCP gateway to route the same request to payors.
       requestBody:
         content:
           application/json:
@@ -244,9 +82,7 @@ paths:
       tags:
         - Coverage Eligibility APIs
       description: >-
-        This API is intended for the HCP to post queries regarding benificiary
-        ID, payer ID, eligibiilty and coverage limits from the HCP Gateway to
-        the payer TMS
+        This is the callback API on HCP gateways and on Provider systems which will be called by Payor systems and HCP gateways to return the response for coverage eligibility requests.
       requestBody:
         content:
           application/json:
@@ -292,9 +128,7 @@ paths:
       tags:
         - Claims APIs
       description: >-
-        API call made by Provider TMS to request the new or modified
-        preauthorization/claims eobject submission. This API will be deployed on
-        the HCP Gateway which will be called by provider TMS
+        This API is for providers to submit pre-authorization requests (and resubmit updated request) to HCP gateway and for HCP gateway to route the same request to payors.
       requestBody:
         content:
           application/json:
@@ -340,7 +174,7 @@ paths:
       tags:
         - Claims APIs
       description: >-
-        Payer/TPA TMS return the response against the preauthorization request API to the HCP Gateway. The HCP Gateway ID will be sent in the request header. The request body will contain a “resp” section with the original request id which acts as correlation id to the original request.
+        This is the callback API on HCP gateways and on Provider systems which will be called by Payor systems and HCP gateways to return the response for Pre-Authorization requests.
       requestBody:
         content:
           application/json:
@@ -386,9 +220,7 @@ paths:
       tags:
         - Claims APIs
       description: >-
-        API call made by Provider TMS to request the new or modified
-        preauthorization/claims eobject submission. This API will be deployed on
-        the HCP Gateway which will be called by provider TMS
+        This API is for providers to query for status of Pre-Authorisation requests submitted by them. This API is available on HCP gateways to accept the request from providers and on Payor systems to receive the request from HCP gateways.
       requestBody:
         content:
           application/json:
@@ -433,7 +265,7 @@ paths:
       tags:
         - Claims APIs
       description: >-
-        Payer/TPA TMS return the response against the preauthorization request API to the HCP Gateway. The HCP Gateway ID will be sent in the request header. The request body will contain a “resp” section with the original request id which acts as correlation id to the original request.
+        This is the callback API on HCP gateways and Provider systems to receive the response for PreAuth search requests.
       requestBody:
         content:
           application/json:
@@ -479,9 +311,7 @@ paths:
       tags:
         - Claims APIs
       description: >-
-        API call made by Provider TMS to request the new or modified
-        claims eobject submission. This API will be deployed on
-        the HCP Gateway which will be called by provider TMS
+        This API is for providers to submit claim requests (and resubmit updated request) to HCP gateway and for HCP gateway to route the same request to payors.
       requestBody:
         content:
           application/json:
@@ -526,7 +356,7 @@ paths:
       tags:
         - Claims APIs
       description: >-
-        Payer/TPA TMS return the response against the claim request API to the HCP Gateway. The HCP Gateway ID will be sent in the request header. The request body will contain a “resp” section with the original request id which acts as correlation id to the original request.
+        This is the callback API on HCP gateways and on Provider systems which will be called by Payor systems and HCP gateways to return the response for Claim requests.
       requestBody:
         content:
           application/json:
@@ -572,9 +402,7 @@ paths:
       tags:
         - Claims APIs
       description: >-
-        API call made by Provider TMS to request the new or modified
-        claims eobject submission. This API will be deployed on
-        the HCP Gateway which will be called by provider TMS
+        This API is for providers to query for status of Claim requests submitted by them. This API is available on HCP gateways to accept the request from providers and on Payor systems to receive the request from HCP gateways.
       requestBody:
         content:
           application/json:
@@ -619,9 +447,7 @@ paths:
       tags:
         - Claims APIs
       description: >-
-        API call made by Provider TMS to request the new or modified
-        claims eobject submission. This API will be deployed on
-        the HCP Gateway which will be called by provider TMS
+        This is the callback API on HCP gateways and Provider systems to receive the response for Claim search requests.
       requestBody:
         content:
           application/json:
@@ -667,7 +493,7 @@ paths:
       tags:
         - Payment APIs
       description: >-
-        API call made by Payer/TPA TMS to send the payment eobject submission request through HCP gateway to provider TMS. This API will be deployed on the HCP Gateway which will be called by payer tms
+        This API is for Payors to send Payment notification/reconciliation objects to Providers via the HCP gateway. This API is available on HCP gateways and Provider systems.
       requestBody:
         content:
           application/json:
@@ -712,7 +538,7 @@ paths:
       tags:
         - Payment APIs
       description: >-
-        Acknowledgement Callback api called by provider Tms for the acknowledgement of the payment object  to the HCP Gateway. 
+        This is callback API for payment acknowledgement by the Providers. This API is available on HCP gateways and Payor systems.
       requestBody:
         content:
           application/json:
@@ -758,7 +584,7 @@ paths:
       tags:
         - Payment APIs
       description: >-
-        API call made by Payer/TPA TMS to send the payment eobject submission request through HCP gateway to provider TMS. This API will be deployed on the HCP Gateway which will be called by payer tms
+        This API is for providers to query for Payment status for processed claims. This API is available on HCP gateways to accept the request from providers and on Payor systems to receive the request from HCP gateways.
       requestBody:
         content:
           application/json:
@@ -803,7 +629,7 @@ paths:
       tags:
         - Payment APIs
       description: >-
-        Acknowledgement Callback api called by provider Tms for the acknowledgement of the payment object  to the HCP Gateway. 
+        This is the callback API on HCP gateways and Provider systems to receive the response for Payment search requests.
       requestBody:
         content:
           application/json:
@@ -1208,121 +1034,6 @@ components:
       type: string
       description: List of PaymentNotice FHIR objects encrypted and Base64 encoded as per the guidelines provided in HCP Protocol document. Structure definition of PaymentNotice resource is available [here](http://hl7.org/fhir/R4/claimresponse.html)
       example: "eyJhbGciOiJSU0EtT0FFUCIsImVuYyI6IkEyNTZHQ00ifQ.OKOawDo13gRp2ojaHV7LFpZcgV7T6DVZKTyKOMTYUmKoTCVJRgckCL9kiMT03JGeipsEdY3mx_etLbbWSrFr05kLzcSr4qKAq7YN7e9jwQRb23nfa6c9d-StnImGyFDbSv04uVuxIp5Zms1gNxKKK2Da14B8S4rzVRltdYwam_lDp5XnZAYpQdb76FdIKLaVmqgfwX7XWRxv2322i-vDxRfqNzo_tETKzpVLzfiwQyeyPGLBIO56YJ7eObdv0je81860ppamavo35UgoRdbYaBcoh9QcfylQr66oc6vFWXRcZ_ZT2LawVCWTIy3brGPi6UklfCpIMfIjf7iGdXKHzg.48V1_ALb6US04U3b.5eym8TW_c8SuK0ltJ3rpYIzOeDQz7TALvtu6UG9oMo4vpzs9tX_EFShS8iB7j6jiSdiwkIr3ajwQzaBtQD_A.XFBoMYUZodetZdvTiFvSkQ"
-    
-    OrganisationRegistry:
-      required:
-        - participate_name
-        - status
-        - signing_cert_path
-        - callback_url
-        - payment_details
-        - type
-      type: object
-      properties:
-        hfr_code:
-          type: string
-          description: Health Facility Registry code for the organisation - used to link the oraganisation record to HFR record
-        participant_name:
-          type: string
-          description: Human readable name for the participant
-        type:
-          type: string
-          example: Payor
-          description: Type of participant Payor.Provider, Regulator, Observer and Exchange
-        address:
-          type: object
-          description: Physical address of the facility including its geolocation 
-        email:
-          example: ["test1@test.co", "test2@test.co", "test3@test.co"]
-          description: Email ids for claims related communication
-        phone:
-          example: ["1234567890", "1234567890", "1234567890"]
-          description: Landline number of the provider
-        mobile:
-          example: ["1234567890", "1234567890", "1234567890"]
-          description: Mobile number for claims related communication
-        status:
-          type: array
-          items:
-            type: string
-            enum:
-            - Created
-            - Active
-            - InActive
-            - Blocked
-            default: Created
-          description: Current status of the provider on the instance
-        signing_cert_path:
-          type: string
-          description: uri/file path to signing certificate
-        callback_url:
-          type: string
-          description: Default callback url for responses
-        payment_details:
-          type: object
-          description: Default payment details (UPI or Ac Number + IFSC Code)
-    OrganisationUpdateRegistry:
-      type: object
-      properties:
-        participant_name:
-          type: string
-          description: Human readable name for the participant
-        hfr_code:
-          type: string
-          description: Health Facility Registry code for the organisation - used to link the oraganisation record to HFR record
-        type:
-          type: string
-          example: Payor
-          description: Type of participant
-        address:
-          type: object
-          description: Physical address of the facility including its geolocation 
-        email:
-          example: "test1@test.co"
-          description: Email ids for claims related communication
-        phone:
-          example: "9876543210"
-          description: Landline number of the provider
-        mobile:
-          example: "1234567890"
-          description: Mobile number for claims related communication
-        status:
-          type: array
-          items:
-            type: string
-            enum:
-            - Created
-            - Active
-            - InActive
-            - Blocked
-            default: Active
-          description: Current status of the provider on the instance
-        signing_cert_path:
-          type: string
-          description: uri/file path to signing certificate
-        callback_url:
-          type: string
-          description: Default callback url for responses
-        payment_details:
-          type: object
-          description: Default payment details (UPI or Ac Number + IFSC Code)
-    OrganisationSearchRegistry:
-      type: object
-      properties:
-        participant_name:
-          example: "test"
-        participant_code:
-          example: "test"
-        email:
-          example: "test1@test.co"
-        phone:
-          example: "9876543210"
-        mobile:
-          example: "1234567890"
-        type:
-          example: "Payor"
-        status:
-          example: "Active"
       
     ErrorResponse:
       required:
