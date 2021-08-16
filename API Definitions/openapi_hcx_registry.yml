@@ -1,0 +1,344 @@
+openapi: 3.0.1
+info:
+  title: Health Claims Registry APIs
+  description: >-
+    HCX registries will act as source of truth for participant information on the platform. These may be extended from already existing registries in the ecosystem, e.g. Provider registry may extend from National Health Facility Registry provided by NHA. These registries stores key details about the participants on the exchange who can exchange data through it.
+  version: 1.0.0
+servers:
+  - url: https://api.example.com
+    description: Mock server
+tags:
+  - name: Registry APIs
+    description: APIs provided by HCX registries
+paths:
+  
+  /oraganisation/create:
+    post:
+      tags:
+        - Registry APIs
+      description: Create Provider Registry Details
+      security:
+        - bearer_auth: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                requestId:
+                  type: string
+                  format: uuid
+                timestamp:
+                  type: string
+                  format: date-time
+                provider:
+                  $ref: '#/components/schemas/OrganisationRegistry'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SuccessResponse'
+        '400':
+          description: The request was formatted incorrectly
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '404':
+          description: The Request was not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '500':
+          description: Downstream systems down/unhandled exceptions.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+  /organisation/search:
+    post:
+      tags:
+        - Registry APIs
+      description: Get Provider Registry Details
+      security:
+        - bearer_auth: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/OrganisationSearchRegistry'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SuccessResponse'
+        '400':
+          description: The request was formatted incorrectly
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '404':
+          description: The Request was not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '500':
+          description: Downstream systems down/unhandled exceptions.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+  /organisation/update:
+    put:
+      tags:
+        - Registry APIs
+      description: Update Provider Registry Details
+      security:
+        - bearer_auth: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/OrganisationUpdateRegistry'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SuccessResponse'
+        '400':
+          description: The request was formatted incorrectly
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '404':
+          description: The Request was not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '500':
+          description: Downstream systems down/unhandled exceptions.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+  /organisation/{participant-code}:
+    delete:
+      tags:
+        - Registry APIs
+      description: Delete Provider Registry Details
+      security:
+        - bearer_auth: []
+      parameters:
+        - in: path
+          name: participant-code
+          schema:
+            type: string
+          required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SuccessResponse'
+        '400':
+          description: The request was formatted incorrectly
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '404':
+          description: The Request was not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '500':
+          description: Downstream systems down/unhandled exceptions.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+  
+components:
+  schemas:
+    
+    OrganisationRegistry:
+      required:
+        - participate_name
+        - status
+        - signing_cert_path
+        - callback_url
+        - payment_details
+        - type
+      type: object
+      properties:
+        hfr_code:
+          type: string
+          description: Health Facility Registry code for the organisation - used to link the oraganisation record to HFR record
+        participant_name:
+          type: string
+          description: Human readable name for the participant
+        type:
+          type: string
+          example: Payor
+          description: Type of participant Payor.Provider, Regulator, Observer and Exchange
+        address:
+          type: object
+          description: Physical address of the facility including its geolocation 
+        email:
+          example: ["test1@test.co", "test2@test.co", "test3@test.co"]
+          description: Email ids for claims related communication
+        phone:
+          example: ["1234567890", "1234567890", "1234567890"]
+          description: Landline number of the provider
+        mobile:
+          example: ["1234567890", "1234567890", "1234567890"]
+          description: Mobile number for claims related communication
+        status:
+          type: array
+          items:
+            type: string
+            enum:
+            - Created
+            - Active
+            - InActive
+            - Blocked
+            default: Created
+          description: Current status of the provider on the instance
+        signing_cert_path:
+          type: string
+          description: uri/file path to signing certificate
+        callback_url:
+          type: string
+          description: Default callback url for responses
+        payment_details:
+          type: object
+          description: Default payment details (UPI or Ac Number + IFSC Code)
+    OrganisationUpdateRegistry:
+      type: object
+      properties:
+        participant_name:
+          type: string
+          description: Human readable name for the participant
+        hfr_code:
+          type: string
+          description: Health Facility Registry code for the organisation - used to link the oraganisation record to HFR record
+        type:
+          type: string
+          example: Payor
+          description: Type of participant
+        address:
+          type: object
+          description: Physical address of the facility including its geolocation 
+        email:
+          example: "test1@test.co"
+          description: Email ids for claims related communication
+        phone:
+          example: "9876543210"
+          description: Landline number of the provider
+        mobile:
+          example: "1234567890"
+          description: Mobile number for claims related communication
+        status:
+          type: array
+          items:
+            type: string
+            enum:
+            - Created
+            - Active
+            - InActive
+            - Blocked
+            default: Active
+          description: Current status of the provider on the instance
+        signing_cert_path:
+          type: string
+          description: uri/file path to signing certificate
+        callback_url:
+          type: string
+          description: Default callback url for responses
+        payment_details:
+          type: object
+          description: Default payment details (UPI or Ac Number + IFSC Code)
+    OrganisationSearchRegistry:
+      type: object
+      properties:
+        participant_name:
+          example: "test"
+        participant_code:
+          example: "test"
+        email:
+          example: "test1@test.co"
+        phone:
+          example: "9876543210"
+        mobile:
+          example: "1234567890"
+        type:
+          example: "Payor"
+        status:
+          example: "Active"
+    
+    ErrorResponse:
+      required:
+        - error
+        - timestamp
+        - correlation_id
+      type: object
+      properties:
+        timestamp:
+          type: string
+          description: Unix timestamp when the response is sent.
+          example: "1629057611000"
+        correlation_id:
+          type: string
+          description: >-
+            The transaction identifier that was sent in the request is echoed
+            back to the requester.
+          format: uuid
+        error:
+          $ref: '#/components/schemas/Error'
+      description: This is a response to the ClaimForm API call
+    SuccessResponse:
+      required:
+        - timestamp
+        - correlation_id
+      type: object
+      properties:
+        timestamp:
+          type: string
+          description: Unix timestamp when the response is sent.
+          example: "1629057611000"
+        correlation_id:
+          type: string
+          description: >-
+            That is present in the transport header of the request.
+          format: uuid
+    Error:
+      type: object
+      properties:
+        code:
+          type: string
+          description: error code from the system - expected to be namespaced for better readability
+        message:
+          type: string
+          description: Short description of the error
+        trace:
+          type: string
+          description: Long description supporting the Code 
+    
+  securitySchemes:
+    bearer_auth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
