@@ -748,7 +748,7 @@
           "max": "1",
           "base": {
             "path": "PaymentReconciliation.requestor",
-            "min": 1,
+            "min": 0,
             "max": "1"
           },
           "type": [
@@ -791,7 +791,7 @@
           "max": "1",
           "base": {
             "path": "PaymentReconciliation.outcome",
-            "min": 1,
+            "min": 0,
             "max": "1"
           },
           "type": [
@@ -937,7 +937,7 @@
           "max": "1",
           "base": {
             "path": "PaymentReconciliation.paymentIdentifier",
-            "min": 1,
+            "min": 0,
             "max": "1"
           },
           "type": [
