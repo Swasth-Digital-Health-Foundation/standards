@@ -220,13 +220,13 @@ paths:
               schema:
                 $ref: '#/components/schemas/SuccessResponse'
         '400':
-          description: The request was formatted incorrectly
+          description: Request Validation failed
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/ErrorResponse'
         '404':
-          description: The Beneficiary ID was not found
+          description: Requested resource was not found
           content:
             application/json:
               schema:
@@ -267,13 +267,13 @@ paths:
               schema:
                 $ref: '#/components/schemas/SuccessResponse'
         '400':
-          description: The request was formatted incorrectly
+          description: Request Validation failed
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/ErrorResponse'
         '404':
-          description: The Beneficiary ID was not found
+          description: Requested resource was not found
           content:
             application/json:
               schema:
@@ -316,13 +316,13 @@ paths:
               schema:
                 $ref: '#/components/schemas/SuccessResponse'
         '400':
-          description: The request was formatted incorrectly
+          description: Request Validation failed
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/ErrorResponse'
         '404':
-          description: The Beneficiary ID was not found
+          description: Requested resource was not found
           content:
             application/json:
               schema:
@@ -361,13 +361,13 @@ paths:
               schema:
                 $ref: '#/components/schemas/SuccessResponse'
         '400':
-          description: The request was formatted incorrectly
+          description: Request Validation failed
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/ErrorResponse'
         '404':
-          description: The Beneficiary ID was not found
+          description: Requested resource was not found
           content:
             application/json:
               schema:
@@ -409,13 +409,13 @@ paths:
               schema:
                 $ref: '#/components/schemas/SuccessResponse'
         '400':
-          description: The request was formatted incorrectly
+          description: Request Validation failed
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/ErrorResponse'
         '404':
-          description: The Beneficiary ID was not found
+          description: Requested resource was not found
           content:
             application/json:
               schema:
@@ -454,13 +454,13 @@ paths:
               schema:
                 $ref: '#/components/schemas/SuccessResponse'
         '400':
-          description: The request was formatted incorrectly
+          description: Request Validation failed
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/ErrorResponse'
         '404':
-          description: The Beneficiary ID was not found
+          description: Requested resource was not found
           content:
             application/json:
               schema:
@@ -502,13 +502,13 @@ paths:
               schema:
                 $ref: '#/components/schemas/SuccessResponse'
         '400':
-          description: The request was formatted incorrectly
+          description: Request Validation failed
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/ErrorResponse'
         '404':
-          description: The Beneficiary ID was not found
+          description: Requested resource was not found
           content:
             application/json:
               schema:
@@ -547,13 +547,13 @@ paths:
               schema:
                 $ref: '#/components/schemas/SuccessResponse'
         '400':
-          description: The request was formatted incorrectly
+          description: Request Validation failed
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/ErrorResponse'
         '404':
-          description: The Beneficiary ID was not found
+          description: Requested resource was not found
           content:
             application/json:
               schema:
@@ -595,13 +595,13 @@ paths:
               schema:
                 $ref: '#/components/schemas/SuccessResponse'
         '400':
-          description: The request was formatted incorrectly
+          description: Request Validation failed
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/ErrorResponse'
         '404':
-          description: The Beneficiary ID was not found
+          description: Requested resource was not found
           content:
             application/json:
               schema:
@@ -642,13 +642,13 @@ paths:
               schema:
                 $ref: '#/components/schemas/SuccessResponse'
         '400':
-          description: The request was formatted incorrectly
+          description: Request Validation failed
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/ErrorResponse'
         '404':
-          description: The Beneficiary ID was not found
+          description: Requested resource was not found
           content:
             application/json:
               schema:
@@ -688,13 +688,13 @@ paths:
               schema:
                 $ref: '#/components/schemas/SuccessResponse'
         '400':
-          description: The request was formatted incorrectly
+          description: Request Validation failed
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/ErrorResponse'
         '404':
-          description: The Beneficiary ID was not found
+          description: Requested resource was not found
           content:
             application/json:
               schema:
@@ -733,13 +733,13 @@ paths:
               schema:
                 $ref: '#/components/schemas/SuccessResponse'
         '400':
-          description: The request was formatted incorrectly
+          description: Request Validation failed
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/ErrorResponse'
         '404':
-          description: The Beneficiary ID was not found
+          description: Requested resource was not found
           content:
             application/json:
               schema:
@@ -779,13 +779,13 @@ paths:
               schema:
                 $ref: '#/components/schemas/SuccessResponse'
         '400':
-          description: The request was formatted incorrectly
+          description: Request Validation failed
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/ErrorResponse'
         '404':
-          description: The Beneficiary ID was not found
+          description: Requested resource was not found
           content:
             application/json:
               schema:
@@ -824,13 +824,13 @@ paths:
               schema:
                 $ref: '#/components/schemas/SuccessResponse'
         '400':
-          description: The request was formatted incorrectly
+          description: Request Validation failed
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/ErrorResponse'
         '404':
-          description: The Beneficiary ID was not found
+          description: Requested resource was not found
           content:
             application/json:
               schema:
@@ -1326,52 +1326,51 @@ components:
       
     ErrorResponse:
       required:
-        - Error
+        - error
         - timestamp
+        - correlation_id
       type: object
       properties:
         timestamp:
           type: string
-          format: date-time
-          xml:
-            attribute: true
+          description: Unix timestamp when the response is sent.
+          example: "1629057611000"
         correlation_id:
           type: string
           description: >-
             The transaction identifier that was sent in the request is echoed
             back to the requester.
-          example: 4a4adbbe-29ae-11e8-a8d7-0289437bf331
-          xml:
-            attribute: true
-        Error:
+          format: uuid
+        error:
           $ref: '#/components/schemas/Error'
       description: This is a response to the ClaimForm API call
-      xml:
-        name: ClaimResponse
-        namespace: 'http://a.b.c'
     SuccessResponse:
       required:
         - timestamp
+        - correlation_id
       type: object
       properties:
         timestamp:
           type: string
-          format: date-time
+          description: Unix timestamp when the response is sent.
+          example: "1629057611000"
         correlation_id:
           type: string
           description: >-
             That is present in the transport header of the request.
-          example: "ID1111"
-        message_id:
-          type: string
           format: uuid
     Error:
       type: object
       properties:
-        error_code:
-          type: integer
-        error_message:
+        code:
           type: string
+          description: error code from the system - expected to be namespaced for better readability
+        message:
+          type: string
+          description: Short description of the error
+        trace:
+          type: string
+          description: Long description supporting the Code 
   securitySchemes:
     bearer_auth:
       type: http
