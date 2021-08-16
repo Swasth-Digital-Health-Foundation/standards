@@ -495,7 +495,7 @@
           "max": "*",
           "base": {
             "path": "PaymentNotice.identifier",
-            "min": 1,
+            "min": 0,
             "max": "*"
           },
           "type": [
@@ -597,7 +597,7 @@
           "max": "1",
           "base": {
             "path": "PaymentNotice.request",
-            "min": 1,
+            "min": 0,
             "max": "1"
           },
           "type": [
@@ -644,7 +644,7 @@
           "max": "1",
           "base": {
             "path": "PaymentNotice.response",
-            "min": 1,
+            "min": 0,
             "max": "1"
           },
           "type": [
@@ -736,7 +736,7 @@
           "max": "1",
           "base": {
             "path": "PaymentNotice.provider",
-            "min": 1,
+            "min": 0,
             "max": "1"
           },
           "type": [
