@@ -29,14 +29,14 @@ tags:
   - name: Payment APIs
     description: >-
       APIs for sending payment notices, reconcilation and for querying payment status
-  - name: Organisation Registry APIs
+  - name: Registry APIs
     description: This registry stores key details about the providers,Payer,Exchange,Obderver and Regulator.
 paths:
 
   /oraganisation/create:
     post:
       tags:
-        - Organisation Registry APIs
+        - Registry APIs
       description: Create Provider Registry Details
       security:
         - bearer_auth: []
@@ -82,7 +82,7 @@ paths:
   /organisation/search:
     post:
       tags:
-        - Organisation Registry APIs
+        - Registry APIs
       description: Get Provider Registry Details
       security:
         - bearer_auth: []
@@ -119,7 +119,7 @@ paths:
   /organisation/update:
     put:
       tags:
-        - Organisation Registry APIs
+        - Registry APIs
       description: Update Provider Registry Details
       security:
         - bearer_auth: []
@@ -156,7 +156,7 @@ paths:
   /organisation/{participant-code}:
     delete:
       tags:
-        - Organisation Registry APIs
+        - Registry APIs
       description: Delete Provider Registry Details
       security:
         - bearer_auth: []
@@ -254,9 +254,9 @@ paths:
               type: object
               properties:
                 header:
-                  $ref: '#/components/schemas/CoveregeEligibilityRequestHeader'
+                  $ref: '#/components/schemas/CoveregeEligibilityResponseHeader'
                 payload:
-                  $ref: '#/components/schemas/CoverageEligibilityRequestPayload'
+                  $ref: '#/components/schemas/CoverageEligibilityResponsePayload'
                 signatures:
                   $ref: '#/components/schemas/MessageSignatures'
       responses:
@@ -302,9 +302,9 @@ paths:
               type: object
               properties:
                 header:
-                  $ref: '#/components/schemas/PreAuthSubmitRequestHeader'
+                  $ref: '#/components/schemas/PreAuthRequestHeader'
                 payload:
-                  $ref: '#/components/schemas/PreAuthSubmitRequestPayload'
+                  $ref: '#/components/schemas/PreAuthRequestPayload'
                 signatures:
                   $ref: '#/components/schemas/MessageSignatures'
               additionalProperties: false
@@ -348,9 +348,9 @@ paths:
               type: object
               properties:
                 header:
-                  $ref: '#/components/schemas/PreAuthSubmitRequestHeader'
+                  $ref: '#/components/schemas/PreAuthResponseHeader'
                 payload:
-                  $ref: '#/components/schemas/PreAuthSubmitRequestPayload'
+                  $ref: '#/components/schemas/PreAuthResponsePayload'
                 signatures:
                   $ref: '#/components/schemas/MessageSignatures'
       responses:
@@ -441,9 +441,9 @@ paths:
               type: object
               properties:
                 header:
-                  $ref: '#/components/schemas/PreAuthSearchRequestHeader'
+                  $ref: '#/components/schemas/PreAuthSearchResponseHeader'
                 payload:
-                  $ref: '#/components/schemas/PreAuthSearchRequestPayload'
+                  $ref: '#/components/schemas/PreAuthSearchResponsePayload'
                 signatures:
                   $ref: '#/components/schemas/MessageSignatures'
       responses:
@@ -489,9 +489,9 @@ paths:
               type: object
               properties:
                 header:
-                  $ref: '#/components/schemas/ClaimSubmitRequestHeader'
+                  $ref: '#/components/schemas/ClaimRequestHeader'
                 payload:
-                  $ref: '#/components/schemas/ClaimSubmitRequestPayload'
+                  $ref: '#/components/schemas/ClaimRequestPayload'
                 signatures:
                   $ref: '#/components/schemas/MessageSignatures'
       responses:
@@ -534,9 +534,9 @@ paths:
               type: object
               properties:
                 header:
-                  $ref: '#/components/schemas/ClaimSubmitRequestHeader'
+                  $ref: '#/components/schemas/ClaimResponseHeader'
                 payload:
-                  $ref: '#/components/schemas/ClaimSubmitRequestPayload'
+                  $ref: '#/components/schemas/ClaimResponsePayload'
                 signatures:
                   $ref: '#/components/schemas/MessageSignatures'
       responses:
@@ -629,9 +629,9 @@ paths:
               type: object
               properties:
                 header:
-                  $ref: '#/components/schemas/ClaimSearchRequestHeader'
+                  $ref: '#/components/schemas/ClaimSearchResponseHeader'
                 payload:
-                  $ref: '#/components/schemas/ClaimSearchRequestPayload'
+                  $ref: '#/components/schemas/ClaimSearchResponsePayload'
                 signatures:
                   $ref: '#/components/schemas/MessageSignatures'
       responses:
@@ -720,9 +720,9 @@ paths:
               type: object
               properties:
                 header:
-                  $ref: '#/components/schemas/PaymentNoticeRequestHeader'
+                  $ref: '#/components/schemas/PaymentNoticeResponseHeader'
                 payload:
-                  $ref: '#/components/schemas/PaymentNoticeRequestPayload'
+                  $ref: '#/components/schemas/PaymentNoticeResponsePayload'
                 signatures:
                   $ref: '#/components/schemas/MessageSignatures'
       responses:
@@ -811,9 +811,9 @@ paths:
               type: object
               properties:
                 header:
-                  $ref: '#/components/schemas/PaymentNoticeSearchRequestHeader'
+                  $ref: '#/components/schemas/PaymentNoticeSearchResponseHeader'
                 payload:
-                  $ref: '#/components/schemas/PaymentNoticeSearchRequestPayload'
+                  $ref: '#/components/schemas/PaymentNoticeSearchResponsePayload'
                 signatures:
                   $ref: '#/components/schemas/MessageSignatures'
       responses:
@@ -850,6 +850,7 @@ components:
       required:
         - sender_code
         - recipient_code
+        - message_id
         - correlation_id
         - timestamp
         - status
@@ -865,9 +866,13 @@ components:
           type: string
           description: Registry code of the recipient (e.g. provider or payer)
           example: "PAYOR01@HCX01"
+        message_id:
+          type: string
+          description: Sender generated unique id for each originating request.
+          format: uuid
         correlation_id:
           type: string
-          description: Unique id of the message in the original sender’s (initiator’s) system. For return messages (asynchronous responses) responders are expected to populate with the one in the request. 
+          description: Unique id of the conversation (a collection of related messages). It may be chosen as the message_id in the original sender’s (initiator’s) system. For return messages (asynchronous responses) responders are expected to populate with the one in the request. 
           format: uuid
         timestamp:
           type: string
@@ -884,6 +889,17 @@ components:
         details:
           type: object
           description: Expected to be used for providing details of the status. Will be specially useful in scenarios where Operational status is not successful in callbacks responses. Expected to carry debug, error details when requested by the originator.
+          properties:
+            code:
+              type: string
+              description: error, info, debug code from the system - expected to be namespaced for better readability
+            message:
+              type: string
+              description: Short description of the detail
+            trace:
+              type: string
+              description: Long description supporting the Code 
+          additionalProperties: true
         jws_header:
           type: object
           description: JSON Web Signature header as per RFC7515. For the current version, this is proposed to be fixed to {"typ":"JWT", "alg":"RS256"}
@@ -915,7 +931,7 @@ components:
     
     CoverageEligibilityRequestPayload:
       type: string
-      description: Base64 encoded & encrypted (as per the guidelines provided in HCP Protocol document) value of a CoverageEligibilityRequest FHIR bunble objects are available [here](https://github.com/manjudr/HCP-FHIR/blob/main/schema/hcp.coverageeligibilityrequestbundle.profile.json)
+      description: CoverageEligibilityRequest FHIR bunble object encrypted and Base64 encoded as per the guidelines provided in HCP Protocol document. Structure definition of CoverageEligibilityRequest FHIR bundle is available [here](https://github.com/manjudr/HCP-FHIR/blob/main/schema/hcp.coverageeligibilityrequestbundle.profile.json)
       example: "eyJhbGciOiJSU0EtT0FFUCIsImVuYyI6IkEyNTZHQ00ifQ.OKOawDo13gRp2ojaHV7LFpZcgV7T6DVZKTyKOMTYUmKoTCVJRgckCL9kiMT03JGeipsEdY3mx_etLbbWSrFr05kLzcSr4qKAq7YN7e9jwQRb23nfa6c9d-StnImGyFDbSv04uVuxIp5Zms1gNxKKK2Da14B8S4rzVRltdYwam_lDp5XnZAYpQdb76FdIKLaVmqgfwX7XWRxv2322i-vDxRfqNzo_tETKzpVLzfiwQyeyPGLBIO56YJ7eObdv0je81860ppamavo35UgoRdbYaBcoh9QcfylQr66oc6vFWXRcZ_ZT2LawVCWTIy3brGPi6UklfCpIMfIjf7iGdXKHzg.48V1_ALb6US04U3b.5eym8TW_c8SuK0ltJ3rpYIzOeDQz7TALvtu6UG9oMo4vpzs9tX_EFShS8iB7j6jiSdiwkIr3ajwQzaBtQD_A.XFBoMYUZodetZdvTiFvSkQ"
     CoveregeEligibilityRequestHeader:
       allOf:
@@ -933,7 +949,27 @@ components:
                   type: string
                   example: "value 2"
                   
-    PreAuthSubmitRequestHeader:
+    CoverageEligibilityResponsePayload:
+      type: string
+      description: CoverageEligibilityResponse FHIR bunble object encrypted and Base64 encoded as per the guidelines provided in HCP Protocol document. Structure definition of CoverageEligibilityResponse FHIR bundle is available [here](http://hl7.org/fhir/R4/coverageeligibilityresponse.html).
+      example: "eyJhbGciOiJSU0EtT0FFUCIsImVuYyI6IkEyNTZHQ00ifQ.OKOawDo13gRp2ojaHV7LFpZcgV7T6DVZKTyKOMTYUmKoTCVJRgckCL9kiMT03JGeipsEdY3mx_etLbbWSrFr05kLzcSr4qKAq7YN7e9jwQRb23nfa6c9d-StnImGyFDbSv04uVuxIp5Zms1gNxKKK2Da14B8S4rzVRltdYwam_lDp5XnZAYpQdb76FdIKLaVmqgfwX7XWRxv2322i-vDxRfqNzo_tETKzpVLzfiwQyeyPGLBIO56YJ7eObdv0je81860ppamavo35UgoRdbYaBcoh9QcfylQr66oc6vFWXRcZ_ZT2LawVCWTIy3brGPi6UklfCpIMfIjf7iGdXKHzg.48V1_ALb6US04U3b.5eym8TW_c8SuK0ltJ3rpYIzOeDQz7TALvtu6UG9oMo4vpzs9tX_EFShS8iB7j6jiSdiwkIr3ajwQzaBtQD_A.XFBoMYUZodetZdvTiFvSkQ"
+    CoveregeEligibilityResponseHeader:
+      allOf:
+        - $ref: '#/components/schemas/BaseTransportHeader'
+        - type: object
+          properties:
+            domain_header:
+              type: object
+              description: JSON object containing domain specific header values as proposed in domain data specifications for CoverageEligibilityRequest FHIR bundle definition.
+              properties:
+                key1:
+                  type: string
+                  example: "value 1"
+                key2:
+                  type: string
+                  example: "value 2"
+                  
+    PreAuthRequestHeader:
       allOf:
         - $ref: '#/components/schemas/BaseTransportHeader'
         - type: object
@@ -948,9 +984,29 @@ components:
                 key4:
                   type: string
                   example: "value 2"
-    PreAuthSubmitRequestPayload:
+    PreAuthRequestPayload:
       type: string
-      description: Base64 encoded & encrypted (as per the guidelines provided in HCP Protocol document) value of a PreAuthSubmitRequest FHIR bunble object are available [here](http://hl7.org/fhir/R4/claim.html)
+      description: PreAuthRequest FHIR bunble object encrypted and Base64 encoded as per the guidelines provided in HCP Protocol document. Structure definition of PreAuthRequest FHIR bundle is available [here](http://hl7.org/fhir/R4/claim.html).
+      example: "eyJhbGciOiJSU0EtT0FFUCIsImVuYyI6IkEyNTZHQ00ifQ.OKOawDo13gRp2ojaHV7LFpZcgV7T6DVZKTyKOMTYUmKoTCVJRgckCL9kiMT03JGeipsEdY3mx_etLbbWSrFr05kLzcSr4qKAq7YN7e9jwQRb23nfa6c9d-StnImGyFDbSv04uVuxIp5Zms1gNxKKK2Da14B8S4rzVRltdYwam_lDp5XnZAYpQdb76FdIKLaVmqgfwX7XWRxv2322i-vDxRfqNzo_tETKzpVLzfiwQyeyPGLBIO56YJ7eObdv0je81860ppamavo35UgoRdbYaBcoh9QcfylQr66oc6vFWXRcZ_ZT2LawVCWTIy3brGPi6UklfCpIMfIjf7iGdXKHzg.48V1_ALb6US04U3b.5eym8TW_c8SuK0ltJ3rpYIzOeDQz7TALvtu6UG9oMo4vpzs9tX_EFShS8iB7j6jiSdiwkIr3ajwQzaBtQD_A.XFBoMYUZodetZdvTiFvSkQ"
+      
+    PreAuthResponseHeader:
+      allOf:
+        - $ref: '#/components/schemas/BaseTransportHeader'
+        - type: object
+          properties:
+            domain_header:
+              type: object
+              description: JSON object containing domain specific header values as proposed in domain data specifications for PreAuthSubmitRequest FHIR bundle definition.
+              properties:
+                key3:
+                  type: string
+                  example: "value 1"
+                key4:
+                  type: string
+                  example: "value 2"
+    PreAuthResponsePayload:
+      type: string
+      description: PreAuthResponse FHIR bunble object encrypted and Base64 encoded as per the guidelines provided in HCP Protocol document. Structure definition of PreAuthResponse FHIR bundle is available [here](http://hl7.org/fhir/R4/claimresponse.html).
       example: "eyJhbGciOiJSU0EtT0FFUCIsImVuYyI6IkEyNTZHQ00ifQ.OKOawDo13gRp2ojaHV7LFpZcgV7T6DVZKTyKOMTYUmKoTCVJRgckCL9kiMT03JGeipsEdY3mx_etLbbWSrFr05kLzcSr4qKAq7YN7e9jwQRb23nfa6c9d-StnImGyFDbSv04uVuxIp5Zms1gNxKKK2Da14B8S4rzVRltdYwam_lDp5XnZAYpQdb76FdIKLaVmqgfwX7XWRxv2322i-vDxRfqNzo_tETKzpVLzfiwQyeyPGLBIO56YJ7eObdv0je81860ppamavo35UgoRdbYaBcoh9QcfylQr66oc6vFWXRcZ_ZT2LawVCWTIy3brGPi6UklfCpIMfIjf7iGdXKHzg.48V1_ALb6US04U3b.5eym8TW_c8SuK0ltJ3rpYIzOeDQz7TALvtu6UG9oMo4vpzs9tX_EFShS8iB7j6jiSdiwkIr3ajwQzaBtQD_A.XFBoMYUZodetZdvTiFvSkQ"
       
     PreAuthSearchRequestHeader:
@@ -960,7 +1016,7 @@ components:
           properties:
             domain_header:
               type: object
-              description: JSON object containing domain specific header values as proposed in domain data specifications for PreAuthSubmitRequest FHIR bundle definition.
+              description: JSON object containing domain specific header values as proposed in domain data specifications for PreAuth search request.
               properties:
                 key3:
                   type: string
@@ -970,30 +1026,30 @@ components:
                   example: "value 2"
     PreAuthSearchRequestPayload:
       type: string
-      description: Base64 encoded & encrypted (as per the guidelines provided in HCP Protocol document) value of a PreAuthSubmitRequest FHIR bunble object are available [here](http://hl7.org/fhir/R4/claim.html#search)
+      description: Base64 encoded and encrypted value of the Claim search object. Details of the search object are available [here](http://hl7.org/fhir/R4/claim.html#search)
       example: "eyJhbGciOiJSU0EtT0FFUCIsImVuYyI6IkEyNTZHQ00ifQ.OKOawDo13gRp2ojaHV7LFpZcgV7T6DVZKTyKOMTYUmKoTCVJRgckCL9kiMT03JGeipsEdY3mx_etLbbWSrFr05kLzcSr4qKAq7YN7e9jwQRb23nfa6c9d-StnImGyFDbSv04uVuxIp5Zms1gNxKKK2Da14B8S4rzVRltdYwam_lDp5XnZAYpQdb76FdIKLaVmqgfwX7XWRxv2322i-vDxRfqNzo_tETKzpVLzfiwQyeyPGLBIO56YJ7eObdv0je81860ppamavo35UgoRdbYaBcoh9QcfylQr66oc6vFWXRcZ_ZT2LawVCWTIy3brGPi6UklfCpIMfIjf7iGdXKHzg.48V1_ALb6US04U3b.5eym8TW_c8SuK0ltJ3rpYIzOeDQz7TALvtu6UG9oMo4vpzs9tX_EFShS8iB7j6jiSdiwkIr3ajwQzaBtQD_A.XFBoMYUZodetZdvTiFvSkQ"
       
-    ClaimSearchRequestHeader:
+    PreAuthSearchResponseHeader:
       allOf:
         - $ref: '#/components/schemas/BaseTransportHeader'
         - type: object
           properties:
             domain_header:
               type: object
-              description: JSON object containing domain specific header values as proposed in domain data specifications for ClaimSearchRequestHeader FHIR bundle definition.
+              description: JSON object containing domain specific header values as proposed in domain data specifications for PreAuth search response.
               properties:
-                key5:
+                key3:
                   type: string
                   example: "value 1"
-                key6:
+                key4:
                   type: string
                   example: "value 2"
-    ClaimSearchRequestPayload:
+    PreAuthSearchResponsePayload:
       type: string
-      description: Base64 encoded & encrypted (as per the guidelines provided in HCP Protocol document) value of a ClaimSearchRequestHeader FHIR bunble object are available [here](http://hl7.org/fhir/R4/claim.html#search)
+      description: List of ClaimResponse FHIR objects encrypted and Base64 encoded as per the guidelines provided in HCP Protocol document. Structure definition of ClaimResponse resource is available [here](http://hl7.org/fhir/R4/claimresponse.html)
       example: "eyJhbGciOiJSU0EtT0FFUCIsImVuYyI6IkEyNTZHQ00ifQ.OKOawDo13gRp2ojaHV7LFpZcgV7T6DVZKTyKOMTYUmKoTCVJRgckCL9kiMT03JGeipsEdY3mx_etLbbWSrFr05kLzcSr4qKAq7YN7e9jwQRb23nfa6c9d-StnImGyFDbSv04uVuxIp5Zms1gNxKKK2Da14B8S4rzVRltdYwam_lDp5XnZAYpQdb76FdIKLaVmqgfwX7XWRxv2322i-vDxRfqNzo_tETKzpVLzfiwQyeyPGLBIO56YJ7eObdv0je81860ppamavo35UgoRdbYaBcoh9QcfylQr66oc6vFWXRcZ_ZT2LawVCWTIy3brGPi6UklfCpIMfIjf7iGdXKHzg.48V1_ALb6US04U3b.5eym8TW_c8SuK0ltJ3rpYIzOeDQz7TALvtu6UG9oMo4vpzs9tX_EFShS8iB7j6jiSdiwkIr3ajwQzaBtQD_A.XFBoMYUZodetZdvTiFvSkQ"
       
-    ClaimSubmitRequestHeader:
+    ClaimRequestHeader:
       allOf:
         - $ref: '#/components/schemas/BaseTransportHeader'
         - type: object
@@ -1008,19 +1064,19 @@ components:
                 key6:
                   type: string
                   example: "value 2"
-    ClaimSubmitRequestPayload:
+    ClaimRequestPayload:
       type: string
-      description: Base64 encoded & encrypted (as per the guidelines provided in HCP Protocol document) value of a ClaimSubmitRequestHeader FHIR bunble object are available [here](http://hl7.org/fhir/R4/claim.html)
+      description: ClaimRequest FHIR bunble object encrypted and Base64 encoded as per the guidelines provided in HCP Protocol document. Structure definition of ClaimRequest FHIR bundle is available [here](http://hl7.org/fhir/R4/claim.html).
       example: "eyJhbGciOiJSU0EtT0FFUCIsImVuYyI6IkEyNTZHQ00ifQ.OKOawDo13gRp2ojaHV7LFpZcgV7T6DVZKTyKOMTYUmKoTCVJRgckCL9kiMT03JGeipsEdY3mx_etLbbWSrFr05kLzcSr4qKAq7YN7e9jwQRb23nfa6c9d-StnImGyFDbSv04uVuxIp5Zms1gNxKKK2Da14B8S4rzVRltdYwam_lDp5XnZAYpQdb76FdIKLaVmqgfwX7XWRxv2322i-vDxRfqNzo_tETKzpVLzfiwQyeyPGLBIO56YJ7eObdv0je81860ppamavo35UgoRdbYaBcoh9QcfylQr66oc6vFWXRcZ_ZT2LawVCWTIy3brGPi6UklfCpIMfIjf7iGdXKHzg.48V1_ALb6US04U3b.5eym8TW_c8SuK0ltJ3rpYIzOeDQz7TALvtu6UG9oMo4vpzs9tX_EFShS8iB7j6jiSdiwkIr3ajwQzaBtQD_A.XFBoMYUZodetZdvTiFvSkQ"
-      
-    PaymentNoticeSearchRequestHeader:
+    
+    ClaimResponseHeader:
       allOf:
         - $ref: '#/components/schemas/BaseTransportHeader'
         - type: object
           properties:
             domain_header:
               type: object
-              description: JSON object containing domain specific header values as proposed in domain data specifications for PaymentNoticeSearchRequest FHIR bundle definition.
+              description: JSON object containing domain specific header values as proposed in domain data specifications for ClaimSubmitRequestHeader FHIR bundle definition.
               properties:
                 key5:
                   type: string
@@ -1028,11 +1084,51 @@ components:
                 key6:
                   type: string
                   example: "value 2"
-    PaymentNoticeSearchRequestPayload:
+    ClaimResponsePayload:
       type: string
-      description: Base64 encoded & encrypted (as per the guidelines provided in HCP Protocol document) value of a PaymentNoticeSearchRequest FHIR bunble object are available [here](http://hl7.org/fhir/R4/paymentnotice.html#search)
+      description: ClaimResponse FHIR bunble object encrypted and Base64 encoded as per the guidelines provided in HCP Protocol document. Structure definition of ClaimResponse FHIR bundle is available [here](http://hl7.org/fhir/R4/claim.html).
+      example: "eyJhbGciOiJSU0EtT0FFUCIsImVuYyI6IkEyNTZHQ00ifQ.OKOawDo13gRp2ojaHV7LFpZcgV7T6DVZKTyKOMTYUmKoTCVJRgckCL9kiMT03JGeipsEdY3mx_etLbbWSrFr05kLzcSr4qKAq7YN7e9jwQRb23nfa6c9d-StnImGyFDbSv04uVuxIp5Zms1gNxKKK2Da14B8S4rzVRltdYwam_lDp5XnZAYpQdb76FdIKLaVmqgfwX7XWRxv2322i-vDxRfqNzo_tETKzpVLzfiwQyeyPGLBIO56YJ7eObdv0je81860ppamavo35UgoRdbYaBcoh9QcfylQr66oc6vFWXRcZ_ZT2LawVCWTIy3brGPi6UklfCpIMfIjf7iGdXKHzg.48V1_ALb6US04U3b.5eym8TW_c8SuK0ltJ3rpYIzOeDQz7TALvtu6UG9oMo4vpzs9tX_EFShS8iB7j6jiSdiwkIr3ajwQzaBtQD_A.XFBoMYUZodetZdvTiFvSkQ"
+    
+    ClaimSearchRequestHeader:
+      allOf:
+        - $ref: '#/components/schemas/BaseTransportHeader'
+        - type: object
+          properties:
+            domain_header:
+              type: object
+              description: JSON object containing domain specific header values as proposed in domain data specifications for Claim search request.
+              properties:
+                key5:
+                  type: string
+                  example: "value 1"
+                key6:
+                  type: string
+                  example: "value 2"
+    ClaimSearchRequestPayload:
+      type: string
+      description: Base64 encoded and encrypted value of the Claim search object. Details of the search object are available [here](http://hl7.org/fhir/R4/claim.html#search).
       example: "eyJhbGciOiJSU0EtT0FFUCIsImVuYyI6IkEyNTZHQ00ifQ.OKOawDo13gRp2ojaHV7LFpZcgV7T6DVZKTyKOMTYUmKoTCVJRgckCL9kiMT03JGeipsEdY3mx_etLbbWSrFr05kLzcSr4qKAq7YN7e9jwQRb23nfa6c9d-StnImGyFDbSv04uVuxIp5Zms1gNxKKK2Da14B8S4rzVRltdYwam_lDp5XnZAYpQdb76FdIKLaVmqgfwX7XWRxv2322i-vDxRfqNzo_tETKzpVLzfiwQyeyPGLBIO56YJ7eObdv0je81860ppamavo35UgoRdbYaBcoh9QcfylQr66oc6vFWXRcZ_ZT2LawVCWTIy3brGPi6UklfCpIMfIjf7iGdXKHzg.48V1_ALb6US04U3b.5eym8TW_c8SuK0ltJ3rpYIzOeDQz7TALvtu6UG9oMo4vpzs9tX_EFShS8iB7j6jiSdiwkIr3ajwQzaBtQD_A.XFBoMYUZodetZdvTiFvSkQ"
       
+    ClaimSearchResponseHeader:
+      allOf:
+        - $ref: '#/components/schemas/BaseTransportHeader'
+        - type: object
+          properties:
+            domain_header:
+              type: object
+              description: JSON object containing domain specific header values as proposed in domain data specifications for Claim search response.
+              properties:
+                key3:
+                  type: string
+                  example: "value 1"
+                key4:
+                  type: string
+                  example: "value 2"
+    ClaimSearchResponsePayload:
+      type: string
+      description: List of ClaimResponse FHIR objects encrypted and Base64 encoded as per the guidelines provided in HCP Protocol document. Structure definition of ClaimResponse resource is available [here](http://hl7.org/fhir/R4/claimresponse.html)
+      example: "eyJhbGciOiJSU0EtT0FFUCIsImVuYyI6IkEyNTZHQ00ifQ.OKOawDo13gRp2ojaHV7LFpZcgV7T6DVZKTyKOMTYUmKoTCVJRgckCL9kiMT03JGeipsEdY3mx_etLbbWSrFr05kLzcSr4qKAq7YN7e9jwQRb23nfa6c9d-StnImGyFDbSv04uVuxIp5Zms1gNxKKK2Da14B8S4rzVRltdYwam_lDp5XnZAYpQdb76FdIKLaVmqgfwX7XWRxv2322i-vDxRfqNzo_tETKzpVLzfiwQyeyPGLBIO56YJ7eObdv0je81860ppamavo35UgoRdbYaBcoh9QcfylQr66oc6vFWXRcZ_ZT2LawVCWTIy3brGPi6UklfCpIMfIjf7iGdXKHzg.48V1_ALb6US04U3b.5eym8TW_c8SuK0ltJ3rpYIzOeDQz7TALvtu6UG9oMo4vpzs9tX_EFShS8iB7j6jiSdiwkIr3ajwQzaBtQD_A.XFBoMYUZodetZdvTiFvSkQ"
+    
     PaymentNoticeRequestHeader:
       allOf:
         - $ref: '#/components/schemas/BaseTransportHeader'
@@ -1050,9 +1146,69 @@ components:
                   example: "value 2"
     PaymentNoticeRequestPayload:
       type: string
-      description: Base64 encoded & encrypted (as per the guidelines provided in HCP Protocol document) value of a PaymentNoticeRequest FHIR bunble object are available [here](http://hl7.org/fhir/R4/paymentnotice.html)
+      description: PaymentNotice FHIR bunble object encrypted and Base64 encoded as per the guidelines provided in HCP Protocol document. Structure definition of PaymentNotice FHIR bundle is available [here](http://hl7.org/fhir/R4/paymentnotice.html).
       example: "eyJhbGciOiJSU0EtT0FFUCIsImVuYyI6IkEyNTZHQ00ifQ.OKOawDo13gRp2ojaHV7LFpZcgV7T6DVZKTyKOMTYUmKoTCVJRgckCL9kiMT03JGeipsEdY3mx_etLbbWSrFr05kLzcSr4qKAq7YN7e9jwQRb23nfa6c9d-StnImGyFDbSv04uVuxIp5Zms1gNxKKK2Da14B8S4rzVRltdYwam_lDp5XnZAYpQdb76FdIKLaVmqgfwX7XWRxv2322i-vDxRfqNzo_tETKzpVLzfiwQyeyPGLBIO56YJ7eObdv0je81860ppamavo35UgoRdbYaBcoh9QcfylQr66oc6vFWXRcZ_ZT2LawVCWTIy3brGPi6UklfCpIMfIjf7iGdXKHzg.48V1_ALb6US04U3b.5eym8TW_c8SuK0ltJ3rpYIzOeDQz7TALvtu6UG9oMo4vpzs9tX_EFShS8iB7j6jiSdiwkIr3ajwQzaBtQD_A.XFBoMYUZodetZdvTiFvSkQ"
       
+    PaymentNoticeResponseHeader:
+      allOf:
+        - $ref: '#/components/schemas/BaseTransportHeader'
+        - type: object
+          properties:
+            domain_header:
+              type: object
+              description: JSON object containing domain specific header values as proposed in domain data specifications for Payment Acknowledgement.
+              properties:
+                key5:
+                  type: string
+                  example: "value 1"
+                key6:
+                  type: string
+                  example: "value 2"
+    PaymentNoticeResponsePayload:
+      type: string
+      description: PaymentAcknowledgement object encrypted and Base64 encoded as per the guidelines provided in HCP Protocol document. Structure definition of PaymentAcknowledge object is available [here](http://hl7.org/fhir/R4/paymentnotice.html).
+      example: "eyJhbGciOiJSU0EtT0FFUCIsImVuYyI6IkEyNTZHQ00ifQ.OKOawDo13gRp2ojaHV7LFpZcgV7T6DVZKTyKOMTYUmKoTCVJRgckCL9kiMT03JGeipsEdY3mx_etLbbWSrFr05kLzcSr4qKAq7YN7e9jwQRb23nfa6c9d-StnImGyFDbSv04uVuxIp5Zms1gNxKKK2Da14B8S4rzVRltdYwam_lDp5XnZAYpQdb76FdIKLaVmqgfwX7XWRxv2322i-vDxRfqNzo_tETKzpVLzfiwQyeyPGLBIO56YJ7eObdv0je81860ppamavo35UgoRdbYaBcoh9QcfylQr66oc6vFWXRcZ_ZT2LawVCWTIy3brGPi6UklfCpIMfIjf7iGdXKHzg.48V1_ALb6US04U3b.5eym8TW_c8SuK0ltJ3rpYIzOeDQz7TALvtu6UG9oMo4vpzs9tX_EFShS8iB7j6jiSdiwkIr3ajwQzaBtQD_A.XFBoMYUZodetZdvTiFvSkQ"
+    
+    PaymentNoticeSearchRequestHeader:
+      allOf:
+        - $ref: '#/components/schemas/BaseTransportHeader'
+        - type: object
+          properties:
+            domain_header:
+              type: object
+              description: JSON object containing domain specific header values as proposed in domain data specifications for Payment search request.
+              properties:
+                key5:
+                  type: string
+                  example: "value 1"
+                key6:
+                  type: string
+                  example: "value 2"
+    PaymentNoticeSearchRequestPayload:
+      type: string
+      description: Base64 encoded and encrypted value of the PaymentNotice search object. Details of the search object are available [here](http://hl7.org/fhir/R4/paymentnotice.html#search).
+      example: "eyJhbGciOiJSU0EtT0FFUCIsImVuYyI6IkEyNTZHQ00ifQ.OKOawDo13gRp2ojaHV7LFpZcgV7T6DVZKTyKOMTYUmKoTCVJRgckCL9kiMT03JGeipsEdY3mx_etLbbWSrFr05kLzcSr4qKAq7YN7e9jwQRb23nfa6c9d-StnImGyFDbSv04uVuxIp5Zms1gNxKKK2Da14B8S4rzVRltdYwam_lDp5XnZAYpQdb76FdIKLaVmqgfwX7XWRxv2322i-vDxRfqNzo_tETKzpVLzfiwQyeyPGLBIO56YJ7eObdv0je81860ppamavo35UgoRdbYaBcoh9QcfylQr66oc6vFWXRcZ_ZT2LawVCWTIy3brGPi6UklfCpIMfIjf7iGdXKHzg.48V1_ALb6US04U3b.5eym8TW_c8SuK0ltJ3rpYIzOeDQz7TALvtu6UG9oMo4vpzs9tX_EFShS8iB7j6jiSdiwkIr3ajwQzaBtQD_A.XFBoMYUZodetZdvTiFvSkQ"
+    
+    PaymentNoticeSearchResponseHeader:
+      allOf:
+        - $ref: '#/components/schemas/BaseTransportHeader'
+        - type: object
+          properties:
+            domain_header:
+              type: object
+              description: JSON object containing domain specific header values as proposed in domain data specifications for Payment search response.
+              properties:
+                key3:
+                  type: string
+                  example: "value 1"
+                key4:
+                  type: string
+                  example: "value 2"
+    PaymentNoticeSearchResponsePayload:
+      type: string
+      description: List of PaymentNotice FHIR objects encrypted and Base64 encoded as per the guidelines provided in HCP Protocol document. Structure definition of PaymentNotice resource is available [here](http://hl7.org/fhir/R4/claimresponse.html)
+      example: "eyJhbGciOiJSU0EtT0FFUCIsImVuYyI6IkEyNTZHQ00ifQ.OKOawDo13gRp2ojaHV7LFpZcgV7T6DVZKTyKOMTYUmKoTCVJRgckCL9kiMT03JGeipsEdY3mx_etLbbWSrFr05kLzcSr4qKAq7YN7e9jwQRb23nfa6c9d-StnImGyFDbSv04uVuxIp5Zms1gNxKKK2Da14B8S4rzVRltdYwam_lDp5XnZAYpQdb76FdIKLaVmqgfwX7XWRxv2322i-vDxRfqNzo_tETKzpVLzfiwQyeyPGLBIO56YJ7eObdv0je81860ppamavo35UgoRdbYaBcoh9QcfylQr66oc6vFWXRcZ_ZT2LawVCWTIy3brGPi6UklfCpIMfIjf7iGdXKHzg.48V1_ALb6US04U3b.5eym8TW_c8SuK0ltJ3rpYIzOeDQz7TALvtu6UG9oMo4vpzs9tX_EFShS8iB7j6jiSdiwkIr3ajwQzaBtQD_A.XFBoMYUZodetZdvTiFvSkQ"
+    
     OrganisationRegistry:
       required:
         - participate_name
