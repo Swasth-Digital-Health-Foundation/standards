@@ -11,9 +11,9 @@ info:
     url: 'http://www.apache.org/licenses/LICENSE-2.0.html'
   version: 1.0.0
 externalDocs:
-  description: Health Claims Exchange Platform Technical Standards
+  description: HCX - Tech Specs Document
   url: >-
-    https://docs.google.com/document/d/1oe9a6zDhhaz65Q_KiWp_wv2g4PWZW_gZjI9PO4vjAQ0/edit#
+    https://docs.google.com/document/d/1cPhhjpvISiMx5SC2UWzG76vrPXKD7jdzXtGOM--cyUI/edit?usp=sharing
 servers:
   # Added by API Auto Mocking Plugin
   - description: SwaggerHub API Auto Mocking
@@ -36,7 +36,8 @@ paths:
         - Coverage Eligibility APIs
       description: >-
         This API is for the providers to post coverage eligibility
-        request to the HCP gateway and for HCP gateway to route the same request to payors.
+        request to the HCP gateway and for HCP gateway to route the same request to payors. <br/><br/>
+        Payload for this API has to be created as per the CoverageEligibilityRequest object defined in the HCX - Domain Specs document and encrypt into a base64 string as per the guidelines in the HCX - Tech Specs document.
       requestBody:
         content:
           application/json:
@@ -44,9 +45,9 @@ paths:
               type: object
               properties:
                 header:
-                  $ref: '#/components/schemas/CoveregeEligibilityRequestHeader'
+                  $ref: '#/components/schemas/TransportHeader'
                 payload:
-                  $ref: '#/components/schemas/CoverageEligibilityRequestPayload'
+                  $ref: '#/components/schemas/RequestPayload'
                 signatures:
                   $ref: '#/components/schemas/MessageSignatures'
               additionalProperties: false
@@ -82,7 +83,8 @@ paths:
       tags:
         - Coverage Eligibility APIs
       description: >-
-        This is the callback API on HCP gateways and on Provider systems which will be called by Payor systems and HCP gateways to return the response for coverage eligibility requests.
+        This is the callback API on HCP gateways and on Provider systems which will be called by Payor systems and HCP gateways to return the response for coverage eligibility requests. <br/><br/>
+        Payload for this API has to be created as per the CoverageEligibilityResponse object defined in the HCX - Domain Specs document and encrypt into a base64 string as per the guidelines in the HCX - Tech Specs document.
       requestBody:
         content:
           application/json:
@@ -90,9 +92,9 @@ paths:
               type: object
               properties:
                 header:
-                  $ref: '#/components/schemas/CoveregeEligibilityResponseHeader'
+                  $ref: '#/components/schemas/TransportHeader'
                 payload:
-                  $ref: '#/components/schemas/CoverageEligibilityResponsePayload'
+                  $ref: '#/components/schemas/RequestPayload'
                 signatures:
                   $ref: '#/components/schemas/MessageSignatures'
       responses:
@@ -128,7 +130,8 @@ paths:
       tags:
         - Claims APIs
       description: >-
-        This API is for providers to submit pre-authorization requests (and resubmit updated request) to HCP gateway and for HCP gateway to route the same request to payors.
+        This API is for providers to submit pre-authorization requests (and resubmit updated request) to HCP gateway and for HCP gateway to route the same request to payors. <br/><br/>
+        Payload for this API has to be created as per the Pre-AuthorizationRequest object defined in the HCX - Domain Specs document and encrypt into a base64 string as per the guidelines in the HCX - Tech Specs document.
       requestBody:
         content:
           application/json:
@@ -136,9 +139,9 @@ paths:
               type: object
               properties:
                 header:
-                  $ref: '#/components/schemas/PreAuthRequestHeader'
+                  $ref: '#/components/schemas/TransportHeader'
                 payload:
-                  $ref: '#/components/schemas/PreAuthRequestPayload'
+                  $ref: '#/components/schemas/RequestPayload'
                 signatures:
                   $ref: '#/components/schemas/MessageSignatures'
               additionalProperties: false
@@ -174,7 +177,8 @@ paths:
       tags:
         - Claims APIs
       description: >-
-        This is the callback API on HCP gateways and on Provider systems which will be called by Payor systems and HCP gateways to return the response for Pre-Authorization requests.
+        This is the callback API on HCP gateways and on Provider systems which will be called by Payor systems and HCP gateways to return the response for Pre-Authorization requests. <br/><br/>
+        Payload for this API has to be created as per the Pre-AuthorizationResponse object defined in the HCX - Domain Specs document and encrypt into a base64 string as per the guidelines in the HCX - Tech Specs document.
       requestBody:
         content:
           application/json:
@@ -182,9 +186,9 @@ paths:
               type: object
               properties:
                 header:
-                  $ref: '#/components/schemas/PreAuthResponseHeader'
+                  $ref: '#/components/schemas/TransportHeader'
                 payload:
-                  $ref: '#/components/schemas/PreAuthResponsePayload'
+                  $ref: '#/components/schemas/RequestPayload'
                 signatures:
                   $ref: '#/components/schemas/MessageSignatures'
       responses:
@@ -220,7 +224,8 @@ paths:
       tags:
         - Claims APIs
       description: >-
-        This API is for providers to query for status of Pre-Authorisation requests submitted by them. This API is available on HCP gateways to accept the request from providers and on Payor systems to receive the request from HCP gateways.
+        This API is for providers to query for status of Pre-Authorisation requests submitted by them. This API is available on HCP gateways to accept the request from providers and on Payor systems to receive the request from HCP gateways. <br/><br/>
+        Payload for this API has to be created as per the Pre-Authorization search object defined in the HCX - Domain Specs document and encrypt into a base64 string as per the guidelines in the HCX - Tech Specs document.
       requestBody:
         content:
           application/json:
@@ -228,9 +233,9 @@ paths:
               type: object
               properties:
                 header:
-                  $ref: '#/components/schemas/PreAuthSearchRequestHeader'
+                  $ref: '#/components/schemas/TransportHeader'
                 payload:
-                  $ref: '#/components/schemas/PreAuthSearchRequestPayload'
+                  $ref: '#/components/schemas/RequestPayload'
                 signatures:
                   $ref: '#/components/schemas/MessageSignatures'
       responses:
@@ -265,7 +270,8 @@ paths:
       tags:
         - Claims APIs
       description: >-
-        This is the callback API on HCP gateways and Provider systems to receive the response for PreAuth search requests.
+        This is the callback API on HCP gateways and Provider systems to receive the response for PreAuth search requests. <br/><br/>
+        Payload for this API has to be created as per the Pre-AuthorizationResponse object defined in the HCX - Domain Specs document and encrypt into a base64 string as per the guidelines in the HCX - Tech Specs document.
       requestBody:
         content:
           application/json:
@@ -273,9 +279,9 @@ paths:
               type: object
               properties:
                 header:
-                  $ref: '#/components/schemas/PreAuthSearchResponseHeader'
+                  $ref: '#/components/schemas/TransportHeader'
                 payload:
-                  $ref: '#/components/schemas/PreAuthSearchResponsePayload'
+                  $ref: '#/components/schemas/RequestPayload'
                 signatures:
                   $ref: '#/components/schemas/MessageSignatures'
       responses:
@@ -311,7 +317,8 @@ paths:
       tags:
         - Claims APIs
       description: >-
-        This API is for providers to submit claim requests (and resubmit updated request) to HCP gateway and for HCP gateway to route the same request to payors.
+        This API is for providers to submit claim requests (and resubmit updated request) to HCP gateway and for HCP gateway to route the same request to payors. <br/><br/>
+        Payload for this API has to be created as per the ClaimRequest object defined in the HCX - Domain Specs document and encrypt into a base64 string as per the guidelines in the HCX - Tech Specs document.
       requestBody:
         content:
           application/json:
@@ -319,9 +326,9 @@ paths:
               type: object
               properties:
                 header:
-                  $ref: '#/components/schemas/ClaimRequestHeader'
+                  $ref: '#/components/schemas/TransportHeader'
                 payload:
-                  $ref: '#/components/schemas/ClaimRequestPayload'
+                  $ref: '#/components/schemas/RequestPayload'
                 signatures:
                   $ref: '#/components/schemas/MessageSignatures'
       responses:
@@ -356,7 +363,8 @@ paths:
       tags:
         - Claims APIs
       description: >-
-        This is the callback API on HCP gateways and on Provider systems which will be called by Payor systems and HCP gateways to return the response for Claim requests.
+        This is the callback API on HCP gateways and on Provider systems which will be called by Payor systems and HCP gateways to return the response for Claim requests. <br/><br/>
+        Payload for this API has to be created as per the ClaimResponse object defined in the HCX - Domain Specs document and encrypt into a base64 string as per the guidelines in the HCX - Tech Specs document.
       requestBody:
         content:
           application/json:
@@ -364,9 +372,9 @@ paths:
               type: object
               properties:
                 header:
-                  $ref: '#/components/schemas/ClaimResponseHeader'
+                  $ref: '#/components/schemas/TransportHeader'
                 payload:
-                  $ref: '#/components/schemas/ClaimResponsePayload'
+                  $ref: '#/components/schemas/RequestPayload'
                 signatures:
                   $ref: '#/components/schemas/MessageSignatures'
       responses:
@@ -402,7 +410,8 @@ paths:
       tags:
         - Claims APIs
       description: >-
-        This API is for providers to query for status of Claim requests submitted by them. This API is available on HCP gateways to accept the request from providers and on Payor systems to receive the request from HCP gateways.
+        This API is for providers to query for status of Claim requests submitted by them. This API is available on HCP gateways to accept the request from providers and on Payor systems to receive the request from HCP gateways. <br/><br/>
+        Payload for this API has to be created as per the Claim Search object defined in the HCX - Domain Specs document and encrypt into a base64 string as per the guidelines in the HCX - Tech Specs document.
       requestBody:
         content:
           application/json:
@@ -410,9 +419,9 @@ paths:
               type: object
               properties:
                 header:
-                  $ref: '#/components/schemas/ClaimSearchRequestHeader'
+                  $ref: '#/components/schemas/TransportHeader'
                 payload:
-                  $ref: '#/components/schemas/ClaimSearchRequestPayload'
+                  $ref: '#/components/schemas/RequestPayload'
                 signatures:
                   $ref: '#/components/schemas/MessageSignatures'
       responses:
@@ -447,7 +456,8 @@ paths:
       tags:
         - Claims APIs
       description: >-
-        This is the callback API on HCP gateways and Provider systems to receive the response for Claim search requests.
+        This is the callback API on HCP gateways and Provider systems to receive the response for Claim search requests. <br/><br/>
+        Payload for this API has to be created as per the ClaimResponse object defined in the HCX - Domain Specs document and encrypt into a base64 string as per the guidelines in the HCX - Tech Specs document.
       requestBody:
         content:
           application/json:
@@ -455,9 +465,9 @@ paths:
               type: object
               properties:
                 header:
-                  $ref: '#/components/schemas/ClaimSearchResponseHeader'
+                  $ref: '#/components/schemas/TransportHeader'
                 payload:
-                  $ref: '#/components/schemas/ClaimSearchResponsePayload'
+                  $ref: '#/components/schemas/RequestPayload'
                 signatures:
                   $ref: '#/components/schemas/MessageSignatures'
       responses:
@@ -493,7 +503,8 @@ paths:
       tags:
         - Payment APIs
       description: >-
-        This API is for Payors to send Payment notification/reconciliation objects to Providers via the HCP gateway. This API is available on HCP gateways and Provider systems.
+        This API is for Payors to send Payment notification/reconciliation objects to Providers via the HCP gateway. This API is available on HCP gateways and Provider systems. <br/><br/>
+        Payload for this API has to be created as per the PaymentNotice object defined in the HCX - Domain Specs document and encrypt into a base64 string as per the guidelines in the HCX - Tech Specs document.
       requestBody:
         content:
           application/json:
@@ -501,9 +512,9 @@ paths:
               type: object
               properties:
                 header:
-                  $ref: '#/components/schemas/PaymentNoticeRequestHeader'
+                  $ref: '#/components/schemas/TransportHeader'
                 payload:
-                  $ref: '#/components/schemas/PaymentNoticeRequestPayload'
+                  $ref: '#/components/schemas/RequestPayload'
                 signatures:
                   $ref: '#/components/schemas/MessageSignatures'
       responses:
@@ -538,7 +549,8 @@ paths:
       tags:
         - Payment APIs
       description: >-
-        This is callback API for payment acknowledgement by the Providers. This API is available on HCP gateways and Payor systems.
+        This is callback API for payment acknowledgement by the Providers. This API is available on HCP gateways and Payor systems. <br/><br/>
+        Payload for this API has to be created as per the PaymentAcknowledgement object defined in the HCX - Domain Specs document and encrypt into a base64 string as per the guidelines in the HCX - Tech Specs document.
       requestBody:
         content:
           application/json:
@@ -546,9 +558,9 @@ paths:
               type: object
               properties:
                 header:
-                  $ref: '#/components/schemas/PaymentNoticeResponseHeader'
+                  $ref: '#/components/schemas/TransportHeader'
                 payload:
-                  $ref: '#/components/schemas/PaymentNoticeResponsePayload'
+                  $ref: '#/components/schemas/RequestPayload'
                 signatures:
                   $ref: '#/components/schemas/MessageSignatures'
       responses:
@@ -584,7 +596,8 @@ paths:
       tags:
         - Payment APIs
       description: >-
-        This API is for providers to query for Payment status for processed claims. This API is available on HCP gateways to accept the request from providers and on Payor systems to receive the request from HCP gateways.
+        This API is for providers to query for Payment status for processed claims. This API is available on HCP gateways to accept the request from providers and on Payor systems to receive the request from HCP gateways. <br/><br/>
+        Payload for this API has to be created as per the PaymentNotice search object defined in the HCX - Domain Specs document and encrypt into a base64 string as per the guidelines in the HCX - Tech Specs document.
       requestBody:
         content:
           application/json:
@@ -592,9 +605,9 @@ paths:
               type: object
               properties:
                 header:
-                  $ref: '#/components/schemas/PaymentNoticeSearchRequestHeader'
+                  $ref: '#/components/schemas/TransportHeader'
                 payload:
-                  $ref: '#/components/schemas/PaymentNoticeSearchRequestPayload'
+                  $ref: '#/components/schemas/RequestPayload'
                 signatures:
                   $ref: '#/components/schemas/MessageSignatures'
       responses:
@@ -629,7 +642,8 @@ paths:
       tags:
         - Payment APIs
       description: >-
-        This is the callback API on HCP gateways and Provider systems to receive the response for Payment search requests.
+        This is the callback API on HCP gateways and Provider systems to receive the response for Payment search requests. <br/><br/>
+        Payload for this API has to be created as per the PaymentNotice object defined in the HCX - Domain Specs document and encrypt into a base64 string as per the guidelines in the HCX - Tech Specs document.
       requestBody:
         content:
           application/json:
@@ -637,9 +651,9 @@ paths:
               type: object
               properties:
                 header:
-                  $ref: '#/components/schemas/PaymentNoticeSearchResponseHeader'
+                  $ref: '#/components/schemas/TransportHeader'
                 payload:
-                  $ref: '#/components/schemas/PaymentNoticeSearchResponsePayload'
+                  $ref: '#/components/schemas/RequestPayload'
                 signatures:
                   $ref: '#/components/schemas/MessageSignatures'
       responses:
@@ -672,7 +686,7 @@ paths:
       
 components:
   schemas:
-    BaseTransportHeader:
+    TransportHeader:
       required:
         - sender_code
         - recipient_code
@@ -748,291 +762,20 @@ components:
               type: string
               enum: ["A256GCM"]
           additionalProperties: false
+        domain_header:
+          type: object
+          description: JSON object containing domain header values specific to the use case as proposed in the HCX - Domain Specs document.
+          example: {"payload_type": "application/fhir+json", "value": 12000, "currency": "INR"}
+          additionalProperties: true
     MessageSignatures:
       type: array
       description: Array of signatures generated by the sender (Provider or Payor) and by each HCX instance which are involved in the relay of the message. The signatures should be generated by signing the request body as per the guidelines provided in the HCX Protocol document.
       items:
         type: string
       example: ["eyJ0eXAiOiJKV1QiLA0KICJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJqb2UiLA0KICJleHAiOjEzMDA4MTkzODAsDQogImh0dHA6Ly9leGFtcGxlLmNvbS9pc19yb290Ijp0cnVlfQ", "eyJhbGciOiJSUzI1NiJ9.DtEhU3ljbEg8L38VWAfUAqOyKAM6-Xx-F4GawxaepmXFCgfTjDxw5djxLa8ISlSApmWQxfKTUJqPP3-Kg6NU1Q"]
-    
-    CoverageEligibilityRequestPayload:
+    RequestPayload:
       type: string
-      description: CoverageEligibilityRequest FHIR bunble object encrypted and Base64 encoded as per the guidelines provided in HCP Protocol document. Structure definition of CoverageEligibilityRequest FHIR bundle is available [here](https://github.com/manjudr/HCP-FHIR/blob/main/schema/hcp.coverageeligibilityrequestbundle.profile.json)
-      example: "eyJhbGciOiJSU0EtT0FFUCIsImVuYyI6IkEyNTZHQ00ifQ.OKOawDo13gRp2ojaHV7LFpZcgV7T6DVZKTyKOMTYUmKoTCVJRgckCL9kiMT03JGeipsEdY3mx_etLbbWSrFr05kLzcSr4qKAq7YN7e9jwQRb23nfa6c9d-StnImGyFDbSv04uVuxIp5Zms1gNxKKK2Da14B8S4rzVRltdYwam_lDp5XnZAYpQdb76FdIKLaVmqgfwX7XWRxv2322i-vDxRfqNzo_tETKzpVLzfiwQyeyPGLBIO56YJ7eObdv0je81860ppamavo35UgoRdbYaBcoh9QcfylQr66oc6vFWXRcZ_ZT2LawVCWTIy3brGPi6UklfCpIMfIjf7iGdXKHzg.48V1_ALb6US04U3b.5eym8TW_c8SuK0ltJ3rpYIzOeDQz7TALvtu6UG9oMo4vpzs9tX_EFShS8iB7j6jiSdiwkIr3ajwQzaBtQD_A.XFBoMYUZodetZdvTiFvSkQ"
-    CoveregeEligibilityRequestHeader:
-      allOf:
-        - $ref: '#/components/schemas/BaseTransportHeader'
-        - type: object
-          properties:
-            domain_header:
-              type: object
-              description: JSON object containing domain specific header values as proposed in domain data specifications for CoverageEligibilityRequest FHIR bundle definition.
-              properties:
-                key1:
-                  type: string
-                  example: "value 1"
-                key2:
-                  type: string
-                  example: "value 2"
-                  
-    CoverageEligibilityResponsePayload:
-      type: string
-      description: CoverageEligibilityResponse FHIR bunble object encrypted and Base64 encoded as per the guidelines provided in HCP Protocol document. Structure definition of CoverageEligibilityResponse FHIR bundle is available [here](http://hl7.org/fhir/R4/coverageeligibilityresponse.html).
-      example: "eyJhbGciOiJSU0EtT0FFUCIsImVuYyI6IkEyNTZHQ00ifQ.OKOawDo13gRp2ojaHV7LFpZcgV7T6DVZKTyKOMTYUmKoTCVJRgckCL9kiMT03JGeipsEdY3mx_etLbbWSrFr05kLzcSr4qKAq7YN7e9jwQRb23nfa6c9d-StnImGyFDbSv04uVuxIp5Zms1gNxKKK2Da14B8S4rzVRltdYwam_lDp5XnZAYpQdb76FdIKLaVmqgfwX7XWRxv2322i-vDxRfqNzo_tETKzpVLzfiwQyeyPGLBIO56YJ7eObdv0je81860ppamavo35UgoRdbYaBcoh9QcfylQr66oc6vFWXRcZ_ZT2LawVCWTIy3brGPi6UklfCpIMfIjf7iGdXKHzg.48V1_ALb6US04U3b.5eym8TW_c8SuK0ltJ3rpYIzOeDQz7TALvtu6UG9oMo4vpzs9tX_EFShS8iB7j6jiSdiwkIr3ajwQzaBtQD_A.XFBoMYUZodetZdvTiFvSkQ"
-    CoveregeEligibilityResponseHeader:
-      allOf:
-        - $ref: '#/components/schemas/BaseTransportHeader'
-        - type: object
-          properties:
-            domain_header:
-              type: object
-              description: JSON object containing domain specific header values as proposed in domain data specifications for CoverageEligibilityRequest FHIR bundle definition.
-              properties:
-                key1:
-                  type: string
-                  example: "value 1"
-                key2:
-                  type: string
-                  example: "value 2"
-                  
-    PreAuthRequestHeader:
-      allOf:
-        - $ref: '#/components/schemas/BaseTransportHeader'
-        - type: object
-          properties:
-            domain_header:
-              type: object
-              description: JSON object containing domain specific header values as proposed in domain data specifications for PreAuthSubmitRequest FHIR bundle definition.
-              properties:
-                key3:
-                  type: string
-                  example: "value 1"
-                key4:
-                  type: string
-                  example: "value 2"
-    PreAuthRequestPayload:
-      type: string
-      description: PreAuthRequest FHIR bunble object encrypted and Base64 encoded as per the guidelines provided in HCP Protocol document. Structure definition of PreAuthRequest FHIR bundle is available [here](http://hl7.org/fhir/R4/claim.html).
-      example: "eyJhbGciOiJSU0EtT0FFUCIsImVuYyI6IkEyNTZHQ00ifQ.OKOawDo13gRp2ojaHV7LFpZcgV7T6DVZKTyKOMTYUmKoTCVJRgckCL9kiMT03JGeipsEdY3mx_etLbbWSrFr05kLzcSr4qKAq7YN7e9jwQRb23nfa6c9d-StnImGyFDbSv04uVuxIp5Zms1gNxKKK2Da14B8S4rzVRltdYwam_lDp5XnZAYpQdb76FdIKLaVmqgfwX7XWRxv2322i-vDxRfqNzo_tETKzpVLzfiwQyeyPGLBIO56YJ7eObdv0je81860ppamavo35UgoRdbYaBcoh9QcfylQr66oc6vFWXRcZ_ZT2LawVCWTIy3brGPi6UklfCpIMfIjf7iGdXKHzg.48V1_ALb6US04U3b.5eym8TW_c8SuK0ltJ3rpYIzOeDQz7TALvtu6UG9oMo4vpzs9tX_EFShS8iB7j6jiSdiwkIr3ajwQzaBtQD_A.XFBoMYUZodetZdvTiFvSkQ"
-      
-    PreAuthResponseHeader:
-      allOf:
-        - $ref: '#/components/schemas/BaseTransportHeader'
-        - type: object
-          properties:
-            domain_header:
-              type: object
-              description: JSON object containing domain specific header values as proposed in domain data specifications for PreAuthSubmitRequest FHIR bundle definition.
-              properties:
-                key3:
-                  type: string
-                  example: "value 1"
-                key4:
-                  type: string
-                  example: "value 2"
-    PreAuthResponsePayload:
-      type: string
-      description: PreAuthResponse FHIR bunble object encrypted and Base64 encoded as per the guidelines provided in HCP Protocol document. Structure definition of PreAuthResponse FHIR bundle is available [here](http://hl7.org/fhir/R4/claimresponse.html).
-      example: "eyJhbGciOiJSU0EtT0FFUCIsImVuYyI6IkEyNTZHQ00ifQ.OKOawDo13gRp2ojaHV7LFpZcgV7T6DVZKTyKOMTYUmKoTCVJRgckCL9kiMT03JGeipsEdY3mx_etLbbWSrFr05kLzcSr4qKAq7YN7e9jwQRb23nfa6c9d-StnImGyFDbSv04uVuxIp5Zms1gNxKKK2Da14B8S4rzVRltdYwam_lDp5XnZAYpQdb76FdIKLaVmqgfwX7XWRxv2322i-vDxRfqNzo_tETKzpVLzfiwQyeyPGLBIO56YJ7eObdv0je81860ppamavo35UgoRdbYaBcoh9QcfylQr66oc6vFWXRcZ_ZT2LawVCWTIy3brGPi6UklfCpIMfIjf7iGdXKHzg.48V1_ALb6US04U3b.5eym8TW_c8SuK0ltJ3rpYIzOeDQz7TALvtu6UG9oMo4vpzs9tX_EFShS8iB7j6jiSdiwkIr3ajwQzaBtQD_A.XFBoMYUZodetZdvTiFvSkQ"
-      
-    PreAuthSearchRequestHeader:
-      allOf:
-        - $ref: '#/components/schemas/BaseTransportHeader'
-        - type: object
-          properties:
-            domain_header:
-              type: object
-              description: JSON object containing domain specific header values as proposed in domain data specifications for PreAuth search request.
-              properties:
-                key3:
-                  type: string
-                  example: "value 1"
-                key4:
-                  type: string
-                  example: "value 2"
-    PreAuthSearchRequestPayload:
-      type: string
-      description: Base64 encoded and encrypted value of the Claim search object. Details of the search object are available [here](http://hl7.org/fhir/R4/claim.html#search)
-      example: "eyJhbGciOiJSU0EtT0FFUCIsImVuYyI6IkEyNTZHQ00ifQ.OKOawDo13gRp2ojaHV7LFpZcgV7T6DVZKTyKOMTYUmKoTCVJRgckCL9kiMT03JGeipsEdY3mx_etLbbWSrFr05kLzcSr4qKAq7YN7e9jwQRb23nfa6c9d-StnImGyFDbSv04uVuxIp5Zms1gNxKKK2Da14B8S4rzVRltdYwam_lDp5XnZAYpQdb76FdIKLaVmqgfwX7XWRxv2322i-vDxRfqNzo_tETKzpVLzfiwQyeyPGLBIO56YJ7eObdv0je81860ppamavo35UgoRdbYaBcoh9QcfylQr66oc6vFWXRcZ_ZT2LawVCWTIy3brGPi6UklfCpIMfIjf7iGdXKHzg.48V1_ALb6US04U3b.5eym8TW_c8SuK0ltJ3rpYIzOeDQz7TALvtu6UG9oMo4vpzs9tX_EFShS8iB7j6jiSdiwkIr3ajwQzaBtQD_A.XFBoMYUZodetZdvTiFvSkQ"
-      
-    PreAuthSearchResponseHeader:
-      allOf:
-        - $ref: '#/components/schemas/BaseTransportHeader'
-        - type: object
-          properties:
-            domain_header:
-              type: object
-              description: JSON object containing domain specific header values as proposed in domain data specifications for PreAuth search response.
-              properties:
-                key3:
-                  type: string
-                  example: "value 1"
-                key4:
-                  type: string
-                  example: "value 2"
-    PreAuthSearchResponsePayload:
-      type: string
-      description: List of ClaimResponse FHIR objects encrypted and Base64 encoded as per the guidelines provided in HCP Protocol document. Structure definition of ClaimResponse resource is available [here](http://hl7.org/fhir/R4/claimresponse.html)
-      example: "eyJhbGciOiJSU0EtT0FFUCIsImVuYyI6IkEyNTZHQ00ifQ.OKOawDo13gRp2ojaHV7LFpZcgV7T6DVZKTyKOMTYUmKoTCVJRgckCL9kiMT03JGeipsEdY3mx_etLbbWSrFr05kLzcSr4qKAq7YN7e9jwQRb23nfa6c9d-StnImGyFDbSv04uVuxIp5Zms1gNxKKK2Da14B8S4rzVRltdYwam_lDp5XnZAYpQdb76FdIKLaVmqgfwX7XWRxv2322i-vDxRfqNzo_tETKzpVLzfiwQyeyPGLBIO56YJ7eObdv0je81860ppamavo35UgoRdbYaBcoh9QcfylQr66oc6vFWXRcZ_ZT2LawVCWTIy3brGPi6UklfCpIMfIjf7iGdXKHzg.48V1_ALb6US04U3b.5eym8TW_c8SuK0ltJ3rpYIzOeDQz7TALvtu6UG9oMo4vpzs9tX_EFShS8iB7j6jiSdiwkIr3ajwQzaBtQD_A.XFBoMYUZodetZdvTiFvSkQ"
-      
-    ClaimRequestHeader:
-      allOf:
-        - $ref: '#/components/schemas/BaseTransportHeader'
-        - type: object
-          properties:
-            domain_header:
-              type: object
-              description: JSON object containing domain specific header values as proposed in domain data specifications for ClaimSubmitRequestHeader FHIR bundle definition.
-              properties:
-                key5:
-                  type: string
-                  example: "value 1"
-                key6:
-                  type: string
-                  example: "value 2"
-    ClaimRequestPayload:
-      type: string
-      description: ClaimRequest FHIR bunble object encrypted and Base64 encoded as per the guidelines provided in HCP Protocol document. Structure definition of ClaimRequest FHIR bundle is available [here](http://hl7.org/fhir/R4/claim.html).
-      example: "eyJhbGciOiJSU0EtT0FFUCIsImVuYyI6IkEyNTZHQ00ifQ.OKOawDo13gRp2ojaHV7LFpZcgV7T6DVZKTyKOMTYUmKoTCVJRgckCL9kiMT03JGeipsEdY3mx_etLbbWSrFr05kLzcSr4qKAq7YN7e9jwQRb23nfa6c9d-StnImGyFDbSv04uVuxIp5Zms1gNxKKK2Da14B8S4rzVRltdYwam_lDp5XnZAYpQdb76FdIKLaVmqgfwX7XWRxv2322i-vDxRfqNzo_tETKzpVLzfiwQyeyPGLBIO56YJ7eObdv0je81860ppamavo35UgoRdbYaBcoh9QcfylQr66oc6vFWXRcZ_ZT2LawVCWTIy3brGPi6UklfCpIMfIjf7iGdXKHzg.48V1_ALb6US04U3b.5eym8TW_c8SuK0ltJ3rpYIzOeDQz7TALvtu6UG9oMo4vpzs9tX_EFShS8iB7j6jiSdiwkIr3ajwQzaBtQD_A.XFBoMYUZodetZdvTiFvSkQ"
-    
-    ClaimResponseHeader:
-      allOf:
-        - $ref: '#/components/schemas/BaseTransportHeader'
-        - type: object
-          properties:
-            domain_header:
-              type: object
-              description: JSON object containing domain specific header values as proposed in domain data specifications for ClaimSubmitRequestHeader FHIR bundle definition.
-              properties:
-                key5:
-                  type: string
-                  example: "value 1"
-                key6:
-                  type: string
-                  example: "value 2"
-    ClaimResponsePayload:
-      type: string
-      description: ClaimResponse FHIR bunble object encrypted and Base64 encoded as per the guidelines provided in HCP Protocol document. Structure definition of ClaimResponse FHIR bundle is available [here](http://hl7.org/fhir/R4/claim.html).
-      example: "eyJhbGciOiJSU0EtT0FFUCIsImVuYyI6IkEyNTZHQ00ifQ.OKOawDo13gRp2ojaHV7LFpZcgV7T6DVZKTyKOMTYUmKoTCVJRgckCL9kiMT03JGeipsEdY3mx_etLbbWSrFr05kLzcSr4qKAq7YN7e9jwQRb23nfa6c9d-StnImGyFDbSv04uVuxIp5Zms1gNxKKK2Da14B8S4rzVRltdYwam_lDp5XnZAYpQdb76FdIKLaVmqgfwX7XWRxv2322i-vDxRfqNzo_tETKzpVLzfiwQyeyPGLBIO56YJ7eObdv0je81860ppamavo35UgoRdbYaBcoh9QcfylQr66oc6vFWXRcZ_ZT2LawVCWTIy3brGPi6UklfCpIMfIjf7iGdXKHzg.48V1_ALb6US04U3b.5eym8TW_c8SuK0ltJ3rpYIzOeDQz7TALvtu6UG9oMo4vpzs9tX_EFShS8iB7j6jiSdiwkIr3ajwQzaBtQD_A.XFBoMYUZodetZdvTiFvSkQ"
-    
-    ClaimSearchRequestHeader:
-      allOf:
-        - $ref: '#/components/schemas/BaseTransportHeader'
-        - type: object
-          properties:
-            domain_header:
-              type: object
-              description: JSON object containing domain specific header values as proposed in domain data specifications for Claim search request.
-              properties:
-                key5:
-                  type: string
-                  example: "value 1"
-                key6:
-                  type: string
-                  example: "value 2"
-    ClaimSearchRequestPayload:
-      type: string
-      description: Base64 encoded and encrypted value of the Claim search object. Details of the search object are available [here](http://hl7.org/fhir/R4/claim.html#search).
-      example: "eyJhbGciOiJSU0EtT0FFUCIsImVuYyI6IkEyNTZHQ00ifQ.OKOawDo13gRp2ojaHV7LFpZcgV7T6DVZKTyKOMTYUmKoTCVJRgckCL9kiMT03JGeipsEdY3mx_etLbbWSrFr05kLzcSr4qKAq7YN7e9jwQRb23nfa6c9d-StnImGyFDbSv04uVuxIp5Zms1gNxKKK2Da14B8S4rzVRltdYwam_lDp5XnZAYpQdb76FdIKLaVmqgfwX7XWRxv2322i-vDxRfqNzo_tETKzpVLzfiwQyeyPGLBIO56YJ7eObdv0je81860ppamavo35UgoRdbYaBcoh9QcfylQr66oc6vFWXRcZ_ZT2LawVCWTIy3brGPi6UklfCpIMfIjf7iGdXKHzg.48V1_ALb6US04U3b.5eym8TW_c8SuK0ltJ3rpYIzOeDQz7TALvtu6UG9oMo4vpzs9tX_EFShS8iB7j6jiSdiwkIr3ajwQzaBtQD_A.XFBoMYUZodetZdvTiFvSkQ"
-      
-    ClaimSearchResponseHeader:
-      allOf:
-        - $ref: '#/components/schemas/BaseTransportHeader'
-        - type: object
-          properties:
-            domain_header:
-              type: object
-              description: JSON object containing domain specific header values as proposed in domain data specifications for Claim search response.
-              properties:
-                key3:
-                  type: string
-                  example: "value 1"
-                key4:
-                  type: string
-                  example: "value 2"
-    ClaimSearchResponsePayload:
-      type: string
-      description: List of ClaimResponse FHIR objects encrypted and Base64 encoded as per the guidelines provided in HCP Protocol document. Structure definition of ClaimResponse resource is available [here](http://hl7.org/fhir/R4/claimresponse.html)
-      example: "eyJhbGciOiJSU0EtT0FFUCIsImVuYyI6IkEyNTZHQ00ifQ.OKOawDo13gRp2ojaHV7LFpZcgV7T6DVZKTyKOMTYUmKoTCVJRgckCL9kiMT03JGeipsEdY3mx_etLbbWSrFr05kLzcSr4qKAq7YN7e9jwQRb23nfa6c9d-StnImGyFDbSv04uVuxIp5Zms1gNxKKK2Da14B8S4rzVRltdYwam_lDp5XnZAYpQdb76FdIKLaVmqgfwX7XWRxv2322i-vDxRfqNzo_tETKzpVLzfiwQyeyPGLBIO56YJ7eObdv0je81860ppamavo35UgoRdbYaBcoh9QcfylQr66oc6vFWXRcZ_ZT2LawVCWTIy3brGPi6UklfCpIMfIjf7iGdXKHzg.48V1_ALb6US04U3b.5eym8TW_c8SuK0ltJ3rpYIzOeDQz7TALvtu6UG9oMo4vpzs9tX_EFShS8iB7j6jiSdiwkIr3ajwQzaBtQD_A.XFBoMYUZodetZdvTiFvSkQ"
-    
-    PaymentNoticeRequestHeader:
-      allOf:
-        - $ref: '#/components/schemas/BaseTransportHeader'
-        - type: object
-          properties:
-            domain_header:
-              type: object
-              description: JSON object containing domain specific header values as proposed in domain data specifications for PaymentNoticeRequest FHIR bundle definition.
-              properties:
-                key5:
-                  type: string
-                  example: "value 1"
-                key6:
-                  type: string
-                  example: "value 2"
-    PaymentNoticeRequestPayload:
-      type: string
-      description: PaymentNotice FHIR bunble object encrypted and Base64 encoded as per the guidelines provided in HCP Protocol document. Structure definition of PaymentNotice FHIR bundle is available [here](http://hl7.org/fhir/R4/paymentnotice.html).
-      example: "eyJhbGciOiJSU0EtT0FFUCIsImVuYyI6IkEyNTZHQ00ifQ.OKOawDo13gRp2ojaHV7LFpZcgV7T6DVZKTyKOMTYUmKoTCVJRgckCL9kiMT03JGeipsEdY3mx_etLbbWSrFr05kLzcSr4qKAq7YN7e9jwQRb23nfa6c9d-StnImGyFDbSv04uVuxIp5Zms1gNxKKK2Da14B8S4rzVRltdYwam_lDp5XnZAYpQdb76FdIKLaVmqgfwX7XWRxv2322i-vDxRfqNzo_tETKzpVLzfiwQyeyPGLBIO56YJ7eObdv0je81860ppamavo35UgoRdbYaBcoh9QcfylQr66oc6vFWXRcZ_ZT2LawVCWTIy3brGPi6UklfCpIMfIjf7iGdXKHzg.48V1_ALb6US04U3b.5eym8TW_c8SuK0ltJ3rpYIzOeDQz7TALvtu6UG9oMo4vpzs9tX_EFShS8iB7j6jiSdiwkIr3ajwQzaBtQD_A.XFBoMYUZodetZdvTiFvSkQ"
-      
-    PaymentNoticeResponseHeader:
-      allOf:
-        - $ref: '#/components/schemas/BaseTransportHeader'
-        - type: object
-          properties:
-            domain_header:
-              type: object
-              description: JSON object containing domain specific header values as proposed in domain data specifications for Payment Acknowledgement.
-              properties:
-                key5:
-                  type: string
-                  example: "value 1"
-                key6:
-                  type: string
-                  example: "value 2"
-    PaymentNoticeResponsePayload:
-      type: string
-      description: PaymentAcknowledgement object encrypted and Base64 encoded as per the guidelines provided in HCP Protocol document. Structure definition of PaymentAcknowledge object is available [here](http://hl7.org/fhir/R4/paymentnotice.html).
-      example: "eyJhbGciOiJSU0EtT0FFUCIsImVuYyI6IkEyNTZHQ00ifQ.OKOawDo13gRp2ojaHV7LFpZcgV7T6DVZKTyKOMTYUmKoTCVJRgckCL9kiMT03JGeipsEdY3mx_etLbbWSrFr05kLzcSr4qKAq7YN7e9jwQRb23nfa6c9d-StnImGyFDbSv04uVuxIp5Zms1gNxKKK2Da14B8S4rzVRltdYwam_lDp5XnZAYpQdb76FdIKLaVmqgfwX7XWRxv2322i-vDxRfqNzo_tETKzpVLzfiwQyeyPGLBIO56YJ7eObdv0je81860ppamavo35UgoRdbYaBcoh9QcfylQr66oc6vFWXRcZ_ZT2LawVCWTIy3brGPi6UklfCpIMfIjf7iGdXKHzg.48V1_ALb6US04U3b.5eym8TW_c8SuK0ltJ3rpYIzOeDQz7TALvtu6UG9oMo4vpzs9tX_EFShS8iB7j6jiSdiwkIr3ajwQzaBtQD_A.XFBoMYUZodetZdvTiFvSkQ"
-    
-    PaymentNoticeSearchRequestHeader:
-      allOf:
-        - $ref: '#/components/schemas/BaseTransportHeader'
-        - type: object
-          properties:
-            domain_header:
-              type: object
-              description: JSON object containing domain specific header values as proposed in domain data specifications for Payment search request.
-              properties:
-                key5:
-                  type: string
-                  example: "value 1"
-                key6:
-                  type: string
-                  example: "value 2"
-    PaymentNoticeSearchRequestPayload:
-      type: string
-      description: Base64 encoded and encrypted value of the PaymentNotice search object. Details of the search object are available [here](http://hl7.org/fhir/R4/paymentnotice.html#search).
-      example: "eyJhbGciOiJSU0EtT0FFUCIsImVuYyI6IkEyNTZHQ00ifQ.OKOawDo13gRp2ojaHV7LFpZcgV7T6DVZKTyKOMTYUmKoTCVJRgckCL9kiMT03JGeipsEdY3mx_etLbbWSrFr05kLzcSr4qKAq7YN7e9jwQRb23nfa6c9d-StnImGyFDbSv04uVuxIp5Zms1gNxKKK2Da14B8S4rzVRltdYwam_lDp5XnZAYpQdb76FdIKLaVmqgfwX7XWRxv2322i-vDxRfqNzo_tETKzpVLzfiwQyeyPGLBIO56YJ7eObdv0je81860ppamavo35UgoRdbYaBcoh9QcfylQr66oc6vFWXRcZ_ZT2LawVCWTIy3brGPi6UklfCpIMfIjf7iGdXKHzg.48V1_ALb6US04U3b.5eym8TW_c8SuK0ltJ3rpYIzOeDQz7TALvtu6UG9oMo4vpzs9tX_EFShS8iB7j6jiSdiwkIr3ajwQzaBtQD_A.XFBoMYUZodetZdvTiFvSkQ"
-    
-    PaymentNoticeSearchResponseHeader:
-      allOf:
-        - $ref: '#/components/schemas/BaseTransportHeader'
-        - type: object
-          properties:
-            domain_header:
-              type: object
-              description: JSON object containing domain specific header values as proposed in domain data specifications for Payment search response.
-              properties:
-                key3:
-                  type: string
-                  example: "value 1"
-                key4:
-                  type: string
-                  example: "value 2"
-    PaymentNoticeSearchResponsePayload:
-      type: string
-      description: List of PaymentNotice FHIR objects encrypted and Base64 encoded as per the guidelines provided in HCP Protocol document. Structure definition of PaymentNotice resource is available [here](http://hl7.org/fhir/R4/claimresponse.html)
+      description: The payload defined in the domain data specifications for the use case has to be encrypted, base64 encoded (as per the guidelines provided in the HCX Tech specifications) and should be used as the request payload.
       example: "eyJhbGciOiJSU0EtT0FFUCIsImVuYyI6IkEyNTZHQ00ifQ.OKOawDo13gRp2ojaHV7LFpZcgV7T6DVZKTyKOMTYUmKoTCVJRgckCL9kiMT03JGeipsEdY3mx_etLbbWSrFr05kLzcSr4qKAq7YN7e9jwQRb23nfa6c9d-StnImGyFDbSv04uVuxIp5Zms1gNxKKK2Da14B8S4rzVRltdYwam_lDp5XnZAYpQdb76FdIKLaVmqgfwX7XWRxv2322i-vDxRfqNzo_tETKzpVLzfiwQyeyPGLBIO56YJ7eObdv0je81860ppamavo35UgoRdbYaBcoh9QcfylQr66oc6vFWXRcZ_ZT2LawVCWTIy3brGPi6UklfCpIMfIjf7iGdXKHzg.48V1_ALb6US04U3b.5eym8TW_c8SuK0ltJ3rpYIzOeDQz7TALvtu6UG9oMo4vpzs9tX_EFShS8iB7j6jiSdiwkIr3ajwQzaBtQD_A.XFBoMYUZodetZdvTiFvSkQ"
       
     ErrorResponse:
