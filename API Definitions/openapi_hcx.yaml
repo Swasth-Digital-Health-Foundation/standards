@@ -690,7 +690,7 @@ components:
       required:
         - sender_code
         - recipient_code
-        - message_id
+        - request_id
         - correlation_id
         - timestamp
         - status
@@ -706,13 +706,17 @@ components:
           type: string
           description: Registry code of the recipient (e.g. provider or payer)
           example: "PAYOR01@HCX01"
-        message_id:
+        request_id:
           type: string
           description: Sender generated unique id for each originating request.
           format: uuid
         correlation_id:
           type: string
           description: Unique id of the conversation (a collection of related messages). It may be chosen as the message_id in the original sender’s (initiator’s) system. For return messages (asynchronous responses) responders are expected to populate with the one in the request. 
+          format: uuid
+        workflow_id:
+          type: string
+          description: Unique id of workflow that may span over a series of message exchanges, e.g. an eligibility check, a preauth and then claims submission for a patient may be linked with such an id from the providers initiate request on check eligibility.
           format: uuid
         timestamp:
           type: string
@@ -726,13 +730,27 @@ components:
           type: string
           description: Operational status of the message. Depending on the leg of the message, it would be one of the defined values in the enum.
           enum: ["request.initiate", "request.retry", "response.success", "response.fail", "response.sender_not_supported", "response.unhandled", "response.request_retry"]
-        details:
+        error_details:
           type: object
-          description: Expected to be used for providing details of the status. Will be specially useful in scenarios where Operational status is not successful in callbacks responses. Expected to carry debug, error details when requested by the originator.
+          description: Expected to be used for providing details of the status. Will be specially useful in scenarios where operational status indicates irrecoverable error.
           properties:
             code:
               type: string
-              description: error, info, debug code from the system - expected to be namespaced for better readability
+              description: error code from the system - expected to be namespaced for better readability
+            message:
+              type: string
+              description: Short description of the detail
+            trace:
+              type: string
+              description: Long description supporting the Code 
+          additionalProperties: true
+        debug_details:
+          type: object
+          description: Expected to be used for providing details of the status. Will be specially useful in debugging scenarios.
+          properties:
+            code:
+              type: string
+              description: info or debug code from the system - expected to be namespaced for better readability
             message:
               type: string
               description: Short description of the detail
@@ -765,7 +783,7 @@ components:
         domain_header:
           type: object
           description: JSON object containing domain header values specific to the use case as proposed in the HCX - Domain Specs document.
-          example: {"payload_type": "application/fhir+json", "value": 12000, "currency": "INR"}
+          example: {"usage": "preauthorization", "value": 12000, "currency": "INR"}
           additionalProperties: true
     MessageSignatures:
       type: array
