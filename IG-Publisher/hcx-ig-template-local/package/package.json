@@ -2,9 +2,9 @@
     "name": "hcx-ig-template-local",
     "version": "0.1.0",
     "type": "fhir.template",
-    "license": "CC0-1.0",
-    "description": "IHE FHIR Template",
-    "author": "http://ihe.net",
+    "license": "",
+    "description": "HCX FHIR Template",
+    "author": "Manjunath Davanam",
     "canonical": "http://fhir.org/templates/hcx-ig-template-local",
     "base": "fhir.base.template",
     "dependencies": {
