@@ -1,0 +1,37 @@
+[
+  {
+    "id": "Account",
+    "type": "StructureDefinition",
+    "url": "http://hl7.org/fhir/StructureDefinition/Account",
+    "version": "0.0.1",
+    "name": "Account"
+  },
+  {
+    "id": "CoverageEligibilityResponse",
+    "type": "StructureDefinition",
+    "url": "http://hl7.org/fhir/StructureDefinition/CoverageEligibilityResponse",
+    "version": "0.0.1",
+    "name": "CoverageEligibilityResponse"
+  },
+  {
+    "id": "CovereageEligibilityResponseDocument",
+    "type": "StructureDefinition",
+    "url": "http://hl7.org/fhir/StructureDefinition/CovereageEligibilityResponseDocument",
+    "version": "0.0.1",
+    "name": "CovereageEligibilityResponseDocument"
+  },
+  {
+    "id": "Patient",
+    "type": "StructureDefinition",
+    "url": "http://hl7.org/fhir/StructureDefinition/Patient",
+    "version": "0.0.1",
+    "name": "Patient"
+  },
+  {
+    "id": "hl7.fhir.in.core",
+    "type": "ImplementationGuide",
+    "url": "https://fhir-ig-demo/ImplementationGuide/ig",
+    "version": "0.0.1",
+    "name": "HCX Core"
+  }
+]
