@@ -23,6 +23,25 @@ This document details about the setup of HCX FHIR IG Publisher.
   * Place this file in the `input` directory.
   * Setup your IDE to support JSON Schema support to help with this step and later ones.
   * Name can be changed.
+  * Define all the definition in the `resource` part of `definition` exmaple are here - 
+  ```
+  {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/Patient",
+            "valueString": "SearchParameter"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/Patient"
+        },
+        "name": "HCX Patient",
+        "description": "**Search by subject - a patient**  \n**NOTE**: This US Core SearchParameter definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain",
+        "exampleBoolean": false
+      }
+
+  ```
+  For more details of IG please check this link - https://www.hl7.org/fhir/implementationguide.html
 
 * Create the `ig.ini` publisher configuration file.
   * Name and directory can be changed but its location sets the root/working directory for the publisher tool.
