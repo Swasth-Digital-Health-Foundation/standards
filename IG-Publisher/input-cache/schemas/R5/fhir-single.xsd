@@ -47,7 +47,7 @@
   POSSIBILITY OF SUCH DAMAGE.
   
 
-  Generated on Thu, Aug 26, 2021 16:27+0000 for FHIR v4.6.0 
+  Generated on Fri, Aug 27, 2021 10:40+0000 for FHIR v4.6.0 
 -->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://hl7.org/fhir" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" targetNamespace="http://hl7.org/fhir" elementFormDefault="qualified" version="4.6.0">
   <!-- Note: When using this schema with some tools, it may also be necessary to declare xmlns:xml="http://www.w3.org/XML/1998/namespace", however this causes performance issues with other tools and thus is not in the base schemas. -->
@@ -19336,11 +19336,6 @@ UDILabelName | UserFriendlyName | PatientReportedName | ManufactureDeviceName | 
 UDILabelName | UserFriendlyName | PatientReportedName | ManufactureDeviceName | ModelName.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="scope" minOccurs="1" maxOccurs="1" type="DeviceCorrectiveActionScope">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">The scope of the corrective action - whether the action targeted all units of a given device model, or only a specific set of batches identified by lot numbers, or individually identified devices identified by the serial name.</xs:documentation>
-           </xs:annotation>
-          </xs:element>
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
@@ -19471,7 +19466,7 @@ UDILabelName | UserFriendlyName | PatientReportedName | ManufactureDeviceName | 
               <xs:documentation xml:lang="en">The jurisdiction to which the deviceIdentifier applies.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="marketDistribution" type="DeviceDefinition.MarketDistribution1" minOccurs="1" maxOccurs="1">
+          <xs:element name="marketDistribution" type="DeviceDefinition.MarketDistribution1" minOccurs="0" maxOccurs="1">
             <xs:annotation>
               <xs:documentation xml:lang="en">The organization that assigns the identifier algorithm.</xs:documentation>
            </xs:annotation>
@@ -19658,6 +19653,11 @@ UDILabelName | UserFriendlyName | PatientReportedName | ManufactureDeviceName | 
           <xs:element name="recall" minOccurs="1" maxOccurs="1" type="boolean">
             <xs:annotation>
               <xs:documentation xml:lang="en">Whether the last corrective action known for this device was a recall.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element name="scope" minOccurs="1" maxOccurs="1" type="DeviceCorrectiveActionScope">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">The scope of the corrective action - whether the action targeted all units of a given device model, or only a specific set of batches identified by lot numbers, or individually identified devices identified by the serial name.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="period" minOccurs="1" maxOccurs="1" type="Period">

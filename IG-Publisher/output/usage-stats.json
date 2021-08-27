@@ -10,22 +10,64 @@
         "title": "Account"
       }
     ],
+    "Composition": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/PreAuthorizationResponse",
+        "title": "CovereageEligibilityResponseDocument"
+      }
+    ],
+    "Coverage": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/Coverage",
+        "title": "Coverage"
+      }
+    ],
+    "CoverageEligibilityRequest": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/CoverageEligibilityRequest",
+        "title": "CoverageEligibilityRequest"
+      }
+    ],
     "CoverageEligibilityResponse": [
       {
         "url": "http://hl7.org/fhir/StructureDefinition/CoverageEligibilityResponse",
         "title": "CoverageEligibilityResponse"
       }
     ],
-    "Composition": [
+    "Organization": [
       {
-        "url": "http://hl7.org/fhir/StructureDefinition/CovereageEligibilityResponseDocument",
-        "title": "CovereageEligibilityResponseDocument"
+        "url": "http://hl7.org/fhir/StructureDefinition/Organization",
+        "title": "Organization"
       }
     ],
     "Patient": [
       {
         "url": "http://hl7.org/fhir/StructureDefinition/Patient",
         "title": "Patient"
+      }
+    ],
+    "PaymentNotice": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/PaymentNotice",
+        "title": "PaymentNotice"
+      }
+    ],
+    "PaymentReconciliation": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/PaymentReconciliation",
+        "title": "PaymentReconciliation"
+      }
+    ],
+    "Practitioner": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/Practitioner",
+        "title": "Practitioner"
+      }
+    ],
+    "PractitionerRole": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
+        "title": "PractitionerRole"
       }
     ]
   },
@@ -79,19 +121,55 @@
     "http://hl7.org/fhir/tools/StructureDefinition/Account": [
       "ImplementationGuide.definition.resource"
     ],
+    "http://hl7.org/fhir/tools/StructureDefinition/ClaimResponseDocument": [
+      "ImplementationGuide.definition.resource"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/Coverage": [
+      "ImplementationGuide.definition.resource"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/CoverageEligibilityRequest": [
+      "ImplementationGuide.definition.resource"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/CoverageEligibilityRequestDocument": [
+      "ImplementationGuide.definition.resource"
+    ],
     "http://hl7.org/fhir/tools/StructureDefinition/CoverageEligibilityResponse": [
       "ImplementationGuide.definition.resource"
     ],
-    "http://hl7.org/fhir/tools/StructureDefinition/CovereageEligibilityResponseDocument": [
+    "http://hl7.org/fhir/tools/StructureDefinition/CoverageEligibilityResponseDocument": [
+      "ImplementationGuide.definition.resource"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/Organization": [
       "ImplementationGuide.definition.resource"
     ],
     "http://hl7.org/fhir/tools/StructureDefinition/Patient": [
+      "ImplementationGuide.definition.resource"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/PaymentNotice": [
+      "ImplementationGuide.definition.resource"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/PaymentReconciliation": [
+      "ImplementationGuide.definition.resource"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/Practitioner": [
+      "ImplementationGuide.definition.resource"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/PractitionerRole": [
+      "ImplementationGuide.definition.resource"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/PreAuthorizationResponse": [
       "ImplementationGuide.definition.resource"
     ],
     "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter": [
       "ImplementationGuide.definition"
     ],
     "http://hl7.org/fhir/tools/StructureDefinition/resource-information": [
+      "ImplementationGuide.definition.resource"
+    ],
+    "http://hl7.org/fhir/tools/ValueSet/claim-denial-codes": [
+      "ImplementationGuide.definition.resource"
+    ],
+    "http://hl7.org/fhir/tools/ValueSet/claim-service-categories": [
       "ImplementationGuide.definition.resource"
     ]
   }
