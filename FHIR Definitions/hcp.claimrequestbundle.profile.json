@@ -2236,7 +2236,8 @@
           "max" : "*"
         },
         "type" : [{
-          "code" : "Element"
+          "code" : "Reference",
+          "targetProfile" : ["http://hl7.org/fhir/StructureDefinition/Resource"]
         }],
         "condition" : ["cmp-2"],
         "constraint" : [{
@@ -2311,7 +2312,8 @@
           "max" : "*"
         },
         "type" : [{
-          "code" : "Signature"
+          "code" : "Reference",
+          "targetProfile" : ["https://raw.githubusercontent.com/Swasth-Digital-Health-Foundation/standards/69ce5ac4bc6e9fc5a015a53c82e3ebb7a379f348/FHIR%20Definitions/hcp.signature.extension.json"]
         }],
         "condition" : ["cmp-2"],
         "constraint" : [{
@@ -2453,10 +2455,7 @@
           "ordered" : false,
           "rules" : "open"
         },
-        "min" : 1,
-        "type" : [{
-          "code" : "Element"
-        }]
+        "min" : 1
       },
       {
         "id" : "Composition.section.entry:Claim",
@@ -2482,7 +2481,8 @@
         "min" : 0,
         "max" : "*",
         "type" : [{
-          "code" : "Signature"
+          "code" : "Reference",
+          "targetProfile" : ["https://raw.githubusercontent.com/Swasth-Digital-Health-Foundation/standards/69ce5ac4bc6e9fc5a015a53c82e3ebb7a379f348/FHIR%20Definitions/hcp.signature.extension.json"]
         }]
       }]
     }
