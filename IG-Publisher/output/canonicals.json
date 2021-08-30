@@ -7,6 +7,13 @@
     "name": "Account"
   },
   {
+    "id": "ClaimRequest",
+    "type": "StructureDefinition",
+    "url": "http://hl7.org/fhir/StructureDefinition/ClaimRequest",
+    "version": "0.0.1",
+    "name": "CovereageEligibilityRequestDocument"
+  },
+  {
     "id": "ClaimResponseDocument",
     "type": "StructureDefinition",
     "url": "http://hl7.org/fhir/StructureDefinition/ClaimResponse",
@@ -91,11 +98,25 @@
     "name": "PractitionerRole"
   },
   {
+    "id": "PreAuthorizationRequest",
+    "type": "StructureDefinition",
+    "url": "http://hl7.org/fhir/StructureDefinition/PreAuthorizationRequest",
+    "version": "0.0.1",
+    "name": "CovereageEligibilityRequestDocument"
+  },
+  {
     "id": "PreAuthorizationResponse",
     "type": "StructureDefinition",
     "url": "http://hl7.org/fhir/StructureDefinition/PreAuthorizationResponse",
     "version": "0.0.1",
     "name": "CovereageEligibilityResponseDocument"
+  },
+  {
+    "id": "hcp-signature",
+    "type": "StructureDefinition",
+    "url": "http://hl7.org/fhir/StructureDefinition/questionnaireresponse-signature",
+    "version": "0.0.1",
+    "name": "HcpSignature"
   },
   {
     "id": "hl7.fhir.in.core",

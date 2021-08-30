@@ -89,6 +89,20 @@
       {
         "extension": [
           {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/ClaimRequest",
+            "valueString": "SearchParameter"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/ClaimRequest"
+        },
+        "name": "HCX Claim Request",
+        "description": "**Search by subject - a patient**  \n**NOTE**: This US Core SearchParameter definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/ClaimResponseDocument",
             "valueString": "SearchParameter"
           }
@@ -201,6 +215,20 @@
       {
         "extension": [
           {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/PreAuthorizationRequest",
+            "valueString": "SearchParameter"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/PreAuthorizationRequest"
+        },
+        "name": "HCX PreAuthorization Request",
+        "description": "**Search by subject - a patient**  \n**NOTE**: This US Core SearchParameter definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/PreAuthorizationResponse",
             "valueString": "SearchParameter"
           }
@@ -223,6 +251,20 @@
           "reference": "StructureDefinition/PaymentReconciliation"
         },
         "name": "HCX Payment Reconciliation",
+        "description": "**Search by subject - a patient**  \n**NOTE**: This US Core SearchParameter definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/hcp-signature",
+            "valueString": "SearchParameter"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/hcp-signature"
+        },
+        "name": "HCX Signature",
         "description": "**Search by subject - a patient**  \n**NOTE**: This US Core SearchParameter definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain",
         "exampleBoolean": false
       },

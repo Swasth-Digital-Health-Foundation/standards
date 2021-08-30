@@ -1,12 +1,13 @@
 ﻿HCX Core : Validation Results
 =========================================
 
-err = 105, warn = 18, info = 0
+err = 105, warn = 29, info = 0
 IG Publisher Version: 1.1.77
-Generated Fri Aug 27 17:22:52 IST 2021. FHIR version 4.0.1 for ig#0.0.1 (canonical = https://fhir-ig-demo)
+Generated Mon Aug 30 14:03:07 IST 2021. FHIR version 4.0.1 for ig#0.0.1 (canonical = https://fhir-ig-demo)
 
- Build Errors : 257 / 1 / 0
+ Build Errors : 303 / 1 / 0
  C:\Users\Test\Documents\swas\standards\IG-Publisher\input\hcx-definations\structuredefinition-Account : 17 / 1 / 1
+ C:\Users\Test\Documents\swas\standards\IG-Publisher\input\hcx-definations\structuredefinition-ClaimRequest : 0 / 5 / 1
  C:\Users\Test\Documents\swas\standards\IG-Publisher\input\hcx-definations\structuredefinition-ClaimResponseDocument : 0 / 1 / 1
  C:\Users\Test\Documents\swas\standards\IG-Publisher\input\hcx-definations\structuredefinition-Coverage : 0 / 1 / 1
  C:\Users\Test\Documents\swas\standards\IG-Publisher\input\hcx-definations\structuredefinition-CoverageEligibilityRequest : 5 / 1 / 1
@@ -19,7 +20,9 @@ Generated Fri Aug 27 17:22:52 IST 2021. FHIR version 4.0.1 for ig#0.0.1 (canonic
  C:\Users\Test\Documents\swas\standards\IG-Publisher\input\hcx-definations\structuredefinition-PaymentReconciliation : 28 / 1 / 1
  C:\Users\Test\Documents\swas\standards\IG-Publisher\input\hcx-definations\structuredefinition-Practitioner : 0 / 1 / 1
  C:\Users\Test\Documents\swas\standards\IG-Publisher\input\hcx-definations\structuredefinition-PractitionerRole : 0 / 1 / 1
+ C:\Users\Test\Documents\swas\standards\IG-Publisher\input\hcx-definations\structuredefinition-PreAuthorizationRequest : 0 / 5 / 1
  C:\Users\Test\Documents\swas\standards\IG-Publisher\input\hcx-definations\structuredefinition-PreAuthorizationResponse : 0 / 1 / 1
+ C:\Users\Test\Documents\swas\standards\IG-Publisher\input\hcx-definations\structuredefinition-hcp-signature : 0 / 1 / 1
  C:\Users\Test\Documents\swas\standards\IG-Publisher\input\hcx-definations\valueset-claim-denial-codes : 0 / 1 / 1
  C:\Users\Test\Documents\swas\standards\IG-Publisher\input\hcx-definations\valueset-claim-service-categories : 0 / 1 / 1
  C:\Users\Test\Documents\swas\standards\IG-Publisher\input\ig : 3 / 1 / 1
@@ -43,6 +46,22 @@ ERROR: C:\Users\Test\Documents\swas\standards\IG-Publisher\output\StructureDefin
 ERROR: C:\Users\Test\Documents\swas\standards\IG-Publisher\output\StructureDefinition-Account.profile.ttl.html#/html/body/div/div/nav/div/div/ul/li/ul/li/a at Line 97, column 10: The link 'spec.html' for "Detailed Specification" cannot be resolved
 ERROR: C:\Users\Test\Documents\swas\standards\IG-Publisher\output\StructureDefinition-Account.profile.xml.html#/html/body/div/div/nav/div/div/ul/li/a at Line 79, column 8: The link 'index.html' for "HCX Home" cannot be resolved
 ERROR: C:\Users\Test\Documents\swas\standards\IG-Publisher\output\StructureDefinition-Account.profile.xml.html#/html/body/div/div/nav/div/div/ul/li/ul/li/a at Line 97, column 10: The link 'spec.html' for "Detailed Specification" cannot be resolved
+ERROR: C:\Users\Test\Documents\swas\standards\IG-Publisher\output\StructureDefinition-ClaimRequest-definitions.html#/html/body/div/div/nav/div/div/ul/li/a at Line 75, column 8: The link 'index.html' for "HCX Home" cannot be resolved
+ERROR: C:\Users\Test\Documents\swas\standards\IG-Publisher\output\StructureDefinition-ClaimRequest-definitions.html#/html/body/div/div/nav/div/div/ul/li/ul/li/a at Line 93, column 10: The link 'spec.html' for "Detailed Specification" cannot be resolved
+ERROR: C:\Users\Test\Documents\swas\standards\IG-Publisher\output\StructureDefinition-ClaimRequest-examples.html#/html/body/div/div/nav/div/div/ul/li/a at Line 75, column 8: The link 'index.html' for "HCX Home" cannot be resolved
+ERROR: C:\Users\Test\Documents\swas\standards\IG-Publisher\output\StructureDefinition-ClaimRequest-examples.html#/html/body/div/div/nav/div/div/ul/li/ul/li/a at Line 93, column 10: The link 'spec.html' for "Detailed Specification" cannot be resolved
+ERROR: C:\Users\Test\Documents\swas\standards\IG-Publisher\output\StructureDefinition-ClaimRequest-mappings.html#/html/body/div/div/nav/div/div/ul/li/a at Line 75, column 8: The link 'index.html' for "HCX Home" cannot be resolved
+ERROR: C:\Users\Test\Documents\swas\standards\IG-Publisher\output\StructureDefinition-ClaimRequest-mappings.html#/html/body/div/div/nav/div/div/ul/li/ul/li/a at Line 93, column 10: The link 'spec.html' for "Detailed Specification" cannot be resolved
+ERROR: C:\Users\Test\Documents\swas\standards\IG-Publisher\output\StructureDefinition-ClaimRequest.html#/html/body/div/div/nav/div/div/ul/li/a at Line 75, column 8: The link 'index.html' for "HCX Home" cannot be resolved
+ERROR: C:\Users\Test\Documents\swas\standards\IG-Publisher\output\StructureDefinition-ClaimRequest.html#/html/body/div/div/nav/div/div/ul/li/ul/li/a at Line 93, column 10: The link 'spec.html' for "Detailed Specification" cannot be resolved
+ERROR: C:\Users\Test\Documents\swas\standards\IG-Publisher\output\StructureDefinition-ClaimRequest.profile.history.html#/html/body/div/div/nav/div/div/ul/li/a at Line 75, column 8: The link 'index.html' for "HCX Home" cannot be resolved
+ERROR: C:\Users\Test\Documents\swas\standards\IG-Publisher\output\StructureDefinition-ClaimRequest.profile.history.html#/html/body/div/div/nav/div/div/ul/li/ul/li/a at Line 93, column 10: The link 'spec.html' for "Detailed Specification" cannot be resolved
+ERROR: C:\Users\Test\Documents\swas\standards\IG-Publisher\output\StructureDefinition-ClaimRequest.profile.json.html#/html/body/div/div/nav/div/div/ul/li/a at Line 79, column 8: The link 'index.html' for "HCX Home" cannot be resolved
+ERROR: C:\Users\Test\Documents\swas\standards\IG-Publisher\output\StructureDefinition-ClaimRequest.profile.json.html#/html/body/div/div/nav/div/div/ul/li/ul/li/a at Line 97, column 10: The link 'spec.html' for "Detailed Specification" cannot be resolved
+ERROR: C:\Users\Test\Documents\swas\standards\IG-Publisher\output\StructureDefinition-ClaimRequest.profile.ttl.html#/html/body/div/div/nav/div/div/ul/li/a at Line 79, column 8: The link 'index.html' for "HCX Home" cannot be resolved
+ERROR: C:\Users\Test\Documents\swas\standards\IG-Publisher\output\StructureDefinition-ClaimRequest.profile.ttl.html#/html/body/div/div/nav/div/div/ul/li/ul/li/a at Line 97, column 10: The link 'spec.html' for "Detailed Specification" cannot be resolved
+ERROR: C:\Users\Test\Documents\swas\standards\IG-Publisher\output\StructureDefinition-ClaimRequest.profile.xml.html#/html/body/div/div/nav/div/div/ul/li/a at Line 79, column 8: The link 'index.html' for "HCX Home" cannot be resolved
+ERROR: C:\Users\Test\Documents\swas\standards\IG-Publisher\output\StructureDefinition-ClaimRequest.profile.xml.html#/html/body/div/div/nav/div/div/ul/li/ul/li/a at Line 97, column 10: The link 'spec.html' for "Detailed Specification" cannot be resolved
 ERROR: C:\Users\Test\Documents\swas\standards\IG-Publisher\output\StructureDefinition-ClaimResponseDocument-definitions.html#/html/body/div/div/nav/div/div/ul/li/a at Line 75, column 8: The link 'index.html' for "HCX Home" cannot be resolved
 ERROR: C:\Users\Test\Documents\swas\standards\IG-Publisher\output\StructureDefinition-ClaimResponseDocument-definitions.html#/html/body/div/div/nav/div/div/ul/li/ul/li/a at Line 93, column 10: The link 'spec.html' for "Detailed Specification" cannot be resolved
 ERROR: C:\Users\Test\Documents\swas\standards\IG-Publisher\output\StructureDefinition-ClaimResponseDocument-examples.html#/html/body/div/div/nav/div/div/ul/li/a at Line 75, column 8: The link 'index.html' for "HCX Home" cannot be resolved
@@ -235,6 +254,22 @@ ERROR: C:\Users\Test\Documents\swas\standards\IG-Publisher\output\StructureDefin
 ERROR: C:\Users\Test\Documents\swas\standards\IG-Publisher\output\StructureDefinition-PractitionerRole.profile.ttl.html#/html/body/div/div/nav/div/div/ul/li/ul/li/a at Line 97, column 10: The link 'spec.html' for "Detailed Specification" cannot be resolved
 ERROR: C:\Users\Test\Documents\swas\standards\IG-Publisher\output\StructureDefinition-PractitionerRole.profile.xml.html#/html/body/div/div/nav/div/div/ul/li/a at Line 79, column 8: The link 'index.html' for "HCX Home" cannot be resolved
 ERROR: C:\Users\Test\Documents\swas\standards\IG-Publisher\output\StructureDefinition-PractitionerRole.profile.xml.html#/html/body/div/div/nav/div/div/ul/li/ul/li/a at Line 97, column 10: The link 'spec.html' for "Detailed Specification" cannot be resolved
+ERROR: C:\Users\Test\Documents\swas\standards\IG-Publisher\output\StructureDefinition-PreAuthorizationRequest-definitions.html#/html/body/div/div/nav/div/div/ul/li/a at Line 75, column 8: The link 'index.html' for "HCX Home" cannot be resolved
+ERROR: C:\Users\Test\Documents\swas\standards\IG-Publisher\output\StructureDefinition-PreAuthorizationRequest-definitions.html#/html/body/div/div/nav/div/div/ul/li/ul/li/a at Line 93, column 10: The link 'spec.html' for "Detailed Specification" cannot be resolved
+ERROR: C:\Users\Test\Documents\swas\standards\IG-Publisher\output\StructureDefinition-PreAuthorizationRequest-examples.html#/html/body/div/div/nav/div/div/ul/li/a at Line 75, column 8: The link 'index.html' for "HCX Home" cannot be resolved
+ERROR: C:\Users\Test\Documents\swas\standards\IG-Publisher\output\StructureDefinition-PreAuthorizationRequest-examples.html#/html/body/div/div/nav/div/div/ul/li/ul/li/a at Line 93, column 10: The link 'spec.html' for "Detailed Specification" cannot be resolved
+ERROR: C:\Users\Test\Documents\swas\standards\IG-Publisher\output\StructureDefinition-PreAuthorizationRequest-mappings.html#/html/body/div/div/nav/div/div/ul/li/a at Line 75, column 8: The link 'index.html' for "HCX Home" cannot be resolved
+ERROR: C:\Users\Test\Documents\swas\standards\IG-Publisher\output\StructureDefinition-PreAuthorizationRequest-mappings.html#/html/body/div/div/nav/div/div/ul/li/ul/li/a at Line 93, column 10: The link 'spec.html' for "Detailed Specification" cannot be resolved
+ERROR: C:\Users\Test\Documents\swas\standards\IG-Publisher\output\StructureDefinition-PreAuthorizationRequest.html#/html/body/div/div/nav/div/div/ul/li/a at Line 75, column 8: The link 'index.html' for "HCX Home" cannot be resolved
+ERROR: C:\Users\Test\Documents\swas\standards\IG-Publisher\output\StructureDefinition-PreAuthorizationRequest.html#/html/body/div/div/nav/div/div/ul/li/ul/li/a at Line 93, column 10: The link 'spec.html' for "Detailed Specification" cannot be resolved
+ERROR: C:\Users\Test\Documents\swas\standards\IG-Publisher\output\StructureDefinition-PreAuthorizationRequest.profile.history.html#/html/body/div/div/nav/div/div/ul/li/a at Line 75, column 8: The link 'index.html' for "HCX Home" cannot be resolved
+ERROR: C:\Users\Test\Documents\swas\standards\IG-Publisher\output\StructureDefinition-PreAuthorizationRequest.profile.history.html#/html/body/div/div/nav/div/div/ul/li/ul/li/a at Line 93, column 10: The link 'spec.html' for "Detailed Specification" cannot be resolved
+ERROR: C:\Users\Test\Documents\swas\standards\IG-Publisher\output\StructureDefinition-PreAuthorizationRequest.profile.json.html#/html/body/div/div/nav/div/div/ul/li/a at Line 79, column 8: The link 'index.html' for "HCX Home" cannot be resolved
+ERROR: C:\Users\Test\Documents\swas\standards\IG-Publisher\output\StructureDefinition-PreAuthorizationRequest.profile.json.html#/html/body/div/div/nav/div/div/ul/li/ul/li/a at Line 97, column 10: The link 'spec.html' for "Detailed Specification" cannot be resolved
+ERROR: C:\Users\Test\Documents\swas\standards\IG-Publisher\output\StructureDefinition-PreAuthorizationRequest.profile.ttl.html#/html/body/div/div/nav/div/div/ul/li/a at Line 79, column 8: The link 'index.html' for "HCX Home" cannot be resolved
+ERROR: C:\Users\Test\Documents\swas\standards\IG-Publisher\output\StructureDefinition-PreAuthorizationRequest.profile.ttl.html#/html/body/div/div/nav/div/div/ul/li/ul/li/a at Line 97, column 10: The link 'spec.html' for "Detailed Specification" cannot be resolved
+ERROR: C:\Users\Test\Documents\swas\standards\IG-Publisher\output\StructureDefinition-PreAuthorizationRequest.profile.xml.html#/html/body/div/div/nav/div/div/ul/li/a at Line 79, column 8: The link 'index.html' for "HCX Home" cannot be resolved
+ERROR: C:\Users\Test\Documents\swas\standards\IG-Publisher\output\StructureDefinition-PreAuthorizationRequest.profile.xml.html#/html/body/div/div/nav/div/div/ul/li/ul/li/a at Line 97, column 10: The link 'spec.html' for "Detailed Specification" cannot be resolved
 ERROR: C:\Users\Test\Documents\swas\standards\IG-Publisher\output\StructureDefinition-PreAuthorizationResponse-definitions.html#/html/body/div/div/nav/div/div/ul/li/a at Line 75, column 8: The link 'index.html' for "HCX Home" cannot be resolved
 ERROR: C:\Users\Test\Documents\swas\standards\IG-Publisher\output\StructureDefinition-PreAuthorizationResponse-definitions.html#/html/body/div/div/nav/div/div/ul/li/ul/li/a at Line 93, column 10: The link 'spec.html' for "Detailed Specification" cannot be resolved
 ERROR: C:\Users\Test\Documents\swas\standards\IG-Publisher\output\StructureDefinition-PreAuthorizationResponse-examples.html#/html/body/div/div/nav/div/div/ul/li/a at Line 75, column 8: The link 'index.html' for "HCX Home" cannot be resolved
@@ -251,6 +286,20 @@ ERROR: C:\Users\Test\Documents\swas\standards\IG-Publisher\output\StructureDefin
 ERROR: C:\Users\Test\Documents\swas\standards\IG-Publisher\output\StructureDefinition-PreAuthorizationResponse.profile.ttl.html#/html/body/div/div/nav/div/div/ul/li/ul/li/a at Line 97, column 10: The link 'spec.html' for "Detailed Specification" cannot be resolved
 ERROR: C:\Users\Test\Documents\swas\standards\IG-Publisher\output\StructureDefinition-PreAuthorizationResponse.profile.xml.html#/html/body/div/div/nav/div/div/ul/li/a at Line 79, column 8: The link 'index.html' for "HCX Home" cannot be resolved
 ERROR: C:\Users\Test\Documents\swas\standards\IG-Publisher\output\StructureDefinition-PreAuthorizationResponse.profile.xml.html#/html/body/div/div/nav/div/div/ul/li/ul/li/a at Line 97, column 10: The link 'spec.html' for "Detailed Specification" cannot be resolved
+ERROR: C:\Users\Test\Documents\swas\standards\IG-Publisher\output\StructureDefinition-hcp-signature-definitions.html#/html/body/div/div/nav/div/div/ul/li/a at Line 75, column 8: The link 'index.html' for "HCX Home" cannot be resolved
+ERROR: C:\Users\Test\Documents\swas\standards\IG-Publisher\output\StructureDefinition-hcp-signature-definitions.html#/html/body/div/div/nav/div/div/ul/li/ul/li/a at Line 93, column 10: The link 'spec.html' for "Detailed Specification" cannot be resolved
+ERROR: C:\Users\Test\Documents\swas\standards\IG-Publisher\output\StructureDefinition-hcp-signature-mappings.html#/html/body/div/div/nav/div/div/ul/li/a at Line 75, column 8: The link 'index.html' for "HCX Home" cannot be resolved
+ERROR: C:\Users\Test\Documents\swas\standards\IG-Publisher\output\StructureDefinition-hcp-signature-mappings.html#/html/body/div/div/nav/div/div/ul/li/ul/li/a at Line 93, column 10: The link 'spec.html' for "Detailed Specification" cannot be resolved
+ERROR: C:\Users\Test\Documents\swas\standards\IG-Publisher\output\StructureDefinition-hcp-signature.html#/html/body/div/div/nav/div/div/ul/li/a at Line 71, column 8: The link 'index.html' for "HCX Home" cannot be resolved
+ERROR: C:\Users\Test\Documents\swas\standards\IG-Publisher\output\StructureDefinition-hcp-signature.html#/html/body/div/div/nav/div/div/ul/li/ul/li/a at Line 89, column 10: The link 'spec.html' for "Detailed Specification" cannot be resolved
+ERROR: C:\Users\Test\Documents\swas\standards\IG-Publisher\output\StructureDefinition-hcp-signature.profile.history.html#/html/body/div/div/nav/div/div/ul/li/a at Line 75, column 8: The link 'index.html' for "HCX Home" cannot be resolved
+ERROR: C:\Users\Test\Documents\swas\standards\IG-Publisher\output\StructureDefinition-hcp-signature.profile.history.html#/html/body/div/div/nav/div/div/ul/li/ul/li/a at Line 93, column 10: The link 'spec.html' for "Detailed Specification" cannot be resolved
+ERROR: C:\Users\Test\Documents\swas\standards\IG-Publisher\output\StructureDefinition-hcp-signature.profile.json.html#/html/body/div/div/nav/div/div/ul/li/a at Line 79, column 8: The link 'index.html' for "HCX Home" cannot be resolved
+ERROR: C:\Users\Test\Documents\swas\standards\IG-Publisher\output\StructureDefinition-hcp-signature.profile.json.html#/html/body/div/div/nav/div/div/ul/li/ul/li/a at Line 97, column 10: The link 'spec.html' for "Detailed Specification" cannot be resolved
+ERROR: C:\Users\Test\Documents\swas\standards\IG-Publisher\output\StructureDefinition-hcp-signature.profile.ttl.html#/html/body/div/div/nav/div/div/ul/li/a at Line 79, column 8: The link 'index.html' for "HCX Home" cannot be resolved
+ERROR: C:\Users\Test\Documents\swas\standards\IG-Publisher\output\StructureDefinition-hcp-signature.profile.ttl.html#/html/body/div/div/nav/div/div/ul/li/ul/li/a at Line 97, column 10: The link 'spec.html' for "Detailed Specification" cannot be resolved
+ERROR: C:\Users\Test\Documents\swas\standards\IG-Publisher\output\StructureDefinition-hcp-signature.profile.xml.html#/html/body/div/div/nav/div/div/ul/li/a at Line 79, column 8: The link 'index.html' for "HCX Home" cannot be resolved
+ERROR: C:\Users\Test\Documents\swas\standards\IG-Publisher\output\StructureDefinition-hcp-signature.profile.xml.html#/html/body/div/div/nav/div/div/ul/li/ul/li/a at Line 97, column 10: The link 'spec.html' for "Detailed Specification" cannot be resolved
 ERROR: C:\Users\Test\Documents\swas\standards\IG-Publisher\output\ValueSet-claim-denial-codes.change.history.html#/html/body/div/div/nav/div/div/ul/li/a at Line 75, column 8: The link 'index.html' for "HCX Home" cannot be resolved
 ERROR: C:\Users\Test\Documents\swas\standards\IG-Publisher\output\ValueSet-claim-denial-codes.change.history.html#/html/body/div/div/nav/div/div/ul/li/ul/li/a at Line 93, column 10: The link 'spec.html' for "Detailed Specification" cannot be resolved
 ERROR: C:\Users\Test\Documents\swas\standards\IG-Publisher\output\ValueSet-claim-denial-codes.html#/html/body/div/div/nav/div/div/ul/li/a at Line 71, column 8: The link 'index.html' for "HCX Home" cannot be resolved
@@ -302,6 +351,12 @@ ERROR: StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/
 ERROR: StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/Account'): StructureDefinition profile http://hl7.org/fhir/StructureDefinition/Account: Differential contains path Account.guarantor.party which is not found in the in base profile http://hl7.org/fhir/StructureDefinition/Account
 ERROR: StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/Account'): The element Account.identifier is out of order (and maybe others after it)
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/Account'): The Implementation Guide contains no examples for this profile
+== C:\Users\Test\Documents\swas\standards\IG-Publisher\input\hcx-definations\StructureDefinition-ClaimRequest.json ==
+WARNING: http://hl7.org/fhir/StructureDefinition/ClaimRequest#Composition.section.entry: Cannot check whether the target profile https://raw.githubusercontent.com/Swasth-Digital-Health-Foundation/standards/69ce5ac4bc6e9fc5a015a53c82e3ebb7a379f348/FHIR%20Definitions/hcp.signature.extension.json is valid constraint on the base because it is not known
+WARNING: StructureDefinition/ClaimRequest: StructureDefinition.differential.element.where(path = 'Composition.section.entry'): Cannot check whether the target profile https://raw.githubusercontent.com/Swasth-Digital-Health-Foundation/standards/69ce5ac4bc6e9fc5a015a53c82e3ebb7a379f348/FHIR%20Definitions/hcp.signature.extension.json is valid constraint on the base because it is not known
+WARNING: StructureDefinition/ClaimRequest: StructureDefinition.differential.element[6].type[0].targetProfile[0]: Unable to resolve profile https://raw.githubusercontent.com/Swasth-Digital-Health-Foundation/standards/69ce5ac4bc6e9fc5a015a53c82e3ebb7a379f348/FHIR%20Definitions/hcp.signature.extension.json
+WARNING: StructureDefinition/ClaimRequest: StructureDefinition.snapshot.element[53].type[0].targetProfile[0]: Unable to resolve profile https://raw.githubusercontent.com/Swasth-Digital-Health-Foundation/standards/69ce5ac4bc6e9fc5a015a53c82e3ebb7a379f348/FHIR%20Definitions/hcp.signature.extension.json
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/ClaimRequest'): The Implementation Guide contains no examples for this profile
 == C:\Users\Test\Documents\swas\standards\IG-Publisher\input\hcx-definations\StructureDefinition-ClaimResponseDocument.json ==
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/ClaimResponse'): The Implementation Guide contains no examples for this profile
 == C:\Users\Test\Documents\swas\standards\IG-Publisher\input\hcx-definations\StructureDefinition-Coverage.json ==
@@ -409,8 +464,16 @@ WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinitio
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/Practitioner'): The Implementation Guide contains no examples for this profile
 == C:\Users\Test\Documents\swas\standards\IG-Publisher\input\hcx-definations\StructureDefinition-PractitionerRole.json ==
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/PractitionerRole'): The Implementation Guide contains no examples for this profile
+== C:\Users\Test\Documents\swas\standards\IG-Publisher\input\hcx-definations\StructureDefinition-PreAuthorizationRequest.json ==
+WARNING: http://hl7.org/fhir/StructureDefinition/PreAuthorizationRequest#Composition.section.entry: Cannot check whether the target profile https://raw.githubusercontent.com/Swasth-Digital-Health-Foundation/standards/69ce5ac4bc6e9fc5a015a53c82e3ebb7a379f348/FHIR%20Definitions/hcp.signature.extension.json is valid constraint on the base because it is not known
+WARNING: StructureDefinition/PreAuthorizationRequest: StructureDefinition.differential.element.where(path = 'Composition.section.entry'): Cannot check whether the target profile https://raw.githubusercontent.com/Swasth-Digital-Health-Foundation/standards/69ce5ac4bc6e9fc5a015a53c82e3ebb7a379f348/FHIR%20Definitions/hcp.signature.extension.json is valid constraint on the base because it is not known
+WARNING: StructureDefinition/PreAuthorizationRequest: StructureDefinition.differential.element[6].type[0].targetProfile[0]: Unable to resolve profile https://raw.githubusercontent.com/Swasth-Digital-Health-Foundation/standards/69ce5ac4bc6e9fc5a015a53c82e3ebb7a379f348/FHIR%20Definitions/hcp.signature.extension.json
+WARNING: StructureDefinition/PreAuthorizationRequest: StructureDefinition.snapshot.element[53].type[0].targetProfile[0]: Unable to resolve profile https://raw.githubusercontent.com/Swasth-Digital-Health-Foundation/standards/69ce5ac4bc6e9fc5a015a53c82e3ebb7a379f348/FHIR%20Definitions/hcp.signature.extension.json
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/PreAuthorizationRequest'): The Implementation Guide contains no examples for this profile
 == C:\Users\Test\Documents\swas\standards\IG-Publisher\input\hcx-definations\StructureDefinition-PreAuthorizationResponse.json ==
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/PreAuthorizationResponse'): The Implementation Guide contains no examples for this profile
+== C:\Users\Test\Documents\swas\standards\IG-Publisher\input\hcx-definations\StructureDefinition-hcp-signature.json ==
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/questionnaireresponse-signature'): The Implementation Guide contains no examples for this extension
 == C:\Users\Test\Documents\swas\standards\IG-Publisher\input\hcx-definations\ValueSet-claim-denial-codes.json ==
 WARNING: ValueSet/claim-denial-codes: ValueSet: vsd-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Rule 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Failed
 == C:\Users\Test\Documents\swas\standards\IG-Publisher\input\hcx-definations\ValueSet-claim-service-categories.json ==

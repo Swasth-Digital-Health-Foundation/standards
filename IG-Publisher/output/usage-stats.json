@@ -2,7 +2,15 @@
   "package": "ig",
   "version": "0.0.1",
   "fhirVersion": "4.0.1",
-  "extensions": [],
+  "extensions": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/questionnaireresponse-signature",
+      "title": "HcpSignature",
+      "types": [
+        "Signature"
+      ]
+    }
+  ],
   "profiles": {
     "Account": [
       {
@@ -11,6 +19,10 @@
       }
     ],
     "Composition": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/PreAuthorizationRequest",
+        "title": "CovereageEligibilityRequestDocument"
+      },
       {
         "url": "http://hl7.org/fhir/StructureDefinition/PreAuthorizationResponse",
         "title": "CovereageEligibilityResponseDocument"
@@ -121,6 +133,9 @@
     "http://hl7.org/fhir/tools/StructureDefinition/Account": [
       "ImplementationGuide.definition.resource"
     ],
+    "http://hl7.org/fhir/tools/StructureDefinition/ClaimRequest": [
+      "ImplementationGuide.definition.resource"
+    ],
     "http://hl7.org/fhir/tools/StructureDefinition/ClaimResponseDocument": [
       "ImplementationGuide.definition.resource"
     ],
@@ -157,7 +172,13 @@
     "http://hl7.org/fhir/tools/StructureDefinition/PractitionerRole": [
       "ImplementationGuide.definition.resource"
     ],
+    "http://hl7.org/fhir/tools/StructureDefinition/PreAuthorizationRequest": [
+      "ImplementationGuide.definition.resource"
+    ],
     "http://hl7.org/fhir/tools/StructureDefinition/PreAuthorizationResponse": [
+      "ImplementationGuide.definition.resource"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/hcp-signature": [
       "ImplementationGuide.definition.resource"
     ],
     "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter": [
