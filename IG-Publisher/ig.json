@@ -357,8 +357,33 @@
               "generation": "generated"
             },
             {
-              "nameUrl": "StructureDefinition-Account.html",
-              "title": "HCX Accounts",
+              "nameUrl": "StructureDefinition-PaymentNotice.html",
+              "title": "HCX PaymentNotice",
+              "generation": "generated"
+            },
+            {
+              "nameUrl": "StructureDefinition-PaymentReconciliation.html",
+              "title": "HCX PaymentReconciliation",
+              "generation": "generated"
+            },
+            {
+              "nameUrl": "StructureDefinition-Practitioner.html",
+              "title": "HCX Practitioner",
+              "generation": "generated"
+            },
+            {
+              "nameUrl": "StructureDefinition-PractitionerRole.html",
+              "title": "HCX Practitioner Role",
+              "generation": "generated"
+            },
+            {
+              "nameUrl": "StructureDefinition-PreAuthorizationRequest.html",
+              "title": "HCX Pre Authorization Request",
+              "generation": "generated"
+            },
+            {
+              "nameUrl": "StructureDefinition-PreAuthorizationResponse.html",
+              "title": "HCX Pre Authorization Response",
               "generation": "generated"
             }
           ]
@@ -369,8 +394,13 @@
           "generation": "html",
           "page": [
             {
-              "nameUrl": "StructureDefinition-CoverageEligibilityResponse.html",
-              "title": "HCX CoverageEligibilityResponse",
+              "nameUrl": "ValueSet-claim-denial-codes.html",
+              "title": "HCX Claim Denial Codes",
+              "generation": "generated"
+            },
+            {
+              "nameUrl": "ValueSet-claim-service-categories.html",
+              "title": "HCX Claim Service Categories",
               "generation": "generated"
             }
           ]
