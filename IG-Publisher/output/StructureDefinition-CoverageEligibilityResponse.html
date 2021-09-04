@@ -1,37 +1,41 @@
-﻿<!-- get modelType --><?xml version="1.0" encoding="UTF-8"?>
+<!-- get modelType -->
+
+
+
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE HTML>
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
-    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
-    <title>HL7.FHIR.IN.CORE\HCX CoverageEligibility Response - FHIR v4.0.1</title>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>HL7.FHIR.IN.CORE\HCX Coverage Eligibility Response - FHIR v4.0.1</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
 
-    <link rel="stylesheet" href="fhir.css"/>
+    <link href="fhir.css" rel="stylesheet"/>
 
-      <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="assets/css/bootstrap-fhir.css"/>
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
 
-      <!-- Project extras -->
-    <link rel="stylesheet" href="assets/css/project.css"/>
-    <link rel="stylesheet" href="assets/css/pygments-manni.css"/>
-    <link rel="stylesheet" href="assets/css/jquery-ui.css"/>
-  	<link rel="stylesheet" href="assets/css/prism.css"/>
-      <!-- Placeholder for child template CSS declarations -->
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
 
-    <script src="fhir-table-scripts.js" type="text/javascript"> </script>
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
 
-      <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-      <!-- [if lt IE 9]>
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
     <script src="assets/js/html5shiv.js"></script>
     <script src="assets/js/respond.min.js"></script>
-    <![endif] -->
+    <![endif]-->
 
-      <!-- Favicons -->
-    <link sizes="144x144" rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-144-precomposed.png"/>
-    <link sizes="114x114" rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-114-precomposed.png"/>
-    <link sizes="72x72" rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-72-precomposed.png"/>
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png"/>
     <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png"/>
     <link rel="shortcut icon" href="assets/ico/favicon.png"/>
   </head>
@@ -39,97 +43,83 @@
 
 	  <script src="assets/js/prism.js"></script>
 
-    <style type="text/css">h2{--heading-prefix:"4.2"}
-    h3,h4,h5,h6{--heading-prefix:"4.2"}</style>
-    <div id="segment-header" class="segment">    <!-- segment-header -->
-      <div class="container">    <!-- container -->
-          <!-- Placeholder for child template header declarations -->
+    <style type="text/css">h2{--heading-prefix:"6.8"}
+    h3,h4,h5,h6{--heading-prefix:"6.8"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+        <!-- Placeholder for child template header declarations -->
 
 
         <div id="ig-status">
           <p><span style="font-size:25pt;font-weight:bold">FHIR Implementation Guide for HCX</span><br/>0.0.1 - CI Build</p>
         </div>
-      </div>   <!-- /container -->
-    </div>    <!-- /segment-header -->
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
 
-    <div id="segment-navbar" class="segment">    <!-- segment-navbar -->
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
       <div id="stripe"> </div>
-      <div class="container">    <!-- container -->
-          <!-- HEADER CONTENT -->
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
 
         <nav class="navbar navbar-inverse">
-            <!-- status-bar -->
+          <!--status-bar-->
           <div class="container">
-            <button data-target=".navbar-inverse-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
               <span class="icon-bar"> </span>
               <span class="icon-bar"> </span>
               <span class="icon-bar"> </span>
             </button>
-            <a href="http://hl7.org/fhir/R4/index.html" class="navbar-brand hidden">FHIR</a>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
             <div class="nav-collapse collapse navbar-inverse-collapse">
-              <ul class="nav navbar-nav">
-  <li><a name="e11770d9-4f59-4378-b88b-b30a5e1c359c">​</a><a href="index.html">HCX Home</a></li>
-  <li><a href="./toc.html">Table of Contents</a></li>
+              <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+<a href="index.html">Home</a>
+</li>
   <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">HCX Background<b class="caret">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Artifacts<b class="caret">
       </b>
     </a>
     <ul class="dropdown-menu">
       <li>
-        <a href="background.html">Background</a>
-      </li>
-    </ul>
-  </li>
-  <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Specification<b class="caret">
-      </b>
-    </a>
-    <ul class="dropdown-menu">
-      <li><a name="846bba4d-4f7a-4944-80b0-c2f9e8d2147f">​</a>
-        <a href="spec.html">Detailed Specification</a>
-      </li>
-    </ul>
-  </li>
-  <li><a href="artifacts.html">Artifact Index</a></li>
-  <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Support<b class="caret">
-      </b>
-    </a>
-    <ul class="dropdown-menu">
-      <li>
-        <a href="http://hl7.org/fhir/R4/index.html" target="_blank">FHIR Spec <img src="external.png" style="text-align: baseline"/></a>
+        <a href="profiles.html">Profiles</a>
       </li>
       <li>
-        <a href="downloads.html">Downloads</a>
+        <a href="valuesets.html">Value Sets</a>
       </li>
     </ul>
   </li>
+<li>
+  <a href="#">Examples</a>
+</li>
+<li>
+  <a href="#">Downloads</a>
+</li>
 </ul>      
-            </div>    <!-- /.nav-collapse -->
-          </div>    <!-- /.container -->
-        </nav>    <!-- /.navbar -->
-        <!-- /HEADER CONTENT -->
-      </div>    <!-- /container -->
-    </div>    <!-- /segment-navbar -->
-      <!-- status-bar -->
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
 
-    <div id="segment-breadcrumb" class="segment">    <!-- segment-breadcrumb -->
-      <div class="container">    <!-- container -->
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
         <ul class="breadcrumb">
-          <li><a href="toc.html"><b>Table of Contents</b></a></li><li><a href="artifacts.html"><b>Artifacts Summary</b></a></li><li><b>HCX CoverageEligibility Response</b></li>
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>HCX Coverage Eligibility Response</b></li>
 
         </ul>
-      </div>    <!-- /container -->
-    </div>    <!-- /segment-breadcrumb -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
 
     <a name="top"> </a>
-    <div id="segment-content" class="segment">    <!-- segment-content -->
-      <div class="container">    <!-- container -->
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
         <div class="row">
           <div class="inner-wrapper">
 
 <div class="col-12">
-    <!-- ReleaseHeader --><p id="publish-box">FHIR Implementation Guide for HCX - Local Development build (v0.0.1). See the <a href="https://fhir-ig-demo/history.html">Directory of published versions</a></p>  <!-- EndReleaseHeader -->
+  <!--ReleaseHeader--><p id="publish-box">FHIR Implementation Guide for HCX - Local Development build (v0.0.1). See the <a href="https://fhir-ig-demo/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
   
 
 
@@ -191,7 +181,7 @@
 
 
   <a name="root"> </a>
-  <h2 id="root">Resource Profile: HCX CoverageEligibility Response</h2>
+  <h2 id="root">Resource Profile: HCX Coverage Eligibility Response</h2>
 
 <table class="grid">
 <tbody>
@@ -203,7 +193,7 @@
 </td></tr>
  <tr><td>Publisher:</td><td>HL7 International - HCX</td></tr>
  <tr><td>Committee:</td><td><a href="http://terminology.hl7.org/2.1.0/CodeSystem-hl7-work-group.html#hl7-work-group-fm">Financial Management</a></td></tr>
- <tr><td><a href="http://hl7.org/fhir/versions.html#maturity" title="Maturity Level" class="fmm">Maturity</a>:</td><td>2</td></tr>
+ <tr><td><a class="fmm" href="http://hl7.org/fhir/versions.html#maturity" title="Maturity Level">Maturity</a>:</td><td>2</td></tr>
  <tr><td>Source Resource:</td><td><a href="StructureDefinition-CoverageEligibilityResponse.profile.xml.html">XML</a> / <a href="StructureDefinition-CoverageEligibilityResponse.profile.json.html">JSON</a> / <a href="StructureDefinition-CoverageEligibilityResponse.profile.ttl.html">Turtle</a></td></tr>
 </tbody></table>
 
@@ -213,12 +203,12 @@
   </p>
   <pre>http://hl7.org/fhir/StructureDefinition/CoverageEligibilityResponse</pre>
 
-  <!-- insert intro if present -->
+<!-- insert intro if present -->
 
 
 
 
-    <!-- no uri -->
+  <!-- no uri -->
   <a name="profile"> </a>
   <h3 id="profile">Formal Views of Profile Content</h3>
   <p>
@@ -239,19 +229,19 @@
         <a href="#tabs-snapms">Snapshot Table (Must Support)</a>
       </li>
 
-  <!-- <li>
+<!--      <li>
         <a href="#tabs-xml">Pseudo-XML</a>
-      </li> -->
+      </li>-->
 
 
-  <!-- <li>
+<!--      <li>
         <a href="#tabs-json">Pseudo-JSON</a>
-      </li> -->
+      </li>-->
 
 
-        <!-- <li>
+      <!--<li>
         <a href="#tabs-ttl">Pseudo-TTL</a>
-      </li> -->
+      </li>-->
 
       <li>
         <a href="#tabs-all">All</a>
@@ -268,7 +258,7 @@
 <p><b>
 Summary
 </b></p>
-<p>Mandatory: 0 element (12 nested mandatory elements)</p><p><b><a href="http://hl7.org/fhir/versions.html#maturity" title="Maturity Level" class="fmm">Maturity</a></b>: 2</p>
+<p>Mandatory: 0 element (12 nested mandatory elements)</p><p><b><a class="fmm" href="http://hl7.org/fhir/versions.html#maturity" title="Maturity Level">Maturity</a></b>: 2</p>
 
         </div>
       </div>
@@ -393,7 +383,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
       </div>
     </div>
 
-  <!-- <a name="tabs-xml"> </a>
+<!--    <a name="tabs-xml"> </a>
     <div id="tabs-xml">
       <div id="xml">
         <div id="xml-inner">
@@ -401,10 +391,10 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 
         </div>
       </div>
-    </div> -->
+    </div>-->
 
 
-  <!-- <a name="tabs-json"> </a>
+<!--    <a name="tabs-json"> </a>
     <div id="tabs-json">
       <div id="json">
         <div id="json-inner">
@@ -472,10 +462,10 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 
         </div>
       </div>
-    </div> -->
+    </div>-->
 
 
-      <!-- <a name="tabs-ttl"> </a>
+    <!--<a name="tabs-ttl"> </a>
     <div id="tabs-ttl">
       <div id="ttl">
         <div id="ttl-inner">
@@ -483,7 +473,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 
         </div>
       </div>
-    </div> -->
+    </div>-->
 
     <a name="tabs-snapms"> </a>
     <div id="tabs-snapms">
@@ -504,7 +494,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <p><b>
 Summary
 </b></p>
-<p>Mandatory: 0 element (12 nested mandatory elements)</p><p><b><a href="http://hl7.org/fhir/versions.html#maturity" title="Maturity Level" class="fmm">Maturity</a></b>: 2</p>
+<p>Mandatory: 0 element (12 nested mandatory elements)</p><p><b><a class="fmm" href="http://hl7.org/fhir/versions.html#maturity" title="Maturity Level">Maturity</a></b>: 2</p>
 
         </div>
       </div>
@@ -628,7 +618,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
         </div>
       </div>
 
-        <!-- <div id="all-xml">
+      <!--<div id="all-xml">
         <p>
           <b>XML Template</b>
         </p>
@@ -636,10 +626,10 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
           <p><span style="color: maroon; font-weight: bold">yet to be done: Xml template</span></p>
 
         </div>
-      </div> -->
+      </div>-->
 
 
-        <!-- <div id="all-json">
+      <!--<div id="all-json">
         <p>
           <b>JSON Template</b>
         </p>
@@ -707,10 +697,10 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   }
 
         </div>
-      </div> -->
+      </div>-->
 
 
-        <!-- <div id="all-ttl">
+      <!--<div id="all-ttl">
         <p>
           <b>TTL Template</b>
         </p>
@@ -718,20 +708,20 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
           <p><span style="color: maroon; font-weight: bold">yet to be done: Turtle template</span></p>
 
         </div>
-      </div> -->
+      </div>-->
 
     </div>
   </div>
-  <p>&nbsp;</p>
+  <p>&#160;</p>
   <p>Other representations of profile: <a href="StructureDefinition-CoverageEligibilityResponse.csv">CSV</a>, <a href="StructureDefinition-CoverageEligibilityResponse.xlsx">Excel</a>, <a href="StructureDefinition-CoverageEligibilityResponse.sch">Schematron</a>
  
   </p>
   <a name="tx"> </a>
-    <!-- Terminology Bindings heading in the fragment -->
+  <!--Terminology Bindings heading in the fragment -->
   <h4>Terminology Bindings</h4>
 <table class="list">
 <tr><td><b>Path</b></td><td><b>Conformance</b></td><td><b>ValueSet</b></td></tr>
-<tr><td>CoverageEligibilityResponse.language</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#preferred">preferred</a></td><td title="A human language."><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-languages.html">CommonLanguages</a><br/><a style="font-weight:bold" href="http://hl7.org/fhir/R4/extension-elementdefinition-maxvalueset.html" title="Max Value Set Extension">Max Binding</a>: <a href="http://hl7.org/fhir/R4/valueset-all-languages.html">AllLanguages</a></td></tr>
+<tr><td>CoverageEligibilityResponse.language</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#preferred">preferred</a></td><td title="A human language."><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-languages.html">CommonLanguages</a><br/><a style="font-weight:bold" title="Max Value Set Extension" href="http://hl7.org/fhir/R4/extension-elementdefinition-maxvalueset.html">Max Binding</a>: <a href="http://hl7.org/fhir/R4/valueset-all-languages.html">AllLanguages</a></td></tr>
 <tr><td>CoverageEligibilityResponse.error.code</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#example">example</a></td><td title="The error codes for adjudication processing."><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-adjudication-error.html">Adjudication Error Codes</a></td></tr>
 <tr><td>CoverageEligibilityResponse.form</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#example">example</a></td><td title="The forms codes."><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-forms.html">Form Codes</a></td></tr>
 <tr><td>CoverageEligibilityResponse.insurance.item.authorizationSupporting</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#example">example</a></td><td title="Type of supporting information to provide with a preauthorization."><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-coverageeligibilityresponse-ex-auth-support.html">CoverageEligibilityResponseAuthSupportCodes</a></td></tr>
@@ -749,10 +739,10 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 
 
   
-    <!-- 218 is size of empty table -->
+  <!-- 218 is size of empty table -->
   
     <a name="inv"> </a>
-      <!-- Constraints  heading in the fragment -->
+    <!--Constraints  heading in the fragment -->
     <h4>Constraints</h4>
 <table class="list">
 <tr><td width="60"><b>Id</b></td><td><b>Path</b></td><td><b>Details</b></td><td><b>Requirements</b></td></tr>
@@ -774,20 +764,20 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 
   
 
-  <!-- insert notes if present -->
+<!-- insert notes if present -->
 
 
 
 
 </div>
 
-        </div>    <!-- /inner-wrapper -->
-      </div>    <!-- /row -->
-    </div>    <!-- /container -->
-  </div>    <!-- /segment-content -->
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
 
-  <script src="assets/js/jquery.js" type="text/javascript"> </script>       <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
-  <script src="assets/js/jquery-ui.min.js" type="text/javascript"> </script>
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
 
   <script type="text/javascript">
     try {
@@ -820,47 +810,48 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
     });
   </script>
   <a name="bottom"> </a>
-  <div igtool="footer" id="segment-footer" class="segment">    <!-- segment-footer -->
-    <div class="container">    <!-- container -->
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
 
       <div class="inner-wrapper">
         <p>
-          IG &copy; 2021+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.swasth.app/">HL7 International - HCX</a>.  Package ig#0.0.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Aug 26, 2021 22:38+0530">2021-08-26</span>
+          IG &#169; 2021+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.swasth.app/">HL7 International - HCX</a>.  Package ig#0.0.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Sat, Sep 4, 2021 10:52+0530">2021-09-04</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
                  <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
                  
                 
-          
+          </span>
         </p>
-      </div>    <!-- /inner-wrapper -->
-    </div>    <!-- /container -->
-  </div>    <!-- /segment-footer -->
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
   
-  <div id="segment-post-footer" class="segment hidden">    <!-- segment-post-footer -->
-    <div class="container">    <!-- container -->
-    </div>    <!-- /container -->
-  </div>    <!-- /segment-post-footer -->
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
   
-    <!-- JS and analytics only. -->
-    <!-- Bootstrap core JavaScript
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
   ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-  <script src="assets/js/bootstrap.min.js" type="text/javascript"> </script>
-  <script src="assets/js/respond.min.js" type="text/javascript"> </script>
-  <script src="assets/js/anchor.min.js" type="text/javascript"> </script>
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
   <script>anchors.options.visible = 'hover'
 anchors.add()</script>
   
-  <!-- feedback form - Google forms -->
-  <!-- v0.1, 2021-01-09 -->
+<!-- feedback form - Google forms -->
+<!-- v0.1, 2021-01-09 -->
 
 
 
-  <!-- / feedback form -->
+<!-- / feedback form  -->
 
-    <!-- Analytics Below
+  <!-- Analytics Below
   ================================================== -->
   </body>
 </html>
+

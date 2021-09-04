@@ -1,23 +1,4 @@
 ﻿{
   "index-version": 1,
-  "files": [
-    {
-      "filename": "onGenerate-ig-working.json",
-      "resourceType": "ImplementationGuide",
-      "id": "hl7.fhir.in.core",
-      "url": "https://fhir-ig-demo/ImplementationGuide/ig",
-      "version": "0.0.1"
-    },
-    {
-      "filename": "onGenerate-validation.json",
-      "resourceType": "OperationOutcome"
-    },
-    {
-      "filename": "onLoad-ig-working.json",
-      "resourceType": "ImplementationGuide",
-      "id": "hl7.fhir.in.core",
-      "url": "https://fhir-ig-demo/ImplementationGuide/ig",
-      "version": "0.0.1"
-    }
-  ]
+  "files": []
 }
