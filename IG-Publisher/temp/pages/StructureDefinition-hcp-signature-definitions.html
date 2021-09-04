@@ -1,0 +1,26 @@
+---
+---
+<!-- get modelType -->
+{% include fragment-modelType.html id='hcp-signature' %}
+
+{% include fragment-pagebegin.html %}
+<div style="counter-reset: section 4" class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">Publish Box goes here</p><!--EndReleaseHeader-->
+  {% include fragment-profile-navtabs.html type='StructureDefinition' id='hcp-signature' active='definition' %}
+
+<a name="root"> </a>
+<h2 id="root">{{modelType}}: HcpSignature - Detailed Descriptions</h2>
+
+<p>Definitions for the hcp-signature {{modelType | downcase}}.</p>
+
+  <!-- insert intro if present -->
+  {% include fragment-intro.html type='StructureDefinition' id='hcp-signature' %}
+
+  {%include StructureDefinition-hcp-signature-dict.xhtml%}
+
+  <!-- insert notes if present -->
+  {% include fragment-notes.html type='StructureDefinition' id='hcp-signature' %}
+
+</div>
+{% assign includetabscripts = 'true' %}
+{% include fragment-pageend.html %}
