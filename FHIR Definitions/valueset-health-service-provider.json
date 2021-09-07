@@ -1,8 +1,8 @@
 {
     "resourceType": "ValueSet",
-    "id": "valueset-health-service-provider",
+    "id": "valueset-health-service-provider-role",
     "version": "1",
-    "name": "Health Service Provider",
+    "name": "Health Service Provider Role",
     "status": "active",
     "date": "2021-09-07",
     "publisher": "Health Claims Exchange",
