@@ -147,6 +147,20 @@
     "name": "HCX Core"
   },
   {
+    "id": "claim-denial-codes",
+    "type": "ValueSet",
+    "url": "https://fhir-ig-demo/ValueSet/claim-denial-codes",
+    "version": "0.0.1",
+    "name": "Claim Denial Codes"
+  },
+  {
+    "id": "claim-service-categories",
+    "type": "ValueSet",
+    "url": "https://fhir-ig-demo/ValueSet/claim-service-categories",
+    "version": "0.0.1",
+    "name": "Claim Service Categories"
+  },
+  {
     "id": "health-service-provider-role",
     "type": "ValueSet",
     "url": "https://fhir-ig-demo/ValueSet/health-service-provider-role",

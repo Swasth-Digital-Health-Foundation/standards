@@ -215,6 +215,12 @@
     "http://hl7.org/fhir/tools/StructureDefinition/resource-information": [
       "ImplementationGuide.definition.resource"
     ],
+    "http://hl7.org/fhir/tools/ValueSet/claim-denial-codes": [
+      "ImplementationGuide.definition.resource"
+    ],
+    "http://hl7.org/fhir/tools/ValueSet/claim-service-categories": [
+      "ImplementationGuide.definition.resource"
+    ],
     "http://hl7.org/fhir/tools/ValueSet/health-service-provider-role": [
       "ImplementationGuide.definition.resource"
     ],
