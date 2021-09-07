@@ -494,11 +494,6 @@
               "generation": "generated"
             },
             {
-              "nameUrl": "ValueSet-claim-service-categories.html",
-              "title": "HCX Claim Service Categories",
-              "generation": "generated"
-            },
-            {
               "nameUrl": "ValueSet-health-service-provider-role.html",
               "title": "HCX Health Service Provider Role",
               "generation": "generated"
