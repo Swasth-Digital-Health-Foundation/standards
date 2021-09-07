@@ -30,7 +30,7 @@
       "valueCode": "sd"
     }
   ],
-  "url": "http://hl7.org/fhir/StructureDefinition/CovereageEligibilityRequestDocument",
+  "url": "http://hl7.org/fhir/StructureDefinition/HCXCovereageEligibilityRequestDocument",
   "version": "0.0.1",
   "name": "CovereageEligibilityRequestDocument",
   "status": "draft",

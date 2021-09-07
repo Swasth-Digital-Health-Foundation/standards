@@ -3,9 +3,9 @@
   "name": "HCX Core",
   "package-id": "ig",
   "ig-ver": "0.0.1",
-  "date": "Sat, 04 Sep, 2021 19:34:17 +0530",
-  "errs": 106,
-  "warnings": 30,
+  "date": "Tue, 07 Sep, 2021 12:31:08 +0530",
+  "errs": 7,
+  "warnings": 33,
   "hints": 0,
   "version": "4.0.1",
   "tool": "4.6.0 (3)"

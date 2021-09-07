@@ -30,7 +30,7 @@
       "valueCode": "fm"
     }
   ],
-  "url": "http://hl7.org/fhir/StructureDefinition/PaymentNotice",
+  "url": "http://hl7.org/fhir/StructureDefinition/HCXPaymentNotice",
   "version": "0.0.1",
   "name": "PaymentNotice",
   "status": "draft",
@@ -79,7 +79,7 @@
   "kind": "resource",
   "abstract": false,
   "type": "PaymentNotice",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/DomainResource",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/PaymentNotice",
   "derivation": "specialization",
   "snapshot": {
     "element": [
@@ -91,7 +91,7 @@
         "min": 0,
         "max": "*",
         "base": {
-          "path": "DomainResource",
+          "path": "PaymentNotice",
           "min": 0,
           "max": "*"
         },
@@ -381,16 +381,6 @@
       {
         "id": "PaymentNotice.extension",
         "path": "PaymentNotice.extension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "description": "Extensions are always sliced by (at least) url",
-          "rules": "open"
-        },
         "short": "Additional content defined by implementations",
         "definition": "May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
         "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
@@ -440,16 +430,6 @@
       {
         "id": "PaymentNotice.modifierExtension",
         "path": "PaymentNotice.modifierExtension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "description": "Extensions are always sliced by (at least) url",
-          "rules": "open"
-        },
         "short": "Extensions that cannot be ignored",
         "definition": "May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
         "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
@@ -499,60 +479,6 @@
         ]
       },
       {
-        "id": "PaymentNotice.amount",
-        "path": "PaymentNotice.amount",
-        "short": "Monetary amount of the payment",
-        "definition": "The amount sent to the payee.",
-        "requirements": "Provided for validation purposes.",
-        "min": 1,
-        "max": "1",
-        "base": {
-          "path": "PaymentNotice.amount",
-          "min": 1,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "Money"
-          }
-        ],
-        "isSummary": true
-      },
-      {
-        "id": "PaymentNotice.created",
-        "path": "PaymentNotice.created",
-        "short": "Creation date",
-        "definition": "The date when this resource was created.",
-        "requirements": "Need to record a timestamp for use by both the recipient and the issuer.",
-        "min": 1,
-        "max": "1",
-        "base": {
-          "path": "PaymentNotice.created",
-          "min": 1,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "dateTime"
-          }
-        ],
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "workflow",
-            "map": "Event.occurrence[x]"
-          },
-          {
-            "identity": "w5",
-            "map": "FiveWs.recorded"
-          },
-          {
-            "identity": "rim",
-            "map": "n/a"
-          }
-        ]
-      },
-      {
         "id": "PaymentNotice.identifier",
         "path": "PaymentNotice.identifier",
         "short": "Business Identifier for the payment noctice",
@@ -562,14 +488,26 @@
         "max": "1",
         "base": {
           "path": "PaymentNotice.identifier",
-          "min": 1,
-          "max": "1"
+          "min": 0,
+          "max": "*"
         },
         "type": [
           {
             "code": "Identifier"
           }
         ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "isModifier": false,
+        "isSummary": false,
         "mapping": [
           {
             "identity": "workflow",
@@ -582,252 +520,6 @@
           {
             "identity": "rim",
             "map": "n/a"
-          }
-        ]
-      },
-      {
-        "id": "PaymentNotice.payee",
-        "path": "PaymentNotice.payee",
-        "short": "Party being paid",
-        "definition": "The party who will receive or has received payment that is the subject of this notification.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "PaymentNotice.payee",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/Practitioner",
-              "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
-              "http://hl7.org/fhir/StructureDefinition/Organization"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "PaymentNotice.payment",
-        "path": "PaymentNotice.payment",
-        "short": "Payment reference",
-        "definition": "A reference to the payment which is the subject of this notice.",
-        "requirements": "Need to identify the actual payment.",
-        "min": 1,
-        "max": "1",
-        "base": {
-          "path": "PaymentNotice.payment",
-          "min": 1,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/PaymentReconciliation"
-            ]
-          }
-        ],
-        "isSummary": true
-      },
-      {
-        "id": "PaymentNotice.paymentDate",
-        "path": "PaymentNotice.paymentDate",
-        "short": "Payment or clearing date",
-        "definition": "The date when the above payment action occurred.",
-        "requirements": "Need to convey the date when the action being notified occurred.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "PaymentNotice.paymentDate",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "date"
-          }
-        ]
-      },
-      {
-        "id": "PaymentNotice.paymentStatus",
-        "path": "PaymentNotice.paymentStatus",
-        "short": "Issued or cleared Status of the payment",
-        "definition": "A code indicating whether payment has been sent or cleared.",
-        "comment": "Typically paid: payment sent, cleared: payment received.",
-        "requirements": "The purpose of the notification.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "PaymentNotice.paymentStatus",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "CodeableConcept"
-          }
-        ],
-        "binding": {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
-              "valueString": "PaymentStatus"
-            }
-          ],
-          "strength": "example",
-          "description": "The payment conveyance status codes.",
-          "valueSet": "http://hl7.org/fhir/ValueSet/payment-status"
-        },
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": "n/a"
-          }
-        ]
-      },
-      {
-        "id": "PaymentNotice.provider",
-        "path": "PaymentNotice.provider",
-        "short": "Responsible practitioner",
-        "definition": "The practitioner who is responsible for the services rendered to the patient.",
-        "min": 1,
-        "max": "1",
-        "base": {
-          "path": "PaymentNotice.provider",
-          "min": 1,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/Practitioner",
-              "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
-              "http://hl7.org/fhir/StructureDefinition/Organization"
-            ]
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "workflow",
-            "map": "Event.performer"
-          },
-          {
-            "identity": "w5",
-            "map": "FiveWs.source"
-          },
-          {
-            "identity": "cdanetv4",
-            "map": "B01"
-          },
-          {
-            "identity": "v2",
-            "map": "B01"
-          },
-          {
-            "identity": "rim",
-            "map": "n/a"
-          }
-        ]
-      },
-      {
-        "id": "PaymentNotice.recipient",
-        "path": "PaymentNotice.recipient",
-        "short": "Party being notified",
-        "definition": "The party who is notified of the payment status.",
-        "requirements": "Need to identified the recipient of the notification.",
-        "min": 1,
-        "max": "1",
-        "base": {
-          "path": "PaymentNotice.recipient",
-          "min": 1,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/Organization"
-            ]
-          }
-        ],
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": "n/a"
-          }
-        ]
-      },
-      {
-        "id": "PaymentNotice.request",
-        "path": "PaymentNotice.request",
-        "short": "Request reference",
-        "definition": "Reference of resource for which payment is being made.",
-        "min": 1,
-        "max": "1",
-        "base": {
-          "path": "PaymentNotice.request",
-          "min": 1,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/Resource"
-            ]
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "workflow",
-            "map": "Event.basedOn"
-          },
-          {
-            "identity": "w5",
-            "map": "FiveWs.subject[x]"
-          },
-          {
-            "identity": "w5",
-            "map": "FiveWs.subject"
-          }
-        ]
-      },
-      {
-        "id": "PaymentNotice.response",
-        "path": "PaymentNotice.response",
-        "short": "Response reference",
-        "definition": "Reference of response to resource for which payment is being made.",
-        "min": 1,
-        "max": "1",
-        "base": {
-          "path": "PaymentNotice.response",
-          "min": 1,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/Resource"
-            ]
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "w5",
-            "map": "FiveWs.subject[x]"
-          },
-          {
-            "identity": "rim",
-            "map": "n/a"
-          },
-          {
-            "identity": "w5",
-            "map": "FiveWs.subject"
           }
         ]
       },
@@ -848,6 +540,16 @@
         "type": [
           {
             "code": "code"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
         "isModifier": true,
@@ -873,6 +575,422 @@
             "identity": "w5",
             "map": "FiveWs.status"
           },
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "id": "PaymentNotice.request",
+        "path": "PaymentNotice.request",
+        "short": "Request reference",
+        "definition": "Reference of resource for which payment is being made.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "PaymentNotice.request",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Resource"
+            ]
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "isModifier": false,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "workflow",
+            "map": "Event.basedOn"
+          },
+          {
+            "identity": "w5",
+            "map": "FiveWs.subject[x]"
+          },
+          {
+            "identity": "w5",
+            "map": "FiveWs.subject"
+          }
+        ]
+      },
+      {
+        "id": "PaymentNotice.response",
+        "path": "PaymentNotice.response",
+        "short": "Response reference",
+        "definition": "Reference of response to resource for which payment is being made.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "PaymentNotice.response",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Resource"
+            ]
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "isModifier": false,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "w5",
+            "map": "FiveWs.subject[x]"
+          },
+          {
+            "identity": "rim",
+            "map": "n/a"
+          },
+          {
+            "identity": "w5",
+            "map": "FiveWs.subject"
+          }
+        ]
+      },
+      {
+        "id": "PaymentNotice.created",
+        "path": "PaymentNotice.created",
+        "short": "Creation date",
+        "definition": "The date when this resource was created.",
+        "requirements": "Need to record a timestamp for use by both the recipient and the issuer.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "PaymentNotice.created",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "isModifier": false,
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "workflow",
+            "map": "Event.occurrence[x]"
+          },
+          {
+            "identity": "w5",
+            "map": "FiveWs.recorded"
+          },
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "id": "PaymentNotice.provider",
+        "path": "PaymentNotice.provider",
+        "short": "Responsible practitioner",
+        "definition": "The practitioner who is responsible for the services rendered to the patient.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "PaymentNotice.provider",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Practitioner",
+              "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
+              "http://hl7.org/fhir/StructureDefinition/Organization"
+            ]
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "isModifier": false,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "workflow",
+            "map": "Event.performer"
+          },
+          {
+            "identity": "w5",
+            "map": "FiveWs.source"
+          },
+          {
+            "identity": "cdanetv4",
+            "map": "B01"
+          },
+          {
+            "identity": "v2",
+            "map": "B01"
+          },
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "id": "PaymentNotice.payment",
+        "path": "PaymentNotice.payment",
+        "short": "Payment reference",
+        "definition": "A reference to the payment which is the subject of this notice.",
+        "requirements": "Need to identify the actual payment.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "PaymentNotice.payment",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/PaymentReconciliation"
+            ]
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "isModifier": false,
+        "isSummary": true
+      },
+      {
+        "id": "PaymentNotice.paymentDate",
+        "path": "PaymentNotice.paymentDate",
+        "short": "Payment or clearing date",
+        "definition": "The date when the above payment action occurred.",
+        "requirements": "Need to convey the date when the action being notified occurred.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "PaymentNotice.paymentDate",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "date"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "PaymentNotice.payee",
+        "path": "PaymentNotice.payee",
+        "short": "Party being paid",
+        "definition": "The party who will receive or has received payment that is the subject of this notification.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "PaymentNotice.payee",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Practitioner",
+              "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
+              "http://hl7.org/fhir/StructureDefinition/Organization"
+            ]
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "PaymentNotice.recipient",
+        "path": "PaymentNotice.recipient",
+        "short": "Party being notified",
+        "definition": "The party who is notified of the payment status.",
+        "requirements": "Need to identified the recipient of the notification.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "PaymentNotice.recipient",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Organization"
+            ]
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "isModifier": false,
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "id": "PaymentNotice.amount",
+        "path": "PaymentNotice.amount",
+        "short": "Monetary amount of the payment",
+        "definition": "The amount sent to the payee.",
+        "requirements": "Provided for validation purposes.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "PaymentNotice.amount",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Money"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "isModifier": false,
+        "isSummary": true
+      },
+      {
+        "id": "PaymentNotice.paymentStatus",
+        "path": "PaymentNotice.paymentStatus",
+        "short": "Issued or cleared Status of the payment",
+        "definition": "A code indicating whether payment has been sent or cleared.",
+        "comment": "Typically paid: payment sent, cleared: payment received.",
+        "requirements": "The purpose of the notification.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "PaymentNotice.paymentStatus",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+              "valueString": "PaymentStatus"
+            }
+          ],
+          "strength": "example",
+          "description": "The payment conveyance status codes.",
+          "valueSet": "http://hl7.org/fhir/ValueSet/payment-status"
+        },
+        "mapping": [
           {
             "identity": "rim",
             "map": "n/a"
@@ -902,50 +1020,6 @@
         ]
       },
       {
-        "id": "PaymentNotice.amount",
-        "path": "PaymentNotice.amount",
-        "short": "Monetary amount of the payment",
-        "definition": "The amount sent to the payee.",
-        "requirements": "Provided for validation purposes.",
-        "min": 1,
-        "max": "1",
-        "type": [
-          {
-            "code": "Money"
-          }
-        ],
-        "isSummary": true
-      },
-      {
-        "id": "PaymentNotice.created",
-        "path": "PaymentNotice.created",
-        "short": "Creation date",
-        "definition": "The date when this resource was created.",
-        "requirements": "Need to record a timestamp for use by both the recipient and the issuer.",
-        "min": 1,
-        "max": "1",
-        "type": [
-          {
-            "code": "dateTime"
-          }
-        ],
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "workflow",
-            "map": "Event.occurrence[x]"
-          },
-          {
-            "identity": "w5",
-            "map": "FiveWs.recorded"
-          },
-          {
-            "identity": "rim",
-            "map": "n/a"
-          }
-        ]
-      },
-      {
         "id": "PaymentNotice.identifier",
         "path": "PaymentNotice.identifier",
         "short": "Business Identifier for the payment noctice",
@@ -974,145 +1048,42 @@
         ]
       },
       {
-        "id": "PaymentNotice.payee",
-        "path": "PaymentNotice.payee",
-        "short": "Party being paid",
-        "definition": "The party who will receive or has received payment that is the subject of this notification.",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/Practitioner",
-              "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
-              "http://hl7.org/fhir/StructureDefinition/Organization"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "PaymentNotice.payment",
-        "path": "PaymentNotice.payment",
-        "short": "Payment reference",
-        "definition": "A reference to the payment which is the subject of this notice.",
-        "requirements": "Need to identify the actual payment.",
+        "id": "PaymentNotice.status",
+        "path": "PaymentNotice.status",
+        "short": "active | cancelled | draft | entered-in-error",
+        "definition": "The status of the resource instance.",
+        "comment": "This element is labeled as a modifier because the status contains codes that mark the resource as not currently valid.",
+        "requirements": "Need to track the status of the resource as 'draft' resources may undergo further edits while 'active' resources are immutable and may only have their status changed to 'cancelled'.",
         "min": 1,
         "max": "1",
         "type": [
           {
-            "code": "Reference",
-            "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/PaymentReconciliation"
-            ]
+            "code": "code"
           }
         ],
-        "isSummary": true
-      },
-      {
-        "id": "PaymentNotice.paymentDate",
-        "path": "PaymentNotice.paymentDate",
-        "short": "Payment or clearing date",
-        "definition": "The date when the above payment action occurred.",
-        "requirements": "Need to convey the date when the action being notified occurred.",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "date"
-          }
-        ]
-      },
-      {
-        "id": "PaymentNotice.paymentStatus",
-        "path": "PaymentNotice.paymentStatus",
-        "short": "Issued or cleared Status of the payment",
-        "definition": "A code indicating whether payment has been sent or cleared.",
-        "comment": "Typically paid: payment sent, cleared: payment received.",
-        "requirements": "The purpose of the notification.",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "CodeableConcept"
-          }
-        ],
+        "isModifier": true,
+        "isModifierReason": "This element is labelled as a modifier because it is a status element that contains status entered-in-error which means that the resource should not be treated as valid",
+        "isSummary": true,
         "binding": {
           "extension": [
             {
               "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
-              "valueString": "PaymentStatus"
+              "valueString": "PaymentNoticeStatus"
             }
           ],
-          "strength": "example",
-          "description": "The payment conveyance status codes.",
-          "valueSet": "http://hl7.org/fhir/ValueSet/payment-status"
+          "strength": "required",
+          "description": "A code specifying the state of the resource instance.",
+          "valueSet": "http://hl7.org/fhir/ValueSet/fm-status|4.0.1"
         },
         "mapping": [
           {
-            "identity": "rim",
-            "map": "n/a"
-          }
-        ]
-      },
-      {
-        "id": "PaymentNotice.provider",
-        "path": "PaymentNotice.provider",
-        "short": "Responsible practitioner",
-        "definition": "The practitioner who is responsible for the services rendered to the patient.",
-        "min": 1,
-        "max": "1",
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/Practitioner",
-              "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
-              "http://hl7.org/fhir/StructureDefinition/Organization"
-            ]
-          }
-        ],
-        "mapping": [
-          {
             "identity": "workflow",
-            "map": "Event.performer"
+            "map": "Event.status"
           },
           {
             "identity": "w5",
-            "map": "FiveWs.source"
+            "map": "FiveWs.status"
           },
-          {
-            "identity": "cdanetv4",
-            "map": "B01"
-          },
-          {
-            "identity": "v2",
-            "map": "B01"
-          },
-          {
-            "identity": "rim",
-            "map": "n/a"
-          }
-        ]
-      },
-      {
-        "id": "PaymentNotice.recipient",
-        "path": "PaymentNotice.recipient",
-        "short": "Party being notified",
-        "definition": "The party who is notified of the payment status.",
-        "requirements": "Need to identified the recipient of the notification.",
-        "min": 1,
-        "max": "1",
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/Organization"
-            ]
-          }
-        ],
-        "isSummary": true,
-        "mapping": [
           {
             "identity": "rim",
             "map": "n/a"
@@ -1180,42 +1151,189 @@
         ]
       },
       {
-        "id": "PaymentNotice.status",
-        "path": "PaymentNotice.status",
-        "short": "active | cancelled | draft | entered-in-error",
-        "definition": "The status of the resource instance.",
-        "comment": "This element is labeled as a modifier because the status contains codes that mark the resource as not currently valid.",
-        "requirements": "Need to track the status of the resource as 'draft' resources may undergo further edits while 'active' resources are immutable and may only have their status changed to 'cancelled'.",
+        "id": "PaymentNotice.created",
+        "path": "PaymentNotice.created",
+        "short": "Creation date",
+        "definition": "The date when this resource was created.",
+        "requirements": "Need to record a timestamp for use by both the recipient and the issuer.",
         "min": 1,
         "max": "1",
         "type": [
           {
-            "code": "code"
+            "code": "dateTime"
           }
         ],
-        "isModifier": true,
-        "isModifierReason": "This element is labelled as a modifier because it is a status element that contains status entered-in-error which means that the resource should not be treated as valid",
         "isSummary": true,
+        "mapping": [
+          {
+            "identity": "workflow",
+            "map": "Event.occurrence[x]"
+          },
+          {
+            "identity": "w5",
+            "map": "FiveWs.recorded"
+          },
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "id": "PaymentNotice.provider",
+        "path": "PaymentNotice.provider",
+        "short": "Responsible practitioner",
+        "definition": "The practitioner who is responsible for the services rendered to the patient.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Practitioner",
+              "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
+              "http://hl7.org/fhir/StructureDefinition/Organization"
+            ]
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "workflow",
+            "map": "Event.performer"
+          },
+          {
+            "identity": "w5",
+            "map": "FiveWs.source"
+          },
+          {
+            "identity": "cdanetv4",
+            "map": "B01"
+          },
+          {
+            "identity": "v2",
+            "map": "B01"
+          },
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "id": "PaymentNotice.payment",
+        "path": "PaymentNotice.payment",
+        "short": "Payment reference",
+        "definition": "A reference to the payment which is the subject of this notice.",
+        "requirements": "Need to identify the actual payment.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/PaymentReconciliation"
+            ]
+          }
+        ],
+        "isSummary": true
+      },
+      {
+        "id": "PaymentNotice.paymentDate",
+        "path": "PaymentNotice.paymentDate",
+        "short": "Payment or clearing date",
+        "definition": "The date when the above payment action occurred.",
+        "requirements": "Need to convey the date when the action being notified occurred.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "date"
+          }
+        ]
+      },
+      {
+        "id": "PaymentNotice.payee",
+        "path": "PaymentNotice.payee",
+        "short": "Party being paid",
+        "definition": "The party who will receive or has received payment that is the subject of this notification.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Practitioner",
+              "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
+              "http://hl7.org/fhir/StructureDefinition/Organization"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "PaymentNotice.recipient",
+        "path": "PaymentNotice.recipient",
+        "short": "Party being notified",
+        "definition": "The party who is notified of the payment status.",
+        "requirements": "Need to identified the recipient of the notification.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Organization"
+            ]
+          }
+        ],
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "id": "PaymentNotice.amount",
+        "path": "PaymentNotice.amount",
+        "short": "Monetary amount of the payment",
+        "definition": "The amount sent to the payee.",
+        "requirements": "Provided for validation purposes.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Money"
+          }
+        ],
+        "isSummary": true
+      },
+      {
+        "id": "PaymentNotice.paymentStatus",
+        "path": "PaymentNotice.paymentStatus",
+        "short": "Issued or cleared Status of the payment",
+        "definition": "A code indicating whether payment has been sent or cleared.",
+        "comment": "Typically paid: payment sent, cleared: payment received.",
+        "requirements": "The purpose of the notification.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
         "binding": {
           "extension": [
             {
               "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
-              "valueString": "PaymentNoticeStatus"
+              "valueString": "PaymentStatus"
             }
           ],
-          "strength": "required",
-          "description": "A code specifying the state of the resource instance.",
-          "valueSet": "http://hl7.org/fhir/ValueSet/fm-status|4.0.1"
+          "strength": "example",
+          "description": "The payment conveyance status codes.",
+          "valueSet": "http://hl7.org/fhir/ValueSet/payment-status"
         },
         "mapping": [
-          {
-            "identity": "workflow",
-            "map": "Event.status"
-          },
-          {
-            "identity": "w5",
-            "map": "FiveWs.status"
-          },
           {
             "identity": "rim",
             "map": "n/a"

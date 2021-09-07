@@ -38,7 +38,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
     <valueCode value="fm"/>
   </extension>
-  <url value="http://hl7.org/fhir/StructureDefinition/PaymentNotice"/>
+  <url value="http://hl7.org/fhir/StructureDefinition/HCXPaymentNotice"/>
   <version value="0.0.1"/>
   <name value="PaymentNotice"/>
   <status value="draft"/>
@@ -81,7 +81,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   <kind value="resource"/>
   <abstract value="false"/>
   <type value="PaymentNotice"/>
-  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/PaymentNotice"/>
   <derivation value="specialization"/>
   <snapshot>
     <element id="PaymentNotice">
@@ -91,7 +91,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
       <min value="0"/>
       <max value="*"/>
       <base>
-        <path value="DomainResource"/>
+        <path value="PaymentNotice"/>
         <min value="0"/>
         <max value="*"/>
       </base>
@@ -330,14 +330,6 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
     </element>
     <element id="PaymentNotice.extension">
       <path value="PaymentNotice.extension"/>
-      <slicing>
-        <discriminator>
-          <type value="value"/>
-          <path value="url"/>
-        </discriminator>
-        <description value="Extensions are always sliced by (at least) url"/>
-        <rules value="open"/>
-      </slicing>
       <short value="Additional content defined by implementations"/>
       <definition value="May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
       <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
@@ -378,14 +370,6 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
     </element>
     <element id="PaymentNotice.modifierExtension">
       <path value="PaymentNotice.modifierExtension"/>
-      <slicing>
-        <discriminator>
-          <type value="value"/>
-          <path value="url"/>
-        </discriminator>
-        <description value="Extensions are always sliced by (at least) url"/>
-        <rules value="open"/>
-      </slicing>
       <short value="Extensions that cannot be ignored"/>
       <definition value="May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element&#39;s descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.&#xA;&#xA;Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself)."/>
       <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
@@ -426,52 +410,6 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
         <map value="N/A"/>
       </mapping>
     </element>
-    <element id="PaymentNotice.amount">
-      <path value="PaymentNotice.amount"/>
-      <short value="Monetary amount of the payment"/>
-      <definition value="The amount sent to the payee."/>
-      <requirements value="Provided for validation purposes."/>
-      <min value="1"/>
-      <max value="1"/>
-      <base>
-        <path value="PaymentNotice.amount"/>
-        <min value="1"/>
-        <max value="1"/>
-      </base>
-      <type>
-        <code value="Money"/>
-      </type>
-      <isSummary value="true"/>
-    </element>
-    <element id="PaymentNotice.created">
-      <path value="PaymentNotice.created"/>
-      <short value="Creation date"/>
-      <definition value="The date when this resource was created."/>
-      <requirements value="Need to record a timestamp for use by both the recipient and the issuer."/>
-      <min value="1"/>
-      <max value="1"/>
-      <base>
-        <path value="PaymentNotice.created"/>
-        <min value="1"/>
-        <max value="1"/>
-      </base>
-      <type>
-        <code value="dateTime"/>
-      </type>
-      <isSummary value="true"/>
-      <mapping>
-        <identity value="workflow"/>
-        <map value="Event.occurrence[x]"/>
-      </mapping>
-      <mapping>
-        <identity value="w5"/>
-        <map value="FiveWs.recorded"/>
-      </mapping>
-      <mapping>
-        <identity value="rim"/>
-        <map value="n/a"/>
-      </mapping>
-    </element>
     <element id="PaymentNotice.identifier">
       <path value="PaymentNotice.identifier"/>
       <short value="Business Identifier for the payment noctice"/>
@@ -481,12 +419,22 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
       <max value="1"/>
       <base>
         <path value="PaymentNotice.identifier"/>
-        <min value="1"/>
-        <max value="1"/>
+        <min value="0"/>
+        <max value="*"/>
       </base>
       <type>
         <code value="Identifier"/>
       </type>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() or (children().count() &gt; id.count())"/>
+        <xpath value="@value|f:*|h:div"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
       <mapping>
         <identity value="workflow"/>
         <map value="Event.identifier"/>
@@ -500,142 +448,49 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
         <map value="n/a"/>
       </mapping>
     </element>
-    <element id="PaymentNotice.payee">
-      <path value="PaymentNotice.payee"/>
-      <short value="Party being paid"/>
-      <definition value="The party who will receive or has received payment that is the subject of this notification."/>
-      <min value="0"/>
-      <max value="1"/>
-      <base>
-        <path value="PaymentNotice.payee"/>
-        <min value="0"/>
-        <max value="1"/>
-      </base>
-      <type>
-        <code value="Reference"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/PractitionerRole"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization"/>
-      </type>
-    </element>
-    <element id="PaymentNotice.payment">
-      <path value="PaymentNotice.payment"/>
-      <short value="Payment reference"/>
-      <definition value="A reference to the payment which is the subject of this notice."/>
-      <requirements value="Need to identify the actual payment."/>
+    <element id="PaymentNotice.status">
+      <path value="PaymentNotice.status"/>
+      <short value="active | cancelled | draft | entered-in-error"/>
+      <definition value="The status of the resource instance."/>
+      <comment value="This element is labeled as a modifier because the status contains codes that mark the resource as not currently valid."/>
+      <requirements value="Need to track the status of the resource as &#39;draft&#39; resources may undergo further edits while &#39;active&#39; resources are immutable and may only have their status changed to &#39;cancelled&#39;."/>
       <min value="1"/>
       <max value="1"/>
       <base>
-        <path value="PaymentNotice.payment"/>
+        <path value="PaymentNotice.status"/>
         <min value="1"/>
         <max value="1"/>
       </base>
       <type>
-        <code value="Reference"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/PaymentReconciliation"/>
+        <code value="code"/>
       </type>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() or (children().count() &gt; id.count())"/>
+        <xpath value="@value|f:*|h:div"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <isModifier value="true"/>
+      <isModifierReason value="This element is labelled as a modifier because it is a status element that contains status entered-in-error which means that the resource should not be treated as valid"/>
       <isSummary value="true"/>
-    </element>
-    <element id="PaymentNotice.paymentDate">
-      <path value="PaymentNotice.paymentDate"/>
-      <short value="Payment or clearing date"/>
-      <definition value="The date when the above payment action occurred."/>
-      <requirements value="Need to convey the date when the action being notified occurred."/>
-      <min value="0"/>
-      <max value="1"/>
-      <base>
-        <path value="PaymentNotice.paymentDate"/>
-        <min value="0"/>
-        <max value="1"/>
-      </base>
-      <type>
-        <code value="date"/>
-      </type>
-    </element>
-    <element id="PaymentNotice.paymentStatus">
-      <path value="PaymentNotice.paymentStatus"/>
-      <short value="Issued or cleared Status of the payment"/>
-      <definition value="A code indicating whether payment has been sent or cleared."/>
-      <comment value="Typically paid: payment sent, cleared: payment received."/>
-      <requirements value="The purpose of the notification."/>
-      <min value="0"/>
-      <max value="1"/>
-      <base>
-        <path value="PaymentNotice.paymentStatus"/>
-        <min value="0"/>
-        <max value="1"/>
-      </base>
-      <type>
-        <code value="CodeableConcept"/>
-      </type>
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="PaymentStatus"/>
+          <valueString value="PaymentNoticeStatus"/>
         </extension>
-        <strength value="example"/>
-        <description value="The payment conveyance status codes."/>
-        <valueSet value="http://hl7.org/fhir/ValueSet/payment-status"/>
+        <strength value="required"/>
+        <description value="A code specifying the state of the resource instance."/>
+        <valueSet value="http://hl7.org/fhir/ValueSet/fm-status|4.0.1"/>
       </binding>
       <mapping>
-        <identity value="rim"/>
-        <map value="n/a"/>
-      </mapping>
-    </element>
-    <element id="PaymentNotice.provider">
-      <path value="PaymentNotice.provider"/>
-      <short value="Responsible practitioner"/>
-      <definition value="The practitioner who is responsible for the services rendered to the patient."/>
-      <min value="1"/>
-      <max value="1"/>
-      <base>
-        <path value="PaymentNotice.provider"/>
-        <min value="1"/>
-        <max value="1"/>
-      </base>
-      <type>
-        <code value="Reference"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/PractitionerRole"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization"/>
-      </type>
-      <mapping>
         <identity value="workflow"/>
-        <map value="Event.performer"/>
+        <map value="Event.status"/>
       </mapping>
       <mapping>
         <identity value="w5"/>
-        <map value="FiveWs.source"/>
+        <map value="FiveWs.status"/>
       </mapping>
-      <mapping>
-        <identity value="cdanetv4"/>
-        <map value="B01"/>
-      </mapping>
-      <mapping>
-        <identity value="v2"/>
-        <map value="B01"/>
-      </mapping>
-      <mapping>
-        <identity value="rim"/>
-        <map value="n/a"/>
-      </mapping>
-    </element>
-    <element id="PaymentNotice.recipient">
-      <path value="PaymentNotice.recipient"/>
-      <short value="Party being notified"/>
-      <definition value="The party who is notified of the payment status."/>
-      <requirements value="Need to identified the recipient of the notification."/>
-      <min value="1"/>
-      <max value="1"/>
-      <base>
-        <path value="PaymentNotice.recipient"/>
-        <min value="1"/>
-        <max value="1"/>
-      </base>
-      <type>
-        <code value="Reference"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization"/>
-      </type>
-      <isSummary value="true"/>
       <mapping>
         <identity value="rim"/>
         <map value="n/a"/>
@@ -649,13 +504,23 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
       <max value="1"/>
       <base>
         <path value="PaymentNotice.request"/>
-        <min value="1"/>
+        <min value="0"/>
         <max value="1"/>
       </base>
       <type>
         <code value="Reference"/>
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Resource"/>
       </type>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() or (children().count() &gt; id.count())"/>
+        <xpath value="@value|f:*|h:div"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
       <mapping>
         <identity value="workflow"/>
         <map value="Event.basedOn"/>
@@ -677,13 +542,23 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
       <max value="1"/>
       <base>
         <path value="PaymentNotice.response"/>
-        <min value="1"/>
+        <min value="0"/>
         <max value="1"/>
       </base>
       <type>
         <code value="Reference"/>
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Resource"/>
       </type>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() or (children().count() &gt; id.count())"/>
+        <xpath value="@value|f:*|h:div"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
       <mapping>
         <identity value="w5"/>
         <map value="FiveWs.subject[x]"/>
@@ -697,41 +572,264 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
         <map value="FiveWs.subject"/>
       </mapping>
     </element>
-    <element id="PaymentNotice.status">
-      <path value="PaymentNotice.status"/>
-      <short value="active | cancelled | draft | entered-in-error"/>
-      <definition value="The status of the resource instance."/>
-      <comment value="This element is labeled as a modifier because the status contains codes that mark the resource as not currently valid."/>
-      <requirements value="Need to track the status of the resource as &#39;draft&#39; resources may undergo further edits while &#39;active&#39; resources are immutable and may only have their status changed to &#39;cancelled&#39;."/>
+    <element id="PaymentNotice.created">
+      <path value="PaymentNotice.created"/>
+      <short value="Creation date"/>
+      <definition value="The date when this resource was created."/>
+      <requirements value="Need to record a timestamp for use by both the recipient and the issuer."/>
       <min value="1"/>
       <max value="1"/>
       <base>
-        <path value="PaymentNotice.status"/>
+        <path value="PaymentNotice.created"/>
         <min value="1"/>
         <max value="1"/>
       </base>
       <type>
-        <code value="code"/>
+        <code value="dateTime"/>
       </type>
-      <isModifier value="true"/>
-      <isModifierReason value="This element is labelled as a modifier because it is a status element that contains status entered-in-error which means that the resource should not be treated as valid"/>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() or (children().count() &gt; id.count())"/>
+        <xpath value="@value|f:*|h:div"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <isModifier value="false"/>
       <isSummary value="true"/>
-      <binding>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="PaymentNoticeStatus"/>
-        </extension>
-        <strength value="required"/>
-        <description value="A code specifying the state of the resource instance."/>
-        <valueSet value="http://hl7.org/fhir/ValueSet/fm-status|4.0.1"/>
-      </binding>
       <mapping>
         <identity value="workflow"/>
-        <map value="Event.status"/>
+        <map value="Event.occurrence[x]"/>
       </mapping>
       <mapping>
         <identity value="w5"/>
-        <map value="FiveWs.status"/>
+        <map value="FiveWs.recorded"/>
       </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element id="PaymentNotice.provider">
+      <path value="PaymentNotice.provider"/>
+      <short value="Responsible practitioner"/>
+      <definition value="The practitioner who is responsible for the services rendered to the patient."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="PaymentNotice.provider"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/PractitionerRole"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization"/>
+      </type>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() or (children().count() &gt; id.count())"/>
+        <xpath value="@value|f:*|h:div"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="workflow"/>
+        <map value="Event.performer"/>
+      </mapping>
+      <mapping>
+        <identity value="w5"/>
+        <map value="FiveWs.source"/>
+      </mapping>
+      <mapping>
+        <identity value="cdanetv4"/>
+        <map value="B01"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="B01"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element id="PaymentNotice.payment">
+      <path value="PaymentNotice.payment"/>
+      <short value="Payment reference"/>
+      <definition value="A reference to the payment which is the subject of this notice."/>
+      <requirements value="Need to identify the actual payment."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="PaymentNotice.payment"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/PaymentReconciliation"/>
+      </type>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() or (children().count() &gt; id.count())"/>
+        <xpath value="@value|f:*|h:div"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <isModifier value="false"/>
+      <isSummary value="true"/>
+    </element>
+    <element id="PaymentNotice.paymentDate">
+      <path value="PaymentNotice.paymentDate"/>
+      <short value="Payment or clearing date"/>
+      <definition value="The date when the above payment action occurred."/>
+      <requirements value="Need to convey the date when the action being notified occurred."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="PaymentNotice.paymentDate"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="date"/>
+      </type>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() or (children().count() &gt; id.count())"/>
+        <xpath value="@value|f:*|h:div"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="PaymentNotice.payee">
+      <path value="PaymentNotice.payee"/>
+      <short value="Party being paid"/>
+      <definition value="The party who will receive or has received payment that is the subject of this notification."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="PaymentNotice.payee"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/PractitionerRole"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization"/>
+      </type>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() or (children().count() &gt; id.count())"/>
+        <xpath value="@value|f:*|h:div"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="PaymentNotice.recipient">
+      <path value="PaymentNotice.recipient"/>
+      <short value="Party being notified"/>
+      <definition value="The party who is notified of the payment status."/>
+      <requirements value="Need to identified the recipient of the notification."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="PaymentNotice.recipient"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization"/>
+      </type>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() or (children().count() &gt; id.count())"/>
+        <xpath value="@value|f:*|h:div"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <isModifier value="false"/>
+      <isSummary value="true"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element id="PaymentNotice.amount">
+      <path value="PaymentNotice.amount"/>
+      <short value="Monetary amount of the payment"/>
+      <definition value="The amount sent to the payee."/>
+      <requirements value="Provided for validation purposes."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="PaymentNotice.amount"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Money"/>
+      </type>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() or (children().count() &gt; id.count())"/>
+        <xpath value="@value|f:*|h:div"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <isModifier value="false"/>
+      <isSummary value="true"/>
+    </element>
+    <element id="PaymentNotice.paymentStatus">
+      <path value="PaymentNotice.paymentStatus"/>
+      <short value="Issued or cleared Status of the payment"/>
+      <definition value="A code indicating whether payment has been sent or cleared."/>
+      <comment value="Typically paid: payment sent, cleared: payment received."/>
+      <requirements value="The purpose of the notification."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="PaymentNotice.paymentStatus"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() or (children().count() &gt; id.count())"/>
+        <xpath value="@value|f:*|h:div"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="PaymentStatus"/>
+        </extension>
+        <strength value="example"/>
+        <description value="The payment conveyance status codes."/>
+        <valueSet value="http://hl7.org/fhir/ValueSet/payment-status"/>
+      </binding>
       <mapping>
         <identity value="rim"/>
         <map value="n/a"/>
@@ -754,42 +852,6 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
         <map value="n/a"/>
       </mapping>
     </element>
-    <element id="PaymentNotice.amount">
-      <path value="PaymentNotice.amount"/>
-      <short value="Monetary amount of the payment"/>
-      <definition value="The amount sent to the payee."/>
-      <requirements value="Provided for validation purposes."/>
-      <min value="1"/>
-      <max value="1"/>
-      <type>
-        <code value="Money"/>
-      </type>
-      <isSummary value="true"/>
-    </element>
-    <element id="PaymentNotice.created">
-      <path value="PaymentNotice.created"/>
-      <short value="Creation date"/>
-      <definition value="The date when this resource was created."/>
-      <requirements value="Need to record a timestamp for use by both the recipient and the issuer."/>
-      <min value="1"/>
-      <max value="1"/>
-      <type>
-        <code value="dateTime"/>
-      </type>
-      <isSummary value="true"/>
-      <mapping>
-        <identity value="workflow"/>
-        <map value="Event.occurrence[x]"/>
-      </mapping>
-      <mapping>
-        <identity value="w5"/>
-        <map value="FiveWs.recorded"/>
-      </mapping>
-      <mapping>
-        <identity value="rim"/>
-        <map value="n/a"/>
-      </mapping>
-    </element>
     <element id="PaymentNotice.identifier">
       <path value="PaymentNotice.identifier"/>
       <short value="Business Identifier for the payment noctice"/>
@@ -813,112 +875,36 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
         <map value="n/a"/>
       </mapping>
     </element>
-    <element id="PaymentNotice.payee">
-      <path value="PaymentNotice.payee"/>
-      <short value="Party being paid"/>
-      <definition value="The party who will receive or has received payment that is the subject of this notification."/>
-      <min value="0"/>
-      <max value="1"/>
-      <type>
-        <code value="Reference"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/PractitionerRole"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization"/>
-      </type>
-    </element>
-    <element id="PaymentNotice.payment">
-      <path value="PaymentNotice.payment"/>
-      <short value="Payment reference"/>
-      <definition value="A reference to the payment which is the subject of this notice."/>
-      <requirements value="Need to identify the actual payment."/>
+    <element id="PaymentNotice.status">
+      <path value="PaymentNotice.status"/>
+      <short value="active | cancelled | draft | entered-in-error"/>
+      <definition value="The status of the resource instance."/>
+      <comment value="This element is labeled as a modifier because the status contains codes that mark the resource as not currently valid."/>
+      <requirements value="Need to track the status of the resource as &#39;draft&#39; resources may undergo further edits while &#39;active&#39; resources are immutable and may only have their status changed to &#39;cancelled&#39;."/>
       <min value="1"/>
       <max value="1"/>
       <type>
-        <code value="Reference"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/PaymentReconciliation"/>
+        <code value="code"/>
       </type>
+      <isModifier value="true"/>
+      <isModifierReason value="This element is labelled as a modifier because it is a status element that contains status entered-in-error which means that the resource should not be treated as valid"/>
       <isSummary value="true"/>
-    </element>
-    <element id="PaymentNotice.paymentDate">
-      <path value="PaymentNotice.paymentDate"/>
-      <short value="Payment or clearing date"/>
-      <definition value="The date when the above payment action occurred."/>
-      <requirements value="Need to convey the date when the action being notified occurred."/>
-      <min value="0"/>
-      <max value="1"/>
-      <type>
-        <code value="date"/>
-      </type>
-    </element>
-    <element id="PaymentNotice.paymentStatus">
-      <path value="PaymentNotice.paymentStatus"/>
-      <short value="Issued or cleared Status of the payment"/>
-      <definition value="A code indicating whether payment has been sent or cleared."/>
-      <comment value="Typically paid: payment sent, cleared: payment received."/>
-      <requirements value="The purpose of the notification."/>
-      <min value="0"/>
-      <max value="1"/>
-      <type>
-        <code value="CodeableConcept"/>
-      </type>
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="PaymentStatus"/>
+          <valueString value="PaymentNoticeStatus"/>
         </extension>
-        <strength value="example"/>
-        <description value="The payment conveyance status codes."/>
-        <valueSet value="http://hl7.org/fhir/ValueSet/payment-status"/>
+        <strength value="required"/>
+        <description value="A code specifying the state of the resource instance."/>
+        <valueSet value="http://hl7.org/fhir/ValueSet/fm-status|4.0.1"/>
       </binding>
       <mapping>
-        <identity value="rim"/>
-        <map value="n/a"/>
-      </mapping>
-    </element>
-    <element id="PaymentNotice.provider">
-      <path value="PaymentNotice.provider"/>
-      <short value="Responsible practitioner"/>
-      <definition value="The practitioner who is responsible for the services rendered to the patient."/>
-      <min value="1"/>
-      <max value="1"/>
-      <type>
-        <code value="Reference"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/PractitionerRole"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization"/>
-      </type>
-      <mapping>
         <identity value="workflow"/>
-        <map value="Event.performer"/>
+        <map value="Event.status"/>
       </mapping>
       <mapping>
         <identity value="w5"/>
-        <map value="FiveWs.source"/>
+        <map value="FiveWs.status"/>
       </mapping>
-      <mapping>
-        <identity value="cdanetv4"/>
-        <map value="B01"/>
-      </mapping>
-      <mapping>
-        <identity value="v2"/>
-        <map value="B01"/>
-      </mapping>
-      <mapping>
-        <identity value="rim"/>
-        <map value="n/a"/>
-      </mapping>
-    </element>
-    <element id="PaymentNotice.recipient">
-      <path value="PaymentNotice.recipient"/>
-      <short value="Party being notified"/>
-      <definition value="The party who is notified of the payment status."/>
-      <requirements value="Need to identified the recipient of the notification."/>
-      <min value="1"/>
-      <max value="1"/>
-      <type>
-        <code value="Reference"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization"/>
-      </type>
-      <isSummary value="true"/>
       <mapping>
         <identity value="rim"/>
         <map value="n/a"/>
@@ -970,36 +956,148 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
         <map value="FiveWs.subject"/>
       </mapping>
     </element>
-    <element id="PaymentNotice.status">
-      <path value="PaymentNotice.status"/>
-      <short value="active | cancelled | draft | entered-in-error"/>
-      <definition value="The status of the resource instance."/>
-      <comment value="This element is labeled as a modifier because the status contains codes that mark the resource as not currently valid."/>
-      <requirements value="Need to track the status of the resource as &#39;draft&#39; resources may undergo further edits while &#39;active&#39; resources are immutable and may only have their status changed to &#39;cancelled&#39;."/>
+    <element id="PaymentNotice.created">
+      <path value="PaymentNotice.created"/>
+      <short value="Creation date"/>
+      <definition value="The date when this resource was created."/>
+      <requirements value="Need to record a timestamp for use by both the recipient and the issuer."/>
       <min value="1"/>
       <max value="1"/>
       <type>
-        <code value="code"/>
+        <code value="dateTime"/>
       </type>
-      <isModifier value="true"/>
-      <isModifierReason value="This element is labelled as a modifier because it is a status element that contains status entered-in-error which means that the resource should not be treated as valid"/>
       <isSummary value="true"/>
-      <binding>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="PaymentNoticeStatus"/>
-        </extension>
-        <strength value="required"/>
-        <description value="A code specifying the state of the resource instance."/>
-        <valueSet value="http://hl7.org/fhir/ValueSet/fm-status|4.0.1"/>
-      </binding>
       <mapping>
         <identity value="workflow"/>
-        <map value="Event.status"/>
+        <map value="Event.occurrence[x]"/>
       </mapping>
       <mapping>
         <identity value="w5"/>
-        <map value="FiveWs.status"/>
+        <map value="FiveWs.recorded"/>
       </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element id="PaymentNotice.provider">
+      <path value="PaymentNotice.provider"/>
+      <short value="Responsible practitioner"/>
+      <definition value="The practitioner who is responsible for the services rendered to the patient."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/PractitionerRole"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization"/>
+      </type>
+      <mapping>
+        <identity value="workflow"/>
+        <map value="Event.performer"/>
+      </mapping>
+      <mapping>
+        <identity value="w5"/>
+        <map value="FiveWs.source"/>
+      </mapping>
+      <mapping>
+        <identity value="cdanetv4"/>
+        <map value="B01"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="B01"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element id="PaymentNotice.payment">
+      <path value="PaymentNotice.payment"/>
+      <short value="Payment reference"/>
+      <definition value="A reference to the payment which is the subject of this notice."/>
+      <requirements value="Need to identify the actual payment."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/PaymentReconciliation"/>
+      </type>
+      <isSummary value="true"/>
+    </element>
+    <element id="PaymentNotice.paymentDate">
+      <path value="PaymentNotice.paymentDate"/>
+      <short value="Payment or clearing date"/>
+      <definition value="The date when the above payment action occurred."/>
+      <requirements value="Need to convey the date when the action being notified occurred."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="date"/>
+      </type>
+    </element>
+    <element id="PaymentNotice.payee">
+      <path value="PaymentNotice.payee"/>
+      <short value="Party being paid"/>
+      <definition value="The party who will receive or has received payment that is the subject of this notification."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/PractitionerRole"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization"/>
+      </type>
+    </element>
+    <element id="PaymentNotice.recipient">
+      <path value="PaymentNotice.recipient"/>
+      <short value="Party being notified"/>
+      <definition value="The party who is notified of the payment status."/>
+      <requirements value="Need to identified the recipient of the notification."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization"/>
+      </type>
+      <isSummary value="true"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element id="PaymentNotice.amount">
+      <path value="PaymentNotice.amount"/>
+      <short value="Monetary amount of the payment"/>
+      <definition value="The amount sent to the payee."/>
+      <requirements value="Provided for validation purposes."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="Money"/>
+      </type>
+      <isSummary value="true"/>
+    </element>
+    <element id="PaymentNotice.paymentStatus">
+      <path value="PaymentNotice.paymentStatus"/>
+      <short value="Issued or cleared Status of the payment"/>
+      <definition value="A code indicating whether payment has been sent or cleared."/>
+      <comment value="Typically paid: payment sent, cleared: payment received."/>
+      <requirements value="The purpose of the notification."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="PaymentStatus"/>
+        </extension>
+        <strength value="example"/>
+        <description value="The payment conveyance status codes."/>
+        <valueSet value="http://hl7.org/fhir/ValueSet/payment-status"/>
+      </binding>
       <mapping>
         <identity value="rim"/>
         <map value="n/a"/>

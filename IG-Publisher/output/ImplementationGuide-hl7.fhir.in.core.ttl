@@ -335,24 +335,6 @@
        fhir:index 3;
        fhir:Element.extension [
          fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/Account" ];
-         fhir:Extension.valueString [ fhir:value "SearchParameter" ]
-       ], [
-         fhir:index 1;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <https://fhir-ig-demo/StructureDefinition/Account>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/Account" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "HCX Account" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "**Search by subject - a patient**  \n**NOTE**: This US Core SearchParameter definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain" ];
-       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
-     ], [
-       fhir:index 4;
-       fhir:Element.extension [
-         fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ClaimRequestDocument" ];
          fhir:Extension.valueString [ fhir:value "SearchParameter" ]
        ], [
@@ -368,7 +350,79 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "**Search by subject - a patient**  \n**NOTE**: This US Core SearchParameter definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
+       fhir:index 4;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/Account" ];
+         fhir:Extension.valueString [ fhir:value "SearchParameter" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://fhir-ig-demo/StructureDefinition/Account>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/Account" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "HCX Account" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "**Search by subject - a patient**  \n**NOTE**: This US Core SearchParameter definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
        fhir:index 5;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ClaimResponse" ];
+         fhir:Extension.valueString [ fhir:value "SearchParameter" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://fhir-ig-demo/StructureDefinition/ClaimResponse>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/ClaimResponse" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "HCX Claim Response" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "**Search by subject - a patient**  \n**NOTE**: This US Core SearchParameter definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 6;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/Claim" ];
+         fhir:Extension.valueString [ fhir:value "SearchParameter" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://fhir-ig-demo/StructureDefinition/Claim>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/Claim" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "HCX Claim" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "**Search by subject - a patient**  \n**NOTE**: This US Core SearchParameter definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 7;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/Condition" ];
+         fhir:Extension.valueString [ fhir:value "SearchParameter" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://fhir-ig-demo/StructureDefinition/Condition>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/Condition" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "HCX Condition" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "**Search by subject - a patient**  \n**NOTE**: This US Core SearchParameter definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 8;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/Coverage" ];
@@ -386,7 +440,25 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "**Search by subject - a patient**  \n**NOTE**: This US Core SearchParameter definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 6;
+       fhir:index 9;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/Encounter" ];
+         fhir:Extension.valueString [ fhir:value "SearchParameter" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://fhir-ig-demo/StructureDefinition/Encounter>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/Encounter" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "HCX Encounter" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "**Search by subject - a patient**  \n**NOTE**: This US Core SearchParameter definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 10;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/CoverageEligibilityRequest" ];
@@ -404,7 +476,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "**Search by subject - a patient**  \n**NOTE**: This US Core SearchParameter definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 7;
+       fhir:index 11;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/CoverageEligibilityResponse" ];
@@ -422,7 +494,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "**Search by subject - a patient**  \n**NOTE**: This US Core SearchParameter definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 8;
+       fhir:index 12;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/Organization" ];
@@ -440,7 +512,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "**Search by subject - a patient**  \n**NOTE**: This US Core SearchParameter definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 9;
+       fhir:index 13;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/Patient" ];
@@ -458,7 +530,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "**Search by subject - a patient**  \n**NOTE**: This US Core SearchParameter definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 10;
+       fhir:index 14;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/PaymentNotice" ];
@@ -476,7 +548,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "**Search by subject - a patient**  \n**NOTE**: This US Core SearchParameter definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 11;
+       fhir:index 15;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/PaymentReconciliation" ];
@@ -494,7 +566,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "**Search by subject - a patient**  \n**NOTE**: This US Core SearchParameter definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 12;
+       fhir:index 16;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/Practitioner" ];
@@ -512,7 +584,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "**Search by subject - a patient**  \n**NOTE**: This US Core SearchParameter definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 13;
+       fhir:index 17;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/PractitionerRole" ];
@@ -530,7 +602,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "**Search by subject - a patient**  \n**NOTE**: This US Core SearchParameter definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 14;
+       fhir:index 18;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/PreAuthorizationRequest" ];
@@ -548,7 +620,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "**Search by subject - a patient**  \n**NOTE**: This US Core SearchParameter definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 15;
+       fhir:index 19;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/PreAuthorizationResponse" ];
@@ -565,60 +637,6 @@
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "HCX Pre Authorization Response" ];
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "**Search by subject - a patient**  \n**NOTE**: This US Core SearchParameter definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
-     ], [
-       fhir:index 16;
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/hcp-signature" ];
-         fhir:Extension.valueString [ fhir:value "SearchParameter" ]
-       ], [
-         fhir:index 1;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <https://fhir-ig-demo/StructureDefinition/hcp-signature>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/hcp-signature" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "HCX Signature" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "**Search by subject - a patient**  \n**NOTE**: This US Core SearchParameter definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain" ];
-       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
-     ], [
-       fhir:index 17;
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/ValueSet/claim-denial-codes" ];
-         fhir:Extension.valueString [ fhir:value "SearchParameter" ]
-       ], [
-         fhir:index 1;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "ValueSet" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <https://fhir-ig-demo/ValueSet/claim-denial-codes>;
-         fhir:Reference.reference [ fhir:value "ValueSet/claim-denial-codes" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "HCX Claim Denial Codes" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "**Search by subject - a patient**  \n**NOTE**: This US Core SearchParameter definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain" ];
-       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
-     ], [
-       fhir:index 18;
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/ValueSet/claim-service-categories" ];
-         fhir:Extension.valueString [ fhir:value "SearchParameter" ]
-       ], [
-         fhir:index 1;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "ValueSet" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <https://fhir-ig-demo/ValueSet/claim-service-categories>;
-         fhir:Reference.reference [ fhir:value "ValueSet/claim-service-categories" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "HCX Claim Service Categories" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "**Search by subject - a patient**  \n**NOTE**: This US Core SearchParameter definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain" ];
-       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ];
      fhir:ImplementationGuide.definition.page [
        fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "index.html" ];
@@ -630,81 +648,101 @@
          fhir:ImplementationGuide.definition.page.generation [ fhir:value "html" ];
          fhir:ImplementationGuide.definition.page.page [
            fhir:index 0;
+           fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "StructureDefinition-Claim.html" ];
+           fhir:ImplementationGuide.definition.page.title [ fhir:value "HCX Claim" ];
+           fhir:ImplementationGuide.definition.page.generation [ fhir:value "generated" ]
+         ], [
+           fhir:index 1;
+           fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "StructureDefinition-ClaimResponse.html" ];
+           fhir:ImplementationGuide.definition.page.title [ fhir:value "HCX Claim Response" ];
+           fhir:ImplementationGuide.definition.page.generation [ fhir:value "generated" ]
+         ], [
+           fhir:index 2;
+           fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "StructureDefinition-Condition.html" ];
+           fhir:ImplementationGuide.definition.page.title [ fhir:value "HCX Condition" ];
+           fhir:ImplementationGuide.definition.page.generation [ fhir:value "generated" ]
+         ], [
+           fhir:index 3;
+           fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "StructureDefinition-Encounter.html" ];
+           fhir:ImplementationGuide.definition.page.title [ fhir:value "HCX Encounter" ];
+           fhir:ImplementationGuide.definition.page.generation [ fhir:value "generated" ]
+         ], [
+           fhir:index 4;
            fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "StructureDefinition-CoverageEligibilityRequestDocument.html" ];
            fhir:ImplementationGuide.definition.page.title [ fhir:value "HCX Coverage Eligibility Request Document" ];
            fhir:ImplementationGuide.definition.page.generation [ fhir:value "generated" ]
          ], [
-           fhir:index 1;
+           fhir:index 5;
            fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "StructureDefinition-CoverageEligibilityResponseDocument.html" ];
            fhir:ImplementationGuide.definition.page.title [ fhir:value "HCX Coverage Eligibility Response Document" ];
            fhir:ImplementationGuide.definition.page.generation [ fhir:value "generated" ]
          ], [
-           fhir:index 2;
+           fhir:index 6;
            fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "StructureDefinition-ClaimResponseDocument.html" ];
            fhir:ImplementationGuide.definition.page.title [ fhir:value "HCX Claim Response Document" ];
            fhir:ImplementationGuide.definition.page.generation [ fhir:value "generated" ]
          ], [
-           fhir:index 3;
+           fhir:index 7;
            fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "StructureDefinition-Account.html" ];
            fhir:ImplementationGuide.definition.page.title [ fhir:value "HCX Account" ];
            fhir:ImplementationGuide.definition.page.generation [ fhir:value "generated" ]
          ], [
-           fhir:index 4;
+           fhir:index 8;
            fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "StructureDefinition-ClaimRequestDocument.html" ];
            fhir:ImplementationGuide.definition.page.title [ fhir:value "HCX Claim Request Document" ];
            fhir:ImplementationGuide.definition.page.generation [ fhir:value "generated" ]
          ], [
-           fhir:index 5;
+           fhir:index 9;
            fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "StructureDefinition-Coverage.html" ];
            fhir:ImplementationGuide.definition.page.title [ fhir:value "HCX Coverage" ];
            fhir:ImplementationGuide.definition.page.generation [ fhir:value "generated" ]
          ], [
-           fhir:index 6;
+           fhir:index 10;
            fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "StructureDefinition-CoverageEligibilityRequest.html" ];
            fhir:ImplementationGuide.definition.page.title [ fhir:value "HCX Coverage Eligibility Request " ];
            fhir:ImplementationGuide.definition.page.generation [ fhir:value "generated" ]
          ], [
-           fhir:index 7;
+           fhir:index 11;
            fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "StructureDefinition-CoverageEligibilityResponse.html" ];
            fhir:ImplementationGuide.definition.page.title [ fhir:value "HCX Coverage Eligibility Response" ];
            fhir:ImplementationGuide.definition.page.generation [ fhir:value "generated" ]
          ], [
-           fhir:index 8;
+           fhir:index 12;
            fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "StructureDefinition-Organization.html" ];
            fhir:ImplementationGuide.definition.page.title [ fhir:value "HCX Organization" ];
            fhir:ImplementationGuide.definition.page.generation [ fhir:value "generated" ]
          ], [
-           fhir:index 9;
+           fhir:index 13;
            fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "StructureDefinition-Patient.html" ];
            fhir:ImplementationGuide.definition.page.title [ fhir:value "HCX Patient" ];
            fhir:ImplementationGuide.definition.page.generation [ fhir:value "generated" ]
          ], [
-           fhir:index 10;
+           fhir:index 14;
            fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "StructureDefinition-PaymentNotice.html" ];
            fhir:ImplementationGuide.definition.page.title [ fhir:value "HCX Payment Notice" ];
            fhir:ImplementationGuide.definition.page.generation [ fhir:value "generated" ]
          ], [
-           fhir:index 11;
+           fhir:index 15;
            fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "StructureDefinition-PaymentReconciliation.html" ];
            fhir:ImplementationGuide.definition.page.title [ fhir:value "HCX Payment Reconciliation" ];
            fhir:ImplementationGuide.definition.page.generation [ fhir:value "generated" ]
          ], [
-           fhir:index 12;
+           fhir:index 16;
            fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "StructureDefinition-Practitioner.html" ];
            fhir:ImplementationGuide.definition.page.title [ fhir:value "HCX Practitioner" ];
            fhir:ImplementationGuide.definition.page.generation [ fhir:value "generated" ]
          ], [
-           fhir:index 13;
+           fhir:index 17;
            fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "StructureDefinition-PractitionerRole.html" ];
            fhir:ImplementationGuide.definition.page.title [ fhir:value "HCX Practitioner Role" ];
            fhir:ImplementationGuide.definition.page.generation [ fhir:value "generated" ]
          ], [
-           fhir:index 14;
+           fhir:index 18;
            fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "StructureDefinition-PreAuthorizationRequest.html" ];
            fhir:ImplementationGuide.definition.page.title [ fhir:value "HCX Pre Authorization Request" ];
            fhir:ImplementationGuide.definition.page.generation [ fhir:value "generated" ]
          ], [
-           fhir:index 15;
+           fhir:index 19;
            fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "StructureDefinition-PreAuthorizationResponse.html" ];
            fhir:ImplementationGuide.definition.page.title [ fhir:value "HCX Pre Authorization Response" ];
            fhir:ImplementationGuide.definition.page.generation [ fhir:value "generated" ]
@@ -740,7 +778,7 @@
      fhir:ImplementationGuide.definition.parameter [
        fhir:index 0;
        fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ];
-       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/hcx-definations" ]
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/hcx-definitions" ]
      ], [
        fhir:index 1;
        fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ];

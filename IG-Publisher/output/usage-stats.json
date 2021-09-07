@@ -2,83 +2,99 @@
   "package": "ig",
   "version": "0.0.1",
   "fhirVersion": "4.0.1",
-  "extensions": [
-    {
-      "url": "http://hl7.org/fhir/StructureDefinition/questionnaireresponse-signature",
-      "title": "HcpSignature",
-      "types": [
-        "Signature"
-      ]
-    }
-  ],
+  "extensions": [],
   "profiles": {
     "Account": [
       {
-        "url": "http://hl7.org/fhir/StructureDefinition/Account",
+        "url": "http://hl7.org/fhir/StructureDefinition/HCXAccount",
         "title": "Account"
+      }
+    ],
+    "Claim": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/HCXClaim",
+        "title": "Claim"
       }
     ],
     "Composition": [
       {
-        "url": "http://hl7.org/fhir/StructureDefinition/PreAuthorizationRequest",
-        "title": "CovereageEligibilityRequestDocument"
+        "url": "http://hl7.org/fhir/StructureDefinition/HCXPreAuthorizationRequest",
+        "title": "PreAuthorizationRequest"
       },
       {
-        "url": "http://hl7.org/fhir/StructureDefinition/PreAuthorizationResponse",
-        "title": "CovereageEligibilityResponseDocument"
+        "url": "http://hl7.org/fhir/StructureDefinition/HCXPreAuthorizationResponse",
+        "title": "PreAuthorizationResponse"
+      }
+    ],
+    "ClaimResponse": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/HCXClaimResponse",
+        "title": "ClaimResponse"
+      }
+    ],
+    "Condition": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/HCXCondition",
+        "title": "Condition"
       }
     ],
     "Coverage": [
       {
-        "url": "http://hl7.org/fhir/StructureDefinition/Coverage",
+        "url": "http://hl7.org/fhir/StructureDefinition/HCXCoverage",
         "title": "Coverage"
       }
     ],
     "CoverageEligibilityRequest": [
       {
-        "url": "http://hl7.org/fhir/StructureDefinition/CoverageEligibilityRequest",
+        "url": "http://hl7.org/fhir/StructureDefinition/HCXCoverageEligibilityRequest",
         "title": "CoverageEligibilityRequest"
       }
     ],
     "CoverageEligibilityResponse": [
       {
-        "url": "http://hl7.org/fhir/StructureDefinition/CoverageEligibilityResponse",
+        "url": "http://hl7.org/fhir/StructureDefinition/HCXCoverageEligibilityResponse",
         "title": "CoverageEligibilityResponse"
+      }
+    ],
+    "Encounter": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/HCXEncounter",
+        "title": "Encounter"
       }
     ],
     "Organization": [
       {
-        "url": "http://hl7.org/fhir/StructureDefinition/Organization",
+        "url": "http://hl7.org/fhir/StructureDefinition/HCXOrganization",
         "title": "Organization"
       }
     ],
     "Patient": [
       {
-        "url": "http://hl7.org/fhir/StructureDefinition/Patient",
+        "url": "http://hl7.org/fhir/StructureDefinition/HCXPatient",
         "title": "Patient"
       }
     ],
     "PaymentNotice": [
       {
-        "url": "http://hl7.org/fhir/StructureDefinition/PaymentNotice",
+        "url": "http://hl7.org/fhir/StructureDefinition/HCXPaymentNotice",
         "title": "PaymentNotice"
       }
     ],
     "PaymentReconciliation": [
       {
-        "url": "http://hl7.org/fhir/StructureDefinition/PaymentReconciliation",
+        "url": "http://hl7.org/fhir/StructureDefinition/HCXPaymentReconciliation",
         "title": "PaymentReconciliation"
       }
     ],
     "Practitioner": [
       {
-        "url": "http://hl7.org/fhir/StructureDefinition/Practitioner",
+        "url": "http://hl7.org/fhir/StructureDefinition/HCXPractitioner",
         "title": "Practitioner"
       }
     ],
     "PractitionerRole": [
       {
-        "url": "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
+        "url": "http://hl7.org/fhir/StructureDefinition/HCXPractitionerRole",
         "title": "PractitionerRole"
       }
     ]
@@ -118,6 +134,9 @@
     "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm": [
       "StructureDefinition"
     ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-hierarchy": [
+      "StructureDefinition.snapshot.element.type"
+    ],
     "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version": [
       "StructureDefinition"
     ],
@@ -133,10 +152,19 @@
     "http://hl7.org/fhir/tools/StructureDefinition/Account": [
       "ImplementationGuide.definition.resource"
     ],
+    "http://hl7.org/fhir/tools/StructureDefinition/Claim": [
+      "ImplementationGuide.definition.resource"
+    ],
     "http://hl7.org/fhir/tools/StructureDefinition/ClaimRequestDocument": [
       "ImplementationGuide.definition.resource"
     ],
+    "http://hl7.org/fhir/tools/StructureDefinition/ClaimResponse": [
+      "ImplementationGuide.definition.resource"
+    ],
     "http://hl7.org/fhir/tools/StructureDefinition/ClaimResponseDocument": [
+      "ImplementationGuide.definition.resource"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/Condition": [
       "ImplementationGuide.definition.resource"
     ],
     "http://hl7.org/fhir/tools/StructureDefinition/Coverage": [
@@ -152,6 +180,9 @@
       "ImplementationGuide.definition.resource"
     ],
     "http://hl7.org/fhir/tools/StructureDefinition/CoverageEligibilityResponseDocument": [
+      "ImplementationGuide.definition.resource"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/Encounter": [
       "ImplementationGuide.definition.resource"
     ],
     "http://hl7.org/fhir/tools/StructureDefinition/Organization": [
@@ -178,19 +209,10 @@
     "http://hl7.org/fhir/tools/StructureDefinition/PreAuthorizationResponse": [
       "ImplementationGuide.definition.resource"
     ],
-    "http://hl7.org/fhir/tools/StructureDefinition/hcp-signature": [
-      "ImplementationGuide.definition.resource"
-    ],
     "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter": [
       "ImplementationGuide.definition"
     ],
     "http://hl7.org/fhir/tools/StructureDefinition/resource-information": [
-      "ImplementationGuide.definition.resource"
-    ],
-    "http://hl7.org/fhir/tools/ValueSet/claim-denial-codes": [
-      "ImplementationGuide.definition.resource"
-    ],
-    "http://hl7.org/fhir/tools/ValueSet/claim-service-categories": [
       "ImplementationGuide.definition.resource"
     ]
   }

@@ -30,9 +30,9 @@
       "valueCode": "sd"
     }
   ],
-  "url": "http://hl7.org/fhir/StructureDefinition/ClaimResponse",
+  "url": "http://hl7.org/fhir/StructureDefinition/HCXClaimResponseDocument",
   "version": "0.0.1",
-  "name": "CovereageEligibilityResponseDocument",
+  "name": "ClaimResponseDocument",
   "status": "draft",
   "date": "2021-08-14T17:23:00.000+05:30",
   "publisher": "HL7 International - HCX",

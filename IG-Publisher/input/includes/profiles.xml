@@ -29,13 +29,13 @@ Following extensions to base FHIR profiles:
 <a href="StructureDefinition-Account.html">HCX Account</a>
 </li>
 <li>
-<a href="#">HCX Claim</a>
+<a href="StructureDefinition-Claim.html">HCX Claim</a>
 </li>
 <li>
-  <a href="#">HCX Claim Response</a>
+<a href="StructureDefinition-ClaimResponse.html">HCX Claim Response</a>
 </li>
 <li>
-<a href="#">HCX Condition</a>
+<a href="StructureDefinition-Condition.html">HCX Condition</a>
 </li>
 <li>
 <a href="StructureDefinition-Coverage.html">HCX Coverage</a>
@@ -47,7 +47,7 @@ Following extensions to base FHIR profiles:
 <a href="StructureDefinition-CoverageEligibilityResponse.html">HCX Coverage Eligibility Response</a>
 </li>
 <li>
-<a href="#">HCX Encounter</a>
+<a href="StructureDefinition-Encounter.html">HCX Encounter</a>
 </li>
 <li>
 <a href="StructureDefinition-Organization.html">HCX Organization</a>

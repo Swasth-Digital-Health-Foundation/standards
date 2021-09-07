@@ -61,7 +61,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
     <valueCode value="sd"/>
   </extension>
-  <url value="http://hl7.org/fhir/StructureDefinition/CovereageEligibilityResponseDocument"/>
+  <url value="http://hl7.org/fhir/StructureDefinition/HCXCovereageEligibilityResponseDocument"/>
   <version value="0.0.1"/>
   <name value="CovereageEligibilityResponseDocument"/>
   <status value="draft"/>
