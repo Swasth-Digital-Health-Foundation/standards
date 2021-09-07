@@ -1,0 +1,398 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://fhir-ig-demo/ValueSet/medical-specialty-provider> a fhir:ValueSet;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "medical-specialty-provider"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 89 concepts</p><p>All codes from system <code>http://hcp.org/codes/medical-specility-type-provider</code></p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>General Medicine</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Dental surgery</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Nursing</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Pharmacy</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Nursing Midwifery</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Military surgeons</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Cardio Thoracic and Vascular Surgery</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Cardiology</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Allergy</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Chest Medicine</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Clinical Psychology</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Cosmetic Dentistry</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Cosmetic Surgery</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Endodontics</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>ENT</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Critical Care</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Dental Implants &amp; Cosmetic Dentistry</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Dermatology Venereology and Leprology</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Dermatology</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Facial Plastic Surgery</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Diabetology</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Endocrinology</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Diet and Nutrition</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Diabetology &amp; Internal Medicine</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Gastrosurgery</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Gastroenterology</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>General Medicine</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>General Surgery</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>General Surgery &amp; Laparoscopic Surgery</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Gynecology &amp; Ultrasonology</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Head &amp; Neck Surgery</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Head &amp; Neck Surgical Oncology</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Hepato Pancreato Biliary Surgery</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Infectious Disease medicine</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Internal Medicine</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Internal Medicine &amp; Diabetics</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Neuro Surgery</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Resident Physicians</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Respiratory Allergy And Sleep Medicine</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Rheumatology</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Sexual Medicine</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Spine Surgery</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Sports Medicine</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Surgical Gastroenterology</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Surgical Oncology</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Urology</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Physiotherapy</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Physiotherapy &amp; Rehabilitation</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Plastic and Cosmetic Surgery</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Plastic Surgery</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Podiatry</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Prosthodontics &amp; Implants</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Psychiatry</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Pulmonology</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Radiation Oncology</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Radiology</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Laparoscopic and Robotic Surgery</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Medical Gastroenterology</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Medical Oncology</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Nephrology</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Neurology</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Neurology &amp; Neuro Surgery</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Neuropsychiatry</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Neurosurgery</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Obstetrics &amp; Gynecology</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Oncology</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Ophthalmology</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Oral &amp; Maxillofacial Surgery</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Ortho Dontia</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Orthopedic Surgeon</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Orthopedics</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Orthopedics &amp; Sports Medicine</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Orthopedics And Spine Surgery</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Orthopedics And Upper Limb Surgery</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Pediatric Endocrinology</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Pediatric Ophthalmology And Squint</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Paediatrics</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Paediatrics &amp; Neonatology</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Paediatrics - Nephrology</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Paediatrics - Neurology</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Paediatrics - Surgery</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Pathology</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Peadodontology (Child Dentistry)</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Pediatric Pulmonology</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Periodontia</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Periodontology and Implantology</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Peripheral Vascular Surgery</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Physical Medicine &amp; Rehabilitation</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Physician &amp; Diabetology</td></tr></table></div>"
+  ];
+  fhir:ValueSet.url [ fhir:value "https://fhir-ig-demo/ValueSet/medical-specialty-provider"];
+  fhir:ValueSet.version [ fhir:value "0.0.1"];
+  fhir:ValueSet.name [ fhir:value "Medical Speciality Type Provider"];
+  fhir:ValueSet.status [ fhir:value "active"];
+  fhir:ValueSet.date [ fhir:value "2021-09-07"^^xsd:date];
+  fhir:ValueSet.publisher [ fhir:value "HL7 International - HCX"];
+  fhir:ValueSet.contact [
+     fhir:index 0;
+     fhir:ContactDetail.name [ fhir:value "HL7 International - HCX" ];
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "url" ];
+       fhir:ContactPoint.value [ fhir:value "https://www.swasth.app/" ]
+     ]
+  ];
+  fhir:ValueSet.description [ fhir:value "This is the value set that includes the codes to identify the medical specialty provider"];
+  fhir:ValueSet.expansion [
+     fhir:ValueSet.expansion.timestamp [ fhir:value "2021-09-07T08:15:30+05:30"^^xsd:dateTime ];
+     fhir:ValueSet.expansion.contains [
+       fhir:index 0;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/medical-specility-type-provider" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "General Medicine" ]
+     ], [
+       fhir:index 1;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/medical-specility-type-provider" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Dental surgery" ]
+     ], [
+       fhir:index 2;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/medical-specility-type-provider" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Nursing" ]
+     ], [
+       fhir:index 3;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/medical-specility-type-provider" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Pharmacy" ]
+     ], [
+       fhir:index 4;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/medical-specility-type-provider" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Nursing Midwifery" ]
+     ], [
+       fhir:index 5;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/medical-specility-type-provider" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Military surgeons" ]
+     ], [
+       fhir:index 6;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/medical-specility-type-provider" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Cardio Thoracic and Vascular Surgery" ]
+     ], [
+       fhir:index 7;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/medical-specility-type-provider" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Cardiology" ]
+     ], [
+       fhir:index 8;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/medical-specility-type-provider" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Allergy" ]
+     ], [
+       fhir:index 9;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/medical-specility-type-provider" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Chest Medicine" ]
+     ], [
+       fhir:index 10;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/medical-specility-type-provider" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Clinical Psychology" ]
+     ], [
+       fhir:index 11;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/medical-specility-type-provider" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Cosmetic Dentistry" ]
+     ], [
+       fhir:index 12;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/medical-specility-type-provider" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Cosmetic Surgery" ]
+     ], [
+       fhir:index 13;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/medical-specility-type-provider" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Endodontics" ]
+     ], [
+       fhir:index 14;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/medical-specility-type-provider" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "ENT" ]
+     ], [
+       fhir:index 15;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/medical-specility-type-provider" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Critical Care" ]
+     ], [
+       fhir:index 16;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/medical-specility-type-provider" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Dental Implants & Cosmetic Dentistry" ]
+     ], [
+       fhir:index 17;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/medical-specility-type-provider" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Dermatology Venereology and Leprology" ]
+     ], [
+       fhir:index 18;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/medical-specility-type-provider" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Dermatology" ]
+     ], [
+       fhir:index 19;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/medical-specility-type-provider" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Facial Plastic Surgery" ]
+     ], [
+       fhir:index 20;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/medical-specility-type-provider" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Diabetology" ]
+     ], [
+       fhir:index 21;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/medical-specility-type-provider" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Endocrinology" ]
+     ], [
+       fhir:index 22;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/medical-specility-type-provider" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Diet and Nutrition" ]
+     ], [
+       fhir:index 23;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/medical-specility-type-provider" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Diabetology & Internal Medicine" ]
+     ], [
+       fhir:index 24;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/medical-specility-type-provider" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Gastrosurgery" ]
+     ], [
+       fhir:index 25;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/medical-specility-type-provider" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Gastroenterology" ]
+     ], [
+       fhir:index 26;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/medical-specility-type-provider" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "General Medicine" ]
+     ], [
+       fhir:index 27;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/medical-specility-type-provider" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "General Surgery" ]
+     ], [
+       fhir:index 28;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/medical-specility-type-provider" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "General Surgery & Laparoscopic Surgery" ]
+     ], [
+       fhir:index 29;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/medical-specility-type-provider" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Gynecology & Ultrasonology" ]
+     ], [
+       fhir:index 30;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/medical-specility-type-provider" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Head & Neck Surgery" ]
+     ], [
+       fhir:index 31;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/medical-specility-type-provider" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Head & Neck Surgical Oncology" ]
+     ], [
+       fhir:index 32;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/medical-specility-type-provider" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Hepato Pancreato Biliary Surgery" ]
+     ], [
+       fhir:index 33;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/medical-specility-type-provider" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Infectious Disease medicine" ]
+     ], [
+       fhir:index 34;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/medical-specility-type-provider" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Internal Medicine" ]
+     ], [
+       fhir:index 35;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/medical-specility-type-provider" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Internal Medicine & Diabetics" ]
+     ], [
+       fhir:index 36;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/medical-specility-type-provider" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Neuro Surgery" ]
+     ], [
+       fhir:index 37;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/medical-specility-type-provider" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Resident Physicians" ]
+     ], [
+       fhir:index 38;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/medical-specility-type-provider" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Respiratory Allergy And Sleep Medicine" ]
+     ], [
+       fhir:index 39;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/medical-specility-type-provider" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Rheumatology" ]
+     ], [
+       fhir:index 40;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/medical-specility-type-provider" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Sexual Medicine" ]
+     ], [
+       fhir:index 41;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/medical-specility-type-provider" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Spine Surgery" ]
+     ], [
+       fhir:index 42;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/medical-specility-type-provider" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Sports Medicine" ]
+     ], [
+       fhir:index 43;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/medical-specility-type-provider" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Surgical Gastroenterology" ]
+     ], [
+       fhir:index 44;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/medical-specility-type-provider" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Surgical Oncology" ]
+     ], [
+       fhir:index 45;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/medical-specility-type-provider" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Urology" ]
+     ], [
+       fhir:index 46;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/medical-specility-type-provider" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Physiotherapy" ]
+     ], [
+       fhir:index 47;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/medical-specility-type-provider" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Physiotherapy & Rehabilitation" ]
+     ], [
+       fhir:index 48;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/medical-specility-type-provider" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Plastic and Cosmetic Surgery" ]
+     ], [
+       fhir:index 49;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/medical-specility-type-provider" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Plastic Surgery" ]
+     ], [
+       fhir:index 50;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/medical-specility-type-provider" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Podiatry" ]
+     ], [
+       fhir:index 51;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/medical-specility-type-provider" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Prosthodontics & Implants" ]
+     ], [
+       fhir:index 52;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/medical-specility-type-provider" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Psychiatry" ]
+     ], [
+       fhir:index 53;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/medical-specility-type-provider" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Pulmonology" ]
+     ], [
+       fhir:index 54;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/medical-specility-type-provider" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Radiation Oncology" ]
+     ], [
+       fhir:index 55;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/medical-specility-type-provider" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Radiology" ]
+     ], [
+       fhir:index 56;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/medical-specility-type-provider" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Laparoscopic and Robotic Surgery" ]
+     ], [
+       fhir:index 57;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/medical-specility-type-provider" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Medical Gastroenterology" ]
+     ], [
+       fhir:index 58;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/medical-specility-type-provider" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Medical Oncology" ]
+     ], [
+       fhir:index 59;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/medical-specility-type-provider" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Nephrology" ]
+     ], [
+       fhir:index 60;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/medical-specility-type-provider" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Neurology" ]
+     ], [
+       fhir:index 61;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/medical-specility-type-provider" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Neurology & Neuro Surgery" ]
+     ], [
+       fhir:index 62;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/medical-specility-type-provider" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Neuropsychiatry" ]
+     ], [
+       fhir:index 63;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/medical-specility-type-provider" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Neurosurgery" ]
+     ], [
+       fhir:index 64;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/medical-specility-type-provider" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Obstetrics & Gynecology" ]
+     ], [
+       fhir:index 65;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/medical-specility-type-provider" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Oncology" ]
+     ], [
+       fhir:index 66;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/medical-specility-type-provider" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Ophthalmology" ]
+     ], [
+       fhir:index 67;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/medical-specility-type-provider" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Oral & Maxillofacial Surgery" ]
+     ], [
+       fhir:index 68;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/medical-specility-type-provider" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Ortho Dontia" ]
+     ], [
+       fhir:index 69;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/medical-specility-type-provider" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Orthopedic Surgeon" ]
+     ], [
+       fhir:index 70;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/medical-specility-type-provider" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Orthopedics" ]
+     ], [
+       fhir:index 71;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/medical-specility-type-provider" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Orthopedics & Sports Medicine" ]
+     ], [
+       fhir:index 72;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/medical-specility-type-provider" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Orthopedics And Spine Surgery" ]
+     ], [
+       fhir:index 73;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/medical-specility-type-provider" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Orthopedics And Upper Limb Surgery" ]
+     ], [
+       fhir:index 74;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/medical-specility-type-provider" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Pediatric Endocrinology" ]
+     ], [
+       fhir:index 75;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/medical-specility-type-provider" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Pediatric Ophthalmology And Squint" ]
+     ], [
+       fhir:index 76;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/medical-specility-type-provider" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Paediatrics" ]
+     ], [
+       fhir:index 77;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/medical-specility-type-provider" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Paediatrics & Neonatology" ]
+     ], [
+       fhir:index 78;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/medical-specility-type-provider" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Paediatrics - Nephrology" ]
+     ], [
+       fhir:index 79;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/medical-specility-type-provider" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Paediatrics - Neurology" ]
+     ], [
+       fhir:index 80;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/medical-specility-type-provider" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Paediatrics - Surgery" ]
+     ], [
+       fhir:index 81;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/medical-specility-type-provider" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Pathology" ]
+     ], [
+       fhir:index 82;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/medical-specility-type-provider" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Peadodontology (Child Dentistry)" ]
+     ], [
+       fhir:index 83;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/medical-specility-type-provider" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Pediatric Pulmonology" ]
+     ], [
+       fhir:index 84;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/medical-specility-type-provider" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Periodontia" ]
+     ], [
+       fhir:index 85;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/medical-specility-type-provider" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Periodontology and Implantology" ]
+     ], [
+       fhir:index 86;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/medical-specility-type-provider" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Peripheral Vascular Surgery" ]
+     ], [
+       fhir:index 87;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/medical-specility-type-provider" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Physical Medicine & Rehabilitation" ]
+     ], [
+       fhir:index 88;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/medical-specility-type-provider" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Physician & Diabetology" ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://fhir-ig-demo/ValueSet/medical-specialty-provider.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

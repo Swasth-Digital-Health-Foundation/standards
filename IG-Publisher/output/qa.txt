@@ -1,0 +1,387 @@
+﻿HCX Core : Validation Results
+=========================================
+
+err = 281, warn = 39, info = 0
+IG Publisher Version: 1.1.77 Out of date - current version is 1.1.79
+Generated Tue Sep 07 14:20:18 IST 2021. FHIR version 4.0.1 for ig#0.0.1 (canonical = https://fhir-ig-demo)
+
+ Build Errors : 5 / 1 / 0
+ C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\input\hcx-definitions\structuredefinition-Account : 0 / 1 / 1
+ C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\input\hcx-definitions\structuredefinition-Claim : 0 / 1 / 1
+ C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\input\hcx-definitions\structuredefinition-ClaimRequestDocument : 0 / 5 / 1
+ C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\input\hcx-definitions\structuredefinition-ClaimResponse : 1 / 3 / 1
+ C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\input\hcx-definitions\structuredefinition-ClaimResponseDocument : 0 / 1 / 1
+ C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\input\hcx-definitions\structuredefinition-Condition : 0 / 1 / 1
+ C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\input\hcx-definitions\structuredefinition-Coverage : 0 / 1 / 1
+ C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\input\hcx-definitions\structuredefinition-CoverageEligibilityRequest : 0 / 1 / 1
+ C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\input\hcx-definitions\structuredefinition-CoverageEligibilityRequestDocument : 0 / 1 / 1
+ C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\input\hcx-definitions\structuredefinition-CoverageEligibilityResponse : 0 / 1 / 1
+ C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\input\hcx-definitions\structuredefinition-CoverageEligibilityResponseDocument : 0 / 1 / 1
+ C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\input\hcx-definitions\structuredefinition-Encounter : 0 / 1 / 1
+ C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\input\hcx-definitions\structuredefinition-Organization : 0 / 1 / 1
+ C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\input\hcx-definitions\structuredefinition-Patient : 0 / 1 / 1
+ C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\input\hcx-definitions\structuredefinition-PaymentNotice : 0 / 1 / 1
+ C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\input\hcx-definitions\structuredefinition-PaymentReconciliation : 0 / 1 / 1
+ C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\input\hcx-definitions\structuredefinition-Practitioner : 0 / 1 / 1
+ C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\input\hcx-definitions\structuredefinition-PractitionerRole : 0 / 1 / 1
+ C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\input\hcx-definitions\structuredefinition-PreAuthorizationRequest : 0 / 5 / 1
+ C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\input\hcx-definitions\structuredefinition-PreAuthorizationResponse : 0 / 1 / 1
+ C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\input\hcx-definitions\valueset-claim-denial-codes : 0 / 1 / 1
+ C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\input\hcx-definitions\valueset-claim-service-categories : 0 / 1 / 1
+ C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\input\hcx-definitions\valueset-health-service-provider-role : 13 / 1 / 1
+ C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\input\hcx-definitions\valueset-insurance-company-owners : 51 / 1 / 1
+ C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\input\hcx-definitions\valueset-medical-specialty-provider : 178 / 1 / 1
+ C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\input\hcx-definitions\valueset-procedure-type-description : 32 / 1 / 1
+ C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\input\ig : 4 / 2 / 1
+</table>
+== n/a ==
+ERROR: ImplementationGuide.definition.parameter[23].value: Supressed messages file not found
+WARNING: ImplementationGuide.id: The Implementation Guide Resource id should be ig
+ERROR: C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\output\StructureDefinition-Condition-definitions.html#/html/body/div/div/div/div/div/table/tr/td/p/a at Line 286, column 94: The link 'resource.html#identifiers' for "discussion" cannot be resolved
+ERROR: C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\output\examples.html#/html/body/div/div/div/div/div/div/p/img at Line 135, column 4: The image source 'anImage.png' cannot be resolved
+ERROR: C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\output\index.html#/html/body/div/div/div/div/div/div/ul/li/a at Line 147, column 8: The link 'background.html' for "Background" cannot be resolved
+ERROR: C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\output\index.html#/html/body/div/div/div/div/div/div/ul/li/a at Line 151, column 8: The link 'spec.html' for "Detailed Specification" cannot be resolved
+== C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\input\hcx-definitions\StructureDefinition-Account.json ==
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/HCXAccount'): The Implementation Guide contains no examples for this profile
+== C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\input\hcx-definitions\StructureDefinition-Claim.json ==
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/HCXClaim'): The Implementation Guide contains no examples for this profile
+== C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\input\hcx-definitions\StructureDefinition-ClaimRequestDocument.json ==
+WARNING: http://hl7.org/fhir/StructureDefinition/HCXClaimRequestDocument#Composition.section.entry: Cannot check whether the target profile https://raw.githubusercontent.com/Swasth-Digital-Health-Foundation/standards/69ce5ac4bc6e9fc5a015a53c82e3ebb7a379f348/FHIR%20Definitions/hcp.signature.extension.json is valid constraint on the base because it is not known
+WARNING: StructureDefinition/ClaimRequestDocument: StructureDefinition.differential.element.where(path = 'Composition.section.entry'): Cannot check whether the target profile https://raw.githubusercontent.com/Swasth-Digital-Health-Foundation/standards/69ce5ac4bc6e9fc5a015a53c82e3ebb7a379f348/FHIR%20Definitions/hcp.signature.extension.json is valid constraint on the base because it is not known
+WARNING: StructureDefinition/ClaimRequestDocument: StructureDefinition.differential.element[6].type[0].targetProfile[0]: Unable to resolve profile https://raw.githubusercontent.com/Swasth-Digital-Health-Foundation/standards/69ce5ac4bc6e9fc5a015a53c82e3ebb7a379f348/FHIR%20Definitions/hcp.signature.extension.json
+WARNING: StructureDefinition/ClaimRequestDocument: StructureDefinition.snapshot.element[53].type[0].targetProfile[0]: Unable to resolve profile https://raw.githubusercontent.com/Swasth-Digital-Health-Foundation/standards/69ce5ac4bc6e9fc5a015a53c82e3ebb7a379f348/FHIR%20Definitions/hcp.signature.extension.json
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/HCXClaimRequestDocument'): The Implementation Guide contains no examples for this profile
+== C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\input\hcx-definitions\StructureDefinition-ClaimResponse.json ==
+ERROR: StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/HCXClaimResponse'): The element ClaimResponse.insurer is out of order (and maybe others after it)
+WARNING: StructureDefinition/ClaimResponse: StructureDefinition.differential.element[5].binding: The valueSet reference https://raw.githubusercontent.com/Swasth-Digital-Health-Foundation/standards/main/FHIR%20Definitions/valueset-denial-codes.json on element ClaimResponse.item.adjudication.reason could not be resolved
+WARNING: StructureDefinition/ClaimResponse: StructureDefinition.snapshot.element[35].binding: The valueSet reference https://raw.githubusercontent.com/Swasth-Digital-Health-Foundation/standards/main/FHIR%20Definitions/valueset-denial-codes.json on element ClaimResponse.item.adjudication.reason could not be resolved
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/HCXClaimResponse'): The Implementation Guide contains no examples for this profile
+== C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\input\hcx-definitions\StructureDefinition-ClaimResponseDocument.json ==
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/HCXClaimResponseDocument'): The Implementation Guide contains no examples for this profile
+== C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\input\hcx-definitions\StructureDefinition-Condition.json ==
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/HCXCondition'): The Implementation Guide contains no examples for this profile
+== C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\input\hcx-definitions\StructureDefinition-Coverage.json ==
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/HCXCoverage'): The Implementation Guide contains no examples for this profile
+== C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\input\hcx-definitions\StructureDefinition-CoverageEligibilityRequest.json ==
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/HCXCoverageEligibilityRequest'): The Implementation Guide contains no examples for this profile
+== C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\input\hcx-definitions\StructureDefinition-CoverageEligibilityRequestDocument.json ==
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/HCXCovereageEligibilityRequestDocument'): The Implementation Guide contains no examples for this profile
+== C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\input\hcx-definitions\StructureDefinition-CoverageEligibilityResponse.json ==
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/HCXCoverageEligibilityResponse'): The Implementation Guide contains no examples for this profile
+== C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\input\hcx-definitions\StructureDefinition-CoverageEligibilityResponseDocument.json ==
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/HCXCovereageEligibilityResponseDocument'): The Implementation Guide contains no examples for this profile
+== C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\input\hcx-definitions\StructureDefinition-Encounter.json ==
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/HCXEncounter'): The Implementation Guide contains no examples for this profile
+== C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\input\hcx-definitions\StructureDefinition-Organization.json ==
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/HCXOrganization'): The Implementation Guide contains no examples for this profile
+== C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\input\hcx-definitions\StructureDefinition-Patient.json ==
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/HCXPatient'): The Implementation Guide contains no examples for this profile
+== C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\input\hcx-definitions\StructureDefinition-PaymentNotice.json ==
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/HCXPaymentNotice'): The Implementation Guide contains no examples for this profile
+== C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\input\hcx-definitions\StructureDefinition-PaymentReconciliation.json ==
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/HCXPaymentReconciliation'): The Implementation Guide contains no examples for this profile
+== C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\input\hcx-definitions\StructureDefinition-Practitioner.json ==
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/HCXPractitioner'): The Implementation Guide contains no examples for this profile
+== C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\input\hcx-definitions\StructureDefinition-PractitionerRole.json ==
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/HCXPractitionerRole'): The Implementation Guide contains no examples for this profile
+== C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\input\hcx-definitions\StructureDefinition-PreAuthorizationRequest.json ==
+WARNING: http://hl7.org/fhir/StructureDefinition/HCXPreAuthorizationRequest#Composition.section.entry: Cannot check whether the target profile https://raw.githubusercontent.com/Swasth-Digital-Health-Foundation/standards/69ce5ac4bc6e9fc5a015a53c82e3ebb7a379f348/FHIR%20Definitions/hcp.signature.extension.json is valid constraint on the base because it is not known
+WARNING: StructureDefinition/PreAuthorizationRequest: StructureDefinition.differential.element.where(path = 'Composition.section.entry'): Cannot check whether the target profile https://raw.githubusercontent.com/Swasth-Digital-Health-Foundation/standards/69ce5ac4bc6e9fc5a015a53c82e3ebb7a379f348/FHIR%20Definitions/hcp.signature.extension.json is valid constraint on the base because it is not known
+WARNING: StructureDefinition/PreAuthorizationRequest: StructureDefinition.differential.element[6].type[0].targetProfile[0]: Unable to resolve profile https://raw.githubusercontent.com/Swasth-Digital-Health-Foundation/standards/69ce5ac4bc6e9fc5a015a53c82e3ebb7a379f348/FHIR%20Definitions/hcp.signature.extension.json
+WARNING: StructureDefinition/PreAuthorizationRequest: StructureDefinition.snapshot.element[53].type[0].targetProfile[0]: Unable to resolve profile https://raw.githubusercontent.com/Swasth-Digital-Health-Foundation/standards/69ce5ac4bc6e9fc5a015a53c82e3ebb7a379f348/FHIR%20Definitions/hcp.signature.extension.json
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/HCXPreAuthorizationRequest'): The Implementation Guide contains no examples for this profile
+== C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\input\hcx-definitions\StructureDefinition-PreAuthorizationResponse.json ==
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/HCXPreAuthorizationResponse'): The Implementation Guide contains no examples for this profile
+== C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\input\hcx-definitions\ValueSet-claim-denial-codes.json ==
+WARNING: ValueSet/claim-denial-codes: ValueSet: vsd-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Rule 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Failed
+== C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\input\hcx-definitions\ValueSet-claim-service-categories.json ==
+WARNING: ValueSet/claim-service-categories: ValueSet: vsd-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Rule 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Failed
+== C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\input\hcx-definitions\ValueSet-health-service-provider-role.json ==
+ERROR: ValueSet.expansion.contains[0].code: Error parsing JSON: the primitive value must be a string
+ERROR: ValueSet.expansion.contains[1].code: Error parsing JSON: the primitive value must be a string
+ERROR: ValueSet.expansion.contains[2].code: Error parsing JSON: the primitive value must be a string
+ERROR: ValueSet.expansion.contains[3].code: Error parsing JSON: the primitive value must be a string
+ERROR: ValueSet.expansion.contains[4].code: Error parsing JSON: the primitive value must be a string
+ERROR: ValueSet.expansion.contains[5].code: Error parsing JSON: the primitive value must be a string
+ERROR: ValueSet.expansion.contains[6].code: Error parsing JSON: the primitive value must be a string
+ERROR: ValueSet.expansion.contains[7].code: Error parsing JSON: the primitive value must be a string
+ERROR: ValueSet.expansion.contains[8].code: Error parsing JSON: the primitive value must be a string
+ERROR: ValueSet.expansion.contains[9].code: Error parsing JSON: the primitive value must be a string
+ERROR: ValueSet.expansion.contains[10].code: Error parsing JSON: the primitive value must be a string
+ERROR: ValueSet.expansion.contains[11].code: Error parsing JSON: the primitive value must be a string
+ERROR: ValueSet.expansion.contains[12].code: Error parsing JSON: the primitive value must be a string
+WARNING: ValueSet/health-service-provider-role: ValueSet: vsd-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Rule 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Failed
+== C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\input\hcx-definitions\ValueSet-insurance-company-owners.json ==
+ERROR: ValueSet.expansion.contains[0].code: Error parsing JSON: the primitive value must be a string
+ERROR: ValueSet.expansion.contains[1].code: Error parsing JSON: the primitive value must be a string
+ERROR: ValueSet.expansion.contains[2].code: Error parsing JSON: the primitive value must be a string
+ERROR: ValueSet.expansion.contains[3].code: Error parsing JSON: the primitive value must be a string
+ERROR: ValueSet.expansion.contains[4].code: Error parsing JSON: the primitive value must be a string
+ERROR: ValueSet.expansion.contains[5].code: Error parsing JSON: the primitive value must be a string
+ERROR: ValueSet.expansion.contains[6].code: Error parsing JSON: the primitive value must be a string
+ERROR: ValueSet.expansion.contains[7].code: Error parsing JSON: the primitive value must be a string
+ERROR: ValueSet.expansion.contains[8].code: Error parsing JSON: the primitive value must be a string
+ERROR: ValueSet.expansion.contains[9].code: Error parsing JSON: the primitive value must be a string
+ERROR: ValueSet.expansion.contains[10].code: Error parsing JSON: the primitive value must be a string
+ERROR: ValueSet.expansion.contains[11].code: Error parsing JSON: the primitive value must be a string
+ERROR: ValueSet.expansion.contains[12].code: Error parsing JSON: the primitive value must be a string
+ERROR: ValueSet.expansion.contains[13].code: Error parsing JSON: the primitive value must be a string
+ERROR: ValueSet.expansion.contains[14].code: Error parsing JSON: the primitive value must be a string
+ERROR: ValueSet.expansion.contains[15].code: Error parsing JSON: the primitive value must be a string
+ERROR: ValueSet.expansion.contains[16].code: Error parsing JSON: the primitive value must be a string
+ERROR: ValueSet.expansion.contains[17].code: Error parsing JSON: the primitive value must be a string
+ERROR: ValueSet.expansion.contains[18].code: Error parsing JSON: the primitive value must be a string
+ERROR: ValueSet.expansion.contains[19].code: Error parsing JSON: the primitive value must be a string
+ERROR: ValueSet.expansion.contains[20].code: Error parsing JSON: the primitive value must be a string
+ERROR: ValueSet.expansion.contains[21].code: Error parsing JSON: the primitive value must be a string
+ERROR: ValueSet.expansion.contains[22].code: Error parsing JSON: the primitive value must be a string
+ERROR: ValueSet.expansion.contains[23].code: Error parsing JSON: the primitive value must be a string
+ERROR: ValueSet.expansion.contains[24].code: Error parsing JSON: the primitive value must be a string
+ERROR: ValueSet.expansion.contains[25].code: Error parsing JSON: the primitive value must be a string
+ERROR: ValueSet.expansion.contains[26].code: Error parsing JSON: the primitive value must be a string
+ERROR: ValueSet.expansion.contains[27].code: Error parsing JSON: the primitive value must be a string
+ERROR: ValueSet.expansion.contains[28].code: Error parsing JSON: the primitive value must be a string
+ERROR: ValueSet.expansion.contains[29].code: Error parsing JSON: the primitive value must be a string
+ERROR: ValueSet.expansion.contains[30].code: Error parsing JSON: the primitive value must be a string
+ERROR: ValueSet.expansion.contains[31].code: Error parsing JSON: the primitive value must be a string
+ERROR: ValueSet.expansion.contains[32].code: Error parsing JSON: the primitive value must be a string
+ERROR: ValueSet.expansion.contains[33].code: Error parsing JSON: the primitive value must be a string
+ERROR: ValueSet.expansion.contains[34].code: Error parsing JSON: the primitive value must be a string
+ERROR: ValueSet.expansion.contains[35].code: Error parsing JSON: the primitive value must be a string
+ERROR: ValueSet.expansion.contains[36].code: Error parsing JSON: the primitive value must be a string
+ERROR: ValueSet.expansion.contains[37].code: Error parsing JSON: the primitive value must be a string
+ERROR: ValueSet.expansion.contains[38].code: Error parsing JSON: the primitive value must be a string
+ERROR: ValueSet.expansion.contains[39].code: Error parsing JSON: the primitive value must be a string
+ERROR: ValueSet.expansion.contains[40].code: Error parsing JSON: the primitive value must be a string
+ERROR: ValueSet.expansion.contains[41].code: Error parsing JSON: the primitive value must be a string
+ERROR: ValueSet.expansion.contains[42].code: Error parsing JSON: the primitive value must be a string
+ERROR: ValueSet.expansion.contains[43].code: Error parsing JSON: the primitive value must be a string
+ERROR: ValueSet.expansion.contains[44].code: Error parsing JSON: the primitive value must be a string
+ERROR: ValueSet.expansion.contains[45].code: Error parsing JSON: the primitive value must be a string
+ERROR: ValueSet.expansion.contains[46].code: Error parsing JSON: the primitive value must be a string
+ERROR: ValueSet.expansion.contains[47].code: Error parsing JSON: the primitive value must be a string
+ERROR: ValueSet.expansion.contains[48].code: Error parsing JSON: the primitive value must be a string
+ERROR: ValueSet.expansion.contains[49].code: Error parsing JSON: the primitive value must be a string
+ERROR: ValueSet.expansion.contains[50].code: Error parsing JSON: the primitive value must be a string
+WARNING: ValueSet/insurance-company-owners: ValueSet: vsd-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Rule 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Failed
+== C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\input\hcx-definitions\ValueSet-medical-specialty-provider.json ==
+ERROR: ValueSet.expansion.contains[0]: Unrecognised property '@Code'
+ERROR: ValueSet.expansion.contains[1]: Unrecognised property '@Code'
+ERROR: ValueSet.expansion.contains[2]: Unrecognised property '@Code'
+ERROR: ValueSet.expansion.contains[3]: Unrecognised property '@Code'
+ERROR: ValueSet.expansion.contains[4]: Unrecognised property '@Code'
+ERROR: ValueSet.expansion.contains[5]: Unrecognised property '@Code'
+ERROR: ValueSet.expansion.contains[6]: Unrecognised property '@Code'
+ERROR: ValueSet.expansion.contains[7]: Unrecognised property '@Code'
+ERROR: ValueSet.expansion.contains[8]: Unrecognised property '@Code'
+ERROR: ValueSet.expansion.contains[9]: Unrecognised property '@Code'
+ERROR: ValueSet.expansion.contains[10]: Unrecognised property '@Code'
+ERROR: ValueSet.expansion.contains[11]: Unrecognised property '@Code'
+ERROR: ValueSet.expansion.contains[12]: Unrecognised property '@Code'
+ERROR: ValueSet.expansion.contains[13]: Unrecognised property '@Code'
+ERROR: ValueSet.expansion.contains[14]: Unrecognised property '@Code'
+ERROR: ValueSet.expansion.contains[15]: Unrecognised property '@Code'
+ERROR: ValueSet.expansion.contains[16]: Unrecognised property '@Code'
+ERROR: ValueSet.expansion.contains[17]: Unrecognised property '@Code'
+ERROR: ValueSet.expansion.contains[18]: Unrecognised property '@Code'
+ERROR: ValueSet.expansion.contains[19]: Unrecognised property '@Code'
+ERROR: ValueSet.expansion.contains[20]: Unrecognised property '@Code'
+ERROR: ValueSet.expansion.contains[21]: Unrecognised property '@Code'
+ERROR: ValueSet.expansion.contains[22]: Unrecognised property '@Code'
+ERROR: ValueSet.expansion.contains[23]: Unrecognised property '@Code'
+ERROR: ValueSet.expansion.contains[24]: Unrecognised property '@Code'
+ERROR: ValueSet.expansion.contains[25]: Unrecognised property '@Code'
+ERROR: ValueSet.expansion.contains[26]: Unrecognised property '@Code'
+ERROR: ValueSet.expansion.contains[27]: Unrecognised property '@Code'
+ERROR: ValueSet.expansion.contains[28]: Unrecognised property '@Code'
+ERROR: ValueSet.expansion.contains[29]: Unrecognised property '@Code'
+ERROR: ValueSet.expansion.contains[30]: Unrecognised property '@Code'
+ERROR: ValueSet.expansion.contains[31]: Unrecognised property '@Code'
+ERROR: ValueSet.expansion.contains[32]: Unrecognised property '@Code'
+ERROR: ValueSet.expansion.contains[33]: Unrecognised property '@Code'
+ERROR: ValueSet.expansion.contains[34]: Unrecognised property '@Code'
+ERROR: ValueSet.expansion.contains[35]: Unrecognised property '@Code'
+ERROR: ValueSet.expansion.contains[36]: Unrecognised property '@Code'
+ERROR: ValueSet.expansion.contains[37]: Unrecognised property '@Code'
+ERROR: ValueSet.expansion.contains[38]: Unrecognised property '@Code'
+ERROR: ValueSet.expansion.contains[39]: Unrecognised property '@Code'
+ERROR: ValueSet.expansion.contains[40]: Unrecognised property '@Code'
+ERROR: ValueSet.expansion.contains[41]: Unrecognised property '@Code'
+ERROR: ValueSet.expansion.contains[42]: Unrecognised property '@Code'
+ERROR: ValueSet.expansion.contains[43]: Unrecognised property '@Code'
+ERROR: ValueSet.expansion.contains[44]: Unrecognised property '@Code'
+ERROR: ValueSet.expansion.contains[45]: Unrecognised property '@Code'
+ERROR: ValueSet.expansion.contains[46]: Unrecognised property '@Code'
+ERROR: ValueSet.expansion.contains[47]: Unrecognised property '@Code'
+ERROR: ValueSet.expansion.contains[48]: Unrecognised property '@Code'
+ERROR: ValueSet.expansion.contains[49]: Unrecognised property '@Code'
+ERROR: ValueSet.expansion.contains[50]: Unrecognised property '@Code'
+ERROR: ValueSet.expansion.contains[51]: Unrecognised property '@Code'
+ERROR: ValueSet.expansion.contains[52]: Unrecognised property '@Code'
+ERROR: ValueSet.expansion.contains[53]: Unrecognised property '@Code'
+ERROR: ValueSet.expansion.contains[54]: Unrecognised property '@Code'
+ERROR: ValueSet.expansion.contains[55]: Unrecognised property '@Code'
+ERROR: ValueSet.expansion.contains[56]: Unrecognised property '@Code'
+ERROR: ValueSet.expansion.contains[57]: Unrecognised property '@Code'
+ERROR: ValueSet.expansion.contains[58]: Unrecognised property '@Code'
+ERROR: ValueSet.expansion.contains[59]: Unrecognised property '@Code'
+ERROR: ValueSet.expansion.contains[60]: Unrecognised property '@Code'
+ERROR: ValueSet.expansion.contains[61]: Unrecognised property '@Code'
+ERROR: ValueSet.expansion.contains[62]: Unrecognised property '@Code'
+ERROR: ValueSet.expansion.contains[63]: Unrecognised property '@Code'
+ERROR: ValueSet.expansion.contains[64]: Unrecognised property '@Code'
+ERROR: ValueSet.expansion.contains[65]: Unrecognised property '@Code'
+ERROR: ValueSet.expansion.contains[66]: Unrecognised property '@Code'
+ERROR: ValueSet.expansion.contains[67]: Unrecognised property '@Code'
+ERROR: ValueSet.expansion.contains[68]: Unrecognised property '@Code'
+ERROR: ValueSet.expansion.contains[69]: Unrecognised property '@Code'
+ERROR: ValueSet.expansion.contains[70]: Unrecognised property '@Code'
+ERROR: ValueSet.expansion.contains[71]: Unrecognised property '@Code'
+ERROR: ValueSet.expansion.contains[72]: Unrecognised property '@Code'
+ERROR: ValueSet.expansion.contains[73]: Unrecognised property '@Code'
+ERROR: ValueSet.expansion.contains[74]: Unrecognised property '@Code'
+ERROR: ValueSet.expansion.contains[75]: Unrecognised property '@Code'
+ERROR: ValueSet.expansion.contains[76]: Unrecognised property '@Code'
+ERROR: ValueSet.expansion.contains[77]: Unrecognised property '@Code'
+ERROR: ValueSet.expansion.contains[78]: Unrecognised property '@Code'
+ERROR: ValueSet.expansion.contains[79]: Unrecognised property '@Code'
+ERROR: ValueSet.expansion.contains[80]: Unrecognised property '@Code'
+ERROR: ValueSet.expansion.contains[81]: Unrecognised property '@Code'
+ERROR: ValueSet.expansion.contains[82]: Unrecognised property '@Code'
+ERROR: ValueSet.expansion.contains[83]: Unrecognised property '@Code'
+ERROR: ValueSet.expansion.contains[84]: Unrecognised property '@Code'
+ERROR: ValueSet.expansion.contains[85]: Unrecognised property '@Code'
+ERROR: ValueSet.expansion.contains[86]: Unrecognised property '@Code'
+ERROR: ValueSet.expansion.contains[87]: Unrecognised property '@Code'
+ERROR: ValueSet.expansion.contains[88]: Unrecognised property '@Code'
+WARNING: ValueSet/medical-specialty-provider: ValueSet: vsd-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Rule 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Failed
+ERROR: ValueSet/medical-specialty-provider: ValueSet.expansion.contains[0]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
+ERROR: ValueSet/medical-specialty-provider: ValueSet.expansion.contains[1]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
+ERROR: ValueSet/medical-specialty-provider: ValueSet.expansion.contains[2]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
+ERROR: ValueSet/medical-specialty-provider: ValueSet.expansion.contains[3]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
+ERROR: ValueSet/medical-specialty-provider: ValueSet.expansion.contains[4]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
+ERROR: ValueSet/medical-specialty-provider: ValueSet.expansion.contains[5]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
+ERROR: ValueSet/medical-specialty-provider: ValueSet.expansion.contains[6]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
+ERROR: ValueSet/medical-specialty-provider: ValueSet.expansion.contains[7]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
+ERROR: ValueSet/medical-specialty-provider: ValueSet.expansion.contains[8]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
+ERROR: ValueSet/medical-specialty-provider: ValueSet.expansion.contains[9]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
+ERROR: ValueSet/medical-specialty-provider: ValueSet.expansion.contains[10]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
+ERROR: ValueSet/medical-specialty-provider: ValueSet.expansion.contains[11]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
+ERROR: ValueSet/medical-specialty-provider: ValueSet.expansion.contains[12]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
+ERROR: ValueSet/medical-specialty-provider: ValueSet.expansion.contains[13]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
+ERROR: ValueSet/medical-specialty-provider: ValueSet.expansion.contains[14]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
+ERROR: ValueSet/medical-specialty-provider: ValueSet.expansion.contains[15]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
+ERROR: ValueSet/medical-specialty-provider: ValueSet.expansion.contains[16]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
+ERROR: ValueSet/medical-specialty-provider: ValueSet.expansion.contains[17]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
+ERROR: ValueSet/medical-specialty-provider: ValueSet.expansion.contains[18]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
+ERROR: ValueSet/medical-specialty-provider: ValueSet.expansion.contains[19]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
+ERROR: ValueSet/medical-specialty-provider: ValueSet.expansion.contains[20]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
+ERROR: ValueSet/medical-specialty-provider: ValueSet.expansion.contains[21]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
+ERROR: ValueSet/medical-specialty-provider: ValueSet.expansion.contains[22]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
+ERROR: ValueSet/medical-specialty-provider: ValueSet.expansion.contains[23]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
+ERROR: ValueSet/medical-specialty-provider: ValueSet.expansion.contains[24]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
+ERROR: ValueSet/medical-specialty-provider: ValueSet.expansion.contains[25]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
+ERROR: ValueSet/medical-specialty-provider: ValueSet.expansion.contains[26]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
+ERROR: ValueSet/medical-specialty-provider: ValueSet.expansion.contains[27]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
+ERROR: ValueSet/medical-specialty-provider: ValueSet.expansion.contains[28]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
+ERROR: ValueSet/medical-specialty-provider: ValueSet.expansion.contains[29]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
+ERROR: ValueSet/medical-specialty-provider: ValueSet.expansion.contains[30]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
+ERROR: ValueSet/medical-specialty-provider: ValueSet.expansion.contains[31]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
+ERROR: ValueSet/medical-specialty-provider: ValueSet.expansion.contains[32]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
+ERROR: ValueSet/medical-specialty-provider: ValueSet.expansion.contains[33]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
+ERROR: ValueSet/medical-specialty-provider: ValueSet.expansion.contains[34]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
+ERROR: ValueSet/medical-specialty-provider: ValueSet.expansion.contains[35]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
+ERROR: ValueSet/medical-specialty-provider: ValueSet.expansion.contains[36]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
+ERROR: ValueSet/medical-specialty-provider: ValueSet.expansion.contains[37]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
+ERROR: ValueSet/medical-specialty-provider: ValueSet.expansion.contains[38]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
+ERROR: ValueSet/medical-specialty-provider: ValueSet.expansion.contains[39]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
+ERROR: ValueSet/medical-specialty-provider: ValueSet.expansion.contains[40]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
+ERROR: ValueSet/medical-specialty-provider: ValueSet.expansion.contains[41]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
+ERROR: ValueSet/medical-specialty-provider: ValueSet.expansion.contains[42]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
+ERROR: ValueSet/medical-specialty-provider: ValueSet.expansion.contains[43]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
+ERROR: ValueSet/medical-specialty-provider: ValueSet.expansion.contains[44]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
+ERROR: ValueSet/medical-specialty-provider: ValueSet.expansion.contains[45]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
+ERROR: ValueSet/medical-specialty-provider: ValueSet.expansion.contains[46]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
+ERROR: ValueSet/medical-specialty-provider: ValueSet.expansion.contains[47]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
+ERROR: ValueSet/medical-specialty-provider: ValueSet.expansion.contains[48]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
+ERROR: ValueSet/medical-specialty-provider: ValueSet.expansion.contains[49]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
+ERROR: ValueSet/medical-specialty-provider: ValueSet.expansion.contains[50]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
+ERROR: ValueSet/medical-specialty-provider: ValueSet.expansion.contains[51]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
+ERROR: ValueSet/medical-specialty-provider: ValueSet.expansion.contains[52]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
+ERROR: ValueSet/medical-specialty-provider: ValueSet.expansion.contains[53]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
+ERROR: ValueSet/medical-specialty-provider: ValueSet.expansion.contains[54]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
+ERROR: ValueSet/medical-specialty-provider: ValueSet.expansion.contains[55]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
+ERROR: ValueSet/medical-specialty-provider: ValueSet.expansion.contains[56]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
+ERROR: ValueSet/medical-specialty-provider: ValueSet.expansion.contains[57]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
+ERROR: ValueSet/medical-specialty-provider: ValueSet.expansion.contains[58]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
+ERROR: ValueSet/medical-specialty-provider: ValueSet.expansion.contains[59]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
+ERROR: ValueSet/medical-specialty-provider: ValueSet.expansion.contains[60]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
+ERROR: ValueSet/medical-specialty-provider: ValueSet.expansion.contains[61]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
+ERROR: ValueSet/medical-specialty-provider: ValueSet.expansion.contains[62]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
+ERROR: ValueSet/medical-specialty-provider: ValueSet.expansion.contains[63]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
+ERROR: ValueSet/medical-specialty-provider: ValueSet.expansion.contains[64]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
+ERROR: ValueSet/medical-specialty-provider: ValueSet.expansion.contains[65]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
+ERROR: ValueSet/medical-specialty-provider: ValueSet.expansion.contains[66]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
+ERROR: ValueSet/medical-specialty-provider: ValueSet.expansion.contains[67]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
+ERROR: ValueSet/medical-specialty-provider: ValueSet.expansion.contains[68]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
+ERROR: ValueSet/medical-specialty-provider: ValueSet.expansion.contains[69]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
+ERROR: ValueSet/medical-specialty-provider: ValueSet.expansion.contains[70]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
+ERROR: ValueSet/medical-specialty-provider: ValueSet.expansion.contains[71]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
+ERROR: ValueSet/medical-specialty-provider: ValueSet.expansion.contains[72]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
+ERROR: ValueSet/medical-specialty-provider: ValueSet.expansion.contains[73]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
+ERROR: ValueSet/medical-specialty-provider: ValueSet.expansion.contains[74]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
+ERROR: ValueSet/medical-specialty-provider: ValueSet.expansion.contains[75]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
+ERROR: ValueSet/medical-specialty-provider: ValueSet.expansion.contains[76]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
+ERROR: ValueSet/medical-specialty-provider: ValueSet.expansion.contains[77]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
+ERROR: ValueSet/medical-specialty-provider: ValueSet.expansion.contains[78]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
+ERROR: ValueSet/medical-specialty-provider: ValueSet.expansion.contains[79]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
+ERROR: ValueSet/medical-specialty-provider: ValueSet.expansion.contains[80]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
+ERROR: ValueSet/medical-specialty-provider: ValueSet.expansion.contains[81]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
+ERROR: ValueSet/medical-specialty-provider: ValueSet.expansion.contains[82]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
+ERROR: ValueSet/medical-specialty-provider: ValueSet.expansion.contains[83]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
+ERROR: ValueSet/medical-specialty-provider: ValueSet.expansion.contains[84]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
+ERROR: ValueSet/medical-specialty-provider: ValueSet.expansion.contains[85]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
+ERROR: ValueSet/medical-specialty-provider: ValueSet.expansion.contains[86]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
+ERROR: ValueSet/medical-specialty-provider: ValueSet.expansion.contains[87]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
+ERROR: ValueSet/medical-specialty-provider: ValueSet.expansion.contains[88]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
+== C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\input\hcx-definitions\ValueSet-procedure-type-description.json ==
+ERROR: ValueSet.expansion.contains[0].code: Error parsing JSON: the primitive value must be a string
+ERROR: ValueSet.expansion.contains[1].code: Error parsing JSON: the primitive value must be a string
+ERROR: ValueSet.expansion.contains[2].code: Error parsing JSON: the primitive value must be a string
+ERROR: ValueSet.expansion.contains[3].code: Error parsing JSON: the primitive value must be a string
+ERROR: ValueSet.expansion.contains[4].code: Error parsing JSON: the primitive value must be a string
+ERROR: ValueSet.expansion.contains[5].code: Error parsing JSON: the primitive value must be a string
+ERROR: ValueSet.expansion.contains[6].code: Error parsing JSON: the primitive value must be a string
+ERROR: ValueSet.expansion.contains[7].code: Error parsing JSON: the primitive value must be a string
+ERROR: ValueSet.expansion.contains[8].code: Error parsing JSON: the primitive value must be a string
+ERROR: ValueSet.expansion.contains[9].code: Error parsing JSON: the primitive value must be a string
+ERROR: ValueSet.expansion.contains[10].code: Error parsing JSON: the primitive value must be a string
+ERROR: ValueSet.expansion.contains[11].code: Error parsing JSON: the primitive value must be a string
+ERROR: ValueSet.expansion.contains[12].code: Error parsing JSON: the primitive value must be a string
+ERROR: ValueSet.expansion.contains[13].code: Error parsing JSON: the primitive value must be a string
+ERROR: ValueSet.expansion.contains[14].code: Error parsing JSON: the primitive value must be a string
+ERROR: ValueSet.expansion.contains[15].code: Error parsing JSON: the primitive value must be a string
+ERROR: ValueSet.expansion.contains[16].code: Error parsing JSON: the primitive value must be a string
+ERROR: ValueSet.expansion.contains[17].code: Error parsing JSON: the primitive value must be a string
+ERROR: ValueSet.expansion.contains[18].code: Error parsing JSON: the primitive value must be a string
+ERROR: ValueSet.expansion.contains[19].code: Error parsing JSON: the primitive value must be a string
+ERROR: ValueSet.expansion.contains[20].code: Error parsing JSON: the primitive value must be a string
+ERROR: ValueSet.expansion.contains[21].code: Error parsing JSON: the primitive value must be a string
+ERROR: ValueSet.expansion.contains[22].code: Error parsing JSON: the primitive value must be a string
+ERROR: ValueSet.expansion.contains[23].code: Error parsing JSON: the primitive value must be a string
+ERROR: ValueSet.expansion.contains[24].code: Error parsing JSON: the primitive value must be a string
+ERROR: ValueSet.expansion.contains[25].code: Error parsing JSON: the primitive value must be a string
+ERROR: ValueSet.expansion.contains[26].code: Error parsing JSON: the primitive value must be a string
+ERROR: ValueSet.expansion.contains[27].code: Error parsing JSON: the primitive value must be a string
+ERROR: ValueSet.expansion.contains[28].code: Error parsing JSON: the primitive value must be a string
+ERROR: ValueSet.expansion.contains[29].code: Error parsing JSON: the primitive value must be a string
+ERROR: ValueSet.expansion.contains[30].code: Error parsing JSON: the primitive value must be a string
+ERROR: ValueSet.expansion.contains[31].code: Error parsing JSON: the primitive value must be a string
+WARNING: ValueSet/procedure-type-description: ValueSet: vsd-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Rule 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Failed
+== C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\input\ig.json ==
+ERROR: ImplementationGuide.where(url = 'https://fhir-ig-demo/ImplementationGuide/ig'): Conformance resource C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\input\ig.json - the canonical URL (https://fhir-ig-demo/ImplementationGuide/hl7.fhir.in.core) does not match the URL (https://fhir-ig-demo/ImplementationGuide/ig)
+ERROR: ImplementationGuide.url: Resource id/url mismatch: hl7.fhir.in.core/https://fhir-ig-demo/ImplementationGuide/ig
+WARNING: ImplementationGuide/hl7.fhir.in.core: ImplementationGuide: ig-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Rule 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Failed
+ERROR: ImplementationGuide/hl7.fhir.in.core: ImplementationGuide.definition.page: ImplementationGuide.definition.page.title: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ImplementationGuide)
+WARNING: ImplementationGuide/hl7.fhir.in.core: ImplementationGuide.definition.page.page[0].page[10].title: value should not start or finish with whitespace
+ERROR: C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\input\ig: URL Mismatch https://fhir-ig-demo/ImplementationGuide/hl7.fhir.in.core vs https://fhir-ig-demo/ImplementationGuide/ig

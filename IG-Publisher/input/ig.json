@@ -365,6 +365,34 @@
         "name": "HCX Procedure Type Description",
         "description": "**Search by subject - a patient**  \n**NOTE**: This US Core SearchParameter definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain",
         "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/ValueSet/claim-denial-codes",
+            "valueString": "SearchParameter"
+          }
+        ],
+        "reference": {
+          "reference": "ValueSet/claim-denial-codes"
+        },
+        "name": "HCX Claim Denial Codes",
+        "description": "**Search by subject - a patient**  \n**NOTE**: This US Core SearchParameter definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/ValueSet/claim-service-categories",
+            "valueString": "SearchParameter"
+          }
+        ],
+        "reference": {
+          "reference": "ValueSet/claim-service-categories"
+        },
+        "name": "HCX Claim Service Categories",
+        "description": "**Search by subject - a patient**  \n**NOTE**: This US Core SearchParameter definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain",
+        "exampleBoolean": false
       }
     ],
     "page": {
@@ -513,8 +541,6 @@
               "title": "HCX Procedure Type Description",
               "generation": "generated"
             }
-
-
           ]
         },
         {
