@@ -36,9 +36,9 @@
      fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg" ];
      fhir:Extension.valueCode [ fhir:value "sd" ]
   ];
-  fhir:StructureDefinition.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/ClaimRequest"];
+  fhir:StructureDefinition.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/HCXClaimRequestDocument"];
   fhir:StructureDefinition.version [ fhir:value "0.0.1"];
-  fhir:StructureDefinition.name [ fhir:value "CovereageEligibilityRequestDocument"];
+  fhir:StructureDefinition.name [ fhir:value "ClaimRequestDocument"];
   fhir:StructureDefinition.status [ fhir:value "draft"];
   fhir:StructureDefinition.date [ fhir:value "2021-08-14T17:23:00.000+05:30"^^xsd:dateTime];
   fhir:StructureDefinition.publisher [ fhir:value "HL7 International - HCX"];

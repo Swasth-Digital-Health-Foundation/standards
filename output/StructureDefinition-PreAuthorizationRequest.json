@@ -30,9 +30,9 @@
       "valueCode": "sd"
     }
   ],
-  "url": "http://hl7.org/fhir/StructureDefinition/PreAuthorizationRequest",
+  "url": "http://hl7.org/fhir/StructureDefinition/HCXPreAuthorizationRequest",
   "version": "0.0.1",
-  "name": "CovereageEligibilityRequestDocument",
+  "name": "PreAuthorizationRequest",
   "status": "draft",
   "date": "2021-08-14T17:23:00.000+05:30",
   "publisher": "HL7 International - HCX",

@@ -1,0 +1,387 @@
+{
+  "resourceType": "ValueSet",
+  "id": "medical-specialty-provider",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 89 concepts</p><p>All codes from system <code>http://hcp.org/codes/medical-specility-type-provider</code></p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>General Medicine</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Dental surgery</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Nursing</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Pharmacy</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Nursing Midwifery</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Military surgeons</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Cardio Thoracic and Vascular Surgery</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Cardiology</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Allergy</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Chest Medicine</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Clinical Psychology</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Cosmetic Dentistry</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Cosmetic Surgery</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Endodontics</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>ENT</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Critical Care</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Dental Implants &amp; Cosmetic Dentistry</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Dermatology Venereology and Leprology</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Dermatology</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Facial Plastic Surgery</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Diabetology</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Endocrinology</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Diet and Nutrition</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Diabetology &amp; Internal Medicine</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Gastrosurgery</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Gastroenterology</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>General Medicine</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>General Surgery</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>General Surgery &amp; Laparoscopic Surgery</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Gynecology &amp; Ultrasonology</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Head &amp; Neck Surgery</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Head &amp; Neck Surgical Oncology</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Hepato Pancreato Biliary Surgery</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Infectious Disease medicine</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Internal Medicine</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Internal Medicine &amp; Diabetics</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Neuro Surgery</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Resident Physicians</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Respiratory Allergy And Sleep Medicine</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Rheumatology</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Sexual Medicine</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Spine Surgery</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Sports Medicine</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Surgical Gastroenterology</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Surgical Oncology</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Urology</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Physiotherapy</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Physiotherapy &amp; Rehabilitation</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Plastic and Cosmetic Surgery</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Plastic Surgery</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Podiatry</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Prosthodontics &amp; Implants</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Psychiatry</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Pulmonology</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Radiation Oncology</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Radiology</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Laparoscopic and Robotic Surgery</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Medical Gastroenterology</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Medical Oncology</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Nephrology</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Neurology</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Neurology &amp; Neuro Surgery</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Neuropsychiatry</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Neurosurgery</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Obstetrics &amp; Gynecology</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Oncology</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Ophthalmology</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Oral &amp; Maxillofacial Surgery</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Ortho Dontia</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Orthopedic Surgeon</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Orthopedics</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Orthopedics &amp; Sports Medicine</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Orthopedics And Spine Surgery</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Orthopedics And Upper Limb Surgery</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Pediatric Endocrinology</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Pediatric Ophthalmology And Squint</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Paediatrics</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Paediatrics &amp; Neonatology</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Paediatrics - Nephrology</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Paediatrics - Neurology</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Paediatrics - Surgery</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Pathology</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Peadodontology (Child Dentistry)</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Pediatric Pulmonology</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Periodontia</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Periodontology and Implantology</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Peripheral Vascular Surgery</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Physical Medicine &amp; Rehabilitation</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-medical-specility-type-provider-null\"> </a></td><td>Physician &amp; Diabetology</td></tr></table></div>"
+  },
+  "url": "https://fhir-ig-demo/ValueSet/medical-specialty-provider",
+  "version": "0.0.1",
+  "name": "Medical Speciality Type Provider",
+  "status": "active",
+  "date": "2021-09-07",
+  "publisher": "HL7 International - HCX",
+  "contact": [
+    {
+      "name": "HL7 International - HCX",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.swasth.app/"
+        }
+      ]
+    }
+  ],
+  "description": "This is the value set that includes the codes to identify the medical specialty provider",
+  "expansion": {
+    "timestamp": "2021-09-07T08:15:30+05:30",
+    "contains": [
+      {
+        "system": "http://hcp.org/codes/medical-specility-type-provider",
+        "display": "General Medicine"
+      },
+      {
+        "system": "http://hcp.org/codes/medical-specility-type-provider",
+        "display": "Dental surgery"
+      },
+      {
+        "system": "http://hcp.org/codes/medical-specility-type-provider",
+        "display": "Nursing"
+      },
+      {
+        "system": "http://hcp.org/codes/medical-specility-type-provider",
+        "display": "Pharmacy"
+      },
+      {
+        "system": "http://hcp.org/codes/medical-specility-type-provider",
+        "display": "Nursing Midwifery"
+      },
+      {
+        "system": "http://hcp.org/codes/medical-specility-type-provider",
+        "display": "Military surgeons"
+      },
+      {
+        "system": "http://hcp.org/codes/medical-specility-type-provider",
+        "display": "Cardio Thoracic and Vascular Surgery"
+      },
+      {
+        "system": "http://hcp.org/codes/medical-specility-type-provider",
+        "display": "Cardiology"
+      },
+      {
+        "system": "http://hcp.org/codes/medical-specility-type-provider",
+        "display": "Allergy"
+      },
+      {
+        "system": "http://hcp.org/codes/medical-specility-type-provider",
+        "display": "Chest Medicine"
+      },
+      {
+        "system": "http://hcp.org/codes/medical-specility-type-provider",
+        "display": "Clinical Psychology"
+      },
+      {
+        "system": "http://hcp.org/codes/medical-specility-type-provider",
+        "display": "Cosmetic Dentistry"
+      },
+      {
+        "system": "http://hcp.org/codes/medical-specility-type-provider",
+        "display": "Cosmetic Surgery"
+      },
+      {
+        "system": "http://hcp.org/codes/medical-specility-type-provider",
+        "display": "Endodontics"
+      },
+      {
+        "system": "http://hcp.org/codes/medical-specility-type-provider",
+        "display": "ENT"
+      },
+      {
+        "system": "http://hcp.org/codes/medical-specility-type-provider",
+        "display": "Critical Care"
+      },
+      {
+        "system": "http://hcp.org/codes/medical-specility-type-provider",
+        "display": "Dental Implants & Cosmetic Dentistry"
+      },
+      {
+        "system": "http://hcp.org/codes/medical-specility-type-provider",
+        "display": "Dermatology Venereology and Leprology"
+      },
+      {
+        "system": "http://hcp.org/codes/medical-specility-type-provider",
+        "display": "Dermatology"
+      },
+      {
+        "system": "http://hcp.org/codes/medical-specility-type-provider",
+        "display": "Facial Plastic Surgery"
+      },
+      {
+        "system": "http://hcp.org/codes/medical-specility-type-provider",
+        "display": "Diabetology"
+      },
+      {
+        "system": "http://hcp.org/codes/medical-specility-type-provider",
+        "display": "Endocrinology"
+      },
+      {
+        "system": "http://hcp.org/codes/medical-specility-type-provider",
+        "display": "Diet and Nutrition"
+      },
+      {
+        "system": "http://hcp.org/codes/medical-specility-type-provider",
+        "display": "Diabetology & Internal Medicine"
+      },
+      {
+        "system": "http://hcp.org/codes/medical-specility-type-provider",
+        "display": "Gastrosurgery"
+      },
+      {
+        "system": "http://hcp.org/codes/medical-specility-type-provider",
+        "display": "Gastroenterology"
+      },
+      {
+        "system": "http://hcp.org/codes/medical-specility-type-provider",
+        "display": "General Medicine"
+      },
+      {
+        "system": "http://hcp.org/codes/medical-specility-type-provider",
+        "display": "General Surgery"
+      },
+      {
+        "system": "http://hcp.org/codes/medical-specility-type-provider",
+        "display": "General Surgery & Laparoscopic Surgery"
+      },
+      {
+        "system": "http://hcp.org/codes/medical-specility-type-provider",
+        "display": "Gynecology & Ultrasonology"
+      },
+      {
+        "system": "http://hcp.org/codes/medical-specility-type-provider",
+        "display": "Head & Neck Surgery"
+      },
+      {
+        "system": "http://hcp.org/codes/medical-specility-type-provider",
+        "display": "Head & Neck Surgical Oncology"
+      },
+      {
+        "system": "http://hcp.org/codes/medical-specility-type-provider",
+        "display": "Hepato Pancreato Biliary Surgery"
+      },
+      {
+        "system": "http://hcp.org/codes/medical-specility-type-provider",
+        "display": "Infectious Disease medicine"
+      },
+      {
+        "system": "http://hcp.org/codes/medical-specility-type-provider",
+        "display": "Internal Medicine"
+      },
+      {
+        "system": "http://hcp.org/codes/medical-specility-type-provider",
+        "display": "Internal Medicine & Diabetics"
+      },
+      {
+        "system": "http://hcp.org/codes/medical-specility-type-provider",
+        "display": "Neuro Surgery"
+      },
+      {
+        "system": "http://hcp.org/codes/medical-specility-type-provider",
+        "display": "Resident Physicians"
+      },
+      {
+        "system": "http://hcp.org/codes/medical-specility-type-provider",
+        "display": "Respiratory Allergy And Sleep Medicine"
+      },
+      {
+        "system": "http://hcp.org/codes/medical-specility-type-provider",
+        "display": "Rheumatology"
+      },
+      {
+        "system": "http://hcp.org/codes/medical-specility-type-provider",
+        "display": "Sexual Medicine"
+      },
+      {
+        "system": "http://hcp.org/codes/medical-specility-type-provider",
+        "display": "Spine Surgery"
+      },
+      {
+        "system": "http://hcp.org/codes/medical-specility-type-provider",
+        "display": "Sports Medicine"
+      },
+      {
+        "system": "http://hcp.org/codes/medical-specility-type-provider",
+        "display": "Surgical Gastroenterology"
+      },
+      {
+        "system": "http://hcp.org/codes/medical-specility-type-provider",
+        "display": "Surgical Oncology"
+      },
+      {
+        "system": "http://hcp.org/codes/medical-specility-type-provider",
+        "display": "Urology"
+      },
+      {
+        "system": "http://hcp.org/codes/medical-specility-type-provider",
+        "display": "Physiotherapy"
+      },
+      {
+        "system": "http://hcp.org/codes/medical-specility-type-provider",
+        "display": "Physiotherapy & Rehabilitation"
+      },
+      {
+        "system": "http://hcp.org/codes/medical-specility-type-provider",
+        "display": "Plastic and Cosmetic Surgery"
+      },
+      {
+        "system": "http://hcp.org/codes/medical-specility-type-provider",
+        "display": "Plastic Surgery"
+      },
+      {
+        "system": "http://hcp.org/codes/medical-specility-type-provider",
+        "display": "Podiatry"
+      },
+      {
+        "system": "http://hcp.org/codes/medical-specility-type-provider",
+        "display": "Prosthodontics & Implants"
+      },
+      {
+        "system": "http://hcp.org/codes/medical-specility-type-provider",
+        "display": "Psychiatry"
+      },
+      {
+        "system": "http://hcp.org/codes/medical-specility-type-provider",
+        "display": "Pulmonology"
+      },
+      {
+        "system": "http://hcp.org/codes/medical-specility-type-provider",
+        "display": "Radiation Oncology"
+      },
+      {
+        "system": "http://hcp.org/codes/medical-specility-type-provider",
+        "display": "Radiology"
+      },
+      {
+        "system": "http://hcp.org/codes/medical-specility-type-provider",
+        "display": "Laparoscopic and Robotic Surgery"
+      },
+      {
+        "system": "http://hcp.org/codes/medical-specility-type-provider",
+        "display": "Medical Gastroenterology"
+      },
+      {
+        "system": "http://hcp.org/codes/medical-specility-type-provider",
+        "display": "Medical Oncology"
+      },
+      {
+        "system": "http://hcp.org/codes/medical-specility-type-provider",
+        "display": "Nephrology"
+      },
+      {
+        "system": "http://hcp.org/codes/medical-specility-type-provider",
+        "display": "Neurology"
+      },
+      {
+        "system": "http://hcp.org/codes/medical-specility-type-provider",
+        "display": "Neurology & Neuro Surgery"
+      },
+      {
+        "system": "http://hcp.org/codes/medical-specility-type-provider",
+        "display": "Neuropsychiatry"
+      },
+      {
+        "system": "http://hcp.org/codes/medical-specility-type-provider",
+        "display": "Neurosurgery"
+      },
+      {
+        "system": "http://hcp.org/codes/medical-specility-type-provider",
+        "display": "Obstetrics & Gynecology"
+      },
+      {
+        "system": "http://hcp.org/codes/medical-specility-type-provider",
+        "display": "Oncology"
+      },
+      {
+        "system": "http://hcp.org/codes/medical-specility-type-provider",
+        "display": "Ophthalmology"
+      },
+      {
+        "system": "http://hcp.org/codes/medical-specility-type-provider",
+        "display": "Oral & Maxillofacial Surgery"
+      },
+      {
+        "system": "http://hcp.org/codes/medical-specility-type-provider",
+        "display": "Ortho Dontia"
+      },
+      {
+        "system": "http://hcp.org/codes/medical-specility-type-provider",
+        "display": "Orthopedic Surgeon"
+      },
+      {
+        "system": "http://hcp.org/codes/medical-specility-type-provider",
+        "display": "Orthopedics"
+      },
+      {
+        "system": "http://hcp.org/codes/medical-specility-type-provider",
+        "display": "Orthopedics & Sports Medicine"
+      },
+      {
+        "system": "http://hcp.org/codes/medical-specility-type-provider",
+        "display": "Orthopedics And Spine Surgery"
+      },
+      {
+        "system": "http://hcp.org/codes/medical-specility-type-provider",
+        "display": "Orthopedics And Upper Limb Surgery"
+      },
+      {
+        "system": "http://hcp.org/codes/medical-specility-type-provider",
+        "display": "Pediatric Endocrinology"
+      },
+      {
+        "system": "http://hcp.org/codes/medical-specility-type-provider",
+        "display": "Pediatric Ophthalmology And Squint"
+      },
+      {
+        "system": "http://hcp.org/codes/medical-specility-type-provider",
+        "display": "Paediatrics"
+      },
+      {
+        "system": "http://hcp.org/codes/medical-specility-type-provider",
+        "display": "Paediatrics & Neonatology"
+      },
+      {
+        "system": "http://hcp.org/codes/medical-specility-type-provider",
+        "display": "Paediatrics - Nephrology"
+      },
+      {
+        "system": "http://hcp.org/codes/medical-specility-type-provider",
+        "display": "Paediatrics - Neurology"
+      },
+      {
+        "system": "http://hcp.org/codes/medical-specility-type-provider",
+        "display": "Paediatrics - Surgery"
+      },
+      {
+        "system": "http://hcp.org/codes/medical-specility-type-provider",
+        "display": "Pathology"
+      },
+      {
+        "system": "http://hcp.org/codes/medical-specility-type-provider",
+        "display": "Peadodontology (Child Dentistry)"
+      },
+      {
+        "system": "http://hcp.org/codes/medical-specility-type-provider",
+        "display": "Pediatric Pulmonology"
+      },
+      {
+        "system": "http://hcp.org/codes/medical-specility-type-provider",
+        "display": "Periodontia"
+      },
+      {
+        "system": "http://hcp.org/codes/medical-specility-type-provider",
+        "display": "Periodontology and Implantology"
+      },
+      {
+        "system": "http://hcp.org/codes/medical-specility-type-provider",
+        "display": "Peripheral Vascular Surgery"
+      },
+      {
+        "system": "http://hcp.org/codes/medical-specility-type-provider",
+        "display": "Physical Medicine & Rehabilitation"
+      },
+      {
+        "system": "http://hcp.org/codes/medical-specility-type-provider",
+        "display": "Physician & Diabetology"
+      }
+    ]
+  }
+}

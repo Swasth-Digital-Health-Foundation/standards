@@ -2,121 +2,142 @@
   {
     "id": "Account",
     "type": "StructureDefinition",
-    "url": "http://hl7.org/fhir/StructureDefinition/Account",
+    "url": "http://hl7.org/fhir/StructureDefinition/HCXAccount",
     "version": "0.0.1",
     "name": "Account"
   },
   {
+    "id": "Claim",
+    "type": "StructureDefinition",
+    "url": "http://hl7.org/fhir/StructureDefinition/HCXClaim",
+    "version": "0.0.1",
+    "name": "Claim"
+  },
+  {
     "id": "ClaimRequestDocument",
     "type": "StructureDefinition",
-    "url": "http://hl7.org/fhir/StructureDefinition/ClaimRequest",
+    "url": "http://hl7.org/fhir/StructureDefinition/HCXClaimRequestDocument",
     "version": "0.0.1",
-    "name": "CovereageEligibilityRequestDocument"
+    "name": "ClaimRequestDocument"
+  },
+  {
+    "id": "ClaimResponse",
+    "type": "StructureDefinition",
+    "url": "http://hl7.org/fhir/StructureDefinition/HCXClaimResponse",
+    "version": "0.0.1",
+    "name": "ClaimResponse"
   },
   {
     "id": "ClaimResponseDocument",
     "type": "StructureDefinition",
-    "url": "http://hl7.org/fhir/StructureDefinition/ClaimResponse",
+    "url": "http://hl7.org/fhir/StructureDefinition/HCXClaimResponseDocument",
     "version": "0.0.1",
-    "name": "CovereageEligibilityResponseDocument"
+    "name": "ClaimResponseDocument"
+  },
+  {
+    "id": "Condition",
+    "type": "StructureDefinition",
+    "url": "http://hl7.org/fhir/StructureDefinition/HCXCondition",
+    "version": "0.0.1",
+    "name": "Condition"
   },
   {
     "id": "Coverage",
     "type": "StructureDefinition",
-    "url": "http://hl7.org/fhir/StructureDefinition/Coverage",
+    "url": "http://hl7.org/fhir/StructureDefinition/HCXCoverage",
     "version": "0.0.1",
     "name": "Coverage"
   },
   {
     "id": "CoverageEligibilityRequest",
     "type": "StructureDefinition",
-    "url": "http://hl7.org/fhir/StructureDefinition/CoverageEligibilityRequest",
+    "url": "http://hl7.org/fhir/StructureDefinition/HCXCoverageEligibilityRequest",
     "version": "0.0.1",
     "name": "CoverageEligibilityRequest"
   },
   {
     "id": "CoverageEligibilityResponse",
     "type": "StructureDefinition",
-    "url": "http://hl7.org/fhir/StructureDefinition/CoverageEligibilityResponse",
+    "url": "http://hl7.org/fhir/StructureDefinition/HCXCoverageEligibilityResponse",
     "version": "0.0.1",
     "name": "CoverageEligibilityResponse"
   },
   {
     "id": "CoverageEligibilityRequestDocument",
     "type": "StructureDefinition",
-    "url": "http://hl7.org/fhir/StructureDefinition/CovereageEligibilityRequestDocument",
+    "url": "http://hl7.org/fhir/StructureDefinition/HCXCovereageEligibilityRequestDocument",
     "version": "0.0.1",
     "name": "CovereageEligibilityRequestDocument"
   },
   {
     "id": "CoverageEligibilityResponseDocument",
     "type": "StructureDefinition",
-    "url": "http://hl7.org/fhir/StructureDefinition/CovereageEligibilityResponseDocument",
+    "url": "http://hl7.org/fhir/StructureDefinition/HCXCovereageEligibilityResponseDocument",
     "version": "0.0.1",
     "name": "CovereageEligibilityResponseDocument"
   },
   {
+    "id": "Encounter",
+    "type": "StructureDefinition",
+    "url": "http://hl7.org/fhir/StructureDefinition/HCXEncounter",
+    "version": "0.0.1",
+    "name": "Encounter"
+  },
+  {
     "id": "Organization",
     "type": "StructureDefinition",
-    "url": "http://hl7.org/fhir/StructureDefinition/Organization",
+    "url": "http://hl7.org/fhir/StructureDefinition/HCXOrganization",
     "version": "0.0.1",
     "name": "Organization"
   },
   {
     "id": "Patient",
     "type": "StructureDefinition",
-    "url": "http://hl7.org/fhir/StructureDefinition/Patient",
+    "url": "http://hl7.org/fhir/StructureDefinition/HCXPatient",
     "version": "0.0.1",
     "name": "Patient"
   },
   {
     "id": "PaymentNotice",
     "type": "StructureDefinition",
-    "url": "http://hl7.org/fhir/StructureDefinition/PaymentNotice",
+    "url": "http://hl7.org/fhir/StructureDefinition/HCXPaymentNotice",
     "version": "0.0.1",
     "name": "PaymentNotice"
   },
   {
     "id": "PaymentReconciliation",
     "type": "StructureDefinition",
-    "url": "http://hl7.org/fhir/StructureDefinition/PaymentReconciliation",
+    "url": "http://hl7.org/fhir/StructureDefinition/HCXPaymentReconciliation",
     "version": "0.0.1",
     "name": "PaymentReconciliation"
   },
   {
     "id": "Practitioner",
     "type": "StructureDefinition",
-    "url": "http://hl7.org/fhir/StructureDefinition/Practitioner",
+    "url": "http://hl7.org/fhir/StructureDefinition/HCXPractitioner",
     "version": "0.0.1",
     "name": "Practitioner"
   },
   {
     "id": "PractitionerRole",
     "type": "StructureDefinition",
-    "url": "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
+    "url": "http://hl7.org/fhir/StructureDefinition/HCXPractitionerRole",
     "version": "0.0.1",
     "name": "PractitionerRole"
   },
   {
     "id": "PreAuthorizationRequest",
     "type": "StructureDefinition",
-    "url": "http://hl7.org/fhir/StructureDefinition/PreAuthorizationRequest",
+    "url": "http://hl7.org/fhir/StructureDefinition/HCXPreAuthorizationRequest",
     "version": "0.0.1",
-    "name": "CovereageEligibilityRequestDocument"
+    "name": "PreAuthorizationRequest"
   },
   {
     "id": "PreAuthorizationResponse",
     "type": "StructureDefinition",
-    "url": "http://hl7.org/fhir/StructureDefinition/PreAuthorizationResponse",
+    "url": "http://hl7.org/fhir/StructureDefinition/HCXPreAuthorizationResponse",
     "version": "0.0.1",
-    "name": "CovereageEligibilityResponseDocument"
-  },
-  {
-    "id": "hcp-signature",
-    "type": "StructureDefinition",
-    "url": "http://hl7.org/fhir/StructureDefinition/questionnaireresponse-signature",
-    "version": "0.0.1",
-    "name": "HcpSignature"
+    "name": "PreAuthorizationResponse"
   },
   {
     "id": "hl7.fhir.in.core",
@@ -126,17 +147,31 @@
     "name": "HCX Core"
   },
   {
-    "id": "claim-denial-codes",
+    "id": "health-service-provider-role",
     "type": "ValueSet",
-    "url": "https://fhir-ig-demo/ValueSet/claim-denial-codes",
+    "url": "https://fhir-ig-demo/ValueSet/health-service-provider-role",
     "version": "0.0.1",
-    "name": "Claim Denial Codes"
+    "name": "Health Service Provider Role"
   },
   {
-    "id": "claim-service-categories",
+    "id": "insurance-company-owners",
     "type": "ValueSet",
-    "url": "https://fhir-ig-demo/ValueSet/claim-service-categories",
+    "url": "https://fhir-ig-demo/ValueSet/insurance-company-owners",
     "version": "0.0.1",
-    "name": "Claim Service Categories"
+    "name": "Insurance Company Owners"
+  },
+  {
+    "id": "medical-specialty-provider",
+    "type": "ValueSet",
+    "url": "https://fhir-ig-demo/ValueSet/medical-specialty-provider",
+    "version": "0.0.1",
+    "name": "Medical Speciality Type Provider"
+  },
+  {
+    "id": "procedure-type-description",
+    "type": "ValueSet",
+    "url": "https://fhir-ig-demo/ValueSet/procedure-type-description",
+    "version": "0.0.1",
+    "name": "Procedure Type Description"
   }
 ]
