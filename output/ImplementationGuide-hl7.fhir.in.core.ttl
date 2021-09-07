@@ -836,26 +836,21 @@
            fhir:ImplementationGuide.definition.page.generation [ fhir:value "generated" ]
          ], [
            fhir:index 2;
-           fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "ValueSet-claim-service-categories.html" ];
-           fhir:ImplementationGuide.definition.page.title [ fhir:value "HCX Claim Service Categories" ];
-           fhir:ImplementationGuide.definition.page.generation [ fhir:value "generated" ]
-         ], [
-           fhir:index 3;
            fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "ValueSet-health-service-provider-role.html" ];
            fhir:ImplementationGuide.definition.page.title [ fhir:value "HCX Health Service Provider Role" ];
            fhir:ImplementationGuide.definition.page.generation [ fhir:value "generated" ]
          ], [
-           fhir:index 4;
+           fhir:index 3;
            fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "ValueSet-insurance-company-owners.html" ];
            fhir:ImplementationGuide.definition.page.title [ fhir:value "HCX Insurance Company Owners" ];
            fhir:ImplementationGuide.definition.page.generation [ fhir:value "generated" ]
          ], [
-           fhir:index 5;
+           fhir:index 4;
            fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "ValueSet-medical-specialty-provider.html" ];
            fhir:ImplementationGuide.definition.page.title [ fhir:value "HCX Medical Speciality Provider" ];
            fhir:ImplementationGuide.definition.page.generation [ fhir:value "generated" ]
          ], [
-           fhir:index 6;
+           fhir:index 5;
            fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "ValueSet-procedure-type-description.html" ];
            fhir:ImplementationGuide.definition.page.title [ fhir:value "HCX Procedure Type Description" ];
            fhir:ImplementationGuide.definition.page.generation [ fhir:value "generated" ]

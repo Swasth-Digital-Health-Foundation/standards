@@ -645,11 +645,6 @@ These requirements were originally developed, balloted, and published in FHIR DS
           <generation value="generated"/>
         </page>
         <page>
-          <nameUrl value="ValueSet-claim-service-categories.html"/>
-          <title value="HCX Claim Service Categories"/>
-          <generation value="generated"/>
-        </page>
-        <page>
           <nameUrl value="ValueSet-health-service-provider-role.html"/>
           <title value="HCX Health Service Provider Role"/>
           <generation value="generated"/>

@@ -3,9 +3,9 @@
 
 err = 281, warn = 37, info = 0
 IG Publisher Version: 1.1.77 Out of date - current version is 1.1.79
-Generated Tue Sep 07 13:10:48 IST 2021. FHIR version 4.0.1 for ig#0.0.1 (canonical = https://fhir-ig-demo)
+Generated Tue Sep 07 13:26:22 IST 2021. FHIR version 4.0.1 for ig#0.0.1 (canonical = https://fhir-ig-demo)
 
- Build Errors : 14 / 1 / 0
+ Build Errors : 9 / 1 / 0
  /Users/manjunathdavanam/Documents/Projects.nosync/standards/IG-Publisher/input/hcx-definitions/structuredefinition-Account : 0 / 1 / 1
  /Users/manjunathdavanam/Documents/Projects.nosync/standards/IG-Publisher/input/hcx-definitions/structuredefinition-Claim : 0 / 1 / 1
  /Users/manjunathdavanam/Documents/Projects.nosync/standards/IG-Publisher/input/hcx-definitions/structuredefinition-ClaimRequestDocument : 0 / 5 / 1
@@ -41,13 +41,8 @@ ERROR: /Users/manjunathdavanam/Documents/Projects.nosync/standards/IG-Publisher/
 ERROR: /Users/manjunathdavanam/Documents/Projects.nosync/standards/IG-Publisher/output/index.html#/html/body/div/div/div/div/div/div/ul/li/a at Line 151, column 8: The link 'spec.html' for "Detailed Specification" cannot be resolved
 ERROR: /Users/manjunathdavanam/Documents/Projects.nosync/standards/IG-Publisher/output/toc.html#/html/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 128, column 17732: The link 'ValueSet-claim-denial-codes.html' for "3.1 HCX Claim Denial Codes" cannot be resolved
 ERROR: /Users/manjunathdavanam/Documents/Projects.nosync/standards/IG-Publisher/output/toc.html#/html/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 128, column 18454: The link 'ValueSet-claim-service-categories.html' for "3.2 HCX Claim Service Categories" cannot be resolved
-ERROR: /Users/manjunathdavanam/Documents/Projects.nosync/standards/IG-Publisher/output/toc.html#/html/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 128, column 19194: The link 'ValueSet-claim-service-categories.html' for "3.3 HCX Claim Service Categories" cannot be resolved
 ERROR: /Users/manjunathdavanam/Documents/Projects.nosync/standards/IG-Publisher/output/valuesets.html#/html/body/div/div/div/div/div/div/ul/li/a at Line 132, column 2: The link 'ValueSet-claim-denial-codes.html' for "HCX Claim Denial Codes" cannot be resolved
 ERROR: /Users/manjunathdavanam/Documents/Projects.nosync/standards/IG-Publisher/output/valuesets.html#/html/body/div/div/div/div/div/div/ul/li/a at Line 135, column 2: The link 'ValueSet-claim-service-categories.html' for "HCX Claim Service Categories" cannot be resolved
-ERROR: /Users/manjunathdavanam/Documents/Projects.nosync/standards/IG-Publisher/output/valuesets.html#/html/body/div/div/div/div/div/div/ul/li/a at Line 139, column 2: The link 'ValueSet-claim-service-categories.html' for "HCX Health Service Provider Role" cannot be resolved
-ERROR: /Users/manjunathdavanam/Documents/Projects.nosync/standards/IG-Publisher/output/valuesets.html#/html/body/div/div/div/div/div/div/ul/li/a at Line 144, column 2: The link 'ValueSet-claim-service-categories.html' for "HCX Insurance Company Owners" cannot be resolved
-ERROR: /Users/manjunathdavanam/Documents/Projects.nosync/standards/IG-Publisher/output/valuesets.html#/html/body/div/div/div/div/div/div/ul/li/a at Line 149, column 2: The link 'ValueSet-claim-service-categories.html' for "HCX Medical Speciality Provider" cannot be resolved
-ERROR: /Users/manjunathdavanam/Documents/Projects.nosync/standards/IG-Publisher/output/valuesets.html#/html/body/div/div/div/div/div/div/ul/li/a at Line 154, column 2: The link 'ValueSet-claim-service-categories.html' for "HCX Procedure Type Description" cannot be resolved
 == /Users/manjunathdavanam/Documents/Projects.nosync/standards/IG-Publisher/input/hcx-definitions/StructureDefinition-Account.json ==
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/HCXAccount'): The Implementation Guide contains no examples for this profile
 == /Users/manjunathdavanam/Documents/Projects.nosync/standards/IG-Publisher/input/hcx-definitions/StructureDefinition-Claim.json ==
