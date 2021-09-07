@@ -7,5 +7,25 @@
 <li>
 <a href="ValueSet-claim-service-categories.html">HCX Claim Service Categories</a>
     </li>
+
+ <li>
+<a href="ValueSet-claim-service-categories.html">HCX Health Service Provider Role</a>
+    </li>
+
+
+ <li>
+<a href="ValueSet-claim-service-categories.html">HCX Insurance Company Owners</a>
+    </li>
+
+
+ <li>
+<a href="ValueSet-claim-service-categories.html">HCX Medical Speciality Provider</a>
+    </li>
+
+
+ <li>
+<a href="ValueSet-claim-service-categories.html">HCX Procedure Type Description</a>
+    </li>
+              
   </ul>
 </div>
