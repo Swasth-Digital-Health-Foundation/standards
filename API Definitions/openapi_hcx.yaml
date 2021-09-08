@@ -15,10 +15,7 @@ externalDocs:
   url: >-
     https://docs.swasth.app/hcx-specifications/
 servers:
-  # Added by API Auto Mocking Plugin
-  - description: SwaggerHub API Auto Mocking
-    url: https://virtserver.swaggerhub.com/AccessHealth-Digital/coverageeligibility/1.0.0
-  - url: 'https://dev.hcp.gateway/1.0.0'
+  - url: 'https://dev.hcx.gateway/1.0.0'
 tags:
   - name: Coverage Eligibility APIs
     description: >-
@@ -76,7 +73,7 @@ paths:
       tags:
         - Coverage Eligibility APIs
       description: >-
-        This is the callback API on HCP gateways and on Provider systems which will be called by Payor systems and HCP gateways to return the response for coverage eligibility requests. <br/><br/>
+        This is the callback API on HCX gateways and on Provider systems which will be called by Payor systems and HCX gateways to return the response for coverage eligibility requests. <br/><br/>
         Payload for this API has to be created as per the [Coverage Eligibility Response Document](https://swasth-digital-health-foundation.github.io/standards/output/StructureDefinition-CoverageEligibilityResponseDocument.html) defined in HCX Specifications and serialized as per the [guidelines](https://docs.swasth.app/hcx-specifications/hcx-technical-specifications/open-protocol/data-security-and-privacy/message-security-and-integrity) in HCX Specifications.
       requestBody:
         content:
@@ -117,7 +114,7 @@ paths:
       tags:
         - Claims APIs
       description: >-
-        This API is for providers to submit pre-authorization requests (and resubmit updated request) to HCP gateway and for HCP gateway to route the same request to payors. <br/><br/>
+        This API is for providers to submit pre-authorization requests (and resubmit updated request) to HCX gateway and for HCX gateway to route the same request to payors. <br/><br/>
         Payload for this API has to be created as per the [Claim Request Document](https://swasth-digital-health-foundation.github.io/standards/output/StructureDefinition-ClaimRequestDocument.html) defined in HCX Specifications and serialized as per the [guidelines](https://docs.swasth.app/hcx-specifications/hcx-technical-specifications/open-protocol/data-security-and-privacy/message-security-and-integrity) in HCX Specifications.
       requestBody:
         content:
@@ -157,7 +154,7 @@ paths:
       tags:
         - Claims APIs
       description: >-
-        This is the callback API on HCP gateways and on Provider systems which will be called by Payor systems and HCP gateways to return the response for Pre-Authorization requests. <br/><br/>
+        This is the callback API on HCX gateways and on Provider systems which will be called by Payor systems and HCX gateways to return the response for Pre-Authorization requests. <br/><br/>
         Payload for this API has to be created as per the [Claim Response Document](https://swasth-digital-health-foundation.github.io/standards/output/StructureDefinition-ClaimResponseDocument.html) defined in HCX Specifications and serialized as per the [guidelines](https://docs.swasth.app/hcx-specifications/hcx-technical-specifications/open-protocol/data-security-and-privacy/message-security-and-integrity) in HCX Specifications.
       requestBody:
         content:
@@ -198,7 +195,7 @@ paths:
       tags:
         - Claims APIs
       description: >-
-        This API is for providers to query for status of Pre-Authorisation requests submitted by them. This API is available on HCP gateways to accept the request from providers and on Payor systems to receive the request from HCP gateways. <br/><br/>
+        This API is for providers to query for status of Pre-Authorisation requests submitted by them. This API is available on HCX gateways to accept the request from providers and on Payor systems to receive the request from HCX gateways. <br/><br/>
         Payload for this API has to be created as per the Pre-Authorization search object defined in the HCX - Domain Specs document and serialized as per the [guidelines](https://docs.swasth.app/hcx-specifications/hcx-technical-specifications/open-protocol/data-security-and-privacy/message-security-and-integrity) in HCX Specifications.
       requestBody:
         content:
@@ -238,7 +235,7 @@ paths:
       tags:
         - Claims APIs
       description: >-
-        This is the callback API on HCP gateways and Provider systems to receive the response for PreAuth search requests. <br/><br/>
+        This is the callback API on HCX gateways and Provider systems to receive the response for PreAuth search requests. <br/><br/>
         Payload for this API has to be created as per the [Claim Response Document](https://swasth-digital-health-foundation.github.io/standards/output/StructureDefinition-ClaimResponseDocument.html) defined in HCX Specifications and serialized as per the [guidelines](https://docs.swasth.app/hcx-specifications/hcx-technical-specifications/open-protocol/data-security-and-privacy/message-security-and-integrity) in HCX Specifications.
       requestBody:
         content:
@@ -279,7 +276,7 @@ paths:
       tags:
         - Claims APIs
       description: >-
-        This API is for providers to submit claim requests (and resubmit updated request) to HCP gateway and for HCP gateway to route the same request to payors. <br/><br/>
+        This API is for providers to submit claim requests (and resubmit updated request) to HCX gateway and for HCX gateway to route the same request to payors. <br/><br/>
         Payload for this API has to be created as per the [Claim Request Document](https://swasth-digital-health-foundation.github.io/standards/output/StructureDefinition-ClaimRequestDocument.html) defined in HCX Specification and serialized as per the [guidelines](https://docs.swasth.app/hcx-specifications/hcx-technical-specifications/open-protocol/data-security-and-privacy/message-security-and-integrity) in HCX Specifications.
       requestBody:
         content:
@@ -319,7 +316,7 @@ paths:
       tags:
         - Claims APIs
       description: >-
-        This is the callback API on HCP gateways and on Provider systems which will be called by Payor systems and HCP gateways to return the response for Claim requests. <br/><br/>
+        This is the callback API on HCX gateways and on Provider systems which will be called by Payor systems and HCX gateways to return the response for Claim requests. <br/><br/>
         Payload for this API has to be created as per the [Claim Response Document](https://swasth-digital-health-foundation.github.io/standards/output/StructureDefinition-ClaimResponseDocument.html) defined in HCX Specifications and serialized as per the [guidelines](https://docs.swasth.app/hcx-specifications/hcx-technical-specifications/open-protocol/data-security-and-privacy/message-security-and-integrity) in HCX Specifications.
       requestBody:
         content:
@@ -360,7 +357,7 @@ paths:
       tags:
         - Claims APIs
       description: >-
-        This API is for providers to query for status of Claim requests submitted by them. This API is available on HCP gateways to accept the request from providers and on Payor systems to receive the request from HCP gateways. <br/><br/>
+        This API is for providers to query for status of Claim requests submitted by them. This API is available on HCX gateways to accept the request from providers and on Payor systems to receive the request from HCX gateways. <br/><br/>
         Payload for this API has to be created as per the Claim Search object defined in the HCX - Domain Specs document and serialized as per the [guidelines](https://docs.swasth.app/hcx-specifications/hcx-technical-specifications/open-protocol/data-security-and-privacy/message-security-and-integrity) in the HCX Specifications
       requestBody:
         content:
@@ -400,7 +397,7 @@ paths:
       tags:
         - Claims APIs
       description: >-
-        This is the callback API on HCP gateways and Provider systems to receive the response for Claim search requests. <br/><br/>
+        This is the callback API on HCX gateways and Provider systems to receive the response for Claim search requests. <br/><br/>
         Payload for this API has to be created as per the [Claim Response Document](https://swasth-digital-health-foundation.github.io/standards/output/StructureDefinition-ClaimResponseDocument.html) defined in HCX Specifications and serialized as per the [guidelines](https://docs.swasth.app/hcx-specifications/hcx-technical-specifications/open-protocol/data-security-and-privacy/message-security-and-integrity) in HCX Specifications.
       requestBody:
         content:
@@ -441,7 +438,7 @@ paths:
       tags:
         - Payment APIs
       description: >-
-        This API is for Payors to send Payment notification/reconciliation objects to Providers via the HCP gateway. This API is available on HCP gateways and Provider systems. <br/><br/>
+        This API is for Payors to send Payment notification/reconciliation objects to Providers via the HCX gateway. This API is available on HCX gateways and Provider systems. <br/><br/>
         Payload for this API has to be created as per the [Payment Notice Document](https://swasth-digital-health-foundation.github.io/standards/output/StructureDefinition-PaymentNoticeDocument.html) defined in HCX Specifications and serialized as JWE json as per the [guidelines](https://docs.swasth.app/hcx-specifications/hcx-technical-specifications/open-protocol/data-security-and-privacy/message-security-and-integrity) in HCX Specifications.
       requestBody:
         content:
@@ -481,7 +478,7 @@ paths:
       tags:
         - Payment APIs
       description: >-
-        This is callback API for payment acknowledgement by the Providers. This API is available on HCP gateways and Payor systems. <br/><br/>
+        This is callback API for payment acknowledgement by the Providers. This API is available on HCX gateways and Payor systems. <br/><br/>
         Payload for this API has to be created as per the PaymentAcknowledgement object defined in HCX Specifications and serialized as JWE json as per the [guidelines](https://docs.swasth.app/hcx-specifications/hcx-technical-specifications/open-protocol/data-security-and-privacy/message-security-and-integrity) in HCX Specifications.
       requestBody:
         content:
@@ -522,7 +519,7 @@ paths:
       tags:
         - Payment APIs
       description: >-
-        This API is for providers to query for Payment status for processed claims. This API is available on HCP gateways to accept the request from providers and on Payor systems to receive the request from HCP gateways. <br/><br/>
+        This API is for providers to query for Payment status for processed claims. This API is available on HCX gateways to accept the request from providers and on Payor systems to receive the request from HCX gateways. <br/><br/>
         Payload for this API has to be created as per the PaymentNotice search object defined in HCX Specifications and serialized as JWE json as per the [guidelines](https://docs.swasth.app/hcx-specifications/hcx-technical-specifications/open-protocol/data-security-and-privacy/message-security-and-integrity) in HCX Specifications.
       requestBody:
         content:
@@ -562,7 +559,7 @@ paths:
       tags:
         - Payment APIs
       description: >-
-        This is the callback API on HCP gateways and Provider systems to receive the response for Payment search requests. <br/><br/>
+        This is the callback API on HCX gateways and Provider systems to receive the response for Payment search requests. <br/><br/>
         Payload for this API has to be created as per the [Payment Notice Document](https://swasth-digital-health-foundation.github.io/standards/output/StructureDefinition-PaymentNoticeDocument.html) defined in HCX Specifications and serialized as JWE json as per the [guidelines](https://docs.swasth.app/hcx-specifications/hcx-technical-specifications/open-protocol/data-security-and-privacy/message-security-and-integrity) in the HCX Specifications.
       requestBody:
         content:
