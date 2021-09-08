@@ -15,7 +15,7 @@
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
     <valueInteger value="1"/>
   </extension>
-  <url value="http://hl7.org/fhir/StructureDefinition/HCXSignature"/>
+  <url value="https://swasth-digital-health-foundation.github.io/standards/output/StructureDefinition-HCXSignature.html"/>
   <version value="0.0.1"/>
   <name value="HCX Signature"/>
   <status value="draft"/>

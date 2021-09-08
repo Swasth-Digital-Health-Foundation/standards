@@ -2904,9 +2904,9 @@
          fhir:index 0;
          fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
          fhir:ElementDefinition.type.targetProfile [
-           fhir:value "https://raw.githubusercontent.com/Swasth-Digital-Health-Foundation/standards/69ce5ac4bc6e9fc5a015a53c82e3ebb7a379f348/FHIR%20Definitions/hcp.signature.extension.json";
+           fhir:value "https://swasth-digital-health-foundation.github.io/standards/output/StructureDefinition-HCXSignature.html";
            fhir:index 0;
-           fhir:link <https://raw.githubusercontent.com/Swasth-Digital-Health-Foundation/standards/69ce5ac4bc6e9fc5a015a53c82e3ebb7a379f348/FHIR%20Definitions/hcp.signature.extension.json>
+           fhir:link <https://swasth-digital-health-foundation.github.io/standards/output/StructureDefinition-HCXSignature.html>
          ]
        ];
        fhir:ElementDefinition.condition [
@@ -3124,9 +3124,9 @@
          fhir:index 0;
          fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
          fhir:ElementDefinition.type.targetProfile [
-           fhir:value "https://raw.githubusercontent.com/Swasth-Digital-Health-Foundation/standards/69ce5ac4bc6e9fc5a015a53c82e3ebb7a379f348/FHIR%20Definitions/hcp.signature.extension.json";
+           fhir:value "https://swasth-digital-health-foundation.github.io/standards/output/StructureDefinition-HCXSignature.html";
            fhir:index 0;
-           fhir:link <https://raw.githubusercontent.com/Swasth-Digital-Health-Foundation/standards/69ce5ac4bc6e9fc5a015a53c82e3ebb7a379f348/FHIR%20Definitions/hcp.signature.extension.json>
+           fhir:link <https://swasth-digital-health-foundation.github.io/standards/output/StructureDefinition-HCXSignature.html>
          ]
        ]
      ]

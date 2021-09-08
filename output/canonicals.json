@@ -126,13 +126,6 @@
     "name": "PractitionerRole"
   },
   {
-    "id": "HCXSignature",
-    "type": "StructureDefinition",
-    "url": "http://hl7.org/fhir/StructureDefinition/HCXSignature",
-    "version": "0.0.1",
-    "name": "HCX Signature"
-  },
-  {
     "id": "hl7.fhir.in.core",
     "type": "ImplementationGuide",
     "url": "https://fhir-ig-demo/ImplementationGuide/ig",
@@ -180,5 +173,19 @@
     "url": "https://fhir-ig-demo/ValueSet/procedure-type-description",
     "version": "0.0.1",
     "name": "Procedure Type Description"
+  },
+  {
+    "id": "HCXOrganizationExtension",
+    "type": "StructureDefinition",
+    "url": "https://swasth-digital-health-foundation.github.io/standards/output/StructureDefinition-HCXOrganizationExtension.html",
+    "version": "0.0.1",
+    "name": "HCX Organization Extension"
+  },
+  {
+    "id": "HCXSignature",
+    "type": "StructureDefinition",
+    "url": "https://swasth-digital-health-foundation.github.io/standards/output/StructureDefinition-HCXSignature.html",
+    "version": "0.0.1",
+    "name": "HCX Signature"
   }
 ]
