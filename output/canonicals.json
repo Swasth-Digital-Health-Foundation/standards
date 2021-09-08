@@ -49,6 +49,13 @@
     "name": "CoverageEligibilityRequest"
   },
   {
+    "id": "CoverageEligibilityRequestDocument",
+    "type": "StructureDefinition",
+    "url": "http://hl7.org/fhir/StructureDefinition/HCXCoverageEligibilityRequestDocument",
+    "version": "0.0.1",
+    "name": "CoverageEligibilityRequestDocument"
+  },
+  {
     "id": "CoverageEligibilityResponse",
     "type": "StructureDefinition",
     "url": "http://hl7.org/fhir/StructureDefinition/HCXCoverageEligibilityResponse",
@@ -56,18 +63,11 @@
     "name": "CoverageEligibilityResponse"
   },
   {
-    "id": "CoverageEligibilityRequestDocument",
-    "type": "StructureDefinition",
-    "url": "http://hl7.org/fhir/StructureDefinition/HCXCovereageEligibilityRequestDocument",
-    "version": "0.0.1",
-    "name": "CovereageEligibilityRequestDocument"
-  },
-  {
     "id": "CoverageEligibilityResponseDocument",
     "type": "StructureDefinition",
-    "url": "http://hl7.org/fhir/StructureDefinition/HCXCovereageEligibilityResponseDocument",
+    "url": "http://hl7.org/fhir/StructureDefinition/HCXCoverageEligibilityResponseDocument",
     "version": "0.0.1",
-    "name": "CovereageEligibilityResponseDocument"
+    "name": "CoverageEligibilityResponseDocument"
   },
   {
     "id": "Encounter",
@@ -96,6 +96,13 @@
     "url": "http://hl7.org/fhir/StructureDefinition/HCXPaymentNotice",
     "version": "0.0.1",
     "name": "PaymentNotice"
+  },
+  {
+    "id": "PaymentNoticeDocument",
+    "type": "StructureDefinition",
+    "url": "http://hl7.org/fhir/StructureDefinition/HCXPaymentNoticeDocument",
+    "version": "0.0.1",
+    "name": "PaymentNoticeDocument"
   },
   {
     "id": "PaymentReconciliation",

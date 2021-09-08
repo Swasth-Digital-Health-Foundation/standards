@@ -243,6 +243,20 @@ These requirements were originally developed, balloted, and published in FHIR DS
       <exampleBoolean value="false"/>
     </resource>
     <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/PaymentNoticeDocument">
+        <valueString value="SearchParameter"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/PaymentNoticeDocument"/>
+      </reference>
+      <name value="HCX Payment Notice Document"/>
+      <description value="**Search by subject - a patient**  &#xA;**NOTE**: This US Core SearchParameter definition extends the usage context of the&#xA;[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)&#xA; - multipleAnd&#xA; - multipleOr&#xA; - comparator&#xA; - modifier&#xA; - chain"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/ClaimResponse">
         <valueString value="SearchParameter"/>
       </extension>
@@ -553,6 +567,11 @@ These requirements were originally developed, balloted, and published in FHIR DS
         <page>
           <nameUrl value="StructureDefinition-ClaimRequestDocument.html"/>
           <title value="HCX Claim Request Document"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="StructureDefinition-PaymentNoticeDocument.html"/>
+          <title value="HCX Payment Notice Document"/>
           <generation value="generated"/>
         </page>
         <page>

@@ -12,12 +12,8 @@
     ],
     "Composition": [
       {
-        "url": "http://hl7.org/fhir/StructureDefinition/HCXCovereageEligibilityRequestDocument",
-        "title": "CovereageEligibilityRequestDocument"
-      },
-      {
-        "url": "http://hl7.org/fhir/StructureDefinition/HCXCovereageEligibilityResponseDocument",
-        "title": "CovereageEligibilityResponseDocument"
+        "url": "http://hl7.org/fhir/StructureDefinition/HCXPaymentNoticeDocument",
+        "title": "PaymentNoticeDocument"
       }
     ],
     "ClaimResponse": [
@@ -183,6 +179,9 @@
       "ImplementationGuide.definition.resource"
     ],
     "http://hl7.org/fhir/tools/StructureDefinition/PaymentNotice": [
+      "ImplementationGuide.definition.resource"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/PaymentNoticeDocument": [
       "ImplementationGuide.definition.resource"
     ],
     "http://hl7.org/fhir/tools/StructureDefinition/PaymentReconciliation": [
