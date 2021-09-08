@@ -3,7 +3,7 @@
 
 err = 197, warn = 33, info = 0
 IG Publisher Version: 1.1.77 Out of date - current version is 1.1.79
-Generated Wed Sep 08 15:47:09 IST 2021. FHIR version 4.0.1 for ig#0.0.1 (canonical = https://fhir-ig-demo)
+Generated Wed Sep 08 16:35:41 IST 2021. FHIR version 4.0.1 for ig#0.0.1 (canonical = https://fhir-ig-demo)
 
  Build Errors : 2 / 1 / 0
  C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\input\hcx-definitions\structuredefinition-Claim : 0 / 1 / 1
