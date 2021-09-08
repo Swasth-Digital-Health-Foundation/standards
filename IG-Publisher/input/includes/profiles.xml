@@ -19,6 +19,9 @@ The structure definitions of document bundles that are passed as payload in the 
   <li>
     <a href="StructureDefinition-ClaimResponseDocument.html">HCX Claim Response Document</a>
   </li>
+<li>
+  <a href="StructureDefinition-PaymentNoticeDocument.html">HCX Payment Notice Document</a>
+</li>
 </ul>
 <h3>Resource Profiles</h3>
   <p>

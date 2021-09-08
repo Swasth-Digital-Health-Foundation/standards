@@ -1,9 +1,9 @@
 ﻿HCX Core : Validation Results
 =========================================
 
-err = 191, warn = 32, info = 0
+err = 191, warn = 33, info = 0
 IG Publisher Version: 1.1.77 Out of date - current version is 1.1.79
-Generated Wed Sep 08 07:53:08 IST 2021. FHIR version 4.0.1 for ig#0.0.1 (canonical = https://fhir-ig-demo)
+Generated Wed Sep 08 11:50:15 IST 2021. FHIR version 4.0.1 for ig#0.0.1 (canonical = https://fhir-ig-demo)
 
  Build Errors : 4 / 1 / 0
  C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\input\hcx-definitions\structuredefinition-Claim : 0 / 1 / 1
@@ -20,6 +20,7 @@ Generated Wed Sep 08 07:53:08 IST 2021. FHIR version 4.0.1 for ig#0.0.1 (canonic
  C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\input\hcx-definitions\structuredefinition-Organization : 0 / 1 / 1
  C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\input\hcx-definitions\structuredefinition-Patient : 0 / 1 / 1
  C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\input\hcx-definitions\structuredefinition-PaymentNotice : 0 / 1 / 1
+ C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\input\hcx-definitions\structuredefinition-PaymentNoticeDocument : 0 / 1 / 1
  C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\input\hcx-definitions\structuredefinition-PaymentReconciliation : 0 / 1 / 1
  C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\input\hcx-definitions\structuredefinition-Practitioner : 0 / 1 / 1
  C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\input\hcx-definitions\structuredefinition-PractitionerRole : 0 / 1 / 1
@@ -59,11 +60,11 @@ WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinitio
 == C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\input\hcx-definitions\StructureDefinition-CoverageEligibilityRequest.json ==
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/HCXCoverageEligibilityRequest'): The Implementation Guide contains no examples for this profile
 == C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\input\hcx-definitions\StructureDefinition-CoverageEligibilityRequestDocument.json ==
-WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/HCXCovereageEligibilityRequestDocument'): The Implementation Guide contains no examples for this profile
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/HCXCoverageEligibilityRequestDocument'): The Implementation Guide contains no examples for this profile
 == C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\input\hcx-definitions\StructureDefinition-CoverageEligibilityResponse.json ==
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/HCXCoverageEligibilityResponse'): The Implementation Guide contains no examples for this profile
 == C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\input\hcx-definitions\StructureDefinition-CoverageEligibilityResponseDocument.json ==
-WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/HCXCovereageEligibilityResponseDocument'): The Implementation Guide contains no examples for this profile
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/HCXCoverageEligibilityResponseDocument'): The Implementation Guide contains no examples for this profile
 == C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\input\hcx-definitions\StructureDefinition-Encounter.json ==
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/HCXEncounter'): The Implementation Guide contains no examples for this profile
 == C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\input\hcx-definitions\StructureDefinition-Organization.json ==
@@ -72,6 +73,8 @@ WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinitio
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/HCXPatient'): The Implementation Guide contains no examples for this profile
 == C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\input\hcx-definitions\StructureDefinition-PaymentNotice.json ==
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/HCXPaymentNotice'): The Implementation Guide contains no examples for this profile
+== C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\input\hcx-definitions\StructureDefinition-PaymentNoticeDocument.json ==
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/HCXPaymentNoticeDocument'): The Implementation Guide contains no examples for this profile
 == C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\input\hcx-definitions\StructureDefinition-PaymentReconciliation.json ==
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/HCXPaymentReconciliation'): The Implementation Guide contains no examples for this profile
 == C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\input\hcx-definitions\StructureDefinition-Practitioner.json ==
@@ -280,5 +283,5 @@ ERROR: ImplementationGuide.where(url = 'https://fhir-ig-demo/ImplementationGuide
 ERROR: ImplementationGuide.url: Resource id/url mismatch: hl7.fhir.in.core/https://fhir-ig-demo/ImplementationGuide/ig
 WARNING: ImplementationGuide/hl7.fhir.in.core: ImplementationGuide: ig-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Rule 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Failed
 ERROR: ImplementationGuide/hl7.fhir.in.core: ImplementationGuide.definition.page: ImplementationGuide.definition.page.title: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ImplementationGuide)
-WARNING: ImplementationGuide/hl7.fhir.in.core: ImplementationGuide.definition.page.page[0].page[9].title: value should not start or finish with whitespace
+WARNING: ImplementationGuide/hl7.fhir.in.core: ImplementationGuide.definition.page.page[0].page[10].title: value should not start or finish with whitespace
 ERROR: C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\input\ig: URL Mismatch https://fhir-ig-demo/ImplementationGuide/hl7.fhir.in.core vs https://fhir-ig-demo/ImplementationGuide/ig

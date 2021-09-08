@@ -36,9 +36,9 @@
      fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg" ];
      fhir:Extension.valueCode [ fhir:value "sd" ]
   ];
-  fhir:StructureDefinition.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/HCXCovereageEligibilityRequestDocument"];
+  fhir:StructureDefinition.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/HCXCoverageEligibilityRequestDocument"];
   fhir:StructureDefinition.version [ fhir:value "0.0.1"];
-  fhir:StructureDefinition.name [ fhir:value "CovereageEligibilityRequestDocument"];
+  fhir:StructureDefinition.name [ fhir:value "CoverageEligibilityRequestDocument"];
   fhir:StructureDefinition.status [ fhir:value "draft"];
   fhir:StructureDefinition.date [ fhir:value "2021-08-14T17:23:00.000+05:30"^^xsd:dateTime];
   fhir:StructureDefinition.publisher [ fhir:value "HL7 International - HCX"];
@@ -51,8 +51,7 @@
        fhir:ContactPoint.value [ fhir:value "https://www.swasth.app/" ]
      ]
   ];
-  fhir:StructureDefinition.description [ fhir:value "A set of healthcare-related information that is assembled together into a single logical package that provides a single coherent statement of meaning, establishes its own context and that has clinical attestation with regard to who is making the statement. A Composition defines the structure and narrative content necessary for a document. However, a Composition alone does not constitute a document. Rather, the Composition must be the first entry in a Bundle where Bundle.type=document, and any other resources referenced from Composition must be included as subsequent entries in the Bundle (for example Patient, Practitioner, Encounter, etc.)."];
-  fhir:StructureDefinition.purpose [ fhir:value "To support documents, and also to capture the EN13606 notion of an attested commit to the patient EHR, and to allow a set of disparate resources at the information/engineering level to be gathered into a clinical statement."];
+  fhir:StructureDefinition.description [ fhir:value "The Document Provides all information abour HCX Coverage Eligibility Request"];
   fhir:StructureDefinition.fhirVersion [ fhir:value "4.0.1"];
   fhir:StructureDefinition.mapping [
      fhir:index 0;
