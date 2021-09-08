@@ -4,7 +4,14 @@
   "fhirVersion": "4.0.1",
   "extensions": [
     {
-      "url": "http://hl7.org/fhir/StructureDefinition/HCXSignature",
+      "url": "https://swasth-digital-health-foundation.github.io/standards/output/StructureDefinition-HCXOrganizationExtension.html",
+      "title": "HCX Organization Extension",
+      "types": [
+        "Reference"
+      ]
+    },
+    {
+      "url": "https://swasth-digital-health-foundation.github.io/standards/output/StructureDefinition-HCXSignature.html",
       "title": "HCX Signature",
       "types": [
         "Signature"
@@ -178,6 +185,9 @@
       "ImplementationGuide.definition.resource"
     ],
     "http://hl7.org/fhir/tools/StructureDefinition/Encounter": [
+      "ImplementationGuide.definition.resource"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/HCXOrganizationExtension": [
       "ImplementationGuide.definition.resource"
     ],
     "http://hl7.org/fhir/tools/StructureDefinition/HCXSignature": [

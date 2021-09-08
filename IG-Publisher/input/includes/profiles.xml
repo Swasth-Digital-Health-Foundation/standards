@@ -70,5 +70,8 @@ Following extensions to base FHIR profiles:
 <li>
   <a href="StructureDefinition-HCXSignature.html">HCX Signature</a>
 </li>
+<li>
+  <a href="StructureDefinition-HCXOrganizationExtension.html">HCX Organization Extension</a>
+</li>
   </ul>
 </div>

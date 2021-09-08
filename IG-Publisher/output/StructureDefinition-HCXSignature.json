@@ -15,7 +15,7 @@
       "valueInteger": 1
     }
   ],
-  "url": "http://hl7.org/fhir/StructureDefinition/HCXSignature",
+  "url": "https://swasth-digital-health-foundation.github.io/standards/output/StructureDefinition-HCXSignature.html",
   "version": "0.0.1",
   "name": "HCX Signature",
   "status": "draft",

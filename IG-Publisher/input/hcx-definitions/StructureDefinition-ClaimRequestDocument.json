@@ -2717,7 +2717,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "https://raw.githubusercontent.com/Swasth-Digital-Health-Foundation/standards/69ce5ac4bc6e9fc5a015a53c82e3ebb7a379f348/FHIR%20Definitions/hcp.signature.extension.json"
+              "https://swasth-digital-health-foundation.github.io/standards/output/StructureDefinition-HCXSignature.html"
             ]
           }
         ],
@@ -2920,7 +2920,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "https://raw.githubusercontent.com/Swasth-Digital-Health-Foundation/standards/69ce5ac4bc6e9fc5a015a53c82e3ebb7a379f348/FHIR%20Definitions/hcp.signature.extension.json"
+              "https://swasth-digital-health-foundation.github.io/standards/output/StructureDefinition-HCXSignature.html"
             ]
           }
         ]

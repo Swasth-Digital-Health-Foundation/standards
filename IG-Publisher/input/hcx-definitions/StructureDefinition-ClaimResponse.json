@@ -405,7 +405,7 @@
           {
             "code": "Extension",
             "profile": [
-              "https://raw.githubusercontent.com/Swasth-Digital-Health-Foundation/standards/main/FHIR%20Definitions/hcp.organization-extension.json"
+              "https://swasth-digital-health-foundation.github.io/standards/output/StructureDefinition-HCXOrganizationExtension.html"
             ]
           }
         ],
@@ -458,7 +458,7 @@
           {
             "code": "Extension",
             "profile": [
-              "https://raw.githubusercontent.com/Swasth-Digital-Health-Foundation/standards/main/FHIR%20Definitions/hcp.organization-extension.json"
+              "https://swasth-digital-health-foundation.github.io/standards/output/StructureDefinition-HCXOrganizationExtension.html"
             ]
           }
         ],
@@ -520,7 +520,7 @@
           {
             "code": "Extension",
             "profile": [
-              "https://raw.githubusercontent.com/Swasth-Digital-Health-Foundation/standards/main/FHIR%20Definitions/hcp.organization-extension.json"
+              "https://swasth-digital-health-foundation.github.io/standards/output/StructureDefinition-HCXOrganizationExtension.html"
             ]
           }
         ],

@@ -1,6 +1,6 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "organization-extension",
+  "id": "HCXOrganizationExtension",
   "extension": [
     {
       "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
@@ -11,7 +11,7 @@
       "valueInteger": 1
     }
   ],
-  "url": "http://hl7.org/fhir/StructureDefinition/HCXOrganization-extension",
+  "url": "https://swasth-digital-health-foundation.github.io/standards/output/StructureDefinition-HCXOrganizationExtension.html",
   "version": "4.0.1",
   "name": "HCX Organization Extension",
   "status": "draft",

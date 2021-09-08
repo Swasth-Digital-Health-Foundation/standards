@@ -2269,7 +2269,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
       </base>
       <type>
         <code value="Reference"/>
-        <targetProfile value="https://raw.githubusercontent.com/Swasth-Digital-Health-Foundation/standards/69ce5ac4bc6e9fc5a015a53c82e3ebb7a379f348/FHIR%20Definitions/hcp.signature.extension.json"/>
+        <targetProfile value="https://swasth-digital-health-foundation.github.io/standards/output/StructureDefinition-HCXSignature.html"/>
       </type>
       <condition value="cmp-2"/>
       <constraint>
@@ -2432,7 +2432,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
       <max value="*"/>
       <type>
         <code value="Reference"/>
-        <targetProfile value="https://raw.githubusercontent.com/Swasth-Digital-Health-Foundation/standards/69ce5ac4bc6e9fc5a015a53c82e3ebb7a379f348/FHIR%20Definitions/hcp.signature.extension.json"/>
+        <targetProfile value="https://swasth-digital-health-foundation.github.io/standards/output/StructureDefinition-HCXSignature.html"/>
       </type>
     </element>
   </differential>
