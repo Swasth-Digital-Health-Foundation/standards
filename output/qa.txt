@@ -1,11 +1,11 @@
 ﻿HCX Core : Validation Results
 =========================================
 
-err = 192, warn = 32, info = 0
+err = 191, warn = 32, info = 0
 IG Publisher Version: 1.1.77 Out of date - current version is 1.1.79
-Generated Wed Sep 08 07:13:06 IST 2021. FHIR version 4.0.1 for ig#0.0.1 (canonical = https://fhir-ig-demo)
+Generated Wed Sep 08 07:53:08 IST 2021. FHIR version 4.0.1 for ig#0.0.1 (canonical = https://fhir-ig-demo)
 
- Build Errors : 5 / 1 / 0
+ Build Errors : 4 / 1 / 0
  C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\input\hcx-definitions\structuredefinition-Claim : 0 / 1 / 1
  C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\input\hcx-definitions\structuredefinition-ClaimRequestDocument : 0 / 5 / 1
  C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\input\hcx-definitions\structuredefinition-ClaimResponse : 1 / 3 / 1
@@ -35,7 +35,6 @@ Generated Wed Sep 08 07:13:06 IST 2021. FHIR version 4.0.1 for ig#0.0.1 (canonic
 ERROR: ImplementationGuide.definition.parameter[23].value: Supressed messages file not found
 WARNING: ImplementationGuide.id: The Implementation Guide Resource id should be ig
 ERROR: C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\output\StructureDefinition-Condition-definitions.html#/html/body/div/div/div/div/div/table/tr/td/p/a at Line 283, column 94: The link 'resource.html#identifiers' for "discussion" cannot be resolved
-ERROR: C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\output\examples.html#/html/body/div/div/div/div/div/div/p/img at Line 132, column 4: The image source 'anImage.png' cannot be resolved
 ERROR: C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\output\index.html#/html/body/div/div/div/div/div/div/ul/li/a at Line 144, column 8: The link 'background.html' for "Background" cannot be resolved
 ERROR: C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\output\index.html#/html/body/div/div/div/div/div/div/ul/li/a at Line 148, column 8: The link 'spec.html' for "Detailed Specification" cannot be resolved
 == C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\input\hcx-definitions\StructureDefinition-Claim.json ==

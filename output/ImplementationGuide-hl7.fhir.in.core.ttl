@@ -827,11 +827,6 @@
          fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "downloads.html" ];
          fhir:ImplementationGuide.definition.page.title [ fhir:value "Downloads" ];
          fhir:ImplementationGuide.definition.page.generation [ fhir:value "html" ]
-       ], [
-         fhir:index 3;
-         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "examples.html" ];
-         fhir:ImplementationGuide.definition.page.title [ fhir:value "Examples" ];
-         fhir:ImplementationGuide.definition.page.generation [ fhir:value "html" ]
        ]
      ];
      fhir:ImplementationGuide.definition.parameter [
