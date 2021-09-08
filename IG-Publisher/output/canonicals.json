@@ -126,6 +126,13 @@
     "name": "PractitionerRole"
   },
   {
+    "id": "HCXSignature",
+    "type": "StructureDefinition",
+    "url": "http://hl7.org/fhir/StructureDefinition/HCXSignature",
+    "version": "0.0.1",
+    "name": "HCX Signature"
+  },
+  {
     "id": "hl7.fhir.in.core",
     "type": "ImplementationGuide",
     "url": "https://fhir-ig-demo/ImplementationGuide/ig",

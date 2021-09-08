@@ -1,6 +1,6 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "hcp-signature",
+  "id": "HCXSignature",
   "extension": [
     {
       "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
@@ -11,9 +11,9 @@
       "valueInteger": 1
     }
   ],
-  "url": "http://hl7.org/fhir/StructureDefinition/HCXsignature",
+  "url": "http://hl7.org/fhir/StructureDefinition/HCXSignature",
   "version": "4.0.1",
-  "name": "HcpSignature",
+  "name": "HCX Signature",
   "status": "draft",
   "date": "2021-08-20",
   "publisher": "HL7",
@@ -202,7 +202,7 @@
             "code": "http://hl7.org/fhirpath/System.String"
           }
         ],
-        "fixedUri": "http://hl7.org/fhir/StructureDefinition/questionnaireresponse-signature",
+        "fixedUri": "http://hl7.org/fhir/StructureDefinition/HCXSignature",
         "isModifier": false,
         "isSummary": false,
         "mapping": [
@@ -268,7 +268,7 @@
       {
         "id": "Extension.url",
         "path": "Extension.url",
-        "fixedUri": "http://hl7.org/fhir/StructureDefinition/questionnaireresponse-signature"
+        "fixedUri": "http://hl7.org/fhir/StructureDefinition/HCXSignature"
       },
       {
         "id": "Extension.value[x]",

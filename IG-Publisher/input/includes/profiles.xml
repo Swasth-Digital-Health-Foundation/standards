@@ -67,5 +67,8 @@ Following extensions to base FHIR profiles:
     <li>
 <a href="StructureDefinition-PractitionerRole.html">HCX Practitioner Role</a>
 </li>
+<li>
+  <a href="StructureDefinition-HCXSignature.html">HCX Signature</a>
+</li>
   </ul>
 </div>

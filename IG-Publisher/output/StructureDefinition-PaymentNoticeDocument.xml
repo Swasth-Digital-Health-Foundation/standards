@@ -74,7 +74,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
       <value value="https://www.swasth.app/"/>
     </telecom>
   </contact>
-  <description value="The Document Provides all information abour HCX Payment Notice"/>
+  <description value="This profile sets minimum expectations for the Payment Notice document that indicates the resource for which the payment has been indicated and reports the current status information of that payment. It identifies the mandatory core elements, vocabularies and value sets which SHALL be present in the Composition resource when using this profile."/>
   <fhirVersion value="4.0.1"/>
   <mapping>
     <identity value="workflow"/>
