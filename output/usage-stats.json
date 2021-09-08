@@ -4,12 +4,6 @@
   "fhirVersion": "4.0.1",
   "extensions": [],
   "profiles": {
-    "Account": [
-      {
-        "url": "http://hl7.org/fhir/StructureDefinition/HCXAccount",
-        "title": "Account"
-      }
-    ],
     "Claim": [
       {
         "url": "http://hl7.org/fhir/StructureDefinition/HCXClaim",
@@ -18,12 +12,12 @@
     ],
     "Composition": [
       {
-        "url": "http://hl7.org/fhir/StructureDefinition/HCXPreAuthorizationRequest",
-        "title": "PreAuthorizationRequest"
+        "url": "http://hl7.org/fhir/StructureDefinition/HCXCovereageEligibilityRequestDocument",
+        "title": "CovereageEligibilityRequestDocument"
       },
       {
-        "url": "http://hl7.org/fhir/StructureDefinition/HCXPreAuthorizationResponse",
-        "title": "PreAuthorizationResponse"
+        "url": "http://hl7.org/fhir/StructureDefinition/HCXCovereageEligibilityResponseDocument",
+        "title": "CovereageEligibilityResponseDocument"
       }
     ],
     "ClaimResponse": [
@@ -149,9 +143,6 @@
     "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg": [
       "StructureDefinition"
     ],
-    "http://hl7.org/fhir/tools/StructureDefinition/Account": [
-      "ImplementationGuide.definition.resource"
-    ],
     "http://hl7.org/fhir/tools/StructureDefinition/Claim": [
       "ImplementationGuide.definition.resource"
     ],
@@ -201,12 +192,6 @@
       "ImplementationGuide.definition.resource"
     ],
     "http://hl7.org/fhir/tools/StructureDefinition/PractitionerRole": [
-      "ImplementationGuide.definition.resource"
-    ],
-    "http://hl7.org/fhir/tools/StructureDefinition/PreAuthorizationRequest": [
-      "ImplementationGuide.definition.resource"
-    ],
-    "http://hl7.org/fhir/tools/StructureDefinition/PreAuthorizationResponse": [
       "ImplementationGuide.definition.resource"
     ],
     "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter": [
