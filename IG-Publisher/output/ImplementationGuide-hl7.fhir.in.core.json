@@ -845,11 +845,6 @@
           "nameUrl": "downloads.html",
           "title": "Downloads",
           "generation": "html"
-        },
-        {
-          "nameUrl": "examples.html",
-          "title": "Examples",
-          "generation": "html"
         }
       ]
     },
