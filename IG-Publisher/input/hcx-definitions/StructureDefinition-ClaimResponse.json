@@ -405,7 +405,7 @@
           {
             "code": "Extension",
             "profile": [
-              "https://raw.githubusercontent.com/Swasth-Digital-Health-Foundation/standards/69ce5ac4bc6e9fc5a015a53c82e3ebb7a379f348/FHIR%20Definitions/hcp.organiation-extension.json"
+              "https://raw.githubusercontent.com/Swasth-Digital-Health-Foundation/standards/main/FHIR%20Definitions/hcp.organization-extension.json"
             ]
           }
         ],

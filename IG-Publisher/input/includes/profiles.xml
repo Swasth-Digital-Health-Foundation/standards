@@ -25,9 +25,6 @@ The structure definitions of document bundles that are passed as payload in the 
 Following extensions to base FHIR profiles:
   </p>
   <ul>
-    <li>
-<a href="StructureDefinition-Account.html">HCX Account</a>
-</li>
 <li>
 <a href="StructureDefinition-Claim.html">HCX Claim</a>
 </li>
@@ -66,12 +63,6 @@ Following extensions to base FHIR profiles:
     </li>
     <li>
 <a href="StructureDefinition-PractitionerRole.html">HCX Practitioner Role</a>
-    </li>
-    <li>
-<a href="StructureDefinition-PreAuthorizationRequest.html">HCX Pre Authorization Request</a>
 </li>
-<li>
-<a href="StructureDefinition-PreAuthorizationResponse.html">HCX Pre Authorization Response</a>
-    </li>
   </ul>
 </div>

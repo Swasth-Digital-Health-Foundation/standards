@@ -1,12 +1,5 @@
 [
   {
-    "id": "Account",
-    "type": "StructureDefinition",
-    "url": "http://hl7.org/fhir/StructureDefinition/HCXAccount",
-    "version": "0.0.1",
-    "name": "Account"
-  },
-  {
     "id": "Claim",
     "type": "StructureDefinition",
     "url": "http://hl7.org/fhir/StructureDefinition/HCXClaim",
@@ -124,20 +117,6 @@
     "url": "http://hl7.org/fhir/StructureDefinition/HCXPractitionerRole",
     "version": "0.0.1",
     "name": "PractitionerRole"
-  },
-  {
-    "id": "PreAuthorizationRequest",
-    "type": "StructureDefinition",
-    "url": "http://hl7.org/fhir/StructureDefinition/HCXPreAuthorizationRequest",
-    "version": "0.0.1",
-    "name": "PreAuthorizationRequest"
-  },
-  {
-    "id": "PreAuthorizationResponse",
-    "type": "StructureDefinition",
-    "url": "http://hl7.org/fhir/StructureDefinition/HCXPreAuthorizationResponse",
-    "version": "0.0.1",
-    "name": "PreAuthorizationResponse"
   },
   {
     "id": "hl7.fhir.in.core",

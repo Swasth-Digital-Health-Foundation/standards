@@ -368,24 +368,6 @@
       {
         "extension": [
           {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/Account",
-            "valueString": "SearchParameter"
-          },
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "StructureDefinition:resource"
-          }
-        ],
-        "reference": {
-          "reference": "StructureDefinition/Account"
-        },
-        "name": "HCX Account",
-        "description": "**Search by subject - a patient**  \n**NOTE**: This US Core SearchParameter definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain",
-        "exampleBoolean": false
-      },
-      {
-        "extension": [
-          {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/ClaimResponse",
             "valueString": "SearchParameter"
           },
@@ -620,42 +602,6 @@
       {
         "extension": [
           {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/PreAuthorizationRequest",
-            "valueString": "SearchParameter"
-          },
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "StructureDefinition:resource"
-          }
-        ],
-        "reference": {
-          "reference": "StructureDefinition/PreAuthorizationRequest"
-        },
-        "name": "HCX Pre Authorization Request",
-        "description": "**Search by subject - a patient**  \n**NOTE**: This US Core SearchParameter definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain",
-        "exampleBoolean": false
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/PreAuthorizationResponse",
-            "valueString": "SearchParameter"
-          },
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "StructureDefinition:resource"
-          }
-        ],
-        "reference": {
-          "reference": "StructureDefinition/PreAuthorizationResponse"
-        },
-        "name": "HCX Pre Authorization Response",
-        "description": "**Search by subject - a patient**  \n**NOTE**: This US Core SearchParameter definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain",
-        "exampleBoolean": false
-      },
-      {
-        "extension": [
-          {
             "url": "http://hl7.org/fhir/tools/ValueSet/health-service-provider-role",
             "valueString": "SearchParameter"
           },
@@ -807,11 +753,6 @@
               "generation": "generated"
             },
             {
-              "nameUrl": "StructureDefinition-Account.html",
-              "title": "HCX Account",
-              "generation": "generated"
-            },
-            {
               "nameUrl": "StructureDefinition-ClaimRequestDocument.html",
               "title": "HCX Claim Request Document",
               "generation": "generated"
@@ -859,16 +800,6 @@
             {
               "nameUrl": "StructureDefinition-PractitionerRole.html",
               "title": "HCX Practitioner Role",
-              "generation": "generated"
-            },
-            {
-              "nameUrl": "StructureDefinition-PreAuthorizationRequest.html",
-              "title": "HCX Pre Authorization Request",
-              "generation": "generated"
-            },
-            {
-              "nameUrl": "StructureDefinition-PreAuthorizationResponse.html",
-              "title": "HCX Pre Authorization Response",
               "generation": "generated"
             }
           ]
