@@ -2,7 +2,15 @@
   "package": "ig",
   "version": "0.0.1",
   "fhirVersion": "4.0.1",
-  "extensions": [],
+  "extensions": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/HCXSignature",
+      "title": "HCX Signature",
+      "types": [
+        "Signature"
+      ]
+    }
+  ],
   "profiles": {
     "Claim": [
       {
@@ -170,6 +178,9 @@
       "ImplementationGuide.definition.resource"
     ],
     "http://hl7.org/fhir/tools/StructureDefinition/Encounter": [
+      "ImplementationGuide.definition.resource"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/HCXSignature": [
       "ImplementationGuide.definition.resource"
     ],
     "http://hl7.org/fhir/tools/StructureDefinition/Organization": [

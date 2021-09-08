@@ -51,7 +51,7 @@
        fhir:ContactPoint.value [ fhir:value "https://www.swasth.app/" ]
      ]
   ];
-  fhir:StructureDefinition.description [ fhir:value "The Document Provides all information abour HCX Coverage Eligibility Response"];
+  fhir:StructureDefinition.description [ fhir:value "This profile sets minimum expectations for the CoverageEligibilityResponse document that provides eligibility and plan details from the processing of an CoverageEligibilityRequest document. It identifies the mandatory core elements, vocabularies and value sets which SHALL be present in the Composition resource when using this profile."];
   fhir:StructureDefinition.fhirVersion [ fhir:value "4.0.1"];
   fhir:StructureDefinition.mapping [
      fhir:index 0;
