@@ -237,6 +237,9 @@
     ],
     "http://hl7.org/fhir/tools/ValueSet/procedure-type-description": [
       "ImplementationGuide.definition.resource"
+    ],
+    "https://swasth-digital-health-foundation.github.io/standards/output/StructureDefinition-HCXOrganizationExtension.html": [
+      "ClaimResponse"
     ]
   }
 }
