@@ -3,7 +3,7 @@
 
 err = 198, warn = 33, info = 0
 IG Publisher Version: 1.1.77 Out of date - current version is 1.1.80
-Generated Tue Sep 14 10:27:20 IST 2021. FHIR version 4.0.1 for ig#0.0.1 (canonical = https://fhir-ig-demo)
+Generated Tue Sep 14 12:29:30 IST 2021. FHIR version 4.0.1 for ig#0.0.1 (canonical = https://fhir-ig-demo)
 
  Build Errors : 2 / 1 / 0
  C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\input\hcx-definitions\structuredefinition-Claim : 0 / 1 / 1
@@ -37,7 +37,7 @@ Generated Tue Sep 14 10:27:20 IST 2021. FHIR version 4.0.1 for ig#0.0.1 (canonic
 == n/a ==
 ERROR: ImplementationGuide.definition.parameter[23].value: Supressed messages file not found
 WARNING: ImplementationGuide.id: The Implementation Guide Resource id should be ig
-ERROR: C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\output\StructureDefinition-Condition-definitions.html#/html/body/div/div/div/div/div/table/tr/td/p/a at Line 283, column 94: The link 'resource.html#identifiers' for "discussion" cannot be resolved
+ERROR: C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\output\StructureDefinition-Condition-definitions.html#/html/body/div/div/div/div/div/table/tr/td/p/a at Line 287, column 94: The link 'resource.html#identifiers' for "discussion" cannot be resolved
 == C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\input\hcx-definitions\StructureDefinition-Claim.json ==
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/HCXClaim'): The Implementation Guide contains no examples for this profile
 == C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\input\hcx-definitions\StructureDefinition-ClaimRequestDocument.json ==
