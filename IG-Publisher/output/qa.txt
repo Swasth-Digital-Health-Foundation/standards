@@ -1,14 +1,14 @@
 ﻿HCX Core : Validation Results
 =========================================
 
-err = 197, warn = 33, info = 0
-IG Publisher Version: 1.1.77 Out of date - current version is 1.1.79
-Generated Wed Sep 08 16:35:41 IST 2021. FHIR version 4.0.1 for ig#0.0.1 (canonical = https://fhir-ig-demo)
+err = 198, warn = 33, info = 0
+IG Publisher Version: 1.1.77 Out of date - current version is 1.1.80
+Generated Tue Sep 14 10:27:20 IST 2021. FHIR version 4.0.1 for ig#0.0.1 (canonical = https://fhir-ig-demo)
 
  Build Errors : 2 / 1 / 0
  C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\input\hcx-definitions\structuredefinition-Claim : 0 / 1 / 1
  C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\input\hcx-definitions\structuredefinition-ClaimRequestDocument : 4 / 1 / 1
- C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\input\hcx-definitions\structuredefinition-ClaimResponse : 1 / 3 / 1
+ C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\input\hcx-definitions\structuredefinition-ClaimResponse : 2 / 3 / 1
  C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\input\hcx-definitions\structuredefinition-ClaimResponseDocument : 0 / 1 / 1
  C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\input\hcx-definitions\structuredefinition-Condition : 0 / 1 / 1
  C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\input\hcx-definitions\structuredefinition-Coverage : 0 / 1 / 1
@@ -48,8 +48,9 @@ ERROR: StructureDefinition/ClaimRequestDocument: StructureDefinition.snapshot.el
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/HCXClaimRequestDocument'): The Implementation Guide contains no examples for this profile
 == C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\input\hcx-definitions\StructureDefinition-ClaimResponse.json ==
 ERROR: StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/HCXClaimResponse'): The element ClaimResponse.insurer is out of order (and maybe others after it)
-WARNING: StructureDefinition/ClaimResponse: StructureDefinition.differential.element[5].binding: The valueSet reference https://raw.githubusercontent.com/Swasth-Digital-Health-Foundation/standards/main/FHIR%20Definitions/valueset-denial-codes.json on element ClaimResponse.item.adjudication.reason could not be resolved
-WARNING: StructureDefinition/ClaimResponse: StructureDefinition.snapshot.element[35].binding: The valueSet reference https://raw.githubusercontent.com/Swasth-Digital-Health-Foundation/standards/main/FHIR%20Definitions/valueset-denial-codes.json on element ClaimResponse.item.adjudication.reason could not be resolved
+ERROR: StructureDefinition/ClaimResponse: StructureDefinition: sdf-1: 'Element paths must be unique unless the structure is a constraint' Rule 'Element paths must be unique unless the structure is a constraint' Failed
+WARNING: StructureDefinition/ClaimResponse: StructureDefinition.differential.element[7].binding: The valueSet reference https://raw.githubusercontent.com/Swasth-Digital-Health-Foundation/standards/main/FHIR%20Definitions/valueset-denial-codes.json on element ClaimResponse.item.adjudication.reason could not be resolved
+WARNING: StructureDefinition/ClaimResponse: StructureDefinition.snapshot.element[36].binding: The valueSet reference https://raw.githubusercontent.com/Swasth-Digital-Health-Foundation/standards/main/FHIR%20Definitions/valueset-denial-codes.json on element ClaimResponse.item.adjudication.reason could not be resolved
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/HCXClaimResponse'): The Implementation Guide contains no examples for this profile
 == C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\input\hcx-definitions\StructureDefinition-ClaimResponseDocument.json ==
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/HCXClaimResponseDocument'): The Implementation Guide contains no examples for this profile
