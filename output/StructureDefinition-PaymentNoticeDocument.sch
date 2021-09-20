@@ -10,13 +10,6 @@
     single schematron that validates contained resources (if you have any) 
   -->
   <sch:pattern>
-    <sch:title>f:Composition</sch:title>
-    <sch:rule context="f:Composition">
-      <sch:assert test="count(f:section) &gt;= 1">section: minimum cardinality of 'section' is 1</sch:assert>
-      <sch:assert test="count(f:section) &lt;= 1">section: maximum cardinality of 'section' is 1</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
     <sch:title>Composition</sch:title>
     <sch:rule context="f:Composition">
       <sch:assert test="not(parent::f:contained and f:contained)">If the resource is contained in another resource, it SHALL NOT contain nested Resources (inherited)</sch:assert>
@@ -236,13 +229,6 @@
     <sch:title>Composition.event.detail</sch:title>
     <sch:rule context="f:Composition/f:event/f:detail">
       <sch:assert test="@value|f:*|h:div">All FHIR elements must have a @value or children (inherited)</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:title>f:Composition/f:section</sch:title>
-    <sch:rule context="f:Composition/f:section">
-      <sch:assert test="count(f:entry) &gt;= 1">entry: minimum cardinality of 'entry' is 1</sch:assert>
-      <sch:assert test="count(f:entry) &lt;= 1">entry: maximum cardinality of 'entry' is 1</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>

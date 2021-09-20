@@ -849,8 +849,8 @@
          fhir:ElementDefinition.binding.strength [ fhir:value "preferred" ];
          fhir:ElementDefinition.binding.description [ fhir:value "Specific specialty associated with the agency." ];
          fhir:ElementDefinition.binding.valueSet [
-           fhir:value "http://hl7.org/fhir/ValueSet/c80-practice-codes";
-           fhir:link <http://hl7.org/fhir/ValueSet/c80-practice-codes>
+           fhir:value "https://swasth-digital-health-foundation.github.io/standards/output/ValueSet-medical-specialty-provider.html";
+           fhir:link <https://swasth-digital-health-foundation.github.io/standards/output/ValueSet-medical-specialty-provider.html>
          ]
        ];
        fhir:ElementDefinition.mapping [
@@ -1712,6 +1712,63 @@
          fhir:index 3;
          fhir:ElementDefinition.mapping.identity [ fhir:value "servd" ];
          fhir:ElementDefinition.mapping.map [ fhir:value "./Identifiers" ]
+       ]
+     ], [
+       fhir:index 2;
+       fhir:Element.id [ fhir:value "PractitionerRole.specialty" ];
+       fhir:ElementDefinition.path [ fhir:value "PractitionerRole.specialty" ];
+       fhir:ElementDefinition.short [ fhir:value "Specific specialty of the practitioner" ];
+       fhir:ElementDefinition.definition [ fhir:value "Specific specialty of the practitioner." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "PractitionerRole.specialty" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "CodeableConcept" ]
+       ];
+       fhir:ElementDefinition.constraint [
+         fhir:index 0;
+         fhir:ElementDefinition.constraint.key [ fhir:value "ele-1" ];
+         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
+         fhir:ElementDefinition.constraint.human [ fhir:value "All FHIR elements must have a @value or children" ];
+         fhir:ElementDefinition.constraint.expression [ fhir:value "hasValue() or (children().count() > id.count())" ];
+         fhir:ElementDefinition.constraint.xpath [ fhir:value "@value|f:*|h:div" ];
+         fhir:ElementDefinition.constraint.source [
+           fhir:value "http://hl7.org/fhir/StructureDefinition/Element";
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+         ]
+       ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.binding [
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName" ];
+           fhir:Extension.valueString [ fhir:value "PractitionerSpecialty" ]
+         ];
+         fhir:ElementDefinition.binding.strength [ fhir:value "preferred" ];
+         fhir:ElementDefinition.binding.description [ fhir:value "Specific specialty associated with the agency." ];
+         fhir:ElementDefinition.binding.valueSet [
+           fhir:value "https://swasth-digital-health-foundation.github.io/standards/output/ValueSet-medical-specialty-provider.html";
+           fhir:link <https://swasth-digital-health-foundation.github.io/standards/output/ValueSet-medical-specialty-provider.html>
+         ]
+       ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "v2" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "PRA-5" ]
+       ], [
+         fhir:index 1;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value ".player.HealthCareProvider[@classCode = 'PROV'].code" ]
+       ], [
+         fhir:index 2;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "servd" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "./Specialty" ]
        ]
      ]
   ] .

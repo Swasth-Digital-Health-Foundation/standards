@@ -1779,8 +1779,8 @@
          fhir:ElementDefinition.binding.strength [ fhir:value "example" ];
          fhir:ElementDefinition.binding.description [ fhir:value "The adjudication reason codes." ];
          fhir:ElementDefinition.binding.valueSet [
-           fhir:value "https://raw.githubusercontent.com/Swasth-Digital-Health-Foundation/standards/main/FHIR%20Definitions/valueset-denial-codes.json";
-           fhir:link <https://raw.githubusercontent.com/Swasth-Digital-Health-Foundation/standards/main/FHIR%20Definitions/valueset-denial-codes.json>
+           fhir:value "https://swasth-digital-health-foundation.github.io/standards/output/ValueSet-claim-denial-codes.html";
+           fhir:link <https://swasth-digital-health-foundation.github.io/standards/output/ValueSet-claim-denial-codes.html>
          ]
        ]
      ], [
@@ -6525,8 +6525,8 @@
          fhir:ElementDefinition.binding.strength [ fhir:value "example" ];
          fhir:ElementDefinition.binding.description [ fhir:value "The adjudication reason codes." ];
          fhir:ElementDefinition.binding.valueSet [
-           fhir:value "https://raw.githubusercontent.com/Swasth-Digital-Health-Foundation/standards/main/FHIR%20Definitions/valueset-denial-codes.json";
-           fhir:link <https://raw.githubusercontent.com/Swasth-Digital-Health-Foundation/standards/main/FHIR%20Definitions/valueset-denial-codes.json>
+           fhir:value "https://swasth-digital-health-foundation.github.io/standards/output/ValueSet-claim-denial-codes.html";
+           fhir:link <https://swasth-digital-health-foundation.github.io/standards/output/ValueSet-claim-denial-codes.html>
          ]
        ]
      ], [
