@@ -803,7 +803,7 @@
           ],
           "strength": "preferred",
           "description": "Specific specialty associated with the agency.",
-          "valueSet": "http://hl7.org/fhir/ValueSet/c80-practice-codes"
+          "valueSet": "https://swasth-digital-health-foundation.github.io/standards/output/ValueSet-medical-specialty-provider.html"
         },
         "mapping": [
           {
@@ -1631,6 +1631,61 @@
           {
             "identity": "servd",
             "map": "./Identifiers"
+          }
+        ]
+      },
+      {
+        "id": "PractitionerRole.specialty",
+        "path": "PractitionerRole.specialty",
+        "short": "Specific specialty of the practitioner",
+        "definition": "Specific specialty of the practitioner.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "PractitionerRole.specialty",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "isModifier": false,
+        "isSummary": true,
+        "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+              "valueString": "PractitionerSpecialty"
+            }
+          ],
+          "strength": "preferred",
+          "description": "Specific specialty associated with the agency.",
+          "valueSet": "https://swasth-digital-health-foundation.github.io/standards/output/ValueSet-medical-specialty-provider.html"
+        },
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "PRA-5"
+          },
+          {
+            "identity": "rim",
+            "map": ".player.HealthCareProvider[@classCode = 'PROV'].code"
+          },
+          {
+            "identity": "servd",
+            "map": "./Specialty"
           }
         ]
       }

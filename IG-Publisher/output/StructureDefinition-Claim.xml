@@ -164,7 +164,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
       <value value="https://www.swasth.app/"/>
     </telecom>
   </contact>
-  <description value="A provider issued list of professional services and products which have been provided, or are to be provided, to a patient which is sent to an insurer for reimbursement."/>
+  <description value="A provider issued list of professional services and products which have been provided, or are to be provided, to a patient which is sent to an insurer for reimbursement. test1487"/>
   <purpose value="The Claim resource is used by providers to exchange services and products rendered to patients or planned to be rendered with insurers for reimbuserment. It is also used by insurers to exchange claims information with statutory reporting and data analytics firms."/>
   <fhirVersion value="4.0.1"/>
   <mapping>
@@ -1806,7 +1806,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
         </extension>
         <strength value="example"/>
         <description value="The role codes for the care team members."/>
-        <valueSet value="http://hl7.org/fhir/ValueSet/claim-careteamrole"/>
+        <valueSet value="https://swasth-digital-health-foundation.github.io/standards/output/ValueSet-health-service-provider-role.html"/>
       </binding>
     </element>
     <element id="Claim.careTeam.qualification">
@@ -2689,7 +2689,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
         </extension>
         <strength value="example"/>
         <description value="Example procedure type codes."/>
-        <valueSet value="http://hl7.org/fhir/ValueSet/ex-procedure-type"/>
+        <valueSet value="https://swasth-digital-health-foundation.github.io/standards/output/ValueSet-procedure-type-description.html"/>
       </binding>
     </element>
     <element id="Claim.procedure.date">
@@ -2752,8 +2752,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
           <valueString value="ICD10_Procedures"/>
         </extension>
         <strength value="example"/>
-        <description value="Example ICD10 Procedure codes."/>
-        <valueSet value="http://hl7.org/fhir/ValueSet/icd-10-procedures"/>
+        <description value="Procedure codes."/>
+        <valueSet value="https://icd.who.int/browse10/2010/en"/>
       </binding>
     </element>
     <element id="Claim.procedure.udi">
@@ -3682,7 +3682,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
         </extension>
         <strength value="example"/>
         <description value="Benefit categories such as: oral-basic, major, glasses."/>
-        <valueSet value="http://hl7.org/fhir/ValueSet/ex-benefitcategory"/>
+        <valueSet value="https://swasth-digital-health-foundation.github.io/standards/output/ValueSet-claim-service-categories.html"/>
       </binding>
     </element>
     <element id="Claim.item.productOrService">
@@ -5238,6 +5238,41 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
       <isModifier value="false"/>
       <isSummary value="false"/>
     </element>
+    <element id="Claim.careTeam.role">
+      <path value="Claim.careTeam.role"/>
+      <short value="Function within the team"/>
+      <definition value="The lead, assisting or supervising practitioner and their discipline if a multidisciplinary team."/>
+      <comment value="Role might not be required when there is only a single provider listed."/>
+      <requirements value="When multiple parties are present it is required to distinguish the roles performed by each member."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Claim.careTeam.role"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() or (children().count() &gt; id.count())"/>
+        <xpath value="@value|f:*|h:div"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="CareTeamRole"/>
+        </extension>
+        <strength value="example"/>
+        <description value="The role codes for the care team members."/>
+        <valueSet value="https://swasth-digital-health-foundation.github.io/standards/output/ValueSet-health-service-provider-role.html"/>
+      </binding>
+    </element>
     <element id="Claim.diagnosis.type">
       <path value="Claim.diagnosis.type"/>
       <short value="Timing or nature of the diagnosis"/>
@@ -5271,6 +5306,114 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
         <strength value="example"/>
         <description value="The type of the diagnosis: admitting, principal, discharge."/>
         <valueSet value="http://hl7.org/fhir/ValueSet/ex-diagnosistype"/>
+      </binding>
+    </element>
+    <element id="Claim.procedure.type">
+      <path value="Claim.procedure.type"/>
+      <short value="Category of Procedure"/>
+      <definition value="When the condition was observed or the relative ranking."/>
+      <comment value="For example: primary, secondary."/>
+      <requirements value="Often required to capture a particular diagnosis, for example: primary or discharge."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="Claim.procedure.type"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() or (children().count() &gt; id.count())"/>
+        <xpath value="@value|f:*|h:div"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="ProcedureType"/>
+        </extension>
+        <strength value="example"/>
+        <description value="Example procedure type codes."/>
+        <valueSet value="https://swasth-digital-health-foundation.github.io/standards/output/ValueSet-procedure-type-description.html"/>
+      </binding>
+    </element>
+    <element id="Claim.procedure.procedure[x]">
+      <path value="Claim.procedure.procedure[x]"/>
+      <short value="Specific clinical procedure"/>
+      <definition value="The code or reference to a Procedure resource which identifies the clinical intervention performed."/>
+      <requirements value="This identifies the actual clinical procedure."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="Claim.procedure.procedure[x]"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Procedure"/>
+      </type>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() or (children().count() &gt; id.count())"/>
+        <xpath value="@value|f:*|h:div"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="ICD10_Procedures"/>
+        </extension>
+        <strength value="example"/>
+        <description value="Procedure codes."/>
+        <valueSet value="https://icd.who.int/browse10/2010/en"/>
+      </binding>
+    </element>
+    <element id="Claim.item.category">
+      <path value="Claim.item.category"/>
+      <short value="Benefit classification"/>
+      <definition value="Code to identify the general type of benefits under which products and services are provided."/>
+      <comment value="Examples include Medical Care, Periodontics, Renal Dialysis, Vision Coverage."/>
+      <requirements value="Needed in the processing of institutional claims as this allows the insurer to determine whether a facial X-Ray is for dental, orthopedic, or facial surgery purposes."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Claim.item.category"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() or (children().count() &gt; id.count())"/>
+        <xpath value="@value|f:*|h:div"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="BenefitCategory"/>
+        </extension>
+        <strength value="example"/>
+        <description value="Benefit categories such as: oral-basic, major, glasses."/>
+        <valueSet value="https://swasth-digital-health-foundation.github.io/standards/output/ValueSet-claim-service-categories.html"/>
       </binding>
     </element>
   </differential>

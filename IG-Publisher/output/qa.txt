@@ -1,18 +1,18 @@
 ﻿HCX Core : Validation Results
 =========================================
 
-err = 198, warn = 33, info = 0
+err = 199, warn = 44, info = 0
 IG Publisher Version: 1.1.77 Out of date - current version is 1.1.80
-Generated Tue Sep 14 10:27:20 IST 2021. FHIR version 4.0.1 for ig#0.0.1 (canonical = https://fhir-ig-demo)
+Generated Mon Sep 20 21:05:17 IST 2021. FHIR version 4.0.1 for ig#0.0.1 (canonical = https://fhir-ig-demo)
 
  Build Errors : 2 / 1 / 0
- C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\input\hcx-definitions\structuredefinition-Claim : 0 / 1 / 1
+ C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\input\hcx-definitions\structuredefinition-Claim : 1 / 9 / 1
  C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\input\hcx-definitions\structuredefinition-ClaimRequestDocument : 4 / 1 / 1
  C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\input\hcx-definitions\structuredefinition-ClaimResponse : 2 / 3 / 1
  C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\input\hcx-definitions\structuredefinition-ClaimResponseDocument : 0 / 1 / 1
  C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\input\hcx-definitions\structuredefinition-Condition : 0 / 1 / 1
  C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\input\hcx-definitions\structuredefinition-Coverage : 0 / 1 / 1
- C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\input\hcx-definitions\structuredefinition-CoverageEligibilityRequest : 0 / 1 / 1
+ C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\input\hcx-definitions\structuredefinition-CoverageEligibilityRequest : 0 / 2 / 1
  C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\input\hcx-definitions\structuredefinition-CoverageEligibilityRequestDocument : 0 / 1 / 1
  C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\input\hcx-definitions\structuredefinition-CoverageEligibilityResponse : 0 / 1 / 1
  C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\input\hcx-definitions\structuredefinition-CoverageEligibilityResponseDocument : 0 / 1 / 1
@@ -25,7 +25,7 @@ Generated Tue Sep 14 10:27:20 IST 2021. FHIR version 4.0.1 for ig#0.0.1 (canonic
  C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\input\hcx-definitions\structuredefinition-PaymentNoticeDocument : 0 / 1 / 1
  C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\input\hcx-definitions\structuredefinition-PaymentReconciliation : 0 / 1 / 1
  C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\input\hcx-definitions\structuredefinition-Practitioner : 0 / 1 / 1
- C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\input\hcx-definitions\structuredefinition-PractitionerRole : 0 / 1 / 1
+ C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\input\hcx-definitions\structuredefinition-PractitionerRole : 0 / 3 / 1
  C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\input\hcx-definitions\valueset-claim-denial-codes : 0 / 1 / 1
  C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\input\hcx-definitions\valueset-claim-service-categories : 0 / 1 / 1
  C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\input\hcx-definitions\valueset-health-service-provider-role : 13 / 1 / 1
@@ -37,8 +37,17 @@ Generated Tue Sep 14 10:27:20 IST 2021. FHIR version 4.0.1 for ig#0.0.1 (canonic
 == n/a ==
 ERROR: ImplementationGuide.definition.parameter[23].value: Supressed messages file not found
 WARNING: ImplementationGuide.id: The Implementation Guide Resource id should be ig
-ERROR: C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\output\StructureDefinition-Condition-definitions.html#/html/body/div/div/div/div/div/table/tr/td/p/a at Line 283, column 94: The link 'resource.html#identifiers' for "discussion" cannot be resolved
+ERROR: C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\output\StructureDefinition-Condition-definitions.html#/html/body/div/div/div/div/div/table/tr/td/p/a at Line 287, column 94: The link 'resource.html#identifiers' for "discussion" cannot be resolved
 == C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\input\hcx-definitions\StructureDefinition-Claim.json ==
+ERROR: StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/HCXClaim'): The element Claim.diagnosis.type is out of order (and maybe others after it)
+WARNING: StructureDefinition/Claim: StructureDefinition.differential.element[6].binding: The valueSet reference https://swasth-digital-health-foundation.github.io/standards/output/ValueSet-health-service-provider-role.html on element Claim.careTeam.role could not be resolved
+WARNING: StructureDefinition/Claim: StructureDefinition.differential.element[8].binding: The valueSet reference https://swasth-digital-health-foundation.github.io/standards/output/ValueSet-procedure-type-description.html on element Claim.procedure.type could not be resolved
+WARNING: StructureDefinition/Claim: StructureDefinition.differential.element[9].binding: The valueSet reference https://icd.who.int/browse10/2010/en on element Claim.procedure.procedure[x] could not be resolved
+WARNING: StructureDefinition/Claim: StructureDefinition.differential.element[10].binding: The valueSet reference https://swasth-digital-health-foundation.github.io/standards/output/ValueSet-claim-service-categories.html on element Claim.item.category could not be resolved
+WARNING: StructureDefinition/Claim: StructureDefinition.snapshot.element[46].binding: The valueSet reference https://swasth-digital-health-foundation.github.io/standards/output/ValueSet-health-service-provider-role.html on element Claim.careTeam.role could not be resolved
+WARNING: StructureDefinition/Claim: StructureDefinition.snapshot.element[72].binding: The valueSet reference https://swasth-digital-health-foundation.github.io/standards/output/ValueSet-procedure-type-description.html on element Claim.procedure.type could not be resolved
+WARNING: StructureDefinition/Claim: StructureDefinition.snapshot.element[74].binding: The valueSet reference https://icd.who.int/browse10/2010/en on element Claim.procedure.procedure[x] could not be resolved
+WARNING: StructureDefinition/Claim: StructureDefinition.snapshot.element[104].binding: The valueSet reference https://swasth-digital-health-foundation.github.io/standards/output/ValueSet-claim-service-categories.html on element Claim.item.category could not be resolved
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/HCXClaim'): The Implementation Guide contains no examples for this profile
 == C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\input\hcx-definitions\StructureDefinition-ClaimRequestDocument.json ==
 ERROR: Composition.section.entry: The target profile https://swasth-digital-health-foundation.github.io/standards/output/StructureDefinition-HCXSignature.html is not a valid constraint on the base ([CanonicalType[http://hl7.org/fhir/StructureDefinition/Resource]]) at Composition.section.entry
@@ -49,8 +58,8 @@ WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinitio
 == C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\input\hcx-definitions\StructureDefinition-ClaimResponse.json ==
 ERROR: StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/HCXClaimResponse'): The element ClaimResponse.insurer is out of order (and maybe others after it)
 ERROR: StructureDefinition/ClaimResponse: StructureDefinition: sdf-1: 'Element paths must be unique unless the structure is a constraint' Rule 'Element paths must be unique unless the structure is a constraint' Failed
-WARNING: StructureDefinition/ClaimResponse: StructureDefinition.differential.element[7].binding: The valueSet reference https://raw.githubusercontent.com/Swasth-Digital-Health-Foundation/standards/main/FHIR%20Definitions/valueset-denial-codes.json on element ClaimResponse.item.adjudication.reason could not be resolved
-WARNING: StructureDefinition/ClaimResponse: StructureDefinition.snapshot.element[36].binding: The valueSet reference https://raw.githubusercontent.com/Swasth-Digital-Health-Foundation/standards/main/FHIR%20Definitions/valueset-denial-codes.json on element ClaimResponse.item.adjudication.reason could not be resolved
+WARNING: StructureDefinition/ClaimResponse: StructureDefinition.differential.element[7].binding: The valueSet reference https://swasth-digital-health-foundation.github.io/standards/output/ValueSet-claim-denial-codes.html on element ClaimResponse.item.adjudication.reason could not be resolved
+WARNING: StructureDefinition/ClaimResponse: StructureDefinition.snapshot.element[36].binding: The valueSet reference https://swasth-digital-health-foundation.github.io/standards/output/ValueSet-claim-denial-codes.html on element ClaimResponse.item.adjudication.reason could not be resolved
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/HCXClaimResponse'): The Implementation Guide contains no examples for this profile
 == C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\input\hcx-definitions\StructureDefinition-ClaimResponseDocument.json ==
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/HCXClaimResponseDocument'): The Implementation Guide contains no examples for this profile
@@ -59,6 +68,7 @@ WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinitio
 == C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\input\hcx-definitions\StructureDefinition-Coverage.json ==
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/HCXCoverage'): The Implementation Guide contains no examples for this profile
 == C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\input\hcx-definitions\StructureDefinition-CoverageEligibilityRequest.json ==
+WARNING: StructureDefinition/CoverageEligibilityRequest: StructureDefinition.differential.element[5].binding: The valueSet reference https://swasth-digital-health-foundation.github.io/standards/output/ValueSet-insurance-company-owners.html on element CoverageEligibilityRequest.insurer could not be resolved
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/HCXCoverageEligibilityRequest'): The Implementation Guide contains no examples for this profile
 == C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\input\hcx-definitions\StructureDefinition-CoverageEligibilityRequestDocument.json ==
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/HCXCoverageEligibilityRequestDocument'): The Implementation Guide contains no examples for this profile
@@ -89,6 +99,8 @@ WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinitio
 == C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\input\hcx-definitions\StructureDefinition-Practitioner.json ==
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/HCXPractitioner'): The Implementation Guide contains no examples for this profile
 == C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\input\hcx-definitions\StructureDefinition-PractitionerRole.json ==
+WARNING: StructureDefinition/PractitionerRole: StructureDefinition.differential.element[2].binding: The valueSet reference https://swasth-digital-health-foundation.github.io/standards/output/ValueSet-medical-specialty-provider.html on element PractitionerRole.specialty could not be resolved
+WARNING: StructureDefinition/PractitionerRole: StructureDefinition.snapshot.element[15].binding: The valueSet reference https://swasth-digital-health-foundation.github.io/standards/output/ValueSet-medical-specialty-provider.html on element PractitionerRole.specialty could not be resolved
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/HCXPractitionerRole'): The Implementation Guide contains no examples for this profile
 == C:\Users\Test\Documents\swas\FHIR\standards\IG-Publisher\input\hcx-definitions\ValueSet-claim-denial-codes.json ==
 WARNING: ValueSet/claim-denial-codes: ValueSet: vsd-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Rule 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Failed

@@ -1448,7 +1448,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
         </extension>
         <strength value="example"/>
         <description value="The adjudication reason codes."/>
-        <valueSet value="https://raw.githubusercontent.com/Swasth-Digital-Health-Foundation/standards/main/FHIR%20Definitions/valueset-denial-codes.json"/>
+        <valueSet value="https://swasth-digital-health-foundation.github.io/standards/output/ValueSet-claim-denial-codes.html"/>
       </binding>
     </element>
     <element id="ClaimResponse.item.adjudication.amount">
@@ -5074,7 +5074,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
         </extension>
         <strength value="example"/>
         <description value="The adjudication reason codes."/>
-        <valueSet value="https://raw.githubusercontent.com/Swasth-Digital-Health-Foundation/standards/main/FHIR%20Definitions/valueset-denial-codes.json"/>
+        <valueSet value="https://swasth-digital-health-foundation.github.io/standards/output/ValueSet-claim-denial-codes.html"/>
       </binding>
     </element>
     <element id="ClaimResponse.total">

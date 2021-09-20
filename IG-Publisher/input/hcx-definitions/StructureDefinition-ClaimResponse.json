@@ -1675,7 +1675,7 @@
           ],
           "strength": "example",
           "description": "The adjudication reason codes.",
-          "valueSet": "https://raw.githubusercontent.com/Swasth-Digital-Health-Foundation/standards/main/FHIR%20Definitions/valueset-denial-codes.json"
+          "valueSet": "https://swasth-digital-health-foundation.github.io/standards/output/ValueSet-claim-denial-codes.html"
         }
       },
       {
@@ -6045,7 +6045,7 @@
           ],
           "strength": "example",
           "description": "The adjudication reason codes.",
-          "valueSet": "https://raw.githubusercontent.com/Swasth-Digital-Health-Foundation/standards/main/FHIR%20Definitions/valueset-denial-codes.json"
+          "valueSet": "https://swasth-digital-health-foundation.github.io/standards/output/ValueSet-claim-denial-codes.html"
         }
       },
       {

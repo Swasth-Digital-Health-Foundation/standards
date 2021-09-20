@@ -54,7 +54,7 @@
       ]
     }
   ],
-  "description": "A provider issued list of professional services and products which have been provided, or are to be provided, to a patient which is sent to an insurer for reimbursement.",
+  "description": "A provider issued list of professional services and products which have been provided, or are to be provided, to a patient which is sent to an insurer for reimbursement. test1487",
   "purpose": "The Claim resource is used by providers to exchange services and products rendered to patients or planned to be rendered with insurers for reimbuserment. It is also used by insurers to exchange claims information with statutory reporting and data analytics firms.",
   "fhirVersion": "4.0.1",
   "mapping": [
@@ -2102,7 +2102,7 @@
           ],
           "strength": "example",
           "description": "The role codes for the care team members.",
-          "valueSet": "http://hl7.org/fhir/ValueSet/claim-careteamrole"
+          "valueSet": "https://swasth-digital-health-foundation.github.io/standards/output/ValueSet-health-service-provider-role.html"
         }
       },
       {
@@ -3200,7 +3200,7 @@
           ],
           "strength": "example",
           "description": "Example procedure type codes.",
-          "valueSet": "http://hl7.org/fhir/ValueSet/ex-procedure-type"
+          "valueSet": "https://swasth-digital-health-foundation.github.io/standards/output/ValueSet-procedure-type-description.html"
         }
       },
       {
@@ -3278,8 +3278,8 @@
             }
           ],
           "strength": "example",
-          "description": "Example ICD10 Procedure codes.",
-          "valueSet": "http://hl7.org/fhir/ValueSet/icd-10-procedures"
+          "description": "Procedure codes.",
+          "valueSet": "https://icd.who.int/browse10/2010/en"
         }
       },
       {
@@ -4427,7 +4427,7 @@
           ],
           "strength": "example",
           "description": "Benefit categories such as: oral-basic, major, glasses.",
-          "valueSet": "http://hl7.org/fhir/ValueSet/ex-benefitcategory"
+          "valueSet": "https://swasth-digital-health-foundation.github.io/standards/output/ValueSet-claim-service-categories.html"
         }
       },
       {
@@ -6390,6 +6390,183 @@
           "strength": "example",
           "description": "The type of the diagnosis: admitting, principal, discharge.",
           "valueSet": "http://hl7.org/fhir/ValueSet/ex-diagnosistype"
+        }
+      },
+      {
+        "id": "Claim.careTeam.role",
+        "path": "Claim.careTeam.role",
+        "short": "Function within the team",
+        "definition": "The lead, assisting or supervising practitioner and their discipline if a multidisciplinary team.",
+        "comment": "Role might not be required when there is only a single provider listed.",
+        "requirements": "When multiple parties are present it is required to distinguish the roles performed by each member.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Claim.careTeam.role",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+              "valueString": "CareTeamRole"
+            }
+          ],
+          "strength": "example",
+          "description": "The role codes for the care team members.",
+          "valueSet": "https://swasth-digital-health-foundation.github.io/standards/output/ValueSet-health-service-provider-role.html"
+        }
+      },
+      {
+        "id": "Claim.procedure.type",
+        "path": "Claim.procedure.type",
+        "short": "Category of Procedure",
+        "definition": "When the condition was observed or the relative ranking.",
+        "comment": "For example: primary, secondary.",
+        "requirements": "Often required to capture a particular diagnosis, for example: primary or discharge.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Claim.procedure.type",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+              "valueString": "ProcedureType"
+            }
+          ],
+          "strength": "example",
+          "description": "Example procedure type codes.",
+          "valueSet": "https://swasth-digital-health-foundation.github.io/standards/output/ValueSet-procedure-type-description.html"
+        }
+      },
+      {
+        "id": "Claim.item.category",
+        "path": "Claim.item.category",
+        "short": "Benefit classification",
+        "definition": "Code to identify the general type of benefits under which products and services are provided.",
+        "comment": "Examples include Medical Care, Periodontics, Renal Dialysis, Vision Coverage.",
+        "requirements": "Needed in the processing of institutional claims as this allows the insurer to determine whether a facial X-Ray is for dental, orthopedic, or facial surgery purposes.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Claim.item.category",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+              "valueString": "BenefitCategory"
+            }
+          ],
+          "strength": "example",
+          "description": "Benefit categories such as: oral-basic, major, glasses.",
+          "valueSet": "https://swasth-digital-health-foundation.github.io/standards/output/ValueSet-claim-service-categories.html"
+        }
+      },
+      {
+        "id": "Claim.procedure.procedure[x]",
+        "path": "Claim.procedure.procedure[x]",
+        "short": "Specific clinical procedure",
+        "definition": "The code or reference to a Procedure resource which identifies the clinical intervention performed.",
+        "requirements": "This identifies the actual clinical procedure.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Claim.procedure.procedure[x]",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Procedure"
+            ]
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+              "valueString": "ICD10_Procedures"
+            }
+          ],
+          "strength": "example",
+          "description": "Procedure codes.",
+          "valueSet": "https://icd.who.int/browse10/2010/en"
         }
       }
     ]

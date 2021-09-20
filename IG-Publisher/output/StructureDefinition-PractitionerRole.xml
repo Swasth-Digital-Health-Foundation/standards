@@ -679,7 +679,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
         </extension>
         <strength value="preferred"/>
         <description value="Specific specialty associated with the agency."/>
-        <valueSet value="http://hl7.org/fhir/ValueSet/c80-practice-codes"/>
+        <valueSet value="https://swasth-digital-health-foundation.github.io/standards/output/ValueSet-medical-specialty-provider.html"/>
       </binding>
       <mapping>
         <identity value="v2"/>
@@ -1346,6 +1346,51 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
       <mapping>
         <identity value="servd"/>
         <map value="./Identifiers"/>
+      </mapping>
+    </element>
+    <element id="PractitionerRole.specialty">
+      <path value="PractitionerRole.specialty"/>
+      <short value="Specific specialty of the practitioner"/>
+      <definition value="Specific specialty of the practitioner."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="PractitionerRole.specialty"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() or (children().count() &gt; id.count())"/>
+        <xpath value="@value|f:*|h:div"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <isModifier value="false"/>
+      <isSummary value="true"/>
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="PractitionerSpecialty"/>
+        </extension>
+        <strength value="preferred"/>
+        <description value="Specific specialty associated with the agency."/>
+        <valueSet value="https://swasth-digital-health-foundation.github.io/standards/output/ValueSet-medical-specialty-provider.html"/>
+      </binding>
+      <mapping>
+        <identity value="v2"/>
+        <map value="PRA-5"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".player.HealthCareProvider[@classCode = &#39;PROV&#39;].code"/>
+      </mapping>
+      <mapping>
+        <identity value="servd"/>
+        <map value="./Specialty"/>
       </mapping>
     </element>
   </differential>

@@ -51,7 +51,7 @@
        fhir:ContactPoint.value [ fhir:value "https://www.swasth.app/" ]
      ]
   ];
-  fhir:StructureDefinition.description [ fhir:value "A provider issued list of professional services and products which have been provided, or are to be provided, to a patient which is sent to an insurer for reimbursement."];
+  fhir:StructureDefinition.description [ fhir:value "A provider issued list of professional services and products which have been provided, or are to be provided, to a patient which is sent to an insurer for reimbursement. test1487"];
   fhir:StructureDefinition.purpose [ fhir:value "The Claim resource is used by providers to exchange services and products rendered to patients or planned to be rendered with insurers for reimbuserment. It is also used by insurers to exchange claims information with statutory reporting and data analytics firms."];
   fhir:StructureDefinition.fhirVersion [ fhir:value "4.0.1"];
   fhir:StructureDefinition.mapping [
@@ -2264,8 +2264,8 @@
          fhir:ElementDefinition.binding.strength [ fhir:value "example" ];
          fhir:ElementDefinition.binding.description [ fhir:value "The role codes for the care team members." ];
          fhir:ElementDefinition.binding.valueSet [
-           fhir:value "http://hl7.org/fhir/ValueSet/claim-careteamrole";
-           fhir:link <http://hl7.org/fhir/ValueSet/claim-careteamrole>
+           fhir:value "https://swasth-digital-health-foundation.github.io/standards/output/ValueSet-health-service-provider-role.html";
+           fhir:link <https://swasth-digital-health-foundation.github.io/standards/output/ValueSet-health-service-provider-role.html>
          ]
        ]
      ], [
@@ -3433,8 +3433,8 @@
          fhir:ElementDefinition.binding.strength [ fhir:value "example" ];
          fhir:ElementDefinition.binding.description [ fhir:value "Example procedure type codes." ];
          fhir:ElementDefinition.binding.valueSet [
-           fhir:value "http://hl7.org/fhir/ValueSet/ex-procedure-type";
-           fhir:link <http://hl7.org/fhir/ValueSet/ex-procedure-type>
+           fhir:value "https://swasth-digital-health-foundation.github.io/standards/output/ValueSet-procedure-type-description.html";
+           fhir:link <https://swasth-digital-health-foundation.github.io/standards/output/ValueSet-procedure-type-description.html>
          ]
        ]
      ], [
@@ -3516,10 +3516,10 @@
            fhir:Extension.valueString [ fhir:value "ICD10_Procedures" ]
          ];
          fhir:ElementDefinition.binding.strength [ fhir:value "example" ];
-         fhir:ElementDefinition.binding.description [ fhir:value "Example ICD10 Procedure codes." ];
+         fhir:ElementDefinition.binding.description [ fhir:value "Procedure codes." ];
          fhir:ElementDefinition.binding.valueSet [
-           fhir:value "http://hl7.org/fhir/ValueSet/icd-10-procedures";
-           fhir:link <http://hl7.org/fhir/ValueSet/icd-10-procedures>
+           fhir:value "https://icd.who.int/browse10/2010/en";
+           fhir:link <https://icd.who.int/browse10/2010/en>
          ]
        ]
      ], [
@@ -4732,8 +4732,8 @@
          fhir:ElementDefinition.binding.strength [ fhir:value "example" ];
          fhir:ElementDefinition.binding.description [ fhir:value "Benefit categories such as: oral-basic, major, glasses." ];
          fhir:ElementDefinition.binding.valueSet [
-           fhir:value "http://hl7.org/fhir/ValueSet/ex-benefitcategory";
-           fhir:link <http://hl7.org/fhir/ValueSet/ex-benefitcategory>
+           fhir:value "https://swasth-digital-health-foundation.github.io/standards/output/ValueSet-claim-service-categories.html";
+           fhir:link <https://swasth-digital-health-foundation.github.io/standards/output/ValueSet-claim-service-categories.html>
          ]
        ]
      ], [
@@ -6793,6 +6793,52 @@
        fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
      ], [
        fhir:index 6;
+       fhir:Element.id [ fhir:value "Claim.careTeam.role" ];
+       fhir:ElementDefinition.path [ fhir:value "Claim.careTeam.role" ];
+       fhir:ElementDefinition.short [ fhir:value "Function within the team" ];
+       fhir:ElementDefinition.definition [ fhir:value "The lead, assisting or supervising practitioner and their discipline if a multidisciplinary team." ];
+       fhir:ElementDefinition.comment [ fhir:value "Role might not be required when there is only a single provider listed." ];
+       fhir:ElementDefinition.requirements [ fhir:value "When multiple parties are present it is required to distinguish the roles performed by each member." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Claim.careTeam.role" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "CodeableConcept" ]
+       ];
+       fhir:ElementDefinition.constraint [
+         fhir:index 0;
+         fhir:ElementDefinition.constraint.key [ fhir:value "ele-1" ];
+         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
+         fhir:ElementDefinition.constraint.human [ fhir:value "All FHIR elements must have a @value or children" ];
+         fhir:ElementDefinition.constraint.expression [ fhir:value "hasValue() or (children().count() > id.count())" ];
+         fhir:ElementDefinition.constraint.xpath [ fhir:value "@value|f:*|h:div" ];
+         fhir:ElementDefinition.constraint.source [
+           fhir:value "http://hl7.org/fhir/StructureDefinition/Element";
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+         ]
+       ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.binding [
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName" ];
+           fhir:Extension.valueString [ fhir:value "CareTeamRole" ]
+         ];
+         fhir:ElementDefinition.binding.strength [ fhir:value "example" ];
+         fhir:ElementDefinition.binding.description [ fhir:value "The role codes for the care team members." ];
+         fhir:ElementDefinition.binding.valueSet [
+           fhir:value "https://swasth-digital-health-foundation.github.io/standards/output/ValueSet-health-service-provider-role.html";
+           fhir:link <https://swasth-digital-health-foundation.github.io/standards/output/ValueSet-health-service-provider-role.html>
+         ]
+       ]
+     ], [
+       fhir:index 7;
        fhir:Element.id [ fhir:value "Claim.diagnosis.type" ];
        fhir:ElementDefinition.path [ fhir:value "Claim.diagnosis.type" ];
        fhir:ElementDefinition.short [ fhir:value "Timing or nature of the diagnosis" ];
@@ -6835,6 +6881,151 @@
          fhir:ElementDefinition.binding.valueSet [
            fhir:value "http://hl7.org/fhir/ValueSet/ex-diagnosistype";
            fhir:link <http://hl7.org/fhir/ValueSet/ex-diagnosistype>
+         ]
+       ]
+     ], [
+       fhir:index 8;
+       fhir:Element.id [ fhir:value "Claim.procedure.type" ];
+       fhir:ElementDefinition.path [ fhir:value "Claim.procedure.type" ];
+       fhir:ElementDefinition.short [ fhir:value "Category of Procedure" ];
+       fhir:ElementDefinition.definition [ fhir:value "When the condition was observed or the relative ranking." ];
+       fhir:ElementDefinition.comment [ fhir:value "For example: primary, secondary." ];
+       fhir:ElementDefinition.requirements [ fhir:value "Often required to capture a particular diagnosis, for example: primary or discharge." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Claim.procedure.type" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "CodeableConcept" ]
+       ];
+       fhir:ElementDefinition.constraint [
+         fhir:index 0;
+         fhir:ElementDefinition.constraint.key [ fhir:value "ele-1" ];
+         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
+         fhir:ElementDefinition.constraint.human [ fhir:value "All FHIR elements must have a @value or children" ];
+         fhir:ElementDefinition.constraint.expression [ fhir:value "hasValue() or (children().count() > id.count())" ];
+         fhir:ElementDefinition.constraint.xpath [ fhir:value "@value|f:*|h:div" ];
+         fhir:ElementDefinition.constraint.source [
+           fhir:value "http://hl7.org/fhir/StructureDefinition/Element";
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+         ]
+       ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.binding [
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName" ];
+           fhir:Extension.valueString [ fhir:value "ProcedureType" ]
+         ];
+         fhir:ElementDefinition.binding.strength [ fhir:value "example" ];
+         fhir:ElementDefinition.binding.description [ fhir:value "Example procedure type codes." ];
+         fhir:ElementDefinition.binding.valueSet [
+           fhir:value "https://swasth-digital-health-foundation.github.io/standards/output/ValueSet-procedure-type-description.html";
+           fhir:link <https://swasth-digital-health-foundation.github.io/standards/output/ValueSet-procedure-type-description.html>
+         ]
+       ]
+     ], [
+       fhir:index 9;
+       fhir:Element.id [ fhir:value "Claim.procedure.procedure[x]" ];
+       fhir:ElementDefinition.path [ fhir:value "Claim.procedure.procedure[x]" ];
+       fhir:ElementDefinition.short [ fhir:value "Specific clinical procedure" ];
+       fhir:ElementDefinition.definition [ fhir:value "The code or reference to a Procedure resource which identifies the clinical intervention performed." ];
+       fhir:ElementDefinition.requirements [ fhir:value "This identifies the actual clinical procedure." ];
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Claim.procedure.procedure[x]" ];
+         fhir:ElementDefinition.base.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "CodeableConcept" ]
+       ], [
+         fhir:index 1;
+         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
+         fhir:ElementDefinition.type.targetProfile [
+           fhir:value "http://hl7.org/fhir/StructureDefinition/Procedure";
+           fhir:index 0;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Procedure>
+         ]
+       ];
+       fhir:ElementDefinition.constraint [
+         fhir:index 0;
+         fhir:ElementDefinition.constraint.key [ fhir:value "ele-1" ];
+         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
+         fhir:ElementDefinition.constraint.human [ fhir:value "All FHIR elements must have a @value or children" ];
+         fhir:ElementDefinition.constraint.expression [ fhir:value "hasValue() or (children().count() > id.count())" ];
+         fhir:ElementDefinition.constraint.xpath [ fhir:value "@value|f:*|h:div" ];
+         fhir:ElementDefinition.constraint.source [
+           fhir:value "http://hl7.org/fhir/StructureDefinition/Element";
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+         ]
+       ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.binding [
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName" ];
+           fhir:Extension.valueString [ fhir:value "ICD10_Procedures" ]
+         ];
+         fhir:ElementDefinition.binding.strength [ fhir:value "example" ];
+         fhir:ElementDefinition.binding.description [ fhir:value "Procedure codes." ];
+         fhir:ElementDefinition.binding.valueSet [
+           fhir:value "https://icd.who.int/browse10/2010/en";
+           fhir:link <https://icd.who.int/browse10/2010/en>
+         ]
+       ]
+     ], [
+       fhir:index 10;
+       fhir:Element.id [ fhir:value "Claim.item.category" ];
+       fhir:ElementDefinition.path [ fhir:value "Claim.item.category" ];
+       fhir:ElementDefinition.short [ fhir:value "Benefit classification" ];
+       fhir:ElementDefinition.definition [ fhir:value "Code to identify the general type of benefits under which products and services are provided." ];
+       fhir:ElementDefinition.comment [ fhir:value "Examples include Medical Care, Periodontics, Renal Dialysis, Vision Coverage." ];
+       fhir:ElementDefinition.requirements [ fhir:value "Needed in the processing of institutional claims as this allows the insurer to determine whether a facial X-Ray is for dental, orthopedic, or facial surgery purposes." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Claim.item.category" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "CodeableConcept" ]
+       ];
+       fhir:ElementDefinition.constraint [
+         fhir:index 0;
+         fhir:ElementDefinition.constraint.key [ fhir:value "ele-1" ];
+         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
+         fhir:ElementDefinition.constraint.human [ fhir:value "All FHIR elements must have a @value or children" ];
+         fhir:ElementDefinition.constraint.expression [ fhir:value "hasValue() or (children().count() > id.count())" ];
+         fhir:ElementDefinition.constraint.xpath [ fhir:value "@value|f:*|h:div" ];
+         fhir:ElementDefinition.constraint.source [
+           fhir:value "http://hl7.org/fhir/StructureDefinition/Element";
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+         ]
+       ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.binding [
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName" ];
+           fhir:Extension.valueString [ fhir:value "BenefitCategory" ]
+         ];
+         fhir:ElementDefinition.binding.strength [ fhir:value "example" ];
+         fhir:ElementDefinition.binding.description [ fhir:value "Benefit categories such as: oral-basic, major, glasses." ];
+         fhir:ElementDefinition.binding.valueSet [
+           fhir:value "https://swasth-digital-health-foundation.github.io/standards/output/ValueSet-claim-service-categories.html";
+           fhir:link <https://swasth-digital-health-foundation.github.io/standards/output/ValueSet-claim-service-categories.html>
          ]
        ]
      ]
