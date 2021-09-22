@@ -2233,7 +2233,7 @@
           }
         ],
         "isModifier": false,
-        "isSummary": true,
+        "isSummary": false,
         "mapping": [
           {
             "identity": "workflow",
