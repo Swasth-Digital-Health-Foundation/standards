@@ -36,14 +36,30 @@ paths:
          
          Providers should send the following details in the request body while making a call for coverage eligibility check:
          1. A set of attributes that provide transport, security, message integrity and summary information about the message being exchanged. This information is used by the HCX gateway for routing the request and auditing purposes.
-         2. Payload containing the CoverageEligibilityRequest domain entity (eObject) as prescribed for the use case by the [domain specifications](https://docs.swasth.app/hcx-specifications/hcx-domain-specifications/domain-data-specifications/domain-data-models/eobjects#coverage-eligibility-request). This needs to be encrypted so that HCX cannot read this and can be decrypted & processed only by the intended recipient. The CoverageEligibilityRequest document resource should be created as per the [FHIR profiles](https://swasth-digital-health-foundation.github.io/standards/output/StructureDefinition-CoverageEligibilityRequestDocument.html) defined by HCX, which is an extension of the HL7 FHIR standard.
+         2. Domain payload containing the CoverageEligibilityRequest domain entity (eObject) as prescribed for the use case by the [domain specifications](https://docs.swasth.app/hcx-specifications/hcx-domain-specifications/domain-data-specifications/domain-data-models/eobjects#coverage-eligibility-request). This needs to be encrypted so that HCX cannot read this and can be decrypted & processed only by the intended recipient.
         
-        After the CoverageEligibilityRequest document FHIR resource is created as per the HCX FHIR profile, it should be encrypted and sent in the request body along with the set of attributes that are open for consumption by the HCX gateway. 
+        The domain payload should be a [CoverageEligibilityRequest document](https://docs.swasth.app/hcx-specifications/hcx-domain-specifications/domain-data-specifications/domain-data-models/eobjects#coverage-eligibility-request) resource adhering to [HCX FHIR profile definitions](https://swasth-digital-health-foundation.github.io/standards/output/StructureDefinition-CoverageEligibilityRequestDocument.html) (created by extending the HL7 FHIR standard):
+        
+          - The document composition type should be a code representing Coverage Eligibility Request document type.
+          - The document composition should have a single entry refering to a CoverageEligibilityRequest resource.
+          - The document must contain a [CoverageEligibilityRequest](https://swasth-digital-health-foundation.github.io/standards/output/StructureDefinition-CoverageEligibilityRequest.html) resource as the HCX FHIR profile definition.
+          - The document should contain a Patient resource with minimal required information about the patient.
+          - The document should contain one or more Coverage resources with minimal information of the policy about which the information is requested.
         
         
-        The request data (open attributes and the FHIR document) should be sent in the form of a JWE token ([RFC-7516](https://datatracker.ietf.org/doc/html/rfc7516)) serialized using [Flattened JSON Serialization](https://datatracker.ietf.org/doc/html/rfc7516#section-7.2.2).
+        The CoverageEligibilityRequest document FHIR resource created as per the HCX FHIR profile should be encrypted and sent in the request body along with the set of attributes that are open for consumption by the HCX gateway. 
         
-        Refer to the JWEPayload schema definition for details & structure of the JWE token that has to be sent as the request payload in this API.
+        
+        The request body (open attributes and the FHIR document) should be sent in the form of a JWE token ([RFC-7516](https://datatracker.ietf.org/doc/html/rfc7516)) serialized using [Flattened JSON Serialization](https://datatracker.ietf.org/doc/html/rfc7516#section-7.2.2).
+        
+        Refer to the JWEPayload schema definition for details & structure of the JWE token that has to be sent as the request body in this API.
+        
+        
+        The response to this API could be one of the following:
+          1. A successful accepted response from the HCX gateway if the strucuture of the request is valid and the validation of open attributes (protocol headers) is successful.
+          2. An error response if any of the validations fail.
+          
+        The provider (who made the Coverage Eligibility Request API call) should expect an incoming Coverage Eligibility Response API call asynchronously if the request is successfully accepted by the HCX gateway. The response may either contain the requested coverage details or error details in case of any errors during the processing.
         
       requestBody:
         content:
