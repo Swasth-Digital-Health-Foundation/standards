@@ -32,15 +32,25 @@ paths:
       tags:
         - Coverage Eligibility APIs
       description: >-
-        This API is for the providers to post coverage eligibility
-        request to the HCX gateway and for HCX gateway to route the same request to payors. <br/><br/>
-        Payload for this API has to be created as per the [Coverage Eligibility Request document](https://swasth-digital-health-foundation.github.io/standards/output/StructureDefinition-CoverageEligibilityRequestDocument.html) defined in HCX Specifications and serialized as per the [guidelines](https://docs.swasth.app/hcx-specifications/hcx-technical-specifications/open-protocol/data-security-and-privacy/message-security-and-integrity) in HCX Specifications.
+        This API is for providers to check the eligibility of a beneficiary with the payors via HCX. This API should be used to request whether the patient's coverage is in force, whether it is valid at this or specified date, and/or for requesting the benefits & plan details associated with the coverage. 
+         
+         Providers should send the following details in the request body while making a call for coverage eligibility check:
+         1. A set of attributes that provide transport, security, message integrity and summary information about the message being exchanged. This information is used by the HCX gateway for routing the request and auditing purposes.
+         2. Payload containing the CoverageEligibilityRequest domain entity (eObject) as prescribed for the use case by the [domain specifications](https://docs.swasth.app/hcx-specifications/hcx-domain-specifications/domain-data-specifications/domain-data-models/eobjects#coverage-eligibility-request). This needs to be encrypted so that HCX cannot read this and can be decrypted & processed only by the intended recipient. The CoverageEligibilityRequest document resource should be created as per the [FHIR profiles](https://swasth-digital-health-foundation.github.io/standards/output/StructureDefinition-CoverageEligibilityRequestDocument.html) defined by HCX, which is an extension of the HL7 FHIR standard.
+        
+        After the CoverageEligibilityRequest document FHIR resource is created as per the HCX FHIR profile, it should be encrypted and sent in the request body along with the set of attributes that are open for consumption by the HCX gateway. 
+        
+        
+        The request data (open attributes and the FHIR document) should be sent in the form of a JWE token ([RFC-7516](https://datatracker.ietf.org/doc/html/rfc7516)) serialized using [Flattened JSON Serialization](https://datatracker.ietf.org/doc/html/rfc7516#section-7.2.2).
+        
+        Refer to the JWEPayload schema definition for details & structure of the JWE token that has to be sent as the request payload in this API.
+        
       requestBody:
         content:
           application/json:
             schema:
               allOf:
-                - $ref: '#/components/schemas/Payload'
+                - $ref: '#/components/schemas/JWEPayload'
       responses:
         '202':
           description: Accepted
@@ -80,7 +90,7 @@ paths:
           application/json:
             schema:
               allOf:
-                - $ref: '#/components/schemas/Payload'
+                - $ref: '#/components/schemas/JWEPayload'
       responses:
         '202':
           description: Accepted
@@ -121,7 +131,7 @@ paths:
           application/json:
             schema:
               allOf:
-                - $ref: '#/components/schemas/Payload'
+                - $ref: '#/components/schemas/JWEPayload'
       responses:
         '202':
           description: Accepted
@@ -161,7 +171,7 @@ paths:
           application/json:
             schema:
               allOf:
-                - $ref: '#/components/schemas/Payload'
+                - $ref: '#/components/schemas/JWEPayload'
       responses:
         '202':
           description: Accepted
@@ -202,7 +212,7 @@ paths:
           application/json:
             schema:
               allOf:
-                - $ref: '#/components/schemas/Payload'
+                - $ref: '#/components/schemas/JWEPayload'
       responses:
         '202':
           description: Accepted
@@ -242,7 +252,7 @@ paths:
           application/json:
             schema:
               allOf:
-                - $ref: '#/components/schemas/Payload'
+                - $ref: '#/components/schemas/JWEPayload'
       responses:
         '202':
           description: Accepted
@@ -283,7 +293,7 @@ paths:
           application/json:
             schema:
               allOf:
-                - $ref: '#/components/schemas/Payload'
+                - $ref: '#/components/schemas/JWEPayload'
       responses:
         '202':
           description: Accepted
@@ -323,7 +333,7 @@ paths:
           application/json:
             schema:
               allOf:
-                - $ref: '#/components/schemas/Payload'
+                - $ref: '#/components/schemas/JWEPayload'
       responses:
         '202':
           description: Accepted
@@ -364,7 +374,7 @@ paths:
           application/json:
             schema:
               allOf:
-                - $ref: '#/components/schemas/Payload'
+                - $ref: '#/components/schemas/JWEPayload'
       responses:
         '202':
           description: Accepted
@@ -404,7 +414,7 @@ paths:
           application/json:
             schema:
               allOf:
-                - $ref: '#/components/schemas/Payload'
+                - $ref: '#/components/schemas/JWEPayload'
       responses:
         '202':
           description: Accepted
@@ -445,7 +455,7 @@ paths:
           application/json:
             schema:
               allOf:
-                - $ref: '#/components/schemas/Payload'
+                - $ref: '#/components/schemas/JWEPayload'
       responses:
         '202':
           description: Accepted
@@ -485,7 +495,7 @@ paths:
           application/json:
             schema:
               allOf:
-                - $ref: '#/components/schemas/Payload'
+                - $ref: '#/components/schemas/JWEPayload'
       responses:
         '202':
           description: Accepted
@@ -526,7 +536,7 @@ paths:
           application/json:
             schema:
               allOf:
-                - $ref: '#/components/schemas/Payload'
+                - $ref: '#/components/schemas/JWEPayload'
       responses:
         '202':
           description: Accepted
@@ -566,7 +576,7 @@ paths:
           application/json:
             schema:
               allOf:
-                - $ref: '#/components/schemas/Payload'
+                - $ref: '#/components/schemas/JWEPayload'
       responses:
         '202':
           description: Accepted
@@ -597,7 +607,7 @@ paths:
       
 components:
   schemas:
-    Payload:
+    JWEPayload:
       required:
         - protected
         - encrypted_key
@@ -606,141 +616,82 @@ components:
         - ciphertext
         - tag
       type: object
+      description: All the HCX protocol APIs require the request body to sent in JWE format (as defined in [RFC-7516](https://datatracker.ietf.org/doc/html/rfc7516)) and formatted using the [Flattened JWE JSON Serialization](https://datatracker.ietf.org/doc/html/rfc7516#section-7.2.2) syntax. Each JWE token should contain the following elements.
+      
+        1. Protected headers (**protected**) - A set of attributes that provide transport, security, message integrity and summary information about the message being exchanged.
+        
+        2. JWE element (**encrypted_key**) - Content Encryption Key.
+        
+        3. JWE element (**iv**) - Initialisation Vector for the algorithm. 
+        
+        4. JWE element (**aad**) - Additional authentication data.
+        
+        5. Encrypted Payload (**ciphertext**) - Payload containing the relevant domain entity (eObject) as prescribed for the use case by the domain specifications. This needs to be encrypted so that HCX cannot read this.
+        
+        6. Authentication tag (**tag**) - Digital signature on the protected header and the payload of the message to ensure its integrity.
+        
+        
+        Detailed steps on how to construct the JWE token are provided in this [section](https://docs.swasth.app/hcx-specifications/hcx-technical-specifications/open-protocol/data-security-and-privacy/message-security-and-integrity#message-encryption) of the HCX specifications.
+      
       properties:
         protected:
           type: string
-          description: The protected header of the payload should be Base64 encoded value of JOSE Header (should be {"alg":"RSA-OAEP","enc":"A256GCM"} in this version), HCX protocol headers (as defined in the HCX - Tech Specs document) and HCX domain headers (as defined in the HCX - Domain Specs document for the specific API use case).
+          description: Protected headers contain information that helps HCX gateway to identify senders, receivers of the message, perform integrity checks, audits and routing functionality. Header values are posted in clear and must never contain any Personally Identifiable Information (PII) about the patient or any person. HCX protocol uses JWE protected headers for such information to ensure these are not tampered with by the intermediate gateways. Protected Headers for HCX will be the union of the following three header categories.
+          
+            1. JOSE Headers - JSON Web encryption header as per [RFC7516](https://datatracker.ietf.org/doc/html/rfc7516#section-4). For HCX V1, this is proposed to be fixed to {"alg":"RSA-OAEP","enc":"A256GCM"}
+            
+            2. HCX Protocol Headers - Private headers as per [RFC7516 section 4.3](https://datatracker.ietf.org/doc/html/rfc7516#section-4.3). List of header values that are allowed in HCX APIs and their details are defined in this [section](https://docs.swasth.app/hcx-specifications/hcx-technical-specifications/open-protocol/key-components-building-blocks#hcx-protocol-headers) of HCX Specifications. 
+            
+            3. HCX Domain Headers - JSON object containing a map of domain-specific header values as proposed in domain data specifications for each entity. E.g. For claims use cases, domain specs may decide to populate the total claimed amount, list of diagnostics/procedures. Please note that all such parameter names must follow the naming convention _x-hcx-<use_case_name>-<parameter_name>_.
+            
+            
+            Overall, the protected headers should be created as - <br/>
+            JWE Protected Header = BASE64URL(UTF8( (JOSE headers) + (HCX Protocol Headers) + (HCX Domain Headers) ))
+            
           example: "eyJlbmMiOiJBMTI4Q0JDLUhTMjU2In0"
         encrypted_key:
           type: string
-          description: Base64 encoded value of the encrypted random CEK value using RSA-OAEP algorithm.
+          description: The JWE encrypted key should be generated using the following process
+            
+            1. A random content encryption key (CEK) has to be generated by the sender. 
+            
+            2. Encrypt the CEK with the recipient's public key using the RSAES-OAEP algorithm to produce the JWE Encrypted Key.
+            
+            3. Base64url-encode the JWE Encrypted Key.
+          
+            
+            The encrypted & base64 encoded key should be set as the encrypted_key in the JWE token and also used for encrypting the domain payload (i.e. the FHIR resource) to be sent in the request. The recipient shall decrypt the content encryption key using their private key (corresponding to the public key used by the sender) and use the decrypted CEK for decrypting the domain payload. 
           example: "6KB707dM9YTIgHtLvtgWQ8mKwboJW3of9locizkDTHzBC2IlrT1oOQ"
-        aad:
-          type: string
-          description: Base64 encoded value of the Additional Authenticated Data that will be used in the encryption of the payload data.
-          example: "eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ"
         iv:
           type: string
-          description: Base64 encoded value of the initialization vector that will be used in the encryption of the payload data.
+          description: Initialization vector (_iv_) is needed in the encryption process of the payload and for the recipient (along with the encrypted_key and aad) to subsequently decrypt the payload. The "iv" should be created by generating a random JWE initialization vector and Base64url-encoding the JWE initialization vector. 
           example: "AxY8DCtDaGlsbGljb3RoZQ"
+        aad:
+          type: string
+          description: Similar to "iv", Additional Authenticated Data (aad) is also needed for encryption and decryption of the payload data. The value of "aad" should be created in the same way the "protected" header is created - 
+          
+          
+            aad = ASCII(BASE64URL(UTF8(JWE Protected Header)))
+            
+          example: "eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ"
         ciphertext:
           type: string
-          description: Usecase specific JSON payload (defined in the HCX - Domain Specs document) should be encrypted using the A256GCM algorithm, content encryption key (CEK), initialization vector (iv) and additional authenticated data (AAD). This encrypted payload should be Base64 encoded and passed in as ciphertext in the request body.
+          description: _ciphertext_ contains the domain payload (that has to  be sent to the recipient) in encrypted form. Usecase specific   JSON payload defined in the [eObjects](https://docs.swasth.app/hcx-specifications/hcx-domain-specifications/domain-data-specifications/domain-data-models/eobjects) section of the HCX specifications (i.e. the FHIR resource defined for the use case, e.g. CoverageEligibilityRequest document for coverage eligibility request API) should be encrypted as per JWE specification and sent as the _ciphertext_ in the request.
+          
+          
+            Steps to create the ciphertext element - 
+            
+            1. Create the JSON payload for the API request as per the [eObjects specification](https://docs.swasth.app/hcx-specifications/hcx-domain-specifications/domain-data-specifications/domain-data-models/eobjects).
+            
+            2. Perform authenticated encryption on the JSON payload with the AES GCM algorithm using the CEK as the encryption key (_encrypted_key_), the JWE Initialization Vector (_iv_)), and the Additional Authenticated Data value (_aad_), requesting a 128-bit Authentication Tag output. This step outputs a ciphertext and an authentication tag (_tag_).
+            
+            3. Base64url-encode the ciphertext output from the previous step and set it as the _ciphertext_ element in the request body.
+            
           example: "KDlTtXchhZTGufMYmOYGS4HffxPSUrfmqCHXaI9wOGY"
         tag:
           type: string
-          description: Base64 encoded value of the authentication tag generated as an output of the payload encryption algorithm.
+          description: The authentication tag generated as an output of the payload encryption algorithm (used for creating the _ciphertext_) should be sent as the _tag_ element in the request body. This tag is required for decrypting the encrypted payload.
           example: "Mz-VPPyU4RlcuYv1IwIvzw"
-  
-    ProtocolHeader:
-      required:
-        - x-hcx-sender_code
-        - x-hcx-recipient_code
-        - x-hcx-request_id
-        - x-hcx-correlation_id
-        - x-hcx-timestamp
-        - x-hcx-status
-        - jws_header
-        - jwe_header
-      type: object
-      properties:
-        x-hcx-sender_code:
-          type: string
-          description: Registry code of the sender (e.g. provider or payer)
-          example: "PROVIDER01@HCX01"
-        x-hcx-recipient_code:
-          type: string
-          description: Registry code of the recipient (e.g. provider or payer)
-          example: "PAYOR01@HCX01"
-        x-hcx-request_id:
-          type: string
-          description: Sender generated unique id for each originating request.
-          format: uuid
-        x-hcx-correlation_id:
-          type: string
-          description: Unique id of the conversation (a collection of related messages). It may be chosen as the message_id in the original sender’s (initiator’s) system. For return messages (asynchronous responses) responders are expected to populate with the one in the request. 
-          format: uuid
-        x-hcx-workflow_id:
-          type: string
-          description: Unique id of workflow that may span over a series of message exchanges, e.g. an eligibility check, a preauth and then claims submission for a patient may be linked with such an id from the providers initiate request on check eligibility.
-          format: uuid
-        x-hcx-timestamp:
-          type: string
-          description: Unix timestamp when the request is sent.
-          example: "1629057611000"
-        x-hcx-debug_flag:
-          type: string
-          description: Request to the server to include debug information. Useful in the time of integration testing and prod debugging. However server(s) may choose to ignore this flag based on their policy.
-          enum: ["Error", "Info", "Debug"]
-        x-hcx-status:
-          type: string
-          description: Operational status of the message. Depending on the leg of the message, it would be one of the defined values in the enum.
-          enum: ["request.initiate", "request.retry", "response.success", "response.fail", "response.sender_not_supported", "response.unhandled", "response.request_retry"]
-        x-hcx-error_details:
-          type: object
-          description: Expected to be used for providing details of the status. Will be specially useful in scenarios where operational status indicates irrecoverable error.
-          properties:
-            code:
-              type: string
-              description: error code from the system - expected to be namespaced for better readability
-            message:
-              type: string
-              description: Short description of the detail
-            trace:
-              type: string
-              description: Long description supporting the Code 
-          additionalProperties: true
-        x-hcx-debug_details:
-          type: object
-          description: Expected to be used for providing details of the status. Will be specially useful in debugging scenarios.
-          properties:
-            code:
-              type: string
-              description: info or debug code from the system - expected to be namespaced for better readability
-            message:
-              type: string
-              description: Short description of the detail
-            trace:
-              type: string
-              description: Long description supporting the Code 
-          additionalProperties: true
-        jws_header:
-          type: object
-          description: JSON Web Signature header as per RFC7515. For the current version, this is proposed to be fixed to {"typ":"JWT", "alg":"RS256"}
-          properties:
-            typ:
-              type: string
-              enum: ["JWT"]
-            alg:
-              type: string
-              enum: ["RS256"]
-          additionalProperties: false
-        jwe_header:
-          type: object
-          description: JSON Web Encryption header as per RFC7516. For the current version, this is proposed to be fixed to {"alg":"RSA-OAEP","enc":"A256GCM"}
-          properties:
-            alg:
-              type: string
-              enum: ["RSA-OAEP"]
-            enc:
-              type: string
-              enum: ["A256GCM"]
-          additionalProperties: false
-          
-    JOSEHeader:
-      required:
-        - alg
-        - enc
-      type: object
-      description: JSON Web Encryption header as per RFC7516. For the current version, this is proposed to be fixed to {"alg":"RSA-OAEP","enc":"A256GCM"}
-      properties:
-        alg:
-          type: string
-          enum: ["RSA-OAEP"]
-        enc:
-          type: string
-          enum: ["A256GCM"]
-      additionalProperties: true
       
     ErrorResponse:
       required:
