@@ -22,10 +22,14 @@ tags:
       APIs covering the Coverage Eligibility request & response use cases
   - name: Claims APIs
     description: >-
-      APIs for Pre-Auth & Claim submission workflows and search
+      APIs for Pre-Determination, Pre-Auth & Claim submission workflows and search
   - name: Payment APIs
     description: >-
       APIs for sending payment notices, reconcilation and for querying payment status
+  - name: Communication APIs
+    description: >-
+      APIs for sending communication requests and receiving responses to the communication requests
+      
 paths:
   /coverageeligibility/check:
     post:
@@ -172,6 +176,87 @@ paths:
       security:
       - bearer_auth: []
  
+  /predetermination/submit:
+    post:
+      tags:
+        - Claims APIs
+      description: >-
+        This API is for providers to submit pre-determination requests (and resubmit updated request) to HCX gateway and for HCX gateway to route the same request to payors. <br/><br/>
+        Payload for this API has to be created as per the [Claim Request Document](https://swasth-digital-health-foundation.github.io/standards/output/StructureDefinition-ClaimRequestDocument.html) defined in HCX Specifications and serialized as per the [guidelines](https://docs.swasth.app/hcx-specifications/hcx-technical-specifications/open-protocol/data-security-and-privacy/message-security-and-integrity) in HCX Specifications.
+      requestBody:
+        content:
+          application/json:
+            schema:
+              allOf:
+                - $ref: '#/components/schemas/JWEPayload'
+      responses:
+        '202':
+          description: Accepted
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SuccessResponse'
+        '400':
+          description: Request Validation failed
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '404':
+          description: Requested resource was not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '500':
+          description: Downstream systems down/unhandled exceptions.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+      security:
+      - bearer_auth: []
+  /predetermination/on_submit:
+    post:
+      tags:
+        - Claims APIs
+      description: >-
+        This is the callback API on HCX gateways and on Provider systems which will be called by Payor systems and HCX gateways to return the response for Pre-Determination requests. <br/><br/>
+        Payload for this API has to be created as per the [Claim Response Document](https://swasth-digital-health-foundation.github.io/standards/output/StructureDefinition-ClaimResponseDocument.html) defined in HCX Specifications and serialized as per the [guidelines](https://docs.swasth.app/hcx-specifications/hcx-technical-specifications/open-protocol/data-security-and-privacy/message-security-and-integrity) in HCX Specifications.
+      requestBody:
+        content:
+          application/json:
+            schema:
+              allOf:
+                - $ref: '#/components/schemas/JWEPayload'
+      responses:
+        '202':
+          description: Accepted
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SuccessResponse'
+        '400':
+          description: Request Validation failed
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '404':
+          description: Requested resource was not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '500':
+          description: Downstream systems down/unhandled exceptions.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+      security:
+      - bearer_auth: []
+ 
   /preauth/submit:
     post:
       tags:
@@ -253,87 +338,6 @@ paths:
       security:
       - bearer_auth: []
       
-  /preauth/search:
-    post:
-      tags:
-        - Claims APIs
-      description: >-
-        This API is for providers to query for status of Pre-Authorisation requests submitted by them. This API is available on HCX gateways to accept the request from providers and on Payor systems to receive the request from HCX gateways. <br/><br/>
-        Payload for this API has to be created as per the Pre-Authorization search object defined in the HCX - Domain Specs document and serialized as per the [guidelines](https://docs.swasth.app/hcx-specifications/hcx-technical-specifications/open-protocol/data-security-and-privacy/message-security-and-integrity) in HCX Specifications.
-      requestBody:
-        content:
-          application/json:
-            schema:
-              allOf:
-                - $ref: '#/components/schemas/JWEPayload'
-      responses:
-        '202':
-          description: Accepted
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/SuccessResponse'
-        '400':
-          description: Request Validation failed
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ErrorResponse'
-        '404':
-          description: Requested resource was not found
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ErrorResponse'
-        '500':
-          description: Downstream systems down/unhandled exceptions.
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ErrorResponse'
-      security:
-      - bearer_auth: []
-  /preauth/on_search:
-    post:
-      tags:
-        - Claims APIs
-      description: >-
-        This is the callback API on HCX gateways and Provider systems to receive the response for PreAuth search requests. <br/><br/>
-        Payload for this API has to be created as per the [Claim Response Document](https://swasth-digital-health-foundation.github.io/standards/output/StructureDefinition-ClaimResponseDocument.html) defined in HCX Specifications and serialized as per the [guidelines](https://docs.swasth.app/hcx-specifications/hcx-technical-specifications/open-protocol/data-security-and-privacy/message-security-and-integrity) in HCX Specifications.
-      requestBody:
-        content:
-          application/json:
-            schema:
-              allOf:
-                - $ref: '#/components/schemas/JWEPayload'
-      responses:
-        '202':
-          description: Accepted
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/SuccessResponse'
-        '400':
-          description: Request Validation failed
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ErrorResponse'
-        '404':
-          description: Requested resource was not found
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ErrorResponse'
-        '500':
-          description: Downstream systems down/unhandled exceptions.
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ErrorResponse'
-      security:
-      - bearer_auth: [] 
-      
   /claim/submit:
     post:
       tags:
@@ -380,87 +384,6 @@ paths:
         - Claims APIs
       description: >-
         This is the callback API on HCX gateways and on Provider systems which will be called by Payor systems and HCX gateways to return the response for Claim requests. <br/><br/>
-        Payload for this API has to be created as per the [Claim Response Document](https://swasth-digital-health-foundation.github.io/standards/output/StructureDefinition-ClaimResponseDocument.html) defined in HCX Specifications and serialized as per the [guidelines](https://docs.swasth.app/hcx-specifications/hcx-technical-specifications/open-protocol/data-security-and-privacy/message-security-and-integrity) in HCX Specifications.
-      requestBody:
-        content:
-          application/json:
-            schema:
-              allOf:
-                - $ref: '#/components/schemas/JWEPayload'
-      responses:
-        '202':
-          description: Accepted
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/SuccessResponse'
-        '400':
-          description: Request Validation failed
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ErrorResponse'
-        '404':
-          description: Requested resource was not found
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ErrorResponse'
-        '500':
-          description: Downstream systems down/unhandled exceptions.
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ErrorResponse'
-      security:
-      - bearer_auth: []
-      
-  /claim/search:
-    post:
-      tags:
-        - Claims APIs
-      description: >-
-        This API is for providers to query for status of Claim requests submitted by them. This API is available on HCX gateways to accept the request from providers and on Payor systems to receive the request from HCX gateways. <br/><br/>
-        Payload for this API has to be created as per the Claim Search object defined in the HCX - Domain Specs document and serialized as per the [guidelines](https://docs.swasth.app/hcx-specifications/hcx-technical-specifications/open-protocol/data-security-and-privacy/message-security-and-integrity) in the HCX Specifications
-      requestBody:
-        content:
-          application/json:
-            schema:
-              allOf:
-                - $ref: '#/components/schemas/JWEPayload'
-      responses:
-        '202':
-          description: Accepted
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/SuccessResponse'
-        '400':
-          description: Request Validation failed
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ErrorResponse'
-        '404':
-          description: Requested resource was not found
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ErrorResponse'
-        '500':
-          description: Downstream systems down/unhandled exceptions.
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ErrorResponse'
-      security:
-      - bearer_auth: []
-  /claim/on_search:
-    post:
-      tags:
-        - Claims APIs
-      description: >-
-        This is the callback API on HCX gateways and Provider systems to receive the response for Claim search requests. <br/><br/>
         Payload for this API has to be created as per the [Claim Response Document](https://swasth-digital-health-foundation.github.io/standards/output/StructureDefinition-ClaimResponseDocument.html) defined in HCX Specifications and serialized as per the [guidelines](https://docs.swasth.app/hcx-specifications/hcx-technical-specifications/open-protocol/data-security-and-privacy/message-security-and-integrity) in HCX Specifications.
       requestBody:
         content:
@@ -577,13 +500,13 @@ paths:
       security:
       - bearer_auth: []
   
-  /paymentnotice/search:
+  /communication/request:
     post:
       tags:
-        - Payment APIs
+        - Communication APIs
       description: >-
-        This API is for providers to query for Payment status for processed claims. This API is available on HCX gateways to accept the request from providers and on Payor systems to receive the request from HCX gateways. <br/><br/>
-        Payload for this API has to be created as per the PaymentNotice search object defined in HCX Specifications and serialized as JWE json as per the [guidelines](https://docs.swasth.app/hcx-specifications/hcx-technical-specifications/open-protocol/data-security-and-privacy/message-security-and-integrity) in HCX Specifications.
+        This API is for payors to raise a communication requests to HCX gateway and for HCX gateway to route the same request to providers during the claims cycle. <br/><br/>
+        Payload for this API has to be created as per the Communication Request Document defined in HCX Specifications and serialized as per the [guidelines](https://docs.swasth.app/hcx-specifications/hcx-technical-specifications/open-protocol/data-security-and-privacy/message-security-and-integrity) in HCX Specifications.
       requestBody:
         content:
           application/json:
@@ -617,13 +540,13 @@ paths:
                 $ref: '#/components/schemas/ErrorResponse'
       security:
       - bearer_auth: []
-  /paymentnotice/on_search:
+  /communication/on_request:
     post:
       tags:
-        - Payment APIs
+        - Communication APIs
       description: >-
-        This is the callback API on HCX gateways and Provider systems to receive the response for Payment search requests. <br/><br/>
-        Payload for this API has to be created as per the [Payment Notice Document](https://swasth-digital-health-foundation.github.io/standards/output/StructureDefinition-PaymentNoticeDocument.html) defined in HCX Specifications and serialized as JWE json as per the [guidelines](https://docs.swasth.app/hcx-specifications/hcx-technical-specifications/open-protocol/data-security-and-privacy/message-security-and-integrity) in the HCX Specifications.
+        This is the callback API on HCX gateways and on Payor systems which will be called by Provider systems and HCX gateways to return the response for Communication requests. <br/><br/>
+        Payload for this API has to be created as per the Communication defined in HCX Specifications and serialized as per the [guidelines](https://docs.swasth.app/hcx-specifications/hcx-technical-specifications/open-protocol/data-security-and-privacy/message-security-and-integrity) in HCX Specifications.
       requestBody:
         content:
           application/json:
@@ -657,7 +580,7 @@ paths:
                 $ref: '#/components/schemas/ErrorResponse'
       security:
       - bearer_auth: []
-      
+  
 components:
   schemas:
     JWEPayload:
@@ -688,20 +611,7 @@ components:
       
       properties:
         protected:
-          type: string
-          description: Protected headers contain information that helps HCX gateway to identify senders, receivers of the message, perform integrity checks, audits and routing functionality. Header values are posted in clear and must never contain any Personally Identifiable Information (PII) about the patient or any person. HCX protocol uses JWE protected headers for such information to ensure these are not tampered with by the intermediate gateways. Protected Headers for HCX will be the union of the following three header categories.
-          
-            1. JOSE Headers - JSON Web encryption header as per [RFC7516](https://datatracker.ietf.org/doc/html/rfc7516#section-4). For HCX V1, this is proposed to be fixed to {"alg":"RSA-OAEP","enc":"A256GCM"}
-            
-            2. HCX Protocol Headers - Private headers as per [RFC7516 section 4.3](https://datatracker.ietf.org/doc/html/rfc7516#section-4.3). List of header values that are allowed in HCX APIs and their details are defined in this [section](https://docs.swasth.app/hcx-specifications/hcx-technical-specifications/open-protocol/key-components-building-blocks#hcx-protocol-headers) of HCX Specifications. 
-            
-            3. HCX Domain Headers - JSON object containing a map of domain-specific header values as proposed in domain data specifications for each entity. E.g. For claims use cases, domain specs may decide to populate the total claimed amount, list of diagnostics/procedures. Please note that all such parameter names must follow the naming convention _x-hcx-<use_case_name>-<parameter_name>_.
-            
-            
-            Overall, the protected headers should be created as - <br/>
-            JWE Protected Header = BASE64URL(UTF8( (JOSE headers) + (HCX Protocol Headers) + (HCX Domain Headers) ))
-            
-          example: "eyJlbmMiOiJBMTI4Q0JDLUhTMjU2In0"
+          $ref: '#/components/schemas/ProtectedHeader'
         encrypted_key:
           type: string
           description: The JWE encrypted key should be generated using the following process
@@ -745,7 +655,118 @@ components:
           type: string
           description: The authentication tag generated as an output of the payload encryption algorithm (used for creating the _ciphertext_) should be sent as the _tag_ element in the request body. This tag is required for decrypting the encrypted payload.
           example: "Mz-VPPyU4RlcuYv1IwIvzw"
+    
+    ProtectedHeader:
+      type: string
+      description: Protected headers contain information that helps HCX gateway to identify senders, receivers of the message, perform integrity checks, audits and routing functionality. Header values are posted in clear and must never contain any Personally Identifiable Information (PII) about the patient or any person. HCX protocol uses JWE protected headers for such information to ensure these are not tampered with by the intermediate gateways. Protected Headers for HCX will be the union of the following three header categories.
+          
+            1. JOSE Headers - JSON Web encryption header as per [RFC7516](https://datatracker.ietf.org/doc/html/rfc7516#section-4). For HCX V1, this is proposed to be fixed to {"alg":"RSA-OAEP","enc":"A256GCM"}. Refer to _JOSEHeader_ schema definition for details.
+            
+            2. HCX Protocol Headers - Private headers as per [RFC7516 section 4.3](https://datatracker.ietf.org/doc/html/rfc7516#section-4.3). List of header values that are allowed in HCX APIs and their details are defined in this [section](https://docs.swasth.app/hcx-specifications/hcx-technical-specifications/open-protocol/key-components-building-blocks#hcx-protocol-headers) of HCX Specifications. Refer to _ProtocolHeader_ schema definition for details.
+            
+            3. HCX Domain Headers - JSON object containing a map of domain-specific header values as proposed in domain data specifications for each entity. E.g. For claims use cases, domain specs may decide to populate the total claimed amount, list of diagnostics/procedures. Please note that all such parameter names must follow the naming convention _x-hcx-<use_case_name>-<parameter_name>_. Refer to _DomainHeaders_ schema definition for details.
+            
+            
+          Overall, the protected headers should be created as - <br/>
+            JWE Protected Header = BASE64URL(UTF8( (JOSE headers) + (HCX Protocol Headers) + (HCX Domain Headers) ))
+      example: "eyJlbmMiOiJBMTI4Q0JDLUhTMjU2In0"
+    
+    JOSEHeader:
+      required:
+        - alg
+        - enc
+      type: object
+      description: JSON Web Encryption header as per RFC7516. For the current version, this is proposed to be fixed to {"alg":"RSA-OAEP","enc":"A256GCM"}
+      properties:
+        alg:
+          type: string
+          enum: ["RSA-OAEP"]
+        enc:
+          type: string
+          enum: ["A256GCM"]
+      additionalProperties: false
       
+    ProtocolHeader:
+      required:
+        - x-hcx-sender_code
+        - x-hcx-recipient_code
+        - x-hcx-request_id
+        - x-hcx-correlation_id
+        - x-hcx-workflow_id
+        - x-hcx-timestamp
+        - x-hcx-status
+      type: object
+      properties:
+        x-hcx-sender_code:
+          type: string
+          description: Registry code of the sender (e.g. provider or payer)
+          example: "PROVIDER01@HCX01"
+        x-hcx-recipient_code:
+          type: string
+          description: Registry code of the recipient (e.g. provider or payer)
+          example: "PAYOR01@HCX01"
+        x-hcx-request_id:
+          type: string
+          description: Sender generated unique id for each API request.
+          format: uuid
+        x-hcx-correlation_id:
+          type: string
+          description: Unique id of the conversation (one pair of asynchronous request/response between two participant systems). If not provided, x-hcx-request_id of the originating request in the conversation shall be used as the correlation_id by the HCX gateway. For return messages (asynchronous responses), responders are expected to populate with the one in the request.
+          format: uuid
+        x-hcx-workflow_id:
+          type: string
+          description: Unique id of a workflow that spans across all messages (requests & responses) involved in processing of a single action (like coverage eligibility, pre-auth, claim, or payments). The workflow_id will be the same for all forwarded/redirected requests and their responses within the same action. In other words, the correlation_id and workflow_id will have the same scope if there are no forwards involved and a single recipient processes the request.
+          format: uuid
+        x-hcx-case_id:
+          type: string
+          description: Unique id of a case that may span over a series of message exchanges within the context of an admission, e.g. an eligibility check, a preauth and then claims submission for a patient may be linked with such an id from the providers initiate a request on check eligibility.
+          format: uuid
+        x-hcx-timestamp:
+          type: string
+          description: Unix timestamp when the request is sent.
+          example: "1629057611000"
+        x-hcx-debug_flag:
+          type: string
+          description: Request to the server to include debug information. Useful in the time of integration testing and prod debugging. However server(s) may choose to ignore this flag based on their policy.
+          enum: ["Error", "Info", "Debug"]
+        x-hcx-status:
+          type: string
+          description: Operational status of the message. Depending on the leg of the message, it would be one of the defined values in the enum.
+          enum: ["request.initiate", "request.retry", "response.success", "response.fail", "response.sender_not_supported", "response.unhandled", "response.request_retry", "request.redirect", "forward.request.initiate", "forward.request.retry", "forward.response.success", "forward.response.fail", "forward.response.sender_not_supported", "forward.response.unhandled", "forward.response.request_retry"]
+        x-hcx-error_details:
+          type: object
+          description: Expected to be used for providing details of the status. Will be specially useful in scenarios where operational status indicates irrecoverable error.
+          properties:
+            code:
+              type: string
+              description: error code from the system - expected to be namespaced for better readability
+            message:
+              type: string
+              description: Short description of the detail
+            trace:
+              type: string
+              description: Long description supporting the Code 
+          additionalProperties: true
+        x-hcx-debug_details:
+          type: object
+          description: Expected to be used for providing details of the status. Will be specially useful in debugging scenarios.
+          properties:
+            code:
+              type: string
+              description: info or debug code from the system - expected to be namespaced for better readability
+            message:
+              type: string
+              description: Short description of the detail
+            trace:
+              type: string
+              description: Long description supporting the Code 
+          additionalProperties: true
+    
+    DomainHeaders:
+      type: object
+      description: JSON object containing a map of domain-specific header values as proposed in domain data specifications. E.g. For claims use cases, domain specs may decide to populate the total claimed amount, list of diagnostics/procedures.
+      additionalProperties: true
+    
     ErrorResponse:
       required:
         - error
