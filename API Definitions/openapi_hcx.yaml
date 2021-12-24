@@ -42,7 +42,7 @@ paths:
          1. A set of header attributes that provide transport, security, message integrity and summary information about the message being exchanged. This information is used by the HCX gateway for routing the request and auditing purposes.
          2. Domain payload containing the CoverageEligibilityRequest domain entity (eObject) as prescribed for the use case by the [domain specifications](https://docs.swasth.app/hcx-specifications/hcx-domain-specifications/domain-data-specifications/domain-data-models/eobjects#coverage-eligibility-request). This needs to be encrypted so that HCX cannot read this and can be decrypted & processed only by the intended recipient.
         
-        The domain payload should be a [CoverageEligibilityRequest document](https://docs.swasth.app/hcx-specifications/hcx-domain-specifications/domain-data-specifications/domain-data-models/eobjects#coverage-eligibility-request) resource as per [HCX FHIR profile definitions](https://swasth-digital-health-foundation.github.io/standards/output/StructureDefinition-CoverageEligibilityRequestDocument.html) (created by extending the HL7 FHIR standard). The domain payload should be a FHIR bundle of type document and should mandatorily have the following elements:
+        The domain payload should be a [CoverageEligibilityRequest document](https://docs.swasth.app/hcx-specifications/hcx-domain-specifications/domain-data-specifications/domain-data-models/eobjects#coverage-eligibility-request) resource as per [HCX FHIR profile definitions](https://swasth-digital-health-foundation.github.io/standards/output/StructureDefinition-CoverageEligibilityRequestDocument.html) (an extension of HL7 FHIR). The domain payload should be a FHIR bundle of type document and should have the following elements:
         
           - The document composition type should be a code representing Coverage Eligibility Request document type.
           - The document composition should have a single entry refering to a CoverageEligibilityRequest resource.
@@ -64,6 +64,9 @@ paths:
           2. An error response if any of the validations fail.
           
         If the request is successfully accepted by the HCX gateway and forwarded to the recipient (i.e. the payor), the provider (who made the Coverage Eligibility Request API call) should expect the response via a call back to Coverage Eligibility Response API asynchronously. The response API payload may either contain the requested coverage details or error details in case of any errors during  processing.
+        
+        
+        An alternate scenario is when the Payor might respond with a redirect instruction asking the Provider to submit the same request to another Payor.
         
       requestBody:
         content:
@@ -112,23 +115,35 @@ paths:
             
           2. If the coverage eligibility request is successfully processed, payor should send a CoverageEligibilityResponse domain entity (eObject) as prescribed for the use case by the [domain specifications](https://docs.swasth.app/hcx-specifications/hcx-domain-specifications/domain-data-specifications/domain-data-models/eobjects#coverage-eligibility-response). This needs to be encrypted so that HCX cannot read this and can be decrypted & processed only by the intended recipient.
           
-          3. In case of errors, the Coverage Eligibility Response API payload should contain the error details. 
+          3. In some cases, after the coverage eligibility request is received and acknowledged by the Payor, the payor may choose to completely hand over processing of the request to another payor by informing the provider to send (i.e. redirect) the request to the new payor. In this scenario, the payor should send a Communication domain entity containing the redirection instructions as payload in the Coverage Eligibility Response API.
+          
+          4. In case of errors, the Coverage Eligibility Response API payload should contain the error details. 
 
         
-        In a successful coverage eligibility reponse scenario, the domain payload should be a [CoverageEligibilityResponse document](https://docs.swasth.app/hcx-specifications/hcx-domain-specifications/domain-data-specifications/domain-data-models/eobjects#coverage-eligibility-response) resource as per [HCX FHIR profile definitions](https://swasth-digital-health-foundation.github.io/standards/output/StructureDefinition-CoverageEligibilityResponseDocument.html) (created by extending the HL7 FHIR standard). The domain payload should be a FHIR bundle of type document and should mandatorily have the following elements:
+        In a successful coverage eligibility reponse scenario, the domain payload should contain a [CoverageEligibilityResponse document](https://docs.swasth.app/hcx-specifications/hcx-domain-specifications/domain-data-specifications/domain-data-models/eobjects#coverage-eligibility-response) resource as per [HCX FHIR profile definitions](https://swasth-digital-health-foundation.github.io/standards/output/StructureDefinition-CoverageEligibilityResponseDocument.html). The domain payload should be a FHIR bundle of type document and should have the following elements:
         
           - The document composition type should be a code representing Coverage Eligibility Respoonse document type.
           - The document composition should have a single entry refering to a CoverageEligibilityResponse resource.
           - The document must contain a [CoverageEligibilityResponse](https://swasth-digital-health-foundation.github.io/standards/output/StructureDefinition-CoverageEligibilityResponse.html) resource as the HCX FHIR profile definition.
           - The document should contain one or more Coverage resources with minimal information of the policy about which the information is being returned.
-          - The document should contain an InsurancePlan resource with information about the insurance plan/product related to the policy.
+          - The response should contain an InsurancePlan resource with information about the insurance plan/product related to the policy.
         
         
-        In case of errors, the error details can be sent to this API in two possible ways:
-          - Basic details about the error should be sent as part of the header attributes. HCX gateway shall read and store this information for audit & search purposes. Following header attributes should be used for sending the error details:
+        In a redirect scenario, the payload should contain a Communication FHIR resource with the following details:
+          - identifier: unique identifier
+          - category: “instruction” 
+          - topic: code representing the action “redirection”
+          - instantiatesURI: URI of coverage eligibility API
+          - about: reference to the original CoverageEligibilityRequest
+          - reasonCode: reason for redirection, choose the appropriate code from the redirection reason codes value set
+          - payload: string or an attachment with full details about the redirection reason and steps
+
+        
+        In case of errors, the error details should be sent in the following manner:
+          - Basic details about the error must be sent as part of the header attributes. HCX gateway shall read and store this information for audit & search purposes. Following header attributes should be used for sending the error details:
               - **x-hcx-status** should be set to **response.fail**.
               - **x-hcx-error_details** attribute should be set with the appropriate error code, message and trace details (if available).
-          - In case where there are clinical, patient or business related errors, the payor should send exact details of the error to the recipient. These details should not be shared with the HCX gateway and hence, should be sent in encrypted form. Payor should create a Communication FHIR resource and send it as part of the request body. In this scenario also, the header attributes must contain the basic & minimal information about the error that can be consumed by the HCX gateway.
+          - In case where there are clinical, patient or business related errors, the payor should send exact details of the error to the recipient. These details should not be shared with the HCX gateway and hence, should be sent in encrypted form. Payor should either embed the error details within the CoverageEligibilityResponse resource or  create a Communication FHIR resource and send it as part of the request body.
         
         The CoverageEligibilityResponse document or Communication FHIR resource created as per the HCX FHIR profile should be encrypted and sent in the request body along with the set of header attributes that are open for consumption by the HCX gateway. 
         
