@@ -1,0 +1,87 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://fhir-ig-demo/ValueSet/claim-service-categories> a fhir:ValueSet;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "claim-service-categories"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 9 concepts</p><p>All codes in this table are from the system <code>http://hcp.org/codes/service-category</code></p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-service-category-100000\"> </a>100000</td><td>Room &amp; Nursing Charges</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-service-category-200000\"> </a>200000</td><td>ICU Charges</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-service-category-300000\"> </a>300000</td><td>OT Charges</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-service-category-400000\"> </a>400000</td><td>Medicine &amp; Consumables Charges</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-service-category-500000\"> </a>500000</td><td>Professional Fees Charges</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-service-category-600000\"> </a>600000</td><td>Investigation Charges</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-service-category-700000\"> </a>700000</td><td>Ambulance Charges</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-service-category-800000\"> </a>800000</td><td>Miscellaneous Charges</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-service-category-900000\"> </a>900000</td><td>Package Charges</td></tr></table></div>"
+  ];
+  fhir:ValueSet.url [ fhir:value "https://fhir-ig-demo/ValueSet/claim-service-categories"];
+  fhir:ValueSet.version [ fhir:value "0.0.1"];
+  fhir:ValueSet.name [ fhir:value "Claim Service Categories"];
+  fhir:ValueSet.status [ fhir:value "active"];
+  fhir:ValueSet.date [ fhir:value "2021-08-15"^^xsd:date];
+  fhir:ValueSet.publisher [ fhir:value "HL7 International - HCX"];
+  fhir:ValueSet.contact [
+     fhir:index 0;
+     fhir:ContactDetail.name [ fhir:value "HL7 International - HCX" ];
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "url" ];
+       fhir:ContactPoint.value [ fhir:value "https://www.swasth.app/" ]
+     ]
+  ];
+  fhir:ValueSet.description [ fhir:value "This is the value set that includes the codes to identify the general type of benefits under which products and services are provided"];
+  fhir:ValueSet.expansion [
+     fhir:ValueSet.expansion.timestamp [ fhir:value "2021-08-15T08:15:30+05:30"^^xsd:dateTime ];
+     fhir:ValueSet.expansion.contains [
+       fhir:index 0;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/service-category" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "100000" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Room & Nursing Charges" ]
+     ], [
+       fhir:index 1;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/service-category" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "200000" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "ICU Charges" ]
+     ], [
+       fhir:index 2;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/service-category" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "300000" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "OT Charges" ]
+     ], [
+       fhir:index 3;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/service-category" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "400000" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Medicine & Consumables Charges" ]
+     ], [
+       fhir:index 4;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/service-category" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "500000" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Professional Fees Charges" ]
+     ], [
+       fhir:index 5;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/service-category" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "600000" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Investigation Charges" ]
+     ], [
+       fhir:index 6;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/service-category" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "700000" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Ambulance Charges" ]
+     ], [
+       fhir:index 7;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/service-category" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "800000" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Miscellaneous Charges" ]
+     ], [
+       fhir:index 8;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/service-category" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "900000" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Package Charges" ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://fhir-ig-demo/ValueSet/claim-service-categories.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

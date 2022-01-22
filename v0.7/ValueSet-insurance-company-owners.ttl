@@ -1,0 +1,297 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://fhir-ig-demo/ValueSet/insurance-company-owners> a fhir:ValueSet;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "insurance-company-owners"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 51 concepts</p><p>All codes in this table are from the system <code>http://hcp.org/codes/insurance-company-owners</code></p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-insurance-company-owners-1\"> </a>1</td><td>Bajaj Allianz General Insurance Co. Ltd.</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-insurance-company-owners-2\"> </a>2</td><td>ICICI Lombard General Insurance Co. Ltd.</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-insurance-company-owners-3\"> </a>3</td><td>IFFCO Tokio General Insurance Co. Ltd.</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-insurance-company-owners-4\"> </a>4</td><td>National Insurance Co. Ltd.</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-insurance-company-owners-5\"> </a>5</td><td>The New India Assurance Co. Ltd.</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-insurance-company-owners-6\"> </a>6</td><td>The Oriental Insurance Co. Ltd.</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-insurance-company-owners-7\"> </a>7</td><td>United India Insurance Co. Ltd.</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-insurance-company-owners-8\"> </a>8</td><td>Reliance General Insurance Co. Ltd.</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-insurance-company-owners-9\"> </a>9</td><td>Royal Sundaram Alliance Insurance Co. Ltd</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-insurance-company-owners-10\"> </a>10</td><td>Tata AIG General Insurance Co. Ltd.</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-insurance-company-owners-11\"> </a>11</td><td>Cholamandalam MS General Insurance Co. Ltd.</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-insurance-company-owners-12\"> </a>12</td><td>HDFC ERGO General Insurance Co. Ltd.</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-insurance-company-owners-13\"> </a>13</td><td>Export Credit Guarantee Corporation of India Ltd.</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-insurance-company-owners-14\"> </a>14</td><td>Agriculture Insurance Co. of India Ltd.</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-insurance-company-owners-15\"> </a>15</td><td>Star Health and Allied Insurance Company Limited</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-insurance-company-owners-16\"> </a>16</td><td>Apollo Munich Health Insurance Company Limited</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-insurance-company-owners-17\"> </a>17</td><td>Universal Sompo General Insurance Co. Ltd.</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-insurance-company-owners-18\"> </a>18</td><td>Future Generali India Insurance Company Limited</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-insurance-company-owners-19\"> </a>19</td><td>Shriram General Insurance Company Limited</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-insurance-company-owners-20\"> </a>20</td><td>Bharti AXA General Insurance Company Limited</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-insurance-company-owners-21\"> </a>21</td><td>Raheja QBE General Insurance Company Limited</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-insurance-company-owners-22\"> </a>22</td><td>SBI General Insurance Company Limited</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-insurance-company-owners-23\"> </a>23</td><td>Max Bupa Health Insurance Company Ltd.2nd Floor, Salcon Rasvilas,</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-insurance-company-owners-24\"> </a>24</td><td>L&amp;T General Insurance Company Limited</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-insurance-company-owners-25\"> </a>25</td><td>Religare Health Insurance Company Limited</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-insurance-company-owners-26\"> </a>26</td><td>Magma HDI General Insurance Company Limited</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-insurance-company-owners-27\"> </a>27</td><td>Liberty Videocon General Insurance Company Limited,</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-insurance-company-owners-28\"> </a>28</td><td>Bajaj Allianz Life Insurance Company Limited</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-insurance-company-owners-29\"> </a>29</td><td>Birla Sun Life Insurance Co. Ltd</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-insurance-company-owners-30\"> </a>30</td><td>HDFC Standard Life Insurance Co. Ltd</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-insurance-company-owners-31\"> </a>31</td><td>ICICI Prudential Life Insurance Co. Ltd</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-insurance-company-owners-32\"> </a>32</td><td>ING Vysya Life Insurance Company Ltd.</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-insurance-company-owners-33\"> </a>33</td><td>Life Insurance Corporation of India</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-insurance-company-owners-34\"> </a>34</td><td>Max Life Insurance Co. Ltd</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-insurance-company-owners-35\"> </a>35</td><td>PNB Metlife India Insurance Co. Ltd.</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-insurance-company-owners-36\"> </a>36</td><td>Kotak Mahindra Old Mutual Life Insurance Limited</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-insurance-company-owners-37\"> </a>37</td><td>SBI Life Insurance Co. Ltd</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-insurance-company-owners-38\"> </a>38</td><td>Tata AIA Life Insurance Company Limited</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-insurance-company-owners-39\"> </a>39</td><td>Reliance Life Insurance Company Limited.</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-insurance-company-owners-40\"> </a>40</td><td>Aviva Life Insurance Company India Limited</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-insurance-company-owners-41\"> </a>41</td><td>Sahara India Life Insurance Co, Ltd.</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-insurance-company-owners-42\"> </a>42</td><td>Shriram Life Insurance Co, Ltd.</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-insurance-company-owners-43\"> </a>43</td><td>Bharti AXA Life Insurance Company Ltd.</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-insurance-company-owners-44\"> </a>44</td><td>Future Generali India Life Insurance Company Limited</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-insurance-company-owners-45\"> </a>45</td><td>IDBI Federal Life Insurance Company Ltd</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-insurance-company-owners-46\"> </a>46</td><td>Canara HSBC Oriental Bank of Commerce Life Insurance Company Ltd.</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-insurance-company-owners-47\"> </a>47</td><td>AEGON Religare Life Insurance Company Limited.</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-insurance-company-owners-48\"> </a>48</td><td>DLF Pramerica Life Insurance Co. Ltd.</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-insurance-company-owners-49\"> </a>49</td><td>Star Union Dai-ichi Life Insurance Co.</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-insurance-company-owners-50\"> </a>50</td><td>IndiaFirst Life Insurance Company Limited</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-insurance-company-owners-51\"> </a>51</td><td>Edelweiss Tokio Life Insurance Co. Ltd.</td></tr></table></div>"
+  ];
+  fhir:ValueSet.url [ fhir:value "https://fhir-ig-demo/ValueSet/insurance-company-owners"];
+  fhir:ValueSet.version [ fhir:value "0.0.1"];
+  fhir:ValueSet.name [ fhir:value "Insurance Company Owners"];
+  fhir:ValueSet.status [ fhir:value "active"];
+  fhir:ValueSet.date [ fhir:value "2021-09-07"^^xsd:date];
+  fhir:ValueSet.publisher [ fhir:value "HL7 International - HCX"];
+  fhir:ValueSet.contact [
+     fhir:index 0;
+     fhir:ContactDetail.name [ fhir:value "HL7 International - HCX" ];
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "url" ];
+       fhir:ContactPoint.value [ fhir:value "https://www.swasth.app/" ]
+     ]
+  ];
+  fhir:ValueSet.description [ fhir:value "This is the value set that includes the codes to identify the insurance company owners"];
+  fhir:ValueSet.expansion [
+     fhir:ValueSet.expansion.timestamp [ fhir:value "2021-09-07T08:15:30+05:30"^^xsd:dateTime ];
+     fhir:ValueSet.expansion.contains [
+       fhir:index 0;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/insurance-company-owners" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "1" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Bajaj Allianz General Insurance Co. Ltd." ]
+     ], [
+       fhir:index 1;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/insurance-company-owners" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "2" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "ICICI Lombard General Insurance Co. Ltd." ]
+     ], [
+       fhir:index 2;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/insurance-company-owners" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "3" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "IFFCO Tokio General Insurance Co. Ltd." ]
+     ], [
+       fhir:index 3;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/insurance-company-owners" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "4" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "National Insurance Co. Ltd." ]
+     ], [
+       fhir:index 4;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/insurance-company-owners" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "5" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "The New India Assurance Co. Ltd." ]
+     ], [
+       fhir:index 5;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/insurance-company-owners" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "6" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "The Oriental Insurance Co. Ltd." ]
+     ], [
+       fhir:index 6;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/insurance-company-owners" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "7" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "United India Insurance Co. Ltd." ]
+     ], [
+       fhir:index 7;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/insurance-company-owners" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "8" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Reliance General Insurance Co. Ltd." ]
+     ], [
+       fhir:index 8;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/insurance-company-owners" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "9" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Royal Sundaram Alliance Insurance Co. Ltd" ]
+     ], [
+       fhir:index 9;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/insurance-company-owners" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "10" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Tata AIG General Insurance Co. Ltd." ]
+     ], [
+       fhir:index 10;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/insurance-company-owners" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "11" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Cholamandalam MS General Insurance Co. Ltd." ]
+     ], [
+       fhir:index 11;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/insurance-company-owners" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "12" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "HDFC ERGO General Insurance Co. Ltd." ]
+     ], [
+       fhir:index 12;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/insurance-company-owners" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "13" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Export Credit Guarantee Corporation of India Ltd." ]
+     ], [
+       fhir:index 13;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/insurance-company-owners" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "14" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Agriculture Insurance Co. of India Ltd." ]
+     ], [
+       fhir:index 14;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/insurance-company-owners" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "15" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Star Health and Allied Insurance Company Limited" ]
+     ], [
+       fhir:index 15;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/insurance-company-owners" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "16" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Apollo Munich Health Insurance Company Limited" ]
+     ], [
+       fhir:index 16;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/insurance-company-owners" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "17" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Universal Sompo General Insurance Co. Ltd." ]
+     ], [
+       fhir:index 17;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/insurance-company-owners" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "18" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Future Generali India Insurance Company Limited" ]
+     ], [
+       fhir:index 18;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/insurance-company-owners" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "19" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Shriram General Insurance Company Limited" ]
+     ], [
+       fhir:index 19;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/insurance-company-owners" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "20" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Bharti AXA General Insurance Company Limited" ]
+     ], [
+       fhir:index 20;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/insurance-company-owners" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "21" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Raheja QBE General Insurance Company Limited" ]
+     ], [
+       fhir:index 21;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/insurance-company-owners" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "22" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "SBI General Insurance Company Limited" ]
+     ], [
+       fhir:index 22;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/insurance-company-owners" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "23" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Max Bupa Health Insurance Company Ltd.2nd Floor, Salcon Rasvilas," ]
+     ], [
+       fhir:index 23;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/insurance-company-owners" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "24" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "L&T General Insurance Company Limited" ]
+     ], [
+       fhir:index 24;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/insurance-company-owners" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "25" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Religare Health Insurance Company Limited" ]
+     ], [
+       fhir:index 25;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/insurance-company-owners" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "26" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Magma HDI General Insurance Company Limited" ]
+     ], [
+       fhir:index 26;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/insurance-company-owners" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "27" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Liberty Videocon General Insurance Company Limited," ]
+     ], [
+       fhir:index 27;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/insurance-company-owners" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "28" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Bajaj Allianz Life Insurance Company Limited" ]
+     ], [
+       fhir:index 28;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/insurance-company-owners" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "29" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Birla Sun Life Insurance Co. Ltd" ]
+     ], [
+       fhir:index 29;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/insurance-company-owners" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "30" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "HDFC Standard Life Insurance Co. Ltd" ]
+     ], [
+       fhir:index 30;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/insurance-company-owners" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "31" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "ICICI Prudential Life Insurance Co. Ltd" ]
+     ], [
+       fhir:index 31;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/insurance-company-owners" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "32" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "ING Vysya Life Insurance Company Ltd." ]
+     ], [
+       fhir:index 32;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/insurance-company-owners" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "33" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Life Insurance Corporation of India" ]
+     ], [
+       fhir:index 33;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/insurance-company-owners" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "34" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Max Life Insurance Co. Ltd" ]
+     ], [
+       fhir:index 34;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/insurance-company-owners" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "35" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "PNB Metlife India Insurance Co. Ltd." ]
+     ], [
+       fhir:index 35;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/insurance-company-owners" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "36" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Kotak Mahindra Old Mutual Life Insurance Limited" ]
+     ], [
+       fhir:index 36;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/insurance-company-owners" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "37" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "SBI Life Insurance Co. Ltd" ]
+     ], [
+       fhir:index 37;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/insurance-company-owners" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "38" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Tata AIA Life Insurance Company Limited" ]
+     ], [
+       fhir:index 38;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/insurance-company-owners" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "39" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Reliance Life Insurance Company Limited." ]
+     ], [
+       fhir:index 39;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/insurance-company-owners" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "40" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Aviva Life Insurance Company India Limited" ]
+     ], [
+       fhir:index 40;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/insurance-company-owners" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "41" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Sahara India Life Insurance Co, Ltd." ]
+     ], [
+       fhir:index 41;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/insurance-company-owners" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "42" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Shriram Life Insurance Co, Ltd." ]
+     ], [
+       fhir:index 42;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/insurance-company-owners" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "43" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Bharti AXA Life Insurance Company Ltd." ]
+     ], [
+       fhir:index 43;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/insurance-company-owners" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "44" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Future Generali India Life Insurance Company Limited" ]
+     ], [
+       fhir:index 44;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/insurance-company-owners" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "45" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "IDBI Federal Life Insurance Company Ltd" ]
+     ], [
+       fhir:index 45;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/insurance-company-owners" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "46" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Canara HSBC Oriental Bank of Commerce Life Insurance Company Ltd." ]
+     ], [
+       fhir:index 46;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/insurance-company-owners" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "47" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "AEGON Religare Life Insurance Company Limited." ]
+     ], [
+       fhir:index 47;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/insurance-company-owners" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "48" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "DLF Pramerica Life Insurance Co. Ltd." ]
+     ], [
+       fhir:index 48;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/insurance-company-owners" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "49" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Star Union Dai-ichi Life Insurance Co." ]
+     ], [
+       fhir:index 49;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/insurance-company-owners" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "50" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "IndiaFirst Life Insurance Company Limited" ]
+     ], [
+       fhir:index 50;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/insurance-company-owners" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "51" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Edelweiss Tokio Life Insurance Co. Ltd." ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://fhir-ig-demo/ValueSet/insurance-company-owners.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+
