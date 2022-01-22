@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="claim-service-codes"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p>This value set contains 41 concepts</p><p>All codes in this table are from the system <code>http://hcp.org/codes/service-codes</code></p><table class="codes"><tr><td><b>Lvl</b></td><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a name="http---hcp.org-codes-service-codes-500000"> </a>0</td><td style="white-space:nowrap">500000</td><td>Professional fees charges</td></tr><tr><td><a name="http---hcp.org-codes-service-codes-500000"> </a>0</td><td style="white-space:nowrap">500000</td><td>Professional fees charges</td></tr><tr><td><a name="http---hcp.org-codes-service-codes-501000"> </a>1</td><td style="white-space:nowrap">  501000</td><td>Visit charges</td></tr><tr><td><a name="http---hcp.org-codes-service-codes-500000"> </a>0</td><td style="white-space:nowrap">500000</td><td>Professional fees charges</td></tr><tr><td><a name="http---hcp.org-codes-service-codes-501000"> </a>1</td><td style="white-space:nowrap">  501000</td><td>Visit charges</td></tr><tr><td><a name="http---hcp.org-codes-service-codes-501001"> </a>2</td><td style="white-space:nowrap">    501001</td><td>Consultation charges</td></tr><tr><td><a name="http---hcp.org-codes-service-codes-500000"> </a>0</td><td style="white-space:nowrap">500000</td><td>Professional fees charges</td></tr><tr><td><a name="http---hcp.org-codes-service-codes-501000"> </a>1</td><td style="white-space:nowrap">  501000</td><td>Visit charges</td></tr><tr><td><a name="http---hcp.org-codes-service-codes-501002"> </a>2</td><td style="white-space:nowrap">    501002</td><td>Medical Supervision Charges</td></tr><tr><td><a name="http---hcp.org-codes-service-codes-500000"> </a>0</td><td style="white-space:nowrap">500000</td><td>Professional fees charges</td></tr><tr><td><a name="http---hcp.org-codes-service-codes-501000"> </a>1</td><td style="white-space:nowrap">  501000</td><td>Visit charges</td></tr><tr><td><a name="http---hcp.org-codes-service-codes-501003"> </a>2</td><td style="white-space:nowrap">    501003</td><td>Professional fees</td></tr><tr><td><a name="http---hcp.org-codes-service-codes-500000"> </a>0</td><td style="white-space:nowrap">500000</td><td>Professional fees charges</td></tr><tr><td><a name="http---hcp.org-codes-service-codes-502000"> </a>1</td><td style="white-space:nowrap">  502000</td><td>Surgery charges</td></tr><tr><td><a name="http---hcp.org-codes-service-codes-500000"> </a>0</td><td style="white-space:nowrap">500000</td><td>Professional fees charges</td></tr><tr><td><a name="http---hcp.org-codes-service-codes-502000"> </a>1</td><td style="white-space:nowrap">  502000</td><td>Surgery charges</td></tr><tr><td><a name="http---hcp.org-codes-service-codes-502001"> </a>2</td><td style="white-space:nowrap">    502001</td><td>Surgeons Charges</td></tr><tr><td><a name="http---hcp.org-codes-service-codes-500000"> </a>0</td><td style="white-space:nowrap">500000</td><td>Professional fees charges</td></tr><tr><td><a name="http---hcp.org-codes-service-codes-502000"> </a>1</td><td style="white-space:nowrap">  502000</td><td>Surgery charges</td></tr><tr><td><a name="http---hcp.org-codes-service-codes-502002"> </a>2</td><td style="white-space:nowrap">    502002</td><td>Assistant Surgeons Fee</td></tr><tr><td><a name="http---hcp.org-codes-service-codes-500000"> </a>0</td><td style="white-space:nowrap">500000</td><td>Professional fees charges</td></tr><tr><td><a name="http---hcp.org-codes-service-codes-503000"> </a>1</td><td style="white-space:nowrap">  503000</td><td>Anaesthetists Fee</td></tr><tr><td><a name="http---hcp.org-codes-service-codes-500000"> </a>0</td><td style="white-space:nowrap">500000</td><td>Professional fees charges</td></tr><tr><td><a name="http---hcp.org-codes-service-codes-503000"> </a>1</td><td style="white-space:nowrap">  503000</td><td>Anaesthetists Fee</td></tr><tr><td><a name="http---hcp.org-codes-service-codes-503001"> </a>2</td><td style="white-space:nowrap">    503001</td><td>Anaesthetists fee</td></tr><tr><td><a name="http---hcp.org-codes-service-codes-500000"> </a>0</td><td style="white-space:nowrap">500000</td><td>Professional fees charges</td></tr><tr><td><a name="http---hcp.org-codes-service-codes-503000"> </a>1</td><td style="white-space:nowrap">  503000</td><td>Anaesthetists Fee</td></tr><tr><td><a name="http---hcp.org-codes-service-codes-503002"> </a>2</td><td style="white-space:nowrap">    503002</td><td>OT standby charges</td></tr><tr><td><a name="http---hcp.org-codes-service-codes-500000"> </a>0</td><td style="white-space:nowrap">500000</td><td>Professional fees charges</td></tr><tr><td><a name="http---hcp.org-codes-service-codes-504000"> </a>1</td><td style="white-space:nowrap">  504000</td><td>Intensivist charges</td></tr><tr><td><a name="http---hcp.org-codes-service-codes-500000"> </a>0</td><td style="white-space:nowrap">500000</td><td>Professional fees charges</td></tr><tr><td><a name="http---hcp.org-codes-service-codes-504000"> </a>1</td><td style="white-space:nowrap">  504000</td><td>Procedure charges</td></tr><tr><td><a name="http---hcp.org-codes-service-codes-504001"> </a>2</td><td style="white-space:nowrap">    504001</td><td>Beside procedures</td></tr><tr><td><a name="http---hcp.org-codes-service-codes-500000"> </a>0</td><td style="white-space:nowrap">500000</td><td>Professional fees charges</td></tr><tr><td><a name="http---hcp.org-codes-service-codes-504000"> </a>1</td><td style="white-space:nowrap">  504000</td><td>Procedure charges</td></tr><tr><td><a name="http---hcp.org-codes-service-codes-504002"> </a>2</td><td style="white-space:nowrap">    504002</td><td>Suture charges</td></tr><tr><td><a name="http---hcp.org-codes-service-codes-500000"> </a>0</td><td style="white-space:nowrap">500000</td><td>Professional fees charges</td></tr><tr><td><a name="http---hcp.org-codes-service-codes-505000"> </a>1</td><td style="white-space:nowrap">  505000</td><td>Physiotherapy</td></tr><tr><td><a name="http---hcp.org-codes-service-codes-500000"> </a>0</td><td style="white-space:nowrap">500000</td><td>Professional fees charges</td></tr><tr><td><a name="http---hcp.org-codes-service-codes-505000"> </a>1</td><td style="white-space:nowrap">  505000</td><td>Technician charges</td></tr><tr><td><a name="http---hcp.org-codes-service-codes-505000"> </a>2</td><td style="white-space:nowrap">    505000</td><td>OT/Cath Lab Technician</td></tr></table></div>
+  </text>
+  <url value="https://fhir-ig-demo/ValueSet/claim-service-codes"/>
+  <version value="0.0.1"/>
+  <name value="Claim Service Codes"/>
+  <status value="active"/>
+  <date value="2021-08-15"/>
+  <publisher value="HL7 International - HCX"/>
+  <contact>
+    <name value="HL7 International - HCX"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.swasth.app/"/>
+    </telecom>
+  </contact>
+  <description value="This is the value set that includes the codes to identify the general type of benefits under which products and services are provided"/>
+  <expansion>
+    <timestamp value="2021-08-15T08:15:30+05:30"/>
+    <contains>
+      <system value="http://hcp.org/codes/service-codes"/>
+      <code value="500000"/>
+      <display value="Professional fees charges"/>
+    </contains>
+    <contains>
+      <system value="http://hcp.org/codes/service-codes"/>
+      <code value="500000"/>
+      <display value="Professional fees charges"/>
+      <contains>
+        <system value="http://hcp.org/codes/service-codes"/>
+        <code value="501000"/>
+        <display value="Visit charges"/>
+      </contains>
+    </contains>
+    <contains>
+      <system value="http://hcp.org/codes/service-codes"/>
+      <code value="500000"/>
+      <display value="Professional fees charges"/>
+      <contains>
+        <system value="http://hcp.org/codes/service-codes"/>
+        <code value="501000"/>
+        <display value="Visit charges"/>
+        <contains>
+          <system value="http://hcp.org/codes/service-codes"/>
+          <code value="501001"/>
+          <display value="Consultation charges"/>
+        </contains>
+      </contains>
+    </contains>
+    <contains>
+      <system value="http://hcp.org/codes/service-codes"/>
+      <code value="500000"/>
+      <display value="Professional fees charges"/>
+      <contains>
+        <system value="http://hcp.org/codes/service-codes"/>
+        <code value="501000"/>
+        <display value="Visit charges"/>
+        <contains>
+          <system value="http://hcp.org/codes/service-codes"/>
+          <code value="501002"/>
+          <display value="Medical Supervision Charges"/>
+        </contains>
+      </contains>
+    </contains>
+    <contains>
+      <system value="http://hcp.org/codes/service-codes"/>
+      <code value="500000"/>
+      <display value="Professional fees charges"/>
+      <contains>
+        <system value="http://hcp.org/codes/service-codes"/>
+        <code value="501000"/>
+        <display value="Visit charges"/>
+        <contains>
+          <system value="http://hcp.org/codes/service-codes"/>
+          <code value="501003"/>
+          <display value="Professional fees"/>
+        </contains>
+      </contains>
+    </contains>
+    <contains>
+      <system value="http://hcp.org/codes/service-codes"/>
+      <code value="500000"/>
+      <display value="Professional fees charges"/>
+      <contains>
+        <system value="http://hcp.org/codes/service-codes"/>
+        <code value="502000"/>
+        <display value="Surgery charges"/>
+      </contains>
+    </contains>
+    <contains>
+      <system value="http://hcp.org/codes/service-codes"/>
+      <code value="500000"/>
+      <display value="Professional fees charges"/>
+      <contains>
+        <system value="http://hcp.org/codes/service-codes"/>
+        <code value="502000"/>
+        <display value="Surgery charges"/>
+        <contains>
+          <system value="http://hcp.org/codes/service-codes"/>
+          <code value="502001"/>
+          <display value="Surgeons Charges"/>
+        </contains>
+      </contains>
+    </contains>
+    <contains>
+      <system value="http://hcp.org/codes/service-codes"/>
+      <code value="500000"/>
+      <display value="Professional fees charges"/>
+      <contains>
+        <system value="http://hcp.org/codes/service-codes"/>
+        <code value="502000"/>
+        <display value="Surgery charges"/>
+        <contains>
+          <system value="http://hcp.org/codes/service-codes"/>
+          <code value="502002"/>
+          <display value="Assistant Surgeons Fee"/>
+        </contains>
+      </contains>
+    </contains>
+    <contains>
+      <system value="http://hcp.org/codes/service-codes"/>
+      <code value="500000"/>
+      <display value="Professional fees charges"/>
+      <contains>
+        <system value="http://hcp.org/codes/service-codes"/>
+        <code value="503000"/>
+        <display value="Anaesthetists Fee"/>
+      </contains>
+    </contains>
+    <contains>
+      <system value="http://hcp.org/codes/service-codes"/>
+      <code value="500000"/>
+      <display value="Professional fees charges"/>
+      <contains>
+        <system value="http://hcp.org/codes/service-codes"/>
+        <code value="503000"/>
+        <display value="Anaesthetists Fee"/>
+        <contains>
+          <system value="http://hcp.org/codes/service-codes"/>
+          <code value="503001"/>
+          <display value="Anaesthetists fee"/>
+        </contains>
+      </contains>
+    </contains>
+    <contains>
+      <system value="http://hcp.org/codes/service-codes"/>
+      <code value="500000"/>
+      <display value="Professional fees charges"/>
+      <contains>
+        <system value="http://hcp.org/codes/service-codes"/>
+        <code value="503000"/>
+        <display value="Anaesthetists Fee"/>
+        <contains>
+          <system value="http://hcp.org/codes/service-codes"/>
+          <code value="503002"/>
+          <display value="OT standby charges"/>
+        </contains>
+      </contains>
+    </contains>
+    <contains>
+      <system value="http://hcp.org/codes/service-codes"/>
+      <code value="500000"/>
+      <display value="Professional fees charges"/>
+      <contains>
+        <system value="http://hcp.org/codes/service-codes"/>
+        <code value="504000"/>
+        <display value="Intensivist charges"/>
+      </contains>
+    </contains>
+    <contains>
+      <system value="http://hcp.org/codes/service-codes"/>
+      <code value="500000"/>
+      <display value="Professional fees charges"/>
+      <contains>
+        <system value="http://hcp.org/codes/service-codes"/>
+        <code value="504000"/>
+        <display value="Procedure charges"/>
+        <contains>
+          <system value="http://hcp.org/codes/service-codes"/>
+          <code value="504001"/>
+          <display value="Beside procedures"/>
+        </contains>
+      </contains>
+    </contains>
+    <contains>
+      <system value="http://hcp.org/codes/service-codes"/>
+      <code value="500000"/>
+      <display value="Professional fees charges"/>
+      <contains>
+        <system value="http://hcp.org/codes/service-codes"/>
+        <code value="504000"/>
+        <display value="Procedure charges"/>
+        <contains>
+          <system value="http://hcp.org/codes/service-codes"/>
+          <code value="504002"/>
+          <display value="Suture charges"/>
+        </contains>
+      </contains>
+    </contains>
+    <contains>
+      <system value="http://hcp.org/codes/service-codes"/>
+      <code value="500000"/>
+      <display value="Professional fees charges"/>
+      <contains>
+        <system value="http://hcp.org/codes/service-codes"/>
+        <code value="505000"/>
+        <display value="Physiotherapy"/>
+      </contains>
+    </contains>
+    <contains>
+      <system value="http://hcp.org/codes/service-codes"/>
+      <code value="500000"/>
+      <display value="Professional fees charges"/>
+      <contains>
+        <system value="http://hcp.org/codes/service-codes"/>
+        <code value="505000"/>
+        <display value="Technician charges"/>
+        <contains>
+          <system value="http://hcp.org/codes/service-codes"/>
+          <code value="505000"/>
+          <display value="OT/Cath Lab Technician"/>
+        </contains>
+      </contains>
+    </contains>
+  </expansion>
+</ValueSet>

@@ -1,0 +1,13 @@
+﻿<html>
+<head>
+  <title>StructureDefinition-Task-inv-diff</title>
+  <link rel="stylesheet" href="fhir.css"/>
+</head>
+<body>
+<h4>Constraints</h4>
+<table class="list">
+<tr><td width="60"><b>Id</b></td><td><b>Grade</b></td><td><b>Path</b></td><td><b>Details</b></td><td><b>Requirements</b></td></tr>
+<tr><td>inv-1</td><td>error</td><td>Task</td><td>Last modified date must be greater than or equal to authored-on date.<br/>: lastModified.exists().not() or authoredOn.exists().not() or lastModified &gt;= authoredOn</td><td></td></tr>
+</table>
+</body>
+</html>

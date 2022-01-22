@@ -1,813 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Bundle xmlns="http://hl7.org/fhir">
-  <id value="45fccdc3-3afb-4164-8b84-6bfa457dff99"/>
+  <id value="fcc9b86f-73c4-4cfc-8bc8-57cfb26c73e2"/>
   <meta>
-    <lastUpdated value="2021-09-22T10:37:59.370+05:30"/>
+    <lastUpdated value="2022-01-22T20:56:57.381+05:30"/>
   </meta>
   <type value="collection"/>
   <entry>
-    <fullUrl value="https://fhir-ig-demo/ValueSet/health-service-provider-role"/>
+    <fullUrl value="https://fhir-ig-demo/ValueSet/medical-speciality-type-provider"/>
     <resource>
       <ValueSet>
-        <id value="health-service-provider-role"/>
-        <text>
-          <status value="generated"/>
-          <div xmlns="http://www.w3.org/1999/xhtml">
-            <p>This value set contains 13 concepts</p>
-            <p>All codes from system 
-              <code>http://hcp.org/codes/health-service-provider</code>
-            </p>
-            <table class="codes">
-              <tr>
-                <td style="white-space:nowrap">
-                  <b>Code</b>
-                </td>
-                <td>
-                  <b>Display</b>
-                </td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-health-service-provider-1"> </a>1
-                </td>
-                <td>Primary Care Provider Referring Provider.</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-health-service-provider-2"> </a>2
-                </td>
-                <td>Referring Provider.</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-health-service-provider-3"> </a>3
-                </td>
-                <td>Treating Provider.</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-health-service-provider-4"> </a>4
-                </td>
-                <td>Attending Provider.</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-health-service-provider-5"> </a>5
-                </td>
-                <td>Admitting Provider.</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-health-service-provider-6"> </a>6
-                </td>
-                <td>Consulting Provider.</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-health-service-provider-7"> </a>7
-                </td>
-                <td>Ordering Provider.</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-health-service-provider-8"> </a>8
-                </td>
-                <td>Dispensing Provider.</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-health-service-provider-9"> </a>9
-                </td>
-                <td>Discharge Provider.</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-health-service-provider-10"> </a>10
-                </td>
-                <td>Secondary Care Provider.</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-health-service-provider-11"> </a>11
-                </td>
-                <td>Tertiary Care Provider.</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-health-service-provider-12"> </a>12
-                </td>
-                <td>Transfusion Provider.</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-health-service-provider-13"> </a>13
-                </td>
-                <td>Others.</td>
-              </tr>
-            </table>
-          </div>
-        </text>
-        <url value="https://fhir-ig-demo/ValueSet/health-service-provider-role"/>
-        <version value="0.0.1"/>
-        <name value="Health Service Provider Role"/>
-        <status value="active"/>
-        <date value="2021-09-07"/>
-        <publisher value="HL7 International - HCX"/>
-        <contact>
-          <name value="HL7 International - HCX"/>
-          <telecom>
-            <system value="url"/>
-            <value value="https://www.swasth.app/"/>
-          </telecom>
-        </contact>
-        <description value="This is the value set that includes the codes to identify health service provider"/>
-        <expansion>
-          <timestamp value="2021-09-07T08:15:30+05:30"/>
-          <contains>
-            <system value="http://hcp.org/codes/health-service-provider"/>
-            <code value="1"/>
-            <display value="Primary Care Provider Referring Provider."/>
-          </contains>
-          <contains>
-            <system value="http://hcp.org/codes/health-service-provider"/>
-            <code value="2"/>
-            <display value="Referring Provider."/>
-          </contains>
-          <contains>
-            <system value="http://hcp.org/codes/health-service-provider"/>
-            <code value="3"/>
-            <display value="Treating Provider."/>
-          </contains>
-          <contains>
-            <system value="http://hcp.org/codes/health-service-provider"/>
-            <code value="4"/>
-            <display value="Attending Provider."/>
-          </contains>
-          <contains>
-            <system value="http://hcp.org/codes/health-service-provider"/>
-            <code value="5"/>
-            <display value="Admitting Provider."/>
-          </contains>
-          <contains>
-            <system value="http://hcp.org/codes/health-service-provider"/>
-            <code value="6"/>
-            <display value="Consulting Provider."/>
-          </contains>
-          <contains>
-            <system value="http://hcp.org/codes/health-service-provider"/>
-            <code value="7"/>
-            <display value="Ordering Provider."/>
-          </contains>
-          <contains>
-            <system value="http://hcp.org/codes/health-service-provider"/>
-            <code value="8"/>
-            <display value="Dispensing Provider."/>
-          </contains>
-          <contains>
-            <system value="http://hcp.org/codes/health-service-provider"/>
-            <code value="9"/>
-            <display value="Discharge Provider."/>
-          </contains>
-          <contains>
-            <system value="http://hcp.org/codes/health-service-provider"/>
-            <code value="10"/>
-            <display value="Secondary Care Provider."/>
-          </contains>
-          <contains>
-            <system value="http://hcp.org/codes/health-service-provider"/>
-            <code value="11"/>
-            <display value="Tertiary Care Provider."/>
-          </contains>
-          <contains>
-            <system value="http://hcp.org/codes/health-service-provider"/>
-            <code value="12"/>
-            <display value="Transfusion Provider."/>
-          </contains>
-          <contains>
-            <system value="http://hcp.org/codes/health-service-provider"/>
-            <code value="13"/>
-            <display value="Others."/>
-          </contains>
-        </expansion>
-      </ValueSet>
-    </resource>
-  </entry>
-  <entry>
-    <fullUrl value="https://fhir-ig-demo/ValueSet/insurance-company-owners"/>
-    <resource>
-      <ValueSet>
-        <id value="insurance-company-owners"/>
-        <text>
-          <status value="generated"/>
-          <div xmlns="http://www.w3.org/1999/xhtml">
-            <p>This value set contains 51 concepts</p>
-            <p>All codes from system 
-              <code>http://hcp.org/codes/insurance-company-owners</code>
-            </p>
-            <table class="codes">
-              <tr>
-                <td style="white-space:nowrap">
-                  <b>Code</b>
-                </td>
-                <td>
-                  <b>Display</b>
-                </td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-insurance-company-owners-1"> </a>1
-                </td>
-                <td>Bajaj Allianz General Insurance Co. Ltd.</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-insurance-company-owners-2"> </a>2
-                </td>
-                <td>ICICI Lombard General Insurance Co. Ltd.</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-insurance-company-owners-3"> </a>3
-                </td>
-                <td>IFFCO Tokio General Insurance Co. Ltd.</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-insurance-company-owners-4"> </a>4
-                </td>
-                <td>National Insurance Co. Ltd.</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-insurance-company-owners-5"> </a>5
-                </td>
-                <td>The New India Assurance Co. Ltd.</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-insurance-company-owners-6"> </a>6
-                </td>
-                <td>The Oriental Insurance Co. Ltd.</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-insurance-company-owners-7"> </a>7
-                </td>
-                <td>United India Insurance Co. Ltd.</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-insurance-company-owners-8"> </a>8
-                </td>
-                <td>Reliance General Insurance Co. Ltd.</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-insurance-company-owners-9"> </a>9
-                </td>
-                <td>Royal Sundaram Alliance Insurance Co. Ltd</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-insurance-company-owners-10"> </a>10
-                </td>
-                <td>Tata AIG General Insurance Co. Ltd.</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-insurance-company-owners-11"> </a>11
-                </td>
-                <td>Cholamandalam MS General Insurance Co. Ltd.</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-insurance-company-owners-12"> </a>12
-                </td>
-                <td>HDFC ERGO General Insurance Co. Ltd.</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-insurance-company-owners-13"> </a>13
-                </td>
-                <td>Export Credit Guarantee Corporation of India Ltd.</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-insurance-company-owners-14"> </a>14
-                </td>
-                <td>Agriculture Insurance Co. of India Ltd.</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-insurance-company-owners-15"> </a>15
-                </td>
-                <td>Star Health and Allied Insurance Company Limited</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-insurance-company-owners-16"> </a>16
-                </td>
-                <td>Apollo Munich Health Insurance Company Limited</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-insurance-company-owners-17"> </a>17
-                </td>
-                <td>Universal Sompo General Insurance Co. Ltd.</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-insurance-company-owners-18"> </a>18
-                </td>
-                <td>Future Generali India Insurance Company Limited</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-insurance-company-owners-19"> </a>19
-                </td>
-                <td>Shriram General Insurance Company Limited</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-insurance-company-owners-20"> </a>20
-                </td>
-                <td>Bharti AXA General Insurance Company Limited</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-insurance-company-owners-21"> </a>21
-                </td>
-                <td>Raheja QBE General Insurance Company Limited</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-insurance-company-owners-22"> </a>22
-                </td>
-                <td>SBI General Insurance Company Limited</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-insurance-company-owners-23"> </a>23
-                </td>
-                <td>Max Bupa Health Insurance Company Ltd.2nd Floor, Salcon Rasvilas,</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-insurance-company-owners-24"> </a>24
-                </td>
-                <td>L&amp;T General Insurance Company Limited</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-insurance-company-owners-25"> </a>25
-                </td>
-                <td>Religare Health Insurance Company Limited</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-insurance-company-owners-26"> </a>26
-                </td>
-                <td>Magma HDI General Insurance Company Limited</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-insurance-company-owners-27"> </a>27
-                </td>
-                <td>Liberty Videocon General Insurance Company Limited,</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-insurance-company-owners-28"> </a>28
-                </td>
-                <td>Bajaj Allianz Life Insurance Company Limited</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-insurance-company-owners-29"> </a>29
-                </td>
-                <td>Birla Sun Life Insurance Co. Ltd</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-insurance-company-owners-30"> </a>30
-                </td>
-                <td>HDFC Standard Life Insurance Co. Ltd</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-insurance-company-owners-31"> </a>31
-                </td>
-                <td>ICICI Prudential Life Insurance Co. Ltd</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-insurance-company-owners-32"> </a>32
-                </td>
-                <td>ING Vysya Life Insurance Company Ltd.</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-insurance-company-owners-33"> </a>33
-                </td>
-                <td>Life Insurance Corporation of India</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-insurance-company-owners-34"> </a>34
-                </td>
-                <td>Max Life Insurance Co. Ltd</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-insurance-company-owners-35"> </a>35
-                </td>
-                <td>PNB Metlife India Insurance Co. Ltd.</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-insurance-company-owners-36"> </a>36
-                </td>
-                <td>Kotak Mahindra Old Mutual Life Insurance Limited</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-insurance-company-owners-37"> </a>37
-                </td>
-                <td>SBI Life Insurance Co. Ltd</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-insurance-company-owners-38"> </a>38
-                </td>
-                <td>Tata AIA Life Insurance Company Limited</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-insurance-company-owners-39"> </a>39
-                </td>
-                <td>Reliance Life Insurance Company Limited.</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-insurance-company-owners-40"> </a>40
-                </td>
-                <td>Aviva Life Insurance Company India Limited</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-insurance-company-owners-41"> </a>41
-                </td>
-                <td>Sahara India Life Insurance Co, Ltd.</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-insurance-company-owners-42"> </a>42
-                </td>
-                <td>Shriram Life Insurance Co, Ltd.</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-insurance-company-owners-43"> </a>43
-                </td>
-                <td>Bharti AXA Life Insurance Company Ltd.</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-insurance-company-owners-44"> </a>44
-                </td>
-                <td>Future Generali India Life Insurance Company Limited</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-insurance-company-owners-45"> </a>45
-                </td>
-                <td>IDBI Federal Life Insurance Company Ltd</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-insurance-company-owners-46"> </a>46
-                </td>
-                <td>Canara HSBC Oriental Bank of Commerce Life Insurance Company Ltd.</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-insurance-company-owners-47"> </a>47
-                </td>
-                <td>AEGON Religare Life Insurance Company Limited.</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-insurance-company-owners-48"> </a>48
-                </td>
-                <td>DLF Pramerica Life Insurance Co. Ltd.</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-insurance-company-owners-49"> </a>49
-                </td>
-                <td>Star Union Dai-ichi Life Insurance Co.</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-insurance-company-owners-50"> </a>50
-                </td>
-                <td>IndiaFirst Life Insurance Company Limited</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-insurance-company-owners-51"> </a>51
-                </td>
-                <td>Edelweiss Tokio Life Insurance Co. Ltd.</td>
-              </tr>
-            </table>
-          </div>
-        </text>
-        <url value="https://fhir-ig-demo/ValueSet/insurance-company-owners"/>
-        <version value="0.0.1"/>
-        <name value="Insurance Company Owners"/>
-        <status value="active"/>
-        <date value="2021-09-07"/>
-        <publisher value="HL7 International - HCX"/>
-        <contact>
-          <name value="HL7 International - HCX"/>
-          <telecom>
-            <system value="url"/>
-            <value value="https://www.swasth.app/"/>
-          </telecom>
-        </contact>
-        <description value="This is the value set that includes the codes to identify the insurance company owners"/>
-        <expansion>
-          <timestamp value="2021-09-07T08:15:30+05:30"/>
-          <contains>
-            <system value="http://hcp.org/codes/insurance-company-owners"/>
-            <code value="1"/>
-            <display value="Bajaj Allianz General Insurance Co. Ltd."/>
-          </contains>
-          <contains>
-            <system value="http://hcp.org/codes/insurance-company-owners"/>
-            <code value="2"/>
-            <display value="ICICI Lombard General Insurance Co. Ltd."/>
-          </contains>
-          <contains>
-            <system value="http://hcp.org/codes/insurance-company-owners"/>
-            <code value="3"/>
-            <display value="IFFCO Tokio General Insurance Co. Ltd."/>
-          </contains>
-          <contains>
-            <system value="http://hcp.org/codes/insurance-company-owners"/>
-            <code value="4"/>
-            <display value="National Insurance Co. Ltd."/>
-          </contains>
-          <contains>
-            <system value="http://hcp.org/codes/insurance-company-owners"/>
-            <code value="5"/>
-            <display value="The New India Assurance Co. Ltd."/>
-          </contains>
-          <contains>
-            <system value="http://hcp.org/codes/insurance-company-owners"/>
-            <code value="6"/>
-            <display value="The Oriental Insurance Co. Ltd."/>
-          </contains>
-          <contains>
-            <system value="http://hcp.org/codes/insurance-company-owners"/>
-            <code value="7"/>
-            <display value="United India Insurance Co. Ltd."/>
-          </contains>
-          <contains>
-            <system value="http://hcp.org/codes/insurance-company-owners"/>
-            <code value="8"/>
-            <display value="Reliance General Insurance Co. Ltd."/>
-          </contains>
-          <contains>
-            <system value="http://hcp.org/codes/insurance-company-owners"/>
-            <code value="9"/>
-            <display value="Royal Sundaram Alliance Insurance Co. Ltd"/>
-          </contains>
-          <contains>
-            <system value="http://hcp.org/codes/insurance-company-owners"/>
-            <code value="10"/>
-            <display value="Tata AIG General Insurance Co. Ltd."/>
-          </contains>
-          <contains>
-            <system value="http://hcp.org/codes/insurance-company-owners"/>
-            <code value="11"/>
-            <display value="Cholamandalam MS General Insurance Co. Ltd."/>
-          </contains>
-          <contains>
-            <system value="http://hcp.org/codes/insurance-company-owners"/>
-            <code value="12"/>
-            <display value="HDFC ERGO General Insurance Co. Ltd."/>
-          </contains>
-          <contains>
-            <system value="http://hcp.org/codes/insurance-company-owners"/>
-            <code value="13"/>
-            <display value="Export Credit Guarantee Corporation of India Ltd."/>
-          </contains>
-          <contains>
-            <system value="http://hcp.org/codes/insurance-company-owners"/>
-            <code value="14"/>
-            <display value="Agriculture Insurance Co. of India Ltd."/>
-          </contains>
-          <contains>
-            <system value="http://hcp.org/codes/insurance-company-owners"/>
-            <code value="15"/>
-            <display value="Star Health and Allied Insurance Company Limited"/>
-          </contains>
-          <contains>
-            <system value="http://hcp.org/codes/insurance-company-owners"/>
-            <code value="16"/>
-            <display value="Apollo Munich Health Insurance Company Limited"/>
-          </contains>
-          <contains>
-            <system value="http://hcp.org/codes/insurance-company-owners"/>
-            <code value="17"/>
-            <display value="Universal Sompo General Insurance Co. Ltd."/>
-          </contains>
-          <contains>
-            <system value="http://hcp.org/codes/insurance-company-owners"/>
-            <code value="18"/>
-            <display value="Future Generali India Insurance Company Limited"/>
-          </contains>
-          <contains>
-            <system value="http://hcp.org/codes/insurance-company-owners"/>
-            <code value="19"/>
-            <display value="Shriram General Insurance Company Limited"/>
-          </contains>
-          <contains>
-            <system value="http://hcp.org/codes/insurance-company-owners"/>
-            <code value="20"/>
-            <display value="Bharti AXA General Insurance Company Limited"/>
-          </contains>
-          <contains>
-            <system value="http://hcp.org/codes/insurance-company-owners"/>
-            <code value="21"/>
-            <display value="Raheja QBE General Insurance Company Limited"/>
-          </contains>
-          <contains>
-            <system value="http://hcp.org/codes/insurance-company-owners"/>
-            <code value="22"/>
-            <display value="SBI General Insurance Company Limited"/>
-          </contains>
-          <contains>
-            <system value="http://hcp.org/codes/insurance-company-owners"/>
-            <code value="23"/>
-            <display value="Max Bupa Health Insurance Company Ltd.2nd Floor, Salcon Rasvilas,"/>
-          </contains>
-          <contains>
-            <system value="http://hcp.org/codes/insurance-company-owners"/>
-            <code value="24"/>
-            <display value="L&amp;T General Insurance Company Limited"/>
-          </contains>
-          <contains>
-            <system value="http://hcp.org/codes/insurance-company-owners"/>
-            <code value="25"/>
-            <display value="Religare Health Insurance Company Limited"/>
-          </contains>
-          <contains>
-            <system value="http://hcp.org/codes/insurance-company-owners"/>
-            <code value="26"/>
-            <display value="Magma HDI General Insurance Company Limited"/>
-          </contains>
-          <contains>
-            <system value="http://hcp.org/codes/insurance-company-owners"/>
-            <code value="27"/>
-            <display value="Liberty Videocon General Insurance Company Limited,"/>
-          </contains>
-          <contains>
-            <system value="http://hcp.org/codes/insurance-company-owners"/>
-            <code value="28"/>
-            <display value="Bajaj Allianz Life Insurance Company Limited"/>
-          </contains>
-          <contains>
-            <system value="http://hcp.org/codes/insurance-company-owners"/>
-            <code value="29"/>
-            <display value="Birla Sun Life Insurance Co. Ltd"/>
-          </contains>
-          <contains>
-            <system value="http://hcp.org/codes/insurance-company-owners"/>
-            <code value="30"/>
-            <display value="HDFC Standard Life Insurance Co. Ltd"/>
-          </contains>
-          <contains>
-            <system value="http://hcp.org/codes/insurance-company-owners"/>
-            <code value="31"/>
-            <display value="ICICI Prudential Life Insurance Co. Ltd"/>
-          </contains>
-          <contains>
-            <system value="http://hcp.org/codes/insurance-company-owners"/>
-            <code value="32"/>
-            <display value="ING Vysya Life Insurance Company Ltd."/>
-          </contains>
-          <contains>
-            <system value="http://hcp.org/codes/insurance-company-owners"/>
-            <code value="33"/>
-            <display value="Life Insurance Corporation of India"/>
-          </contains>
-          <contains>
-            <system value="http://hcp.org/codes/insurance-company-owners"/>
-            <code value="34"/>
-            <display value="Max Life Insurance Co. Ltd"/>
-          </contains>
-          <contains>
-            <system value="http://hcp.org/codes/insurance-company-owners"/>
-            <code value="35"/>
-            <display value="PNB Metlife India Insurance Co. Ltd."/>
-          </contains>
-          <contains>
-            <system value="http://hcp.org/codes/insurance-company-owners"/>
-            <code value="36"/>
-            <display value="Kotak Mahindra Old Mutual Life Insurance Limited"/>
-          </contains>
-          <contains>
-            <system value="http://hcp.org/codes/insurance-company-owners"/>
-            <code value="37"/>
-            <display value="SBI Life Insurance Co. Ltd"/>
-          </contains>
-          <contains>
-            <system value="http://hcp.org/codes/insurance-company-owners"/>
-            <code value="38"/>
-            <display value="Tata AIA Life Insurance Company Limited"/>
-          </contains>
-          <contains>
-            <system value="http://hcp.org/codes/insurance-company-owners"/>
-            <code value="39"/>
-            <display value="Reliance Life Insurance Company Limited."/>
-          </contains>
-          <contains>
-            <system value="http://hcp.org/codes/insurance-company-owners"/>
-            <code value="40"/>
-            <display value="Aviva Life Insurance Company India Limited"/>
-          </contains>
-          <contains>
-            <system value="http://hcp.org/codes/insurance-company-owners"/>
-            <code value="41"/>
-            <display value="Sahara India Life Insurance Co, Ltd."/>
-          </contains>
-          <contains>
-            <system value="http://hcp.org/codes/insurance-company-owners"/>
-            <code value="42"/>
-            <display value="Shriram Life Insurance Co, Ltd."/>
-          </contains>
-          <contains>
-            <system value="http://hcp.org/codes/insurance-company-owners"/>
-            <code value="43"/>
-            <display value="Bharti AXA Life Insurance Company Ltd."/>
-          </contains>
-          <contains>
-            <system value="http://hcp.org/codes/insurance-company-owners"/>
-            <code value="44"/>
-            <display value="Future Generali India Life Insurance Company Limited"/>
-          </contains>
-          <contains>
-            <system value="http://hcp.org/codes/insurance-company-owners"/>
-            <code value="45"/>
-            <display value="IDBI Federal Life Insurance Company Ltd"/>
-          </contains>
-          <contains>
-            <system value="http://hcp.org/codes/insurance-company-owners"/>
-            <code value="46"/>
-            <display value="Canara HSBC Oriental Bank of Commerce Life Insurance Company Ltd."/>
-          </contains>
-          <contains>
-            <system value="http://hcp.org/codes/insurance-company-owners"/>
-            <code value="47"/>
-            <display value="AEGON Religare Life Insurance Company Limited."/>
-          </contains>
-          <contains>
-            <system value="http://hcp.org/codes/insurance-company-owners"/>
-            <code value="48"/>
-            <display value="DLF Pramerica Life Insurance Co. Ltd."/>
-          </contains>
-          <contains>
-            <system value="http://hcp.org/codes/insurance-company-owners"/>
-            <code value="49"/>
-            <display value="Star Union Dai-ichi Life Insurance Co."/>
-          </contains>
-          <contains>
-            <system value="http://hcp.org/codes/insurance-company-owners"/>
-            <code value="50"/>
-            <display value="IndiaFirst Life Insurance Company Limited"/>
-          </contains>
-          <contains>
-            <system value="http://hcp.org/codes/insurance-company-owners"/>
-            <code value="51"/>
-            <display value="Edelweiss Tokio Life Insurance Co. Ltd."/>
-          </contains>
-        </expansion>
-      </ValueSet>
-    </resource>
-  </entry>
-  <entry>
-    <fullUrl value="https://fhir-ig-demo/ValueSet/medical-specialty-provider"/>
-    <resource>
-      <ValueSet>
-        <id value="medical-specialty-provider"/>
+        <id value="medical-speciality-type-provider"/>
         <text>
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml">
             <p>This value set contains 89 concepts</p>
-            <p>All codes from system 
+            <p>All codes in this table are from the system 
               <code>http://hcp.org/codes/medical-specility-type-provider</code>
             </p>
             <table class="codes">
@@ -821,542 +29,542 @@
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-medical-specility-type-provider-1"> </a>1
+                  <a name="http---hcp.org-codes-medical-specility-type-provider-null"> </a>
                 </td>
                 <td>General Medicine</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-medical-specility-type-provider-2"> </a>2
+                  <a name="http---hcp.org-codes-medical-specility-type-provider-null"> </a>
                 </td>
                 <td>Dental surgery</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-medical-specility-type-provider-3"> </a>3
+                  <a name="http---hcp.org-codes-medical-specility-type-provider-null"> </a>
                 </td>
                 <td>Nursing</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-medical-specility-type-provider-4"> </a>4
+                  <a name="http---hcp.org-codes-medical-specility-type-provider-null"> </a>
                 </td>
                 <td>Pharmacy</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-medical-specility-type-provider-5"> </a>5
+                  <a name="http---hcp.org-codes-medical-specility-type-provider-null"> </a>
                 </td>
                 <td>Nursing Midwifery</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-medical-specility-type-provider-6"> </a>6
+                  <a name="http---hcp.org-codes-medical-specility-type-provider-null"> </a>
                 </td>
                 <td>Military surgeons</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-medical-specility-type-provider-7"> </a>7
+                  <a name="http---hcp.org-codes-medical-specility-type-provider-null"> </a>
                 </td>
                 <td>Cardio Thoracic and Vascular Surgery</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-medical-specility-type-provider-8"> </a>8
+                  <a name="http---hcp.org-codes-medical-specility-type-provider-null"> </a>
                 </td>
                 <td>Cardiology</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-medical-specility-type-provider-9"> </a>9
+                  <a name="http---hcp.org-codes-medical-specility-type-provider-null"> </a>
                 </td>
                 <td>Allergy</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-medical-specility-type-provider-10"> </a>10
+                  <a name="http---hcp.org-codes-medical-specility-type-provider-null"> </a>
                 </td>
                 <td>Chest Medicine</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-medical-specility-type-provider-11"> </a>11
+                  <a name="http---hcp.org-codes-medical-specility-type-provider-null"> </a>
                 </td>
                 <td>Clinical Psychology</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-medical-specility-type-provider-12"> </a>12
+                  <a name="http---hcp.org-codes-medical-specility-type-provider-null"> </a>
                 </td>
                 <td>Cosmetic Dentistry</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-medical-specility-type-provider-13"> </a>13
+                  <a name="http---hcp.org-codes-medical-specility-type-provider-null"> </a>
                 </td>
                 <td>Cosmetic Surgery</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-medical-specility-type-provider-14"> </a>14
+                  <a name="http---hcp.org-codes-medical-specility-type-provider-null"> </a>
                 </td>
                 <td>Endodontics</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-medical-specility-type-provider-15"> </a>15
+                  <a name="http---hcp.org-codes-medical-specility-type-provider-null"> </a>
                 </td>
                 <td>ENT</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-medical-specility-type-provider-16"> </a>16
+                  <a name="http---hcp.org-codes-medical-specility-type-provider-null"> </a>
                 </td>
                 <td>Critical Care</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-medical-specility-type-provider-17"> </a>17
+                  <a name="http---hcp.org-codes-medical-specility-type-provider-null"> </a>
                 </td>
                 <td>Dental Implants &amp; Cosmetic Dentistry</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-medical-specility-type-provider-18"> </a>18
+                  <a name="http---hcp.org-codes-medical-specility-type-provider-null"> </a>
                 </td>
                 <td>Dermatology Venereology and Leprology</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-medical-specility-type-provider-19"> </a>19
+                  <a name="http---hcp.org-codes-medical-specility-type-provider-null"> </a>
                 </td>
                 <td>Dermatology</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-medical-specility-type-provider-20"> </a>20
+                  <a name="http---hcp.org-codes-medical-specility-type-provider-null"> </a>
                 </td>
                 <td>Facial Plastic Surgery</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-medical-specility-type-provider-21"> </a>21
+                  <a name="http---hcp.org-codes-medical-specility-type-provider-null"> </a>
                 </td>
                 <td>Diabetology</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-medical-specility-type-provider-22"> </a>22
+                  <a name="http---hcp.org-codes-medical-specility-type-provider-null"> </a>
                 </td>
                 <td>Endocrinology</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-medical-specility-type-provider-23"> </a>23
+                  <a name="http---hcp.org-codes-medical-specility-type-provider-null"> </a>
                 </td>
                 <td>Diet and Nutrition</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-medical-specility-type-provider-24"> </a>24
+                  <a name="http---hcp.org-codes-medical-specility-type-provider-null"> </a>
                 </td>
                 <td>Diabetology &amp; Internal Medicine</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-medical-specility-type-provider-25"> </a>25
+                  <a name="http---hcp.org-codes-medical-specility-type-provider-null"> </a>
                 </td>
                 <td>Gastrosurgery</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-medical-specility-type-provider-26"> </a>26
+                  <a name="http---hcp.org-codes-medical-specility-type-provider-null"> </a>
                 </td>
                 <td>Gastroenterology</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-medical-specility-type-provider-27"> </a>27
+                  <a name="http---hcp.org-codes-medical-specility-type-provider-null"> </a>
                 </td>
                 <td>General Medicine</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-medical-specility-type-provider-28"> </a>28
+                  <a name="http---hcp.org-codes-medical-specility-type-provider-null"> </a>
                 </td>
                 <td>General Surgery</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-medical-specility-type-provider-29"> </a>29
+                  <a name="http---hcp.org-codes-medical-specility-type-provider-null"> </a>
                 </td>
                 <td>General Surgery &amp; Laparoscopic Surgery</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-medical-specility-type-provider-30"> </a>30
+                  <a name="http---hcp.org-codes-medical-specility-type-provider-null"> </a>
                 </td>
                 <td>Gynecology &amp; Ultrasonology</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-medical-specility-type-provider-31"> </a>31
+                  <a name="http---hcp.org-codes-medical-specility-type-provider-null"> </a>
                 </td>
                 <td>Head &amp; Neck Surgery</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-medical-specility-type-provider-32"> </a>32
+                  <a name="http---hcp.org-codes-medical-specility-type-provider-null"> </a>
                 </td>
                 <td>Head &amp; Neck Surgical Oncology</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-medical-specility-type-provider-33"> </a>33
+                  <a name="http---hcp.org-codes-medical-specility-type-provider-null"> </a>
                 </td>
                 <td>Hepato Pancreato Biliary Surgery</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-medical-specility-type-provider-34"> </a>34
+                  <a name="http---hcp.org-codes-medical-specility-type-provider-null"> </a>
                 </td>
                 <td>Infectious Disease medicine</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-medical-specility-type-provider-35"> </a>35
+                  <a name="http---hcp.org-codes-medical-specility-type-provider-null"> </a>
                 </td>
                 <td>Internal Medicine</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-medical-specility-type-provider-36"> </a>36
+                  <a name="http---hcp.org-codes-medical-specility-type-provider-null"> </a>
                 </td>
                 <td>Internal Medicine &amp; Diabetics</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-medical-specility-type-provider-37"> </a>37
+                  <a name="http---hcp.org-codes-medical-specility-type-provider-null"> </a>
                 </td>
                 <td>Neuro Surgery</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-medical-specility-type-provider-38"> </a>38
+                  <a name="http---hcp.org-codes-medical-specility-type-provider-null"> </a>
                 </td>
                 <td>Resident Physicians</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-medical-specility-type-provider-39"> </a>39
+                  <a name="http---hcp.org-codes-medical-specility-type-provider-null"> </a>
                 </td>
                 <td>Respiratory Allergy And Sleep Medicine</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-medical-specility-type-provider-40"> </a>40
+                  <a name="http---hcp.org-codes-medical-specility-type-provider-null"> </a>
                 </td>
                 <td>Rheumatology</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-medical-specility-type-provider-41"> </a>41
+                  <a name="http---hcp.org-codes-medical-specility-type-provider-null"> </a>
                 </td>
                 <td>Sexual Medicine</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-medical-specility-type-provider-42"> </a>42
+                  <a name="http---hcp.org-codes-medical-specility-type-provider-null"> </a>
                 </td>
                 <td>Spine Surgery</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-medical-specility-type-provider-43"> </a>43
+                  <a name="http---hcp.org-codes-medical-specility-type-provider-null"> </a>
                 </td>
                 <td>Sports Medicine</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-medical-specility-type-provider-44"> </a>44
+                  <a name="http---hcp.org-codes-medical-specility-type-provider-null"> </a>
                 </td>
                 <td>Surgical Gastroenterology</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-medical-specility-type-provider-45"> </a>45
+                  <a name="http---hcp.org-codes-medical-specility-type-provider-null"> </a>
                 </td>
                 <td>Surgical Oncology</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-medical-specility-type-provider-46"> </a>46
+                  <a name="http---hcp.org-codes-medical-specility-type-provider-null"> </a>
                 </td>
                 <td>Urology</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-medical-specility-type-provider-47"> </a>47
+                  <a name="http---hcp.org-codes-medical-specility-type-provider-null"> </a>
                 </td>
                 <td>Physiotherapy</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-medical-specility-type-provider-48"> </a>48
+                  <a name="http---hcp.org-codes-medical-specility-type-provider-null"> </a>
                 </td>
                 <td>Physiotherapy &amp; Rehabilitation</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-medical-specility-type-provider-49"> </a>49
+                  <a name="http---hcp.org-codes-medical-specility-type-provider-null"> </a>
                 </td>
                 <td>Plastic and Cosmetic Surgery</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-medical-specility-type-provider-50"> </a>50
+                  <a name="http---hcp.org-codes-medical-specility-type-provider-null"> </a>
                 </td>
                 <td>Plastic Surgery</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-medical-specility-type-provider-51"> </a>51
+                  <a name="http---hcp.org-codes-medical-specility-type-provider-null"> </a>
                 </td>
                 <td>Podiatry</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-medical-specility-type-provider-52"> </a>52
+                  <a name="http---hcp.org-codes-medical-specility-type-provider-null"> </a>
                 </td>
                 <td>Prosthodontics &amp; Implants</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-medical-specility-type-provider-53"> </a>53
+                  <a name="http---hcp.org-codes-medical-specility-type-provider-null"> </a>
                 </td>
                 <td>Psychiatry</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-medical-specility-type-provider-54"> </a>54
+                  <a name="http---hcp.org-codes-medical-specility-type-provider-null"> </a>
                 </td>
                 <td>Pulmonology</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-medical-specility-type-provider-55"> </a>55
+                  <a name="http---hcp.org-codes-medical-specility-type-provider-null"> </a>
                 </td>
                 <td>Radiation Oncology</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-medical-specility-type-provider-56"> </a>56
+                  <a name="http---hcp.org-codes-medical-specility-type-provider-null"> </a>
                 </td>
                 <td>Radiology</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-medical-specility-type-provider-57"> </a>57
+                  <a name="http---hcp.org-codes-medical-specility-type-provider-null"> </a>
                 </td>
                 <td>Laparoscopic and Robotic Surgery</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-medical-specility-type-provider-58"> </a>58
+                  <a name="http---hcp.org-codes-medical-specility-type-provider-null"> </a>
                 </td>
                 <td>Medical Gastroenterology</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-medical-specility-type-provider-59"> </a>59
+                  <a name="http---hcp.org-codes-medical-specility-type-provider-null"> </a>
                 </td>
                 <td>Medical Oncology</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-medical-specility-type-provider-60"> </a>60
+                  <a name="http---hcp.org-codes-medical-specility-type-provider-null"> </a>
                 </td>
                 <td>Nephrology</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-medical-specility-type-provider-61"> </a>61
+                  <a name="http---hcp.org-codes-medical-specility-type-provider-null"> </a>
                 </td>
                 <td>Neurology</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-medical-specility-type-provider-62"> </a>62
+                  <a name="http---hcp.org-codes-medical-specility-type-provider-null"> </a>
                 </td>
                 <td>Neurology &amp; Neuro Surgery</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-medical-specility-type-provider-63"> </a>63
+                  <a name="http---hcp.org-codes-medical-specility-type-provider-null"> </a>
                 </td>
                 <td>Neuropsychiatry</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-medical-specility-type-provider-64"> </a>64
+                  <a name="http---hcp.org-codes-medical-specility-type-provider-null"> </a>
                 </td>
                 <td>Neurosurgery</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-medical-specility-type-provider-65"> </a>65
+                  <a name="http---hcp.org-codes-medical-specility-type-provider-null"> </a>
                 </td>
                 <td>Obstetrics &amp; Gynecology</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-medical-specility-type-provider-66"> </a>66
+                  <a name="http---hcp.org-codes-medical-specility-type-provider-null"> </a>
                 </td>
                 <td>Oncology</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-medical-specility-type-provider-67"> </a>67
+                  <a name="http---hcp.org-codes-medical-specility-type-provider-null"> </a>
                 </td>
                 <td>Ophthalmology</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-medical-specility-type-provider-68"> </a>68
+                  <a name="http---hcp.org-codes-medical-specility-type-provider-null"> </a>
                 </td>
                 <td>Oral &amp; Maxillofacial Surgery</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-medical-specility-type-provider-69"> </a>69
+                  <a name="http---hcp.org-codes-medical-specility-type-provider-null"> </a>
                 </td>
                 <td>Ortho Dontia</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-medical-specility-type-provider-70"> </a>70
+                  <a name="http---hcp.org-codes-medical-specility-type-provider-null"> </a>
                 </td>
                 <td>Orthopedic Surgeon</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-medical-specility-type-provider-71"> </a>71
+                  <a name="http---hcp.org-codes-medical-specility-type-provider-null"> </a>
                 </td>
                 <td>Orthopedics</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-medical-specility-type-provider-72"> </a>72
+                  <a name="http---hcp.org-codes-medical-specility-type-provider-null"> </a>
                 </td>
                 <td>Orthopedics &amp; Sports Medicine</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-medical-specility-type-provider-73"> </a>73
+                  <a name="http---hcp.org-codes-medical-specility-type-provider-null"> </a>
                 </td>
                 <td>Orthopedics And Spine Surgery</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-medical-specility-type-provider-74"> </a>74
+                  <a name="http---hcp.org-codes-medical-specility-type-provider-null"> </a>
                 </td>
                 <td>Orthopedics And Upper Limb Surgery</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-medical-specility-type-provider-75"> </a>75
+                  <a name="http---hcp.org-codes-medical-specility-type-provider-null"> </a>
                 </td>
                 <td>Pediatric Endocrinology</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-medical-specility-type-provider-76"> </a>76
+                  <a name="http---hcp.org-codes-medical-specility-type-provider-null"> </a>
                 </td>
                 <td>Pediatric Ophthalmology And Squint</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-medical-specility-type-provider-77"> </a>77
+                  <a name="http---hcp.org-codes-medical-specility-type-provider-null"> </a>
                 </td>
                 <td>Paediatrics</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-medical-specility-type-provider-78"> </a>78
+                  <a name="http---hcp.org-codes-medical-specility-type-provider-null"> </a>
                 </td>
                 <td>Paediatrics &amp; Neonatology</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-medical-specility-type-provider-79"> </a>79
+                  <a name="http---hcp.org-codes-medical-specility-type-provider-null"> </a>
                 </td>
                 <td>Paediatrics - Nephrology</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-medical-specility-type-provider-80"> </a>80
+                  <a name="http---hcp.org-codes-medical-specility-type-provider-null"> </a>
                 </td>
                 <td>Paediatrics - Neurology</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-medical-specility-type-provider-81"> </a>81
+                  <a name="http---hcp.org-codes-medical-specility-type-provider-null"> </a>
                 </td>
                 <td>Paediatrics - Surgery</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-medical-specility-type-provider-82"> </a>82
+                  <a name="http---hcp.org-codes-medical-specility-type-provider-null"> </a>
                 </td>
                 <td>Pathology</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-medical-specility-type-provider-83"> </a>83
+                  <a name="http---hcp.org-codes-medical-specility-type-provider-null"> </a>
                 </td>
                 <td>Peadodontology (Child Dentistry)</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-medical-specility-type-provider-84"> </a>84
+                  <a name="http---hcp.org-codes-medical-specility-type-provider-null"> </a>
                 </td>
                 <td>Pediatric Pulmonology</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-medical-specility-type-provider-85"> </a>85
+                  <a name="http---hcp.org-codes-medical-specility-type-provider-null"> </a>
                 </td>
                 <td>Periodontia</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-medical-specility-type-provider-86"> </a>86
+                  <a name="http---hcp.org-codes-medical-specility-type-provider-null"> </a>
                 </td>
                 <td>Periodontology and Implantology</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-medical-specility-type-provider-87"> </a>87
+                  <a name="http---hcp.org-codes-medical-specility-type-provider-null"> </a>
                 </td>
                 <td>Peripheral Vascular Surgery</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-medical-specility-type-provider-88"> </a>88
+                  <a name="http---hcp.org-codes-medical-specility-type-provider-null"> </a>
                 </td>
                 <td>Physical Medicine &amp; Rehabilitation</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="http---hcp.org-codes-medical-specility-type-provider-89"> </a>89
+                  <a name="http---hcp.org-codes-medical-specility-type-provider-null"> </a>
                 </td>
                 <td>Physician &amp; Diabetology</td>
               </tr>
             </table>
           </div>
         </text>
-        <url value="https://fhir-ig-demo/ValueSet/medical-specialty-provider"/>
+        <url value="https://fhir-ig-demo/ValueSet/medical-speciality-type-provider"/>
         <version value="0.0.1"/>
         <name value="Medical Speciality Type Provider"/>
         <status value="active"/>
@@ -1374,447 +582,358 @@
           <timestamp value="2021-09-07T08:15:30+05:30"/>
           <contains>
             <system value="http://hcp.org/codes/medical-specility-type-provider"/>
-            <code value="1"/>
             <display value="General Medicine"/>
           </contains>
           <contains>
             <system value="http://hcp.org/codes/medical-specility-type-provider"/>
-            <code value="2"/>
             <display value="Dental surgery"/>
           </contains>
           <contains>
             <system value="http://hcp.org/codes/medical-specility-type-provider"/>
-            <code value="3"/>
             <display value="Nursing"/>
           </contains>
           <contains>
             <system value="http://hcp.org/codes/medical-specility-type-provider"/>
-            <code value="4"/>
             <display value="Pharmacy"/>
           </contains>
           <contains>
             <system value="http://hcp.org/codes/medical-specility-type-provider"/>
-            <code value="5"/>
             <display value="Nursing Midwifery"/>
           </contains>
           <contains>
             <system value="http://hcp.org/codes/medical-specility-type-provider"/>
-            <code value="6"/>
             <display value="Military surgeons"/>
           </contains>
           <contains>
             <system value="http://hcp.org/codes/medical-specility-type-provider"/>
-            <code value="7"/>
             <display value="Cardio Thoracic and Vascular Surgery"/>
           </contains>
           <contains>
             <system value="http://hcp.org/codes/medical-specility-type-provider"/>
-            <code value="8"/>
             <display value="Cardiology"/>
           </contains>
           <contains>
             <system value="http://hcp.org/codes/medical-specility-type-provider"/>
-            <code value="9"/>
             <display value="Allergy"/>
           </contains>
           <contains>
             <system value="http://hcp.org/codes/medical-specility-type-provider"/>
-            <code value="10"/>
             <display value="Chest Medicine"/>
           </contains>
           <contains>
             <system value="http://hcp.org/codes/medical-specility-type-provider"/>
-            <code value="11"/>
             <display value="Clinical Psychology"/>
           </contains>
           <contains>
             <system value="http://hcp.org/codes/medical-specility-type-provider"/>
-            <code value="12"/>
             <display value="Cosmetic Dentistry"/>
           </contains>
           <contains>
             <system value="http://hcp.org/codes/medical-specility-type-provider"/>
-            <code value="13"/>
             <display value="Cosmetic Surgery"/>
           </contains>
           <contains>
             <system value="http://hcp.org/codes/medical-specility-type-provider"/>
-            <code value="14"/>
             <display value="Endodontics"/>
           </contains>
           <contains>
             <system value="http://hcp.org/codes/medical-specility-type-provider"/>
-            <code value="15"/>
             <display value="ENT"/>
           </contains>
           <contains>
             <system value="http://hcp.org/codes/medical-specility-type-provider"/>
-            <code value="16"/>
             <display value="Critical Care"/>
           </contains>
           <contains>
             <system value="http://hcp.org/codes/medical-specility-type-provider"/>
-            <code value="17"/>
             <display value="Dental Implants &amp; Cosmetic Dentistry"/>
           </contains>
           <contains>
             <system value="http://hcp.org/codes/medical-specility-type-provider"/>
-            <code value="18"/>
             <display value="Dermatology Venereology and Leprology"/>
           </contains>
           <contains>
             <system value="http://hcp.org/codes/medical-specility-type-provider"/>
-            <code value="19"/>
             <display value="Dermatology"/>
           </contains>
           <contains>
             <system value="http://hcp.org/codes/medical-specility-type-provider"/>
-            <code value="20"/>
             <display value="Facial Plastic Surgery"/>
           </contains>
           <contains>
             <system value="http://hcp.org/codes/medical-specility-type-provider"/>
-            <code value="21"/>
             <display value="Diabetology"/>
           </contains>
           <contains>
             <system value="http://hcp.org/codes/medical-specility-type-provider"/>
-            <code value="22"/>
             <display value="Endocrinology"/>
           </contains>
           <contains>
             <system value="http://hcp.org/codes/medical-specility-type-provider"/>
-            <code value="23"/>
             <display value="Diet and Nutrition"/>
           </contains>
           <contains>
             <system value="http://hcp.org/codes/medical-specility-type-provider"/>
-            <code value="24"/>
             <display value="Diabetology &amp; Internal Medicine"/>
           </contains>
           <contains>
             <system value="http://hcp.org/codes/medical-specility-type-provider"/>
-            <code value="25"/>
             <display value="Gastrosurgery"/>
           </contains>
           <contains>
             <system value="http://hcp.org/codes/medical-specility-type-provider"/>
-            <code value="26"/>
             <display value="Gastroenterology"/>
           </contains>
           <contains>
             <system value="http://hcp.org/codes/medical-specility-type-provider"/>
-            <code value="27"/>
             <display value="General Medicine"/>
           </contains>
           <contains>
             <system value="http://hcp.org/codes/medical-specility-type-provider"/>
-            <code value="28"/>
             <display value="General Surgery"/>
           </contains>
           <contains>
             <system value="http://hcp.org/codes/medical-specility-type-provider"/>
-            <code value="29"/>
             <display value="General Surgery &amp; Laparoscopic Surgery"/>
           </contains>
           <contains>
             <system value="http://hcp.org/codes/medical-specility-type-provider"/>
-            <code value="30"/>
             <display value="Gynecology &amp; Ultrasonology"/>
           </contains>
           <contains>
             <system value="http://hcp.org/codes/medical-specility-type-provider"/>
-            <code value="31"/>
             <display value="Head &amp; Neck Surgery"/>
           </contains>
           <contains>
             <system value="http://hcp.org/codes/medical-specility-type-provider"/>
-            <code value="32"/>
             <display value="Head &amp; Neck Surgical Oncology"/>
           </contains>
           <contains>
             <system value="http://hcp.org/codes/medical-specility-type-provider"/>
-            <code value="33"/>
             <display value="Hepato Pancreato Biliary Surgery"/>
           </contains>
           <contains>
             <system value="http://hcp.org/codes/medical-specility-type-provider"/>
-            <code value="34"/>
             <display value="Infectious Disease medicine"/>
           </contains>
           <contains>
             <system value="http://hcp.org/codes/medical-specility-type-provider"/>
-            <code value="35"/>
             <display value="Internal Medicine"/>
           </contains>
           <contains>
             <system value="http://hcp.org/codes/medical-specility-type-provider"/>
-            <code value="36"/>
             <display value="Internal Medicine &amp; Diabetics"/>
           </contains>
           <contains>
             <system value="http://hcp.org/codes/medical-specility-type-provider"/>
-            <code value="37"/>
             <display value="Neuro Surgery"/>
           </contains>
           <contains>
             <system value="http://hcp.org/codes/medical-specility-type-provider"/>
-            <code value="38"/>
             <display value="Resident Physicians"/>
           </contains>
           <contains>
             <system value="http://hcp.org/codes/medical-specility-type-provider"/>
-            <code value="39"/>
             <display value="Respiratory Allergy And Sleep Medicine"/>
           </contains>
           <contains>
             <system value="http://hcp.org/codes/medical-specility-type-provider"/>
-            <code value="40"/>
             <display value="Rheumatology"/>
           </contains>
           <contains>
             <system value="http://hcp.org/codes/medical-specility-type-provider"/>
-            <code value="41"/>
             <display value="Sexual Medicine"/>
           </contains>
           <contains>
             <system value="http://hcp.org/codes/medical-specility-type-provider"/>
-            <code value="42"/>
             <display value="Spine Surgery"/>
           </contains>
           <contains>
             <system value="http://hcp.org/codes/medical-specility-type-provider"/>
-            <code value="43"/>
             <display value="Sports Medicine"/>
           </contains>
           <contains>
             <system value="http://hcp.org/codes/medical-specility-type-provider"/>
-            <code value="44"/>
             <display value="Surgical Gastroenterology"/>
           </contains>
           <contains>
             <system value="http://hcp.org/codes/medical-specility-type-provider"/>
-            <code value="45"/>
             <display value="Surgical Oncology"/>
           </contains>
           <contains>
             <system value="http://hcp.org/codes/medical-specility-type-provider"/>
-            <code value="46"/>
             <display value="Urology"/>
           </contains>
           <contains>
             <system value="http://hcp.org/codes/medical-specility-type-provider"/>
-            <code value="47"/>
             <display value="Physiotherapy"/>
           </contains>
           <contains>
             <system value="http://hcp.org/codes/medical-specility-type-provider"/>
-            <code value="48"/>
             <display value="Physiotherapy &amp; Rehabilitation"/>
           </contains>
           <contains>
             <system value="http://hcp.org/codes/medical-specility-type-provider"/>
-            <code value="49"/>
             <display value="Plastic and Cosmetic Surgery"/>
           </contains>
           <contains>
             <system value="http://hcp.org/codes/medical-specility-type-provider"/>
-            <code value="50"/>
             <display value="Plastic Surgery"/>
           </contains>
           <contains>
             <system value="http://hcp.org/codes/medical-specility-type-provider"/>
-            <code value="51"/>
             <display value="Podiatry"/>
           </contains>
           <contains>
             <system value="http://hcp.org/codes/medical-specility-type-provider"/>
-            <code value="52"/>
             <display value="Prosthodontics &amp; Implants"/>
           </contains>
           <contains>
             <system value="http://hcp.org/codes/medical-specility-type-provider"/>
-            <code value="53"/>
             <display value="Psychiatry"/>
           </contains>
           <contains>
             <system value="http://hcp.org/codes/medical-specility-type-provider"/>
-            <code value="54"/>
             <display value="Pulmonology"/>
           </contains>
           <contains>
             <system value="http://hcp.org/codes/medical-specility-type-provider"/>
-            <code value="55"/>
             <display value="Radiation Oncology"/>
           </contains>
           <contains>
             <system value="http://hcp.org/codes/medical-specility-type-provider"/>
-            <code value="56"/>
             <display value="Radiology"/>
           </contains>
           <contains>
             <system value="http://hcp.org/codes/medical-specility-type-provider"/>
-            <code value="57"/>
             <display value="Laparoscopic and Robotic Surgery"/>
           </contains>
           <contains>
             <system value="http://hcp.org/codes/medical-specility-type-provider"/>
-            <code value="58"/>
             <display value="Medical Gastroenterology"/>
           </contains>
           <contains>
             <system value="http://hcp.org/codes/medical-specility-type-provider"/>
-            <code value="59"/>
             <display value="Medical Oncology"/>
           </contains>
           <contains>
             <system value="http://hcp.org/codes/medical-specility-type-provider"/>
-            <code value="60"/>
             <display value="Nephrology"/>
           </contains>
           <contains>
             <system value="http://hcp.org/codes/medical-specility-type-provider"/>
-            <code value="61"/>
             <display value="Neurology"/>
           </contains>
           <contains>
             <system value="http://hcp.org/codes/medical-specility-type-provider"/>
-            <code value="62"/>
             <display value="Neurology &amp; Neuro Surgery"/>
           </contains>
           <contains>
             <system value="http://hcp.org/codes/medical-specility-type-provider"/>
-            <code value="63"/>
             <display value="Neuropsychiatry"/>
           </contains>
           <contains>
             <system value="http://hcp.org/codes/medical-specility-type-provider"/>
-            <code value="64"/>
             <display value="Neurosurgery"/>
           </contains>
           <contains>
             <system value="http://hcp.org/codes/medical-specility-type-provider"/>
-            <code value="65"/>
             <display value="Obstetrics &amp; Gynecology"/>
           </contains>
           <contains>
             <system value="http://hcp.org/codes/medical-specility-type-provider"/>
-            <code value="66"/>
             <display value="Oncology"/>
           </contains>
           <contains>
             <system value="http://hcp.org/codes/medical-specility-type-provider"/>
-            <code value="67"/>
             <display value="Ophthalmology"/>
           </contains>
           <contains>
             <system value="http://hcp.org/codes/medical-specility-type-provider"/>
-            <code value="68"/>
             <display value="Oral &amp; Maxillofacial Surgery"/>
           </contains>
           <contains>
             <system value="http://hcp.org/codes/medical-specility-type-provider"/>
-            <code value="69"/>
             <display value="Ortho Dontia"/>
           </contains>
           <contains>
             <system value="http://hcp.org/codes/medical-specility-type-provider"/>
-            <code value="70"/>
             <display value="Orthopedic Surgeon"/>
           </contains>
           <contains>
             <system value="http://hcp.org/codes/medical-specility-type-provider"/>
-            <code value="71"/>
             <display value="Orthopedics"/>
           </contains>
           <contains>
             <system value="http://hcp.org/codes/medical-specility-type-provider"/>
-            <code value="72"/>
             <display value="Orthopedics &amp; Sports Medicine"/>
           </contains>
           <contains>
             <system value="http://hcp.org/codes/medical-specility-type-provider"/>
-            <code value="73"/>
             <display value="Orthopedics And Spine Surgery"/>
           </contains>
           <contains>
             <system value="http://hcp.org/codes/medical-specility-type-provider"/>
-            <code value="74"/>
             <display value="Orthopedics And Upper Limb Surgery"/>
           </contains>
           <contains>
             <system value="http://hcp.org/codes/medical-specility-type-provider"/>
-            <code value="75"/>
             <display value="Pediatric Endocrinology"/>
           </contains>
           <contains>
             <system value="http://hcp.org/codes/medical-specility-type-provider"/>
-            <code value="76"/>
             <display value="Pediatric Ophthalmology And Squint"/>
           </contains>
           <contains>
             <system value="http://hcp.org/codes/medical-specility-type-provider"/>
-            <code value="77"/>
             <display value="Paediatrics"/>
           </contains>
           <contains>
             <system value="http://hcp.org/codes/medical-specility-type-provider"/>
-            <code value="78"/>
             <display value="Paediatrics &amp; Neonatology"/>
           </contains>
           <contains>
             <system value="http://hcp.org/codes/medical-specility-type-provider"/>
-            <code value="79"/>
             <display value="Paediatrics - Nephrology"/>
           </contains>
           <contains>
             <system value="http://hcp.org/codes/medical-specility-type-provider"/>
-            <code value="80"/>
             <display value="Paediatrics - Neurology"/>
           </contains>
           <contains>
             <system value="http://hcp.org/codes/medical-specility-type-provider"/>
-            <code value="81"/>
             <display value="Paediatrics - Surgery"/>
           </contains>
           <contains>
             <system value="http://hcp.org/codes/medical-specility-type-provider"/>
-            <code value="82"/>
             <display value="Pathology"/>
           </contains>
           <contains>
             <system value="http://hcp.org/codes/medical-specility-type-provider"/>
-            <code value="83"/>
             <display value="Peadodontology (Child Dentistry)"/>
           </contains>
           <contains>
             <system value="http://hcp.org/codes/medical-specility-type-provider"/>
-            <code value="84"/>
             <display value="Pediatric Pulmonology"/>
           </contains>
           <contains>
             <system value="http://hcp.org/codes/medical-specility-type-provider"/>
-            <code value="85"/>
             <display value="Periodontia"/>
           </contains>
           <contains>
             <system value="http://hcp.org/codes/medical-specility-type-provider"/>
-            <code value="86"/>
             <display value="Periodontology and Implantology"/>
           </contains>
           <contains>
             <system value="http://hcp.org/codes/medical-specility-type-provider"/>
-            <code value="87"/>
             <display value="Peripheral Vascular Surgery"/>
           </contains>
           <contains>
             <system value="http://hcp.org/codes/medical-specility-type-provider"/>
-            <code value="88"/>
             <display value="Physical Medicine &amp; Rehabilitation"/>
           </contains>
           <contains>
             <system value="http://hcp.org/codes/medical-specility-type-provider"/>
-            <code value="89"/>
             <display value="Physician &amp; Diabetology"/>
           </contains>
         </expansion>
@@ -1830,7 +949,7 @@
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml">
             <p>This value set contains 32 concepts</p>
-            <p>All codes from system 
+            <p>All codes in this table are from the system 
               <code>http://hcp.org/codes/procedure-type-description</code>
             </p>
             <table class="codes">
@@ -2226,7 +1345,7 @@
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml">
             <p>This value set contains 65 concepts</p>
-            <p>All codes from system 
+            <p>All codes in this table are from the system 
               <code>http://hcp.org/codes/denial-code</code>
             </p>
             <table class="codes">
@@ -2985,7 +2104,7 @@
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml">
             <p>This value set contains 9 concepts</p>
-            <p>All codes from system 
+            <p>All codes in this table are from the system 
               <code>http://hcp.org/codes/service-category</code>
             </p>
             <table class="codes">
@@ -3114,6 +2233,1337 @@
             <system value="http://hcp.org/codes/service-category"/>
             <code value="900000"/>
             <display value="Package Charges"/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="https://fhir-ig-demo/ValueSet/claim-service-codes"/>
+    <resource>
+      <ValueSet>
+        <id value="claim-service-codes"/>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>This value set contains 41 concepts</p>
+            <p>All codes in this table are from the system 
+              <code>http://hcp.org/codes/service-codes</code>
+            </p>
+            <table class="codes">
+              <tr>
+                <td>
+                  <b>Lvl</b>
+                </td>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>Display</b>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="http---hcp.org-codes-service-codes-500000"> </a>0
+                </td>
+                <td style="white-space:nowrap">500000</td>
+                <td>Professional fees charges</td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="http---hcp.org-codes-service-codes-500000"> </a>0
+                </td>
+                <td style="white-space:nowrap">500000</td>
+                <td>Professional fees charges</td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="http---hcp.org-codes-service-codes-501000"> </a>1
+                </td>
+                <td style="white-space:nowrap">  501000</td>
+                <td>Visit charges</td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="http---hcp.org-codes-service-codes-500000"> </a>0
+                </td>
+                <td style="white-space:nowrap">500000</td>
+                <td>Professional fees charges</td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="http---hcp.org-codes-service-codes-501000"> </a>1
+                </td>
+                <td style="white-space:nowrap">  501000</td>
+                <td>Visit charges</td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="http---hcp.org-codes-service-codes-501001"> </a>2
+                </td>
+                <td style="white-space:nowrap">    501001</td>
+                <td>Consultation charges</td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="http---hcp.org-codes-service-codes-500000"> </a>0
+                </td>
+                <td style="white-space:nowrap">500000</td>
+                <td>Professional fees charges</td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="http---hcp.org-codes-service-codes-501000"> </a>1
+                </td>
+                <td style="white-space:nowrap">  501000</td>
+                <td>Visit charges</td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="http---hcp.org-codes-service-codes-501002"> </a>2
+                </td>
+                <td style="white-space:nowrap">    501002</td>
+                <td>Medical Supervision Charges</td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="http---hcp.org-codes-service-codes-500000"> </a>0
+                </td>
+                <td style="white-space:nowrap">500000</td>
+                <td>Professional fees charges</td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="http---hcp.org-codes-service-codes-501000"> </a>1
+                </td>
+                <td style="white-space:nowrap">  501000</td>
+                <td>Visit charges</td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="http---hcp.org-codes-service-codes-501003"> </a>2
+                </td>
+                <td style="white-space:nowrap">    501003</td>
+                <td>Professional fees</td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="http---hcp.org-codes-service-codes-500000"> </a>0
+                </td>
+                <td style="white-space:nowrap">500000</td>
+                <td>Professional fees charges</td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="http---hcp.org-codes-service-codes-502000"> </a>1
+                </td>
+                <td style="white-space:nowrap">  502000</td>
+                <td>Surgery charges</td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="http---hcp.org-codes-service-codes-500000"> </a>0
+                </td>
+                <td style="white-space:nowrap">500000</td>
+                <td>Professional fees charges</td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="http---hcp.org-codes-service-codes-502000"> </a>1
+                </td>
+                <td style="white-space:nowrap">  502000</td>
+                <td>Surgery charges</td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="http---hcp.org-codes-service-codes-502001"> </a>2
+                </td>
+                <td style="white-space:nowrap">    502001</td>
+                <td>Surgeons Charges</td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="http---hcp.org-codes-service-codes-500000"> </a>0
+                </td>
+                <td style="white-space:nowrap">500000</td>
+                <td>Professional fees charges</td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="http---hcp.org-codes-service-codes-502000"> </a>1
+                </td>
+                <td style="white-space:nowrap">  502000</td>
+                <td>Surgery charges</td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="http---hcp.org-codes-service-codes-502002"> </a>2
+                </td>
+                <td style="white-space:nowrap">    502002</td>
+                <td>Assistant Surgeons Fee</td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="http---hcp.org-codes-service-codes-500000"> </a>0
+                </td>
+                <td style="white-space:nowrap">500000</td>
+                <td>Professional fees charges</td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="http---hcp.org-codes-service-codes-503000"> </a>1
+                </td>
+                <td style="white-space:nowrap">  503000</td>
+                <td>Anaesthetists Fee</td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="http---hcp.org-codes-service-codes-500000"> </a>0
+                </td>
+                <td style="white-space:nowrap">500000</td>
+                <td>Professional fees charges</td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="http---hcp.org-codes-service-codes-503000"> </a>1
+                </td>
+                <td style="white-space:nowrap">  503000</td>
+                <td>Anaesthetists Fee</td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="http---hcp.org-codes-service-codes-503001"> </a>2
+                </td>
+                <td style="white-space:nowrap">    503001</td>
+                <td>Anaesthetists fee</td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="http---hcp.org-codes-service-codes-500000"> </a>0
+                </td>
+                <td style="white-space:nowrap">500000</td>
+                <td>Professional fees charges</td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="http---hcp.org-codes-service-codes-503000"> </a>1
+                </td>
+                <td style="white-space:nowrap">  503000</td>
+                <td>Anaesthetists Fee</td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="http---hcp.org-codes-service-codes-503002"> </a>2
+                </td>
+                <td style="white-space:nowrap">    503002</td>
+                <td>OT standby charges</td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="http---hcp.org-codes-service-codes-500000"> </a>0
+                </td>
+                <td style="white-space:nowrap">500000</td>
+                <td>Professional fees charges</td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="http---hcp.org-codes-service-codes-504000"> </a>1
+                </td>
+                <td style="white-space:nowrap">  504000</td>
+                <td>Intensivist charges</td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="http---hcp.org-codes-service-codes-500000"> </a>0
+                </td>
+                <td style="white-space:nowrap">500000</td>
+                <td>Professional fees charges</td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="http---hcp.org-codes-service-codes-504000"> </a>1
+                </td>
+                <td style="white-space:nowrap">  504000</td>
+                <td>Procedure charges</td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="http---hcp.org-codes-service-codes-504001"> </a>2
+                </td>
+                <td style="white-space:nowrap">    504001</td>
+                <td>Beside procedures</td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="http---hcp.org-codes-service-codes-500000"> </a>0
+                </td>
+                <td style="white-space:nowrap">500000</td>
+                <td>Professional fees charges</td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="http---hcp.org-codes-service-codes-504000"> </a>1
+                </td>
+                <td style="white-space:nowrap">  504000</td>
+                <td>Procedure charges</td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="http---hcp.org-codes-service-codes-504002"> </a>2
+                </td>
+                <td style="white-space:nowrap">    504002</td>
+                <td>Suture charges</td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="http---hcp.org-codes-service-codes-500000"> </a>0
+                </td>
+                <td style="white-space:nowrap">500000</td>
+                <td>Professional fees charges</td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="http---hcp.org-codes-service-codes-505000"> </a>1
+                </td>
+                <td style="white-space:nowrap">  505000</td>
+                <td>Physiotherapy</td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="http---hcp.org-codes-service-codes-500000"> </a>0
+                </td>
+                <td style="white-space:nowrap">500000</td>
+                <td>Professional fees charges</td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="http---hcp.org-codes-service-codes-505000"> </a>1
+                </td>
+                <td style="white-space:nowrap">  505000</td>
+                <td>Technician charges</td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="http---hcp.org-codes-service-codes-505000"> </a>2
+                </td>
+                <td style="white-space:nowrap">    505000</td>
+                <td>OT/Cath Lab Technician</td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="https://fhir-ig-demo/ValueSet/claim-service-codes"/>
+        <version value="0.0.1"/>
+        <name value="Claim Service Codes"/>
+        <status value="active"/>
+        <date value="2021-08-15"/>
+        <publisher value="HL7 International - HCX"/>
+        <contact>
+          <name value="HL7 International - HCX"/>
+          <telecom>
+            <system value="url"/>
+            <value value="https://www.swasth.app/"/>
+          </telecom>
+        </contact>
+        <description value="This is the value set that includes the codes to identify the general type of benefits under which products and services are provided"/>
+        <expansion>
+          <timestamp value="2021-08-15T08:15:30+05:30"/>
+          <contains>
+            <system value="http://hcp.org/codes/service-codes"/>
+            <code value="500000"/>
+            <display value="Professional fees charges"/>
+          </contains>
+          <contains>
+            <system value="http://hcp.org/codes/service-codes"/>
+            <code value="500000"/>
+            <display value="Professional fees charges"/>
+            <contains>
+              <system value="http://hcp.org/codes/service-codes"/>
+              <code value="501000"/>
+              <display value="Visit charges"/>
+            </contains>
+          </contains>
+          <contains>
+            <system value="http://hcp.org/codes/service-codes"/>
+            <code value="500000"/>
+            <display value="Professional fees charges"/>
+            <contains>
+              <system value="http://hcp.org/codes/service-codes"/>
+              <code value="501000"/>
+              <display value="Visit charges"/>
+              <contains>
+                <system value="http://hcp.org/codes/service-codes"/>
+                <code value="501001"/>
+                <display value="Consultation charges"/>
+              </contains>
+            </contains>
+          </contains>
+          <contains>
+            <system value="http://hcp.org/codes/service-codes"/>
+            <code value="500000"/>
+            <display value="Professional fees charges"/>
+            <contains>
+              <system value="http://hcp.org/codes/service-codes"/>
+              <code value="501000"/>
+              <display value="Visit charges"/>
+              <contains>
+                <system value="http://hcp.org/codes/service-codes"/>
+                <code value="501002"/>
+                <display value="Medical Supervision Charges"/>
+              </contains>
+            </contains>
+          </contains>
+          <contains>
+            <system value="http://hcp.org/codes/service-codes"/>
+            <code value="500000"/>
+            <display value="Professional fees charges"/>
+            <contains>
+              <system value="http://hcp.org/codes/service-codes"/>
+              <code value="501000"/>
+              <display value="Visit charges"/>
+              <contains>
+                <system value="http://hcp.org/codes/service-codes"/>
+                <code value="501003"/>
+                <display value="Professional fees"/>
+              </contains>
+            </contains>
+          </contains>
+          <contains>
+            <system value="http://hcp.org/codes/service-codes"/>
+            <code value="500000"/>
+            <display value="Professional fees charges"/>
+            <contains>
+              <system value="http://hcp.org/codes/service-codes"/>
+              <code value="502000"/>
+              <display value="Surgery charges"/>
+            </contains>
+          </contains>
+          <contains>
+            <system value="http://hcp.org/codes/service-codes"/>
+            <code value="500000"/>
+            <display value="Professional fees charges"/>
+            <contains>
+              <system value="http://hcp.org/codes/service-codes"/>
+              <code value="502000"/>
+              <display value="Surgery charges"/>
+              <contains>
+                <system value="http://hcp.org/codes/service-codes"/>
+                <code value="502001"/>
+                <display value="Surgeons Charges"/>
+              </contains>
+            </contains>
+          </contains>
+          <contains>
+            <system value="http://hcp.org/codes/service-codes"/>
+            <code value="500000"/>
+            <display value="Professional fees charges"/>
+            <contains>
+              <system value="http://hcp.org/codes/service-codes"/>
+              <code value="502000"/>
+              <display value="Surgery charges"/>
+              <contains>
+                <system value="http://hcp.org/codes/service-codes"/>
+                <code value="502002"/>
+                <display value="Assistant Surgeons Fee"/>
+              </contains>
+            </contains>
+          </contains>
+          <contains>
+            <system value="http://hcp.org/codes/service-codes"/>
+            <code value="500000"/>
+            <display value="Professional fees charges"/>
+            <contains>
+              <system value="http://hcp.org/codes/service-codes"/>
+              <code value="503000"/>
+              <display value="Anaesthetists Fee"/>
+            </contains>
+          </contains>
+          <contains>
+            <system value="http://hcp.org/codes/service-codes"/>
+            <code value="500000"/>
+            <display value="Professional fees charges"/>
+            <contains>
+              <system value="http://hcp.org/codes/service-codes"/>
+              <code value="503000"/>
+              <display value="Anaesthetists Fee"/>
+              <contains>
+                <system value="http://hcp.org/codes/service-codes"/>
+                <code value="503001"/>
+                <display value="Anaesthetists fee"/>
+              </contains>
+            </contains>
+          </contains>
+          <contains>
+            <system value="http://hcp.org/codes/service-codes"/>
+            <code value="500000"/>
+            <display value="Professional fees charges"/>
+            <contains>
+              <system value="http://hcp.org/codes/service-codes"/>
+              <code value="503000"/>
+              <display value="Anaesthetists Fee"/>
+              <contains>
+                <system value="http://hcp.org/codes/service-codes"/>
+                <code value="503002"/>
+                <display value="OT standby charges"/>
+              </contains>
+            </contains>
+          </contains>
+          <contains>
+            <system value="http://hcp.org/codes/service-codes"/>
+            <code value="500000"/>
+            <display value="Professional fees charges"/>
+            <contains>
+              <system value="http://hcp.org/codes/service-codes"/>
+              <code value="504000"/>
+              <display value="Intensivist charges"/>
+            </contains>
+          </contains>
+          <contains>
+            <system value="http://hcp.org/codes/service-codes"/>
+            <code value="500000"/>
+            <display value="Professional fees charges"/>
+            <contains>
+              <system value="http://hcp.org/codes/service-codes"/>
+              <code value="504000"/>
+              <display value="Procedure charges"/>
+              <contains>
+                <system value="http://hcp.org/codes/service-codes"/>
+                <code value="504001"/>
+                <display value="Beside procedures"/>
+              </contains>
+            </contains>
+          </contains>
+          <contains>
+            <system value="http://hcp.org/codes/service-codes"/>
+            <code value="500000"/>
+            <display value="Professional fees charges"/>
+            <contains>
+              <system value="http://hcp.org/codes/service-codes"/>
+              <code value="504000"/>
+              <display value="Procedure charges"/>
+              <contains>
+                <system value="http://hcp.org/codes/service-codes"/>
+                <code value="504002"/>
+                <display value="Suture charges"/>
+              </contains>
+            </contains>
+          </contains>
+          <contains>
+            <system value="http://hcp.org/codes/service-codes"/>
+            <code value="500000"/>
+            <display value="Professional fees charges"/>
+            <contains>
+              <system value="http://hcp.org/codes/service-codes"/>
+              <code value="505000"/>
+              <display value="Physiotherapy"/>
+            </contains>
+          </contains>
+          <contains>
+            <system value="http://hcp.org/codes/service-codes"/>
+            <code value="500000"/>
+            <display value="Professional fees charges"/>
+            <contains>
+              <system value="http://hcp.org/codes/service-codes"/>
+              <code value="505000"/>
+              <display value="Technician charges"/>
+              <contains>
+                <system value="http://hcp.org/codes/service-codes"/>
+                <code value="505000"/>
+                <display value="OT/Cath Lab Technician"/>
+              </contains>
+            </contains>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="https://fhir-ig-demo/ValueSet/health-service-provider-role"/>
+    <resource>
+      <ValueSet>
+        <id value="health-service-provider-role"/>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>This value set contains 13 concepts</p>
+            <p>All codes in this table are from the system 
+              <code>http://hcp.org/codes/health-service-provider</code>
+            </p>
+            <table class="codes">
+              <tr>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>Display</b>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hcp.org-codes-health-service-provider-1"> </a>1
+                </td>
+                <td>Primary Care Provider Referring Provider.</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hcp.org-codes-health-service-provider-2"> </a>2
+                </td>
+                <td>Referring Provider.</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hcp.org-codes-health-service-provider-3"> </a>3
+                </td>
+                <td>Treating Provider.</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hcp.org-codes-health-service-provider-4"> </a>4
+                </td>
+                <td>Attending Provider.</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hcp.org-codes-health-service-provider-5"> </a>5
+                </td>
+                <td>Admitting Provider.</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hcp.org-codes-health-service-provider-6"> </a>6
+                </td>
+                <td>Consulting Provider.</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hcp.org-codes-health-service-provider-7"> </a>7
+                </td>
+                <td>Ordering Provider.</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hcp.org-codes-health-service-provider-8"> </a>8
+                </td>
+                <td>Dispensing Provider.</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hcp.org-codes-health-service-provider-9"> </a>9
+                </td>
+                <td>Discharge Provider.</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hcp.org-codes-health-service-provider-10"> </a>10
+                </td>
+                <td>Secondary Care Provider.</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hcp.org-codes-health-service-provider-11"> </a>11
+                </td>
+                <td>Tertiary Care Provider.</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hcp.org-codes-health-service-provider-12"> </a>12
+                </td>
+                <td>Transfusion Provider.</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hcp.org-codes-health-service-provider-13"> </a>13
+                </td>
+                <td>Others.</td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="https://fhir-ig-demo/ValueSet/health-service-provider-role"/>
+        <version value="0.0.1"/>
+        <name value="Health Service Provider Role"/>
+        <status value="active"/>
+        <date value="2021-09-07"/>
+        <publisher value="HL7 International - HCX"/>
+        <contact>
+          <name value="HL7 International - HCX"/>
+          <telecom>
+            <system value="url"/>
+            <value value="https://www.swasth.app/"/>
+          </telecom>
+        </contact>
+        <description value="This is the value set that includes the codes to identify health service provider"/>
+        <expansion>
+          <timestamp value="2021-09-07T08:15:30+05:30"/>
+          <contains>
+            <system value="http://hcp.org/codes/health-service-provider"/>
+            <code value="1"/>
+            <display value="Primary Care Provider Referring Provider."/>
+          </contains>
+          <contains>
+            <system value="http://hcp.org/codes/health-service-provider"/>
+            <code value="2"/>
+            <display value="Referring Provider."/>
+          </contains>
+          <contains>
+            <system value="http://hcp.org/codes/health-service-provider"/>
+            <code value="3"/>
+            <display value="Treating Provider."/>
+          </contains>
+          <contains>
+            <system value="http://hcp.org/codes/health-service-provider"/>
+            <code value="4"/>
+            <display value="Attending Provider."/>
+          </contains>
+          <contains>
+            <system value="http://hcp.org/codes/health-service-provider"/>
+            <code value="5"/>
+            <display value="Admitting Provider."/>
+          </contains>
+          <contains>
+            <system value="http://hcp.org/codes/health-service-provider"/>
+            <code value="6"/>
+            <display value="Consulting Provider."/>
+          </contains>
+          <contains>
+            <system value="http://hcp.org/codes/health-service-provider"/>
+            <code value="7"/>
+            <display value="Ordering Provider."/>
+          </contains>
+          <contains>
+            <system value="http://hcp.org/codes/health-service-provider"/>
+            <code value="8"/>
+            <display value="Dispensing Provider."/>
+          </contains>
+          <contains>
+            <system value="http://hcp.org/codes/health-service-provider"/>
+            <code value="9"/>
+            <display value="Discharge Provider."/>
+          </contains>
+          <contains>
+            <system value="http://hcp.org/codes/health-service-provider"/>
+            <code value="10"/>
+            <display value="Secondary Care Provider."/>
+          </contains>
+          <contains>
+            <system value="http://hcp.org/codes/health-service-provider"/>
+            <code value="11"/>
+            <display value="Tertiary Care Provider."/>
+          </contains>
+          <contains>
+            <system value="http://hcp.org/codes/health-service-provider"/>
+            <code value="12"/>
+            <display value="Transfusion Provider."/>
+          </contains>
+          <contains>
+            <system value="http://hcp.org/codes/health-service-provider"/>
+            <code value="13"/>
+            <display value="Others."/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="https://fhir-ig-demo/ValueSet/insurance-company-owners"/>
+    <resource>
+      <ValueSet>
+        <id value="insurance-company-owners"/>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>This value set contains 51 concepts</p>
+            <p>All codes in this table are from the system 
+              <code>http://hcp.org/codes/insurance-company-owners</code>
+            </p>
+            <table class="codes">
+              <tr>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>Display</b>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hcp.org-codes-insurance-company-owners-1"> </a>1
+                </td>
+                <td>Bajaj Allianz General Insurance Co. Ltd.</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hcp.org-codes-insurance-company-owners-2"> </a>2
+                </td>
+                <td>ICICI Lombard General Insurance Co. Ltd.</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hcp.org-codes-insurance-company-owners-3"> </a>3
+                </td>
+                <td>IFFCO Tokio General Insurance Co. Ltd.</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hcp.org-codes-insurance-company-owners-4"> </a>4
+                </td>
+                <td>National Insurance Co. Ltd.</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hcp.org-codes-insurance-company-owners-5"> </a>5
+                </td>
+                <td>The New India Assurance Co. Ltd.</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hcp.org-codes-insurance-company-owners-6"> </a>6
+                </td>
+                <td>The Oriental Insurance Co. Ltd.</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hcp.org-codes-insurance-company-owners-7"> </a>7
+                </td>
+                <td>United India Insurance Co. Ltd.</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hcp.org-codes-insurance-company-owners-8"> </a>8
+                </td>
+                <td>Reliance General Insurance Co. Ltd.</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hcp.org-codes-insurance-company-owners-9"> </a>9
+                </td>
+                <td>Royal Sundaram Alliance Insurance Co. Ltd</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hcp.org-codes-insurance-company-owners-10"> </a>10
+                </td>
+                <td>Tata AIG General Insurance Co. Ltd.</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hcp.org-codes-insurance-company-owners-11"> </a>11
+                </td>
+                <td>Cholamandalam MS General Insurance Co. Ltd.</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hcp.org-codes-insurance-company-owners-12"> </a>12
+                </td>
+                <td>HDFC ERGO General Insurance Co. Ltd.</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hcp.org-codes-insurance-company-owners-13"> </a>13
+                </td>
+                <td>Export Credit Guarantee Corporation of India Ltd.</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hcp.org-codes-insurance-company-owners-14"> </a>14
+                </td>
+                <td>Agriculture Insurance Co. of India Ltd.</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hcp.org-codes-insurance-company-owners-15"> </a>15
+                </td>
+                <td>Star Health and Allied Insurance Company Limited</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hcp.org-codes-insurance-company-owners-16"> </a>16
+                </td>
+                <td>Apollo Munich Health Insurance Company Limited</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hcp.org-codes-insurance-company-owners-17"> </a>17
+                </td>
+                <td>Universal Sompo General Insurance Co. Ltd.</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hcp.org-codes-insurance-company-owners-18"> </a>18
+                </td>
+                <td>Future Generali India Insurance Company Limited</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hcp.org-codes-insurance-company-owners-19"> </a>19
+                </td>
+                <td>Shriram General Insurance Company Limited</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hcp.org-codes-insurance-company-owners-20"> </a>20
+                </td>
+                <td>Bharti AXA General Insurance Company Limited</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hcp.org-codes-insurance-company-owners-21"> </a>21
+                </td>
+                <td>Raheja QBE General Insurance Company Limited</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hcp.org-codes-insurance-company-owners-22"> </a>22
+                </td>
+                <td>SBI General Insurance Company Limited</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hcp.org-codes-insurance-company-owners-23"> </a>23
+                </td>
+                <td>Max Bupa Health Insurance Company Ltd.2nd Floor, Salcon Rasvilas,</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hcp.org-codes-insurance-company-owners-24"> </a>24
+                </td>
+                <td>L&amp;T General Insurance Company Limited</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hcp.org-codes-insurance-company-owners-25"> </a>25
+                </td>
+                <td>Religare Health Insurance Company Limited</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hcp.org-codes-insurance-company-owners-26"> </a>26
+                </td>
+                <td>Magma HDI General Insurance Company Limited</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hcp.org-codes-insurance-company-owners-27"> </a>27
+                </td>
+                <td>Liberty Videocon General Insurance Company Limited,</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hcp.org-codes-insurance-company-owners-28"> </a>28
+                </td>
+                <td>Bajaj Allianz Life Insurance Company Limited</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hcp.org-codes-insurance-company-owners-29"> </a>29
+                </td>
+                <td>Birla Sun Life Insurance Co. Ltd</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hcp.org-codes-insurance-company-owners-30"> </a>30
+                </td>
+                <td>HDFC Standard Life Insurance Co. Ltd</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hcp.org-codes-insurance-company-owners-31"> </a>31
+                </td>
+                <td>ICICI Prudential Life Insurance Co. Ltd</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hcp.org-codes-insurance-company-owners-32"> </a>32
+                </td>
+                <td>ING Vysya Life Insurance Company Ltd.</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hcp.org-codes-insurance-company-owners-33"> </a>33
+                </td>
+                <td>Life Insurance Corporation of India</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hcp.org-codes-insurance-company-owners-34"> </a>34
+                </td>
+                <td>Max Life Insurance Co. Ltd</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hcp.org-codes-insurance-company-owners-35"> </a>35
+                </td>
+                <td>PNB Metlife India Insurance Co. Ltd.</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hcp.org-codes-insurance-company-owners-36"> </a>36
+                </td>
+                <td>Kotak Mahindra Old Mutual Life Insurance Limited</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hcp.org-codes-insurance-company-owners-37"> </a>37
+                </td>
+                <td>SBI Life Insurance Co. Ltd</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hcp.org-codes-insurance-company-owners-38"> </a>38
+                </td>
+                <td>Tata AIA Life Insurance Company Limited</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hcp.org-codes-insurance-company-owners-39"> </a>39
+                </td>
+                <td>Reliance Life Insurance Company Limited.</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hcp.org-codes-insurance-company-owners-40"> </a>40
+                </td>
+                <td>Aviva Life Insurance Company India Limited</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hcp.org-codes-insurance-company-owners-41"> </a>41
+                </td>
+                <td>Sahara India Life Insurance Co, Ltd.</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hcp.org-codes-insurance-company-owners-42"> </a>42
+                </td>
+                <td>Shriram Life Insurance Co, Ltd.</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hcp.org-codes-insurance-company-owners-43"> </a>43
+                </td>
+                <td>Bharti AXA Life Insurance Company Ltd.</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hcp.org-codes-insurance-company-owners-44"> </a>44
+                </td>
+                <td>Future Generali India Life Insurance Company Limited</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hcp.org-codes-insurance-company-owners-45"> </a>45
+                </td>
+                <td>IDBI Federal Life Insurance Company Ltd</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hcp.org-codes-insurance-company-owners-46"> </a>46
+                </td>
+                <td>Canara HSBC Oriental Bank of Commerce Life Insurance Company Ltd.</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hcp.org-codes-insurance-company-owners-47"> </a>47
+                </td>
+                <td>AEGON Religare Life Insurance Company Limited.</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hcp.org-codes-insurance-company-owners-48"> </a>48
+                </td>
+                <td>DLF Pramerica Life Insurance Co. Ltd.</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hcp.org-codes-insurance-company-owners-49"> </a>49
+                </td>
+                <td>Star Union Dai-ichi Life Insurance Co.</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hcp.org-codes-insurance-company-owners-50"> </a>50
+                </td>
+                <td>IndiaFirst Life Insurance Company Limited</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hcp.org-codes-insurance-company-owners-51"> </a>51
+                </td>
+                <td>Edelweiss Tokio Life Insurance Co. Ltd.</td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="https://fhir-ig-demo/ValueSet/insurance-company-owners"/>
+        <version value="0.0.1"/>
+        <name value="Insurance Company Owners"/>
+        <status value="active"/>
+        <date value="2021-09-07"/>
+        <publisher value="HL7 International - HCX"/>
+        <contact>
+          <name value="HL7 International - HCX"/>
+          <telecom>
+            <system value="url"/>
+            <value value="https://www.swasth.app/"/>
+          </telecom>
+        </contact>
+        <description value="This is the value set that includes the codes to identify the insurance company owners"/>
+        <expansion>
+          <timestamp value="2021-09-07T08:15:30+05:30"/>
+          <contains>
+            <system value="http://hcp.org/codes/insurance-company-owners"/>
+            <code value="1"/>
+            <display value="Bajaj Allianz General Insurance Co. Ltd."/>
+          </contains>
+          <contains>
+            <system value="http://hcp.org/codes/insurance-company-owners"/>
+            <code value="2"/>
+            <display value="ICICI Lombard General Insurance Co. Ltd."/>
+          </contains>
+          <contains>
+            <system value="http://hcp.org/codes/insurance-company-owners"/>
+            <code value="3"/>
+            <display value="IFFCO Tokio General Insurance Co. Ltd."/>
+          </contains>
+          <contains>
+            <system value="http://hcp.org/codes/insurance-company-owners"/>
+            <code value="4"/>
+            <display value="National Insurance Co. Ltd."/>
+          </contains>
+          <contains>
+            <system value="http://hcp.org/codes/insurance-company-owners"/>
+            <code value="5"/>
+            <display value="The New India Assurance Co. Ltd."/>
+          </contains>
+          <contains>
+            <system value="http://hcp.org/codes/insurance-company-owners"/>
+            <code value="6"/>
+            <display value="The Oriental Insurance Co. Ltd."/>
+          </contains>
+          <contains>
+            <system value="http://hcp.org/codes/insurance-company-owners"/>
+            <code value="7"/>
+            <display value="United India Insurance Co. Ltd."/>
+          </contains>
+          <contains>
+            <system value="http://hcp.org/codes/insurance-company-owners"/>
+            <code value="8"/>
+            <display value="Reliance General Insurance Co. Ltd."/>
+          </contains>
+          <contains>
+            <system value="http://hcp.org/codes/insurance-company-owners"/>
+            <code value="9"/>
+            <display value="Royal Sundaram Alliance Insurance Co. Ltd"/>
+          </contains>
+          <contains>
+            <system value="http://hcp.org/codes/insurance-company-owners"/>
+            <code value="10"/>
+            <display value="Tata AIG General Insurance Co. Ltd."/>
+          </contains>
+          <contains>
+            <system value="http://hcp.org/codes/insurance-company-owners"/>
+            <code value="11"/>
+            <display value="Cholamandalam MS General Insurance Co. Ltd."/>
+          </contains>
+          <contains>
+            <system value="http://hcp.org/codes/insurance-company-owners"/>
+            <code value="12"/>
+            <display value="HDFC ERGO General Insurance Co. Ltd."/>
+          </contains>
+          <contains>
+            <system value="http://hcp.org/codes/insurance-company-owners"/>
+            <code value="13"/>
+            <display value="Export Credit Guarantee Corporation of India Ltd."/>
+          </contains>
+          <contains>
+            <system value="http://hcp.org/codes/insurance-company-owners"/>
+            <code value="14"/>
+            <display value="Agriculture Insurance Co. of India Ltd."/>
+          </contains>
+          <contains>
+            <system value="http://hcp.org/codes/insurance-company-owners"/>
+            <code value="15"/>
+            <display value="Star Health and Allied Insurance Company Limited"/>
+          </contains>
+          <contains>
+            <system value="http://hcp.org/codes/insurance-company-owners"/>
+            <code value="16"/>
+            <display value="Apollo Munich Health Insurance Company Limited"/>
+          </contains>
+          <contains>
+            <system value="http://hcp.org/codes/insurance-company-owners"/>
+            <code value="17"/>
+            <display value="Universal Sompo General Insurance Co. Ltd."/>
+          </contains>
+          <contains>
+            <system value="http://hcp.org/codes/insurance-company-owners"/>
+            <code value="18"/>
+            <display value="Future Generali India Insurance Company Limited"/>
+          </contains>
+          <contains>
+            <system value="http://hcp.org/codes/insurance-company-owners"/>
+            <code value="19"/>
+            <display value="Shriram General Insurance Company Limited"/>
+          </contains>
+          <contains>
+            <system value="http://hcp.org/codes/insurance-company-owners"/>
+            <code value="20"/>
+            <display value="Bharti AXA General Insurance Company Limited"/>
+          </contains>
+          <contains>
+            <system value="http://hcp.org/codes/insurance-company-owners"/>
+            <code value="21"/>
+            <display value="Raheja QBE General Insurance Company Limited"/>
+          </contains>
+          <contains>
+            <system value="http://hcp.org/codes/insurance-company-owners"/>
+            <code value="22"/>
+            <display value="SBI General Insurance Company Limited"/>
+          </contains>
+          <contains>
+            <system value="http://hcp.org/codes/insurance-company-owners"/>
+            <code value="23"/>
+            <display value="Max Bupa Health Insurance Company Ltd.2nd Floor, Salcon Rasvilas,"/>
+          </contains>
+          <contains>
+            <system value="http://hcp.org/codes/insurance-company-owners"/>
+            <code value="24"/>
+            <display value="L&amp;T General Insurance Company Limited"/>
+          </contains>
+          <contains>
+            <system value="http://hcp.org/codes/insurance-company-owners"/>
+            <code value="25"/>
+            <display value="Religare Health Insurance Company Limited"/>
+          </contains>
+          <contains>
+            <system value="http://hcp.org/codes/insurance-company-owners"/>
+            <code value="26"/>
+            <display value="Magma HDI General Insurance Company Limited"/>
+          </contains>
+          <contains>
+            <system value="http://hcp.org/codes/insurance-company-owners"/>
+            <code value="27"/>
+            <display value="Liberty Videocon General Insurance Company Limited,"/>
+          </contains>
+          <contains>
+            <system value="http://hcp.org/codes/insurance-company-owners"/>
+            <code value="28"/>
+            <display value="Bajaj Allianz Life Insurance Company Limited"/>
+          </contains>
+          <contains>
+            <system value="http://hcp.org/codes/insurance-company-owners"/>
+            <code value="29"/>
+            <display value="Birla Sun Life Insurance Co. Ltd"/>
+          </contains>
+          <contains>
+            <system value="http://hcp.org/codes/insurance-company-owners"/>
+            <code value="30"/>
+            <display value="HDFC Standard Life Insurance Co. Ltd"/>
+          </contains>
+          <contains>
+            <system value="http://hcp.org/codes/insurance-company-owners"/>
+            <code value="31"/>
+            <display value="ICICI Prudential Life Insurance Co. Ltd"/>
+          </contains>
+          <contains>
+            <system value="http://hcp.org/codes/insurance-company-owners"/>
+            <code value="32"/>
+            <display value="ING Vysya Life Insurance Company Ltd."/>
+          </contains>
+          <contains>
+            <system value="http://hcp.org/codes/insurance-company-owners"/>
+            <code value="33"/>
+            <display value="Life Insurance Corporation of India"/>
+          </contains>
+          <contains>
+            <system value="http://hcp.org/codes/insurance-company-owners"/>
+            <code value="34"/>
+            <display value="Max Life Insurance Co. Ltd"/>
+          </contains>
+          <contains>
+            <system value="http://hcp.org/codes/insurance-company-owners"/>
+            <code value="35"/>
+            <display value="PNB Metlife India Insurance Co. Ltd."/>
+          </contains>
+          <contains>
+            <system value="http://hcp.org/codes/insurance-company-owners"/>
+            <code value="36"/>
+            <display value="Kotak Mahindra Old Mutual Life Insurance Limited"/>
+          </contains>
+          <contains>
+            <system value="http://hcp.org/codes/insurance-company-owners"/>
+            <code value="37"/>
+            <display value="SBI Life Insurance Co. Ltd"/>
+          </contains>
+          <contains>
+            <system value="http://hcp.org/codes/insurance-company-owners"/>
+            <code value="38"/>
+            <display value="Tata AIA Life Insurance Company Limited"/>
+          </contains>
+          <contains>
+            <system value="http://hcp.org/codes/insurance-company-owners"/>
+            <code value="39"/>
+            <display value="Reliance Life Insurance Company Limited."/>
+          </contains>
+          <contains>
+            <system value="http://hcp.org/codes/insurance-company-owners"/>
+            <code value="40"/>
+            <display value="Aviva Life Insurance Company India Limited"/>
+          </contains>
+          <contains>
+            <system value="http://hcp.org/codes/insurance-company-owners"/>
+            <code value="41"/>
+            <display value="Sahara India Life Insurance Co, Ltd."/>
+          </contains>
+          <contains>
+            <system value="http://hcp.org/codes/insurance-company-owners"/>
+            <code value="42"/>
+            <display value="Shriram Life Insurance Co, Ltd."/>
+          </contains>
+          <contains>
+            <system value="http://hcp.org/codes/insurance-company-owners"/>
+            <code value="43"/>
+            <display value="Bharti AXA Life Insurance Company Ltd."/>
+          </contains>
+          <contains>
+            <system value="http://hcp.org/codes/insurance-company-owners"/>
+            <code value="44"/>
+            <display value="Future Generali India Life Insurance Company Limited"/>
+          </contains>
+          <contains>
+            <system value="http://hcp.org/codes/insurance-company-owners"/>
+            <code value="45"/>
+            <display value="IDBI Federal Life Insurance Company Ltd"/>
+          </contains>
+          <contains>
+            <system value="http://hcp.org/codes/insurance-company-owners"/>
+            <code value="46"/>
+            <display value="Canara HSBC Oriental Bank of Commerce Life Insurance Company Ltd."/>
+          </contains>
+          <contains>
+            <system value="http://hcp.org/codes/insurance-company-owners"/>
+            <code value="47"/>
+            <display value="AEGON Religare Life Insurance Company Limited."/>
+          </contains>
+          <contains>
+            <system value="http://hcp.org/codes/insurance-company-owners"/>
+            <code value="48"/>
+            <display value="DLF Pramerica Life Insurance Co. Ltd."/>
+          </contains>
+          <contains>
+            <system value="http://hcp.org/codes/insurance-company-owners"/>
+            <code value="49"/>
+            <display value="Star Union Dai-ichi Life Insurance Co."/>
+          </contains>
+          <contains>
+            <system value="http://hcp.org/codes/insurance-company-owners"/>
+            <code value="50"/>
+            <display value="IndiaFirst Life Insurance Company Limited"/>
+          </contains>
+          <contains>
+            <system value="http://hcp.org/codes/insurance-company-owners"/>
+            <code value="51"/>
+            <display value="Edelweiss Tokio Life Insurance Co. Ltd."/>
           </contains>
         </expansion>
       </ValueSet>

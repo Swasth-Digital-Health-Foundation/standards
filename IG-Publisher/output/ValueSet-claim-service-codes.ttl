@@ -1,0 +1,272 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://fhir-ig-demo/ValueSet/claim-service-codes> a fhir:ValueSet;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "claim-service-codes"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 41 concepts</p><p>All codes in this table are from the system <code>http://hcp.org/codes/service-codes</code></p><table class=\"codes\"><tr><td><b>Lvl</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a name=\"http---hcp.org-codes-service-codes-500000\"> </a>0</td><td style=\"white-space:nowrap\">500000</td><td>Professional fees charges</td></tr><tr><td><a name=\"http---hcp.org-codes-service-codes-500000\"> </a>0</td><td style=\"white-space:nowrap\">500000</td><td>Professional fees charges</td></tr><tr><td><a name=\"http---hcp.org-codes-service-codes-501000\"> </a>1</td><td style=\"white-space:nowrap\">  501000</td><td>Visit charges</td></tr><tr><td><a name=\"http---hcp.org-codes-service-codes-500000\"> </a>0</td><td style=\"white-space:nowrap\">500000</td><td>Professional fees charges</td></tr><tr><td><a name=\"http---hcp.org-codes-service-codes-501000\"> </a>1</td><td style=\"white-space:nowrap\">  501000</td><td>Visit charges</td></tr><tr><td><a name=\"http---hcp.org-codes-service-codes-501001\"> </a>2</td><td style=\"white-space:nowrap\">    501001</td><td>Consultation charges</td></tr><tr><td><a name=\"http---hcp.org-codes-service-codes-500000\"> </a>0</td><td style=\"white-space:nowrap\">500000</td><td>Professional fees charges</td></tr><tr><td><a name=\"http---hcp.org-codes-service-codes-501000\"> </a>1</td><td style=\"white-space:nowrap\">  501000</td><td>Visit charges</td></tr><tr><td><a name=\"http---hcp.org-codes-service-codes-501002\"> </a>2</td><td style=\"white-space:nowrap\">    501002</td><td>Medical Supervision Charges</td></tr><tr><td><a name=\"http---hcp.org-codes-service-codes-500000\"> </a>0</td><td style=\"white-space:nowrap\">500000</td><td>Professional fees charges</td></tr><tr><td><a name=\"http---hcp.org-codes-service-codes-501000\"> </a>1</td><td style=\"white-space:nowrap\">  501000</td><td>Visit charges</td></tr><tr><td><a name=\"http---hcp.org-codes-service-codes-501003\"> </a>2</td><td style=\"white-space:nowrap\">    501003</td><td>Professional fees</td></tr><tr><td><a name=\"http---hcp.org-codes-service-codes-500000\"> </a>0</td><td style=\"white-space:nowrap\">500000</td><td>Professional fees charges</td></tr><tr><td><a name=\"http---hcp.org-codes-service-codes-502000\"> </a>1</td><td style=\"white-space:nowrap\">  502000</td><td>Surgery charges</td></tr><tr><td><a name=\"http---hcp.org-codes-service-codes-500000\"> </a>0</td><td style=\"white-space:nowrap\">500000</td><td>Professional fees charges</td></tr><tr><td><a name=\"http---hcp.org-codes-service-codes-502000\"> </a>1</td><td style=\"white-space:nowrap\">  502000</td><td>Surgery charges</td></tr><tr><td><a name=\"http---hcp.org-codes-service-codes-502001\"> </a>2</td><td style=\"white-space:nowrap\">    502001</td><td>Surgeons Charges</td></tr><tr><td><a name=\"http---hcp.org-codes-service-codes-500000\"> </a>0</td><td style=\"white-space:nowrap\">500000</td><td>Professional fees charges</td></tr><tr><td><a name=\"http---hcp.org-codes-service-codes-502000\"> </a>1</td><td style=\"white-space:nowrap\">  502000</td><td>Surgery charges</td></tr><tr><td><a name=\"http---hcp.org-codes-service-codes-502002\"> </a>2</td><td style=\"white-space:nowrap\">    502002</td><td>Assistant Surgeons Fee</td></tr><tr><td><a name=\"http---hcp.org-codes-service-codes-500000\"> </a>0</td><td style=\"white-space:nowrap\">500000</td><td>Professional fees charges</td></tr><tr><td><a name=\"http---hcp.org-codes-service-codes-503000\"> </a>1</td><td style=\"white-space:nowrap\">  503000</td><td>Anaesthetists Fee</td></tr><tr><td><a name=\"http---hcp.org-codes-service-codes-500000\"> </a>0</td><td style=\"white-space:nowrap\">500000</td><td>Professional fees charges</td></tr><tr><td><a name=\"http---hcp.org-codes-service-codes-503000\"> </a>1</td><td style=\"white-space:nowrap\">  503000</td><td>Anaesthetists Fee</td></tr><tr><td><a name=\"http---hcp.org-codes-service-codes-503001\"> </a>2</td><td style=\"white-space:nowrap\">    503001</td><td>Anaesthetists fee</td></tr><tr><td><a name=\"http---hcp.org-codes-service-codes-500000\"> </a>0</td><td style=\"white-space:nowrap\">500000</td><td>Professional fees charges</td></tr><tr><td><a name=\"http---hcp.org-codes-service-codes-503000\"> </a>1</td><td style=\"white-space:nowrap\">  503000</td><td>Anaesthetists Fee</td></tr><tr><td><a name=\"http---hcp.org-codes-service-codes-503002\"> </a>2</td><td style=\"white-space:nowrap\">    503002</td><td>OT standby charges</td></tr><tr><td><a name=\"http---hcp.org-codes-service-codes-500000\"> </a>0</td><td style=\"white-space:nowrap\">500000</td><td>Professional fees charges</td></tr><tr><td><a name=\"http---hcp.org-codes-service-codes-504000\"> </a>1</td><td style=\"white-space:nowrap\">  504000</td><td>Intensivist charges</td></tr><tr><td><a name=\"http---hcp.org-codes-service-codes-500000\"> </a>0</td><td style=\"white-space:nowrap\">500000</td><td>Professional fees charges</td></tr><tr><td><a name=\"http---hcp.org-codes-service-codes-504000\"> </a>1</td><td style=\"white-space:nowrap\">  504000</td><td>Procedure charges</td></tr><tr><td><a name=\"http---hcp.org-codes-service-codes-504001\"> </a>2</td><td style=\"white-space:nowrap\">    504001</td><td>Beside procedures</td></tr><tr><td><a name=\"http---hcp.org-codes-service-codes-500000\"> </a>0</td><td style=\"white-space:nowrap\">500000</td><td>Professional fees charges</td></tr><tr><td><a name=\"http---hcp.org-codes-service-codes-504000\"> </a>1</td><td style=\"white-space:nowrap\">  504000</td><td>Procedure charges</td></tr><tr><td><a name=\"http---hcp.org-codes-service-codes-504002\"> </a>2</td><td style=\"white-space:nowrap\">    504002</td><td>Suture charges</td></tr><tr><td><a name=\"http---hcp.org-codes-service-codes-500000\"> </a>0</td><td style=\"white-space:nowrap\">500000</td><td>Professional fees charges</td></tr><tr><td><a name=\"http---hcp.org-codes-service-codes-505000\"> </a>1</td><td style=\"white-space:nowrap\">  505000</td><td>Physiotherapy</td></tr><tr><td><a name=\"http---hcp.org-codes-service-codes-500000\"> </a>0</td><td style=\"white-space:nowrap\">500000</td><td>Professional fees charges</td></tr><tr><td><a name=\"http---hcp.org-codes-service-codes-505000\"> </a>1</td><td style=\"white-space:nowrap\">  505000</td><td>Technician charges</td></tr><tr><td><a name=\"http---hcp.org-codes-service-codes-505000\"> </a>2</td><td style=\"white-space:nowrap\">    505000</td><td>OT/Cath Lab Technician</td></tr></table></div>"
+  ];
+  fhir:ValueSet.url [ fhir:value "https://fhir-ig-demo/ValueSet/claim-service-codes"];
+  fhir:ValueSet.version [ fhir:value "0.0.1"];
+  fhir:ValueSet.name [ fhir:value "Claim Service Codes"];
+  fhir:ValueSet.status [ fhir:value "active"];
+  fhir:ValueSet.date [ fhir:value "2021-08-15"^^xsd:date];
+  fhir:ValueSet.publisher [ fhir:value "HL7 International - HCX"];
+  fhir:ValueSet.contact [
+     fhir:index 0;
+     fhir:ContactDetail.name [ fhir:value "HL7 International - HCX" ];
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "url" ];
+       fhir:ContactPoint.value [ fhir:value "https://www.swasth.app/" ]
+     ]
+  ];
+  fhir:ValueSet.description [ fhir:value "This is the value set that includes the codes to identify the general type of benefits under which products and services are provided"];
+  fhir:ValueSet.expansion [
+     fhir:ValueSet.expansion.timestamp [ fhir:value "2021-08-15T08:15:30+05:30"^^xsd:dateTime ];
+     fhir:ValueSet.expansion.contains [
+       fhir:index 0;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/service-codes" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "500000" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Professional fees charges" ]
+     ], [
+       fhir:index 1;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/service-codes" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "500000" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Professional fees charges" ];
+       fhir:ValueSet.expansion.contains.contains [
+         fhir:index 0;
+         fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/service-codes" ];
+         fhir:ValueSet.expansion.contains.code [ fhir:value "501000" ];
+         fhir:ValueSet.expansion.contains.display [ fhir:value "Visit charges" ]
+       ]
+     ], [
+       fhir:index 2;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/service-codes" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "500000" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Professional fees charges" ];
+       fhir:ValueSet.expansion.contains.contains [
+         fhir:index 0;
+         fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/service-codes" ];
+         fhir:ValueSet.expansion.contains.code [ fhir:value "501000" ];
+         fhir:ValueSet.expansion.contains.display [ fhir:value "Visit charges" ];
+         fhir:ValueSet.expansion.contains.contains [
+           fhir:index 0;
+           fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/service-codes" ];
+           fhir:ValueSet.expansion.contains.code [ fhir:value "501001" ];
+           fhir:ValueSet.expansion.contains.display [ fhir:value "Consultation charges" ]
+         ]
+       ]
+     ], [
+       fhir:index 3;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/service-codes" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "500000" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Professional fees charges" ];
+       fhir:ValueSet.expansion.contains.contains [
+         fhir:index 0;
+         fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/service-codes" ];
+         fhir:ValueSet.expansion.contains.code [ fhir:value "501000" ];
+         fhir:ValueSet.expansion.contains.display [ fhir:value "Visit charges" ];
+         fhir:ValueSet.expansion.contains.contains [
+           fhir:index 0;
+           fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/service-codes" ];
+           fhir:ValueSet.expansion.contains.code [ fhir:value "501002" ];
+           fhir:ValueSet.expansion.contains.display [ fhir:value "Medical Supervision Charges" ]
+         ]
+       ]
+     ], [
+       fhir:index 4;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/service-codes" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "500000" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Professional fees charges" ];
+       fhir:ValueSet.expansion.contains.contains [
+         fhir:index 0;
+         fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/service-codes" ];
+         fhir:ValueSet.expansion.contains.code [ fhir:value "501000" ];
+         fhir:ValueSet.expansion.contains.display [ fhir:value "Visit charges" ];
+         fhir:ValueSet.expansion.contains.contains [
+           fhir:index 0;
+           fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/service-codes" ];
+           fhir:ValueSet.expansion.contains.code [ fhir:value "501003" ];
+           fhir:ValueSet.expansion.contains.display [ fhir:value "Professional fees" ]
+         ]
+       ]
+     ], [
+       fhir:index 5;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/service-codes" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "500000" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Professional fees charges" ];
+       fhir:ValueSet.expansion.contains.contains [
+         fhir:index 0;
+         fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/service-codes" ];
+         fhir:ValueSet.expansion.contains.code [ fhir:value "502000" ];
+         fhir:ValueSet.expansion.contains.display [ fhir:value "Surgery charges" ]
+       ]
+     ], [
+       fhir:index 6;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/service-codes" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "500000" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Professional fees charges" ];
+       fhir:ValueSet.expansion.contains.contains [
+         fhir:index 0;
+         fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/service-codes" ];
+         fhir:ValueSet.expansion.contains.code [ fhir:value "502000" ];
+         fhir:ValueSet.expansion.contains.display [ fhir:value "Surgery charges" ];
+         fhir:ValueSet.expansion.contains.contains [
+           fhir:index 0;
+           fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/service-codes" ];
+           fhir:ValueSet.expansion.contains.code [ fhir:value "502001" ];
+           fhir:ValueSet.expansion.contains.display [ fhir:value "Surgeons Charges" ]
+         ]
+       ]
+     ], [
+       fhir:index 7;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/service-codes" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "500000" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Professional fees charges" ];
+       fhir:ValueSet.expansion.contains.contains [
+         fhir:index 0;
+         fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/service-codes" ];
+         fhir:ValueSet.expansion.contains.code [ fhir:value "502000" ];
+         fhir:ValueSet.expansion.contains.display [ fhir:value "Surgery charges" ];
+         fhir:ValueSet.expansion.contains.contains [
+           fhir:index 0;
+           fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/service-codes" ];
+           fhir:ValueSet.expansion.contains.code [ fhir:value "502002" ];
+           fhir:ValueSet.expansion.contains.display [ fhir:value "Assistant Surgeons Fee" ]
+         ]
+       ]
+     ], [
+       fhir:index 8;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/service-codes" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "500000" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Professional fees charges" ];
+       fhir:ValueSet.expansion.contains.contains [
+         fhir:index 0;
+         fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/service-codes" ];
+         fhir:ValueSet.expansion.contains.code [ fhir:value "503000" ];
+         fhir:ValueSet.expansion.contains.display [ fhir:value "Anaesthetists Fee" ]
+       ]
+     ], [
+       fhir:index 9;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/service-codes" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "500000" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Professional fees charges" ];
+       fhir:ValueSet.expansion.contains.contains [
+         fhir:index 0;
+         fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/service-codes" ];
+         fhir:ValueSet.expansion.contains.code [ fhir:value "503000" ];
+         fhir:ValueSet.expansion.contains.display [ fhir:value "Anaesthetists Fee" ];
+         fhir:ValueSet.expansion.contains.contains [
+           fhir:index 0;
+           fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/service-codes" ];
+           fhir:ValueSet.expansion.contains.code [ fhir:value "503001" ];
+           fhir:ValueSet.expansion.contains.display [ fhir:value "Anaesthetists fee" ]
+         ]
+       ]
+     ], [
+       fhir:index 10;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/service-codes" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "500000" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Professional fees charges" ];
+       fhir:ValueSet.expansion.contains.contains [
+         fhir:index 0;
+         fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/service-codes" ];
+         fhir:ValueSet.expansion.contains.code [ fhir:value "503000" ];
+         fhir:ValueSet.expansion.contains.display [ fhir:value "Anaesthetists Fee" ];
+         fhir:ValueSet.expansion.contains.contains [
+           fhir:index 0;
+           fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/service-codes" ];
+           fhir:ValueSet.expansion.contains.code [ fhir:value "503002" ];
+           fhir:ValueSet.expansion.contains.display [ fhir:value "OT standby charges" ]
+         ]
+       ]
+     ], [
+       fhir:index 11;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/service-codes" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "500000" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Professional fees charges" ];
+       fhir:ValueSet.expansion.contains.contains [
+         fhir:index 0;
+         fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/service-codes" ];
+         fhir:ValueSet.expansion.contains.code [ fhir:value "504000" ];
+         fhir:ValueSet.expansion.contains.display [ fhir:value "Intensivist charges" ]
+       ]
+     ], [
+       fhir:index 12;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/service-codes" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "500000" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Professional fees charges" ];
+       fhir:ValueSet.expansion.contains.contains [
+         fhir:index 0;
+         fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/service-codes" ];
+         fhir:ValueSet.expansion.contains.code [ fhir:value "504000" ];
+         fhir:ValueSet.expansion.contains.display [ fhir:value "Procedure charges" ];
+         fhir:ValueSet.expansion.contains.contains [
+           fhir:index 0;
+           fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/service-codes" ];
+           fhir:ValueSet.expansion.contains.code [ fhir:value "504001" ];
+           fhir:ValueSet.expansion.contains.display [ fhir:value "Beside procedures" ]
+         ]
+       ]
+     ], [
+       fhir:index 13;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/service-codes" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "500000" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Professional fees charges" ];
+       fhir:ValueSet.expansion.contains.contains [
+         fhir:index 0;
+         fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/service-codes" ];
+         fhir:ValueSet.expansion.contains.code [ fhir:value "504000" ];
+         fhir:ValueSet.expansion.contains.display [ fhir:value "Procedure charges" ];
+         fhir:ValueSet.expansion.contains.contains [
+           fhir:index 0;
+           fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/service-codes" ];
+           fhir:ValueSet.expansion.contains.code [ fhir:value "504002" ];
+           fhir:ValueSet.expansion.contains.display [ fhir:value "Suture charges" ]
+         ]
+       ]
+     ], [
+       fhir:index 14;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/service-codes" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "500000" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Professional fees charges" ];
+       fhir:ValueSet.expansion.contains.contains [
+         fhir:index 0;
+         fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/service-codes" ];
+         fhir:ValueSet.expansion.contains.code [ fhir:value "505000" ];
+         fhir:ValueSet.expansion.contains.display [ fhir:value "Physiotherapy" ]
+       ]
+     ], [
+       fhir:index 15;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/service-codes" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "500000" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Professional fees charges" ];
+       fhir:ValueSet.expansion.contains.contains [
+         fhir:index 0;
+         fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/service-codes" ];
+         fhir:ValueSet.expansion.contains.code [ fhir:value "505000" ];
+         fhir:ValueSet.expansion.contains.display [ fhir:value "Technician charges" ];
+         fhir:ValueSet.expansion.contains.contains [
+           fhir:index 0;
+           fhir:ValueSet.expansion.contains.system [ fhir:value "http://hcp.org/codes/service-codes" ];
+           fhir:ValueSet.expansion.contains.code [ fhir:value "505000" ];
+           fhir:ValueSet.expansion.contains.display [ fhir:value "OT/Cath Lab Technician" ]
+         ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://fhir-ig-demo/ValueSet/claim-service-codes.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+
