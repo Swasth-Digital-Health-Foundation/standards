@@ -34,9 +34,27 @@
       "status": "Draft"
     }
   },
-  "StructureDefinition/Communication": {
+  "StructureDefinition/HCXInsurancePlan": {
     "history": false,
     "index": 2,
+    "source": "/Users/manjunathdavanam/Documents/Projects.nosync/Swasth/standards/IG-Publisher/input/hcx-v2-definitions/structuredefinition-HCXInsurancePlan.json",
+    "path": "StructureDefinition-HCXInsurancePlan.html",
+    "url": "http://hcx-base-url/StructureDefinition/InsurancePlan",
+    "name": "HCXInsurancePlan",
+    "version": "0.0.1",
+    "date": "2021-12-28",
+    "status": {
+      "class": "colsd",
+      "fmm": "0",
+      "owner": "HL7 International - HCX",
+      "link": "https://www.swasth.app/",
+      "standards-status": "trial-use",
+      "status": "Draft"
+    }
+  },
+  "StructureDefinition/Communication": {
+    "history": false,
+    "index": 3,
     "source": "/Users/manjunathdavanam/Documents/Projects.nosync/Swasth/standards/IG-Publisher/input/hcx-v2-definitions/structuredefinition-Communication.json",
     "path": "StructureDefinition-Communication.html",
     "url": "http://hl7.org/fhir/StructureDefinition/HCXCommunication",
@@ -54,7 +72,7 @@
   },
   "StructureDefinition/CommunicationRequest": {
     "history": false,
-    "index": 3,
+    "index": 4,
     "source": "/Users/manjunathdavanam/Documents/Projects.nosync/Swasth/standards/IG-Publisher/input/hcx-v2-definitions/structuredefinition-CommunicationRequest.json",
     "path": "StructureDefinition-CommunicationRequest.html",
     "url": "http://hl7.org/fhir/StructureDefinition/HCXCommunicationRequest",
@@ -72,7 +90,7 @@
   },
   "StructureDefinition/hcp-signature": {
     "history": false,
-    "index": 4,
+    "index": 5,
     "source": "/Users/manjunathdavanam/Documents/Projects.nosync/Swasth/standards/IG-Publisher/input/hcx-v2-definitions/structuredefinition-hcp-signature.json",
     "path": "StructureDefinition-hcp-signature.html",
     "url": "http://hl7.org/fhir/StructureDefinition/questionnaireresponse-signature",
@@ -89,7 +107,7 @@
   },
   "StructureDefinition/CoverageEligibilityRequestDocument": {
     "history": false,
-    "index": 5,
+    "index": 6,
     "source": "/Users/manjunathdavanam/Documents/Projects.nosync/Swasth/standards/IG-Publisher/input/hcx-v2-definitions/structuredefinition-CoverageEligibilityRequestDocument.json",
     "path": "StructureDefinition-CoverageEligibilityRequestDocument.html",
     "url": "http://hl7.org/fhir/StructureDefinition/HCXCovereageEligibilityRequestDocument",
@@ -107,7 +125,7 @@
   },
   "StructureDefinition/ClaimResponseDocument": {
     "history": false,
-    "index": 6,
+    "index": 7,
     "source": "/Users/manjunathdavanam/Documents/Projects.nosync/Swasth/standards/IG-Publisher/input/hcx-v2-definitions/structuredefinition-ClaimResponseDocument.json",
     "path": "StructureDefinition-ClaimResponseDocument.html",
     "url": "http://hl7.org/fhir/StructureDefinition/HCXClaimResponseDocument",
@@ -125,7 +143,7 @@
   },
   "StructureDefinition/ClaimRequestDocument": {
     "history": false,
-    "index": 7,
+    "index": 8,
     "source": "/Users/manjunathdavanam/Documents/Projects.nosync/Swasth/standards/IG-Publisher/input/hcx-v2-definitions/structuredefinition-ClaimRequestDocument.json",
     "path": "StructureDefinition-ClaimRequestDocument.html",
     "url": "http://hl7.org/fhir/StructureDefinition/HCXClaimRequestDocument",
@@ -143,7 +161,7 @@
   },
   "StructureDefinition/ClaimResponse": {
     "history": false,
-    "index": 8,
+    "index": 9,
     "source": "/Users/manjunathdavanam/Documents/Projects.nosync/Swasth/standards/IG-Publisher/input/hcx-v2-definitions/structuredefinition-ClaimResponse.json",
     "path": "StructureDefinition-ClaimResponse.html",
     "url": "http://hl7.org/fhir/StructureDefinition/HCXClaimResponse",
@@ -161,7 +179,7 @@
   },
   "StructureDefinition/Condition": {
     "history": false,
-    "index": 9,
+    "index": 10,
     "source": "/Users/manjunathdavanam/Documents/Projects.nosync/Swasth/standards/IG-Publisher/input/hcx-v2-definitions/structuredefinition-Condition.json",
     "path": "StructureDefinition-Condition.html",
     "url": "http://hl7.org/fhir/StructureDefinition/HCXCondition",
@@ -179,7 +197,7 @@
   },
   "StructureDefinition/Coverage": {
     "history": false,
-    "index": 10,
+    "index": 11,
     "source": "/Users/manjunathdavanam/Documents/Projects.nosync/Swasth/standards/IG-Publisher/input/hcx-v2-definitions/structuredefinition-Coverage.json",
     "path": "StructureDefinition-Coverage.html",
     "url": "http://hl7.org/fhir/StructureDefinition/HCXCoverage",
@@ -197,7 +215,7 @@
   },
   "StructureDefinition/Encounter": {
     "history": false,
-    "index": 11,
+    "index": 12,
     "source": "/Users/manjunathdavanam/Documents/Projects.nosync/Swasth/standards/IG-Publisher/input/hcx-v2-definitions/structuredefinition-Encounter.json",
     "path": "StructureDefinition-Encounter.html",
     "url": "http://hl7.org/fhir/StructureDefinition/HCXEncounter",
@@ -215,7 +233,7 @@
   },
   "StructureDefinition/CoverageEligibilityRequest": {
     "history": false,
-    "index": 12,
+    "index": 13,
     "source": "/Users/manjunathdavanam/Documents/Projects.nosync/Swasth/standards/IG-Publisher/input/hcx-v2-definitions/structuredefinition-CoverageEligibilityRequest.json",
     "path": "StructureDefinition-CoverageEligibilityRequest.html",
     "url": "http://hl7.org/fhir/StructureDefinition/HCXCoverageEligibilityRequest",
@@ -233,7 +251,7 @@
   },
   "StructureDefinition/CoverageEligibilityResponse": {
     "history": false,
-    "index": 13,
+    "index": 14,
     "source": "/Users/manjunathdavanam/Documents/Projects.nosync/Swasth/standards/IG-Publisher/input/hcx-v2-definitions/structuredefinition-CoverageEligibilityResponse.json",
     "path": "StructureDefinition-CoverageEligibilityResponse.html",
     "url": "http://hl7.org/fhir/StructureDefinition/HCXCoverageEligibilityResponse",
@@ -251,7 +269,7 @@
   },
   "StructureDefinition/Organization": {
     "history": false,
-    "index": 14,
+    "index": 15,
     "source": "/Users/manjunathdavanam/Documents/Projects.nosync/Swasth/standards/IG-Publisher/input/hcx-v2-definitions/structuredefinition-Organization.json",
     "path": "StructureDefinition-Organization.html",
     "url": "http://hl7.org/fhir/StructureDefinition/HCXOrganization",
@@ -269,7 +287,7 @@
   },
   "StructureDefinition/Patient": {
     "history": false,
-    "index": 15,
+    "index": 16,
     "source": "/Users/manjunathdavanam/Documents/Projects.nosync/Swasth/standards/IG-Publisher/input/hcx-v2-definitions/structuredefinition-Patient.json",
     "path": "StructureDefinition-Patient.html",
     "url": "http://hl7.org/fhir/StructureDefinition/HCXPatient",
@@ -287,7 +305,7 @@
   },
   "StructureDefinition/PaymentNotice": {
     "history": false,
-    "index": 16,
+    "index": 17,
     "source": "/Users/manjunathdavanam/Documents/Projects.nosync/Swasth/standards/IG-Publisher/input/hcx-v2-definitions/structuredefinition-PaymentNotice.json",
     "path": "StructureDefinition-PaymentNotice.html",
     "url": "http://hl7.org/fhir/StructureDefinition/HCXPaymentNotice",
@@ -305,7 +323,7 @@
   },
   "StructureDefinition/PaymentReconciliation": {
     "history": false,
-    "index": 17,
+    "index": 18,
     "source": "/Users/manjunathdavanam/Documents/Projects.nosync/Swasth/standards/IG-Publisher/input/hcx-v2-definitions/structuredefinition-PaymentReconciliation.json",
     "path": "StructureDefinition-PaymentReconciliation.html",
     "url": "http://hl7.org/fhir/StructureDefinition/HCXPaymentReconciliation",
@@ -323,7 +341,7 @@
   },
   "StructureDefinition/HCXDiagnosticDocumentsExtension": {
     "history": false,
-    "index": 18,
+    "index": 19,
     "source": "/Users/manjunathdavanam/Documents/Projects.nosync/Swasth/standards/IG-Publisher/input/hcx-v2-definitions/structuredefinition-HCXDiagnosticDocumentsExtension.json",
     "path": "StructureDefinition-HCXDiagnosticDocumentsExtension.html",
     "url": "https://hcx-base-url/StructureDefinition/HCXDiagnosticDocumentsExtension",
@@ -340,7 +358,7 @@
   },
   "StructureDefinition/HCXInformationalMessagesExtension": {
     "history": false,
-    "index": 19,
+    "index": 20,
     "source": "/Users/manjunathdavanam/Documents/Projects.nosync/Swasth/standards/IG-Publisher/input/hcx-v2-definitions/structuredefinition-HCXInformationalMessagesExtension.json",
     "path": "StructureDefinition-HCXInformationalMessagesExtension.html",
     "url": "https://hcx-base-url/StructureDefinition/HCXInformationalMessagesExtension",
@@ -357,7 +375,7 @@
   },
   "StructureDefinition/HCXProofOfPresenceExtension": {
     "history": false,
-    "index": 20,
+    "index": 21,
     "source": "/Users/manjunathdavanam/Documents/Projects.nosync/Swasth/standards/IG-Publisher/input/hcx-v2-definitions/structuredefinition-HCXProofOfPresenceExtension.json",
     "path": "StructureDefinition-HCXProofOfPresenceExtension.html",
     "url": "https://hcx-base-url/StructureDefinition/HCXProofOfPresenceExtension",
@@ -374,7 +392,7 @@
   },
   "StructureDefinition/HCXQuestionnairesExtension": {
     "history": false,
-    "index": 21,
+    "index": 22,
     "source": "/Users/manjunathdavanam/Documents/Projects.nosync/Swasth/standards/IG-Publisher/input/hcx-v2-definitions/structuredefinition-HCXQuestionnairesExtension.json",
     "path": "StructureDefinition-HCXQuestionnairesExtension.html",
     "url": "https://hcx-base-url/StructureDefinition/HCXQuestionnairesExtension",
@@ -391,7 +409,7 @@
   },
   "StructureDefinition/HCXProofOfIdentificationExtension": {
     "history": false,
-    "index": 22,
+    "index": 23,
     "source": "/Users/manjunathdavanam/Documents/Projects.nosync/Swasth/standards/IG-Publisher/input/hcx-v2-definitions/structuredefinition-HCXProofOfIdentificationExtension.json",
     "path": "StructureDefinition-HCXProofOfIdentificationExtension.html",
     "url": "https://hcx-base-url/StructureDefinition/HCXProofOfIdentificationExtension",
@@ -408,7 +426,7 @@
   },
   "StructureDefinition/Practitioner": {
     "history": false,
-    "index": 23,
+    "index": 24,
     "source": "/Users/manjunathdavanam/Documents/Projects.nosync/Swasth/standards/IG-Publisher/input/hcx-v2-definitions/structuredefinition-Practitioner.json",
     "path": "StructureDefinition-Practitioner.html",
     "url": "http://hl7.org/fhir/StructureDefinition/HCXPractitioner",
@@ -426,7 +444,7 @@
   },
   "StructureDefinition/organization-extension": {
     "history": false,
-    "index": 24,
+    "index": 25,
     "source": "/Users/manjunathdavanam/Documents/Projects.nosync/Swasth/standards/IG-Publisher/input/hcx-v2-definitions/structuredefinition-organization-extension.json",
     "path": "StructureDefinition-organization-extension.html",
     "url": "http://hl7.org/fhir/StructureDefinition/HCXOrganization-extension",
@@ -443,7 +461,7 @@
   },
   "StructureDefinition/PreAuthorizationRequest": {
     "history": false,
-    "index": 25,
+    "index": 26,
     "source": "/Users/manjunathdavanam/Documents/Projects.nosync/Swasth/standards/IG-Publisher/input/hcx-v2-definitions/structuredefinition-PreAuthorizationRequest.json",
     "path": "StructureDefinition-PreAuthorizationRequest.html",
     "url": "http://hl7.org/fhir/StructureDefinition/HCXPreAuthorizationRequest",
@@ -461,7 +479,7 @@
   },
   "StructureDefinition/PreAuthorizationResponse": {
     "history": false,
-    "index": 26,
+    "index": 27,
     "source": "/Users/manjunathdavanam/Documents/Projects.nosync/Swasth/standards/IG-Publisher/input/hcx-v2-definitions/structuredefinition-PreAuthorizationResponse.json",
     "path": "StructureDefinition-PreAuthorizationResponse.html",
     "url": "http://hl7.org/fhir/StructureDefinition/HCXPreAuthorizationResponse",
@@ -479,7 +497,7 @@
   },
   "StructureDefinition/Task": {
     "history": false,
-    "index": 27,
+    "index": 28,
     "source": "/Users/manjunathdavanam/Documents/Projects.nosync/Swasth/standards/IG-Publisher/input/hcx-v2-definitions/structuredefinition-Task.json",
     "path": "StructureDefinition-Task.html",
     "url": "http://hl7.org/fhir/StructureDefinition/HCXTask",
@@ -497,7 +515,7 @@
   },
   "StructureDefinition/PractitionerRole": {
     "history": false,
-    "index": 28,
+    "index": 29,
     "source": "/Users/manjunathdavanam/Documents/Projects.nosync/Swasth/standards/IG-Publisher/input/hcx-v2-definitions/structuredefinition-PractitionerRole.json",
     "path": "StructureDefinition-PractitionerRole.html",
     "url": "http://hl7.org/fhir/StructureDefinition/HCXPractitionerRole",
@@ -515,7 +533,7 @@
   },
   "ValueSet/medical-speciality-type-provider": {
     "history": false,
-    "index": 29,
+    "index": 30,
     "source": "/Users/manjunathdavanam/Documents/Projects.nosync/Swasth/standards/IG-Publisher/input/hcx-v2-definitions/valueset-medical-speciality-type-provider.json",
     "path": "ValueSet-medical-speciality-type-provider.html",
     "url": "https://fhir-ig-demo/ValueSet/medical-speciality-type-provider",
@@ -531,7 +549,7 @@
   },
   "ValueSet/procedure-type-description": {
     "history": false,
-    "index": 30,
+    "index": 31,
     "source": "/Users/manjunathdavanam/Documents/Projects.nosync/Swasth/standards/IG-Publisher/input/hcx-v2-definitions/valueset-procedure-type-description.json",
     "path": "ValueSet-procedure-type-description.html",
     "url": "https://fhir-ig-demo/ValueSet/procedure-type-description",
@@ -547,7 +565,7 @@
   },
   "ValueSet/claim-denial-codes": {
     "history": false,
-    "index": 31,
+    "index": 32,
     "source": "/Users/manjunathdavanam/Documents/Projects.nosync/Swasth/standards/IG-Publisher/input/hcx-v2-definitions/valueset-claim-denial-codes.json",
     "path": "ValueSet-claim-denial-codes.html",
     "url": "https://fhir-ig-demo/ValueSet/claim-denial-codes",
@@ -563,7 +581,7 @@
   },
   "ValueSet/claim-service-categories": {
     "history": false,
-    "index": 32,
+    "index": 33,
     "source": "/Users/manjunathdavanam/Documents/Projects.nosync/Swasth/standards/IG-Publisher/input/hcx-v2-definitions/valueset-claim-service-categories.json",
     "path": "ValueSet-claim-service-categories.html",
     "url": "https://fhir-ig-demo/ValueSet/claim-service-categories",
@@ -579,7 +597,7 @@
   },
   "ValueSet/claim-service-codes": {
     "history": false,
-    "index": 33,
+    "index": 34,
     "source": "/Users/manjunathdavanam/Documents/Projects.nosync/Swasth/standards/IG-Publisher/input/hcx-v2-definitions/valueset-claim-service-codes.json",
     "path": "ValueSet-claim-service-codes.html",
     "url": "https://fhir-ig-demo/ValueSet/claim-service-codes",
@@ -595,7 +613,7 @@
   },
   "ValueSet/health-service-provider-role": {
     "history": false,
-    "index": 34,
+    "index": 35,
     "source": "/Users/manjunathdavanam/Documents/Projects.nosync/Swasth/standards/IG-Publisher/input/hcx-v2-definitions/valueset-health-service-provider-role.json",
     "path": "ValueSet-health-service-provider-role.html",
     "url": "https://fhir-ig-demo/ValueSet/health-service-provider-role",
@@ -611,7 +629,7 @@
   },
   "ValueSet/insurance-company-owners": {
     "history": false,
-    "index": 35,
+    "index": 36,
     "source": "/Users/manjunathdavanam/Documents/Projects.nosync/Swasth/standards/IG-Publisher/input/hcx-v2-definitions/valueset-insurance-company-owners.json",
     "path": "ValueSet-insurance-company-owners.html",
     "url": "https://fhir-ig-demo/ValueSet/insurance-company-owners",

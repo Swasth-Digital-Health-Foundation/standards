@@ -32,6 +32,9 @@ Following extensions to base FHIR profiles:
 <a href="StructureDefinition-HCXDiagnosticDocumentsExtension.html">HCX Diagnostic Documents Extension </a>
 </li>
 <li>
+<a href="StructureDefinition-HCXInsurancePlan.html">HCX Insurance Plan </a>
+</li>
+<li>
 <a href="StructureDefinition-HCXInformationalMessagesExtension.html">HCX Informational Messages Extension</a>
 </li>
 <li>

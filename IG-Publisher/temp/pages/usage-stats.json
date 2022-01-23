@@ -1473,6 +1473,12 @@
     }
   ],
   "profiles": {
+    "InsurancePlan": [
+      {
+        "url": "http://hcx-base-url/StructureDefinition/InsurancePlan",
+        "title": "HCXInsurancePlan"
+      }
+    ],
     "Composition": [
       {
         "url": "http://hl7.org/fhir/StructureDefinition/HCXPreAuthorizationRequest",
@@ -1666,6 +1672,9 @@
     "http://hl7.org/fhir/tools/StructureDefinition/HCXInformationalMessagesExtension": [
       "ImplementationGuide.definition.resource"
     ],
+    "http://hl7.org/fhir/tools/StructureDefinition/HCXInsurancePlan": [
+      "ImplementationGuide.definition.resource"
+    ],
     "http://hl7.org/fhir/tools/StructureDefinition/HCXProofOfIdentificationExtension": [
       "ImplementationGuide.definition.resource"
     ],
@@ -1734,6 +1743,21 @@
     ],
     "http://hl7.org/fhir/tools/ValueSet/procedure-type-description": [
       "ImplementationGuide.definition.resource"
+    ],
+    "http://https://hcx-base-url/StructureDefinition/HCXDiagnosticDocumentsExtension": [
+      "InsurancePlan.plan.specificCost.benefit"
+    ],
+    "http://https://hcx-base-url/StructureDefinition/HCXInformationalMessagesExtension": [
+      "InsurancePlan.plan.specificCost.benefit"
+    ],
+    "http://https://hcx-base-url/StructureDefinition/HCXProofOfIdentificationExtension": [
+      "InsurancePlan.plan"
+    ],
+    "http://https://hcx-base-url/StructureDefinition/HCXProofOfPresenceExtension": [
+      "InsurancePlan.plan"
+    ],
+    "http://https://hcx-base-url/StructureDefinition/HCXQuestionnairesExtension": [
+      "InsurancePlan.plan.specificCost.benefit"
     ]
   }
 }

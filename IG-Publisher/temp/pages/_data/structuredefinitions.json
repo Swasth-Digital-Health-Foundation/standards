@@ -17,8 +17,26 @@
     "publisher": "HL7 International - HCX",
     "description": "A set of healthcare-related information that is assembled together into a single logical package that provides a single coherent statement of meaning, establishes its own context and that has clinical attestation with regard to who is making the statement. A Composition defines the structure and narrative content necessary for a document. However, a Composition alone does not constitute a document. Rather, the Composition must be the first entry in a Bundle where Bundle.type\u003ddocument, and any other resources referenced from Composition must be included as subsequent entries in the Bundle (for example Patient, Practitioner, Encounter, etc.)."
   },
-  "Communication": {
+  "HCXInsurancePlan": {
     "index": 1,
+    "url": "http://hcx-base-url/StructureDefinition/InsurancePlan",
+    "name": "HCXInsurancePlan",
+    "title": "HCXInsurancePlan",
+    "path": "StructureDefinition-HCXInsurancePlan.html",
+    "kind": "resource",
+    "type": "InsurancePlan",
+    "base": "http://hl7.org/fhir/StructureDefinition/InsurancePlan",
+    "basename": "InsurancePlan",
+    "basepath": "http://hl7.org/fhir/R4/insuranceplan.html",
+    "status": "draft",
+    "date": "Tue Dec 28 00:00:00 IST 2021",
+    "abstract": false,
+    "derivation": "constraint",
+    "publisher": "HL7 International - HCX",
+    "description": "Details of a Health Insurance product/plan provided by an organization."
+  },
+  "Communication": {
+    "index": 2,
     "url": "http://hl7.org/fhir/StructureDefinition/HCXCommunication",
     "name": "Communication",
     "title": "Communication",
@@ -36,7 +54,7 @@
     "description": "An occurrence of information being transmitted; e.g. an alert that was sent to a responsible provider, a public health agency that was notified about a reportable condition."
   },
   "CommunicationRequest": {
-    "index": 2,
+    "index": 3,
     "url": "http://hl7.org/fhir/StructureDefinition/HCXCommunicationRequest",
     "name": "CommunicationRequest",
     "title": "CommunicationRequest",
@@ -54,7 +72,7 @@
     "description": "A request to convey information; e.g. the CDS system proposes that an alert be sent to a responsible provider, the CDS system proposes that the public health agency be notified about a reportable condition."
   },
   "hcp-signature": {
-    "index": 3,
+    "index": 4,
     "url": "http://hl7.org/fhir/StructureDefinition/questionnaireresponse-signature",
     "name": "HcpSignature",
     "title": "HcpSignature",
@@ -83,7 +101,7 @@
     ]
   },
   "CoverageEligibilityRequestDocument": {
-    "index": 4,
+    "index": 5,
     "url": "http://hl7.org/fhir/StructureDefinition/HCXCovereageEligibilityRequestDocument",
     "name": "CovereageEligibilityRequestDocument",
     "title": "CovereageEligibilityRequestDocument",
@@ -101,7 +119,7 @@
     "description": "A set of healthcare-related information that is assembled together into a single logical package that provides a single coherent statement of meaning, establishes its own context and that has clinical attestation with regard to who is making the statement. A Composition defines the structure and narrative content necessary for a document. However, a Composition alone does not constitute a document. Rather, the Composition must be the first entry in a Bundle where Bundle.type\u003ddocument, and any other resources referenced from Composition must be included as subsequent entries in the Bundle (for example Patient, Practitioner, Encounter, etc.)."
   },
   "ClaimResponseDocument": {
-    "index": 5,
+    "index": 6,
     "url": "http://hl7.org/fhir/StructureDefinition/HCXClaimResponseDocument",
     "name": "ClaimResponseDocument",
     "title": "ClaimResponseDocument",
@@ -119,7 +137,7 @@
     "description": "A set of healthcare-related information that is assembled together into a single logical package that provides a single coherent statement of meaning, establishes its own context and that has clinical attestation with regard to who is making the statement. A Composition defines the structure and narrative content necessary for a document. However, a Composition alone does not constitute a document. Rather, the Composition must be the first entry in a Bundle where Bundle.type\u003ddocument, and any other resources referenced from Composition must be included as subsequent entries in the Bundle (for example Patient, Practitioner, Encounter, etc.)."
   },
   "ClaimRequestDocument": {
-    "index": 6,
+    "index": 7,
     "url": "http://hl7.org/fhir/StructureDefinition/HCXClaimRequestDocument",
     "name": "ClaimRequestDocument",
     "title": "ClaimRequestDocument",
@@ -137,7 +155,7 @@
     "description": "A set of healthcare-related information that is assembled together into a single logical package that provides a single coherent statement of meaning, establishes its own context and that has clinical attestation with regard to who is making the statement. A Composition defines the structure and narrative content necessary for a document. However, a Composition alone does not constitute a document. Rather, the Composition must be the first entry in a Bundle where Bundle.type\u003ddocument, and any other resources referenced from Composition must be included as subsequent entries in the Bundle (for example Patient, Practitioner, Encounter, etc.)."
   },
   "ClaimResponse": {
-    "index": 7,
+    "index": 8,
     "url": "http://hl7.org/fhir/StructureDefinition/HCXClaimResponse",
     "name": "ClaimResponse",
     "title": "ClaimResponse",
@@ -155,7 +173,7 @@
     "description": "This resource provides the adjudication details from the processing of a Claim resource."
   },
   "Condition": {
-    "index": 8,
+    "index": 9,
     "url": "http://hl7.org/fhir/StructureDefinition/HCXCondition",
     "name": "Condition",
     "title": "Condition",
@@ -173,7 +191,7 @@
     "description": "A clinical condition, problem, diagnosis, or other event, situation, issue, or clinical concept that has risen to a level of concern."
   },
   "Coverage": {
-    "index": 9,
+    "index": 10,
     "url": "http://hl7.org/fhir/StructureDefinition/HCXCoverage",
     "name": "Coverage",
     "title": "Coverage",
@@ -191,7 +209,7 @@
     "description": "Financial instrument which may be used to reimburse or pay for health care products and services. Includes both insurance and self-payment."
   },
   "Encounter": {
-    "index": 10,
+    "index": 11,
     "url": "http://hl7.org/fhir/StructureDefinition/HCXEncounter",
     "name": "Encounter",
     "title": "Encounter",
@@ -209,7 +227,7 @@
     "description": "An interaction between a patient and healthcare provider(s) for the purpose of providing healthcare service(s) or assessing the health status of a patient."
   },
   "CoverageEligibilityRequest": {
-    "index": 11,
+    "index": 12,
     "url": "http://hl7.org/fhir/StructureDefinition/HCXCoverageEligibilityRequest",
     "name": "CoverageEligibilityRequest",
     "title": "CoverageEligibilityRequest",
@@ -227,7 +245,7 @@
     "description": "The CoverageEligibilityRequest provides patient and insurance coverage information to an insurer for them to respond, in the form of an CoverageEligibilityResponse, with information regarding whether the stated coverage is valid and in-force and optionally to provide the insurance details of the policy."
   },
   "CoverageEligibilityResponse": {
-    "index": 12,
+    "index": 13,
     "url": "http://hl7.org/fhir/StructureDefinition/HCXCoverageEligibilityResponse",
     "name": "CoverageEligibilityResponse",
     "title": "CoverageEligibilityResponse",
@@ -245,7 +263,7 @@
     "description": "This resource provides eligibility and plan details from the processing of an CoverageEligibilityRequest resource."
   },
   "Organization": {
-    "index": 13,
+    "index": 14,
     "url": "http://hl7.org/fhir/StructureDefinition/HCXOrganization",
     "name": "Organization",
     "title": "Organization",
@@ -263,7 +281,7 @@
     "description": "A formally or informally recognized grouping of people or organizations formed for the purpose of achieving some form of collective action.  Includes companies, institutions, corporations, departments, community groups, healthcare practice groups, payer/insurer, etc."
   },
   "Patient": {
-    "index": 14,
+    "index": 15,
     "url": "http://hl7.org/fhir/StructureDefinition/HCXPatient",
     "name": "Patient",
     "title": "Patient",
@@ -281,7 +299,7 @@
     "description": "Demographics and other administrative information about an individual or animal receiving care or other health-related services."
   },
   "PaymentNotice": {
-    "index": 15,
+    "index": 16,
     "url": "http://hl7.org/fhir/StructureDefinition/HCXPaymentNotice",
     "name": "PaymentNotice",
     "title": "PaymentNotice",
@@ -299,7 +317,7 @@
     "description": "This resource provides the status of the payment for goods and services rendered, and the request and response resource references."
   },
   "PaymentReconciliation": {
-    "index": 16,
+    "index": 17,
     "url": "http://hl7.org/fhir/StructureDefinition/HCXPaymentReconciliation",
     "name": "PaymentReconciliation",
     "title": "PaymentReconciliation",
@@ -317,7 +335,7 @@
     "description": "This resource provides the details including amount of a payment and allocates the payment items being paid."
   },
   "HCXDiagnosticDocumentsExtension": {
-    "index": 17,
+    "index": 18,
     "url": "https://hcx-base-url/StructureDefinition/HCXDiagnosticDocumentsExtension",
     "name": "HCXDiagnosticDocumentsExtension",
     "title": "HCX Diagnostic Documents Extension",
@@ -341,7 +359,7 @@
     ]
   },
   "HCXInformationalMessagesExtension": {
-    "index": 18,
+    "index": 19,
     "url": "https://hcx-base-url/StructureDefinition/HCXInformationalMessagesExtension",
     "name": "HCXInformationalMessagesExtension",
     "title": "HCX Informational Messages Extension",
@@ -368,7 +386,7 @@
     ]
   },
   "HCXProofOfPresenceExtension": {
-    "index": 19,
+    "index": 20,
     "url": "https://hcx-base-url/StructureDefinition/HCXProofOfPresenceExtension",
     "name": "HCXProofOfPresenceExtension",
     "title": "HCX Proof Of Presence Extension",
@@ -392,7 +410,7 @@
     ]
   },
   "HCXQuestionnairesExtension": {
-    "index": 20,
+    "index": 21,
     "url": "https://hcx-base-url/StructureDefinition/HCXQuestionnairesExtension",
     "name": "HCXQuestionnairesExtension",
     "title": "HCX Questionnaires Extension",
@@ -416,7 +434,7 @@
     ]
   },
   "HCXProofOfIdentificationExtension": {
-    "index": 21,
+    "index": 22,
     "url": "https://hcx-base-url/StructureDefinition/HCXProofOfIdentificationExtension",
     "name": "HCXProofOfIdentificationExtension",
     "title": "HCX Proof Of Identification Extension",
@@ -440,7 +458,7 @@
     ]
   },
   "Practitioner": {
-    "index": 22,
+    "index": 23,
     "url": "http://hl7.org/fhir/StructureDefinition/HCXPractitioner",
     "name": "Practitioner",
     "title": "Practitioner",
@@ -458,7 +476,7 @@
     "description": "A person who is directly or indirectly involved in the provisioning of healthcare."
   },
   "organization-extension": {
-    "index": 23,
+    "index": 24,
     "url": "http://hl7.org/fhir/StructureDefinition/HCXOrganization-extension",
     "name": "HCX Organization Extension",
     "title": "HCX Organization Extension",
@@ -487,7 +505,7 @@
     ]
   },
   "PreAuthorizationRequest": {
-    "index": 24,
+    "index": 25,
     "url": "http://hl7.org/fhir/StructureDefinition/HCXPreAuthorizationRequest",
     "name": "PreAuthorizationRequest",
     "title": "PreAuthorizationRequest",
@@ -505,7 +523,7 @@
     "description": "A set of healthcare-related information that is assembled together into a single logical package that provides a single coherent statement of meaning, establishes its own context and that has clinical attestation with regard to who is making the statement. A Composition defines the structure and narrative content necessary for a document. However, a Composition alone does not constitute a document. Rather, the Composition must be the first entry in a Bundle where Bundle.type\u003ddocument, and any other resources referenced from Composition must be included as subsequent entries in the Bundle (for example Patient, Practitioner, Encounter, etc.)."
   },
   "PreAuthorizationResponse": {
-    "index": 25,
+    "index": 26,
     "url": "http://hl7.org/fhir/StructureDefinition/HCXPreAuthorizationResponse",
     "name": "PreAuthorizationResponse",
     "title": "PreAuthorizationResponse",
@@ -523,7 +541,7 @@
     "description": "A set of healthcare-related information that is assembled together into a single logical package that provides a single coherent statement of meaning, establishes its own context and that has clinical attestation with regard to who is making the statement. A Composition defines the structure and narrative content necessary for a document. However, a Composition alone does not constitute a document. Rather, the Composition must be the first entry in a Bundle where Bundle.type\u003ddocument, and any other resources referenced from Composition must be included as subsequent entries in the Bundle (for example Patient, Practitioner, Encounter, etc.)."
   },
   "Task": {
-    "index": 26,
+    "index": 27,
     "url": "http://hl7.org/fhir/StructureDefinition/HCXTask",
     "name": "Task",
     "title": "Task",
@@ -541,7 +559,7 @@
     "description": "A task to be performed."
   },
   "PractitionerRole": {
-    "index": 27,
+    "index": 28,
     "url": "http://hl7.org/fhir/StructureDefinition/HCXPractitionerRole",
     "name": "PractitionerRole",
     "title": "PractitionerRole",
@@ -560,6 +578,7 @@
   },
   "maturities": {
     "StructureDefinition-CoverageEligibilityResponseDocument": "2",
+    "StructureDefinition-HCXInsurancePlan": "0",
     "StructureDefinition-Communication": "2",
     "StructureDefinition-CommunicationRequest": "2",
     "StructureDefinition-hcp-signature": "1",

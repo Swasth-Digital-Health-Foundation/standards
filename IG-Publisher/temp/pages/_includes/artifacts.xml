@@ -44,6 +44,21 @@
             </tr>
             <tr>
                <td style="column-width:30%">
+                  <a href="StructureDefinition-HCXInsurancePlan.html"
+                     title="StructureDefinition/HCXInsurancePlan">HCX InsurancePlan</a>
+               </td>
+               <td>{% capture desc %}**Search by subject - a patient**  
+**NOTE**: This US Core SearchParameter definition extends the usage context of the
+[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)
+ - multipleAnd
+ - multipleOr
+ - comparator
+ - modifier
+ - chain{% endcapture %}
+{{ desc | markdownify}}</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
                   <a href="StructureDefinition-Communication.html"
                      title="StructureDefinition/Communication">HCX CoverageEligibility Communication</a>
                </td>

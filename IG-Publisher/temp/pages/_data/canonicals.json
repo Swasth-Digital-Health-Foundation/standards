@@ -1,5 +1,12 @@
 [
   {
+    "id": "HCXInsurancePlan",
+    "type": "StructureDefinition",
+    "url": "http://hcx-base-url/StructureDefinition/InsurancePlan",
+    "version": "0.0.1",
+    "name": "HCXInsurancePlan"
+  },
+  {
     "id": "ClaimRequestDocument",
     "type": "StructureDefinition",
     "url": "http://hl7.org/fhir/StructureDefinition/HCXClaimRequestDocument",
