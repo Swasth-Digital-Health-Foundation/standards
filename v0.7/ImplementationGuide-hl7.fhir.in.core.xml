@@ -972,7 +972,7 @@ These requirements were originally developed, balloted, and published in FHIR DS
     </page>
     <parameter>
       <code value="path-resource"/>
-      <value value="input/hcx-v2-definitions"/>
+      <value value="input/hcx-definitions"/>
     </parameter>
     <parameter>
       <code value="path-resource"/>

@@ -1228,7 +1228,7 @@
      fhir:ImplementationGuide.definition.parameter [
        fhir:index 0;
        fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ];
-       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/hcx-v2-definitions" ]
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/hcx-definitions" ]
      ], [
        fhir:index 1;
        fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ];

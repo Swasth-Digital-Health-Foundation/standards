@@ -1247,7 +1247,7 @@
     "parameter": [
       {
         "code": "path-resource",
-        "value": "input/hcx-v2-definitions"
+        "value": "input/hcx-definitions"
       },
       {
         "code": "path-resource",
