@@ -353,7 +353,7 @@
        fhir:index 4;
        fhir:Element.extension [
          fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/hcp-signature" ];
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/HCXSignatureExtension" ];
          fhir:Extension.valueString [ fhir:value "SearchParameter" ]
        ], [
          fhir:index 1;
@@ -361,10 +361,10 @@
          fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
        ];
        fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <https://fhir-ig-demo/StructureDefinition/hcp-signature>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/hcp-signature" ]
+         fhir:link <https://fhir-ig-demo/StructureDefinition/HCXSignatureExtension>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/HCXSignatureExtension" ]
        ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "HCX CoverageEligibility HCP Signature" ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "HCX Signature Extension" ];
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "**Search by subject - a patient**  \n**NOTE**: This US Core SearchParameter definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
@@ -1073,8 +1073,8 @@
            fhir:ImplementationGuide.definition.page.generation [ fhir:value "generated" ]
          ], [
            fhir:index 13;
-           fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "StructureDefinition-hcp-signature.html" ];
-           fhir:ImplementationGuide.definition.page.title [ fhir:value "HCX HCP Signature" ];
+           fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "StructureDefinition-HCXSignatureExtension.html" ];
+           fhir:ImplementationGuide.definition.page.title [ fhir:value "HCX Signature Extension" ];
            fhir:ImplementationGuide.definition.page.generation [ fhir:value "generated" ]
          ], [
            fhir:index 14;

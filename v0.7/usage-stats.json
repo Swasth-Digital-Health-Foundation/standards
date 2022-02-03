@@ -4,20 +4,6 @@
   "fhirVersion": "4.0.1",
   "extensions": [
     {
-      "url": "http://hl7.org/fhir/StructureDefinition/HCXOrganization-extension",
-      "title": "HCX Organization Extension",
-      "types": [
-        "Reference"
-      ]
-    },
-    {
-      "url": "http://hl7.org/fhir/StructureDefinition/questionnaireresponse-signature",
-      "title": "HcpSignature",
-      "types": [
-        "Signature"
-      ]
-    },
-    {
       "url": "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-HCXDiagnosticDocumentsExtension.html",
       "title": "HCX Diagnostic Documents Extension",
       "types": [
@@ -1470,127 +1456,141 @@
         "Dosage",
         "Meta"
       ]
+    },
+    {
+      "url": "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-HCXSignatureExtension.html",
+      "title": "HCXSignatureExtension",
+      "types": [
+        "Signature"
+      ]
+    },
+    {
+      "url": "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-organization-extension.html",
+      "title": "HCX Organization Extension",
+      "types": [
+        "Reference"
+      ]
     }
   ],
   "profiles": {
     "Claim": [
       {
-        "url": "http://hl7.org/fhir/StructureDefinition/HCXClaim",
+        "url": "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-Claim.html",
         "title": "Claim"
       }
     ],
     "Composition": [
       {
-        "url": "http://hl7.org/fhir/StructureDefinition/HCXPreAuthorizationRequestDocument",
+        "url": "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-PreAuthorizationRequestDocument.html",
         "title": "PreAuthorizationRequestDocument"
       },
       {
-        "url": "http://hl7.org/fhir/StructureDefinition/HCXPreAuthorizationResponseDocument",
+        "url": "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-PreAuthorizationResponseDocument.html",
         "title": "PreAuthorizationResponseDocument"
       },
       {
-        "url": "http://hl7.org/fhir/StructureDefinition/HCXPreDeterminationRequestDocument",
+        "url": "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-PreDeterminationRequestDocument.html",
         "title": "PreDeterminationRequestDocument"
       },
       {
-        "url": "http://hl7.org/fhir/StructureDefinition/HCXPreDeterminationResponseDocument",
+        "url": "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-PreDeterminationResponseDocument.html",
         "title": "PreDeterminationResponseDocument"
       }
     ],
     "ClaimResponse": [
       {
-        "url": "http://hl7.org/fhir/StructureDefinition/HCXClaimResponse",
+        "url": "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-ClaimResponse.html",
         "title": "ClaimResponse"
       }
     ],
     "Communication": [
       {
-        "url": "http://hl7.org/fhir/StructureDefinition/HCXCommunication",
+        "url": "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-Communication.html",
         "title": "Communication"
       }
     ],
     "CommunicationRequest": [
       {
-        "url": "http://hl7.org/fhir/StructureDefinition/HCXCommunicationRequest",
+        "url": "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-CommunicationRequest.html",
         "title": "CommunicationRequest"
       }
     ],
     "Condition": [
       {
-        "url": "http://hl7.org/fhir/StructureDefinition/HCXCondition",
+        "url": "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-Condition.html",
         "title": "Condition"
       }
     ],
     "Coverage": [
       {
-        "url": "http://hl7.org/fhir/StructureDefinition/HCXCoverage",
+        "url": "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-Coverage.html",
         "title": "Coverage"
       }
     ],
     "CoverageEligibilityRequest": [
       {
-        "url": "http://hl7.org/fhir/StructureDefinition/HCXCoverageEligibilityRequest",
+        "url": "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-CoverageEligibilityRequest.html",
         "title": "CoverageEligibilityRequest"
       }
     ],
     "CoverageEligibilityResponse": [
       {
-        "url": "http://hl7.org/fhir/StructureDefinition/HCXCoverageEligibilityResponse",
+        "url": "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-CoverageEligibilityResponse.html",
         "title": "CoverageEligibilityResponse"
       }
     ],
     "Encounter": [
       {
-        "url": "http://hl7.org/fhir/StructureDefinition/HCXEncounter",
+        "url": "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-Encounter.html",
         "title": "Encounter"
-      }
-    ],
-    "Organization": [
-      {
-        "url": "http://hl7.org/fhir/StructureDefinition/HCXOrganization",
-        "title": "Organization"
-      }
-    ],
-    "Patient": [
-      {
-        "url": "http://hl7.org/fhir/StructureDefinition/HCXPatient",
-        "title": "Patient"
-      }
-    ],
-    "PaymentNotice": [
-      {
-        "url": "http://hl7.org/fhir/StructureDefinition/HCXPaymentNotice",
-        "title": "PaymentNotice"
-      }
-    ],
-    "PaymentReconciliation": [
-      {
-        "url": "http://hl7.org/fhir/StructureDefinition/HCXPaymentReconciliation",
-        "title": "PaymentReconciliation"
-      }
-    ],
-    "Practitioner": [
-      {
-        "url": "http://hl7.org/fhir/StructureDefinition/HCXPractitioner",
-        "title": "Practitioner"
-      }
-    ],
-    "PractitionerRole": [
-      {
-        "url": "http://hl7.org/fhir/StructureDefinition/HCXPractitionerRole",
-        "title": "PractitionerRole"
-      }
-    ],
-    "Task": [
-      {
-        "url": "http://hl7.org/fhir/StructureDefinition/HCXTask",
-        "title": "Task"
       }
     ],
     "InsurancePlan": [
       {
         "url": "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-HCXInsurancePlan.html",
         "title": "HCXInsurancePlan"
+      }
+    ],
+    "Organization": [
+      {
+        "url": "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-Organization.html",
+        "title": "Organization"
+      }
+    ],
+    "Patient": [
+      {
+        "url": "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-Patient.html",
+        "title": "Patient"
+      }
+    ],
+    "PaymentNotice": [
+      {
+        "url": "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-PaymentNotice.html",
+        "title": "PaymentNotice"
+      }
+    ],
+    "PaymentReconciliation": [
+      {
+        "url": "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-PaymentReconciliation.html",
+        "title": "PaymentReconciliation"
+      }
+    ],
+    "Practitioner": [
+      {
+        "url": "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-Practitioner.html",
+        "title": "Practitioner"
+      }
+    ],
+    "PractitionerRole": [
+      {
+        "url": "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-PractitionerRole.html",
+        "title": "PractitionerRole"
+      }
+    ],
+    "Task": [
+      {
+        "url": "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-Task.html",
+        "title": "Task"
       }
     ]
   },
@@ -1704,6 +1704,9 @@
     "http://hl7.org/fhir/tools/StructureDefinition/HCXQuestionnairesExtension": [
       "ImplementationGuide.definition.resource"
     ],
+    "http://hl7.org/fhir/tools/StructureDefinition/HCXSignatureExtension": [
+      "ImplementationGuide.definition.resource"
+    ],
     "http://hl7.org/fhir/tools/StructureDefinition/Organization": [
       "ImplementationGuide.definition.resource"
     ],
@@ -1735,9 +1738,6 @@
       "ImplementationGuide.definition.resource"
     ],
     "http://hl7.org/fhir/tools/StructureDefinition/Task": [
-      "ImplementationGuide.definition.resource"
-    ],
-    "http://hl7.org/fhir/tools/StructureDefinition/hcp-signature": [
       "ImplementationGuide.definition.resource"
     ],
     "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter": [

@@ -1,194 +1,5 @@
 [
   {
-    "id": "Claim",
-    "type": "StructureDefinition",
-    "url": "http://hl7.org/fhir/StructureDefinition/HCXClaim",
-    "version": "0.0.1",
-    "name": "Claim"
-  },
-  {
-    "id": "ClaimRequestDocument",
-    "type": "StructureDefinition",
-    "url": "http://hl7.org/fhir/StructureDefinition/HCXClaimRequestDocument",
-    "version": "0.0.1",
-    "name": "ClaimRequestDocument"
-  },
-  {
-    "id": "ClaimResponse",
-    "type": "StructureDefinition",
-    "url": "http://hl7.org/fhir/StructureDefinition/HCXClaimResponse",
-    "version": "0.0.1",
-    "name": "ClaimResponse"
-  },
-  {
-    "id": "ClaimResponseDocument",
-    "type": "StructureDefinition",
-    "url": "http://hl7.org/fhir/StructureDefinition/HCXClaimResponseDocument",
-    "version": "0.0.1",
-    "name": "ClaimResponseDocument"
-  },
-  {
-    "id": "Communication",
-    "type": "StructureDefinition",
-    "url": "http://hl7.org/fhir/StructureDefinition/HCXCommunication",
-    "version": "0.0.1",
-    "name": "Communication"
-  },
-  {
-    "id": "CommunicationDocument",
-    "type": "StructureDefinition",
-    "url": "http://hl7.org/fhir/StructureDefinition/HCXCommunicationDocument",
-    "version": "0.0.1",
-    "name": "CommunicationDocument"
-  },
-  {
-    "id": "CommunicationRequest",
-    "type": "StructureDefinition",
-    "url": "http://hl7.org/fhir/StructureDefinition/HCXCommunicationRequest",
-    "version": "0.0.1",
-    "name": "CommunicationRequest"
-  },
-  {
-    "id": "Condition",
-    "type": "StructureDefinition",
-    "url": "http://hl7.org/fhir/StructureDefinition/HCXCondition",
-    "version": "0.0.1",
-    "name": "Condition"
-  },
-  {
-    "id": "Coverage",
-    "type": "StructureDefinition",
-    "url": "http://hl7.org/fhir/StructureDefinition/HCXCoverage",
-    "version": "0.0.1",
-    "name": "Coverage"
-  },
-  {
-    "id": "CoverageEligibilityRequest",
-    "type": "StructureDefinition",
-    "url": "http://hl7.org/fhir/StructureDefinition/HCXCoverageEligibilityRequest",
-    "version": "0.0.1",
-    "name": "CoverageEligibilityRequest"
-  },
-  {
-    "id": "CoverageEligibilityResponse",
-    "type": "StructureDefinition",
-    "url": "http://hl7.org/fhir/StructureDefinition/HCXCoverageEligibilityResponse",
-    "version": "0.0.1",
-    "name": "CoverageEligibilityResponse"
-  },
-  {
-    "id": "CoverageEligibilityRequestDocument",
-    "type": "StructureDefinition",
-    "url": "http://hl7.org/fhir/StructureDefinition/HCXCovereageEligibilityRequestDocument",
-    "version": "0.0.1",
-    "name": "CovereageEligibilityRequestDocument"
-  },
-  {
-    "id": "CoverageEligibilityResponseDocument",
-    "type": "StructureDefinition",
-    "url": "http://hl7.org/fhir/StructureDefinition/HCXCovereageEligibilityResponseDocument",
-    "version": "0.0.1",
-    "name": "CovereageEligibilityResponseDocument"
-  },
-  {
-    "id": "Encounter",
-    "type": "StructureDefinition",
-    "url": "http://hl7.org/fhir/StructureDefinition/HCXEncounter",
-    "version": "0.0.1",
-    "name": "Encounter"
-  },
-  {
-    "id": "Organization",
-    "type": "StructureDefinition",
-    "url": "http://hl7.org/fhir/StructureDefinition/HCXOrganization",
-    "version": "0.0.1",
-    "name": "Organization"
-  },
-  {
-    "id": "organization-extension",
-    "type": "StructureDefinition",
-    "url": "http://hl7.org/fhir/StructureDefinition/HCXOrganization-extension",
-    "version": "0.0.1",
-    "name": "HCX Organization Extension"
-  },
-  {
-    "id": "Patient",
-    "type": "StructureDefinition",
-    "url": "http://hl7.org/fhir/StructureDefinition/HCXPatient",
-    "version": "0.0.1",
-    "name": "Patient"
-  },
-  {
-    "id": "PaymentNotice",
-    "type": "StructureDefinition",
-    "url": "http://hl7.org/fhir/StructureDefinition/HCXPaymentNotice",
-    "version": "0.0.1",
-    "name": "PaymentNotice"
-  },
-  {
-    "id": "PaymentReconciliation",
-    "type": "StructureDefinition",
-    "url": "http://hl7.org/fhir/StructureDefinition/HCXPaymentReconciliation",
-    "version": "0.0.1",
-    "name": "PaymentReconciliation"
-  },
-  {
-    "id": "Practitioner",
-    "type": "StructureDefinition",
-    "url": "http://hl7.org/fhir/StructureDefinition/HCXPractitioner",
-    "version": "0.0.1",
-    "name": "Practitioner"
-  },
-  {
-    "id": "PractitionerRole",
-    "type": "StructureDefinition",
-    "url": "http://hl7.org/fhir/StructureDefinition/HCXPractitionerRole",
-    "version": "0.0.1",
-    "name": "PractitionerRole"
-  },
-  {
-    "id": "PreAuthorizationRequestDocument",
-    "type": "StructureDefinition",
-    "url": "http://hl7.org/fhir/StructureDefinition/HCXPreAuthorizationRequestDocument",
-    "version": "0.0.1",
-    "name": "PreAuthorizationRequestDocument"
-  },
-  {
-    "id": "PreAuthorizationResponseDocument",
-    "type": "StructureDefinition",
-    "url": "http://hl7.org/fhir/StructureDefinition/HCXPreAuthorizationResponseDocument",
-    "version": "0.0.1",
-    "name": "PreAuthorizationResponseDocument"
-  },
-  {
-    "id": "PreDeterminationRequestDocument",
-    "type": "StructureDefinition",
-    "url": "http://hl7.org/fhir/StructureDefinition/HCXPreDeterminationRequestDocument",
-    "version": "0.0.1",
-    "name": "PreDeterminationRequestDocument"
-  },
-  {
-    "id": "PreDeterminationResponseDocument",
-    "type": "StructureDefinition",
-    "url": "http://hl7.org/fhir/StructureDefinition/HCXPreDeterminationResponseDocument",
-    "version": "0.0.1",
-    "name": "PreDeterminationResponseDocument"
-  },
-  {
-    "id": "Task",
-    "type": "StructureDefinition",
-    "url": "http://hl7.org/fhir/StructureDefinition/HCXTask",
-    "version": "0.0.1",
-    "name": "Task"
-  },
-  {
-    "id": "hcp-signature",
-    "type": "StructureDefinition",
-    "url": "http://hl7.org/fhir/StructureDefinition/questionnaireresponse-signature",
-    "version": "0.0.1",
-    "name": "HcpSignature"
-  },
-  {
     "id": "hl7.fhir.in.core",
     "type": "ImplementationGuide",
     "url": "https://fhir-ig-demo/ImplementationGuide/ig",
@@ -245,6 +56,104 @@
     "name": "Procedure Type Description"
   },
   {
+    "id": "Claim",
+    "type": "StructureDefinition",
+    "url": "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-Claim.html",
+    "version": "0.0.1",
+    "name": "Claim"
+  },
+  {
+    "id": "ClaimRequestDocument",
+    "type": "StructureDefinition",
+    "url": "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-ClaimRequestDocument.html",
+    "version": "0.0.1",
+    "name": "ClaimRequestDocument"
+  },
+  {
+    "id": "ClaimResponse",
+    "type": "StructureDefinition",
+    "url": "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-ClaimResponse.html",
+    "version": "0.0.1",
+    "name": "ClaimResponse"
+  },
+  {
+    "id": "ClaimResponseDocument",
+    "type": "StructureDefinition",
+    "url": "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-ClaimResponseDocument.html",
+    "version": "0.0.1",
+    "name": "ClaimResponseDocument"
+  },
+  {
+    "id": "Communication",
+    "type": "StructureDefinition",
+    "url": "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-Communication.html",
+    "version": "0.0.1",
+    "name": "Communication"
+  },
+  {
+    "id": "CommunicationDocument",
+    "type": "StructureDefinition",
+    "url": "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-CommunicationDocument.html",
+    "version": "0.0.1",
+    "name": "CommunicationDocument"
+  },
+  {
+    "id": "CommunicationRequest",
+    "type": "StructureDefinition",
+    "url": "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-CommunicationRequest.html",
+    "version": "0.0.1",
+    "name": "CommunicationRequest"
+  },
+  {
+    "id": "Condition",
+    "type": "StructureDefinition",
+    "url": "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-Condition.html",
+    "version": "0.0.1",
+    "name": "Condition"
+  },
+  {
+    "id": "Coverage",
+    "type": "StructureDefinition",
+    "url": "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-Coverage.html",
+    "version": "0.0.1",
+    "name": "Coverage"
+  },
+  {
+    "id": "CoverageEligibilityRequest",
+    "type": "StructureDefinition",
+    "url": "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-CoverageEligibilityRequest.html",
+    "version": "0.0.1",
+    "name": "CoverageEligibilityRequest"
+  },
+  {
+    "id": "CoverageEligibilityRequestDocument",
+    "type": "StructureDefinition",
+    "url": "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-CoverageEligibilityRequestDocument.html",
+    "version": "0.0.1",
+    "name": "CovereageEligibilityRequestDocument"
+  },
+  {
+    "id": "CoverageEligibilityResponse",
+    "type": "StructureDefinition",
+    "url": "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-CoverageEligibilityResponse.html",
+    "version": "0.0.1",
+    "name": "CoverageEligibilityResponse"
+  },
+  {
+    "id": "CoverageEligibilityResponseDocument",
+    "type": "StructureDefinition",
+    "url": "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-CoverageEligibilityResponseDocument.html",
+    "version": "0.0.1",
+    "name": "CovereageEligibilityResponseDocument"
+  },
+  {
+    "id": "Encounter",
+    "type": "StructureDefinition",
+    "url": "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-Encounter.html",
+    "version": "0.0.1",
+    "name": "Encounter"
+  },
+  {
     "id": "HCXDiagnosticDocumentsExtension",
     "type": "StructureDefinition",
     "url": "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-HCXDiagnosticDocumentsExtension.html",
@@ -285,5 +194,96 @@
     "url": "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-HCXQuestionnairesExtension.html",
     "version": "0.0.1",
     "name": "HCXQuestionnairesExtension"
+  },
+  {
+    "id": "HCXSignatureExtension",
+    "type": "StructureDefinition",
+    "url": "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-HCXSignatureExtension.html",
+    "version": "0.0.1",
+    "name": "HCXSignatureExtension"
+  },
+  {
+    "id": "Organization",
+    "type": "StructureDefinition",
+    "url": "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-Organization.html",
+    "version": "0.0.1",
+    "name": "Organization"
+  },
+  {
+    "id": "Patient",
+    "type": "StructureDefinition",
+    "url": "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-Patient.html",
+    "version": "0.0.1",
+    "name": "Patient"
+  },
+  {
+    "id": "PaymentNotice",
+    "type": "StructureDefinition",
+    "url": "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-PaymentNotice.html",
+    "version": "0.0.1",
+    "name": "PaymentNotice"
+  },
+  {
+    "id": "PaymentReconciliation",
+    "type": "StructureDefinition",
+    "url": "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-PaymentReconciliation.html",
+    "version": "0.0.1",
+    "name": "PaymentReconciliation"
+  },
+  {
+    "id": "Practitioner",
+    "type": "StructureDefinition",
+    "url": "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-Practitioner.html",
+    "version": "0.0.1",
+    "name": "Practitioner"
+  },
+  {
+    "id": "PractitionerRole",
+    "type": "StructureDefinition",
+    "url": "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-PractitionerRole.html",
+    "version": "0.0.1",
+    "name": "PractitionerRole"
+  },
+  {
+    "id": "PreAuthorizationRequestDocument",
+    "type": "StructureDefinition",
+    "url": "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-PreAuthorizationRequestDocument.html",
+    "version": "0.0.1",
+    "name": "PreAuthorizationRequestDocument"
+  },
+  {
+    "id": "PreAuthorizationResponseDocument",
+    "type": "StructureDefinition",
+    "url": "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-PreAuthorizationResponseDocument.html",
+    "version": "0.0.1",
+    "name": "PreAuthorizationResponseDocument"
+  },
+  {
+    "id": "PreDeterminationRequestDocument",
+    "type": "StructureDefinition",
+    "url": "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-PreDeterminationRequestDocument.html",
+    "version": "0.0.1",
+    "name": "PreDeterminationRequestDocument"
+  },
+  {
+    "id": "PreDeterminationResponseDocument",
+    "type": "StructureDefinition",
+    "url": "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-PreDeterminationResponseDocument.html",
+    "version": "0.0.1",
+    "name": "PreDeterminationResponseDocument"
+  },
+  {
+    "id": "Task",
+    "type": "StructureDefinition",
+    "url": "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-Task.html",
+    "version": "0.0.1",
+    "name": "Task"
+  },
+  {
+    "id": "organization-extension",
+    "type": "StructureDefinition",
+    "url": "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-organization-extension.html",
+    "version": "0.0.1",
+    "name": "HCX Organization Extension"
   }
 ]

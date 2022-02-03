@@ -92,7 +92,7 @@ Following extensions to base FHIR profiles:
 <a href="StructureDefinition-PractitionerRole.html">HCX Practitioner Role</a>
 </li>
 <li>
-<a href="StructureDefinition-hcp-signature.html">HCX Signature Extension</a>
+<a href="StructureDefinition-HCXSignatureExtension.html">HCX Signature Extension</a>
 </li>
 <li>
 <a href="StructureDefinition-HCXDiagnosticDocumentsExtension.html">HCX Diagnostic Documents Extension </a>

@@ -65,7 +65,7 @@ Deceased patients may also be marked as inactive for the same reasons, but may b
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
     <valueCode value="pa"/>
   </extension>
-  <url value="http://hl7.org/fhir/StructureDefinition/HCXPatient"/>
+  <url value="https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-Patient.html"/>
   <version value="0.0.1"/>
   <name value="Patient"/>
   <status value="active"/>

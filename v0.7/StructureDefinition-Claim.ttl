@@ -36,7 +36,7 @@
      fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg" ];
      fhir:Extension.valueCode [ fhir:value "fm" ]
   ];
-  fhir:StructureDefinition.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/HCXClaim"];
+  fhir:StructureDefinition.url [ fhir:value "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-Claim.html"];
   fhir:StructureDefinition.version [ fhir:value "0.0.1"];
   fhir:StructureDefinition.name [ fhir:value "Claim"];
   fhir:StructureDefinition.status [ fhir:value "draft"];

@@ -21,7 +21,7 @@
      fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm" ];
      fhir:Extension.valueInteger [ fhir:value "1"^^xsd:integer ]
   ];
-  fhir:StructureDefinition.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/HCXOrganization-extension"];
+  fhir:StructureDefinition.url [ fhir:value "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-organization-extension.html"];
   fhir:StructureDefinition.version [ fhir:value "0.0.1"];
   fhir:StructureDefinition.name [ fhir:value "HCX Organization Extension"];
   fhir:StructureDefinition.status [ fhir:value "draft"];
@@ -50,14 +50,6 @@
      fhir:index 0;
      fhir:StructureDefinition.context.type [ fhir:value "element" ];
      fhir:StructureDefinition.context.expression [ fhir:value "hcp" ]
-  ], [
-     fhir:index 1;
-     fhir:StructureDefinition.context.type [ fhir:value "element" ];
-     fhir:StructureDefinition.context.expression [ fhir:value "hcp.item" ]
-  ], [
-     fhir:index 2;
-     fhir:StructureDefinition.context.type [ fhir:value "element" ];
-     fhir:StructureDefinition.context.expression [ fhir:value "hcp.item.item" ]
   ];
   fhir:StructureDefinition.type [ fhir:value "Extension"];
   fhir:StructureDefinition.baseDefinition [

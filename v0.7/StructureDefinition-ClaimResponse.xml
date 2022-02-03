@@ -129,7 +129,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
     <valueCode value="fm"/>
   </extension>
-  <url value="http://hl7.org/fhir/StructureDefinition/HCXClaimResponse"/>
+  <url value="https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-ClaimResponse.html"/>
   <version value="0.0.1"/>
   <name value="ClaimResponse"/>
   <status value="draft"/>

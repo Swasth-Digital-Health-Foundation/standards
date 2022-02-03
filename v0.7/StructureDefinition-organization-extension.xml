@@ -15,7 +15,7 @@
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
     <valueInteger value="1"/>
   </extension>
-  <url value="http://hl7.org/fhir/StructureDefinition/HCXOrganization-extension"/>
+  <url value="https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-organization-extension.html"/>
   <version value="0.0.1"/>
   <name value="HCX Organization Extension"/>
   <status value="draft"/>
@@ -40,14 +40,6 @@
   <context>
     <type value="element"/>
     <expression value="hcp"/>
-  </context>
-  <context>
-    <type value="element"/>
-    <expression value="hcp.item"/>
-  </context>
-  <context>
-    <type value="element"/>
-    <expression value="hcp.item.item"/>
   </context>
   <type value="Extension"/>
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension"/>
