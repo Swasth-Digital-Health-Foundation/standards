@@ -14,11 +14,26 @@ The structure definitions of document bundles that are passed as payload in the 
 <a href="StructureDefinition-CoverageEligibilityResponseDocument.html">HCX Coverage Eligibility Response Document</a>
   </li>
   <li>
+<a href="StructureDefinition-PreAuthorizationRequestDocument.html">HCX PreDetermination Request Document</a>
+</li>
+<li>
+<a href="StructureDefinition-PreAuthorizationResponseDocument.html">HCX PreDetermination Response Document</a>
+</li>
+  <li>
+<a href="StructureDefinition-PreAuthorizationRequestDocument.html">HCX PreAuthorization Request Document</a>
+</li>
+<li>
+<a href="StructureDefinition-PreAuthorizationResponseDocument.html">HCX PreAuthorization Response Document</a>
+</li>
+  <li>
     <a href="StructureDefinition-ClaimRequestDocument.html">HCX Claim Request Document</a>
   </li>
   <li>
     <a href="StructureDefinition-ClaimResponseDocument.html">HCX Claim Response Document</a>
   </li>
+<li>
+  <a href="StructureDefinition-CommunicationDocument.html">HCX Communication Document</a>
+</li>
 <li>
   <a href="StructureDefinition-PaymentNoticeDocument.html">HCX Payment Notice Document</a>
 </li>
@@ -29,10 +44,61 @@ Following extensions to base FHIR profiles:
   </p>
   <ul>
 <li>
-<a href="StructureDefinition-HCXDiagnosticDocumentsExtension.html">HCX Diagnostic Documents Extension </a>
+<a href="StructureDefinition-CoverageEligibilityRequest.html">HCX Coverage Eligibility Request</a>
+</li>
+<li>
+<a href="StructureDefinition-CoverageEligibilityResponse.html">HCX Coverage Eligibility Response</a>
+</li>
+<li>
+<a href="StructureDefinition-Claim.html">HCX Claim</a>
+</li>
+<li>
+<a href="StructureDefinition-ClaimResponse.html">HCX Claim Response</a>
+</li>
+<li>
+<a href="StructureDefinition-CommunicationRequest.html">HCX Communication Request</a>
+</li>
+<li>
+<a href="StructureDefinition-Communication.html">HCX Communication</a>
+</li>
+<li>
+<a href="StructureDefinition-PaymentNotice.html">HCX Payment Notice</a>
+</li>
+<li>
+<a href="StructureDefinition-PaymentReconciliation.html">HCX Payment Reconciliation</a>
 </li>
 <li>
 <a href="StructureDefinition-HCXInsurancePlan.html">HCX Insurance Plan </a>
+</li>
+<li>
+<a href="StructureDefinition-Task.html">HCX Task</a>
+</li>
+<li>
+<a href="StructureDefinition-Condition.html">HCX Condition</a>
+</li>
+<li>
+<a href="StructureDefinition-Coverage.html">HCX Coverage</a>
+</li>
+<li>
+<a href="StructureDefinition-Encounter.html">HCX Encounter</a>
+</li>
+<li>
+<a href="StructureDefinition-Organization.html">HCX Organization</a>
+</li>
+<li>
+<a href="StructureDefinition-Patient.html">HCX Patient</a>
+</li>
+<li>
+<a href="StructureDefinition-Practitioner.html">HCX Practitioner</a>
+</li>
+<li>
+<a href="StructureDefinition-PractitionerRole.html">HCX Practitioner Role</a>
+</li>
+<li>
+<a href="StructureDefinition-hcp-signature.html">HCX Signature Extension</a>
+</li>
+<li>
+<a href="StructureDefinition-HCXDiagnosticDocumentsExtension.html">HCX Diagnostic Documents Extension </a>
 </li>
 <li>
 <a href="StructureDefinition-HCXInformationalMessagesExtension.html">HCX Informational Messages Extension</a>
@@ -45,60 +111,6 @@ Following extensions to base FHIR profiles:
 </li>
 <li>
 <a href="StructureDefinition-HCXQuestionnairesExtension.html">HCX Questionnaires Extension</a>
-</li>
-<li>
-<a href="StructureDefinition-Communication.html">HCX Communication</a>
-</li>
-<li>
-<a href="StructureDefinition-CommunicationRequest.html">HCX Communication Request</a>
-</li>
-<li>
-<a href="StructureDefinition-hcp-signature.html">HCX Signature</a>
-</li>
-<li>
-<a href="StructureDefinition-ClaimResponse.html">HCX Claim Response</a>
-</li>
-<li>
-<a href="StructureDefinition-Condition.html">HCX Condition</a>
-</li>
-<li>
-<a href="StructureDefinition-Coverage.html">HCX Coverage</a>
-</li>
-<li>
-<a href="StructureDefinition-CoverageEligibilityRequest.html">HCX Coverage Eligibility Request</a>
-</li>
-<li>
-<a href="StructureDefinition-CoverageEligibilityResponse.html">HCX Coverage Eligibility Response</a>
-</li>
-<li>
-<a href="StructureDefinition-Encounter.html">HCX Encounter</a>
-</li>
-<li>
-<a href="StructureDefinition-Organization.html">HCX Organization</a>
-</li>
-<li>
-<a href="StructureDefinition-Patient.html">HCX Patient</a>
-</li>
-<li>
-<a href="StructureDefinition-PaymentNotice.html">HCX Payment Notice</a>
-</li>
-<li>
-<a href="StructureDefinition-PaymentReconciliation.html">HCX Payment Reconciliation</a>
-</li>
-<li>
-<a href="StructureDefinition-PreAuthorizationRequest.html">HCX PreAuthorization Request</a>
-</li>
-<li>
-<a href="StructureDefinition-PreAuthorizationResponse.html">HCX PreAuthorization Response</a>
-</li>
-<li>
-<a href="StructureDefinition-Task.html">HCX Task</a>
-</li>
-<li>
-<a href="StructureDefinition-Practitioner.html">HCX Practitioner</a>
-    </li>
-    <li>
-<a href="StructureDefinition-PractitionerRole.html">HCX Practitioner Role</a>
 </li>
 <li>
   <a href="StructureDefinition-organization-extension.html">HCX Organization Extension</a>
