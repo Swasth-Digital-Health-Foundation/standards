@@ -30,7 +30,7 @@
       "valueCode": "pa"
     }
   ],
-  "url": "http://hcx-base-url/StructureDefinition/InsurancePlan",
+  "url": "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-HCXInsurancePlan.html",
   "version": "0.0.1",
   "name": "HCXInsurancePlan",
   "status": "draft",
@@ -2051,9 +2051,12 @@
           {
             "code": "Extension",
             "profile": [
-              "http://https://hcx-base-url/StructureDefinition/HCXProofOfIdentificationExtension"
+              "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-HCXProofOfIdentificationExtension.html"
             ]
           }
+        ],
+        "condition": [
+          "ele-1"
         ],
         "constraint": [
           {
@@ -2069,12 +2072,11 @@
             "severity": "error",
             "human": "Must have either extensions or value[x], not both",
             "expression": "extension.exists() != value.exists()",
-            "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), \"value\")])",
+            "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
             "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
-        "isModifier": false,
-        "isSummary": false
+        "isModifier": false
       },
       {
         "id": "InsurancePlan.plan.extension:proofOfPresenceDocuments",
@@ -2093,9 +2095,12 @@
           {
             "code": "Extension",
             "profile": [
-              "http://https://hcx-base-url/StructureDefinition/HCXProofOfPresenceExtension"
+              "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-HCXProofOfPresenceExtension.html"
             ]
           }
+        ],
+        "condition": [
+          "ele-1"
         ],
         "constraint": [
           {
@@ -2111,12 +2116,11 @@
             "severity": "error",
             "human": "Must have either extensions or value[x], not both",
             "expression": "extension.exists() != value.exists()",
-            "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), \"value\")])",
+            "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
             "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
-        "isModifier": false,
-        "isSummary": false
+        "isModifier": false
       },
       {
         "id": "InsurancePlan.plan.modifierExtension",
@@ -2925,9 +2929,12 @@
           {
             "code": "Extension",
             "profile": [
-              "http://https://hcx-base-url/StructureDefinition/HCXDiagnosticDocumentsExtension"
+              "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-HCXDiagnosticDocumentsExtension.html"
             ]
           }
+        ],
+        "condition": [
+          "ele-1"
         ],
         "constraint": [
           {
@@ -2943,12 +2950,11 @@
             "severity": "error",
             "human": "Must have either extensions or value[x], not both",
             "expression": "extension.exists() != value.exists()",
-            "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), \"value\")])",
+            "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
             "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
-        "isModifier": false,
-        "isSummary": false
+        "isModifier": false
       },
       {
         "id": "InsurancePlan.plan.specificCost.benefit.extension:informationalMessages",
@@ -2967,9 +2973,12 @@
           {
             "code": "Extension",
             "profile": [
-              "http://https://hcx-base-url/StructureDefinition/HCXInformationalMessagesExtension"
+              "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-HCXInformationalMessagesExtension.html"
             ]
           }
+        ],
+        "condition": [
+          "ele-1"
         ],
         "constraint": [
           {
@@ -2985,12 +2994,11 @@
             "severity": "error",
             "human": "Must have either extensions or value[x], not both",
             "expression": "extension.exists() != value.exists()",
-            "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), \"value\")])",
+            "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
             "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
-        "isModifier": false,
-        "isSummary": false
+        "isModifier": false
       },
       {
         "id": "InsurancePlan.plan.specificCost.benefit.extension:questionnnaires",
@@ -3009,9 +3017,12 @@
           {
             "code": "Extension",
             "profile": [
-              "http://https://hcx-base-url/StructureDefinition/HCXQuestionnairesExtension"
+              "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-HCXQuestionnairesExtension.html"
             ]
           }
+        ],
+        "condition": [
+          "ele-1"
         ],
         "constraint": [
           {
@@ -3027,12 +3038,11 @@
             "severity": "error",
             "human": "Must have either extensions or value[x], not both",
             "expression": "extension.exists() != value.exists()",
-            "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), \"value\")])",
+            "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
             "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
-        "isModifier": false,
-        "isSummary": false
+        "isModifier": false
       },
       {
         "id": "InsurancePlan.plan.specificCost.benefit.modifierExtension",
@@ -3444,7 +3454,7 @@
           {
             "code": "Extension",
             "profile": [
-              "http://https://hcx-base-url/StructureDefinition/HCXProofOfIdentificationExtension"
+              "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-HCXProofOfIdentificationExtension.html"
             ]
           }
         ]
@@ -3459,7 +3469,7 @@
           {
             "code": "Extension",
             "profile": [
-              "http://https://hcx-base-url/StructureDefinition/HCXProofOfPresenceExtension"
+              "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-HCXProofOfPresenceExtension.html"
             ]
           }
         ]
@@ -3474,7 +3484,7 @@
           {
             "code": "Extension",
             "profile": [
-              "http://https://hcx-base-url/StructureDefinition/HCXDiagnosticDocumentsExtension"
+              "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-HCXDiagnosticDocumentsExtension.html"
             ]
           }
         ]
@@ -3489,7 +3499,7 @@
           {
             "code": "Extension",
             "profile": [
-              "http://https://hcx-base-url/StructureDefinition/HCXInformationalMessagesExtension"
+              "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-HCXInformationalMessagesExtension.html"
             ]
           }
         ]
@@ -3504,7 +3514,7 @@
           {
             "code": "Extension",
             "profile": [
-              "http://https://hcx-base-url/StructureDefinition/HCXQuestionnairesExtension"
+              "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-HCXQuestionnairesExtension.html"
             ]
           }
         ]

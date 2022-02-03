@@ -70,7 +70,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
     <valueCode value="pa"/>
   </extension>
-  <url value="http://hcx-base-url/StructureDefinition/InsurancePlan"/>
+  <url value="https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-HCXInsurancePlan.html"/>
   <version value="0.0.1"/>
   <name value="HCXInsurancePlan"/>
   <status value="draft"/>
@@ -1700,8 +1700,9 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
       </base>
       <type>
         <code value="Extension"/>
-        <profile value="http://https://hcx-base-url/StructureDefinition/HCXProofOfIdentificationExtension"/>
+        <profile value="https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-HCXProofOfIdentificationExtension.html"/>
       </type>
+      <condition value="ele-1"/>
       <constraint>
         <key value="ele-1"/>
         <severity value="error"/>
@@ -1715,11 +1716,10 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
         <severity value="error"/>
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
-        <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), &quot;value&quot;)])"/>
+        <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), &#39;value&#39;)])"/>
         <source value="http://hl7.org/fhir/StructureDefinition/Extension"/>
       </constraint>
       <isModifier value="false"/>
-      <isSummary value="false"/>
     </element>
     <element id="InsurancePlan.plan.extension:proofOfPresenceDocuments">
       <path value="InsurancePlan.plan.extension"/>
@@ -1735,8 +1735,9 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
       </base>
       <type>
         <code value="Extension"/>
-        <profile value="http://https://hcx-base-url/StructureDefinition/HCXProofOfPresenceExtension"/>
+        <profile value="https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-HCXProofOfPresenceExtension.html"/>
       </type>
+      <condition value="ele-1"/>
       <constraint>
         <key value="ele-1"/>
         <severity value="error"/>
@@ -1750,11 +1751,10 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
         <severity value="error"/>
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
-        <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), &quot;value&quot;)])"/>
+        <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), &#39;value&#39;)])"/>
         <source value="http://hl7.org/fhir/StructureDefinition/Extension"/>
       </constraint>
       <isModifier value="false"/>
-      <isSummary value="false"/>
     </element>
     <element id="InsurancePlan.plan.modifierExtension">
       <path value="InsurancePlan.plan.modifierExtension"/>
@@ -2409,8 +2409,9 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
       </base>
       <type>
         <code value="Extension"/>
-        <profile value="http://https://hcx-base-url/StructureDefinition/HCXDiagnosticDocumentsExtension"/>
+        <profile value="https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-HCXDiagnosticDocumentsExtension.html"/>
       </type>
+      <condition value="ele-1"/>
       <constraint>
         <key value="ele-1"/>
         <severity value="error"/>
@@ -2424,11 +2425,10 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
         <severity value="error"/>
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
-        <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), &quot;value&quot;)])"/>
+        <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), &#39;value&#39;)])"/>
         <source value="http://hl7.org/fhir/StructureDefinition/Extension"/>
       </constraint>
       <isModifier value="false"/>
-      <isSummary value="false"/>
     </element>
     <element id="InsurancePlan.plan.specificCost.benefit.extension:informationalMessages">
       <path value="InsurancePlan.plan.specificCost.benefit.extension"/>
@@ -2444,8 +2444,9 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
       </base>
       <type>
         <code value="Extension"/>
-        <profile value="http://https://hcx-base-url/StructureDefinition/HCXInformationalMessagesExtension"/>
+        <profile value="https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-HCXInformationalMessagesExtension.html"/>
       </type>
+      <condition value="ele-1"/>
       <constraint>
         <key value="ele-1"/>
         <severity value="error"/>
@@ -2459,11 +2460,10 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
         <severity value="error"/>
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
-        <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), &quot;value&quot;)])"/>
+        <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), &#39;value&#39;)])"/>
         <source value="http://hl7.org/fhir/StructureDefinition/Extension"/>
       </constraint>
       <isModifier value="false"/>
-      <isSummary value="false"/>
     </element>
     <element id="InsurancePlan.plan.specificCost.benefit.extension:questionnnaires">
       <path value="InsurancePlan.plan.specificCost.benefit.extension"/>
@@ -2479,8 +2479,9 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
       </base>
       <type>
         <code value="Extension"/>
-        <profile value="http://https://hcx-base-url/StructureDefinition/HCXQuestionnairesExtension"/>
+        <profile value="https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-HCXQuestionnairesExtension.html"/>
       </type>
+      <condition value="ele-1"/>
       <constraint>
         <key value="ele-1"/>
         <severity value="error"/>
@@ -2494,11 +2495,10 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
         <severity value="error"/>
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
-        <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), &quot;value&quot;)])"/>
+        <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), &#39;value&#39;)])"/>
         <source value="http://hl7.org/fhir/StructureDefinition/Extension"/>
       </constraint>
       <isModifier value="false"/>
-      <isSummary value="false"/>
     </element>
     <element id="InsurancePlan.plan.specificCost.benefit.modifierExtension">
       <path value="InsurancePlan.plan.specificCost.benefit.modifierExtension"/>
@@ -2831,7 +2831,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
       <definition value="List of documents for Proof of Identification."/>
       <type>
         <code value="Extension"/>
-        <profile value="http://https://hcx-base-url/StructureDefinition/HCXProofOfIdentificationExtension"/>
+        <profile value="https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-HCXProofOfIdentificationExtension.html"/>
       </type>
     </element>
     <element id="InsurancePlan.plan.extension:proofOfPresenceDocuments">
@@ -2841,7 +2841,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
       <definition value="List of documents for Proof of Presence."/>
       <type>
         <code value="Extension"/>
-        <profile value="http://https://hcx-base-url/StructureDefinition/HCXProofOfPresenceExtension"/>
+        <profile value="https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-HCXProofOfPresenceExtension.html"/>
       </type>
     </element>
     <element id="InsurancePlan.plan.specificCost.benefit.extension:clinicalDiagnosticDocuments">
@@ -2851,7 +2851,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
       <definition value="List of documents to be submitted to claim the benefit."/>
       <type>
         <code value="Extension"/>
-        <profile value="http://https://hcx-base-url/StructureDefinition/HCXDiagnosticDocumentsExtension"/>
+        <profile value="https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-HCXDiagnosticDocumentsExtension.html"/>
       </type>
     </element>
     <element id="InsurancePlan.plan.specificCost.benefit.extension:informationalMessages">
@@ -2861,7 +2861,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
       <definition value="Messages related to the benefit."/>
       <type>
         <code value="Extension"/>
-        <profile value="http://https://hcx-base-url/StructureDefinition/HCXInformationalMessagesExtension"/>
+        <profile value="https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-HCXInformationalMessagesExtension.html"/>
       </type>
     </element>
     <element id="InsurancePlan.plan.specificCost.benefit.extension:questionnnaires">
@@ -2871,7 +2871,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
       <definition value="Questionnaires to be answered to claim the benefit."/>
       <type>
         <code value="Extension"/>
-        <profile value="http://https://hcx-base-url/StructureDefinition/HCXQuestionnairesExtension"/>
+        <profile value="https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-HCXQuestionnairesExtension.html"/>
       </type>
     </element>
   </differential>

@@ -166,11 +166,13 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 ","Extension","An Extension","","","","","","","","","",,,,,"","value:url}
 ","",,"open","Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
-"InsurancePlan.plan.extension","proofOfIdDocuments","","",0,*,"","","","Extension {[CanonicalType[http://https://hcx-base-url/StructureDefinition/HCXProofOfIdentificationExtension]]} {[]}
-","List of documents for Proof of Identification.","List of documents for Proof of Identification.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"InsurancePlan.plan.extension","proofOfIdDocuments","","",0,*,"","","","Extension {[CanonicalType[https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-HCXProofOfIdentificationExtension.html]]} {[]}
+","List of documents for Proof of Identification.","List of documents for Proof of Identification.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
+","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
-"InsurancePlan.plan.extension","proofOfPresenceDocuments","","",0,*,"","","","Extension {[CanonicalType[http://https://hcx-base-url/StructureDefinition/HCXProofOfPresenceExtension]]} {[]}
-","List of documents for Proof of Presence.","List of documents for Proof of Presence.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"InsurancePlan.plan.extension","proofOfPresenceDocuments","","",0,*,"","","","Extension {[CanonicalType[https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-HCXProofOfPresenceExtension.html]]} {[]}
+","List of documents for Proof of Presence.","List of documents for Proof of Presence.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
+","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "InsurancePlan.plan.modifierExtension","","extensions
 user contentmodifiers","",0,*,"","Y","Y","Extension {[]} {[]}
@@ -244,14 +246,17 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 ","Extension","An Extension","","","","","","","","","",,,,,"","value:url}
 ","",,"open","Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
-"InsurancePlan.plan.specificCost.benefit.extension","clinicalDiagnosticDocuments","","",0,*,"","","","Extension {[CanonicalType[http://https://hcx-base-url/StructureDefinition/HCXDiagnosticDocumentsExtension]]} {[]}
-","List of documents to be submitted to claim the benefit.","List of documents to be submitted to claim the benefit.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"InsurancePlan.plan.specificCost.benefit.extension","clinicalDiagnosticDocuments","","",0,*,"","","","Extension {[CanonicalType[https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-HCXDiagnosticDocumentsExtension.html]]} {[]}
+","List of documents to be submitted to claim the benefit.","List of documents to be submitted to claim the benefit.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
+","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
-"InsurancePlan.plan.specificCost.benefit.extension","informationalMessages","","",0,*,"","","","Extension {[CanonicalType[http://https://hcx-base-url/StructureDefinition/HCXInformationalMessagesExtension]]} {[]}
-","Messages related to the benefit.","Messages related to the benefit.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"InsurancePlan.plan.specificCost.benefit.extension","informationalMessages","","",0,*,"","","","Extension {[CanonicalType[https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-HCXInformationalMessagesExtension.html]]} {[]}
+","Messages related to the benefit.","Messages related to the benefit.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
+","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
-"InsurancePlan.plan.specificCost.benefit.extension","questionnnaires","","",0,*,"","","","Extension {[CanonicalType[http://https://hcx-base-url/StructureDefinition/HCXQuestionnairesExtension]]} {[]}
-","Questionnaires to be answered to claim the benefit.","Questionnaires to be answered to claim the benefit.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"InsurancePlan.plan.specificCost.benefit.extension","questionnnaires","","",0,*,"","","","Extension {[CanonicalType[https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-HCXQuestionnairesExtension.html]]} {[]}
+","Questionnaires to be answered to claim the benefit.","Questionnaires to be answered to claim the benefit.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
+","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "InsurancePlan.plan.specificCost.benefit.modifierExtension","","extensions
 user contentmodifiers","",0,*,"","Y","Y","Extension {[]} {[]}

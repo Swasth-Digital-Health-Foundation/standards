@@ -1,10 +1,10 @@
 [
   {
-    "id": "HCXInsurancePlan",
+    "id": "Claim",
     "type": "StructureDefinition",
-    "url": "http://hcx-base-url/StructureDefinition/InsurancePlan",
+    "url": "http://hl7.org/fhir/StructureDefinition/HCXClaim",
     "version": "0.0.1",
-    "name": "HCXInsurancePlan"
+    "name": "Claim"
   },
   {
     "id": "ClaimRequestDocument",
@@ -33,6 +33,13 @@
     "url": "http://hl7.org/fhir/StructureDefinition/HCXCommunication",
     "version": "0.0.1",
     "name": "Communication"
+  },
+  {
+    "id": "CommunicationDocument",
+    "type": "StructureDefinition",
+    "url": "http://hl7.org/fhir/StructureDefinition/HCXCommunicationDocument",
+    "version": "0.0.1",
+    "name": "CommunicationDocument"
   },
   {
     "id": "CommunicationRequest",
@@ -140,18 +147,32 @@
     "name": "PractitionerRole"
   },
   {
-    "id": "PreAuthorizationRequest",
+    "id": "PreAuthorizationRequestDocument",
     "type": "StructureDefinition",
-    "url": "http://hl7.org/fhir/StructureDefinition/HCXPreAuthorizationRequest",
+    "url": "http://hl7.org/fhir/StructureDefinition/HCXPreAuthorizationRequestDocument",
     "version": "0.0.1",
-    "name": "PreAuthorizationRequest"
+    "name": "PreAuthorizationRequestDocument"
   },
   {
-    "id": "PreAuthorizationResponse",
+    "id": "PreAuthorizationResponseDocument",
     "type": "StructureDefinition",
-    "url": "http://hl7.org/fhir/StructureDefinition/HCXPreAuthorizationResponse",
+    "url": "http://hl7.org/fhir/StructureDefinition/HCXPreAuthorizationResponseDocument",
     "version": "0.0.1",
-    "name": "PreAuthorizationResponse"
+    "name": "PreAuthorizationResponseDocument"
+  },
+  {
+    "id": "PreDeterminationRequestDocument",
+    "type": "StructureDefinition",
+    "url": "http://hl7.org/fhir/StructureDefinition/HCXPreDeterminationRequestDocument",
+    "version": "0.0.1",
+    "name": "PreDeterminationRequestDocument"
+  },
+  {
+    "id": "PreDeterminationResponseDocument",
+    "type": "StructureDefinition",
+    "url": "http://hl7.org/fhir/StructureDefinition/HCXPreDeterminationResponseDocument",
+    "version": "0.0.1",
+    "name": "PreDeterminationResponseDocument"
   },
   {
     "id": "Task",
@@ -226,35 +247,42 @@
   {
     "id": "HCXDiagnosticDocumentsExtension",
     "type": "StructureDefinition",
-    "url": "https://hcx-base-url/StructureDefinition/HCXDiagnosticDocumentsExtension",
+    "url": "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-HCXDiagnosticDocumentsExtension.html",
     "version": "0.0.1",
     "name": "HCXDiagnosticDocumentsExtension"
   },
   {
     "id": "HCXInformationalMessagesExtension",
     "type": "StructureDefinition",
-    "url": "https://hcx-base-url/StructureDefinition/HCXInformationalMessagesExtension",
+    "url": "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-HCXInformationalMessagesExtension.html",
     "version": "0.0.1",
     "name": "HCXInformationalMessagesExtension"
   },
   {
+    "id": "HCXInsurancePlan",
+    "type": "StructureDefinition",
+    "url": "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-HCXInsurancePlan.html",
+    "version": "0.0.1",
+    "name": "HCXInsurancePlan"
+  },
+  {
     "id": "HCXProofOfIdentificationExtension",
     "type": "StructureDefinition",
-    "url": "https://hcx-base-url/StructureDefinition/HCXProofOfIdentificationExtension",
+    "url": "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-HCXProofOfIdentificationExtension.html",
     "version": "0.0.1",
     "name": "HCXProofOfIdentificationExtension"
   },
   {
     "id": "HCXProofOfPresenceExtension",
     "type": "StructureDefinition",
-    "url": "https://hcx-base-url/StructureDefinition/HCXProofOfPresenceExtension",
+    "url": "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-HCXProofOfPresenceExtension.html",
     "version": "0.0.1",
     "name": "HCXProofOfPresenceExtension"
   },
   {
     "id": "HCXQuestionnairesExtension",
     "type": "StructureDefinition",
-    "url": "https://hcx-base-url/StructureDefinition/HCXQuestionnairesExtension",
+    "url": "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-HCXQuestionnairesExtension.html",
     "version": "0.0.1",
     "name": "HCXQuestionnairesExtension"
   }

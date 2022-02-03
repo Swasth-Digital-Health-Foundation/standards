@@ -36,7 +36,7 @@
      fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg" ];
      fhir:Extension.valueCode [ fhir:value "pa" ]
   ];
-  fhir:StructureDefinition.url [ fhir:value "http://hcx-base-url/StructureDefinition/InsurancePlan"];
+  fhir:StructureDefinition.url [ fhir:value "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-HCXInsurancePlan.html"];
   fhir:StructureDefinition.version [ fhir:value "0.0.1"];
   fhir:StructureDefinition.name [ fhir:value "HCXInsurancePlan"];
   fhir:StructureDefinition.status [ fhir:value "draft"];
@@ -2184,10 +2184,14 @@
          fhir:index 0;
          fhir:ElementDefinition.type.code [ fhir:value "Extension" ];
          fhir:ElementDefinition.type.profile [
-           fhir:value "http://https://hcx-base-url/StructureDefinition/HCXProofOfIdentificationExtension";
+           fhir:value "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-HCXProofOfIdentificationExtension.html";
            fhir:index 0;
-           fhir:link <http://https://hcx-base-url/StructureDefinition/HCXProofOfIdentificationExtension>
+           fhir:link <https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-HCXProofOfIdentificationExtension.html>
          ]
+       ];
+       fhir:ElementDefinition.condition [
+         fhir:value "ele-1";
+         fhir:index 0
        ];
        fhir:ElementDefinition.constraint [
          fhir:index 0;
@@ -2206,14 +2210,13 @@
          fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
          fhir:ElementDefinition.constraint.human [ fhir:value "Must have either extensions or value[x], not both" ];
          fhir:ElementDefinition.constraint.expression [ fhir:value "extension.exists() != value.exists()" ];
-         fhir:ElementDefinition.constraint.xpath [ fhir:value "exists(f:extension)!=exists(f:*[starts-with(local-name(.), \"value\")])" ];
+         fhir:ElementDefinition.constraint.xpath [ fhir:value "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ];
          fhir:ElementDefinition.constraint.source [
            fhir:value "http://hl7.org/fhir/StructureDefinition/Extension";
            fhir:link <http://hl7.org/fhir/StructureDefinition/Extension>
          ]
        ];
-       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
-       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ]
      ], [
        fhir:index 50;
        fhir:Element.id [ fhir:value "InsurancePlan.plan.extension:proofOfPresenceDocuments" ];
@@ -2232,10 +2235,14 @@
          fhir:index 0;
          fhir:ElementDefinition.type.code [ fhir:value "Extension" ];
          fhir:ElementDefinition.type.profile [
-           fhir:value "http://https://hcx-base-url/StructureDefinition/HCXProofOfPresenceExtension";
+           fhir:value "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-HCXProofOfPresenceExtension.html";
            fhir:index 0;
-           fhir:link <http://https://hcx-base-url/StructureDefinition/HCXProofOfPresenceExtension>
+           fhir:link <https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-HCXProofOfPresenceExtension.html>
          ]
+       ];
+       fhir:ElementDefinition.condition [
+         fhir:value "ele-1";
+         fhir:index 0
        ];
        fhir:ElementDefinition.constraint [
          fhir:index 0;
@@ -2254,14 +2261,13 @@
          fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
          fhir:ElementDefinition.constraint.human [ fhir:value "Must have either extensions or value[x], not both" ];
          fhir:ElementDefinition.constraint.expression [ fhir:value "extension.exists() != value.exists()" ];
-         fhir:ElementDefinition.constraint.xpath [ fhir:value "exists(f:extension)!=exists(f:*[starts-with(local-name(.), \"value\")])" ];
+         fhir:ElementDefinition.constraint.xpath [ fhir:value "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ];
          fhir:ElementDefinition.constraint.source [
            fhir:value "http://hl7.org/fhir/StructureDefinition/Extension";
            fhir:link <http://hl7.org/fhir/StructureDefinition/Extension>
          ]
        ];
-       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
-       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ]
      ], [
        fhir:index 51;
        fhir:Element.id [ fhir:value "InsurancePlan.plan.modifierExtension" ];
@@ -3117,10 +3123,14 @@
          fhir:index 0;
          fhir:ElementDefinition.type.code [ fhir:value "Extension" ];
          fhir:ElementDefinition.type.profile [
-           fhir:value "http://https://hcx-base-url/StructureDefinition/HCXDiagnosticDocumentsExtension";
+           fhir:value "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-HCXDiagnosticDocumentsExtension.html";
            fhir:index 0;
-           fhir:link <http://https://hcx-base-url/StructureDefinition/HCXDiagnosticDocumentsExtension>
+           fhir:link <https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-HCXDiagnosticDocumentsExtension.html>
          ]
+       ];
+       fhir:ElementDefinition.condition [
+         fhir:value "ele-1";
+         fhir:index 0
        ];
        fhir:ElementDefinition.constraint [
          fhir:index 0;
@@ -3139,14 +3149,13 @@
          fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
          fhir:ElementDefinition.constraint.human [ fhir:value "Must have either extensions or value[x], not both" ];
          fhir:ElementDefinition.constraint.expression [ fhir:value "extension.exists() != value.exists()" ];
-         fhir:ElementDefinition.constraint.xpath [ fhir:value "exists(f:extension)!=exists(f:*[starts-with(local-name(.), \"value\")])" ];
+         fhir:ElementDefinition.constraint.xpath [ fhir:value "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ];
          fhir:ElementDefinition.constraint.source [
            fhir:value "http://hl7.org/fhir/StructureDefinition/Extension";
            fhir:link <http://hl7.org/fhir/StructureDefinition/Extension>
          ]
        ];
-       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
-       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ]
      ], [
        fhir:index 73;
        fhir:Element.id [ fhir:value "InsurancePlan.plan.specificCost.benefit.extension:informationalMessages" ];
@@ -3165,10 +3174,14 @@
          fhir:index 0;
          fhir:ElementDefinition.type.code [ fhir:value "Extension" ];
          fhir:ElementDefinition.type.profile [
-           fhir:value "http://https://hcx-base-url/StructureDefinition/HCXInformationalMessagesExtension";
+           fhir:value "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-HCXInformationalMessagesExtension.html";
            fhir:index 0;
-           fhir:link <http://https://hcx-base-url/StructureDefinition/HCXInformationalMessagesExtension>
+           fhir:link <https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-HCXInformationalMessagesExtension.html>
          ]
+       ];
+       fhir:ElementDefinition.condition [
+         fhir:value "ele-1";
+         fhir:index 0
        ];
        fhir:ElementDefinition.constraint [
          fhir:index 0;
@@ -3187,14 +3200,13 @@
          fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
          fhir:ElementDefinition.constraint.human [ fhir:value "Must have either extensions or value[x], not both" ];
          fhir:ElementDefinition.constraint.expression [ fhir:value "extension.exists() != value.exists()" ];
-         fhir:ElementDefinition.constraint.xpath [ fhir:value "exists(f:extension)!=exists(f:*[starts-with(local-name(.), \"value\")])" ];
+         fhir:ElementDefinition.constraint.xpath [ fhir:value "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ];
          fhir:ElementDefinition.constraint.source [
            fhir:value "http://hl7.org/fhir/StructureDefinition/Extension";
            fhir:link <http://hl7.org/fhir/StructureDefinition/Extension>
          ]
        ];
-       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
-       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ]
      ], [
        fhir:index 74;
        fhir:Element.id [ fhir:value "InsurancePlan.plan.specificCost.benefit.extension:questionnnaires" ];
@@ -3213,10 +3225,14 @@
          fhir:index 0;
          fhir:ElementDefinition.type.code [ fhir:value "Extension" ];
          fhir:ElementDefinition.type.profile [
-           fhir:value "http://https://hcx-base-url/StructureDefinition/HCXQuestionnairesExtension";
+           fhir:value "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-HCXQuestionnairesExtension.html";
            fhir:index 0;
-           fhir:link <http://https://hcx-base-url/StructureDefinition/HCXQuestionnairesExtension>
+           fhir:link <https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-HCXQuestionnairesExtension.html>
          ]
+       ];
+       fhir:ElementDefinition.condition [
+         fhir:value "ele-1";
+         fhir:index 0
        ];
        fhir:ElementDefinition.constraint [
          fhir:index 0;
@@ -3235,14 +3251,13 @@
          fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
          fhir:ElementDefinition.constraint.human [ fhir:value "Must have either extensions or value[x], not both" ];
          fhir:ElementDefinition.constraint.expression [ fhir:value "extension.exists() != value.exists()" ];
-         fhir:ElementDefinition.constraint.xpath [ fhir:value "exists(f:extension)!=exists(f:*[starts-with(local-name(.), \"value\")])" ];
+         fhir:ElementDefinition.constraint.xpath [ fhir:value "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ];
          fhir:ElementDefinition.constraint.source [
            fhir:value "http://hl7.org/fhir/StructureDefinition/Extension";
            fhir:link <http://hl7.org/fhir/StructureDefinition/Extension>
          ]
        ];
-       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
-       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ]
      ], [
        fhir:index 75;
        fhir:Element.id [ fhir:value "InsurancePlan.plan.specificCost.benefit.modifierExtension" ];
@@ -3680,9 +3695,9 @@
          fhir:index 0;
          fhir:ElementDefinition.type.code [ fhir:value "Extension" ];
          fhir:ElementDefinition.type.profile [
-           fhir:value "http://https://hcx-base-url/StructureDefinition/HCXProofOfIdentificationExtension";
+           fhir:value "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-HCXProofOfIdentificationExtension.html";
            fhir:index 0;
-           fhir:link <http://https://hcx-base-url/StructureDefinition/HCXProofOfIdentificationExtension>
+           fhir:link <https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-HCXProofOfIdentificationExtension.html>
          ]
        ]
      ], [
@@ -3696,9 +3711,9 @@
          fhir:index 0;
          fhir:ElementDefinition.type.code [ fhir:value "Extension" ];
          fhir:ElementDefinition.type.profile [
-           fhir:value "http://https://hcx-base-url/StructureDefinition/HCXProofOfPresenceExtension";
+           fhir:value "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-HCXProofOfPresenceExtension.html";
            fhir:index 0;
-           fhir:link <http://https://hcx-base-url/StructureDefinition/HCXProofOfPresenceExtension>
+           fhir:link <https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-HCXProofOfPresenceExtension.html>
          ]
        ]
      ], [
@@ -3712,9 +3727,9 @@
          fhir:index 0;
          fhir:ElementDefinition.type.code [ fhir:value "Extension" ];
          fhir:ElementDefinition.type.profile [
-           fhir:value "http://https://hcx-base-url/StructureDefinition/HCXDiagnosticDocumentsExtension";
+           fhir:value "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-HCXDiagnosticDocumentsExtension.html";
            fhir:index 0;
-           fhir:link <http://https://hcx-base-url/StructureDefinition/HCXDiagnosticDocumentsExtension>
+           fhir:link <https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-HCXDiagnosticDocumentsExtension.html>
          ]
        ]
      ], [
@@ -3728,9 +3743,9 @@
          fhir:index 0;
          fhir:ElementDefinition.type.code [ fhir:value "Extension" ];
          fhir:ElementDefinition.type.profile [
-           fhir:value "http://https://hcx-base-url/StructureDefinition/HCXInformationalMessagesExtension";
+           fhir:value "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-HCXInformationalMessagesExtension.html";
            fhir:index 0;
-           fhir:link <http://https://hcx-base-url/StructureDefinition/HCXInformationalMessagesExtension>
+           fhir:link <https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-HCXInformationalMessagesExtension.html>
          ]
        ]
      ], [
@@ -3744,9 +3759,9 @@
          fhir:index 0;
          fhir:ElementDefinition.type.code [ fhir:value "Extension" ];
          fhir:ElementDefinition.type.profile [
-           fhir:value "http://https://hcx-base-url/StructureDefinition/HCXQuestionnairesExtension";
+           fhir:value "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-HCXQuestionnairesExtension.html";
            fhir:index 0;
-           fhir:link <http://https://hcx-base-url/StructureDefinition/HCXQuestionnairesExtension>
+           fhir:link <https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-HCXQuestionnairesExtension.html>
          ]
        ]
      ]

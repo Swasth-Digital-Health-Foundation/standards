@@ -458,6 +458,24 @@
       {
         "extension": [
           {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/Claim",
+            "valueString": "SearchParameter"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:resource"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/Claim"
+        },
+        "name": "HCX Claim",
+        "description": "**Search by subject - a patient**  \n**NOTE**: This US Core SearchParameter definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/Condition",
             "valueString": "SearchParameter"
           },
@@ -746,7 +764,7 @@
       {
         "extension": [
           {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/PreAuthorizationRequest",
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/PreDeterminationRequestDocument",
             "valueString": "SearchParameter"
           },
           {
@@ -755,16 +773,16 @@
           }
         ],
         "reference": {
-          "reference": "StructureDefinition/PreAuthorizationRequest"
+          "reference": "StructureDefinition/PreDeterminationRequestDocument"
         },
-        "name": "HCX PreAuthorization Request",
+        "name": "HCX PreDetermination Request Document",
         "description": "**Search by subject - a patient**  \n**NOTE**: This US Core SearchParameter definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain",
         "exampleBoolean": false
       },
       {
         "extension": [
           {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/PreAuthorizationResponse",
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/PreDeterminationResponseDocument",
             "valueString": "SearchParameter"
           },
           {
@@ -773,9 +791,63 @@
           }
         ],
         "reference": {
-          "reference": "StructureDefinition/PreAuthorizationResponse"
+          "reference": "StructureDefinition/PreDeterminationResponseDocument"
         },
-        "name": "HCX PreAuthorization Response",
+        "name": "HCX PreDetermination Response Document",
+        "description": "**Search by subject - a patient**  \n**NOTE**: This US Core SearchParameter definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/PreAuthorizationRequestDocument",
+            "valueString": "SearchParameter"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:resource"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/PreAuthorizationRequestDocument"
+        },
+        "name": "HCX PreAuthorization Request Document",
+        "description": "**Search by subject - a patient**  \n**NOTE**: This US Core SearchParameter definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/PreAuthorizationResponseDocument",
+            "valueString": "SearchParameter"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:resource"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/PreAuthorizationResponseDocument"
+        },
+        "name": "HCX PreAuthorization Response Document",
+        "description": "**Search by subject - a patient**  \n**NOTE**: This US Core SearchParameter definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/CommunicationDocument",
+            "valueString": "SearchParameter"
+          },
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:resource"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/CommunicationDocument"
+        },
+        "name": "HCX Communication Document",
         "description": "**Search by subject - a patient**  \n**NOTE**: This US Core SearchParameter definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain",
         "exampleBoolean": false
       },
@@ -952,6 +1024,11 @@
           "generation": "html",
           "page": [
             {
+              "nameUrl": "StructureDefinition-Claim.html",
+              "title": "HCX Claim",
+              "generation": "generated"
+            },
+            {
               "nameUrl": "StructureDefinition-ClaimResponse.html",
               "title": "HCX Claim Response",
               "generation": "generated"
@@ -1087,13 +1164,28 @@
               "generation": "generated"
             },
             {
-              "nameUrl": "StructureDefinition-PreAuthorizationRequest.html",
-              "title": "HCX Pre Authorization Request",
+              "nameUrl": "StructureDefinition-PreDeterminationRequestDocument.html",
+              "title": "HCX Pre Determination Request Document",
               "generation": "generated"
             },
             {
-              "nameUrl": "StructureDefinition-PreAuthorizationResponse.html",
-              "title": "HCX Pre Authorization Response",
+              "nameUrl": "StructureDefinition-PreDeterminationResponseDocument.html",
+              "title": "HCX Pre Determination Response Document",
+              "generation": "generated"
+            },
+            {
+              "nameUrl": "StructureDefinition-PreAuthorizationRequestDocument.html",
+              "title": "HCX Pre Authorization Request Document",
+              "generation": "generated"
+            },
+            {
+              "nameUrl": "StructureDefinition-PreAuthorizationResponseDocument.html",
+              "title": "HCX Pre Authorization Response Document",
+              "generation": "generated"
+            },
+            {
+              "nameUrl": "StructureDefinition-CommunicationDocument.html",
+              "title": "HCX Communication Document",
               "generation": "generated"
             },
             {

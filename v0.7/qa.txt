@@ -1,52 +1,58 @@
 ﻿HCX Core : Validation Results
 =========================================
 
-err = 381, warn = 80, info = 0
-IG Publisher Version: 1.1.97
-Generated Sun Jan 23 14:15:14 IST 2022. FHIR version 4.0.1 for ig#0.0.1 (canonical = https://fhir-ig-demo)
+err = 366, warn = 68, info = 0
+IG Publisher Version: 1.1.97 Out of date - current version is 1.1.98
+Generated Thu Feb 03 12:08:24 IST 2022. FHIR version 4.0.1 for ig#0.0.1 (canonical = https://fhir-ig-demo)
  Build Errors : 2 / 1 / 0
- /Users/manjunathdavanam/Documents/Projects.nosync/Swasth/standards/IG-Publisher/input/hcx-v2-definitions/structuredefinition-ClaimRequestDocument : 0 / 5 / 1
- /Users/manjunathdavanam/Documents/Projects.nosync/Swasth/standards/IG-Publisher/input/hcx-v2-definitions/structuredefinition-ClaimResponse : 1 / 3 / 1
- /Users/manjunathdavanam/Documents/Projects.nosync/Swasth/standards/IG-Publisher/input/hcx-v2-definitions/structuredefinition-ClaimResponseDocument : 0 / 1 / 1
- /Users/manjunathdavanam/Documents/Projects.nosync/Swasth/standards/IG-Publisher/input/hcx-v2-definitions/structuredefinition-Communication : 24 / 1 / 1
- /Users/manjunathdavanam/Documents/Projects.nosync/Swasth/standards/IG-Publisher/input/hcx-v2-definitions/structuredefinition-CommunicationRequest : 23 / 1 / 1
- /Users/manjunathdavanam/Documents/Projects.nosync/Swasth/standards/IG-Publisher/input/hcx-v2-definitions/structuredefinition-Condition : 0 / 1 / 1
- /Users/manjunathdavanam/Documents/Projects.nosync/Swasth/standards/IG-Publisher/input/hcx-v2-definitions/structuredefinition-Coverage : 0 / 1 / 1
- /Users/manjunathdavanam/Documents/Projects.nosync/Swasth/standards/IG-Publisher/input/hcx-v2-definitions/structuredefinition-CoverageEligibilityRequest : 0 / 1 / 1
- /Users/manjunathdavanam/Documents/Projects.nosync/Swasth/standards/IG-Publisher/input/hcx-v2-definitions/structuredefinition-CoverageEligibilityRequestDocument : 0 / 1 / 1
- /Users/manjunathdavanam/Documents/Projects.nosync/Swasth/standards/IG-Publisher/input/hcx-v2-definitions/structuredefinition-CoverageEligibilityResponse : 0 / 1 / 1
- /Users/manjunathdavanam/Documents/Projects.nosync/Swasth/standards/IG-Publisher/input/hcx-v2-definitions/structuredefinition-CoverageEligibilityResponseDocument : 0 / 1 / 1
- /Users/manjunathdavanam/Documents/Projects.nosync/Swasth/standards/IG-Publisher/input/hcx-v2-definitions/structuredefinition-Encounter : 0 / 1 / 1
- /Users/manjunathdavanam/Documents/Projects.nosync/Swasth/standards/IG-Publisher/input/hcx-v2-definitions/structuredefinition-HCXDiagnosticDocumentsExtension : 0 / 3 / 1
- /Users/manjunathdavanam/Documents/Projects.nosync/Swasth/standards/IG-Publisher/input/hcx-v2-definitions/structuredefinition-HCXInformationalMessagesExtension : 0 / 5 / 1
- /Users/manjunathdavanam/Documents/Projects.nosync/Swasth/standards/IG-Publisher/input/hcx-v2-definitions/structuredefinition-HCXInsurancePlan : 15 / 21 / 1
- /Users/manjunathdavanam/Documents/Projects.nosync/Swasth/standards/IG-Publisher/input/hcx-v2-definitions/structuredefinition-HCXProofOfIdentificationExtension : 0 / 3 / 1
- /Users/manjunathdavanam/Documents/Projects.nosync/Swasth/standards/IG-Publisher/input/hcx-v2-definitions/structuredefinition-HCXProofOfPresenceExtension : 0 / 3 / 1
- /Users/manjunathdavanam/Documents/Projects.nosync/Swasth/standards/IG-Publisher/input/hcx-v2-definitions/structuredefinition-HCXQuestionnairesExtension : 0 / 1 / 1
- /Users/manjunathdavanam/Documents/Projects.nosync/Swasth/standards/IG-Publisher/input/hcx-v2-definitions/structuredefinition-Organization : 0 / 1 / 1
- /Users/manjunathdavanam/Documents/Projects.nosync/Swasth/standards/IG-Publisher/input/hcx-v2-definitions/structuredefinition-Patient : 0 / 1 / 1
- /Users/manjunathdavanam/Documents/Projects.nosync/Swasth/standards/IG-Publisher/input/hcx-v2-definitions/structuredefinition-PaymentNotice : 0 / 1 / 1
- /Users/manjunathdavanam/Documents/Projects.nosync/Swasth/standards/IG-Publisher/input/hcx-v2-definitions/structuredefinition-PaymentReconciliation : 0 / 1 / 1
- /Users/manjunathdavanam/Documents/Projects.nosync/Swasth/standards/IG-Publisher/input/hcx-v2-definitions/structuredefinition-Practitioner : 0 / 1 / 1
- /Users/manjunathdavanam/Documents/Projects.nosync/Swasth/standards/IG-Publisher/input/hcx-v2-definitions/structuredefinition-PractitionerRole : 0 / 1 / 1
- /Users/manjunathdavanam/Documents/Projects.nosync/Swasth/standards/IG-Publisher/input/hcx-v2-definitions/structuredefinition-PreAuthorizationRequest : 0 / 5 / 1
- /Users/manjunathdavanam/Documents/Projects.nosync/Swasth/standards/IG-Publisher/input/hcx-v2-definitions/structuredefinition-PreAuthorizationResponse : 0 / 1 / 1
- /Users/manjunathdavanam/Documents/Projects.nosync/Swasth/standards/IG-Publisher/input/hcx-v2-definitions/structuredefinition-Task : 39 / 1 / 1
- /Users/manjunathdavanam/Documents/Projects.nosync/Swasth/standards/IG-Publisher/input/hcx-v2-definitions/structuredefinition-hcp-signature : 0 / 1 / 1
- /Users/manjunathdavanam/Documents/Projects.nosync/Swasth/standards/IG-Publisher/input/hcx-v2-definitions/structuredefinition-organization-extension : 0 / 2 / 1
- /Users/manjunathdavanam/Documents/Projects.nosync/Swasth/standards/IG-Publisher/input/hcx-v2-definitions/valueset-claim-denial-codes : 0 / 1 / 1
- /Users/manjunathdavanam/Documents/Projects.nosync/Swasth/standards/IG-Publisher/input/hcx-v2-definitions/valueset-claim-service-categories : 0 / 1 / 1
- /Users/manjunathdavanam/Documents/Projects.nosync/Swasth/standards/IG-Publisher/input/hcx-v2-definitions/valueset-claim-service-codes : 0 / 1 / 1
- /Users/manjunathdavanam/Documents/Projects.nosync/Swasth/standards/IG-Publisher/input/hcx-v2-definitions/valueset-health-service-provider-role : 13 / 1 / 1
- /Users/manjunathdavanam/Documents/Projects.nosync/Swasth/standards/IG-Publisher/input/hcx-v2-definitions/valueset-insurance-company-owners : 51 / 1 / 1
- /Users/manjunathdavanam/Documents/Projects.nosync/Swasth/standards/IG-Publisher/input/hcx-v2-definitions/valueset-medical-speciality-type-provider : 178 / 1 / 1
- /Users/manjunathdavanam/Documents/Projects.nosync/Swasth/standards/IG-Publisher/input/hcx-v2-definitions/valueset-procedure-type-description : 32 / 1 / 1
- /Users/manjunathdavanam/Documents/Projects.nosync/Swasth/standards/IG-Publisher/input/ig : 4 / 2 / 1
+ /Users/rayulu/work/Sanketika/Swasth/temp/IG-Publisher/input/hcx-v2-definitions/structuredefinition-Claim : 0 / 1 / 1
+ /Users/rayulu/work/Sanketika/Swasth/temp/IG-Publisher/input/hcx-v2-definitions/structuredefinition-ClaimRequestDocument : 0 / 5 / 1
+ /Users/rayulu/work/Sanketika/Swasth/temp/IG-Publisher/input/hcx-v2-definitions/structuredefinition-ClaimResponse : 1 / 3 / 1
+ /Users/rayulu/work/Sanketika/Swasth/temp/IG-Publisher/input/hcx-v2-definitions/structuredefinition-ClaimResponseDocument : 0 / 1 / 1
+ /Users/rayulu/work/Sanketika/Swasth/temp/IG-Publisher/input/hcx-v2-definitions/structuredefinition-Communication : 24 / 1 / 1
+ /Users/rayulu/work/Sanketika/Swasth/temp/IG-Publisher/input/hcx-v2-definitions/structuredefinition-CommunicationDocument : 0 / 1 / 1
+ /Users/rayulu/work/Sanketika/Swasth/temp/IG-Publisher/input/hcx-v2-definitions/structuredefinition-CommunicationRequest : 23 / 1 / 1
+ /Users/rayulu/work/Sanketika/Swasth/temp/IG-Publisher/input/hcx-v2-definitions/structuredefinition-Condition : 0 / 1 / 1
+ /Users/rayulu/work/Sanketika/Swasth/temp/IG-Publisher/input/hcx-v2-definitions/structuredefinition-Coverage : 0 / 1 / 1
+ /Users/rayulu/work/Sanketika/Swasth/temp/IG-Publisher/input/hcx-v2-definitions/structuredefinition-CoverageEligibilityRequest : 0 / 1 / 1
+ /Users/rayulu/work/Sanketika/Swasth/temp/IG-Publisher/input/hcx-v2-definitions/structuredefinition-CoverageEligibilityRequestDocument : 0 / 1 / 1
+ /Users/rayulu/work/Sanketika/Swasth/temp/IG-Publisher/input/hcx-v2-definitions/structuredefinition-CoverageEligibilityResponse : 0 / 1 / 1
+ /Users/rayulu/work/Sanketika/Swasth/temp/IG-Publisher/input/hcx-v2-definitions/structuredefinition-CoverageEligibilityResponseDocument : 0 / 1 / 1
+ /Users/rayulu/work/Sanketika/Swasth/temp/IG-Publisher/input/hcx-v2-definitions/structuredefinition-Encounter : 0 / 1 / 1
+ /Users/rayulu/work/Sanketika/Swasth/temp/IG-Publisher/input/hcx-v2-definitions/structuredefinition-HCXDiagnosticDocumentsExtension : 0 / 3 / 1
+ /Users/rayulu/work/Sanketika/Swasth/temp/IG-Publisher/input/hcx-v2-definitions/structuredefinition-HCXInformationalMessagesExtension : 0 / 5 / 1
+ /Users/rayulu/work/Sanketika/Swasth/temp/IG-Publisher/input/hcx-v2-definitions/structuredefinition-HCXInsurancePlan : 0 / 1 / 1
+ /Users/rayulu/work/Sanketika/Swasth/temp/IG-Publisher/input/hcx-v2-definitions/structuredefinition-HCXProofOfIdentificationExtension : 0 / 3 / 1
+ /Users/rayulu/work/Sanketika/Swasth/temp/IG-Publisher/input/hcx-v2-definitions/structuredefinition-HCXProofOfPresenceExtension : 0 / 3 / 1
+ /Users/rayulu/work/Sanketika/Swasth/temp/IG-Publisher/input/hcx-v2-definitions/structuredefinition-HCXQuestionnairesExtension : 0 / 1 / 1
+ /Users/rayulu/work/Sanketika/Swasth/temp/IG-Publisher/input/hcx-v2-definitions/structuredefinition-Organization : 0 / 1 / 1
+ /Users/rayulu/work/Sanketika/Swasth/temp/IG-Publisher/input/hcx-v2-definitions/structuredefinition-Patient : 0 / 1 / 1
+ /Users/rayulu/work/Sanketika/Swasth/temp/IG-Publisher/input/hcx-v2-definitions/structuredefinition-PaymentNotice : 0 / 1 / 1
+ /Users/rayulu/work/Sanketika/Swasth/temp/IG-Publisher/input/hcx-v2-definitions/structuredefinition-PaymentReconciliation : 0 / 1 / 1
+ /Users/rayulu/work/Sanketika/Swasth/temp/IG-Publisher/input/hcx-v2-definitions/structuredefinition-Practitioner : 0 / 1 / 1
+ /Users/rayulu/work/Sanketika/Swasth/temp/IG-Publisher/input/hcx-v2-definitions/structuredefinition-PractitionerRole : 0 / 1 / 1
+ /Users/rayulu/work/Sanketika/Swasth/temp/IG-Publisher/input/hcx-v2-definitions/structuredefinition-PreAuthorizationRequestDocument : 0 / 5 / 1
+ /Users/rayulu/work/Sanketika/Swasth/temp/IG-Publisher/input/hcx-v2-definitions/structuredefinition-PreAuthorizationResponseDocument : 0 / 1 / 1
+ /Users/rayulu/work/Sanketika/Swasth/temp/IG-Publisher/input/hcx-v2-definitions/structuredefinition-PreDeterminationRequestDocument : 0 / 5 / 1
+ /Users/rayulu/work/Sanketika/Swasth/temp/IG-Publisher/input/hcx-v2-definitions/structuredefinition-PreDeterminationResponseDocument : 0 / 1 / 1
+ /Users/rayulu/work/Sanketika/Swasth/temp/IG-Publisher/input/hcx-v2-definitions/structuredefinition-Task : 39 / 1 / 1
+ /Users/rayulu/work/Sanketika/Swasth/temp/IG-Publisher/input/hcx-v2-definitions/structuredefinition-hcp-signature : 0 / 1 / 1
+ /Users/rayulu/work/Sanketika/Swasth/temp/IG-Publisher/input/hcx-v2-definitions/structuredefinition-organization-extension : 0 / 2 / 1
+ /Users/rayulu/work/Sanketika/Swasth/temp/IG-Publisher/input/hcx-v2-definitions/valueset-claim-denial-codes : 0 / 1 / 1
+ /Users/rayulu/work/Sanketika/Swasth/temp/IG-Publisher/input/hcx-v2-definitions/valueset-claim-service-categories : 0 / 1 / 1
+ /Users/rayulu/work/Sanketika/Swasth/temp/IG-Publisher/input/hcx-v2-definitions/valueset-claim-service-codes : 0 / 1 / 1
+ /Users/rayulu/work/Sanketika/Swasth/temp/IG-Publisher/input/hcx-v2-definitions/valueset-health-service-provider-role : 13 / 1 / 1
+ /Users/rayulu/work/Sanketika/Swasth/temp/IG-Publisher/input/hcx-v2-definitions/valueset-insurance-company-owners : 51 / 1 / 1
+ /Users/rayulu/work/Sanketika/Swasth/temp/IG-Publisher/input/hcx-v2-definitions/valueset-medical-speciality-type-provider : 178 / 1 / 1
+ /Users/rayulu/work/Sanketika/Swasth/temp/IG-Publisher/input/hcx-v2-definitions/valueset-procedure-type-description : 32 / 1 / 1
+ /Users/rayulu/work/Sanketika/Swasth/temp/IG-Publisher/input/ig : 4 / 2 / 1
 </table>
 == n/a ==
 ERROR: ImplementationGuide.definition.parameter[23].value: Supressed messages file not found
 WARNING: ImplementationGuide.id: The Implementation Guide Resource id should be ig
-ERROR: /Users/manjunathdavanam/Documents/Projects.nosync/Swasth/standards/IG-Publisher/output/profiles.html#/html/body/div/div/div/div/div/div/ul/li/a at Line 151, column 4: The link 'StructureDefinition-PaymentNoticeDocument.html' for "HCX Payment Notice Document" cannot be resolved
+ERROR: /Users/rayulu/work/Sanketika/Swasth/temp/IG-Publisher/output/profiles.html#/html/body/div/div/div/div/div/div/ul/li/a at Line 166, column 4: The link 'StructureDefinition-PaymentNoticeDocument.html' for "HCX Payment Notice Document" cannot be resolved
+== input/hcx-v2-definitions/StructureDefinition-Claim.json ==
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/HCXClaim'): The Implementation Guide contains no examples for this profile
 == input/hcx-v2-definitions/StructureDefinition-ClaimRequestDocument.json ==
 WARNING: http://hl7.org/fhir/StructureDefinition/HCXClaimRequestDocument#Composition.section.entry: Cannot check whether the target profile https://raw.githubusercontent.com/Swasth-Digital-Health-Foundation/standards/69ce5ac4bc6e9fc5a015a53c82e3ebb7a379f348/FHIR%20Definitions/hcp.signature.extension.json is valid constraint on the base because it is not known
 WARNING: StructureDefinition/ClaimRequestDocument: StructureDefinition.differential.element.where(path = 'Composition.section.entry'): Cannot check whether the target profile https://raw.githubusercontent.com/Swasth-Digital-Health-Foundation/standards/69ce5ac4bc6e9fc5a015a53c82e3ebb7a379f348/FHIR%20Definitions/hcp.signature.extension.json is valid constraint on the base because it is not known
@@ -86,6 +92,8 @@ ERROR: StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/
 ERROR: StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/HCXCommunication'): StructureDefinition profile http://hl7.org/fhir/StructureDefinition/HCXCommunication: Differential contains path Communication.recipient which is not found in the in base profile http://hl7.org/fhir/StructureDefinition/HCXCommunication
 ERROR: StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/HCXCommunication'): The element Communication.identifier is out of order (and maybe others after it)
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/HCXCommunication'): The Implementation Guide contains no examples for this profile
+== input/hcx-v2-definitions/StructureDefinition-CommunicationDocument.json ==
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/HCXCommunicationDocument'): The Implementation Guide contains no examples for this profile
 == input/hcx-v2-definitions/StructureDefinition-CommunicationRequest.json ==
 ERROR: StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/HCXCommunicationRequest'): StructureDefinition profile http://hl7.org/fhir/StructureDefinition/HCXCommunicationRequest: Differential contains path CommunicationRequest.encounter which is not found in the in base profile http://hl7.org/fhir/StructureDefinition/HCXCommunicationRequest
 ERROR: StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/HCXCommunicationRequest'): StructureDefinition profile http://hl7.org/fhir/StructureDefinition/HCXCommunicationRequest: Differential contains path CommunicationRequest.sender which is not found in the in base profile http://hl7.org/fhir/StructureDefinition/HCXCommunicationRequest
@@ -128,60 +136,25 @@ WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinitio
 == input/hcx-v2-definitions/StructureDefinition-HCXDiagnosticDocumentsExtension.json ==
 WARNING: StructureDefinition/HCXDiagnosticDocumentsExtension: StructureDefinition.differential.element[4].binding: The valueSet reference https://hcx-valuesets/clinicalDiagnosticsDocumentCodes on element Extension.extension.value[x] could not be resolved
 WARNING: StructureDefinition/HCXDiagnosticDocumentsExtension: StructureDefinition.snapshot.element[11].binding: The valueSet reference https://hcx-valuesets/clinicalDiagnosticsDocumentCodes on element Extension.extension.value[x] could not be resolved
-WARNING: StructureDefinition.where(url = 'https://hcx-base-url/StructureDefinition/HCXDiagnosticDocumentsExtension'): The Implementation Guide contains no examples for this extension
+WARNING: StructureDefinition.where(url = 'https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-HCXDiagnosticDocumentsExtension.html'): The Implementation Guide contains no examples for this extension
 == input/hcx-v2-definitions/StructureDefinition-HCXInformationalMessagesExtension.json ==
 WARNING: StructureDefinition/HCXInformationalMessagesExtension: StructureDefinition.differential.element[4].binding: The valueSet reference https://hcx-valuesets/InformationalMessagesCodes on element Extension.extension.value[x] could not be resolved
 WARNING: StructureDefinition/HCXInformationalMessagesExtension: StructureDefinition.differential.element[7].binding: The valueSet reference http://www.hl7.org/fhir/valueset-issue-severity.html on element Extension.extension.value[x] could not be resolved
 WARNING: StructureDefinition/HCXInformationalMessagesExtension: StructureDefinition.snapshot.element[11].binding: The valueSet reference https://hcx-valuesets/InformationalMessagesCodes on element Extension.extension.value[x] could not be resolved
 WARNING: StructureDefinition/HCXInformationalMessagesExtension: StructureDefinition.snapshot.element[20].binding: The valueSet reference http://www.hl7.org/fhir/valueset-issue-severity.html on element Extension.extension.value[x] could not be resolved
-WARNING: StructureDefinition.where(url = 'https://hcx-base-url/StructureDefinition/HCXInformationalMessagesExtension'): The Implementation Guide contains no examples for this extension
+WARNING: StructureDefinition.where(url = 'https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-HCXInformationalMessagesExtension.html'): The Implementation Guide contains no examples for this extension
 == input/hcx-v2-definitions/StructureDefinition-HCXInsurancePlan.json ==
-WARNING: http://hcx-base-url/StructureDefinition/InsurancePlan#InsurancePlan.plan.extension:proofOfIdDocuments: The type of profile http://https://hcx-base-url/StructureDefinition/HCXProofOfIdentificationExtension cannot be checked as the profile is not known
-WARNING: http://hcx-base-url/StructureDefinition/InsurancePlan#InsurancePlan.plan.extension:proofOfPresenceDocuments: The type of profile http://https://hcx-base-url/StructureDefinition/HCXProofOfPresenceExtension cannot be checked as the profile is not known
-WARNING: http://hcx-base-url/StructureDefinition/InsurancePlan#InsurancePlan.plan.specificCost.benefit.extension:clinicalDiagnosticDocuments: The type of profile http://https://hcx-base-url/StructureDefinition/HCXDiagnosticDocumentsExtension cannot be checked as the profile is not known
-WARNING: http://hcx-base-url/StructureDefinition/InsurancePlan#InsurancePlan.plan.specificCost.benefit.extension:informationalMessages: The type of profile http://https://hcx-base-url/StructureDefinition/HCXInformationalMessagesExtension cannot be checked as the profile is not known
-WARNING: http://hcx-base-url/StructureDefinition/InsurancePlan#InsurancePlan.plan.specificCost.benefit.extension:questionnnaires: The type of profile http://https://hcx-base-url/StructureDefinition/HCXQuestionnairesExtension cannot be checked as the profile is not known
-WARNING: StructureDefinition/HCXInsurancePlan: StructureDefinition.differential.element.where(path = 'InsurancePlan.plan.extension:proofOfIdDocuments'): The type of profile http://https://hcx-base-url/StructureDefinition/HCXProofOfIdentificationExtension cannot be checked as the profile is not known
-WARNING: StructureDefinition/HCXInsurancePlan: StructureDefinition.differential.element.where(path = 'InsurancePlan.plan.extension:proofOfPresenceDocuments'): The type of profile http://https://hcx-base-url/StructureDefinition/HCXProofOfPresenceExtension cannot be checked as the profile is not known
-WARNING: StructureDefinition/HCXInsurancePlan: StructureDefinition.differential.element.where(path = 'InsurancePlan.plan.specificCost.benefit.extension:clinicalDiagnosticDocuments'): The type of profile http://https://hcx-base-url/StructureDefinition/HCXDiagnosticDocumentsExtension cannot be checked as the profile is not known
-WARNING: StructureDefinition/HCXInsurancePlan: StructureDefinition.differential.element.where(path = 'InsurancePlan.plan.specificCost.benefit.extension:informationalMessages'): The type of profile http://https://hcx-base-url/StructureDefinition/HCXInformationalMessagesExtension cannot be checked as the profile is not known
-WARNING: StructureDefinition/HCXInsurancePlan: StructureDefinition.differential.element.where(path = 'InsurancePlan.plan.specificCost.benefit.extension:questionnnaires'): The type of profile http://https://hcx-base-url/StructureDefinition/HCXQuestionnairesExtension cannot be checked as the profile is not known
-WARNING: StructureDefinition/HCXInsurancePlan: StructureDefinition.differential.element[2].type[0].profile[0]: Unable to resolve profile http://https://hcx-base-url/StructureDefinition/HCXProofOfIdentificationExtension
-WARNING: StructureDefinition/HCXInsurancePlan: StructureDefinition.differential.element[3].type[0].profile[0]: Unable to resolve profile http://https://hcx-base-url/StructureDefinition/HCXProofOfPresenceExtension
-WARNING: StructureDefinition/HCXInsurancePlan: StructureDefinition.differential.element[4].type[0].profile[0]: Unable to resolve profile http://https://hcx-base-url/StructureDefinition/HCXDiagnosticDocumentsExtension
-WARNING: StructureDefinition/HCXInsurancePlan: StructureDefinition.differential.element[5].type[0].profile[0]: Unable to resolve profile http://https://hcx-base-url/StructureDefinition/HCXInformationalMessagesExtension
-WARNING: StructureDefinition/HCXInsurancePlan: StructureDefinition.differential.element[6].type[0].profile[0]: Unable to resolve profile http://https://hcx-base-url/StructureDefinition/HCXQuestionnairesExtension
-WARNING: StructureDefinition/HCXInsurancePlan: StructureDefinition.snapshot.element[49].type[0].profile[0]: Unable to resolve profile http://https://hcx-base-url/StructureDefinition/HCXProofOfIdentificationExtension
-WARNING: StructureDefinition/HCXInsurancePlan: StructureDefinition.snapshot.element[50].type[0].profile[0]: Unable to resolve profile http://https://hcx-base-url/StructureDefinition/HCXProofOfPresenceExtension
-WARNING: StructureDefinition/HCXInsurancePlan: StructureDefinition.snapshot.element[72].type[0].profile[0]: Unable to resolve profile http://https://hcx-base-url/StructureDefinition/HCXDiagnosticDocumentsExtension
-WARNING: StructureDefinition/HCXInsurancePlan: StructureDefinition.snapshot.element[73].type[0].profile[0]: Unable to resolve profile http://https://hcx-base-url/StructureDefinition/HCXInformationalMessagesExtension
-WARNING: StructureDefinition/HCXInsurancePlan: StructureDefinition.snapshot.element[74].type[0].profile[0]: Unable to resolve profile http://https://hcx-base-url/StructureDefinition/HCXQuestionnairesExtension
-ERROR: HCXInsurancePlan: Unable to find Extension 'http://https://hcx-base-url/StructureDefinition/HCXProofOfIdentificationExtension' referenced at http://hcx-base-url/StructureDefinition/InsurancePlan differential InsurancePlan.plan.extension (proofOfIdDocuments)
-ERROR: HCXInsurancePlan: Unable to find Extension 'http://https://hcx-base-url/StructureDefinition/HCXProofOfPresenceExtension' referenced at http://hcx-base-url/StructureDefinition/InsurancePlan differential InsurancePlan.plan.extension (proofOfPresenceDocuments)
-ERROR: HCXInsurancePlan: Unable to find Extension 'http://https://hcx-base-url/StructureDefinition/HCXDiagnosticDocumentsExtension' referenced at http://hcx-base-url/StructureDefinition/InsurancePlan differential InsurancePlan.plan.specificCost.benefit.extension (clinicalDiagnosticDocuments)
-ERROR: HCXInsurancePlan: Unable to find Extension 'http://https://hcx-base-url/StructureDefinition/HCXInformationalMessagesExtension' referenced at http://hcx-base-url/StructureDefinition/InsurancePlan differential InsurancePlan.plan.specificCost.benefit.extension (informationalMessages)
-ERROR: HCXInsurancePlan: Unable to find Extension 'http://https://hcx-base-url/StructureDefinition/HCXQuestionnairesExtension' referenced at http://hcx-base-url/StructureDefinition/InsurancePlan differential InsurancePlan.plan.specificCost.benefit.extension (questionnnaires)
-ERROR: HCXInsurancePlan: Unable to find Extension 'http://https://hcx-base-url/StructureDefinition/HCXProofOfIdentificationExtension' referenced at http://hcx-base-url/StructureDefinition/InsurancePlan snapshot InsurancePlan.plan.extension (proofOfIdDocuments)
-ERROR: HCXInsurancePlan: Unable to find Extension 'http://https://hcx-base-url/StructureDefinition/HCXProofOfPresenceExtension' referenced at http://hcx-base-url/StructureDefinition/InsurancePlan snapshot InsurancePlan.plan.extension (proofOfPresenceDocuments)
-ERROR: HCXInsurancePlan: Unable to find Extension 'http://https://hcx-base-url/StructureDefinition/HCXDiagnosticDocumentsExtension' referenced at http://hcx-base-url/StructureDefinition/InsurancePlan snapshot InsurancePlan.plan.specificCost.benefit.extension (clinicalDiagnosticDocuments)
-ERROR: HCXInsurancePlan: Unable to find Extension 'http://https://hcx-base-url/StructureDefinition/HCXInformationalMessagesExtension' referenced at http://hcx-base-url/StructureDefinition/InsurancePlan snapshot InsurancePlan.plan.specificCost.benefit.extension (informationalMessages)
-ERROR: HCXInsurancePlan: Unable to find Extension 'http://https://hcx-base-url/StructureDefinition/HCXQuestionnairesExtension' referenced at http://hcx-base-url/StructureDefinition/InsurancePlan snapshot InsurancePlan.plan.specificCost.benefit.extension (questionnnaires)
-ERROR: HCXInsurancePlan: Unable to find Extension 'http://https://hcx-base-url/StructureDefinition/HCXProofOfIdentificationExtension' referenced at http://hcx-base-url/StructureDefinition/InsurancePlan snapshot InsurancePlan.plan.extension (proofOfIdDocuments)
-ERROR: HCXInsurancePlan: Unable to find Extension 'http://https://hcx-base-url/StructureDefinition/HCXProofOfPresenceExtension' referenced at http://hcx-base-url/StructureDefinition/InsurancePlan snapshot InsurancePlan.plan.extension (proofOfPresenceDocuments)
-ERROR: HCXInsurancePlan: Unable to find Extension 'http://https://hcx-base-url/StructureDefinition/HCXDiagnosticDocumentsExtension' referenced at http://hcx-base-url/StructureDefinition/InsurancePlan snapshot InsurancePlan.plan.specificCost.benefit.extension (clinicalDiagnosticDocuments)
-ERROR: HCXInsurancePlan: Unable to find Extension 'http://https://hcx-base-url/StructureDefinition/HCXInformationalMessagesExtension' referenced at http://hcx-base-url/StructureDefinition/InsurancePlan snapshot InsurancePlan.plan.specificCost.benefit.extension (informationalMessages)
-ERROR: HCXInsurancePlan: Unable to find Extension 'http://https://hcx-base-url/StructureDefinition/HCXQuestionnairesExtension' referenced at http://hcx-base-url/StructureDefinition/InsurancePlan snapshot InsurancePlan.plan.specificCost.benefit.extension (questionnnaires)
-WARNING: StructureDefinition.where(url = 'http://hcx-base-url/StructureDefinition/InsurancePlan'): The Implementation Guide contains no examples for this profile
+WARNING: StructureDefinition.where(url = 'https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-HCXInsurancePlan.html'): The Implementation Guide contains no examples for this profile
 == input/hcx-v2-definitions/StructureDefinition-HCXProofOfIdentificationExtension.json ==
 WARNING: StructureDefinition/HCXProofOfIdentificationExtension: StructureDefinition.differential.element[4].binding: The valueSet reference https://hcx-valuesets/proofOfIdentificationDocumentCodes on element Extension.extension.value[x] could not be resolved
 WARNING: StructureDefinition/HCXProofOfIdentificationExtension: StructureDefinition.snapshot.element[11].binding: The valueSet reference https://hcx-valuesets/proofOfIdentificationDocumentCodes on element Extension.extension.value[x] could not be resolved
-WARNING: StructureDefinition.where(url = 'https://hcx-base-url/StructureDefinition/HCXProofOfIdentificationExtension'): The Implementation Guide contains no examples for this extension
+WARNING: StructureDefinition.where(url = 'https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-HCXProofOfIdentificationExtension.html'): The Implementation Guide contains no examples for this extension
 == input/hcx-v2-definitions/StructureDefinition-HCXProofOfPresenceExtension.json ==
 WARNING: StructureDefinition/HCXProofOfPresenceExtension: StructureDefinition.differential.element[4].binding: The valueSet reference https://hcx-valuesets/proofOfPresenceDocumentCodes on element Extension.extension.value[x] could not be resolved
 WARNING: StructureDefinition/HCXProofOfPresenceExtension: StructureDefinition.snapshot.element[11].binding: The valueSet reference https://hcx-valuesets/proofOfPresenceDocumentCodes on element Extension.extension.value[x] could not be resolved
-WARNING: StructureDefinition.where(url = 'https://hcx-base-url/StructureDefinition/HCXProofOfPresenceExtension'): The Implementation Guide contains no examples for this extension
+WARNING: StructureDefinition.where(url = 'https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-HCXProofOfPresenceExtension.html'): The Implementation Guide contains no examples for this extension
 == input/hcx-v2-definitions/StructureDefinition-HCXQuestionnairesExtension.json ==
-WARNING: StructureDefinition.where(url = 'https://hcx-base-url/StructureDefinition/HCXQuestionnairesExtension'): The Implementation Guide contains no examples for this extension
+WARNING: StructureDefinition.where(url = 'https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-HCXQuestionnairesExtension.html'): The Implementation Guide contains no examples for this extension
 == input/hcx-v2-definitions/StructureDefinition-Organization.json ==
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/HCXOrganization'): The Implementation Guide contains no examples for this profile
 == input/hcx-v2-definitions/StructureDefinition-Patient.json ==
@@ -194,14 +167,22 @@ WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinitio
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/HCXPractitioner'): The Implementation Guide contains no examples for this profile
 == input/hcx-v2-definitions/StructureDefinition-PractitionerRole.json ==
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/HCXPractitionerRole'): The Implementation Guide contains no examples for this profile
-== input/hcx-v2-definitions/StructureDefinition-PreAuthorizationRequest.json ==
-WARNING: http://hl7.org/fhir/StructureDefinition/HCXPreAuthorizationRequest#Composition.section.entry: Cannot check whether the target profile https://raw.githubusercontent.com/Swasth-Digital-Health-Foundation/standards/69ce5ac4bc6e9fc5a015a53c82e3ebb7a379f348/FHIR%20Definitions/hcp.signature.extension.json is valid constraint on the base because it is not known
-WARNING: StructureDefinition/PreAuthorizationRequest: StructureDefinition.differential.element.where(path = 'Composition.section.entry'): Cannot check whether the target profile https://raw.githubusercontent.com/Swasth-Digital-Health-Foundation/standards/69ce5ac4bc6e9fc5a015a53c82e3ebb7a379f348/FHIR%20Definitions/hcp.signature.extension.json is valid constraint on the base because it is not known
-WARNING: StructureDefinition/PreAuthorizationRequest: StructureDefinition.differential.element[6].type[0].targetProfile[0]: Unable to resolve profile https://raw.githubusercontent.com/Swasth-Digital-Health-Foundation/standards/69ce5ac4bc6e9fc5a015a53c82e3ebb7a379f348/FHIR%20Definitions/hcp.signature.extension.json
-WARNING: StructureDefinition/PreAuthorizationRequest: StructureDefinition.snapshot.element[53].type[0].targetProfile[0]: Unable to resolve profile https://raw.githubusercontent.com/Swasth-Digital-Health-Foundation/standards/69ce5ac4bc6e9fc5a015a53c82e3ebb7a379f348/FHIR%20Definitions/hcp.signature.extension.json
-WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/HCXPreAuthorizationRequest'): The Implementation Guide contains no examples for this profile
-== input/hcx-v2-definitions/StructureDefinition-PreAuthorizationResponse.json ==
-WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/HCXPreAuthorizationResponse'): The Implementation Guide contains no examples for this profile
+== input/hcx-v2-definitions/StructureDefinition-PreAuthorizationRequestDocument.json ==
+WARNING: http://hl7.org/fhir/StructureDefinition/HCXPreAuthorizationRequestDocument#Composition.section.entry: Cannot check whether the target profile https://raw.githubusercontent.com/Swasth-Digital-Health-Foundation/standards/69ce5ac4bc6e9fc5a015a53c82e3ebb7a379f348/FHIR%20Definitions/hcp.signature.extension.json is valid constraint on the base because it is not known
+WARNING: StructureDefinition/PreAuthorizationRequestDocument: StructureDefinition.differential.element.where(path = 'Composition.section.entry'): Cannot check whether the target profile https://raw.githubusercontent.com/Swasth-Digital-Health-Foundation/standards/69ce5ac4bc6e9fc5a015a53c82e3ebb7a379f348/FHIR%20Definitions/hcp.signature.extension.json is valid constraint on the base because it is not known
+WARNING: StructureDefinition/PreAuthorizationRequestDocument: StructureDefinition.differential.element[6].type[0].targetProfile[0]: Unable to resolve profile https://raw.githubusercontent.com/Swasth-Digital-Health-Foundation/standards/69ce5ac4bc6e9fc5a015a53c82e3ebb7a379f348/FHIR%20Definitions/hcp.signature.extension.json
+WARNING: StructureDefinition/PreAuthorizationRequestDocument: StructureDefinition.snapshot.element[53].type[0].targetProfile[0]: Unable to resolve profile https://raw.githubusercontent.com/Swasth-Digital-Health-Foundation/standards/69ce5ac4bc6e9fc5a015a53c82e3ebb7a379f348/FHIR%20Definitions/hcp.signature.extension.json
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/HCXPreAuthorizationRequestDocument'): The Implementation Guide contains no examples for this profile
+== input/hcx-v2-definitions/StructureDefinition-PreAuthorizationResponseDocument.json ==
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/HCXPreAuthorizationResponseDocument'): The Implementation Guide contains no examples for this profile
+== input/hcx-v2-definitions/StructureDefinition-PreDeterminationRequestDocument.json ==
+WARNING: http://hl7.org/fhir/StructureDefinition/HCXPreDeterminationRequestDocument#Composition.section.entry: Cannot check whether the target profile https://raw.githubusercontent.com/Swasth-Digital-Health-Foundation/standards/69ce5ac4bc6e9fc5a015a53c82e3ebb7a379f348/FHIR%20Definitions/hcp.signature.extension.json is valid constraint on the base because it is not known
+WARNING: StructureDefinition/PreDeterminationRequestDocument: StructureDefinition.differential.element.where(path = 'Composition.section.entry'): Cannot check whether the target profile https://raw.githubusercontent.com/Swasth-Digital-Health-Foundation/standards/69ce5ac4bc6e9fc5a015a53c82e3ebb7a379f348/FHIR%20Definitions/hcp.signature.extension.json is valid constraint on the base because it is not known
+WARNING: StructureDefinition/PreDeterminationRequestDocument: StructureDefinition.differential.element[6].type[0].targetProfile[0]: Unable to resolve profile https://raw.githubusercontent.com/Swasth-Digital-Health-Foundation/standards/69ce5ac4bc6e9fc5a015a53c82e3ebb7a379f348/FHIR%20Definitions/hcp.signature.extension.json
+WARNING: StructureDefinition/PreDeterminationRequestDocument: StructureDefinition.snapshot.element[53].type[0].targetProfile[0]: Unable to resolve profile https://raw.githubusercontent.com/Swasth-Digital-Health-Foundation/standards/69ce5ac4bc6e9fc5a015a53c82e3ebb7a379f348/FHIR%20Definitions/hcp.signature.extension.json
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/HCXPreDeterminationRequestDocument'): The Implementation Guide contains no examples for this profile
+== input/hcx-v2-definitions/StructureDefinition-PreDeterminationResponseDocument.json ==
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/HCXPreDeterminationResponseDocument'): The Implementation Guide contains no examples for this profile
 == input/hcx-v2-definitions/StructureDefinition-Task.json ==
 ERROR: StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/HCXTask'): StructureDefinition profile http://hl7.org/fhir/StructureDefinition/HCXTask: Differential contains path Task.for which is not found in the in base profile http://hl7.org/fhir/StructureDefinition/HCXTask
 ERROR: StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/HCXTask'): StructureDefinition profile http://hl7.org/fhir/StructureDefinition/HCXTask: Differential contains path Task.location which is not found in the in base profile http://hl7.org/fhir/StructureDefinition/HCXTask
@@ -537,9 +518,9 @@ ERROR: ValueSet.expansion.contains[30].code: Error parsing JSON: the primitive v
 ERROR: ValueSet.expansion.contains[31].code: Error parsing JSON: the primitive value must be a string
 WARNING: ValueSet/procedure-type-description: ValueSet: vsd-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Rule 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Failed
 == input/ig.json ==
-ERROR: ImplementationGuide.where(url = 'https://fhir-ig-demo/ImplementationGuide/ig'): Conformance resource /Users/manjunathdavanam/Documents/Projects.nosync/Swasth/standards/IG-Publisher/input/ig.json - the canonical URL (https://fhir-ig-demo/ImplementationGuide/hl7.fhir.in.core) does not match the URL (https://fhir-ig-demo/ImplementationGuide/ig)
+ERROR: ImplementationGuide.where(url = 'https://fhir-ig-demo/ImplementationGuide/ig'): Conformance resource /Users/rayulu/work/Sanketika/Swasth/temp/IG-Publisher/input/ig.json - the canonical URL (https://fhir-ig-demo/ImplementationGuide/hl7.fhir.in.core) does not match the URL (https://fhir-ig-demo/ImplementationGuide/ig)
 ERROR: ImplementationGuide.url: Resource id/url mismatch: hl7.fhir.in.core/https://fhir-ig-demo/ImplementationGuide/ig
 WARNING: ImplementationGuide/hl7.fhir.in.core: ImplementationGuide: ig-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Rule 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Failed
 ERROR: ImplementationGuide/hl7.fhir.in.core: ImplementationGuide.definition.page: ImplementationGuide.definition.page.title: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ImplementationGuide)
-WARNING: ImplementationGuide/hl7.fhir.in.core: ImplementationGuide.definition.page.page[0].page[18].title: value should not start or finish with whitespace
-ERROR: /Users/manjunathdavanam/Documents/Projects.nosync/Swasth/standards/IG-Publisher/input/ig: URL Mismatch https://fhir-ig-demo/ImplementationGuide/hl7.fhir.in.core vs https://fhir-ig-demo/ImplementationGuide/ig
+WARNING: ImplementationGuide/hl7.fhir.in.core: ImplementationGuide.definition.page.page[0].page[19].title: value should not start or finish with whitespace
+ERROR: /Users/rayulu/work/Sanketika/Swasth/temp/IG-Publisher/input/ig: URL Mismatch https://fhir-ig-demo/ImplementationGuide/hl7.fhir.in.core vs https://fhir-ig-demo/ImplementationGuide/ig

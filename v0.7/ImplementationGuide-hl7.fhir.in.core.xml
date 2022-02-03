@@ -313,6 +313,20 @@ These requirements were originally developed, balloted, and published in FHIR DS
       <exampleBoolean value="false"/>
     </resource>
     <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/Claim">
+        <valueString value="SearchParameter"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/Claim"/>
+      </reference>
+      <name value="HCX Claim"/>
+      <description value="**Search by subject - a patient**  &#xA;**NOTE**: This US Core SearchParameter definition extends the usage context of the&#xA;[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)&#xA; - multipleAnd&#xA; - multipleOr&#xA; - comparator&#xA; - modifier&#xA; - chain"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/Condition">
         <valueString value="SearchParameter"/>
       </extension>
@@ -537,30 +551,72 @@ These requirements were originally developed, balloted, and published in FHIR DS
       <exampleBoolean value="false"/>
     </resource>
     <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/PreAuthorizationRequest">
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/PreDeterminationRequestDocument">
         <valueString value="SearchParameter"/>
       </extension>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/PreAuthorizationRequest"/>
+        <reference value="StructureDefinition/PreDeterminationRequestDocument"/>
       </reference>
-      <name value="HCX PreAuthorization Request"/>
+      <name value="HCX PreDetermination Request Document"/>
       <description value="**Search by subject - a patient**  &#xA;**NOTE**: This US Core SearchParameter definition extends the usage context of the&#xA;[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)&#xA; - multipleAnd&#xA; - multipleOr&#xA; - comparator&#xA; - modifier&#xA; - chain"/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/PreAuthorizationResponse">
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/PreDeterminationResponseDocument">
         <valueString value="SearchParameter"/>
       </extension>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/PreAuthorizationResponse"/>
+        <reference value="StructureDefinition/PreDeterminationResponseDocument"/>
       </reference>
-      <name value="HCX PreAuthorization Response"/>
+      <name value="HCX PreDetermination Response Document"/>
+      <description value="**Search by subject - a patient**  &#xA;**NOTE**: This US Core SearchParameter definition extends the usage context of the&#xA;[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)&#xA; - multipleAnd&#xA; - multipleOr&#xA; - comparator&#xA; - modifier&#xA; - chain"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/PreAuthorizationRequestDocument">
+        <valueString value="SearchParameter"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/PreAuthorizationRequestDocument"/>
+      </reference>
+      <name value="HCX PreAuthorization Request Document"/>
+      <description value="**Search by subject - a patient**  &#xA;**NOTE**: This US Core SearchParameter definition extends the usage context of the&#xA;[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)&#xA; - multipleAnd&#xA; - multipleOr&#xA; - comparator&#xA; - modifier&#xA; - chain"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/PreAuthorizationResponseDocument">
+        <valueString value="SearchParameter"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/PreAuthorizationResponseDocument"/>
+      </reference>
+      <name value="HCX PreAuthorization Response Document"/>
+      <description value="**Search by subject - a patient**  &#xA;**NOTE**: This US Core SearchParameter definition extends the usage context of the&#xA;[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)&#xA; - multipleAnd&#xA; - multipleOr&#xA; - comparator&#xA; - modifier&#xA; - chain"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/CommunicationDocument">
+        <valueString value="SearchParameter"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/CommunicationDocument"/>
+      </reference>
+      <name value="HCX Communication Document"/>
       <description value="**Search by subject - a patient**  &#xA;**NOTE**: This US Core SearchParameter definition extends the usage context of the&#xA;[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)&#xA; - multipleAnd&#xA; - multipleOr&#xA; - comparator&#xA; - modifier&#xA; - chain"/>
       <exampleBoolean value="false"/>
     </resource>
@@ -698,6 +754,11 @@ These requirements were originally developed, balloted, and published in FHIR DS
         <title value="Profiles"/>
         <generation value="html"/>
         <page>
+          <nameUrl value="StructureDefinition-Claim.html"/>
+          <title value="HCX Claim"/>
+          <generation value="generated"/>
+        </page>
+        <page>
           <nameUrl value="StructureDefinition-ClaimResponse.html"/>
           <title value="HCX Claim Response"/>
           <generation value="generated"/>
@@ -833,13 +894,28 @@ These requirements were originally developed, balloted, and published in FHIR DS
           <generation value="generated"/>
         </page>
         <page>
-          <nameUrl value="StructureDefinition-PreAuthorizationRequest.html"/>
-          <title value="HCX Pre Authorization Request"/>
+          <nameUrl value="StructureDefinition-PreDeterminationRequestDocument.html"/>
+          <title value="HCX Pre Determination Request Document"/>
           <generation value="generated"/>
         </page>
         <page>
-          <nameUrl value="StructureDefinition-PreAuthorizationResponse.html"/>
-          <title value="HCX Pre Authorization Response"/>
+          <nameUrl value="StructureDefinition-PreDeterminationResponseDocument.html"/>
+          <title value="HCX Pre Determination Response Document"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="StructureDefinition-PreAuthorizationRequestDocument.html"/>
+          <title value="HCX Pre Authorization Request Document"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="StructureDefinition-PreAuthorizationResponseDocument.html"/>
+          <title value="HCX Pre Authorization Response Document"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="StructureDefinition-CommunicationDocument.html"/>
+          <title value="HCX Communication Document"/>
           <generation value="generated"/>
         </page>
         <page>

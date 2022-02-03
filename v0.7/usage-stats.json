@@ -18,7 +18,7 @@
       ]
     },
     {
-      "url": "https://hcx-base-url/StructureDefinition/HCXDiagnosticDocumentsExtension",
+      "url": "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-HCXDiagnosticDocumentsExtension.html",
       "title": "HCX Diagnostic Documents Extension",
       "types": [
         "base64Binary",
@@ -329,7 +329,7 @@
       ]
     },
     {
-      "url": "https://hcx-base-url/StructureDefinition/HCXInformationalMessagesExtension",
+      "url": "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-HCXInformationalMessagesExtension.html",
       "title": "HCX Informational Messages Extension",
       "types": [
         "base64Binary",
@@ -590,7 +590,7 @@
       ]
     },
     {
-      "url": "https://hcx-base-url/StructureDefinition/HCXProofOfIdentificationExtension",
+      "url": "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-HCXProofOfIdentificationExtension.html",
       "title": "HCX Proof Of Identification Extension",
       "types": [
         "base64Binary",
@@ -901,7 +901,7 @@
       ]
     },
     {
-      "url": "https://hcx-base-url/StructureDefinition/HCXProofOfPresenceExtension",
+      "url": "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-HCXProofOfPresenceExtension.html",
       "title": "HCX Proof Of Presence Extension",
       "types": [
         "base64Binary",
@@ -1212,7 +1212,7 @@
       ]
     },
     {
-      "url": "https://hcx-base-url/StructureDefinition/HCXQuestionnairesExtension",
+      "url": "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-HCXQuestionnairesExtension.html",
       "title": "HCX Questionnaires Extension",
       "types": [
         "base64Binary",
@@ -1473,20 +1473,28 @@
     }
   ],
   "profiles": {
-    "InsurancePlan": [
+    "Claim": [
       {
-        "url": "http://hcx-base-url/StructureDefinition/InsurancePlan",
-        "title": "HCXInsurancePlan"
+        "url": "http://hl7.org/fhir/StructureDefinition/HCXClaim",
+        "title": "Claim"
       }
     ],
     "Composition": [
       {
-        "url": "http://hl7.org/fhir/StructureDefinition/HCXPreAuthorizationRequest",
-        "title": "PreAuthorizationRequest"
+        "url": "http://hl7.org/fhir/StructureDefinition/HCXPreAuthorizationRequestDocument",
+        "title": "PreAuthorizationRequestDocument"
       },
       {
-        "url": "http://hl7.org/fhir/StructureDefinition/HCXPreAuthorizationResponse",
-        "title": "PreAuthorizationResponse"
+        "url": "http://hl7.org/fhir/StructureDefinition/HCXPreAuthorizationResponseDocument",
+        "title": "PreAuthorizationResponseDocument"
+      },
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/HCXPreDeterminationRequestDocument",
+        "title": "PreDeterminationRequestDocument"
+      },
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/HCXPreDeterminationResponseDocument",
+        "title": "PreDeterminationResponseDocument"
       }
     ],
     "ClaimResponse": [
@@ -1578,6 +1586,12 @@
         "url": "http://hl7.org/fhir/StructureDefinition/HCXTask",
         "title": "Task"
       }
+    ],
+    "InsurancePlan": [
+      {
+        "url": "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-HCXInsurancePlan.html",
+        "title": "HCXInsurancePlan"
+      }
     ]
   },
   "usage": {
@@ -1630,6 +1644,9 @@
     "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg": [
       "StructureDefinition"
     ],
+    "http://hl7.org/fhir/tools/StructureDefinition/Claim": [
+      "ImplementationGuide.definition.resource"
+    ],
     "http://hl7.org/fhir/tools/StructureDefinition/ClaimRequestDocument": [
       "ImplementationGuide.definition.resource"
     ],
@@ -1640,6 +1657,9 @@
       "ImplementationGuide.definition.resource"
     ],
     "http://hl7.org/fhir/tools/StructureDefinition/Communication": [
+      "ImplementationGuide.definition.resource"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/CommunicationDocument": [
       "ImplementationGuide.definition.resource"
     ],
     "http://hl7.org/fhir/tools/StructureDefinition/CommunicationRequest": [
@@ -1702,10 +1722,16 @@
     "http://hl7.org/fhir/tools/StructureDefinition/PractitionerRole": [
       "ImplementationGuide.definition.resource"
     ],
-    "http://hl7.org/fhir/tools/StructureDefinition/PreAuthorizationRequest": [
+    "http://hl7.org/fhir/tools/StructureDefinition/PreAuthorizationRequestDocument": [
       "ImplementationGuide.definition.resource"
     ],
-    "http://hl7.org/fhir/tools/StructureDefinition/PreAuthorizationResponse": [
+    "http://hl7.org/fhir/tools/StructureDefinition/PreAuthorizationResponseDocument": [
+      "ImplementationGuide.definition.resource"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/PreDeterminationRequestDocument": [
+      "ImplementationGuide.definition.resource"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/PreDeterminationResponseDocument": [
       "ImplementationGuide.definition.resource"
     ],
     "http://hl7.org/fhir/tools/StructureDefinition/Task": [
@@ -1744,19 +1770,19 @@
     "http://hl7.org/fhir/tools/ValueSet/procedure-type-description": [
       "ImplementationGuide.definition.resource"
     ],
-    "http://https://hcx-base-url/StructureDefinition/HCXDiagnosticDocumentsExtension": [
+    "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-HCXDiagnosticDocumentsExtension.html": [
       "InsurancePlan.plan.specificCost.benefit"
     ],
-    "http://https://hcx-base-url/StructureDefinition/HCXInformationalMessagesExtension": [
+    "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-HCXInformationalMessagesExtension.html": [
       "InsurancePlan.plan.specificCost.benefit"
     ],
-    "http://https://hcx-base-url/StructureDefinition/HCXProofOfIdentificationExtension": [
+    "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-HCXProofOfIdentificationExtension.html": [
       "InsurancePlan.plan"
     ],
-    "http://https://hcx-base-url/StructureDefinition/HCXProofOfPresenceExtension": [
+    "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-HCXProofOfPresenceExtension.html": [
       "InsurancePlan.plan"
     ],
-    "http://https://hcx-base-url/StructureDefinition/HCXQuestionnairesExtension": [
+    "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-HCXQuestionnairesExtension.html": [
       "InsurancePlan.plan.specificCost.benefit"
     ]
   }
