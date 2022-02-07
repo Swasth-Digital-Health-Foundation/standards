@@ -14,18 +14,6 @@ The structure definitions of document bundles that are passed as payload in the 
 <a href="StructureDefinition-CoverageEligibilityResponseDocument.html">HCX Coverage Eligibility Response Document</a>
   </li>
   <li>
-<a href="StructureDefinition-PreAuthorizationRequestDocument.html">HCX PreDetermination Request Document</a>
-</li>
-<li>
-<a href="StructureDefinition-PreAuthorizationResponseDocument.html">HCX PreDetermination Response Document</a>
-</li>
-  <li>
-<a href="StructureDefinition-PreAuthorizationRequestDocument.html">HCX PreAuthorization Request Document</a>
-</li>
-<li>
-<a href="StructureDefinition-PreAuthorizationResponseDocument.html">HCX PreAuthorization Response Document</a>
-</li>
-  <li>
     <a href="StructureDefinition-ClaimRequestDocument.html">HCX Claim Request Document</a>
   </li>
   <li>

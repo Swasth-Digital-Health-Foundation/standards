@@ -2840,8 +2840,8 @@
        fhir:Element.id [ fhir:value "Composition.section.entry:claim" ];
        fhir:ElementDefinition.path [ fhir:value "Composition.section.entry" ];
        fhir:ElementDefinition.sliceName [ fhir:value "claim" ];
-       fhir:ElementDefinition.short [ fhir:value "A reference to the claim that the pre-auth request refers to." ];
-       fhir:ElementDefinition.definition [ fhir:value "A reference to the claim that the pre-auth request refers to." ];
+       fhir:ElementDefinition.short [ fhir:value "A reference to the claim that the pre-determination/pre-authorization/claim request refers to." ];
+       fhir:ElementDefinition.definition [ fhir:value "A reference to the claim that the pre-determination/pre-authorization/claim request refers to." ];
        fhir:ElementDefinition.comment [ fhir:value "If there are no entries in the list, an emptyReason SHOULD be provided." ];
        fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
        fhir:ElementDefinition.max [ fhir:value "1" ];
@@ -2854,9 +2854,9 @@
          fhir:index 0;
          fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
          fhir:ElementDefinition.type.targetProfile [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Claim";
+           fhir:value "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-Claim.html";
            fhir:index 0;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Claim>
+           fhir:link <https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-Claim.html>
          ]
        ];
        fhir:ElementDefinition.condition [
@@ -2891,8 +2891,8 @@
        fhir:Element.id [ fhir:value "Composition.section.entry:signature" ];
        fhir:ElementDefinition.path [ fhir:value "Composition.section.entry" ];
        fhir:ElementDefinition.sliceName [ fhir:value "signature" ];
-       fhir:ElementDefinition.short [ fhir:value "A reference to the claim that the pre-auth request refers to." ];
-       fhir:ElementDefinition.definition [ fhir:value "A reference to the claim that the pre-auth request refers to." ];
+       fhir:ElementDefinition.short [ fhir:value "A reference to the signature in the pre-determination/pre-authorization/claim request refers to." ];
+       fhir:ElementDefinition.definition [ fhir:value "A reference to the signature in the pre-determination/pre-authorization/claim request refers to." ];
        fhir:ElementDefinition.comment [ fhir:value "If there are no entries in the list, an emptyReason SHOULD be provided." ];
        fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
        fhir:ElementDefinition.max [ fhir:value "*" ];
@@ -2905,9 +2905,9 @@
          fhir:index 0;
          fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
          fhir:ElementDefinition.type.targetProfile [
-           fhir:value "https://raw.githubusercontent.com/Swasth-Digital-Health-Foundation/standards/69ce5ac4bc6e9fc5a015a53c82e3ebb7a379f348/FHIR%20Definitions/hcp.signature.extension.json";
+           fhir:value "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-HCXSignatureExtension.html";
            fhir:index 0;
-           fhir:link <https://raw.githubusercontent.com/Swasth-Digital-Health-Foundation/standards/69ce5ac4bc6e9fc5a015a53c82e3ebb7a379f348/FHIR%20Definitions/hcp.signature.extension.json>
+           fhir:link <https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-HCXSignatureExtension.html>
          ]
        ];
        fhir:ElementDefinition.condition [
@@ -3097,8 +3097,8 @@
        fhir:Element.id [ fhir:value "Composition.section.entry:claim" ];
        fhir:ElementDefinition.path [ fhir:value "Composition.section.entry" ];
        fhir:ElementDefinition.sliceName [ fhir:value "claim" ];
-       fhir:ElementDefinition.short [ fhir:value "A reference to the claim that the pre-auth request refers to." ];
-       fhir:ElementDefinition.definition [ fhir:value "A reference to the claim that the pre-auth request refers to." ];
+       fhir:ElementDefinition.short [ fhir:value "A reference to the claim that the pre-determination/pre-authorization/claim request refers to." ];
+       fhir:ElementDefinition.definition [ fhir:value "A reference to the claim that the pre-determination/pre-authorization/claim request refers to." ];
        fhir:ElementDefinition.comment [ fhir:value "If there are no entries in the list, an emptyReason SHOULD be provided." ];
        fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
        fhir:ElementDefinition.max [ fhir:value "1" ];
@@ -3106,9 +3106,9 @@
          fhir:index 0;
          fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
          fhir:ElementDefinition.type.targetProfile [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Claim";
+           fhir:value "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-Claim.html";
            fhir:index 0;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Claim>
+           fhir:link <https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-Claim.html>
          ]
        ]
      ], [
@@ -3116,8 +3116,8 @@
        fhir:Element.id [ fhir:value "Composition.section.entry:signature" ];
        fhir:ElementDefinition.path [ fhir:value "Composition.section.entry" ];
        fhir:ElementDefinition.sliceName [ fhir:value "signature" ];
-       fhir:ElementDefinition.short [ fhir:value "A reference to the claim that the pre-auth request refers to." ];
-       fhir:ElementDefinition.definition [ fhir:value "A reference to the claim that the pre-auth request refers to." ];
+       fhir:ElementDefinition.short [ fhir:value "A reference to the signature in the pre-determination/pre-authorization/claim request refers to." ];
+       fhir:ElementDefinition.definition [ fhir:value "A reference to the signature in the pre-determination/pre-authorization/claim request refers to." ];
        fhir:ElementDefinition.comment [ fhir:value "If there are no entries in the list, an emptyReason SHOULD be provided." ];
        fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
        fhir:ElementDefinition.max [ fhir:value "*" ];
@@ -3125,9 +3125,9 @@
          fhir:index 0;
          fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
          fhir:ElementDefinition.type.targetProfile [
-           fhir:value "https://raw.githubusercontent.com/Swasth-Digital-Health-Foundation/standards/69ce5ac4bc6e9fc5a015a53c82e3ebb7a379f348/FHIR%20Definitions/hcp.signature.extension.json";
+           fhir:value "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-HCXSignatureExtension.html";
            fhir:index 0;
-           fhir:link <https://raw.githubusercontent.com/Swasth-Digital-Health-Foundation/standards/69ce5ac4bc6e9fc5a015a53c82e3ebb7a379f348/FHIR%20Definitions/hcp.signature.extension.json>
+           fhir:link <https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-HCXSignatureExtension.html>
          ]
        ]
      ]

@@ -245,34 +245,6 @@
     "name": "PractitionerRole"
   },
   {
-    "id": "PreAuthorizationRequestDocument",
-    "type": "StructureDefinition",
-    "url": "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-PreAuthorizationRequestDocument.html",
-    "version": "0.0.1",
-    "name": "PreAuthorizationRequestDocument"
-  },
-  {
-    "id": "PreAuthorizationResponseDocument",
-    "type": "StructureDefinition",
-    "url": "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-PreAuthorizationResponseDocument.html",
-    "version": "0.0.1",
-    "name": "PreAuthorizationResponseDocument"
-  },
-  {
-    "id": "PreDeterminationRequestDocument",
-    "type": "StructureDefinition",
-    "url": "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-PreDeterminationRequestDocument.html",
-    "version": "0.0.1",
-    "name": "PreDeterminationRequestDocument"
-  },
-  {
-    "id": "PreDeterminationResponseDocument",
-    "type": "StructureDefinition",
-    "url": "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-PreDeterminationResponseDocument.html",
-    "version": "0.0.1",
-    "name": "PreDeterminationResponseDocument"
-  },
-  {
     "id": "Task",
     "type": "StructureDefinition",
     "url": "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-Task.html",

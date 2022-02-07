@@ -1481,20 +1481,8 @@
     ],
     "Composition": [
       {
-        "url": "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-PreAuthorizationRequestDocument.html",
-        "title": "PreAuthorizationRequestDocument"
-      },
-      {
-        "url": "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-PreAuthorizationResponseDocument.html",
-        "title": "PreAuthorizationResponseDocument"
-      },
-      {
-        "url": "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-PreDeterminationRequestDocument.html",
-        "title": "PreDeterminationRequestDocument"
-      },
-      {
-        "url": "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-PreDeterminationResponseDocument.html",
-        "title": "PreDeterminationResponseDocument"
+        "url": "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-CoverageEligibilityResponseDocument.html",
+        "title": "CovereageEligibilityResponseDocument"
       }
     ],
     "ClaimResponse": [
@@ -1723,18 +1711,6 @@
       "ImplementationGuide.definition.resource"
     ],
     "http://hl7.org/fhir/tools/StructureDefinition/PractitionerRole": [
-      "ImplementationGuide.definition.resource"
-    ],
-    "http://hl7.org/fhir/tools/StructureDefinition/PreAuthorizationRequestDocument": [
-      "ImplementationGuide.definition.resource"
-    ],
-    "http://hl7.org/fhir/tools/StructureDefinition/PreAuthorizationResponseDocument": [
-      "ImplementationGuide.definition.resource"
-    ],
-    "http://hl7.org/fhir/tools/StructureDefinition/PreDeterminationRequestDocument": [
-      "ImplementationGuide.definition.resource"
-    ],
-    "http://hl7.org/fhir/tools/StructureDefinition/PreDeterminationResponseDocument": [
       "ImplementationGuide.definition.resource"
     ],
     "http://hl7.org/fhir/tools/StructureDefinition/Task": [
