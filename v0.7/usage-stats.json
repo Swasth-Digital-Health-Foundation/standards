@@ -1503,12 +1503,6 @@
         "title": "CommunicationRequest"
       }
     ],
-    "Condition": [
-      {
-        "url": "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-Condition.html",
-        "title": "Condition"
-      }
-    ],
     "Coverage": [
       {
         "url": "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-Coverage.html",
@@ -1527,28 +1521,10 @@
         "title": "CoverageEligibilityResponse"
       }
     ],
-    "Encounter": [
-      {
-        "url": "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-Encounter.html",
-        "title": "Encounter"
-      }
-    ],
     "InsurancePlan": [
       {
         "url": "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-HCXInsurancePlan.html",
         "title": "HCXInsurancePlan"
-      }
-    ],
-    "Organization": [
-      {
-        "url": "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-Organization.html",
-        "title": "Organization"
-      }
-    ],
-    "Patient": [
-      {
-        "url": "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-Patient.html",
-        "title": "Patient"
       }
     ],
     "PaymentNotice": [
@@ -1561,18 +1537,6 @@
       {
         "url": "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-PaymentReconciliation.html",
         "title": "PaymentReconciliation"
-      }
-    ],
-    "Practitioner": [
-      {
-        "url": "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-Practitioner.html",
-        "title": "Practitioner"
-      }
-    ],
-    "PractitionerRole": [
-      {
-        "url": "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-PractitionerRole.html",
-        "title": "PractitionerRole"
       }
     ],
     "Task": [
@@ -1617,12 +1581,6 @@
     "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm": [
       "StructureDefinition"
     ],
-    "http://hl7.org/fhir/StructureDefinition/structuredefinition-hierarchy": [
-      "StructureDefinition.snapshot.element.type"
-    ],
-    "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version": [
-      "StructureDefinition"
-    ],
     "http://hl7.org/fhir/StructureDefinition/structuredefinition-security-category": [
       "StructureDefinition"
     ],
@@ -1653,9 +1611,6 @@
     "http://hl7.org/fhir/tools/StructureDefinition/CommunicationRequest": [
       "ImplementationGuide.definition.resource"
     ],
-    "http://hl7.org/fhir/tools/StructureDefinition/Condition": [
-      "ImplementationGuide.definition.resource"
-    ],
     "http://hl7.org/fhir/tools/StructureDefinition/Coverage": [
       "ImplementationGuide.definition.resource"
     ],
@@ -1669,9 +1624,6 @@
       "ImplementationGuide.definition.resource"
     ],
     "http://hl7.org/fhir/tools/StructureDefinition/CoverageEligibilityResponseDocument": [
-      "ImplementationGuide.definition.resource"
-    ],
-    "http://hl7.org/fhir/tools/StructureDefinition/Encounter": [
       "ImplementationGuide.definition.resource"
     ],
     "http://hl7.org/fhir/tools/StructureDefinition/HCXDiagnosticDocumentsExtension": [
@@ -1695,22 +1647,10 @@
     "http://hl7.org/fhir/tools/StructureDefinition/HCXSignatureExtension": [
       "ImplementationGuide.definition.resource"
     ],
-    "http://hl7.org/fhir/tools/StructureDefinition/Organization": [
-      "ImplementationGuide.definition.resource"
-    ],
-    "http://hl7.org/fhir/tools/StructureDefinition/Patient": [
-      "ImplementationGuide.definition.resource"
-    ],
     "http://hl7.org/fhir/tools/StructureDefinition/PaymentNotice": [
       "ImplementationGuide.definition.resource"
     ],
     "http://hl7.org/fhir/tools/StructureDefinition/PaymentReconciliation": [
-      "ImplementationGuide.definition.resource"
-    ],
-    "http://hl7.org/fhir/tools/StructureDefinition/Practitioner": [
-      "ImplementationGuide.definition.resource"
-    ],
-    "http://hl7.org/fhir/tools/StructureDefinition/PractitionerRole": [
       "ImplementationGuide.definition.resource"
     ],
     "http://hl7.org/fhir/tools/StructureDefinition/Task": [

@@ -105,13 +105,6 @@
     "name": "CommunicationRequest"
   },
   {
-    "id": "Condition",
-    "type": "StructureDefinition",
-    "url": "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-Condition.html",
-    "version": "0.0.1",
-    "name": "Condition"
-  },
-  {
     "id": "Coverage",
     "type": "StructureDefinition",
     "url": "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-Coverage.html",
@@ -145,13 +138,6 @@
     "url": "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-CoverageEligibilityResponseDocument.html",
     "version": "0.0.1",
     "name": "CovereageEligibilityResponseDocument"
-  },
-  {
-    "id": "Encounter",
-    "type": "StructureDefinition",
-    "url": "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-Encounter.html",
-    "version": "0.0.1",
-    "name": "Encounter"
   },
   {
     "id": "HCXDiagnosticDocumentsExtension",
@@ -203,20 +189,6 @@
     "name": "HCXSignatureExtension"
   },
   {
-    "id": "Organization",
-    "type": "StructureDefinition",
-    "url": "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-Organization.html",
-    "version": "0.0.1",
-    "name": "Organization"
-  },
-  {
-    "id": "Patient",
-    "type": "StructureDefinition",
-    "url": "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-Patient.html",
-    "version": "0.0.1",
-    "name": "Patient"
-  },
-  {
     "id": "PaymentNotice",
     "type": "StructureDefinition",
     "url": "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-PaymentNotice.html",
@@ -229,20 +201,6 @@
     "url": "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-PaymentReconciliation.html",
     "version": "0.0.1",
     "name": "PaymentReconciliation"
-  },
-  {
-    "id": "Practitioner",
-    "type": "StructureDefinition",
-    "url": "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-Practitioner.html",
-    "version": "0.0.1",
-    "name": "Practitioner"
-  },
-  {
-    "id": "PractitionerRole",
-    "type": "StructureDefinition",
-    "url": "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-PractitionerRole.html",
-    "version": "0.0.1",
-    "name": "PractitionerRole"
   },
   {
     "id": "Task",
