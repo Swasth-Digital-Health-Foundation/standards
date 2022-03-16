@@ -467,20 +467,6 @@ These requirements were originally developed, balloted, and published in FHIR DS
       <exampleBoolean value="false"/>
     </resource>
     <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/organization-extension">
-        <valueString value="SearchParameter"/>
-      </extension>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:extension"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/organization-extension"/>
-      </reference>
-      <name value="HCX Organization Extension"/>
-      <description value="**Search by subject - a patient**  &#xA;**NOTE**: This US Core SearchParameter definition extends the usage context of the&#xA;[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)&#xA; - multipleAnd&#xA; - multipleOr&#xA; - comparator&#xA; - modifier&#xA; - chain"/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/CommunicationDocument">
         <valueString value="SearchParameter"/>
       </extension>
@@ -716,11 +702,6 @@ These requirements were originally developed, balloted, and published in FHIR DS
         <page>
           <nameUrl value="StructureDefinition-PaymentReconciliation.html"/>
           <title value="HCX Payment Reconciliation"/>
-          <generation value="generated"/>
-        </page>
-        <page>
-          <nameUrl value="StructureDefinition-organization-extension.html"/>
-          <title value="HCX Organization Extension"/>
           <generation value="generated"/>
         </page>
         <page>

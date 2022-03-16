@@ -623,9 +623,9 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
       </base>
       <type>
         <code value="Reference"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/PractitionerRole"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization"/>
+        <targetProfile value="https://nrces.in/ndhm/fhir/r4/StructureDefinition/Practitioner"/>
+        <targetProfile value="https://nrces.in/ndhm/fhir/r4/StructureDefinition/PractitionerRole"/>
+        <targetProfile value="https://nrces.in/ndhm/fhir/r4/StructureDefinition/Organization"/>
       </type>
       <constraint>
         <key value="ele-1"/>
@@ -672,7 +672,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
       </base>
       <type>
         <code value="Reference"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/PaymentReconciliation"/>
+        <targetProfile value="https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-PaymentReconciliation.html"/>
       </type>
       <constraint>
         <key value="ele-1"/>
@@ -724,9 +724,9 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
       </base>
       <type>
         <code value="Reference"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/PractitionerRole"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization"/>
+        <targetProfile value="https://nrces.in/ndhm/fhir/r4/StructureDefinition/Practitioner"/>
+        <targetProfile value="https://nrces.in/ndhm/fhir/r4/StructureDefinition/PractitionerRole"/>
+        <targetProfile value="https://nrces.in/ndhm/fhir/r4/StructureDefinition/Organization"/>
       </type>
       <constraint>
         <key value="ele-1"/>
@@ -753,7 +753,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
       </base>
       <type>
         <code value="Reference"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization"/>
+        <targetProfile value="https://nrces.in/ndhm/fhir/r4/StructureDefinition/Organization"/>
       </type>
       <constraint>
         <key value="ele-1"/>
@@ -875,41 +875,6 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
         <map value="n/a"/>
       </mapping>
     </element>
-    <element id="PaymentNotice.status">
-      <path value="PaymentNotice.status"/>
-      <short value="active | cancelled | draft | entered-in-error"/>
-      <definition value="The status of the resource instance."/>
-      <comment value="This element is labeled as a modifier because the status contains codes that mark the resource as not currently valid."/>
-      <requirements value="Need to track the status of the resource as &#39;draft&#39; resources may undergo further edits while &#39;active&#39; resources are immutable and may only have their status changed to &#39;cancelled&#39;."/>
-      <min value="1"/>
-      <max value="1"/>
-      <type>
-        <code value="code"/>
-      </type>
-      <isModifier value="true"/>
-      <isModifierReason value="This element is labelled as a modifier because it is a status element that contains status entered-in-error which means that the resource should not be treated as valid"/>
-      <isSummary value="true"/>
-      <binding>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="PaymentNoticeStatus"/>
-        </extension>
-        <strength value="required"/>
-        <description value="A code specifying the state of the resource instance."/>
-        <valueSet value="http://hl7.org/fhir/ValueSet/fm-status|4.0.1"/>
-      </binding>
-      <mapping>
-        <identity value="workflow"/>
-        <map value="Event.status"/>
-      </mapping>
-      <mapping>
-        <identity value="w5"/>
-        <map value="FiveWs.status"/>
-      </mapping>
-      <mapping>
-        <identity value="rim"/>
-        <map value="n/a"/>
-      </mapping>
-    </element>
     <element id="PaymentNotice.request">
       <path value="PaymentNotice.request"/>
       <short value="Request reference"/>
@@ -956,30 +921,6 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
         <map value="FiveWs.subject"/>
       </mapping>
     </element>
-    <element id="PaymentNotice.created">
-      <path value="PaymentNotice.created"/>
-      <short value="Creation date"/>
-      <definition value="The date when this resource was created."/>
-      <requirements value="Need to record a timestamp for use by both the recipient and the issuer."/>
-      <min value="1"/>
-      <max value="1"/>
-      <type>
-        <code value="dateTime"/>
-      </type>
-      <isSummary value="true"/>
-      <mapping>
-        <identity value="workflow"/>
-        <map value="Event.occurrence[x]"/>
-      </mapping>
-      <mapping>
-        <identity value="w5"/>
-        <map value="FiveWs.recorded"/>
-      </mapping>
-      <mapping>
-        <identity value="rim"/>
-        <map value="n/a"/>
-      </mapping>
-    </element>
     <element id="PaymentNotice.provider">
       <path value="PaymentNotice.provider"/>
       <short value="Responsible practitioner"/>
@@ -988,9 +929,9 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
       <max value="1"/>
       <type>
         <code value="Reference"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/PractitionerRole"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization"/>
+        <targetProfile value="https://nrces.in/ndhm/fhir/r4/StructureDefinition/Practitioner"/>
+        <targetProfile value="https://nrces.in/ndhm/fhir/r4/StructureDefinition/PractitionerRole"/>
+        <targetProfile value="https://nrces.in/ndhm/fhir/r4/StructureDefinition/Organization"/>
       </type>
       <mapping>
         <identity value="workflow"/>
@@ -1022,20 +963,9 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
       <max value="1"/>
       <type>
         <code value="Reference"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/PaymentReconciliation"/>
+        <targetProfile value="https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-PaymentReconciliation.html"/>
       </type>
       <isSummary value="true"/>
-    </element>
-    <element id="PaymentNotice.paymentDate">
-      <path value="PaymentNotice.paymentDate"/>
-      <short value="Payment or clearing date"/>
-      <definition value="The date when the above payment action occurred."/>
-      <requirements value="Need to convey the date when the action being notified occurred."/>
-      <min value="0"/>
-      <max value="1"/>
-      <type>
-        <code value="date"/>
-      </type>
     </element>
     <element id="PaymentNotice.payee">
       <path value="PaymentNotice.payee"/>
@@ -1045,9 +975,9 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
       <max value="1"/>
       <type>
         <code value="Reference"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/PractitionerRole"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization"/>
+        <targetProfile value="https://nrces.in/ndhm/fhir/r4/StructureDefinition/Practitioner"/>
+        <targetProfile value="https://nrces.in/ndhm/fhir/r4/StructureDefinition/PractitionerRole"/>
+        <targetProfile value="https://nrces.in/ndhm/fhir/r4/StructureDefinition/Organization"/>
       </type>
     </element>
     <element id="PaymentNotice.recipient">
@@ -1059,45 +989,9 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
       <max value="1"/>
       <type>
         <code value="Reference"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization"/>
+        <targetProfile value="https://nrces.in/ndhm/fhir/r4/StructureDefinition/Organization"/>
       </type>
       <isSummary value="true"/>
-      <mapping>
-        <identity value="rim"/>
-        <map value="n/a"/>
-      </mapping>
-    </element>
-    <element id="PaymentNotice.amount">
-      <path value="PaymentNotice.amount"/>
-      <short value="Monetary amount of the payment"/>
-      <definition value="The amount sent to the payee."/>
-      <requirements value="Provided for validation purposes."/>
-      <min value="1"/>
-      <max value="1"/>
-      <type>
-        <code value="Money"/>
-      </type>
-      <isSummary value="true"/>
-    </element>
-    <element id="PaymentNotice.paymentStatus">
-      <path value="PaymentNotice.paymentStatus"/>
-      <short value="Issued or cleared Status of the payment"/>
-      <definition value="A code indicating whether payment has been sent or cleared."/>
-      <comment value="Typically paid: payment sent, cleared: payment received."/>
-      <requirements value="The purpose of the notification."/>
-      <min value="0"/>
-      <max value="1"/>
-      <type>
-        <code value="CodeableConcept"/>
-      </type>
-      <binding>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="PaymentStatus"/>
-        </extension>
-        <strength value="example"/>
-        <description value="The payment conveyance status codes."/>
-        <valueSet value="http://hl7.org/fhir/ValueSet/payment-status"/>
-      </binding>
       <mapping>
         <identity value="rim"/>
         <map value="n/a"/>

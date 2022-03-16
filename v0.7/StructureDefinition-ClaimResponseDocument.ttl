@@ -2794,9 +2794,9 @@
          fhir:index 0;
          fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
          fhir:ElementDefinition.type.targetProfile [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/ClaimResponse";
+           fhir:value "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-ClaimResponse.html";
            fhir:index 0;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/ClaimResponse>
+           fhir:link <https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-ClaimResponse.html>
          ]
        ];
        fhir:ElementDefinition.condition [
@@ -2977,9 +2977,9 @@
          fhir:index 0;
          fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
          fhir:ElementDefinition.type.targetProfile [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/ClaimResponse";
+           fhir:value "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-ClaimResponse.html";
            fhir:index 0;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/ClaimResponse>
+           fhir:link <https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-ClaimResponse.html>
          ]
        ]
      ]

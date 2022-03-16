@@ -38,7 +38,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "CoverageEligibilityResponse.purpose","","","",1,*,"","","Y","code {[]} {[]}
 ","auth-requirements | benefits | discovery | validation","Code to specify whether requesting: prior authorization requirements for some service categories or billing codes; benefits for coverages specified or discovered; discovery and return of coverages for the patient; and/or validation that the specified coverage is in-force at the date/period specified or 'now' if not specified.","","To indicate the processing actions requested.","","","","","","","",,"required","A code specifying the types of information being requested.","http://hl7.org/fhir/ValueSet/eligibilityresponse-purpose|4.0.1","",,,,"CoverageEligibilityResponse.purpose",1,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","FiveWs.class"
-"CoverageEligibilityResponse.patient","","","",1,1,"","","Y","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Patient]]}
+"CoverageEligibilityResponse.patient","","","",1,1,"","","Y","Reference {[]} {[CanonicalType[https://nrces.in/ndhm/fhir/r4/StructureDefinition/Patient]]}
 ","Intended recipient of products and services","The party who is the beneficiary of the supplied coverage and for whom eligibility is sought.","","Required to provide context and coverage validation.","","","","","","","",,,,,"",,,,"CoverageEligibilityResponse.patient",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","Event.subject","FiveWs.subject[x]","FiveWs.subject","C06,C07,C08, C05, C04"
 "CoverageEligibilityResponse.serviced[x]","","","",0,1,"","","","date {[]} {[]}
@@ -47,10 +47,10 @@ Period {[]} {[]}","Estimated date or dates of service","The date or dates when t
 "CoverageEligibilityResponse.created","","","",1,1,"","","Y","dateTime {[]} {[]}
 ","Response creation date","The date this resource was created.","","Need to record a timestamp for use by both the recipient and the issuer.","","","","","","","",,,,,"",,,,"CoverageEligibilityResponse.created",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","FiveWs.recorded"
-"CoverageEligibilityResponse.requestor","","","",1,1,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Practitioner], CanonicalType[http://hl7.org/fhir/StructureDefinition/PractitionerRole], CanonicalType[http://hl7.org/fhir/StructureDefinition/Organization]]}
+"CoverageEligibilityResponse.requestor","","","",1,1,"","","","Reference {[]} {[CanonicalType[https://nrces.in/ndhm/fhir/r4/StructureDefinition/Practitioner], CanonicalType[https://nrces.in/ndhm/fhir/r4/StructureDefinition/Organization]]}
 ","Party responsible for the request","The provider which is responsible for the request.","Typically this field would be 1..1 where this party is responsible for the claim but not necessarily professionally responsible for the provision of the individual products and services listed below.","","","","","","","","",,,,,"",,,,"CoverageEligibilityResponse.requestor",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","FiveWs.source","B01"
-"CoverageEligibilityResponse.request","","","",1,1,"","","Y","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/CoverageEligibilityRequest]]}
+"CoverageEligibilityResponse.request","","","",1,1,"","","Y","Reference {[]} {[CanonicalType[https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-CoverageEligibilityRequest.html]]}
 ","Eligibility request reference","Reference to the original request resource.","","Needed to allow the response to be linked to the request.","","","","","","","",,,,,"",,,,"CoverageEligibilityResponse.request",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","Event.basedOn","FiveWs.why[x]","A02|G01"
 "CoverageEligibilityResponse.outcome","","","",1,1,"","","Y","code {[]} {[]}
@@ -59,7 +59,7 @@ Period {[]} {[]}","Estimated date or dates of service","The date or dates when t
 "CoverageEligibilityResponse.disposition","","","",0,1,"","","","string {[]} {[]}
 ","Disposition Message","A human readable description of the status of the adjudication.","","Provided for user display.","","","","","","","",,,,,"",,,,"CoverageEligibilityResponse.disposition",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","Event.note"
-"CoverageEligibilityResponse.insurer","","","",1,1,"","","Y","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Organization]]}
+"CoverageEligibilityResponse.insurer","","","",1,1,"","","Y","Reference {[]} {[CanonicalType[https://nrces.in/ndhm/fhir/r4/StructureDefinition/Organization]]}
 ","Coverage issuer","The Insurer who issued the coverage in question and is the author of the response.","","Need to identify the author.","","","","","","","",,,,,"",,,,"CoverageEligibilityResponse.insurer",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "CoverageEligibilityResponse.insurance","","","",0,*,"","","","BackboneElement {[]} {[]}
@@ -77,7 +77,7 @@ user contentmodifiers","",0,*,"","Y","Y","Extension {[]} {[]}
 
 Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","Modifier extensions allow for extensions that *cannot* be safely ignored to be clearly distinguished from the vast majority of extensions which can be safely ignored.  This promotes interoperability by eliminating the need for implementers to prohibit the presence of extensions. For further information, see the [definition of modifier extensions](http://hl7.org/fhir/R4/extensibility.html#modifierExtension).","","","","","","","",,,,,"",,,,"BackboneElement.modifierExtension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","N/A"
-"CoverageEligibilityResponse.insurance.coverage","","","",1,1,"","","Y","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Coverage]]}
+"CoverageEligibilityResponse.insurance.coverage","","","",1,1,"","","Y","Reference {[]} {[CanonicalType[https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-Coverage.html]]}
 ","Insurance information","Reference to the insurance card level information contained in the Coverage resource. The coverage issuing insurer will use these details to locate the patient's actual coverage within the insurer's information system.","","Required to allow the adjudicator to locate the correct policy and history within their information system.","","","","","","","",,,,,"",,,,"CoverageEligibilityResponse.insurance.coverage",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "CoverageEligibilityResponse.insurance.inforce","","","",0,1,"","","","boolean {[]} {[]}
@@ -111,7 +111,7 @@ Bill CodeService Code","",0,1,"","","","CodeableConcept {[]} {[]}
 "CoverageEligibilityResponse.insurance.item.modifier","","","",0,*,"","","","CodeableConcept {[]} {[]}
 ","Product or service billing modifiers","Item typification or modifiers codes to convey additional context for the product or service.","For example in Oral whether the treatment is cosmetic or associated with TMJ, or for Medical whether the treatment was outside the clinic or out of office hours.","To support provision of the item or to charge an elevated fee.","","","","","","","",,"example","Item type or modifiers codes, eg for Oral whether the treatment is cosmetic or associated with TMJ, or an appliance was lost or stolen.","http://hl7.org/fhir/ValueSet/claim-modifiers","",,,,"CoverageEligibilityResponse.insurance.item.modifier",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"CoverageEligibilityResponse.insurance.item.provider","","","",0,1,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Practitioner], CanonicalType[http://hl7.org/fhir/StructureDefinition/PractitionerRole]]}
+"CoverageEligibilityResponse.insurance.item.provider","","","",0,1,"","","","Reference {[]} {[CanonicalType[https://nrces.in/ndhm/fhir/r4/StructureDefinition/Practitioner], CanonicalType[https://nrces.in/ndhm/fhir/r4/StructureDefinition/PractitionerRole]]}
 ","Performing practitioner","The practitioner who is eligible for the provision of the product or service.","","Needed to convey the eligible provider.","","","","","","","",,,,,"",,,,"CoverageEligibilityResponse.insurance.item.provider",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","FiveWs.source","B01"
 "CoverageEligibilityResponse.insurance.item.excluded","","","",0,1,"","","","boolean {[]} {[]}

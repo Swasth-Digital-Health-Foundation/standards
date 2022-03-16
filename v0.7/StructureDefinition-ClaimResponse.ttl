@@ -780,9 +780,9 @@
          fhir:index 0;
          fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
          fhir:ElementDefinition.type.targetProfile [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Patient";
+           fhir:value "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Patient";
            fhir:index 0;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Patient>
+           fhir:link <https://nrces.in/ndhm/fhir/r4/StructureDefinition/Patient>
          ]
        ];
        fhir:ElementDefinition.constraint [
@@ -867,9 +867,9 @@
          fhir:index 0;
          fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
          fhir:ElementDefinition.type.targetProfile [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Organization";
+           fhir:value "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Organization";
            fhir:index 0;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Organization>
+           fhir:link <https://nrces.in/ndhm/fhir/r4/StructureDefinition/Organization>
          ]
        ];
        fhir:ElementDefinition.constraint [
@@ -909,17 +909,17 @@
          fhir:index 0;
          fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
          fhir:ElementDefinition.type.targetProfile [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Practitioner";
+           fhir:value "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Practitioner";
            fhir:index 0;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Practitioner>
+           fhir:link <https://nrces.in/ndhm/fhir/r4/StructureDefinition/Practitioner>
          ], [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/PractitionerRole";
+           fhir:value "https://nrces.in/ndhm/fhir/r4/StructureDefinition/PractitionerRole";
            fhir:index 1;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/PractitionerRole>
+           fhir:link <https://nrces.in/ndhm/fhir/r4/StructureDefinition/PractitionerRole>
          ], [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Organization";
+           fhir:value "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Organization";
            fhir:index 2;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Organization>
+           fhir:link <https://nrces.in/ndhm/fhir/r4/StructureDefinition/Organization>
          ]
        ];
        fhir:ElementDefinition.constraint [
@@ -958,9 +958,9 @@
          fhir:index 0;
          fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
          fhir:ElementDefinition.type.targetProfile [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Claim";
+           fhir:value "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-Claim.html";
            fhir:index 0;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Claim>
+           fhir:link <https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-Claim.html>
          ]
        ];
        fhir:ElementDefinition.constraint [
@@ -2628,17 +2628,17 @@
          fhir:index 0;
          fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
          fhir:ElementDefinition.type.targetProfile [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Practitioner";
+           fhir:value "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Practitioner";
            fhir:index 0;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Practitioner>
+           fhir:link <https://nrces.in/ndhm/fhir/r4/StructureDefinition/Practitioner>
          ], [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/PractitionerRole";
+           fhir:value "https://nrces.in/ndhm/fhir/r4/StructureDefinition/PractitionerRole";
            fhir:index 1;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/PractitionerRole>
+           fhir:link <https://nrces.in/ndhm/fhir/r4/StructureDefinition/PractitionerRole>
          ], [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Organization";
+           fhir:value "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Organization";
            fhir:index 2;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Organization>
+           fhir:link <https://nrces.in/ndhm/fhir/r4/StructureDefinition/Organization>
          ]
        ];
        fhir:ElementDefinition.constraint [
@@ -5683,9 +5683,9 @@
          fhir:index 0;
          fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
          fhir:ElementDefinition.type.targetProfile [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Coverage";
+           fhir:value "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-Coverage.html";
            fhir:index 0;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Coverage>
+           fhir:link <https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-Coverage.html>
          ]
        ];
        fhir:ElementDefinition.constraint [
@@ -5753,9 +5753,9 @@
          fhir:index 0;
          fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
          fhir:ElementDefinition.type.targetProfile [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/ClaimResponse";
+           fhir:value "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-ClaimResponse.html";
            fhir:index 0;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/ClaimResponse>
+           fhir:link <https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-ClaimResponse.html>
          ]
        ];
        fhir:ElementDefinition.constraint [
@@ -6149,6 +6149,52 @@
        ]
      ], [
        fhir:index 2;
+       fhir:Element.id [ fhir:value "ClaimResponse.patient" ];
+       fhir:ElementDefinition.path [ fhir:value "ClaimResponse.patient" ];
+       fhir:ElementDefinition.short [ fhir:value "The recipient of the products and services" ];
+       fhir:ElementDefinition.definition [ fhir:value "The party to whom the professional services and/or products have been supplied or are being considered and for whom actual for facast reimbursement is sought." ];
+       fhir:ElementDefinition.requirements [ fhir:value "The patient must be supplied to the insurer so that confirmation of coverage and service hstory may be considered as part of the authorization and/or adjudiction." ];
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "ClaimResponse.patient" ];
+         fhir:ElementDefinition.base.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
+         fhir:ElementDefinition.type.targetProfile [
+           fhir:value "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Patient";
+           fhir:index 0;
+           fhir:link <https://nrces.in/ndhm/fhir/r4/StructureDefinition/Patient>
+         ]
+       ];
+       fhir:ElementDefinition.constraint [
+         fhir:index 0;
+         fhir:ElementDefinition.constraint.key [ fhir:value "ele-1" ];
+         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
+         fhir:ElementDefinition.constraint.human [ fhir:value "All FHIR elements must have a @value or children" ];
+         fhir:ElementDefinition.constraint.expression [ fhir:value "hasValue() or (children().count() > id.count())" ];
+         fhir:ElementDefinition.constraint.xpath [ fhir:value "@value|f:*|h:div" ];
+         fhir:ElementDefinition.constraint.source [
+           fhir:value "http://hl7.org/fhir/StructureDefinition/Element";
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+         ]
+       ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "w5" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "FiveWs.subject[x]" ]
+       ], [
+         fhir:index 1;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "w5" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "FiveWs.subject" ]
+       ]
+     ], [
+       fhir:index 3;
        fhir:Element.id [ fhir:value "ClaimResponse.insurer" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.insurer" ];
        fhir:ElementDefinition.short [ fhir:value "Party responsible for reimbursement" ];
@@ -6165,9 +6211,9 @@
          fhir:index 0;
          fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
          fhir:ElementDefinition.type.targetProfile [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Organization";
+           fhir:value "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Organization";
            fhir:index 0;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Organization>
+           fhir:link <https://nrces.in/ndhm/fhir/r4/StructureDefinition/Organization>
          ]
        ];
        fhir:ElementDefinition.constraint [
@@ -6190,7 +6236,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "Event.performer" ]
        ]
      ], [
-       fhir:index 3;
+       fhir:index 4;
        fhir:Element.id [ fhir:value "ClaimResponse.requestor" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.requestor" ];
        fhir:ElementDefinition.short [ fhir:value "Party responsible for the claim" ];
@@ -6207,17 +6253,17 @@
          fhir:index 0;
          fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
          fhir:ElementDefinition.type.targetProfile [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Practitioner";
+           fhir:value "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Practitioner";
            fhir:index 0;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Practitioner>
+           fhir:link <https://nrces.in/ndhm/fhir/r4/StructureDefinition/Practitioner>
          ], [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/PractitionerRole";
+           fhir:value "https://nrces.in/ndhm/fhir/r4/StructureDefinition/PractitionerRole";
            fhir:index 1;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/PractitionerRole>
+           fhir:link <https://nrces.in/ndhm/fhir/r4/StructureDefinition/PractitionerRole>
          ], [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Organization";
+           fhir:value "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Organization";
            fhir:index 2;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Organization>
+           fhir:link <https://nrces.in/ndhm/fhir/r4/StructureDefinition/Organization>
          ]
        ];
        fhir:ElementDefinition.constraint [
@@ -6240,7 +6286,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "FiveWs.source" ]
        ]
      ], [
-       fhir:index 4;
+       fhir:index 5;
        fhir:Element.id [ fhir:value "ClaimResponse.request" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.request" ];
        fhir:ElementDefinition.short [ fhir:value "Id of resource triggering adjudication" ];
@@ -6256,9 +6302,9 @@
          fhir:index 0;
          fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
          fhir:ElementDefinition.type.targetProfile [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Claim";
+           fhir:value "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-Claim.html";
            fhir:index 0;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Claim>
+           fhir:link <https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-Claim.html>
          ]
        ];
        fhir:ElementDefinition.constraint [
@@ -6285,7 +6331,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "FiveWs.why[x]" ]
        ]
      ], [
-       fhir:index 5;
+       fhir:index 6;
        fhir:Element.id [ fhir:value "ClaimResponse.item.adjudication.reason" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.item.adjudication.reason" ];
        fhir:ElementDefinition.short [ fhir:value "Explanation of adjudication outcome" ];
@@ -6331,7 +6377,57 @@
          ]
        ]
      ], [
-       fhir:index 6;
+       fhir:index 7;
+       fhir:Element.id [ fhir:value "ClaimResponse.addItem.provider" ];
+       fhir:ElementDefinition.path [ fhir:value "ClaimResponse.addItem.provider" ];
+       fhir:ElementDefinition.short [ fhir:value "Authorized providers" ];
+       fhir:ElementDefinition.definition [ fhir:value "The providers who are authorized for the services rendered to the patient." ];
+       fhir:ElementDefinition.requirements [ fhir:value "Insurer may provide authorization specifically to a restricted set of providers rather than an open authorization." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "ClaimResponse.addItem.provider" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
+         fhir:ElementDefinition.type.targetProfile [
+           fhir:value "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Practitioner";
+           fhir:index 0;
+           fhir:link <https://nrces.in/ndhm/fhir/r4/StructureDefinition/Practitioner>
+         ], [
+           fhir:value "https://nrces.in/ndhm/fhir/r4/StructureDefinition/PractitionerRole";
+           fhir:index 1;
+           fhir:link <https://nrces.in/ndhm/fhir/r4/StructureDefinition/PractitionerRole>
+         ], [
+           fhir:value "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Organization";
+           fhir:index 2;
+           fhir:link <https://nrces.in/ndhm/fhir/r4/StructureDefinition/Organization>
+         ]
+       ];
+       fhir:ElementDefinition.constraint [
+         fhir:index 0;
+         fhir:ElementDefinition.constraint.key [ fhir:value "ele-1" ];
+         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
+         fhir:ElementDefinition.constraint.human [ fhir:value "All FHIR elements must have a @value or children" ];
+         fhir:ElementDefinition.constraint.expression [ fhir:value "hasValue() or (children().count() > id.count())" ];
+         fhir:ElementDefinition.constraint.xpath [ fhir:value "@value|f:*|h:div" ];
+         fhir:ElementDefinition.constraint.source [
+           fhir:value "http://hl7.org/fhir/StructureDefinition/Element";
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+         ]
+       ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "w5" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "FiveWs.source" ]
+       ]
+     ], [
+       fhir:index 8;
        fhir:Element.id [ fhir:value "ClaimResponse.total" ];
        fhir:Element.extension [
          fhir:index 0;
@@ -6368,6 +6464,81 @@
        ];
        fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
        fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 9;
+       fhir:Element.id [ fhir:value "ClaimResponse.insurance.coverage" ];
+       fhir:ElementDefinition.path [ fhir:value "ClaimResponse.insurance.coverage" ];
+       fhir:ElementDefinition.short [ fhir:value "Insurance information" ];
+       fhir:ElementDefinition.definition [ fhir:value "Reference to the insurance card level information contained in the Coverage resource. The coverage issuing insurer will use these details to locate the patient's actual coverage within the insurer's information system." ];
+       fhir:ElementDefinition.requirements [ fhir:value "Required to allow the adjudicator to locate the correct policy and history within their information system." ];
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "ClaimResponse.insurance.coverage" ];
+         fhir:ElementDefinition.base.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
+         fhir:ElementDefinition.type.targetProfile [
+           fhir:value "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-Coverage.html";
+           fhir:index 0;
+           fhir:link <https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-Coverage.html>
+         ]
+       ];
+       fhir:ElementDefinition.constraint [
+         fhir:index 0;
+         fhir:ElementDefinition.constraint.key [ fhir:value "ele-1" ];
+         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
+         fhir:ElementDefinition.constraint.human [ fhir:value "All FHIR elements must have a @value or children" ];
+         fhir:ElementDefinition.constraint.expression [ fhir:value "hasValue() or (children().count() > id.count())" ];
+         fhir:ElementDefinition.constraint.xpath [ fhir:value "@value|f:*|h:div" ];
+         fhir:ElementDefinition.constraint.source [
+           fhir:value "http://hl7.org/fhir/StructureDefinition/Element";
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+         ]
+       ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 10;
+       fhir:Element.id [ fhir:value "ClaimResponse.insurance.claimResponse" ];
+       fhir:ElementDefinition.path [ fhir:value "ClaimResponse.insurance.claimResponse" ];
+       fhir:ElementDefinition.short [ fhir:value "Adjudication results" ];
+       fhir:ElementDefinition.definition [ fhir:value "The result of the adjudication of the line items for the Coverage specified in this insurance." ];
+       fhir:ElementDefinition.comment [ fhir:value "Must not be specified when 'focal=true' for this insurance." ];
+       fhir:ElementDefinition.requirements [ fhir:value "An insurer need the adjudication results from prior insurers to determine the outstanding balance remaining by item for the items in the curent claim." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "ClaimResponse.insurance.claimResponse" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
+         fhir:ElementDefinition.type.targetProfile [
+           fhir:value "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-ClaimResponse.html";
+           fhir:index 0;
+           fhir:link <https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-ClaimResponse.html>
+         ]
+       ];
+       fhir:ElementDefinition.constraint [
+         fhir:index 0;
+         fhir:ElementDefinition.constraint.key [ fhir:value "ele-1" ];
+         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
+         fhir:ElementDefinition.constraint.human [ fhir:value "All FHIR elements must have a @value or children" ];
+         fhir:ElementDefinition.constraint.expression [ fhir:value "hasValue() or (children().count() > id.count())" ];
+         fhir:ElementDefinition.constraint.xpath [ fhir:value "@value|f:*|h:div" ];
+         fhir:ElementDefinition.constraint.source [
+           fhir:value "http://hl7.org/fhir/StructureDefinition/Element";
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+         ]
+       ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
      ]
   ] .
 

@@ -2188,7 +2188,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
       </base>
       <type>
         <code value="Reference"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/ClaimResponse"/>
+        <targetProfile value="https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-ClaimResponse.html"/>
       </type>
       <condition value="cmp-2"/>
       <constraint>
@@ -2322,7 +2322,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
       <max value="1"/>
       <type>
         <code value="Reference"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/ClaimResponse"/>
+        <targetProfile value="https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-ClaimResponse.html"/>
       </type>
     </element>
   </differential>

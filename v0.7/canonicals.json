@@ -208,12 +208,5 @@
     "url": "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-Task.html",
     "version": "0.0.1",
     "name": "Task"
-  },
-  {
-    "id": "organization-extension",
-    "type": "StructureDefinition",
-    "url": "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-organization-extension.html",
-    "version": "0.0.1",
-    "name": "HCX Organization Extension"
   }
 ]

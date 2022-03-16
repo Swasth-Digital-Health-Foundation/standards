@@ -2188,7 +2188,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
       </base>
       <type>
         <code value="Reference"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/CoverageEligibilityRequest"/>
+        <targetProfile value="https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-CoverageEligibilityRequest.html"/>
       </type>
       <condition value="cmp-2"/>
       <constraint>
@@ -2320,7 +2320,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
       <path value="Composition.section.entry"/>
       <type>
         <code value="Reference"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/CoverageEligibilityRequest"/>
+        <targetProfile value="https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-CoverageEligibilityRequest.html"/>
       </type>
     </element>
   </differential>

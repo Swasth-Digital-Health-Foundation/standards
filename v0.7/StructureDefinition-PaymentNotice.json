@@ -736,9 +736,9 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/Practitioner",
-              "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
-              "http://hl7.org/fhir/StructureDefinition/Organization"
+              "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Practitioner",
+              "https://nrces.in/ndhm/fhir/r4/StructureDefinition/PractitionerRole",
+              "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Organization"
             ]
           }
         ],
@@ -794,7 +794,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/PaymentReconciliation"
+              "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-PaymentReconciliation.html"
             ]
           }
         ],
@@ -858,9 +858,9 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/Practitioner",
-              "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
-              "http://hl7.org/fhir/StructureDefinition/Organization"
+              "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Practitioner",
+              "https://nrces.in/ndhm/fhir/r4/StructureDefinition/PractitionerRole",
+              "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Organization"
             ]
           }
         ],
@@ -894,7 +894,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/Organization"
+              "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Organization"
             ]
           }
         ],
@@ -1048,49 +1048,6 @@
         ]
       },
       {
-        "id": "PaymentNotice.status",
-        "path": "PaymentNotice.status",
-        "short": "active | cancelled | draft | entered-in-error",
-        "definition": "The status of the resource instance.",
-        "comment": "This element is labeled as a modifier because the status contains codes that mark the resource as not currently valid.",
-        "requirements": "Need to track the status of the resource as 'draft' resources may undergo further edits while 'active' resources are immutable and may only have their status changed to 'cancelled'.",
-        "min": 1,
-        "max": "1",
-        "type": [
-          {
-            "code": "code"
-          }
-        ],
-        "isModifier": true,
-        "isModifierReason": "This element is labelled as a modifier because it is a status element that contains status entered-in-error which means that the resource should not be treated as valid",
-        "isSummary": true,
-        "binding": {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
-              "valueString": "PaymentNoticeStatus"
-            }
-          ],
-          "strength": "required",
-          "description": "A code specifying the state of the resource instance.",
-          "valueSet": "http://hl7.org/fhir/ValueSet/fm-status|4.0.1"
-        },
-        "mapping": [
-          {
-            "identity": "workflow",
-            "map": "Event.status"
-          },
-          {
-            "identity": "w5",
-            "map": "FiveWs.status"
-          },
-          {
-            "identity": "rim",
-            "map": "n/a"
-          }
-        ]
-      },
-      {
         "id": "PaymentNotice.request",
         "path": "PaymentNotice.request",
         "short": "Request reference",
@@ -1151,35 +1108,6 @@
         ]
       },
       {
-        "id": "PaymentNotice.created",
-        "path": "PaymentNotice.created",
-        "short": "Creation date",
-        "definition": "The date when this resource was created.",
-        "requirements": "Need to record a timestamp for use by both the recipient and the issuer.",
-        "min": 1,
-        "max": "1",
-        "type": [
-          {
-            "code": "dateTime"
-          }
-        ],
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "workflow",
-            "map": "Event.occurrence[x]"
-          },
-          {
-            "identity": "w5",
-            "map": "FiveWs.recorded"
-          },
-          {
-            "identity": "rim",
-            "map": "n/a"
-          }
-        ]
-      },
-      {
         "id": "PaymentNotice.provider",
         "path": "PaymentNotice.provider",
         "short": "Responsible practitioner",
@@ -1190,9 +1118,9 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/Practitioner",
-              "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
-              "http://hl7.org/fhir/StructureDefinition/Organization"
+              "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Practitioner",
+              "https://nrces.in/ndhm/fhir/r4/StructureDefinition/PractitionerRole",
+              "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Organization"
             ]
           }
         ],
@@ -1231,25 +1159,11 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/PaymentReconciliation"
+              "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-PaymentReconciliation.html"
             ]
           }
         ],
         "isSummary": true
-      },
-      {
-        "id": "PaymentNotice.paymentDate",
-        "path": "PaymentNotice.paymentDate",
-        "short": "Payment or clearing date",
-        "definition": "The date when the above payment action occurred.",
-        "requirements": "Need to convey the date when the action being notified occurred.",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "date"
-          }
-        ]
       },
       {
         "id": "PaymentNotice.payee",
@@ -1262,9 +1176,9 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/Practitioner",
-              "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
-              "http://hl7.org/fhir/StructureDefinition/Organization"
+              "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Practitioner",
+              "https://nrces.in/ndhm/fhir/r4/StructureDefinition/PractitionerRole",
+              "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Organization"
             ]
           }
         ]
@@ -1281,58 +1195,11 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/Organization"
+              "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Organization"
             ]
           }
         ],
         "isSummary": true,
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": "n/a"
-          }
-        ]
-      },
-      {
-        "id": "PaymentNotice.amount",
-        "path": "PaymentNotice.amount",
-        "short": "Monetary amount of the payment",
-        "definition": "The amount sent to the payee.",
-        "requirements": "Provided for validation purposes.",
-        "min": 1,
-        "max": "1",
-        "type": [
-          {
-            "code": "Money"
-          }
-        ],
-        "isSummary": true
-      },
-      {
-        "id": "PaymentNotice.paymentStatus",
-        "path": "PaymentNotice.paymentStatus",
-        "short": "Issued or cleared Status of the payment",
-        "definition": "A code indicating whether payment has been sent or cleared.",
-        "comment": "Typically paid: payment sent, cleared: payment received.",
-        "requirements": "The purpose of the notification.",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "CodeableConcept"
-          }
-        ],
-        "binding": {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
-              "valueString": "PaymentStatus"
-            }
-          ],
-          "strength": "example",
-          "description": "The payment conveyance status codes.",
-          "valueSet": "http://hl7.org/fhir/ValueSet/payment-status"
-        },
         "mapping": [
           {
             "identity": "rim",

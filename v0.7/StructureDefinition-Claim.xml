@@ -723,7 +723,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
       </base>
       <type>
         <code value="Reference"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient"/>
+        <targetProfile value="https://nrces.in/ndhm/fhir/r4/StructureDefinition/Patient"/>
       </type>
       <constraint>
         <key value="ele-1"/>
@@ -828,8 +828,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
       </base>
       <type>
         <code value="Reference"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/PractitionerRole"/>
+        <targetProfile value="https://nrces.in/ndhm/fhir/r4/StructureDefinition/Practitioner"/>
+        <targetProfile value="https://nrces.in/ndhm/fhir/r4/StructureDefinition/PractitionerRole"/>
       </type>
       <constraint>
         <key value="ele-1"/>
@@ -859,7 +859,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
       </base>
       <type>
         <code value="Reference"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization"/>
+        <targetProfile value="https://nrces.in/ndhm/fhir/r4/StructureDefinition/Organization"/>
       </type>
       <constraint>
         <key value="ele-1"/>
@@ -890,9 +890,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
       </base>
       <type>
         <code value="Reference"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/PractitionerRole"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization"/>
+        <targetProfile value="https://nrces.in/ndhm/fhir/r4/StructureDefinition/Practitioner"/>
+        <targetProfile value="https://nrces.in/ndhm/fhir/r4/StructureDefinition/Organization"/>
       </type>
       <constraint>
         <key value="ele-1"/>
@@ -1143,7 +1142,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
       </base>
       <type>
         <code value="Reference"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Claim"/>
+        <targetProfile value="https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-Claim.html"/>
       </type>
       <constraint>
         <key value="ele-1"/>
@@ -1471,10 +1470,10 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
       </base>
       <type>
         <code value="Reference"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/PractitionerRole"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient"/>
+        <targetProfile value="https://nrces.in/ndhm/fhir/r4/StructureDefinition/Practitioner"/>
+        <targetProfile value="https://nrces.in/ndhm/fhir/r4/StructureDefinition/PractitionerRole"/>
+        <targetProfile value="https://nrces.in/ndhm/fhir/r4/StructureDefinition/Organization"/>
+        <targetProfile value="https://nrces.in/ndhm/fhir/r4/StructureDefinition/Patient"/>
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson"/>
       </type>
       <constraint>
@@ -1728,9 +1727,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
       </base>
       <type>
         <code value="Reference"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/PractitionerRole"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization"/>
+        <targetProfile value="https://nrces.in/ndhm/fhir/r4/StructureDefinition/Practitioner"/>
+        <targetProfile value="https://nrces.in/ndhm/fhir/r4/StructureDefinition/Organization"/>
       </type>
       <constraint>
         <key value="ele-1"/>
@@ -2369,7 +2367,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
       </type>
       <type>
         <code value="Reference"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Condition"/>
+        <targetProfile value="https://nrces.in/ndhm/fhir/r4/StructureDefinition/Condition"/>
       </type>
       <constraint>
         <key value="ele-1"/>
@@ -3027,7 +3025,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
       </base>
       <type>
         <code value="Reference"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Coverage"/>
+        <targetProfile value="https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-Coverage.html"/>
       </type>
       <constraint>
         <key value="ele-1"/>
@@ -3108,7 +3106,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
       </base>
       <type>
         <code value="Reference"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/ClaimResponse"/>
+        <targetProfile value="https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-ClaimResponse.html"/>
       </type>
       <constraint>
         <key value="ele-1"/>
@@ -4089,7 +4087,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
       </base>
       <type>
         <code value="Reference"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Encounter"/>
+        <targetProfile value="https://nrces.in/ndhm/fhir/r4/StructureDefinition-Encounter.html"/>
       </type>
       <constraint>
         <key value="ele-1"/>
@@ -5117,6 +5115,77 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
         <map value="FiveWs.identifier"/>
       </mapping>
     </element>
+    <element id="Claim.patient">
+      <path value="Claim.patient"/>
+      <short value="The recipient of the products and services"/>
+      <definition value="The party to whom the professional services and/or products have been supplied or are being considered and for whom actual or forecast reimbursement is sought."/>
+      <requirements value="The patient must be supplied to the insurer so that confirmation of coverage and service history may be considered as part of the authorization and/or adjudiction."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="Claim.patient"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="https://nrces.in/ndhm/fhir/r4/StructureDefinition/Patient"/>
+      </type>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() or (children().count() &gt; id.count())"/>
+        <xpath value="@value|f:*|h:div"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <isModifier value="false"/>
+      <isSummary value="true"/>
+      <mapping>
+        <identity value="workflow"/>
+        <map value="Request.subject"/>
+      </mapping>
+      <mapping>
+        <identity value="w5"/>
+        <map value="FiveWs.subject[x]"/>
+      </mapping>
+      <mapping>
+        <identity value="w5"/>
+        <map value="FiveWs.subject"/>
+      </mapping>
+    </element>
+    <element id="Claim.enterer">
+      <path value="Claim.enterer"/>
+      <short value="Author of the claim"/>
+      <definition value="Individual who created the claim, predetermination or preauthorization."/>
+      <requirements value="Some jurisdictions require the contact information for personnel completing claims."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Claim.enterer"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="https://nrces.in/ndhm/fhir/r4/StructureDefinition/Practitioner"/>
+        <targetProfile value="https://nrces.in/ndhm/fhir/r4/StructureDefinition/PractitionerRole"/>
+      </type>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() or (children().count() &gt; id.count())"/>
+        <xpath value="@value|f:*|h:div"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="w5"/>
+        <map value="FiveWs.author"/>
+      </mapping>
+    </element>
     <element id="Claim.insurer">
       <path value="Claim.insurer"/>
       <short value="Target"/>
@@ -5130,7 +5199,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
       </base>
       <type>
         <code value="Reference"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization"/>
+        <targetProfile value="https://nrces.in/ndhm/fhir/r4/StructureDefinition/Organization"/>
       </type>
       <constraint>
         <key value="ele-1"/>
@@ -5145,6 +5214,73 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
       <mapping>
         <identity value="workflow"/>
         <map value="Request.performer"/>
+      </mapping>
+    </element>
+    <element id="Claim.provider">
+      <path value="Claim.provider"/>
+      <short value="Party responsible for the claim"/>
+      <definition value="The provider which is responsible for the claim, predetermination or preauthorization."/>
+      <comment value="Typically this field would be 1..1 where this party is responsible for the claim but not necessarily professionally responsible for the provision of the individual products and services listed below."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="Claim.provider"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="https://nrces.in/ndhm/fhir/r4/StructureDefinition/Practitioner"/>
+        <targetProfile value="https://nrces.in/ndhm/fhir/r4/StructureDefinition/Organization"/>
+      </type>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() or (children().count() &gt; id.count())"/>
+        <xpath value="@value|f:*|h:div"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <isModifier value="false"/>
+      <isSummary value="true"/>
+      <mapping>
+        <identity value="workflow"/>
+        <map value="Request.requester"/>
+      </mapping>
+      <mapping>
+        <identity value="w5"/>
+        <map value="FiveWs.source"/>
+      </mapping>
+    </element>
+    <element id="Claim.related.claim">
+      <path value="Claim.related.claim"/>
+      <short value="Reference to the related claim"/>
+      <definition value="Reference to a related claim."/>
+      <requirements value="For workplace or other accidents it is common to relate separate claims arising from the same event."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Claim.related.claim"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-Claim.html"/>
+      </type>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() or (children().count() &gt; id.count())"/>
+        <xpath value="@value|f:*|h:div"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="workflow"/>
+        <map value="Request.replaces"/>
       </mapping>
     </element>
     <element id="Claim.payee">
@@ -5192,10 +5328,10 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
       </base>
       <type>
         <code value="Reference"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/PractitionerRole"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient"/>
+        <targetProfile value="https://nrces.in/ndhm/fhir/r4/StructureDefinition/Practitioner"/>
+        <targetProfile value="https://nrces.in/ndhm/fhir/r4/StructureDefinition/PractitionerRole"/>
+        <targetProfile value="https://nrces.in/ndhm/fhir/r4/StructureDefinition/Organization"/>
+        <targetProfile value="https://nrces.in/ndhm/fhir/r4/StructureDefinition/Patient"/>
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson"/>
       </type>
       <constraint>
@@ -5238,6 +5374,76 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
       <isModifier value="false"/>
       <isSummary value="false"/>
     </element>
+    <element id="Claim.careTeam.provider">
+      <path value="Claim.careTeam.provider"/>
+      <short value="Practitioner or organization"/>
+      <definition value="Member of the team who provided the product or service."/>
+      <requirements value="Often a regulatory requirement to specify the responsible provider."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="Claim.careTeam.provider"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="https://nrces.in/ndhm/fhir/r4/StructureDefinition/Practitioner"/>
+        <targetProfile value="https://nrces.in/ndhm/fhir/r4/StructureDefinition/Organization"/>
+      </type>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() or (children().count() &gt; id.count())"/>
+        <xpath value="@value|f:*|h:div"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="w5"/>
+        <map value="FiveWs.actor"/>
+      </mapping>
+    </element>
+    <element id="Claim.diagnosis.diagnosis[x]">
+      <path value="Claim.diagnosis.diagnosis[x]"/>
+      <short value="Nature of illness or problem"/>
+      <definition value="The nature of illness or problem in a coded form or as a reference to an external defined Condition."/>
+      <requirements value="Provides health context for the evaluation of the products and/or services."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="Claim.diagnosis.diagnosis[x]"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="https://nrces.in/ndhm/fhir/r4/StructureDefinition/Condition"/>
+      </type>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() or (children().count() &gt; id.count())"/>
+        <xpath value="@value|f:*|h:div"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="ICD10"/>
+        </extension>
+        <strength value="example"/>
+        <description value="Example ICD10 Diagnostic codes."/>
+        <valueSet value="http://hl7.org/fhir/ValueSet/icd-10"/>
+      </binding>
+    </element>
     <element id="Claim.diagnosis.type">
       <path value="Claim.diagnosis.type"/>
       <short value="Timing or nature of the diagnosis"/>
@@ -5272,6 +5478,93 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
         <description value="The type of the diagnosis: admitting, principal, discharge."/>
         <valueSet value="http://hl7.org/fhir/ValueSet/ex-diagnosistype"/>
       </binding>
+    </element>
+    <element id="Claim.insurance.coverage">
+      <path value="Claim.insurance.coverage"/>
+      <short value="Insurance information"/>
+      <definition value="Reference to the insurance card level information contained in the Coverage resource. The coverage issuing insurer will use these details to locate the patient&#39;s actual coverage within the insurer&#39;s information system."/>
+      <requirements value="Required to allow the adjudicator to locate the correct policy and history within their information system."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="Claim.insurance.coverage"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-Coverage.html"/>
+      </type>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() or (children().count() &gt; id.count())"/>
+        <xpath value="@value|f:*|h:div"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <isModifier value="false"/>
+      <isSummary value="true"/>
+    </element>
+    <element id="Claim.insurance.claimResponse">
+      <path value="Claim.insurance.claimResponse"/>
+      <short value="Adjudication results"/>
+      <definition value="The result of the adjudication of the line items for the Coverage specified in this insurance."/>
+      <comment value="Must not be specified when &#39;focal=true&#39; for this insurance."/>
+      <requirements value="An insurer need the adjudication results from prior insurers to determine the outstanding balance remaining by item for the items in the curent claim."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Claim.insurance.claimResponse"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-ClaimResponse.html"/>
+      </type>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() or (children().count() &gt; id.count())"/>
+        <xpath value="@value|f:*|h:div"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="Claim.item.encounter">
+      <path value="Claim.item.encounter"/>
+      <short value="Encounters related to this billed item"/>
+      <definition value="The Encounters during which this Claim was created or to which the creation of this record is tightly associated."/>
+      <comment value="This will typically be the encounter the event occurred within, but some activities may be initiated prior to or after the official completion of an encounter but still be tied to the context of the encounter."/>
+      <requirements value="Used in some jurisdictions to link clinical events to claim items."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="Claim.item.encounter"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="https://nrces.in/ndhm/fhir/r4/StructureDefinition-Encounter.html"/>
+      </type>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() or (children().count() &gt; id.count())"/>
+        <xpath value="@value|f:*|h:div"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="workflow"/>
+        <map value="Request.context"/>
+      </mapping>
     </element>
   </differential>
 </StructureDefinition>

@@ -1463,13 +1463,6 @@
       "types": [
         "Signature"
       ]
-    },
-    {
-      "url": "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-organization-extension.html",
-      "title": "HCX Organization Extension",
-      "types": [
-        "Reference"
-      ]
     }
   ],
   "profiles": {
@@ -1568,7 +1561,6 @@
       "StructureDefinition"
     ],
     "http://hl7.org/fhir/StructureDefinition/structuredefinition-display-hint": [
-      "StructureDefinition.differential.element",
       "StructureDefinition.snapshot.element"
     ],
     "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name": [
@@ -1658,9 +1650,6 @@
     ],
     "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter": [
       "ImplementationGuide.definition"
-    ],
-    "http://hl7.org/fhir/tools/StructureDefinition/organization-extension": [
-      "ImplementationGuide.definition.resource"
     ],
     "http://hl7.org/fhir/tools/StructureDefinition/resource-information": [
       "ImplementationGuide.definition.resource"

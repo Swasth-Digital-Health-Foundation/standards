@@ -708,9 +708,9 @@
          fhir:index 0;
          fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
          fhir:ElementDefinition.type.targetProfile [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Organization";
+           fhir:value "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Organization";
            fhir:index 0;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Organization>
+           fhir:link <https://nrces.in/ndhm/fhir/r4/StructureDefinition/Organization>
          ]
        ];
        fhir:ElementDefinition.constraint [
@@ -800,17 +800,17 @@
          fhir:index 0;
          fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
          fhir:ElementDefinition.type.targetProfile [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Practitioner";
+           fhir:value "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Practitioner";
            fhir:index 0;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Practitioner>
+           fhir:link <https://nrces.in/ndhm/fhir/r4/StructureDefinition/Practitioner>
          ], [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/PractitionerRole";
+           fhir:value "https://nrces.in/ndhm/fhir/r4/StructureDefinition/PractitionerRole";
            fhir:index 1;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/PractitionerRole>
+           fhir:link <https://nrces.in/ndhm/fhir/r4/StructureDefinition/PractitionerRole>
          ], [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Organization";
+           fhir:value "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Organization";
            fhir:index 2;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Organization>
+           fhir:link <https://nrces.in/ndhm/fhir/r4/StructureDefinition/Organization>
          ]
        ];
        fhir:ElementDefinition.constraint [
@@ -1366,17 +1366,17 @@
          fhir:index 0;
          fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
          fhir:ElementDefinition.type.targetProfile [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Practitioner";
+           fhir:value "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Practitioner";
            fhir:index 0;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Practitioner>
+           fhir:link <https://nrces.in/ndhm/fhir/r4/StructureDefinition/Practitioner>
          ], [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/PractitionerRole";
+           fhir:value "https://nrces.in/ndhm/fhir/r4/StructureDefinition/PractitionerRole";
            fhir:index 1;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/PractitionerRole>
+           fhir:link <https://nrces.in/ndhm/fhir/r4/StructureDefinition/PractitionerRole>
          ], [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Organization";
+           fhir:value "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Organization";
            fhir:index 2;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Organization>
+           fhir:link <https://nrces.in/ndhm/fhir/r4/StructureDefinition/Organization>
          ]
        ];
        fhir:ElementDefinition.constraint [
@@ -1480,9 +1480,9 @@
          fhir:index 0;
          fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
          fhir:ElementDefinition.type.targetProfile [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/PractitionerRole";
+           fhir:value "https://nrces.in/ndhm/fhir/r4/StructureDefinition/PractitionerRole";
            fhir:index 0;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/PractitionerRole>
+           fhir:link <https://nrces.in/ndhm/fhir/r4/StructureDefinition/PractitionerRole>
          ]
        ];
        fhir:ElementDefinition.constraint [
@@ -1517,17 +1517,17 @@
          fhir:index 0;
          fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
          fhir:ElementDefinition.type.targetProfile [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Practitioner";
+           fhir:value "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Practitioner";
            fhir:index 0;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Practitioner>
+           fhir:link <https://nrces.in/ndhm/fhir/r4/StructureDefinition/Practitioner>
          ], [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/PractitionerRole";
+           fhir:value "https://nrces.in/ndhm/fhir/r4/StructureDefinition/PractitionerRole";
            fhir:index 1;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/PractitionerRole>
+           fhir:link <https://nrces.in/ndhm/fhir/r4/StructureDefinition/PractitionerRole>
          ], [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Organization";
+           fhir:value "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Organization";
            fhir:index 2;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Organization>
+           fhir:link <https://nrces.in/ndhm/fhir/r4/StructureDefinition/Organization>
          ]
        ];
        fhir:ElementDefinition.constraint [
@@ -1937,87 +1937,6 @@
        ]
      ], [
        fhir:index 2;
-       fhir:Element.id [ fhir:value "PaymentReconciliation.status" ];
-       fhir:ElementDefinition.path [ fhir:value "PaymentReconciliation.status" ];
-       fhir:ElementDefinition.short [ fhir:value "active | cancelled | draft | entered-in-error" ];
-       fhir:ElementDefinition.definition [ fhir:value "The status of the resource instance." ];
-       fhir:ElementDefinition.comment [ fhir:value "This element is labeled as a modifier because the status contains codes that mark the resource as not currently valid." ];
-       fhir:ElementDefinition.requirements [ fhir:value "Need to track the status of the resource as 'draft' resources may undergo further edits while 'active' resources are immutable and may only have their status changed to 'cancelled'." ];
-       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
-       fhir:ElementDefinition.max [ fhir:value "1" ];
-       fhir:ElementDefinition.type [
-         fhir:index 0;
-         fhir:ElementDefinition.type.code [ fhir:value "code" ]
-       ];
-       fhir:ElementDefinition.isModifier [ fhir:value "true"^^xsd:boolean ];
-       fhir:ElementDefinition.isModifierReason [ fhir:value "This element is labelled as a modifier because it is a status element that contains status entered-in-error which means that the resource should not be treated as valid" ];
-       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
-       fhir:ElementDefinition.binding [
-         fhir:Element.extension [
-           fhir:index 0;
-           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName" ];
-           fhir:Extension.valueString [ fhir:value "PaymentReconciliationStatus" ]
-         ];
-         fhir:ElementDefinition.binding.strength [ fhir:value "required" ];
-         fhir:ElementDefinition.binding.description [ fhir:value "A code specifying the state of the resource instance." ];
-         fhir:ElementDefinition.binding.valueSet [
-           fhir:value "http://hl7.org/fhir/ValueSet/fm-status|4.0.1";
-           fhir:link <http://hl7.org/fhir/ValueSet/fm-status|4.0.1>
-         ]
-       ];
-       fhir:ElementDefinition.mapping [
-         fhir:index 0;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "workflow" ];
-         fhir:ElementDefinition.mapping.map [ fhir:value "Event.status" ]
-       ], [
-         fhir:index 1;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "w5" ];
-         fhir:ElementDefinition.mapping.map [ fhir:value "FiveWs.status" ]
-       ]
-     ], [
-       fhir:index 3;
-       fhir:Element.id [ fhir:value "PaymentReconciliation.period" ];
-       fhir:ElementDefinition.path [ fhir:value "PaymentReconciliation.period" ];
-       fhir:ElementDefinition.short [ fhir:value "Period covered" ];
-       fhir:ElementDefinition.definition [ fhir:value "The period of time for which payments have been gathered into this bulk payment for settlement." ];
-       fhir:ElementDefinition.requirements [ fhir:value "Needed to allow receivers to monitor and reconcile payment issuer schedules." ];
-       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
-       fhir:ElementDefinition.max [ fhir:value "1" ];
-       fhir:ElementDefinition.type [
-         fhir:index 0;
-         fhir:ElementDefinition.type.code [ fhir:value "Period" ]
-       ];
-       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
-       fhir:ElementDefinition.mapping [
-         fhir:index 0;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "w5" ];
-         fhir:ElementDefinition.mapping.map [ fhir:value "FiveWs.done[x]" ]
-       ]
-     ], [
-       fhir:index 4;
-       fhir:Element.id [ fhir:value "PaymentReconciliation.created" ];
-       fhir:ElementDefinition.path [ fhir:value "PaymentReconciliation.created" ];
-       fhir:ElementDefinition.short [ fhir:value "Creation date" ];
-       fhir:ElementDefinition.definition [ fhir:value "The date when the resource was created." ];
-       fhir:ElementDefinition.requirements [ fhir:value "Need to record a timestamp for use by both the recipient and the issuer." ];
-       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
-       fhir:ElementDefinition.max [ fhir:value "1" ];
-       fhir:ElementDefinition.type [
-         fhir:index 0;
-         fhir:ElementDefinition.type.code [ fhir:value "dateTime" ]
-       ];
-       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
-       fhir:ElementDefinition.mapping [
-         fhir:index 0;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "workflow" ];
-         fhir:ElementDefinition.mapping.map [ fhir:value "Event.occurrence[x]" ]
-       ], [
-         fhir:index 1;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "w5" ];
-         fhir:ElementDefinition.mapping.map [ fhir:value "FiveWs.recorded" ]
-       ]
-     ], [
-       fhir:index 5;
        fhir:Element.id [ fhir:value "PaymentReconciliation.paymentIssuer" ];
        fhir:ElementDefinition.path [ fhir:value "PaymentReconciliation.paymentIssuer" ];
        fhir:ElementDefinition.short [ fhir:value "Party generating payment" ];
@@ -2030,9 +1949,9 @@
          fhir:index 0;
          fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
          fhir:ElementDefinition.type.targetProfile [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Organization";
+           fhir:value "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Organization";
            fhir:index 0;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Organization>
+           fhir:link <https://nrces.in/ndhm/fhir/r4/StructureDefinition/Organization>
          ]
        ];
        fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
@@ -2046,34 +1965,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "FiveWs.source" ]
        ]
      ], [
-       fhir:index 6;
-       fhir:Element.id [ fhir:value "PaymentReconciliation.request" ];
-       fhir:ElementDefinition.path [ fhir:value "PaymentReconciliation.request" ];
-       fhir:ElementDefinition.short [ fhir:value "Reference to requesting resource" ];
-       fhir:ElementDefinition.definition [ fhir:value "Original request resource reference." ];
-       fhir:ElementDefinition.requirements [ fhir:value "Needed to allow the response to be linked to the request." ];
-       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
-       fhir:ElementDefinition.max [ fhir:value "1" ];
-       fhir:ElementDefinition.type [
-         fhir:index 0;
-         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
-         fhir:ElementDefinition.type.targetProfile [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Task";
-           fhir:index 0;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Task>
-         ]
-       ];
-       fhir:ElementDefinition.mapping [
-         fhir:index 0;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "w5" ];
-         fhir:ElementDefinition.mapping.map [ fhir:value "FiveWs.why[x]" ]
-       ], [
-         fhir:index 1;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "cdanetv4" ];
-         fhir:ElementDefinition.mapping.map [ fhir:value "A02|G01" ]
-       ]
-     ], [
-       fhir:index 7;
+       fhir:index 3;
        fhir:Element.id [ fhir:value "PaymentReconciliation.requestor" ];
        fhir:ElementDefinition.path [ fhir:value "PaymentReconciliation.requestor" ];
        fhir:ElementDefinition.short [ fhir:value "Responsible practitioner" ];
@@ -2085,17 +1977,17 @@
          fhir:index 0;
          fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
          fhir:ElementDefinition.type.targetProfile [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Practitioner";
+           fhir:value "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Practitioner";
            fhir:index 0;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Practitioner>
+           fhir:link <https://nrces.in/ndhm/fhir/r4/StructureDefinition/Practitioner>
          ], [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/PractitionerRole";
+           fhir:value "https://nrces.in/ndhm/fhir/r4/StructureDefinition/PractitionerRole";
            fhir:index 1;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/PractitionerRole>
+           fhir:link <https://nrces.in/ndhm/fhir/r4/StructureDefinition/PractitionerRole>
          ], [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Organization";
+           fhir:value "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Organization";
            fhir:index 2;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Organization>
+           fhir:link <https://nrces.in/ndhm/fhir/r4/StructureDefinition/Organization>
          ]
        ];
        fhir:ElementDefinition.mapping [
@@ -2104,7 +1996,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "B01" ]
        ]
      ], [
-       fhir:index 8;
+       fhir:index 4;
        fhir:Element.id [ fhir:value "PaymentReconciliation.outcome" ];
        fhir:ElementDefinition.path [ fhir:value "PaymentReconciliation.outcome" ];
        fhir:ElementDefinition.short [ fhir:value "queued | complete | error | partial" ];
@@ -2135,53 +2027,7 @@
          ]
        ]
      ], [
-       fhir:index 9;
-       fhir:Element.id [ fhir:value "PaymentReconciliation.disposition" ];
-       fhir:ElementDefinition.path [ fhir:value "PaymentReconciliation.disposition" ];
-       fhir:ElementDefinition.short [ fhir:value "Disposition message" ];
-       fhir:ElementDefinition.definition [ fhir:value "A human readable description of the status of the request for the reconciliation." ];
-       fhir:ElementDefinition.requirements [ fhir:value "Provided for user display." ];
-       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
-       fhir:ElementDefinition.max [ fhir:value "1" ];
-       fhir:ElementDefinition.type [
-         fhir:index 0;
-         fhir:ElementDefinition.type.code [ fhir:value "string" ]
-       ];
-       fhir:ElementDefinition.mapping [
-         fhir:index 0;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "workflow" ];
-         fhir:ElementDefinition.mapping.map [ fhir:value "Event.note" ]
-       ]
-     ], [
-       fhir:index 10;
-       fhir:Element.id [ fhir:value "PaymentReconciliation.paymentDate" ];
-       fhir:ElementDefinition.path [ fhir:value "PaymentReconciliation.paymentDate" ];
-       fhir:ElementDefinition.short [ fhir:value "When payment issued" ];
-       fhir:ElementDefinition.definition [ fhir:value "The date of payment as indicated on the financial instrument." ];
-       fhir:ElementDefinition.requirements [ fhir:value "To advise the payee when payment can be expected." ];
-       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
-       fhir:ElementDefinition.max [ fhir:value "1" ];
-       fhir:ElementDefinition.type [
-         fhir:index 0;
-         fhir:ElementDefinition.type.code [ fhir:value "date" ]
-       ];
-       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ]
-     ], [
-       fhir:index 11;
-       fhir:Element.id [ fhir:value "PaymentReconciliation.paymentAmount" ];
-       fhir:ElementDefinition.path [ fhir:value "PaymentReconciliation.paymentAmount" ];
-       fhir:ElementDefinition.short [ fhir:value "Total amount of Payment" ];
-       fhir:ElementDefinition.definition [ fhir:value "Total payment amount as indicated on the financial instrument." ];
-       fhir:ElementDefinition.requirements [ fhir:value "Needed to provide the actual payment amount." ];
-       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
-       fhir:ElementDefinition.max [ fhir:value "1" ];
-       fhir:ElementDefinition.type [
-         fhir:index 0;
-         fhir:ElementDefinition.type.code [ fhir:value "Money" ]
-       ];
-       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ]
-     ], [
-       fhir:index 12;
+       fhir:index 5;
        fhir:Element.id [ fhir:value "PaymentReconciliation.paymentIdentifier" ];
        fhir:ElementDefinition.path [ fhir:value "PaymentReconciliation.paymentIdentifier" ];
        fhir:ElementDefinition.short [ fhir:value "Business identifier for the payment" ];
@@ -2195,96 +2041,7 @@
          fhir:ElementDefinition.type.code [ fhir:value "Identifier" ]
        ]
      ], [
-       fhir:index 13;
-       fhir:Element.id [ fhir:value "PaymentReconciliation.detail" ];
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name" ];
-         fhir:Extension.valueString [ fhir:value "Details" ]
-       ];
-       fhir:ElementDefinition.path [ fhir:value "PaymentReconciliation.detail" ];
-       fhir:ElementDefinition.short [ fhir:value "Settlement particulars" ];
-       fhir:ElementDefinition.definition [ fhir:value "Distribution of the payment amount for a previously acknowledged payable." ];
-       fhir:ElementDefinition.requirements [ fhir:value "Needed to show how the payment amount is distributed across the payables." ];
-       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
-       fhir:ElementDefinition.max [ fhir:value "*" ];
-       fhir:ElementDefinition.type [
-         fhir:index 0;
-         fhir:ElementDefinition.type.code [ fhir:value "BackboneElement" ]
-       ]
-     ], [
-       fhir:index 14;
-       fhir:Element.id [ fhir:value "PaymentReconciliation.detail.identifier" ];
-       fhir:ElementDefinition.path [ fhir:value "PaymentReconciliation.detail.identifier" ];
-       fhir:ElementDefinition.short [ fhir:value "Business identifier of the payment detail" ];
-       fhir:ElementDefinition.definition [ fhir:value "Unique identifier for the current payment item for the referenced payable." ];
-       fhir:ElementDefinition.requirements [ fhir:value "Needed for reconciliation of payments." ];
-       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
-       fhir:ElementDefinition.max [ fhir:value "1" ];
-       fhir:ElementDefinition.type [
-         fhir:index 0;
-         fhir:ElementDefinition.type.code [ fhir:value "Identifier" ]
-       ]
-     ], [
-       fhir:index 15;
-       fhir:Element.id [ fhir:value "PaymentReconciliation.detail.predecessor" ];
-       fhir:ElementDefinition.path [ fhir:value "PaymentReconciliation.detail.predecessor" ];
-       fhir:ElementDefinition.short [ fhir:value "Business identifier of the prior payment detail" ];
-       fhir:ElementDefinition.definition [ fhir:value "Unique identifier for the prior payment item for the referenced payable." ];
-       fhir:ElementDefinition.requirements [ fhir:value "Needed for reconciliation of payments." ];
-       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
-       fhir:ElementDefinition.max [ fhir:value "1" ];
-       fhir:ElementDefinition.type [
-         fhir:index 0;
-         fhir:ElementDefinition.type.code [ fhir:value "Identifier" ]
-       ]
-     ], [
-       fhir:index 16;
-       fhir:Element.id [ fhir:value "PaymentReconciliation.detail.type" ];
-       fhir:ElementDefinition.path [ fhir:value "PaymentReconciliation.detail.type" ];
-       fhir:ElementDefinition.short [ fhir:value "Category of payment" ];
-       fhir:ElementDefinition.definition [ fhir:value "Code to indicate the nature of the payment." ];
-       fhir:ElementDefinition.comment [ fhir:value "For example: payment, adjustment, funds advance, etc." ];
-       fhir:ElementDefinition.requirements [ fhir:value "Needed to provide context for the amount." ];
-       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
-       fhir:ElementDefinition.max [ fhir:value "1" ];
-       fhir:ElementDefinition.type [
-         fhir:index 0;
-         fhir:ElementDefinition.type.code [ fhir:value "CodeableConcept" ]
-       ];
-       fhir:ElementDefinition.binding [
-         fhir:Element.extension [
-           fhir:index 0;
-           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName" ];
-           fhir:Extension.valueString [ fhir:value "PaymentType" ]
-         ];
-         fhir:ElementDefinition.binding.strength [ fhir:value "example" ];
-         fhir:ElementDefinition.binding.description [ fhir:value "The reason for the amount: payment, adjustment, advance." ];
-         fhir:ElementDefinition.binding.valueSet [
-           fhir:value "http://hl7.org/fhir/ValueSet/payment-type";
-           fhir:link <http://hl7.org/fhir/ValueSet/payment-type>
-         ]
-       ]
-     ], [
-       fhir:index 17;
-       fhir:Element.id [ fhir:value "PaymentReconciliation.detail.request" ];
-       fhir:ElementDefinition.path [ fhir:value "PaymentReconciliation.detail.request" ];
-       fhir:ElementDefinition.short [ fhir:value "Request giving rise to the payment" ];
-       fhir:ElementDefinition.definition [ fhir:value "A resource, such as a Claim, the evaluation of which could lead to payment." ];
-       fhir:ElementDefinition.requirements [ fhir:value "Needed to provide a linkage  to the original request." ];
-       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
-       fhir:ElementDefinition.max [ fhir:value "1" ];
-       fhir:ElementDefinition.type [
-         fhir:index 0;
-         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
-         fhir:ElementDefinition.type.targetProfile [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Resource";
-           fhir:index 0;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Resource>
-         ]
-       ]
-     ], [
-       fhir:index 18;
+       fhir:index 6;
        fhir:Element.id [ fhir:value "PaymentReconciliation.detail.submitter" ];
        fhir:ElementDefinition.path [ fhir:value "PaymentReconciliation.detail.submitter" ];
        fhir:ElementDefinition.short [ fhir:value "Submitter of the request" ];
@@ -2296,52 +2053,21 @@
          fhir:index 0;
          fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
          fhir:ElementDefinition.type.targetProfile [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Practitioner";
+           fhir:value "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Practitioner";
            fhir:index 0;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Practitioner>
+           fhir:link <https://nrces.in/ndhm/fhir/r4/StructureDefinition/Practitioner>
          ], [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/PractitionerRole";
+           fhir:value "https://nrces.in/ndhm/fhir/r4/StructureDefinition/PractitionerRole";
            fhir:index 1;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/PractitionerRole>
+           fhir:link <https://nrces.in/ndhm/fhir/r4/StructureDefinition/PractitionerRole>
          ], [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Organization";
+           fhir:value "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Organization";
            fhir:index 2;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Organization>
+           fhir:link <https://nrces.in/ndhm/fhir/r4/StructureDefinition/Organization>
          ]
        ]
      ], [
-       fhir:index 19;
-       fhir:Element.id [ fhir:value "PaymentReconciliation.detail.response" ];
-       fhir:ElementDefinition.path [ fhir:value "PaymentReconciliation.detail.response" ];
-       fhir:ElementDefinition.short [ fhir:value "Response committing to a payment" ];
-       fhir:ElementDefinition.definition [ fhir:value "A resource, such as a ClaimResponse, which contains a commitment to payment." ];
-       fhir:ElementDefinition.requirements [ fhir:value "Needed to provide a linkage to the payment commitment." ];
-       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
-       fhir:ElementDefinition.max [ fhir:value "1" ];
-       fhir:ElementDefinition.type [
-         fhir:index 0;
-         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
-         fhir:ElementDefinition.type.targetProfile [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Resource";
-           fhir:index 0;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Resource>
-         ]
-       ]
-     ], [
-       fhir:index 20;
-       fhir:Element.id [ fhir:value "PaymentReconciliation.detail.date" ];
-       fhir:ElementDefinition.path [ fhir:value "PaymentReconciliation.detail.date" ];
-       fhir:ElementDefinition.short [ fhir:value "Date of commitment to pay" ];
-       fhir:ElementDefinition.definition [ fhir:value "The date from the response resource containing a commitment to pay." ];
-       fhir:ElementDefinition.requirements [ fhir:value "Needed for audit and validation." ];
-       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
-       fhir:ElementDefinition.max [ fhir:value "1" ];
-       fhir:ElementDefinition.type [
-         fhir:index 0;
-         fhir:ElementDefinition.type.code [ fhir:value "date" ]
-       ]
-     ], [
-       fhir:index 21;
+       fhir:index 7;
        fhir:Element.id [ fhir:value "PaymentReconciliation.detail.responsible" ];
        fhir:ElementDefinition.path [ fhir:value "PaymentReconciliation.detail.responsible" ];
        fhir:ElementDefinition.short [ fhir:value "Contact for the response" ];
@@ -2353,13 +2079,13 @@
          fhir:index 0;
          fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
          fhir:ElementDefinition.type.targetProfile [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/PractitionerRole";
+           fhir:value "https://nrces.in/ndhm/fhir/r4/StructureDefinition/PractitionerRole";
            fhir:index 0;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/PractitionerRole>
+           fhir:link <https://nrces.in/ndhm/fhir/r4/StructureDefinition/PractitionerRole>
          ]
        ]
      ], [
-       fhir:index 22;
+       fhir:index 8;
        fhir:Element.id [ fhir:value "PaymentReconciliation.detail.payee" ];
        fhir:ElementDefinition.path [ fhir:value "PaymentReconciliation.detail.payee" ];
        fhir:ElementDefinition.short [ fhir:value "Recipient of the payment" ];
@@ -2371,128 +2097,18 @@
          fhir:index 0;
          fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
          fhir:ElementDefinition.type.targetProfile [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Practitioner";
+           fhir:value "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Practitioner";
            fhir:index 0;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Practitioner>
+           fhir:link <https://nrces.in/ndhm/fhir/r4/StructureDefinition/Practitioner>
          ], [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/PractitionerRole";
+           fhir:value "https://nrces.in/ndhm/fhir/r4/StructureDefinition/PractitionerRole";
            fhir:index 1;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/PractitionerRole>
+           fhir:link <https://nrces.in/ndhm/fhir/r4/StructureDefinition/PractitionerRole>
          ], [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Organization";
+           fhir:value "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Organization";
            fhir:index 2;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Organization>
+           fhir:link <https://nrces.in/ndhm/fhir/r4/StructureDefinition/Organization>
          ]
-       ]
-     ], [
-       fhir:index 23;
-       fhir:Element.id [ fhir:value "PaymentReconciliation.detail.amount" ];
-       fhir:ElementDefinition.path [ fhir:value "PaymentReconciliation.detail.amount" ];
-       fhir:ElementDefinition.short [ fhir:value "Amount allocated to this payable" ];
-       fhir:ElementDefinition.definition [ fhir:value "The monetary amount allocated from the total payment to the payable." ];
-       fhir:ElementDefinition.requirements [ fhir:value "Needed to explain the distribution of the payment to the payables." ];
-       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
-       fhir:ElementDefinition.max [ fhir:value "1" ];
-       fhir:ElementDefinition.type [
-         fhir:index 0;
-         fhir:ElementDefinition.type.code [ fhir:value "Money" ]
-       ]
-     ], [
-       fhir:index 24;
-       fhir:Element.id [ fhir:value "PaymentReconciliation.formCode" ];
-       fhir:ElementDefinition.path [ fhir:value "PaymentReconciliation.formCode" ];
-       fhir:ElementDefinition.short [ fhir:value "Printed form identifier" ];
-       fhir:ElementDefinition.definition [ fhir:value "A code for the form to be used for printing the content." ];
-       fhir:ElementDefinition.comment [ fhir:value "May be needed to identify specific jurisdictional forms." ];
-       fhir:ElementDefinition.requirements [ fhir:value "Needed to specify the specific form used for producing output for this response." ];
-       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
-       fhir:ElementDefinition.max [ fhir:value "1" ];
-       fhir:ElementDefinition.type [
-         fhir:index 0;
-         fhir:ElementDefinition.type.code [ fhir:value "CodeableConcept" ]
-       ];
-       fhir:ElementDefinition.binding [
-         fhir:Element.extension [
-           fhir:index 0;
-           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName" ];
-           fhir:Extension.valueString [ fhir:value "Forms" ]
-         ], [
-           fhir:index 1;
-           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/elementdefinition-isCommonBinding" ];
-           fhir:Extension.valueBoolean [ fhir:value "true"^^xsd:boolean ]
-         ];
-         fhir:ElementDefinition.binding.strength [ fhir:value "example" ];
-         fhir:ElementDefinition.binding.description [ fhir:value "The forms codes." ];
-         fhir:ElementDefinition.binding.valueSet [
-           fhir:value "http://hl7.org/fhir/ValueSet/forms";
-           fhir:link <http://hl7.org/fhir/ValueSet/forms>
-         ]
-       ]
-     ], [
-       fhir:index 25;
-       fhir:Element.id [ fhir:value "PaymentReconciliation.processNote" ];
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name" ];
-         fhir:Extension.valueString [ fhir:value "Notes" ]
-       ];
-       fhir:ElementDefinition.path [ fhir:value "PaymentReconciliation.processNote" ];
-       fhir:ElementDefinition.short [ fhir:value "Note concerning processing" ];
-       fhir:ElementDefinition.definition [ fhir:value "A note that describes or explains the processing in a human readable form." ];
-       fhir:ElementDefinition.requirements [ fhir:value "Provides the specific textual explanations associated with the processing." ];
-       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
-       fhir:ElementDefinition.max [ fhir:value "*" ];
-       fhir:ElementDefinition.type [
-         fhir:index 0;
-         fhir:ElementDefinition.type.code [ fhir:value "BackboneElement" ]
-       ]
-     ], [
-       fhir:index 26;
-       fhir:Element.id [ fhir:value "PaymentReconciliation.processNote.type" ];
-       fhir:ElementDefinition.path [ fhir:value "PaymentReconciliation.processNote.type" ];
-       fhir:ElementDefinition.short [ fhir:value "display | print | printoper" ];
-       fhir:ElementDefinition.definition [ fhir:value "The business purpose of the note text." ];
-       fhir:ElementDefinition.requirements [ fhir:value "To convey the expectation for when the text is used." ];
-       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
-       fhir:ElementDefinition.max [ fhir:value "1" ];
-       fhir:ElementDefinition.type [
-         fhir:index 0;
-         fhir:ElementDefinition.type.code [ fhir:value "code" ]
-       ];
-       fhir:ElementDefinition.binding [
-         fhir:Element.extension [
-           fhir:index 0;
-           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName" ];
-           fhir:Extension.valueString [ fhir:value "NoteType" ]
-         ], [
-           fhir:index 1;
-           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/elementdefinition-isCommonBinding" ];
-           fhir:Extension.valueBoolean [ fhir:value "true"^^xsd:boolean ]
-         ];
-         fhir:ElementDefinition.binding.strength [ fhir:value "required" ];
-         fhir:ElementDefinition.binding.description [ fhir:value "The presentation types of notes." ];
-         fhir:ElementDefinition.binding.valueSet [
-           fhir:value "http://hl7.org/fhir/ValueSet/note-type|4.0.1";
-           fhir:link <http://hl7.org/fhir/ValueSet/note-type|4.0.1>
-         ]
-       ]
-     ], [
-       fhir:index 27;
-       fhir:Element.id [ fhir:value "PaymentReconciliation.processNote.text" ];
-       fhir:ElementDefinition.path [ fhir:value "PaymentReconciliation.processNote.text" ];
-       fhir:ElementDefinition.short [ fhir:value "Note explanatory text" ];
-       fhir:ElementDefinition.definition [ fhir:value "The explanation or description associated with the processing." ];
-       fhir:ElementDefinition.requirements [ fhir:value "Required to provide human readable explanation." ];
-       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
-       fhir:ElementDefinition.max [ fhir:value "1" ];
-       fhir:ElementDefinition.type [
-         fhir:index 0;
-         fhir:ElementDefinition.type.code [ fhir:value "string" ]
-       ];
-       fhir:ElementDefinition.mapping [
-         fhir:index 0;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "cdanetv4" ];
-         fhir:ElementDefinition.mapping.map [ fhir:value "G32" ]
        ]
      ]
   ] .

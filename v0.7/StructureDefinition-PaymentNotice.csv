@@ -44,19 +44,19 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "PaymentNotice.created","","","",1,1,"","","Y","dateTime {[]} {[]}
 ","Creation date","The date when this resource was created.","","Need to record a timestamp for use by both the recipient and the issuer.","","","","","","","",,,,,"",,,,"PaymentNotice.created",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","Event.occurrence[x]","n/a","FiveWs.recorded"
-"PaymentNotice.provider","","","",1,1,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Practitioner], CanonicalType[http://hl7.org/fhir/StructureDefinition/PractitionerRole], CanonicalType[http://hl7.org/fhir/StructureDefinition/Organization]]}
+"PaymentNotice.provider","","","",1,1,"","","","Reference {[]} {[CanonicalType[https://nrces.in/ndhm/fhir/r4/StructureDefinition/Practitioner], CanonicalType[https://nrces.in/ndhm/fhir/r4/StructureDefinition/PractitionerRole], CanonicalType[https://nrces.in/ndhm/fhir/r4/StructureDefinition/Organization]]}
 ","Responsible practitioner","The practitioner who is responsible for the services rendered to the patient.","","","","","","","","","",,,,,"",,,,"PaymentNotice.provider",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","Event.performer","n/a","FiveWs.source","B01","B01"
-"PaymentNotice.payment","","","",1,1,"","","Y","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/PaymentReconciliation]]}
+"PaymentNotice.payment","","","",1,1,"","","Y","Reference {[]} {[CanonicalType[https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-PaymentReconciliation.html]]}
 ","Payment reference","A reference to the payment which is the subject of this notice.","","Need to identify the actual payment.","","","","","","","",,,,,"",,,,"PaymentNotice.payment",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "PaymentNotice.paymentDate","","","",0,1,"","","","date {[]} {[]}
 ","Payment or clearing date","The date when the above payment action occurred.","","Need to convey the date when the action being notified occurred.","","","","","","","",,,,,"",,,,"PaymentNotice.paymentDate",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"PaymentNotice.payee","","","",0,1,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Practitioner], CanonicalType[http://hl7.org/fhir/StructureDefinition/PractitionerRole], CanonicalType[http://hl7.org/fhir/StructureDefinition/Organization]]}
+"PaymentNotice.payee","","","",0,1,"","","","Reference {[]} {[CanonicalType[https://nrces.in/ndhm/fhir/r4/StructureDefinition/Practitioner], CanonicalType[https://nrces.in/ndhm/fhir/r4/StructureDefinition/PractitionerRole], CanonicalType[https://nrces.in/ndhm/fhir/r4/StructureDefinition/Organization]]}
 ","Party being paid","The party who will receive or has received payment that is the subject of this notification.","","","","","","","","","",,,,,"",,,,"PaymentNotice.payee",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"PaymentNotice.recipient","","","",1,1,"","","Y","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Organization]]}
+"PaymentNotice.recipient","","","",1,1,"","","Y","Reference {[]} {[CanonicalType[https://nrces.in/ndhm/fhir/r4/StructureDefinition/Organization]]}
 ","Party being notified","The party who is notified of the payment status.","","Need to identified the recipient of the notification.","","","","","","","",,,,,"",,,,"PaymentNotice.recipient",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","n/a"
 "PaymentNotice.amount","","","",1,1,"","","Y","Money {[]} {[]}

@@ -41,13 +41,13 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "PaymentReconciliation.created","","","",1,1,"","","Y","dateTime {[]} {[]}
 ","Creation date","The date when the resource was created.","","Need to record a timestamp for use by both the recipient and the issuer.","","","","","","","",,,,,"",,,,"PaymentReconciliation.created",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","Event.occurrence[x]","FiveWs.recorded"
-"PaymentReconciliation.paymentIssuer","","","",0,1,"","","Y","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Organization]]}
+"PaymentReconciliation.paymentIssuer","","","",0,1,"","","Y","Reference {[]} {[CanonicalType[https://nrces.in/ndhm/fhir/r4/StructureDefinition/Organization]]}
 ","Party generating payment","The party who generated the payment.","This party is also responsible for the reconciliation.","Need to identify the party resonsible for the payment and this resource.","","","","","","","",,,,,"",,,,"PaymentReconciliation.paymentIssuer",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","Event.performer.actor","FiveWs.source"
 "PaymentReconciliation.request","","","",0,1,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Task]]}
 ","Reference to requesting resource","Original request resource reference.","","Needed to allow the response to be linked to the request.","","","","","","","",,,,,"",,,,"PaymentReconciliation.request",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","FiveWs.why[x]","A02|G01"
-"PaymentReconciliation.requestor","","","",1,1,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Practitioner], CanonicalType[http://hl7.org/fhir/StructureDefinition/PractitionerRole], CanonicalType[http://hl7.org/fhir/StructureDefinition/Organization]]}
+"PaymentReconciliation.requestor","","","",1,1,"","","","Reference {[]} {[CanonicalType[https://nrces.in/ndhm/fhir/r4/StructureDefinition/Practitioner], CanonicalType[https://nrces.in/ndhm/fhir/r4/StructureDefinition/PractitionerRole], CanonicalType[https://nrces.in/ndhm/fhir/r4/StructureDefinition/Organization]]}
 ","Responsible practitioner","The practitioner who is responsible for the services rendered to the patient.","","Need to identify the party responsible for the request.","","","","","","","",,,,,"",,,,"PaymentReconciliation.requestor",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","B01"
 "PaymentReconciliation.outcome","","","",1,1,"","","","code {[]} {[]}
@@ -92,7 +92,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "PaymentReconciliation.detail.request","","","",0,1,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Resource]]}
 ","Request giving rise to the payment","A resource, such as a Claim, the evaluation of which could lead to payment.","","Needed to provide a linkage  to the original request.","","","","","","","",,,,,"",,,,"PaymentReconciliation.detail.request",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"PaymentReconciliation.detail.submitter","","","",0,1,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Practitioner], CanonicalType[http://hl7.org/fhir/StructureDefinition/PractitionerRole], CanonicalType[http://hl7.org/fhir/StructureDefinition/Organization]]}
+"PaymentReconciliation.detail.submitter","","","",0,1,"","","","Reference {[]} {[CanonicalType[https://nrces.in/ndhm/fhir/r4/StructureDefinition/Practitioner], CanonicalType[https://nrces.in/ndhm/fhir/r4/StructureDefinition/PractitionerRole], CanonicalType[https://nrces.in/ndhm/fhir/r4/StructureDefinition/Organization]]}
 ","Submitter of the request","The party which submitted the claim or financial transaction.","","Needed for audit and validation.","","","","","","","",,,,,"",,,,"PaymentReconciliation.detail.submitter",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "PaymentReconciliation.detail.response","","","",0,1,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Resource]]}
@@ -101,10 +101,10 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "PaymentReconciliation.detail.date","","","",0,1,"","","","date {[]} {[]}
 ","Date of commitment to pay","The date from the response resource containing a commitment to pay.","","Needed for audit and validation.","","","","","","","",,,,,"",,,,"PaymentReconciliation.detail.date",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"PaymentReconciliation.detail.responsible","","","",0,1,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/PractitionerRole]]}
+"PaymentReconciliation.detail.responsible","","","",0,1,"","","","Reference {[]} {[CanonicalType[https://nrces.in/ndhm/fhir/r4/StructureDefinition/PractitionerRole]]}
 ","Contact for the response","A reference to the individual who is responsible for inquiries regarding the response and its payment.","","To provide contact information.","","","","","","","",,,,,"",,,,"PaymentReconciliation.detail.responsible",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"PaymentReconciliation.detail.payee","","","",0,1,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Practitioner], CanonicalType[http://hl7.org/fhir/StructureDefinition/PractitionerRole], CanonicalType[http://hl7.org/fhir/StructureDefinition/Organization]]}
+"PaymentReconciliation.detail.payee","","","",0,1,"","","","Reference {[]} {[CanonicalType[https://nrces.in/ndhm/fhir/r4/StructureDefinition/Practitioner], CanonicalType[https://nrces.in/ndhm/fhir/r4/StructureDefinition/PractitionerRole], CanonicalType[https://nrces.in/ndhm/fhir/r4/StructureDefinition/Organization]]}
 ","Recipient of the payment","The party which is receiving the payment.","","Needed for audit and validation.","","","","","","","",,,,,"",,,,"PaymentReconciliation.detail.payee",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "PaymentReconciliation.detail.amount","","","",0,1,"","","","Money {[]} {[]}
