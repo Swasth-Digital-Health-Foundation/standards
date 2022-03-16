@@ -1,9 +1,9 @@
 ﻿HCX Core : Validation Results
 =========================================
 
-err = 371, warn = 212, info = 0
+err = 193, warn = 212, info = 0
 IG Publisher Version: 1.1.97 Out of date - current version is 1.1.112
-Generated Wed Mar 16 16:27:14 IST 2022. FHIR version 4.0.1 for ig#0.0.1 (canonical = https://fhir-ig-demo)
+Generated Wed Mar 16 17:02:37 IST 2022. FHIR version 4.0.1 for ig#0.0.1 (canonical = https://fhir-ig-demo)
  Build Errors : 1 / 1 / 0
  /Users/rayulu/work/Sanketika/Swasth/repository/IG-Publisher/input/hcx-definitions/structuredefinition-Claim : 1 / 43 / 1
  /Users/rayulu/work/Sanketika/Swasth/repository/IG-Publisher/input/hcx-definitions/structuredefinition-ClaimRequestDocument : 4 / 1 / 1
@@ -32,7 +32,7 @@ Generated Wed Mar 16 16:27:14 IST 2022. FHIR version 4.0.1 for ig#0.0.1 (canonic
  /Users/rayulu/work/Sanketika/Swasth/repository/IG-Publisher/input/hcx-definitions/valueset-claim-service-codes : 0 / 1 / 1
  /Users/rayulu/work/Sanketika/Swasth/repository/IG-Publisher/input/hcx-definitions/valueset-health-service-provider-role : 13 / 1 / 1
  /Users/rayulu/work/Sanketika/Swasth/repository/IG-Publisher/input/hcx-definitions/valueset-insurance-company-owners : 51 / 1 / 1
- /Users/rayulu/work/Sanketika/Swasth/repository/IG-Publisher/input/hcx-definitions/valueset-medical-speciality-type-provider : 178 / 1 / 1
+ /Users/rayulu/work/Sanketika/Swasth/repository/IG-Publisher/input/hcx-definitions/valueset-medical-speciality-type-provider : 0 / 1 / 1
  /Users/rayulu/work/Sanketika/Swasth/repository/IG-Publisher/input/hcx-definitions/valueset-procedure-type-description : 32 / 1 / 1
  /Users/rayulu/work/Sanketika/Swasth/repository/IG-Publisher/input/ig : 4 / 2 / 1
 </table>
@@ -430,185 +430,7 @@ ERROR: ValueSet.expansion.contains[49].code: Error parsing JSON: the primitive v
 ERROR: ValueSet.expansion.contains[50].code: Error parsing JSON: the primitive value must be a string
 WARNING: ValueSet/insurance-company-owners: ValueSet: vsd-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Rule 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Failed
 == input/hcx-definitions/ValueSet-medical-speciality-type-provider.json ==
-ERROR: ValueSet.expansion.contains[0]: Unrecognised property '@Code'
-ERROR: ValueSet.expansion.contains[1]: Unrecognised property '@Code'
-ERROR: ValueSet.expansion.contains[2]: Unrecognised property '@Code'
-ERROR: ValueSet.expansion.contains[3]: Unrecognised property '@Code'
-ERROR: ValueSet.expansion.contains[4]: Unrecognised property '@Code'
-ERROR: ValueSet.expansion.contains[5]: Unrecognised property '@Code'
-ERROR: ValueSet.expansion.contains[6]: Unrecognised property '@Code'
-ERROR: ValueSet.expansion.contains[7]: Unrecognised property '@Code'
-ERROR: ValueSet.expansion.contains[8]: Unrecognised property '@Code'
-ERROR: ValueSet.expansion.contains[9]: Unrecognised property '@Code'
-ERROR: ValueSet.expansion.contains[10]: Unrecognised property '@Code'
-ERROR: ValueSet.expansion.contains[11]: Unrecognised property '@Code'
-ERROR: ValueSet.expansion.contains[12]: Unrecognised property '@Code'
-ERROR: ValueSet.expansion.contains[13]: Unrecognised property '@Code'
-ERROR: ValueSet.expansion.contains[14]: Unrecognised property '@Code'
-ERROR: ValueSet.expansion.contains[15]: Unrecognised property '@Code'
-ERROR: ValueSet.expansion.contains[16]: Unrecognised property '@Code'
-ERROR: ValueSet.expansion.contains[17]: Unrecognised property '@Code'
-ERROR: ValueSet.expansion.contains[18]: Unrecognised property '@Code'
-ERROR: ValueSet.expansion.contains[19]: Unrecognised property '@Code'
-ERROR: ValueSet.expansion.contains[20]: Unrecognised property '@Code'
-ERROR: ValueSet.expansion.contains[21]: Unrecognised property '@Code'
-ERROR: ValueSet.expansion.contains[22]: Unrecognised property '@Code'
-ERROR: ValueSet.expansion.contains[23]: Unrecognised property '@Code'
-ERROR: ValueSet.expansion.contains[24]: Unrecognised property '@Code'
-ERROR: ValueSet.expansion.contains[25]: Unrecognised property '@Code'
-ERROR: ValueSet.expansion.contains[26]: Unrecognised property '@Code'
-ERROR: ValueSet.expansion.contains[27]: Unrecognised property '@Code'
-ERROR: ValueSet.expansion.contains[28]: Unrecognised property '@Code'
-ERROR: ValueSet.expansion.contains[29]: Unrecognised property '@Code'
-ERROR: ValueSet.expansion.contains[30]: Unrecognised property '@Code'
-ERROR: ValueSet.expansion.contains[31]: Unrecognised property '@Code'
-ERROR: ValueSet.expansion.contains[32]: Unrecognised property '@Code'
-ERROR: ValueSet.expansion.contains[33]: Unrecognised property '@Code'
-ERROR: ValueSet.expansion.contains[34]: Unrecognised property '@Code'
-ERROR: ValueSet.expansion.contains[35]: Unrecognised property '@Code'
-ERROR: ValueSet.expansion.contains[36]: Unrecognised property '@Code'
-ERROR: ValueSet.expansion.contains[37]: Unrecognised property '@Code'
-ERROR: ValueSet.expansion.contains[38]: Unrecognised property '@Code'
-ERROR: ValueSet.expansion.contains[39]: Unrecognised property '@Code'
-ERROR: ValueSet.expansion.contains[40]: Unrecognised property '@Code'
-ERROR: ValueSet.expansion.contains[41]: Unrecognised property '@Code'
-ERROR: ValueSet.expansion.contains[42]: Unrecognised property '@Code'
-ERROR: ValueSet.expansion.contains[43]: Unrecognised property '@Code'
-ERROR: ValueSet.expansion.contains[44]: Unrecognised property '@Code'
-ERROR: ValueSet.expansion.contains[45]: Unrecognised property '@Code'
-ERROR: ValueSet.expansion.contains[46]: Unrecognised property '@Code'
-ERROR: ValueSet.expansion.contains[47]: Unrecognised property '@Code'
-ERROR: ValueSet.expansion.contains[48]: Unrecognised property '@Code'
-ERROR: ValueSet.expansion.contains[49]: Unrecognised property '@Code'
-ERROR: ValueSet.expansion.contains[50]: Unrecognised property '@Code'
-ERROR: ValueSet.expansion.contains[51]: Unrecognised property '@Code'
-ERROR: ValueSet.expansion.contains[52]: Unrecognised property '@Code'
-ERROR: ValueSet.expansion.contains[53]: Unrecognised property '@Code'
-ERROR: ValueSet.expansion.contains[54]: Unrecognised property '@Code'
-ERROR: ValueSet.expansion.contains[55]: Unrecognised property '@Code'
-ERROR: ValueSet.expansion.contains[56]: Unrecognised property '@Code'
-ERROR: ValueSet.expansion.contains[57]: Unrecognised property '@Code'
-ERROR: ValueSet.expansion.contains[58]: Unrecognised property '@Code'
-ERROR: ValueSet.expansion.contains[59]: Unrecognised property '@Code'
-ERROR: ValueSet.expansion.contains[60]: Unrecognised property '@Code'
-ERROR: ValueSet.expansion.contains[61]: Unrecognised property '@Code'
-ERROR: ValueSet.expansion.contains[62]: Unrecognised property '@Code'
-ERROR: ValueSet.expansion.contains[63]: Unrecognised property '@Code'
-ERROR: ValueSet.expansion.contains[64]: Unrecognised property '@Code'
-ERROR: ValueSet.expansion.contains[65]: Unrecognised property '@Code'
-ERROR: ValueSet.expansion.contains[66]: Unrecognised property '@Code'
-ERROR: ValueSet.expansion.contains[67]: Unrecognised property '@Code'
-ERROR: ValueSet.expansion.contains[68]: Unrecognised property '@Code'
-ERROR: ValueSet.expansion.contains[69]: Unrecognised property '@Code'
-ERROR: ValueSet.expansion.contains[70]: Unrecognised property '@Code'
-ERROR: ValueSet.expansion.contains[71]: Unrecognised property '@Code'
-ERROR: ValueSet.expansion.contains[72]: Unrecognised property '@Code'
-ERROR: ValueSet.expansion.contains[73]: Unrecognised property '@Code'
-ERROR: ValueSet.expansion.contains[74]: Unrecognised property '@Code'
-ERROR: ValueSet.expansion.contains[75]: Unrecognised property '@Code'
-ERROR: ValueSet.expansion.contains[76]: Unrecognised property '@Code'
-ERROR: ValueSet.expansion.contains[77]: Unrecognised property '@Code'
-ERROR: ValueSet.expansion.contains[78]: Unrecognised property '@Code'
-ERROR: ValueSet.expansion.contains[79]: Unrecognised property '@Code'
-ERROR: ValueSet.expansion.contains[80]: Unrecognised property '@Code'
-ERROR: ValueSet.expansion.contains[81]: Unrecognised property '@Code'
-ERROR: ValueSet.expansion.contains[82]: Unrecognised property '@Code'
-ERROR: ValueSet.expansion.contains[83]: Unrecognised property '@Code'
-ERROR: ValueSet.expansion.contains[84]: Unrecognised property '@Code'
-ERROR: ValueSet.expansion.contains[85]: Unrecognised property '@Code'
-ERROR: ValueSet.expansion.contains[86]: Unrecognised property '@Code'
-ERROR: ValueSet.expansion.contains[87]: Unrecognised property '@Code'
-ERROR: ValueSet.expansion.contains[88]: Unrecognised property '@Code'
 WARNING: ValueSet/medical-speciality-type-provider: ValueSet: vsd-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Rule 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Failed
-ERROR: ValueSet/medical-speciality-type-provider: ValueSet.expansion.contains[0]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
-ERROR: ValueSet/medical-speciality-type-provider: ValueSet.expansion.contains[1]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
-ERROR: ValueSet/medical-speciality-type-provider: ValueSet.expansion.contains[2]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
-ERROR: ValueSet/medical-speciality-type-provider: ValueSet.expansion.contains[3]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
-ERROR: ValueSet/medical-speciality-type-provider: ValueSet.expansion.contains[4]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
-ERROR: ValueSet/medical-speciality-type-provider: ValueSet.expansion.contains[5]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
-ERROR: ValueSet/medical-speciality-type-provider: ValueSet.expansion.contains[6]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
-ERROR: ValueSet/medical-speciality-type-provider: ValueSet.expansion.contains[7]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
-ERROR: ValueSet/medical-speciality-type-provider: ValueSet.expansion.contains[8]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
-ERROR: ValueSet/medical-speciality-type-provider: ValueSet.expansion.contains[9]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
-ERROR: ValueSet/medical-speciality-type-provider: ValueSet.expansion.contains[10]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
-ERROR: ValueSet/medical-speciality-type-provider: ValueSet.expansion.contains[11]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
-ERROR: ValueSet/medical-speciality-type-provider: ValueSet.expansion.contains[12]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
-ERROR: ValueSet/medical-speciality-type-provider: ValueSet.expansion.contains[13]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
-ERROR: ValueSet/medical-speciality-type-provider: ValueSet.expansion.contains[14]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
-ERROR: ValueSet/medical-speciality-type-provider: ValueSet.expansion.contains[15]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
-ERROR: ValueSet/medical-speciality-type-provider: ValueSet.expansion.contains[16]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
-ERROR: ValueSet/medical-speciality-type-provider: ValueSet.expansion.contains[17]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
-ERROR: ValueSet/medical-speciality-type-provider: ValueSet.expansion.contains[18]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
-ERROR: ValueSet/medical-speciality-type-provider: ValueSet.expansion.contains[19]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
-ERROR: ValueSet/medical-speciality-type-provider: ValueSet.expansion.contains[20]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
-ERROR: ValueSet/medical-speciality-type-provider: ValueSet.expansion.contains[21]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
-ERROR: ValueSet/medical-speciality-type-provider: ValueSet.expansion.contains[22]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
-ERROR: ValueSet/medical-speciality-type-provider: ValueSet.expansion.contains[23]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
-ERROR: ValueSet/medical-speciality-type-provider: ValueSet.expansion.contains[24]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
-ERROR: ValueSet/medical-speciality-type-provider: ValueSet.expansion.contains[25]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
-ERROR: ValueSet/medical-speciality-type-provider: ValueSet.expansion.contains[26]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
-ERROR: ValueSet/medical-speciality-type-provider: ValueSet.expansion.contains[27]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
-ERROR: ValueSet/medical-speciality-type-provider: ValueSet.expansion.contains[28]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
-ERROR: ValueSet/medical-speciality-type-provider: ValueSet.expansion.contains[29]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
-ERROR: ValueSet/medical-speciality-type-provider: ValueSet.expansion.contains[30]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
-ERROR: ValueSet/medical-speciality-type-provider: ValueSet.expansion.contains[31]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
-ERROR: ValueSet/medical-speciality-type-provider: ValueSet.expansion.contains[32]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
-ERROR: ValueSet/medical-speciality-type-provider: ValueSet.expansion.contains[33]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
-ERROR: ValueSet/medical-speciality-type-provider: ValueSet.expansion.contains[34]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
-ERROR: ValueSet/medical-speciality-type-provider: ValueSet.expansion.contains[35]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
-ERROR: ValueSet/medical-speciality-type-provider: ValueSet.expansion.contains[36]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
-ERROR: ValueSet/medical-speciality-type-provider: ValueSet.expansion.contains[37]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
-ERROR: ValueSet/medical-speciality-type-provider: ValueSet.expansion.contains[38]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
-ERROR: ValueSet/medical-speciality-type-provider: ValueSet.expansion.contains[39]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
-ERROR: ValueSet/medical-speciality-type-provider: ValueSet.expansion.contains[40]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
-ERROR: ValueSet/medical-speciality-type-provider: ValueSet.expansion.contains[41]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
-ERROR: ValueSet/medical-speciality-type-provider: ValueSet.expansion.contains[42]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
-ERROR: ValueSet/medical-speciality-type-provider: ValueSet.expansion.contains[43]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
-ERROR: ValueSet/medical-speciality-type-provider: ValueSet.expansion.contains[44]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
-ERROR: ValueSet/medical-speciality-type-provider: ValueSet.expansion.contains[45]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
-ERROR: ValueSet/medical-speciality-type-provider: ValueSet.expansion.contains[46]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
-ERROR: ValueSet/medical-speciality-type-provider: ValueSet.expansion.contains[47]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
-ERROR: ValueSet/medical-speciality-type-provider: ValueSet.expansion.contains[48]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
-ERROR: ValueSet/medical-speciality-type-provider: ValueSet.expansion.contains[49]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
-ERROR: ValueSet/medical-speciality-type-provider: ValueSet.expansion.contains[50]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
-ERROR: ValueSet/medical-speciality-type-provider: ValueSet.expansion.contains[51]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
-ERROR: ValueSet/medical-speciality-type-provider: ValueSet.expansion.contains[52]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
-ERROR: ValueSet/medical-speciality-type-provider: ValueSet.expansion.contains[53]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
-ERROR: ValueSet/medical-speciality-type-provider: ValueSet.expansion.contains[54]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
-ERROR: ValueSet/medical-speciality-type-provider: ValueSet.expansion.contains[55]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
-ERROR: ValueSet/medical-speciality-type-provider: ValueSet.expansion.contains[56]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
-ERROR: ValueSet/medical-speciality-type-provider: ValueSet.expansion.contains[57]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
-ERROR: ValueSet/medical-speciality-type-provider: ValueSet.expansion.contains[58]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
-ERROR: ValueSet/medical-speciality-type-provider: ValueSet.expansion.contains[59]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
-ERROR: ValueSet/medical-speciality-type-provider: ValueSet.expansion.contains[60]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
-ERROR: ValueSet/medical-speciality-type-provider: ValueSet.expansion.contains[61]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
-ERROR: ValueSet/medical-speciality-type-provider: ValueSet.expansion.contains[62]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
-ERROR: ValueSet/medical-speciality-type-provider: ValueSet.expansion.contains[63]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
-ERROR: ValueSet/medical-speciality-type-provider: ValueSet.expansion.contains[64]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
-ERROR: ValueSet/medical-speciality-type-provider: ValueSet.expansion.contains[65]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
-ERROR: ValueSet/medical-speciality-type-provider: ValueSet.expansion.contains[66]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
-ERROR: ValueSet/medical-speciality-type-provider: ValueSet.expansion.contains[67]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
-ERROR: ValueSet/medical-speciality-type-provider: ValueSet.expansion.contains[68]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
-ERROR: ValueSet/medical-speciality-type-provider: ValueSet.expansion.contains[69]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
-ERROR: ValueSet/medical-speciality-type-provider: ValueSet.expansion.contains[70]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
-ERROR: ValueSet/medical-speciality-type-provider: ValueSet.expansion.contains[71]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
-ERROR: ValueSet/medical-speciality-type-provider: ValueSet.expansion.contains[72]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
-ERROR: ValueSet/medical-speciality-type-provider: ValueSet.expansion.contains[73]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
-ERROR: ValueSet/medical-speciality-type-provider: ValueSet.expansion.contains[74]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
-ERROR: ValueSet/medical-speciality-type-provider: ValueSet.expansion.contains[75]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
-ERROR: ValueSet/medical-speciality-type-provider: ValueSet.expansion.contains[76]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
-ERROR: ValueSet/medical-speciality-type-provider: ValueSet.expansion.contains[77]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
-ERROR: ValueSet/medical-speciality-type-provider: ValueSet.expansion.contains[78]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
-ERROR: ValueSet/medical-speciality-type-provider: ValueSet.expansion.contains[79]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
-ERROR: ValueSet/medical-speciality-type-provider: ValueSet.expansion.contains[80]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
-ERROR: ValueSet/medical-speciality-type-provider: ValueSet.expansion.contains[81]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
-ERROR: ValueSet/medical-speciality-type-provider: ValueSet.expansion.contains[82]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
-ERROR: ValueSet/medical-speciality-type-provider: ValueSet.expansion.contains[83]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
-ERROR: ValueSet/medical-speciality-type-provider: ValueSet.expansion.contains[84]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
-ERROR: ValueSet/medical-speciality-type-provider: ValueSet.expansion.contains[85]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
-ERROR: ValueSet/medical-speciality-type-provider: ValueSet.expansion.contains[86]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
-ERROR: ValueSet/medical-speciality-type-provider: ValueSet.expansion.contains[87]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
-ERROR: ValueSet/medical-speciality-type-provider: ValueSet.expansion.contains[88]: vsd-9: 'Must have a code if not abstract' Rule 'Must have a code if not abstract' Failed
 == input/hcx-definitions/ValueSet-procedure-type-description.json ==
 ERROR: ValueSet.expansion.contains[0].code: Error parsing JSON: the primitive value must be a string
 ERROR: ValueSet.expansion.contains[1].code: Error parsing JSON: the primitive value must be a string
