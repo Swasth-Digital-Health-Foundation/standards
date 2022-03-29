@@ -2176,51 +2176,6 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
     </element>
     <element id="Composition.section.entry">
       <path value="Composition.section.entry"/>
-      <slicing>
-        <discriminator>
-          <type value="value"/>
-          <path value="url"/>
-        </discriminator>
-        <ordered value="false"/>
-        <rules value="open"/>
-      </slicing>
-      <short value="A reference to data that supports this section"/>
-      <definition value="A reference to the actual resource from which the narrative in the section is derived."/>
-      <comment value="If there are no entries in the list, an emptyReason SHOULD be provided."/>
-      <min value="1"/>
-      <max value="*"/>
-      <base>
-        <path value="Composition.section.entry"/>
-        <min value="0"/>
-        <max value="*"/>
-      </base>
-      <type>
-        <code value="Reference"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Resource"/>
-      </type>
-      <condition value="cmp-2"/>
-      <constraint>
-        <key value="ele-1"/>
-        <severity value="error"/>
-        <human value="All FHIR elements must have a @value or children"/>
-        <expression value="hasValue() or (children().count() &gt; id.count())"/>
-        <xpath value="@value|f:*|h:div"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
-      </constraint>
-      <isModifier value="false"/>
-      <isSummary value="false"/>
-      <mapping>
-        <identity value="rim"/>
-        <map value=".outboundRelationship[typeCode=COMP] or  .participation[typeCode=SBJ]"/>
-      </mapping>
-      <mapping>
-        <identity value="cda"/>
-        <map value=".entry"/>
-      </mapping>
-    </element>
-    <element id="Composition.section.entry:claim">
-      <path value="Composition.section.entry"/>
-      <sliceName value="claim"/>
       <short value="A reference to the claim that the pre-determination/pre-authorization/claim request refers to."/>
       <definition value="A reference to the claim that the pre-determination/pre-authorization/claim request refers to."/>
       <comment value="If there are no entries in the list, an emptyReason SHOULD be provided."/>
@@ -2234,43 +2189,6 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
       <type>
         <code value="Reference"/>
         <targetProfile value="https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-Claim.html"/>
-      </type>
-      <condition value="cmp-2"/>
-      <constraint>
-        <key value="ele-1"/>
-        <severity value="error"/>
-        <human value="All FHIR elements must have a @value or children"/>
-        <expression value="hasValue() or (children().count() &gt; id.count())"/>
-        <xpath value="@value|f:*|h:div"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
-      </constraint>
-      <isModifier value="false"/>
-      <isSummary value="false"/>
-      <mapping>
-        <identity value="rim"/>
-        <map value=".outboundRelationship[typeCode=COMP] or  .participation[typeCode=SBJ]"/>
-      </mapping>
-      <mapping>
-        <identity value="cda"/>
-        <map value=".entry"/>
-      </mapping>
-    </element>
-    <element id="Composition.section.entry:signature">
-      <path value="Composition.section.entry"/>
-      <sliceName value="signature"/>
-      <short value="A reference to the signature in the pre-determination/pre-authorization/claim request refers to."/>
-      <definition value="A reference to the signature in the pre-determination/pre-authorization/claim request refers to."/>
-      <comment value="If there are no entries in the list, an emptyReason SHOULD be provided."/>
-      <min value="0"/>
-      <max value="*"/>
-      <base>
-        <path value="Composition.section.entry"/>
-        <min value="0"/>
-        <max value="*"/>
-      </base>
-      <type>
-        <code value="Reference"/>
-        <targetProfile value="https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-HCXSignatureExtension.html"/>
       </type>
       <condition value="cmp-2"/>
       <constraint>
@@ -2400,40 +2318,13 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
     </element>
     <element id="Composition.section.entry">
       <path value="Composition.section.entry"/>
-      <slicing>
-        <discriminator>
-          <type value="value"/>
-          <path value="url"/>
-        </discriminator>
-        <ordered value="false"/>
-        <rules value="open"/>
-      </slicing>
-      <min value="1"/>
-    </element>
-    <element id="Composition.section.entry:claim">
-      <path value="Composition.section.entry"/>
-      <sliceName value="claim"/>
       <short value="A reference to the claim that the pre-determination/pre-authorization/claim request refers to."/>
       <definition value="A reference to the claim that the pre-determination/pre-authorization/claim request refers to."/>
-      <comment value="If there are no entries in the list, an emptyReason SHOULD be provided."/>
       <min value="1"/>
       <max value="1"/>
       <type>
         <code value="Reference"/>
         <targetProfile value="https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-Claim.html"/>
-      </type>
-    </element>
-    <element id="Composition.section.entry:signature">
-      <path value="Composition.section.entry"/>
-      <sliceName value="signature"/>
-      <short value="A reference to the signature in the pre-determination/pre-authorization/claim request refers to."/>
-      <definition value="A reference to the signature in the pre-determination/pre-authorization/claim request refers to."/>
-      <comment value="If there are no entries in the list, an emptyReason SHOULD be provided."/>
-      <min value="0"/>
-      <max value="*"/>
-      <type>
-        <code value="Reference"/>
-        <targetProfile value="https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-HCXSignatureExtension.html"/>
       </type>
     </element>
   </differential>

@@ -1,12 +1,12 @@
 ﻿HCX Core : Validation Results
 =========================================
 
-err = 193, warn = 212, info = 0
-IG Publisher Version: 1.1.97 Out of date - current version is 1.1.112
-Generated Wed Mar 16 17:02:37 IST 2022. FHIR version 4.0.1 for ig#0.0.1 (canonical = https://fhir-ig-demo)
+err = 189, warn = 212, info = 0
+IG Publisher Version: 1.1.97 Out of date - current version is 1.1.113
+Generated Tue Mar 29 16:45:13 IST 2022. FHIR version 4.0.1 for ig#0.0.1 (canonical = https://fhir-ig-demo)
  Build Errors : 1 / 1 / 0
  /Users/rayulu/work/Sanketika/Swasth/repository/IG-Publisher/input/hcx-definitions/structuredefinition-Claim : 1 / 43 / 1
- /Users/rayulu/work/Sanketika/Swasth/repository/IG-Publisher/input/hcx-definitions/structuredefinition-ClaimRequestDocument : 4 / 1 / 1
+ /Users/rayulu/work/Sanketika/Swasth/repository/IG-Publisher/input/hcx-definitions/structuredefinition-ClaimRequestDocument : 0 / 1 / 1
  /Users/rayulu/work/Sanketika/Swasth/repository/IG-Publisher/input/hcx-definitions/structuredefinition-ClaimResponse : 1 / 27 / 1
  /Users/rayulu/work/Sanketika/Swasth/repository/IG-Publisher/input/hcx-definitions/structuredefinition-ClaimResponseDocument : 0 / 1 / 1
  /Users/rayulu/work/Sanketika/Swasth/repository/IG-Publisher/input/hcx-definitions/structuredefinition-Communication : 24 / 1 / 1
@@ -85,10 +85,6 @@ WARNING: StructureDefinition/Claim: StructureDefinition.snapshot.element[63].typ
 WARNING: StructureDefinition/Claim: StructureDefinition.snapshot.element[117].type[0].targetProfile[0]: Unable to resolve profile https://nrces.in/ndhm/fhir/r4/StructureDefinition-Encounter.html
 WARNING: StructureDefinition.where(url = 'https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-Claim.html'): The Implementation Guide contains no examples for this profile
 == input/hcx-definitions/StructureDefinition-ClaimRequestDocument.json ==
-ERROR: Composition.section.entry: The target profile https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-HCXSignatureExtension.html is not a valid constraint on the base ([CanonicalType[http://hl7.org/fhir/StructureDefinition/Resource]]) at Composition.section.entry
-ERROR: StructureDefinition/ClaimRequestDocument: StructureDefinition: The target profile https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-HCXSignatureExtension.html is not a valid constraint on the base ([CanonicalType[http://hl7.org/fhir/StructureDefinition/Resource]]) at Composition.section.entry
-ERROR: StructureDefinition/ClaimRequestDocument: StructureDefinition.differential.element[6].type[0].targetProfile[0]: Profile https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-HCXSignatureExtension.html is for type StructureDefinition[http://hl7.org/fhir/StructureDefinition/Extension], which is not a Resource (which is required because the Composition.section.entry element has type Reference)
-ERROR: StructureDefinition/ClaimRequestDocument: StructureDefinition.snapshot.element[53].type[0].targetProfile[0]: Profile https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-HCXSignatureExtension.html is for type StructureDefinition[http://hl7.org/fhir/StructureDefinition/Extension], which is not a Resource (which is required because the Composition.section.entry element has type Reference)
 WARNING: StructureDefinition.where(url = 'https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-ClaimRequestDocument.html'): The Implementation Guide contains no examples for this profile
 == input/hcx-definitions/StructureDefinition-ClaimResponse.json ==
 ERROR: StructureDefinition.where(url = 'https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-ClaimResponse.html'): The element ClaimResponse.insurer is out of order (and maybe others after it)
