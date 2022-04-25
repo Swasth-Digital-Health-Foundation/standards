@@ -1,9 +1,9 @@
-﻿HCX_Core : Validation Results
+﻿HCXCore : Validation Results
 =========================================
 
-err = 1, warn = 211, info = 1
+err = 1, warn = 210, info = 1
 IG Publisher Version: 1.1.115
-Generated Mon Apr 25 22:50:32 IST 2022. FHIR version 4.0.1 for ig#0.0.1 (canonical = https://fhir-ig-demo)
+Generated Mon Apr 25 23:09:35 IST 2022. FHIR version 4.0.1 for ig#0.0.1 (canonical = https://fhir-ig-demo)
  Build Errors : 1 / 1 / 0
  /Users/rayulu/work/Sanketika/Swasth/repository/IG-Publisher/input/hcx-definitions/structuredefinition-Claim : 0 / 43 / 1
  /Users/rayulu/work/Sanketika/Swasth/repository/IG-Publisher/input/hcx-definitions/structuredefinition-ClaimRequestDocument : 0 / 1 / 1
@@ -34,7 +34,7 @@ Generated Mon Apr 25 22:50:32 IST 2022. FHIR version 4.0.1 for ig#0.0.1 (canonic
  /Users/rayulu/work/Sanketika/Swasth/repository/IG-Publisher/input/hcx-definitions/valueset-insurance-company-owners : 0 / 1 / 1
  /Users/rayulu/work/Sanketika/Swasth/repository/IG-Publisher/input/hcx-definitions/valueset-medical-speciality-type-provider : 0 / 1 / 1
  /Users/rayulu/work/Sanketika/Swasth/repository/IG-Publisher/input/hcx-definitions/valueset-procedure-type-description : 0 / 1 / 1
- /Users/rayulu/work/Sanketika/Swasth/repository/IG-Publisher/input/ig : 0 / 1 / 1
+ /Users/rayulu/work/Sanketika/Swasth/repository/IG-Publisher/input/ig : 0 / 0 / 1
 </table>
 == n/a ==
 ERROR: ImplementationGuide.definition.parameter[23].value: Supressed messages file not found
@@ -99,7 +99,7 @@ WARNING: StructureDefinition/ClaimResponse: StructureDefinition.differential.ele
 WARNING: StructureDefinition/ClaimResponse: StructureDefinition.differential.element[4].type[0].targetProfile[0]: Unable to resolve profile https://nrces.in/ndhm/fhir/r4/StructureDefinition/Practitioner
 WARNING: StructureDefinition/ClaimResponse: StructureDefinition.differential.element[4].type[0].targetProfile[0]: Unable to resolve profile https://nrces.in/ndhm/fhir/r4/StructureDefinition/PractitionerRole
 WARNING: StructureDefinition/ClaimResponse: StructureDefinition.differential.element[4].type[0].targetProfile[0]: Unable to resolve profile https://nrces.in/ndhm/fhir/r4/StructureDefinition/Organization
-WARNING: StructureDefinition/ClaimResponse: StructureDefinition.differential.element[6].binding: The valueSet reference https://raw.githubusercontent.com/Swasth-Digital-Health-Foundation/standards/main/FHIR%20Definitions/valueset-denial-codes.json on element ClaimResponse.item.adjudication.reason could not be resolved
+WARNING: StructureDefinition/ClaimResponse: StructureDefinition.differential.element[6].binding: The valueSet reference https://swasth-digital-health-foundation.github.io/standards/v0.7/ValueSet-claim-denial-codes.html on element ClaimResponse.item.adjudication.reason could not be resolved
 WARNING: StructureDefinition/ClaimResponse: StructureDefinition.differential.element[7].type[0].targetProfile[0]: Unable to resolve profile https://nrces.in/ndhm/fhir/r4/StructureDefinition/Practitioner
 WARNING: StructureDefinition/ClaimResponse: StructureDefinition.differential.element[7].type[0].targetProfile[0]: Unable to resolve profile https://nrces.in/ndhm/fhir/r4/StructureDefinition/PractitionerRole
 WARNING: StructureDefinition/ClaimResponse: StructureDefinition.differential.element[7].type[0].targetProfile[0]: Unable to resolve profile https://nrces.in/ndhm/fhir/r4/StructureDefinition/Organization
@@ -108,7 +108,7 @@ WARNING: StructureDefinition/ClaimResponse: StructureDefinition.snapshot.element
 WARNING: StructureDefinition/ClaimResponse: StructureDefinition.snapshot.element[17].type[0].targetProfile[0]: Unable to resolve profile https://nrces.in/ndhm/fhir/r4/StructureDefinition/Practitioner
 WARNING: StructureDefinition/ClaimResponse: StructureDefinition.snapshot.element[17].type[0].targetProfile[0]: Unable to resolve profile https://nrces.in/ndhm/fhir/r4/StructureDefinition/PractitionerRole
 WARNING: StructureDefinition/ClaimResponse: StructureDefinition.snapshot.element[17].type[0].targetProfile[0]: Unable to resolve profile https://nrces.in/ndhm/fhir/r4/StructureDefinition/Organization
-WARNING: StructureDefinition/ClaimResponse: StructureDefinition.snapshot.element[35].binding: The valueSet reference https://raw.githubusercontent.com/Swasth-Digital-Health-Foundation/standards/main/FHIR%20Definitions/valueset-denial-codes.json on element ClaimResponse.item.adjudication.reason could not be resolved
+WARNING: StructureDefinition/ClaimResponse: StructureDefinition.snapshot.element[35].binding: The valueSet reference https://swasth-digital-health-foundation.github.io/standards/v0.7/ValueSet-claim-denial-codes.html on element ClaimResponse.item.adjudication.reason could not be resolved
 WARNING: StructureDefinition/ClaimResponse: StructureDefinition.snapshot.element[59].type[0].targetProfile[0]: Unable to resolve profile https://nrces.in/ndhm/fhir/r4/StructureDefinition/Practitioner
 WARNING: StructureDefinition/ClaimResponse: StructureDefinition.snapshot.element[59].type[0].targetProfile[0]: Unable to resolve profile https://nrces.in/ndhm/fhir/r4/StructureDefinition/PractitionerRole
 WARNING: StructureDefinition/ClaimResponse: StructureDefinition.snapshot.element[59].type[0].targetProfile[0]: Unable to resolve profile https://nrces.in/ndhm/fhir/r4/StructureDefinition/Organization
@@ -279,4 +279,3 @@ WARNING: ValueSet/medical-speciality-type-provider: ValueSet: vsd-0: 'Name shoul
 == input/hcx-definitions/ValueSet-procedure-type-description.json ==
 WARNING: ValueSet/procedure-type-description: ValueSet: vsd-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Rule 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Failed
 == input/ig.json ==
-WARNING: ImplementationGuide/hl7.fhir.in.core: ImplementationGuide.definition.page.page[0].page[17].title: value should not start or finish with whitespace 'HCX...Request '

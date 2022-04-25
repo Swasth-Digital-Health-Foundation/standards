@@ -7,7 +7,7 @@
   },
   "url": "https://fhir-ig-demo/ImplementationGuide/hl7.fhir.in.core",
   "version": "0.0.1",
-  "name": "HCX_Core",
+  "name": "HCXCore",
   "title": "FHIR Implementation Guide for HCX",
   "status": "draft",
   "date": "2021-08-24",
@@ -913,7 +913,7 @@
             },
             {
               "nameUrl": "StructureDefinition-CoverageEligibilityRequest.html",
-              "title": "HCX Coverage Eligibility Request ",
+              "title": "HCX Coverage Eligibility Request",
               "generation": "generated"
             },
             {

@@ -9,7 +9,7 @@ These requirements were originally developed, balloted, and published in FHIR DS
   </text>
   <url value="https://fhir-ig-demo/ImplementationGuide/hl7.fhir.in.core"/>
   <version value="0.0.1"/>
-  <name value="HCX_Core"/>
+  <name value="HCXCore"/>
   <title value="FHIR Implementation Guide for HCX"/>
   <status value="draft"/>
   <date value="2021-08-24"/>
@@ -687,7 +687,7 @@ These requirements were originally developed, balloted, and published in FHIR DS
         </page>
         <page>
           <nameUrl value="StructureDefinition-CoverageEligibilityRequest.html"/>
-          <title value="HCX Coverage Eligibility Request "/>
+          <title value="HCX Coverage Eligibility Request"/>
           <generation value="generated"/>
         </page>
         <page>

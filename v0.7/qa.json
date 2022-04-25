@@ -1,11 +1,11 @@
 {
   "url": "https://fhir-ig-demo/ImplementationGuide/hl7.fhir.in.core",
-  "name": "HCX_Core",
+  "name": "HCXCore",
   "package-id": "ig",
   "ig-ver": "0.0.1",
-  "date": "Mon, 25 Apr, 2022 22:49:31 +0530",
+  "date": "Mon, 25 Apr, 2022 23:08:30 +0530",
   "errs": 1,
-  "warnings": 211,
+  "warnings": 210,
   "hints": 1,
   "version": "4.0.1",
   "tool": "5.0.0-snapshot1 (3)"
