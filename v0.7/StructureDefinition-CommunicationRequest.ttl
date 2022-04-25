@@ -9,7 +9,7 @@
   fhir:nodeRole fhir:treeRoot;
   fhir:Resource.id [ fhir:value "CommunicationRequest"];
   fhir:Resource.meta [
-     fhir:Meta.lastUpdated [ fhir:value "2019-11-01T03:59:23.356+05:30"^^xsd:dateTime ]
+     fhir:Meta.lastUpdated [ fhir:value "2019-11-01T09:29:23.356+11:00"^^xsd:dateTime ]
   ];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
@@ -73,8 +73,8 @@
   fhir:StructureDefinition.abstract [ fhir:value "false"^^xsd:boolean];
   fhir:StructureDefinition.type [ fhir:value "CommunicationRequest"];
   fhir:StructureDefinition.baseDefinition [
-     fhir:value "http://hl7.org/fhir/StructureDefinition/DomainResource";
-     fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+     fhir:value "http://hl7.org/fhir/StructureDefinition/CommunicationRequest";
+     fhir:link <http://hl7.org/fhir/StructureDefinition/CommunicationRequest>
   ];
   fhir:StructureDefinition.derivation [ fhir:value "specialization"];
   fhir:StructureDefinition.snapshot [
@@ -87,7 +87,7 @@
        fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
        fhir:ElementDefinition.max [ fhir:value "*" ];
        fhir:ElementDefinition.base [
-         fhir:ElementDefinition.base.path [ fhir:value "DomainResource" ];
+         fhir:ElementDefinition.base.path [ fhir:value "CommunicationRequest" ];
          fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
          fhir:ElementDefinition.base.max [ fhir:value "*" ]
        ];
@@ -401,15 +401,6 @@
        fhir:index 7;
        fhir:Element.id [ fhir:value "CommunicationRequest.extension" ];
        fhir:ElementDefinition.path [ fhir:value "CommunicationRequest.extension" ];
-       fhir:ElementDefinition.slicing [
-         fhir:ElementDefinition.slicing.discriminator [
-           fhir:index 0;
-           fhir:ElementDefinition.slicing.discriminator.type [ fhir:value "value" ];
-           fhir:ElementDefinition.slicing.discriminator.path [ fhir:value "url" ]
-         ];
-         fhir:ElementDefinition.slicing.description [ fhir:value "Extensions are always sliced by (at least) url" ];
-         fhir:ElementDefinition.slicing.rules [ fhir:value "open" ]
-       ];
        fhir:ElementDefinition.short [ fhir:value "Additional content defined by implementations" ];
        fhir:ElementDefinition.definition [ fhir:value "May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension." ];
        fhir:ElementDefinition.comment [ fhir:value "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." ];
@@ -465,15 +456,6 @@
        fhir:index 8;
        fhir:Element.id [ fhir:value "CommunicationRequest.modifierExtension" ];
        fhir:ElementDefinition.path [ fhir:value "CommunicationRequest.modifierExtension" ];
-       fhir:ElementDefinition.slicing [
-         fhir:ElementDefinition.slicing.discriminator [
-           fhir:index 0;
-           fhir:ElementDefinition.slicing.discriminator.type [ fhir:value "value" ];
-           fhir:ElementDefinition.slicing.discriminator.path [ fhir:value "url" ]
-         ];
-         fhir:ElementDefinition.slicing.description [ fhir:value "Extensions are always sliced by (at least) url" ];
-         fhir:ElementDefinition.slicing.rules [ fhir:value "open" ]
-       ];
        fhir:ElementDefinition.short [ fhir:value "Extensions that cannot be ignored" ];
        fhir:ElementDefinition.definition [ fhir:value "May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself)." ];
        fhir:ElementDefinition.comment [ fhir:value "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." ];
@@ -529,69 +511,48 @@
        ]
      ], [
        fhir:index 9;
-       fhir:Element.id [ fhir:value "CommunicationRequest.about" ];
-       fhir:ElementDefinition.path [ fhir:value "CommunicationRequest.about" ];
-       fhir:ElementDefinition.short [ fhir:value "Resources that pertain to this communication request" ];
-       fhir:ElementDefinition.definition [ fhir:value "Other resources that pertain to this communication request and to which this communication request should be associated." ];
-       fhir:ElementDefinition.comment [ fhir:value "Don't use CommunicationRequest.about element when a more specific element exists, such as basedOn, reasonReference, or replaces." ];
+       fhir:Element.id [ fhir:value "CommunicationRequest.identifier" ];
+       fhir:ElementDefinition.path [ fhir:value "CommunicationRequest.identifier" ];
+       fhir:ElementDefinition.short [ fhir:value "Unique identifier" ];
+       fhir:ElementDefinition.definition [ fhir:value "Business identifiers assigned to this communication request by the performer or other systems which remain constant as the resource is updated and propagates from server to server." ];
+       fhir:ElementDefinition.comment [ fhir:value "This is a business identifier, not a resource identifier (see [discussion](resource.html#identifiers)).  It is best practice for the identifier to only appear on a single resource instance, however business practices may occasionally dictate that multiple resource instances with the same identifier can exist - possibly even with different resource types.  For example, multiple Patient and a Person resource instance might share the same social insurance number." ];
+       fhir:ElementDefinition.requirements [ fhir:value "Allows identification of the communication request as it is known by various participating systems and in a way that remains consistent across servers." ];
        fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
        fhir:ElementDefinition.max [ fhir:value "*" ];
        fhir:ElementDefinition.base [
-         fhir:ElementDefinition.base.path [ fhir:value "CommunicationRequest.about" ];
+         fhir:ElementDefinition.base.path [ fhir:value "CommunicationRequest.identifier" ];
          fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
          fhir:ElementDefinition.base.max [ fhir:value "*" ]
        ];
        fhir:ElementDefinition.type [
          fhir:index 0;
-         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
-         fhir:ElementDefinition.type.targetProfile [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Resource";
-           fhir:index 0;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Resource>
+         fhir:ElementDefinition.type.code [ fhir:value "Identifier" ]
+       ];
+       fhir:ElementDefinition.constraint [
+         fhir:index 0;
+         fhir:ElementDefinition.constraint.key [ fhir:value "ele-1" ];
+         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
+         fhir:ElementDefinition.constraint.human [ fhir:value "All FHIR elements must have a @value or children" ];
+         fhir:ElementDefinition.constraint.expression [ fhir:value "hasValue() or (children().count() > id.count())" ];
+         fhir:ElementDefinition.constraint.xpath [ fhir:value "@value|f:*|h:div" ];
+         fhir:ElementDefinition.constraint.source [
+           fhir:value "http://hl7.org/fhir/StructureDefinition/Element";
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ];
-       fhir:ElementDefinition.mapping [
-         fhir:index 0;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "workflow" ];
-         fhir:ElementDefinition.mapping.map [ fhir:value "Request.supportingInfo" ]
-       ], [
-         fhir:index 1;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "w5" ];
-         fhir:ElementDefinition.mapping.map [ fhir:value "FiveWs.context" ]
-       ]
-     ], [
-       fhir:index 10;
-       fhir:Element.id [ fhir:value "CommunicationRequest.authoredOn" ];
-       fhir:ElementDefinition.path [ fhir:value "CommunicationRequest.authoredOn" ];
-       fhir:ElementDefinition.short [ fhir:value "When request transitioned to being actionable" ];
-       fhir:ElementDefinition.definition [ fhir:value "For draft requests, indicates the date of initial creation.  For requests with other statuses, indicates the date of activation." ];
-       fhir:ElementDefinition.alias [
-         fhir:value "createdOn";
-         fhir:index 0
-       ];
-       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
-       fhir:ElementDefinition.max [ fhir:value "1" ];
-       fhir:ElementDefinition.base [
-         fhir:ElementDefinition.base.path [ fhir:value "CommunicationRequest.authoredOn" ];
-         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
-         fhir:ElementDefinition.base.max [ fhir:value "1" ]
-       ];
-       fhir:ElementDefinition.type [
-         fhir:index 0;
-         fhir:ElementDefinition.type.code [ fhir:value "dateTime" ]
-       ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
        fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
        fhir:ElementDefinition.mapping [
          fhir:index 0;
          fhir:ElementDefinition.mapping.identity [ fhir:value "workflow" ];
-         fhir:ElementDefinition.mapping.map [ fhir:value "Request.authoredOn" ]
+         fhir:ElementDefinition.mapping.map [ fhir:value "Request.identifier" ]
        ], [
          fhir:index 1;
          fhir:ElementDefinition.mapping.identity [ fhir:value "w5" ];
-         fhir:ElementDefinition.mapping.map [ fhir:value "FiveWs.recorded" ]
+         fhir:ElementDefinition.mapping.map [ fhir:value "FiveWs.identifier" ]
        ]
      ], [
-       fhir:index 11;
+       fhir:index 10;
        fhir:Element.id [ fhir:value "CommunicationRequest.basedOn" ];
        fhir:ElementDefinition.path [ fhir:value "CommunicationRequest.basedOn" ];
        fhir:ElementDefinition.short [ fhir:value "Fulfills plan or proposal" ];
@@ -617,6 +578,19 @@
            fhir:link <http://hl7.org/fhir/StructureDefinition/Resource>
          ]
        ];
+       fhir:ElementDefinition.constraint [
+         fhir:index 0;
+         fhir:ElementDefinition.constraint.key [ fhir:value "ele-1" ];
+         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
+         fhir:ElementDefinition.constraint.human [ fhir:value "All FHIR elements must have a @value or children" ];
+         fhir:ElementDefinition.constraint.expression [ fhir:value "hasValue() or (children().count() > id.count())" ];
+         fhir:ElementDefinition.constraint.xpath [ fhir:value "@value|f:*|h:div" ];
+         fhir:ElementDefinition.constraint.source [
+           fhir:value "http://hl7.org/fhir/StructureDefinition/Element";
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+         ]
+       ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
        fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
        fhir:ElementDefinition.mapping [
          fhir:index 0;
@@ -628,7 +602,217 @@
          fhir:ElementDefinition.mapping.map [ fhir:value ".outboundRelationship[typeCode=FLFS].target" ]
        ]
      ], [
+       fhir:index 11;
+       fhir:Element.id [ fhir:value "CommunicationRequest.replaces" ];
+       fhir:ElementDefinition.path [ fhir:value "CommunicationRequest.replaces" ];
+       fhir:ElementDefinition.short [ fhir:value "Request(s) replaced by this request" ];
+       fhir:ElementDefinition.definition [ fhir:value "Completed or terminated request(s) whose function is taken by this new request." ];
+       fhir:ElementDefinition.comment [ fhir:value "The replacement could be because the initial request was immediately rejected (due to an issue) or because the previous request was completed, but the need for the action described by the request remains ongoing." ];
+       fhir:ElementDefinition.requirements [ fhir:value "Allows tracing the continuation of a therapy or administrative process instantiated through multiple requests." ];
+       fhir:ElementDefinition.alias [
+         fhir:value "supersedes";
+         fhir:index 0
+       ], [
+         fhir:value "prior";
+         fhir:index 1
+       ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "CommunicationRequest.replaces" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
+         fhir:ElementDefinition.type.targetProfile [
+           fhir:value "http://hl7.org/fhir/StructureDefinition/CommunicationRequest";
+           fhir:index 0;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/CommunicationRequest>
+         ]
+       ];
+       fhir:ElementDefinition.constraint [
+         fhir:index 0;
+         fhir:ElementDefinition.constraint.key [ fhir:value "ele-1" ];
+         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
+         fhir:ElementDefinition.constraint.human [ fhir:value "All FHIR elements must have a @value or children" ];
+         fhir:ElementDefinition.constraint.expression [ fhir:value "hasValue() or (children().count() > id.count())" ];
+         fhir:ElementDefinition.constraint.xpath [ fhir:value "@value|f:*|h:div" ];
+         fhir:ElementDefinition.constraint.source [
+           fhir:value "http://hl7.org/fhir/StructureDefinition/Element";
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+         ]
+       ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "workflow" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "Request.replaces" ]
+       ], [
+         fhir:index 1;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value ".outboundRelationship[typeCode=RPLC].target" ]
+       ]
+     ], [
        fhir:index 12;
+       fhir:Element.id [ fhir:value "CommunicationRequest.groupIdentifier" ];
+       fhir:ElementDefinition.path [ fhir:value "CommunicationRequest.groupIdentifier" ];
+       fhir:ElementDefinition.short [ fhir:value "Composite request this is part of" ];
+       fhir:ElementDefinition.definition [ fhir:value "A shared identifier common to all requests that were authorized more or less simultaneously by a single author, representing the identifier of the requisition, prescription or similar form." ];
+       fhir:ElementDefinition.comment [ fhir:value "Requests are linked either by a \"basedOn\" relationship (i.e. one request is fulfilling another) or by having a common requisition.  Requests that are part of the same requisition are generally treated independently from the perspective of changing their state or maintaining them after initial creation." ];
+       fhir:ElementDefinition.alias [
+         fhir:value "grouperId";
+         fhir:index 0
+       ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "CommunicationRequest.groupIdentifier" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Identifier" ]
+       ];
+       fhir:ElementDefinition.constraint [
+         fhir:index 0;
+         fhir:ElementDefinition.constraint.key [ fhir:value "ele-1" ];
+         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
+         fhir:ElementDefinition.constraint.human [ fhir:value "All FHIR elements must have a @value or children" ];
+         fhir:ElementDefinition.constraint.expression [ fhir:value "hasValue() or (children().count() > id.count())" ];
+         fhir:ElementDefinition.constraint.xpath [ fhir:value "@value|f:*|h:div" ];
+         fhir:ElementDefinition.constraint.source [
+           fhir:value "http://hl7.org/fhir/StructureDefinition/Element";
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+         ]
+       ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "workflow" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "Request.groupIdentifier" ]
+       ], [
+         fhir:index 1;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value ".inboundRelationship(typeCode=COMP].source[moodCode=INT].identifier" ]
+       ]
+     ], [
+       fhir:index 13;
+       fhir:Element.id [ fhir:value "CommunicationRequest.status" ];
+       fhir:ElementDefinition.path [ fhir:value "CommunicationRequest.status" ];
+       fhir:ElementDefinition.short [ fhir:value "draft | active | on-hold | revoked | completed | entered-in-error | unknown" ];
+       fhir:ElementDefinition.definition [ fhir:value "The status of the proposal or order." ];
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "CommunicationRequest.status" ];
+         fhir:ElementDefinition.base.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "code" ]
+       ];
+       fhir:ElementDefinition.constraint [
+         fhir:index 0;
+         fhir:ElementDefinition.constraint.key [ fhir:value "ele-1" ];
+         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
+         fhir:ElementDefinition.constraint.human [ fhir:value "All FHIR elements must have a @value or children" ];
+         fhir:ElementDefinition.constraint.expression [ fhir:value "hasValue() or (children().count() > id.count())" ];
+         fhir:ElementDefinition.constraint.xpath [ fhir:value "@value|f:*|h:div" ];
+         fhir:ElementDefinition.constraint.source [
+           fhir:value "http://hl7.org/fhir/StructureDefinition/Element";
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+         ]
+       ];
+       fhir:ElementDefinition.isModifier [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifierReason [ fhir:value "This element is labelled as a modifier because it is a status element that contains status entered-in-error which means that the resource should not be treated as valid." ];
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.binding [
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName" ];
+           fhir:Extension.valueString [ fhir:value "CommunicationRequestStatus" ]
+         ];
+         fhir:ElementDefinition.binding.strength [ fhir:value "required" ];
+         fhir:ElementDefinition.binding.description [ fhir:value "The status of the communication request." ];
+         fhir:ElementDefinition.binding.valueSet [
+           fhir:value "http://hl7.org/fhir/ValueSet/request-status|4.0.1";
+           fhir:link <http://hl7.org/fhir/ValueSet/request-status|4.0.1>
+         ]
+       ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "workflow" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "Request.status" ]
+       ], [
+         fhir:index 1;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "w5" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "FiveWs.status" ]
+       ]
+     ], [
+       fhir:index 14;
+       fhir:Element.id [ fhir:value "CommunicationRequest.statusReason" ];
+       fhir:ElementDefinition.path [ fhir:value "CommunicationRequest.statusReason" ];
+       fhir:ElementDefinition.short [ fhir:value "Reason for current status" ];
+       fhir:ElementDefinition.definition [ fhir:value "Captures the reason for the current state of the CommunicationRequest." ];
+       fhir:ElementDefinition.comment [ fhir:value "This is generally only used for \"exception\" statuses such as \"suspended\" or \"cancelled\".  The reason why the CommunicationRequest was created at all is captured in reasonCode, not here.  [distinct reason codes for different statuses can be enforced using invariants if they are universal bindings]." ];
+       fhir:ElementDefinition.alias [
+         fhir:value "Suspended Reason";
+         fhir:index 0
+       ], [
+         fhir:value "Cancelled Reason";
+         fhir:index 1
+       ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "CommunicationRequest.statusReason" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "CodeableConcept" ]
+       ];
+       fhir:ElementDefinition.constraint [
+         fhir:index 0;
+         fhir:ElementDefinition.constraint.key [ fhir:value "ele-1" ];
+         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
+         fhir:ElementDefinition.constraint.human [ fhir:value "All FHIR elements must have a @value or children" ];
+         fhir:ElementDefinition.constraint.expression [ fhir:value "hasValue() or (children().count() > id.count())" ];
+         fhir:ElementDefinition.constraint.xpath [ fhir:value "@value|f:*|h:div" ];
+         fhir:ElementDefinition.constraint.source [
+           fhir:value "http://hl7.org/fhir/StructureDefinition/Element";
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+         ]
+       ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.binding [
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName" ];
+           fhir:Extension.valueString [ fhir:value "CommunicationRequestStatusReason" ]
+         ];
+         fhir:ElementDefinition.binding.strength [ fhir:value "example" ];
+         fhir:ElementDefinition.binding.description [ fhir:value "Codes identifying the reason for the current state of a request." ]
+       ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "workflow" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "Request.statusReason" ]
+       ], [
+         fhir:index 1;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value ".inboundRelationship[typeCode=SUBJ].source[classCode=CACT, moodCode=EVN].reasonCOde" ]
+       ]
+     ], [
+       fhir:index 15;
        fhir:Element.id [ fhir:value "CommunicationRequest.category" ];
        fhir:ElementDefinition.path [ fhir:value "CommunicationRequest.category" ];
        fhir:ElementDefinition.short [ fhir:value "Message category" ];
@@ -645,6 +829,20 @@
          fhir:index 0;
          fhir:ElementDefinition.type.code [ fhir:value "CodeableConcept" ]
        ];
+       fhir:ElementDefinition.constraint [
+         fhir:index 0;
+         fhir:ElementDefinition.constraint.key [ fhir:value "ele-1" ];
+         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
+         fhir:ElementDefinition.constraint.human [ fhir:value "All FHIR elements must have a @value or children" ];
+         fhir:ElementDefinition.constraint.expression [ fhir:value "hasValue() or (children().count() > id.count())" ];
+         fhir:ElementDefinition.constraint.xpath [ fhir:value "@value|f:*|h:div" ];
+         fhir:ElementDefinition.constraint.source [
+           fhir:value "http://hl7.org/fhir/StructureDefinition/Element";
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+         ]
+       ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ];
        fhir:ElementDefinition.binding [
          fhir:Element.extension [
            fhir:index 0;
@@ -664,7 +862,61 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "FiveWs.class" ]
        ]
      ], [
-       fhir:index 13;
+       fhir:index 16;
+       fhir:Element.id [ fhir:value "CommunicationRequest.priority" ];
+       fhir:ElementDefinition.path [ fhir:value "CommunicationRequest.priority" ];
+       fhir:ElementDefinition.short [ fhir:value "routine | urgent | asap | stat" ];
+       fhir:ElementDefinition.definition [ fhir:value "Characterizes how quickly the proposed act must be initiated. Includes concepts such as stat, urgent, routine." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "CommunicationRequest.priority" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "code" ]
+       ];
+       fhir:ElementDefinition.meaningWhenMissing [ fhir:value "If missing, this task should be performed with normal priority" ];
+       fhir:ElementDefinition.constraint [
+         fhir:index 0;
+         fhir:ElementDefinition.constraint.key [ fhir:value "ele-1" ];
+         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
+         fhir:ElementDefinition.constraint.human [ fhir:value "All FHIR elements must have a @value or children" ];
+         fhir:ElementDefinition.constraint.expression [ fhir:value "hasValue() or (children().count() > id.count())" ];
+         fhir:ElementDefinition.constraint.xpath [ fhir:value "@value|f:*|h:div" ];
+         fhir:ElementDefinition.constraint.source [
+           fhir:value "http://hl7.org/fhir/StructureDefinition/Element";
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+         ]
+       ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.binding [
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName" ];
+           fhir:Extension.valueString [ fhir:value "CommunicationPriority" ]
+         ];
+         fhir:ElementDefinition.binding.strength [ fhir:value "required" ];
+         fhir:ElementDefinition.binding.description [ fhir:value "Codes indicating the relative importance of a communication request." ];
+         fhir:ElementDefinition.binding.valueSet [
+           fhir:value "http://hl7.org/fhir/ValueSet/request-priority|4.0.1";
+           fhir:link <http://hl7.org/fhir/ValueSet/request-priority|4.0.1>
+         ]
+       ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "workflow" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "Request.priority" ]
+       ], [
+         fhir:index 1;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "w5" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "FiveWs.grade" ]
+       ]
+     ], [
+       fhir:index 17;
        fhir:Element.id [ fhir:value "CommunicationRequest.doNotPerform" ];
        fhir:ElementDefinition.path [ fhir:value "CommunicationRequest.doNotPerform" ];
        fhir:ElementDefinition.short [ fhir:value "True if request is prohibiting action" ];
@@ -686,6 +938,18 @@
          fhir:ElementDefinition.type.code [ fhir:value "boolean" ]
        ];
        fhir:ElementDefinition.meaningWhenMissing [ fhir:value "If do not perform is not specified, the request is a positive request e.g. \"do perform\"" ];
+       fhir:ElementDefinition.constraint [
+         fhir:index 0;
+         fhir:ElementDefinition.constraint.key [ fhir:value "ele-1" ];
+         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
+         fhir:ElementDefinition.constraint.human [ fhir:value "All FHIR elements must have a @value or children" ];
+         fhir:ElementDefinition.constraint.expression [ fhir:value "hasValue() or (children().count() > id.count())" ];
+         fhir:ElementDefinition.constraint.xpath [ fhir:value "@value|f:*|h:div" ];
+         fhir:ElementDefinition.constraint.source [
+           fhir:value "http://hl7.org/fhir/StructureDefinition/Element";
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+         ]
+       ];
        fhir:ElementDefinition.isModifier [ fhir:value "true"^^xsd:boolean ];
        fhir:ElementDefinition.isModifierReason [ fhir:value "If true this element negates the specified action. For Example,  instead of a request for a communication, it is a request for the communication to not occur." ];
        fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
@@ -695,7 +959,154 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "Request.doNotPerform" ]
        ]
      ], [
-       fhir:index 14;
+       fhir:index 18;
+       fhir:Element.id [ fhir:value "CommunicationRequest.medium" ];
+       fhir:ElementDefinition.path [ fhir:value "CommunicationRequest.medium" ];
+       fhir:ElementDefinition.short [ fhir:value "A channel of communication" ];
+       fhir:ElementDefinition.definition [ fhir:value "A channel that was used for this communication (e.g. email, fax)." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "CommunicationRequest.medium" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "CodeableConcept" ]
+       ];
+       fhir:ElementDefinition.constraint [
+         fhir:index 0;
+         fhir:ElementDefinition.constraint.key [ fhir:value "ele-1" ];
+         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
+         fhir:ElementDefinition.constraint.human [ fhir:value "All FHIR elements must have a @value or children" ];
+         fhir:ElementDefinition.constraint.expression [ fhir:value "hasValue() or (children().count() > id.count())" ];
+         fhir:ElementDefinition.constraint.xpath [ fhir:value "@value|f:*|h:div" ];
+         fhir:ElementDefinition.constraint.source [
+           fhir:value "http://hl7.org/fhir/StructureDefinition/Element";
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+         ]
+       ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.binding [
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName" ];
+           fhir:Extension.valueString [ fhir:value "CommunicationMedium" ]
+         ];
+         fhir:ElementDefinition.binding.strength [ fhir:value "example" ];
+         fhir:ElementDefinition.binding.description [ fhir:value "Codes for communication mediums such as phone, fax, email, in person, etc." ];
+         fhir:ElementDefinition.binding.valueSet [
+           fhir:value "http://terminology.hl7.org/ValueSet/v3-ParticipationMode";
+           fhir:link <http://terminology.hl7.org/ValueSet/v3-ParticipationMode>
+         ]
+       ]
+     ], [
+       fhir:index 19;
+       fhir:Element.id [ fhir:value "CommunicationRequest.subject" ];
+       fhir:ElementDefinition.path [ fhir:value "CommunicationRequest.subject" ];
+       fhir:ElementDefinition.short [ fhir:value "Focus of message" ];
+       fhir:ElementDefinition.definition [ fhir:value "The patient or group that is the focus of this communication request." ];
+       fhir:ElementDefinition.alias [
+         fhir:value "patient";
+         fhir:index 0
+       ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "CommunicationRequest.subject" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
+         fhir:ElementDefinition.type.targetProfile [
+           fhir:value "http://hl7.org/fhir/StructureDefinition/Patient";
+           fhir:index 0;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Patient>
+         ], [
+           fhir:value "http://hl7.org/fhir/StructureDefinition/Group";
+           fhir:index 1;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Group>
+         ]
+       ];
+       fhir:ElementDefinition.constraint [
+         fhir:index 0;
+         fhir:ElementDefinition.constraint.key [ fhir:value "ele-1" ];
+         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
+         fhir:ElementDefinition.constraint.human [ fhir:value "All FHIR elements must have a @value or children" ];
+         fhir:ElementDefinition.constraint.expression [ fhir:value "hasValue() or (children().count() > id.count())" ];
+         fhir:ElementDefinition.constraint.xpath [ fhir:value "@value|f:*|h:div" ];
+         fhir:ElementDefinition.constraint.source [
+           fhir:value "http://hl7.org/fhir/StructureDefinition/Element";
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+         ]
+       ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "workflow" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "Request.subject" ]
+       ], [
+         fhir:index 1;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "w5" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "FiveWs.subject[x]" ]
+       ], [
+         fhir:index 2;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "w5" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "FiveWs.subject" ]
+       ]
+     ], [
+       fhir:index 20;
+       fhir:Element.id [ fhir:value "CommunicationRequest.about" ];
+       fhir:ElementDefinition.path [ fhir:value "CommunicationRequest.about" ];
+       fhir:ElementDefinition.short [ fhir:value "Resources that pertain to this communication request" ];
+       fhir:ElementDefinition.definition [ fhir:value "Other resources that pertain to this communication request and to which this communication request should be associated." ];
+       fhir:ElementDefinition.comment [ fhir:value "Don't use CommunicationRequest.about element when a more specific element exists, such as basedOn, reasonReference, or replaces." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "CommunicationRequest.about" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
+         fhir:ElementDefinition.type.targetProfile [
+           fhir:value "http://hl7.org/fhir/StructureDefinition/Resource";
+           fhir:index 0;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Resource>
+         ]
+       ];
+       fhir:ElementDefinition.constraint [
+         fhir:index 0;
+         fhir:ElementDefinition.constraint.key [ fhir:value "ele-1" ];
+         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
+         fhir:ElementDefinition.constraint.human [ fhir:value "All FHIR elements must have a @value or children" ];
+         fhir:ElementDefinition.constraint.expression [ fhir:value "hasValue() or (children().count() > id.count())" ];
+         fhir:ElementDefinition.constraint.xpath [ fhir:value "@value|f:*|h:div" ];
+         fhir:ElementDefinition.constraint.source [
+           fhir:value "http://hl7.org/fhir/StructureDefinition/Element";
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+         ]
+       ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "workflow" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "Request.supportingInfo" ]
+       ], [
+         fhir:index 1;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "w5" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "FiveWs.context" ]
+       ]
+     ], [
+       fhir:index 21;
        fhir:Element.id [ fhir:value "CommunicationRequest.encounter" ];
        fhir:ElementDefinition.path [ fhir:value "CommunicationRequest.encounter" ];
        fhir:ElementDefinition.short [ fhir:value "Encounter created as part of" ];
@@ -717,6 +1128,19 @@
            fhir:link <http://hl7.org/fhir/StructureDefinition/Encounter>
          ]
        ];
+       fhir:ElementDefinition.constraint [
+         fhir:index 0;
+         fhir:ElementDefinition.constraint.key [ fhir:value "ele-1" ];
+         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
+         fhir:ElementDefinition.constraint.human [ fhir:value "All FHIR elements must have a @value or children" ];
+         fhir:ElementDefinition.constraint.expression [ fhir:value "hasValue() or (children().count() > id.count())" ];
+         fhir:ElementDefinition.constraint.xpath [ fhir:value "@value|f:*|h:div" ];
+         fhir:ElementDefinition.constraint.source [
+           fhir:value "http://hl7.org/fhir/StructureDefinition/Element";
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+         ]
+       ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
        fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
        fhir:ElementDefinition.mapping [
          fhir:index 0;
@@ -728,158 +1152,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "FiveWs.context" ]
        ]
      ], [
-       fhir:index 15;
-       fhir:Element.id [ fhir:value "CommunicationRequest.groupIdentifier" ];
-       fhir:ElementDefinition.path [ fhir:value "CommunicationRequest.groupIdentifier" ];
-       fhir:ElementDefinition.short [ fhir:value "Composite request this is part of" ];
-       fhir:ElementDefinition.definition [ fhir:value "A shared identifier common to all requests that were authorized more or less simultaneously by a single author, representing the identifier of the requisition, prescription or similar form." ];
-       fhir:ElementDefinition.comment [ fhir:value "Requests are linked either by a \"basedOn\" relationship (i.e. one request is fulfilling another) or by having a common requisition.  Requests that are part of the same requisition are generally treated independently from the perspective of changing their state or maintaining them after initial creation." ];
-       fhir:ElementDefinition.alias [
-         fhir:value "grouperId";
-         fhir:index 0
-       ];
-       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
-       fhir:ElementDefinition.max [ fhir:value "1" ];
-       fhir:ElementDefinition.base [
-         fhir:ElementDefinition.base.path [ fhir:value "CommunicationRequest.groupIdentifier" ];
-         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
-         fhir:ElementDefinition.base.max [ fhir:value "1" ]
-       ];
-       fhir:ElementDefinition.type [
-         fhir:index 0;
-         fhir:ElementDefinition.type.code [ fhir:value "Identifier" ]
-       ];
-       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
-       fhir:ElementDefinition.mapping [
-         fhir:index 0;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "workflow" ];
-         fhir:ElementDefinition.mapping.map [ fhir:value "Request.groupIdentifier" ]
-       ], [
-         fhir:index 1;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
-         fhir:ElementDefinition.mapping.map [ fhir:value ".inboundRelationship(typeCode=COMP].source[moodCode=INT].identifier" ]
-       ]
-     ], [
-       fhir:index 16;
-       fhir:Element.id [ fhir:value "CommunicationRequest.identifier" ];
-       fhir:ElementDefinition.path [ fhir:value "CommunicationRequest.identifier" ];
-       fhir:ElementDefinition.short [ fhir:value "Unique identifier" ];
-       fhir:ElementDefinition.definition [ fhir:value "Business identifiers assigned to this communication request by the performer or other systems which remain constant as the resource is updated and propagates from server to server." ];
-       fhir:ElementDefinition.comment [ fhir:value "This is a business identifier, not a resource identifier (see [discussion](http://hl7.org/fhir/R4/resource.html#identifiers)).  It is best practice for the identifier to only appear on a single resource instance, however business practices may occasionally dictate that multiple resource instances with the same identifier can exist - possibly even with different resource types.  For example, multiple Patient and a Person resource instance might share the same social insurance number." ];
-       fhir:ElementDefinition.requirements [ fhir:value "Allows identification of the communication request as it is known by various participating systems and in a way that remains consistent across servers." ];
-       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
-       fhir:ElementDefinition.max [ fhir:value "*" ];
-       fhir:ElementDefinition.base [
-         fhir:ElementDefinition.base.path [ fhir:value "CommunicationRequest.identifier" ];
-         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
-         fhir:ElementDefinition.base.max [ fhir:value "*" ]
-       ];
-       fhir:ElementDefinition.type [
-         fhir:index 0;
-         fhir:ElementDefinition.type.code [ fhir:value "Identifier" ]
-       ];
-       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
-       fhir:ElementDefinition.mapping [
-         fhir:index 0;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "workflow" ];
-         fhir:ElementDefinition.mapping.map [ fhir:value "Request.identifier" ]
-       ], [
-         fhir:index 1;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "w5" ];
-         fhir:ElementDefinition.mapping.map [ fhir:value "FiveWs.identifier" ]
-       ]
-     ], [
-       fhir:index 17;
-       fhir:Element.id [ fhir:value "CommunicationRequest.medium" ];
-       fhir:ElementDefinition.path [ fhir:value "CommunicationRequest.medium" ];
-       fhir:ElementDefinition.short [ fhir:value "A channel of communication" ];
-       fhir:ElementDefinition.definition [ fhir:value "A channel that was used for this communication (e.g. email, fax)." ];
-       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
-       fhir:ElementDefinition.max [ fhir:value "*" ];
-       fhir:ElementDefinition.base [
-         fhir:ElementDefinition.base.path [ fhir:value "CommunicationRequest.medium" ];
-         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
-         fhir:ElementDefinition.base.max [ fhir:value "*" ]
-       ];
-       fhir:ElementDefinition.type [
-         fhir:index 0;
-         fhir:ElementDefinition.type.code [ fhir:value "CodeableConcept" ]
-       ];
-       fhir:ElementDefinition.binding [
-         fhir:Element.extension [
-           fhir:index 0;
-           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName" ];
-           fhir:Extension.valueString [ fhir:value "CommunicationMedium" ]
-         ];
-         fhir:ElementDefinition.binding.strength [ fhir:value "example" ];
-         fhir:ElementDefinition.binding.description [ fhir:value "Codes for communication mediums such as phone, fax, email, in person, etc." ];
-         fhir:ElementDefinition.binding.valueSet [
-           fhir:value "http://terminology.hl7.org/ValueSet/v3-ParticipationMode";
-           fhir:link <http://terminology.hl7.org/ValueSet/v3-ParticipationMode>
-         ]
-       ]
-     ], [
-       fhir:index 18;
-       fhir:Element.id [ fhir:value "CommunicationRequest.note" ];
-       fhir:ElementDefinition.path [ fhir:value "CommunicationRequest.note" ];
-       fhir:ElementDefinition.short [ fhir:value "Comments made about communication request" ];
-       fhir:ElementDefinition.definition [ fhir:value "Comments made about the request by the requester, sender, recipient, subject or other participants." ];
-       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
-       fhir:ElementDefinition.max [ fhir:value "*" ];
-       fhir:ElementDefinition.base [
-         fhir:ElementDefinition.base.path [ fhir:value "CommunicationRequest.note" ];
-         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
-         fhir:ElementDefinition.base.max [ fhir:value "*" ]
-       ];
-       fhir:ElementDefinition.type [
-         fhir:index 0;
-         fhir:ElementDefinition.type.code [ fhir:value "Annotation" ]
-       ];
-       fhir:ElementDefinition.mapping [
-         fhir:index 0;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "workflow" ];
-         fhir:ElementDefinition.mapping.map [ fhir:value "Request.note" ]
-       ], [
-         fhir:index 1;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
-         fhir:ElementDefinition.mapping.map [ fhir:value ".inboundRelationship(typeCode=SUBJ].source[classCode=ANNGEN, moodCode=EVN].value[xsi:type=ST]" ]
-       ]
-     ], [
-       fhir:index 19;
-       fhir:Element.id [ fhir:value "CommunicationRequest.occurrence[x]" ];
-       fhir:ElementDefinition.path [ fhir:value "CommunicationRequest.occurrence[x]" ];
-       fhir:ElementDefinition.short [ fhir:value "When scheduled" ];
-       fhir:ElementDefinition.definition [ fhir:value "The time when this communication is to occur." ];
-       fhir:ElementDefinition.alias [
-         fhir:value "timing";
-         fhir:index 0
-       ];
-       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
-       fhir:ElementDefinition.max [ fhir:value "1" ];
-       fhir:ElementDefinition.base [
-         fhir:ElementDefinition.base.path [ fhir:value "CommunicationRequest.occurrence[x]" ];
-         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
-         fhir:ElementDefinition.base.max [ fhir:value "1" ]
-       ];
-       fhir:ElementDefinition.type [
-         fhir:index 0;
-         fhir:ElementDefinition.type.code [ fhir:value "dateTime" ]
-       ], [
-         fhir:index 1;
-         fhir:ElementDefinition.type.code [ fhir:value "Period" ]
-       ];
-       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
-       fhir:ElementDefinition.mapping [
-         fhir:index 0;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "workflow" ];
-         fhir:ElementDefinition.mapping.map [ fhir:value "Request.occurrence[x]" ]
-       ], [
-         fhir:index 1;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "w5" ];
-         fhir:ElementDefinition.mapping.map [ fhir:value "FiveWs.planned" ]
-       ]
-     ], [
-       fhir:index 20;
+       fhir:index 22;
        fhir:Element.id [ fhir:value "CommunicationRequest.payload" ];
        fhir:ElementDefinition.path [ fhir:value "CommunicationRequest.payload" ];
        fhir:ElementDefinition.short [ fhir:value "Message payload" ];
@@ -894,9 +1167,171 @@
        fhir:ElementDefinition.type [
          fhir:index 0;
          fhir:ElementDefinition.type.code [ fhir:value "BackboneElement" ]
+       ];
+       fhir:ElementDefinition.constraint [
+         fhir:index 0;
+         fhir:ElementDefinition.constraint.key [ fhir:value "ele-1" ];
+         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
+         fhir:ElementDefinition.constraint.human [ fhir:value "All FHIR elements must have a @value or children" ];
+         fhir:ElementDefinition.constraint.expression [ fhir:value "hasValue() or (children().count() > id.count())" ];
+         fhir:ElementDefinition.constraint.xpath [ fhir:value "@value|f:*|h:div" ];
+         fhir:ElementDefinition.constraint.source [
+           fhir:value "http://hl7.org/fhir/StructureDefinition/Element";
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+         ]
+       ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 23;
+       fhir:Element.id [ fhir:value "CommunicationRequest.payload.id" ];
+       fhir:ElementDefinition.path [ fhir:value "CommunicationRequest.payload.id" ];
+       fhir:ElementDefinition.representation [
+         fhir:value "xmlAttr";
+         fhir:index 0
+       ];
+       fhir:ElementDefinition.short [ fhir:value "Unique id for inter-element referencing" ];
+       fhir:ElementDefinition.definition [ fhir:value "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Element.id" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type" ];
+           fhir:Extension.valueUrl [ fhir:value "string" ]
+         ];
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhirpath/System.String" ]
+       ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
        ]
      ], [
-       fhir:index 21;
+       fhir:index 24;
+       fhir:Element.id [ fhir:value "CommunicationRequest.payload.extension" ];
+       fhir:ElementDefinition.path [ fhir:value "CommunicationRequest.payload.extension" ];
+       fhir:ElementDefinition.short [ fhir:value "Additional content defined by implementations" ];
+       fhir:ElementDefinition.definition [ fhir:value "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension." ];
+       fhir:ElementDefinition.comment [ fhir:value "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." ];
+       fhir:ElementDefinition.alias [
+         fhir:value "extensions";
+         fhir:index 0
+       ], [
+         fhir:value "user content";
+         fhir:index 1
+       ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Element.extension" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Extension" ]
+       ];
+       fhir:ElementDefinition.constraint [
+         fhir:index 0;
+         fhir:ElementDefinition.constraint.key [ fhir:value "ele-1" ];
+         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
+         fhir:ElementDefinition.constraint.human [ fhir:value "All FHIR elements must have a @value or children" ];
+         fhir:ElementDefinition.constraint.expression [ fhir:value "hasValue() or (children().count() > id.count())" ];
+         fhir:ElementDefinition.constraint.xpath [ fhir:value "@value|f:*|h:div" ];
+         fhir:ElementDefinition.constraint.source [
+           fhir:value "http://hl7.org/fhir/StructureDefinition/Element";
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+         ]
+       ], [
+         fhir:index 1;
+         fhir:ElementDefinition.constraint.key [ fhir:value "ext-1" ];
+         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
+         fhir:ElementDefinition.constraint.human [ fhir:value "Must have either extensions or value[x], not both" ];
+         fhir:ElementDefinition.constraint.expression [ fhir:value "extension.exists() != value.exists()" ];
+         fhir:ElementDefinition.constraint.xpath [ fhir:value "exists(f:extension)!=exists(f:*[starts-with(local-name(.), \"value\")])" ];
+         fhir:ElementDefinition.constraint.source [
+           fhir:value "http://hl7.org/fhir/StructureDefinition/Extension";
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Extension>
+         ]
+       ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
+       ]
+     ], [
+       fhir:index 25;
+       fhir:Element.id [ fhir:value "CommunicationRequest.payload.modifierExtension" ];
+       fhir:ElementDefinition.path [ fhir:value "CommunicationRequest.payload.modifierExtension" ];
+       fhir:ElementDefinition.short [ fhir:value "Extensions that cannot be ignored even if unrecognized" ];
+       fhir:ElementDefinition.definition [ fhir:value "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself)." ];
+       fhir:ElementDefinition.comment [ fhir:value "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." ];
+       fhir:ElementDefinition.requirements [ fhir:value "Modifier extensions allow for extensions that *cannot* be safely ignored to be clearly distinguished from the vast majority of extensions which can be safely ignored.  This promotes interoperability by eliminating the need for implementers to prohibit the presence of extensions. For further information, see the [definition of modifier extensions](http://hl7.org/fhir/R4/extensibility.html#modifierExtension)." ];
+       fhir:ElementDefinition.alias [
+         fhir:value "extensions";
+         fhir:index 0
+       ], [
+         fhir:value "user content";
+         fhir:index 1
+       ], [
+         fhir:value "modifiers";
+         fhir:index 2
+       ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "BackboneElement.modifierExtension" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Extension" ]
+       ];
+       fhir:ElementDefinition.constraint [
+         fhir:index 0;
+         fhir:ElementDefinition.constraint.key [ fhir:value "ele-1" ];
+         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
+         fhir:ElementDefinition.constraint.human [ fhir:value "All FHIR elements must have a @value or children" ];
+         fhir:ElementDefinition.constraint.expression [ fhir:value "hasValue() or (children().count() > id.count())" ];
+         fhir:ElementDefinition.constraint.xpath [ fhir:value "@value|f:*|h:div" ];
+         fhir:ElementDefinition.constraint.source [
+           fhir:value "http://hl7.org/fhir/StructureDefinition/Element";
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+         ]
+       ], [
+         fhir:index 1;
+         fhir:ElementDefinition.constraint.key [ fhir:value "ext-1" ];
+         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
+         fhir:ElementDefinition.constraint.human [ fhir:value "Must have either extensions or value[x], not both" ];
+         fhir:ElementDefinition.constraint.expression [ fhir:value "extension.exists() != value.exists()" ];
+         fhir:ElementDefinition.constraint.xpath [ fhir:value "exists(f:extension)!=exists(f:*[starts-with(local-name(.), \"value\")])" ];
+         fhir:ElementDefinition.constraint.source [
+           fhir:value "http://hl7.org/fhir/StructureDefinition/Extension";
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Extension>
+         ]
+       ];
+       fhir:ElementDefinition.isModifier [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifierReason [ fhir:value "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them" ];
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "N/A" ]
+       ]
+     ], [
+       fhir:index 26;
        fhir:Element.id [ fhir:value "CommunicationRequest.payload.content[x]" ];
        fhir:ElementDefinition.path [ fhir:value "CommunicationRequest.payload.content[x]" ];
        fhir:ElementDefinition.short [ fhir:value "Message part content" ];
@@ -923,147 +1358,191 @@
            fhir:link <http://hl7.org/fhir/StructureDefinition/Resource>
          ]
        ];
+       fhir:ElementDefinition.constraint [
+         fhir:index 0;
+         fhir:ElementDefinition.constraint.key [ fhir:value "ele-1" ];
+         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
+         fhir:ElementDefinition.constraint.human [ fhir:value "All FHIR elements must have a @value or children" ];
+         fhir:ElementDefinition.constraint.expression [ fhir:value "hasValue() or (children().count() > id.count())" ];
+         fhir:ElementDefinition.constraint.xpath [ fhir:value "@value|f:*|h:div" ];
+         fhir:ElementDefinition.constraint.source [
+           fhir:value "http://hl7.org/fhir/StructureDefinition/Element";
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+         ]
+       ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ];
        fhir:ElementDefinition.mapping [
          fhir:index 0;
          fhir:ElementDefinition.mapping.identity [ fhir:value "workflow" ];
          fhir:ElementDefinition.mapping.map [ fhir:value "Request.note" ]
        ]
      ], [
-       fhir:index 22;
-       fhir:Element.id [ fhir:value "CommunicationRequest.priority" ];
-       fhir:ElementDefinition.path [ fhir:value "CommunicationRequest.priority" ];
-       fhir:ElementDefinition.short [ fhir:value "routine | urgent | asap | stat" ];
-       fhir:ElementDefinition.definition [ fhir:value "Characterizes how quickly the proposed act must be initiated. Includes concepts such as stat, urgent, routine." ];
+       fhir:index 27;
+       fhir:Element.id [ fhir:value "CommunicationRequest.occurrence[x]" ];
+       fhir:ElementDefinition.path [ fhir:value "CommunicationRequest.occurrence[x]" ];
+       fhir:ElementDefinition.short [ fhir:value "When scheduled" ];
+       fhir:ElementDefinition.definition [ fhir:value "The time when this communication is to occur." ];
+       fhir:ElementDefinition.alias [
+         fhir:value "timing";
+         fhir:index 0
+       ];
        fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
        fhir:ElementDefinition.max [ fhir:value "1" ];
        fhir:ElementDefinition.base [
-         fhir:ElementDefinition.base.path [ fhir:value "CommunicationRequest.priority" ];
+         fhir:ElementDefinition.base.path [ fhir:value "CommunicationRequest.occurrence[x]" ];
          fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
          fhir:ElementDefinition.base.max [ fhir:value "1" ]
        ];
        fhir:ElementDefinition.type [
          fhir:index 0;
-         fhir:ElementDefinition.type.code [ fhir:value "code" ]
+         fhir:ElementDefinition.type.code [ fhir:value "dateTime" ]
+       ], [
+         fhir:index 1;
+         fhir:ElementDefinition.type.code [ fhir:value "Period" ]
        ];
-       fhir:ElementDefinition.meaningWhenMissing [ fhir:value "If missing, this task should be performed with normal priority" ];
-       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
-       fhir:ElementDefinition.binding [
-         fhir:Element.extension [
-           fhir:index 0;
-           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName" ];
-           fhir:Extension.valueString [ fhir:value "CommunicationPriority" ]
-         ];
-         fhir:ElementDefinition.binding.strength [ fhir:value "required" ];
-         fhir:ElementDefinition.binding.description [ fhir:value "Codes indicating the relative importance of a communication request." ];
-         fhir:ElementDefinition.binding.valueSet [
-           fhir:value "http://hl7.org/fhir/ValueSet/request-priority|4.0.1";
-           fhir:link <http://hl7.org/fhir/ValueSet/request-priority|4.0.1>
+       fhir:ElementDefinition.constraint [
+         fhir:index 0;
+         fhir:ElementDefinition.constraint.key [ fhir:value "ele-1" ];
+         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
+         fhir:ElementDefinition.constraint.human [ fhir:value "All FHIR elements must have a @value or children" ];
+         fhir:ElementDefinition.constraint.expression [ fhir:value "hasValue() or (children().count() > id.count())" ];
+         fhir:ElementDefinition.constraint.xpath [ fhir:value "@value|f:*|h:div" ];
+         fhir:ElementDefinition.constraint.source [
+           fhir:value "http://hl7.org/fhir/StructureDefinition/Element";
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
        fhir:ElementDefinition.mapping [
          fhir:index 0;
          fhir:ElementDefinition.mapping.identity [ fhir:value "workflow" ];
-         fhir:ElementDefinition.mapping.map [ fhir:value "Request.priority" ]
+         fhir:ElementDefinition.mapping.map [ fhir:value "Request.occurrence[x]" ]
        ], [
          fhir:index 1;
          fhir:ElementDefinition.mapping.identity [ fhir:value "w5" ];
-         fhir:ElementDefinition.mapping.map [ fhir:value "FiveWs.grade" ]
+         fhir:ElementDefinition.mapping.map [ fhir:value "FiveWs.planned" ]
        ]
      ], [
-       fhir:index 23;
-       fhir:Element.id [ fhir:value "CommunicationRequest.reasonCode" ];
-       fhir:ElementDefinition.path [ fhir:value "CommunicationRequest.reasonCode" ];
-       fhir:ElementDefinition.short [ fhir:value "Why is communication needed?" ];
-       fhir:ElementDefinition.definition [ fhir:value "Describes why the request is being made in coded or textual form." ];
-       fhir:ElementDefinition.comment [ fhir:value "Textual reasons can be captured using reasonCode.text." ];
+       fhir:index 28;
+       fhir:Element.id [ fhir:value "CommunicationRequest.authoredOn" ];
+       fhir:ElementDefinition.path [ fhir:value "CommunicationRequest.authoredOn" ];
+       fhir:ElementDefinition.short [ fhir:value "When request transitioned to being actionable" ];
+       fhir:ElementDefinition.definition [ fhir:value "For draft requests, indicates the date of initial creation.  For requests with other statuses, indicates the date of activation." ];
+       fhir:ElementDefinition.alias [
+         fhir:value "createdOn";
+         fhir:index 0
+       ];
        fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
-       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
        fhir:ElementDefinition.base [
-         fhir:ElementDefinition.base.path [ fhir:value "CommunicationRequest.reasonCode" ];
+         fhir:ElementDefinition.base.path [ fhir:value "CommunicationRequest.authoredOn" ];
          fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
-         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
        ];
        fhir:ElementDefinition.type [
          fhir:index 0;
-         fhir:ElementDefinition.type.code [ fhir:value "CodeableConcept" ]
+         fhir:ElementDefinition.type.code [ fhir:value "dateTime" ]
        ];
-       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
-       fhir:ElementDefinition.binding [
-         fhir:Element.extension [
-           fhir:index 0;
-           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName" ];
-           fhir:Extension.valueString [ fhir:value "CommunicationReason" ]
-         ];
-         fhir:ElementDefinition.binding.strength [ fhir:value "example" ];
-         fhir:ElementDefinition.binding.description [ fhir:value "Codes for describing reasons for the occurrence of a communication." ];
-         fhir:ElementDefinition.binding.valueSet [
-           fhir:value "http://terminology.hl7.org/ValueSet/v3-ActReason";
-           fhir:link <http://terminology.hl7.org/ValueSet/v3-ActReason>
+       fhir:ElementDefinition.constraint [
+         fhir:index 0;
+         fhir:ElementDefinition.constraint.key [ fhir:value "ele-1" ];
+         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
+         fhir:ElementDefinition.constraint.human [ fhir:value "All FHIR elements must have a @value or children" ];
+         fhir:ElementDefinition.constraint.expression [ fhir:value "hasValue() or (children().count() > id.count())" ];
+         fhir:ElementDefinition.constraint.xpath [ fhir:value "@value|f:*|h:div" ];
+         fhir:ElementDefinition.constraint.source [
+           fhir:value "http://hl7.org/fhir/StructureDefinition/Element";
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
        fhir:ElementDefinition.mapping [
          fhir:index 0;
          fhir:ElementDefinition.mapping.identity [ fhir:value "workflow" ];
-         fhir:ElementDefinition.mapping.map [ fhir:value "Request.reasonCode" ]
+         fhir:ElementDefinition.mapping.map [ fhir:value "Request.authoredOn" ]
        ], [
          fhir:index 1;
          fhir:ElementDefinition.mapping.identity [ fhir:value "w5" ];
-         fhir:ElementDefinition.mapping.map [ fhir:value "FiveWs.why[x]" ]
-       ], [
-         fhir:index 2;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
-         fhir:ElementDefinition.mapping.map [ fhir:value ".reasonCode" ]
+         fhir:ElementDefinition.mapping.map [ fhir:value "FiveWs.recorded" ]
        ]
      ], [
-       fhir:index 24;
-       fhir:Element.id [ fhir:value "CommunicationRequest.reasonReference" ];
-       fhir:ElementDefinition.path [ fhir:value "CommunicationRequest.reasonReference" ];
-       fhir:ElementDefinition.short [ fhir:value "Why is communication needed?" ];
-       fhir:ElementDefinition.definition [ fhir:value "Indicates another resource whose existence justifies this request." ];
+       fhir:index 29;
+       fhir:Element.id [ fhir:value "CommunicationRequest.requester" ];
+       fhir:ElementDefinition.path [ fhir:value "CommunicationRequest.requester" ];
+       fhir:ElementDefinition.short [ fhir:value "Who/what is requesting service" ];
+       fhir:ElementDefinition.definition [ fhir:value "The device, individual, or organization who initiated the request and has responsibility for its activation." ];
+       fhir:ElementDefinition.alias [
+         fhir:value "author";
+         fhir:index 0
+       ];
        fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
-       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
        fhir:ElementDefinition.base [
-         fhir:ElementDefinition.base.path [ fhir:value "CommunicationRequest.reasonReference" ];
+         fhir:ElementDefinition.base.path [ fhir:value "CommunicationRequest.requester" ];
          fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
-         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
        ];
        fhir:ElementDefinition.type [
          fhir:index 0;
          fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
          fhir:ElementDefinition.type.targetProfile [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Condition";
+           fhir:value "http://hl7.org/fhir/StructureDefinition/Practitioner";
            fhir:index 0;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Condition>
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Practitioner>
          ], [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Observation";
+           fhir:value "http://hl7.org/fhir/StructureDefinition/PractitionerRole";
            fhir:index 1;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Observation>
+           fhir:link <http://hl7.org/fhir/StructureDefinition/PractitionerRole>
          ], [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/DiagnosticReport";
+           fhir:value "http://hl7.org/fhir/StructureDefinition/Organization";
            fhir:index 2;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DiagnosticReport>
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Organization>
          ], [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/DocumentReference";
+           fhir:value "http://hl7.org/fhir/StructureDefinition/Patient";
            fhir:index 3;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DocumentReference>
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Patient>
+         ], [
+           fhir:value "http://hl7.org/fhir/StructureDefinition/RelatedPerson";
+           fhir:index 4;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/RelatedPerson>
+         ], [
+           fhir:value "http://hl7.org/fhir/StructureDefinition/Device";
+           fhir:index 5;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Device>
          ]
        ];
+       fhir:ElementDefinition.constraint [
+         fhir:index 0;
+         fhir:ElementDefinition.constraint.key [ fhir:value "ele-1" ];
+         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
+         fhir:ElementDefinition.constraint.human [ fhir:value "All FHIR elements must have a @value or children" ];
+         fhir:ElementDefinition.constraint.expression [ fhir:value "hasValue() or (children().count() > id.count())" ];
+         fhir:ElementDefinition.constraint.xpath [ fhir:value "@value|f:*|h:div" ];
+         fhir:ElementDefinition.constraint.source [
+           fhir:value "http://hl7.org/fhir/StructureDefinition/Element";
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+         ]
+       ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
        fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
        fhir:ElementDefinition.mapping [
          fhir:index 0;
          fhir:ElementDefinition.mapping.identity [ fhir:value "workflow" ];
-         fhir:ElementDefinition.mapping.map [ fhir:value "Request.reasonReference" ]
+         fhir:ElementDefinition.mapping.map [ fhir:value "Request.requester" ]
        ], [
          fhir:index 1;
          fhir:ElementDefinition.mapping.identity [ fhir:value "w5" ];
-         fhir:ElementDefinition.mapping.map [ fhir:value "FiveWs.why[x]" ]
+         fhir:ElementDefinition.mapping.map [ fhir:value "FiveWs.author" ]
        ], [
          fhir:index 2;
          fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
-         fhir:ElementDefinition.mapping.map [ fhir:value ".outboundRelationship[typeCode=RSON].target" ]
+         fhir:ElementDefinition.mapping.map [ fhir:value ".participation[typeCode=AUT].role" ]
        ]
      ], [
-       fhir:index 25;
+       fhir:index 30;
        fhir:Element.id [ fhir:value "CommunicationRequest.recipient" ];
        fhir:ElementDefinition.path [ fhir:value "CommunicationRequest.recipient" ];
        fhir:ElementDefinition.short [ fhir:value "Message recipient" ];
@@ -1116,6 +1595,20 @@
            fhir:link <http://hl7.org/fhir/StructureDefinition/HealthcareService>
          ]
        ];
+       fhir:ElementDefinition.constraint [
+         fhir:index 0;
+         fhir:ElementDefinition.constraint.key [ fhir:value "ele-1" ];
+         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
+         fhir:ElementDefinition.constraint.human [ fhir:value "All FHIR elements must have a @value or children" ];
+         fhir:ElementDefinition.constraint.expression [ fhir:value "hasValue() or (children().count() > id.count())" ];
+         fhir:ElementDefinition.constraint.xpath [ fhir:value "@value|f:*|h:div" ];
+         fhir:ElementDefinition.constraint.source [
+           fhir:value "http://hl7.org/fhir/StructureDefinition/Element";
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+         ]
+       ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ];
        fhir:ElementDefinition.mapping [
          fhir:index 0;
          fhir:ElementDefinition.mapping.identity [ fhir:value "workflow" ];
@@ -1126,108 +1619,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "FiveWs.actor" ]
        ]
      ], [
-       fhir:index 26;
-       fhir:Element.id [ fhir:value "CommunicationRequest.replaces" ];
-       fhir:ElementDefinition.path [ fhir:value "CommunicationRequest.replaces" ];
-       fhir:ElementDefinition.short [ fhir:value "Request(s) replaced by this request" ];
-       fhir:ElementDefinition.definition [ fhir:value "Completed or terminated request(s) whose function is taken by this new request." ];
-       fhir:ElementDefinition.comment [ fhir:value "The replacement could be because the initial request was immediately rejected (due to an issue) or because the previous request was completed, but the need for the action described by the request remains ongoing." ];
-       fhir:ElementDefinition.requirements [ fhir:value "Allows tracing the continuation of a therapy or administrative process instantiated through multiple requests." ];
-       fhir:ElementDefinition.alias [
-         fhir:value "supersedes";
-         fhir:index 0
-       ], [
-         fhir:value "prior";
-         fhir:index 1
-       ];
-       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
-       fhir:ElementDefinition.max [ fhir:value "*" ];
-       fhir:ElementDefinition.base [
-         fhir:ElementDefinition.base.path [ fhir:value "CommunicationRequest.replaces" ];
-         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
-         fhir:ElementDefinition.base.max [ fhir:value "*" ]
-       ];
-       fhir:ElementDefinition.type [
-         fhir:index 0;
-         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
-         fhir:ElementDefinition.type.targetProfile [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/CommunicationRequest";
-           fhir:index 0;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/CommunicationRequest>
-         ]
-       ];
-       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
-       fhir:ElementDefinition.mapping [
-         fhir:index 0;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "workflow" ];
-         fhir:ElementDefinition.mapping.map [ fhir:value "Request.replaces" ]
-       ], [
-         fhir:index 1;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
-         fhir:ElementDefinition.mapping.map [ fhir:value ".outboundRelationship[typeCode=RPLC].target" ]
-       ]
-     ], [
-       fhir:index 27;
-       fhir:Element.id [ fhir:value "CommunicationRequest.requester" ];
-       fhir:ElementDefinition.path [ fhir:value "CommunicationRequest.requester" ];
-       fhir:ElementDefinition.short [ fhir:value "Who/what is requesting service" ];
-       fhir:ElementDefinition.definition [ fhir:value "The device, individual, or organization who initiated the request and has responsibility for its activation." ];
-       fhir:ElementDefinition.alias [
-         fhir:value "author";
-         fhir:index 0
-       ];
-       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
-       fhir:ElementDefinition.max [ fhir:value "1" ];
-       fhir:ElementDefinition.base [
-         fhir:ElementDefinition.base.path [ fhir:value "CommunicationRequest.requester" ];
-         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
-         fhir:ElementDefinition.base.max [ fhir:value "1" ]
-       ];
-       fhir:ElementDefinition.type [
-         fhir:index 0;
-         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
-         fhir:ElementDefinition.type.targetProfile [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Practitioner";
-           fhir:index 0;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Practitioner>
-         ], [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/PractitionerRole";
-           fhir:index 1;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/PractitionerRole>
-         ], [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Organization";
-           fhir:index 2;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Organization>
-         ], [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Patient";
-           fhir:index 3;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Patient>
-         ], [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/RelatedPerson";
-           fhir:index 4;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/RelatedPerson>
-         ], [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Device";
-           fhir:index 5;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Device>
-         ]
-       ];
-       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
-       fhir:ElementDefinition.mapping [
-         fhir:index 0;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "workflow" ];
-         fhir:ElementDefinition.mapping.map [ fhir:value "Request.requester" ]
-       ], [
-         fhir:index 1;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "w5" ];
-         fhir:ElementDefinition.mapping.map [ fhir:value "FiveWs.author" ]
-       ], [
-         fhir:index 2;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
-         fhir:ElementDefinition.mapping.map [ fhir:value ".participation[typeCode=AUT].role" ]
-       ]
-     ], [
-       fhir:index 28;
+       fhir:index 31;
        fhir:Element.id [ fhir:value "CommunicationRequest.sender" ];
        fhir:ElementDefinition.path [ fhir:value "CommunicationRequest.sender" ];
        fhir:ElementDefinition.short [ fhir:value "Message sender" ];
@@ -1272,6 +1664,19 @@
            fhir:link <http://hl7.org/fhir/StructureDefinition/HealthcareService>
          ]
        ];
+       fhir:ElementDefinition.constraint [
+         fhir:index 0;
+         fhir:ElementDefinition.constraint.key [ fhir:value "ele-1" ];
+         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
+         fhir:ElementDefinition.constraint.human [ fhir:value "All FHIR elements must have a @value or children" ];
+         fhir:ElementDefinition.constraint.expression [ fhir:value "hasValue() or (children().count() > id.count())" ];
+         fhir:ElementDefinition.constraint.xpath [ fhir:value "@value|f:*|h:div" ];
+         fhir:ElementDefinition.constraint.source [
+           fhir:value "http://hl7.org/fhir/StructureDefinition/Element";
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+         ]
+       ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
        fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
        fhir:ElementDefinition.mapping [
          fhir:index 0;
@@ -1283,132 +1688,163 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "FiveWs.actor" ]
        ]
      ], [
-       fhir:index 29;
-       fhir:Element.id [ fhir:value "CommunicationRequest.status" ];
-       fhir:ElementDefinition.path [ fhir:value "CommunicationRequest.status" ];
-       fhir:ElementDefinition.short [ fhir:value "draft | active | on-hold | revoked | completed | entered-in-error | unknown" ];
-       fhir:ElementDefinition.definition [ fhir:value "The status of the proposal or order." ];
-       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
-       fhir:ElementDefinition.max [ fhir:value "1" ];
-       fhir:ElementDefinition.base [
-         fhir:ElementDefinition.base.path [ fhir:value "CommunicationRequest.status" ];
-         fhir:ElementDefinition.base.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
-         fhir:ElementDefinition.base.max [ fhir:value "1" ]
-       ];
-       fhir:ElementDefinition.type [
-         fhir:index 0;
-         fhir:ElementDefinition.type.code [ fhir:value "code" ]
-       ];
-       fhir:ElementDefinition.isModifier [ fhir:value "true"^^xsd:boolean ];
-       fhir:ElementDefinition.isModifierReason [ fhir:value "This element is labelled as a modifier because it is a status element that contains status entered-in-error which means that the resource should not be treated as valid." ];
-       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
-       fhir:ElementDefinition.binding [
-         fhir:Element.extension [
-           fhir:index 0;
-           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName" ];
-           fhir:Extension.valueString [ fhir:value "CommunicationRequestStatus" ]
-         ];
-         fhir:ElementDefinition.binding.strength [ fhir:value "required" ];
-         fhir:ElementDefinition.binding.description [ fhir:value "The status of the communication request." ];
-         fhir:ElementDefinition.binding.valueSet [
-           fhir:value "http://hl7.org/fhir/ValueSet/request-status|4.0.1";
-           fhir:link <http://hl7.org/fhir/ValueSet/request-status|4.0.1>
-         ]
-       ];
-       fhir:ElementDefinition.mapping [
-         fhir:index 0;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "workflow" ];
-         fhir:ElementDefinition.mapping.map [ fhir:value "Request.status" ]
-       ], [
-         fhir:index 1;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "w5" ];
-         fhir:ElementDefinition.mapping.map [ fhir:value "FiveWs.status" ]
-       ]
-     ], [
-       fhir:index 30;
-       fhir:Element.id [ fhir:value "CommunicationRequest.statusReason" ];
-       fhir:ElementDefinition.path [ fhir:value "CommunicationRequest.statusReason" ];
-       fhir:ElementDefinition.short [ fhir:value "Reason for current status" ];
-       fhir:ElementDefinition.definition [ fhir:value "Captures the reason for the current state of the CommunicationRequest." ];
-       fhir:ElementDefinition.comment [ fhir:value "This is generally only used for \"exception\" statuses such as \"suspended\" or \"cancelled\".  The reason why the CommunicationRequest was created at all is captured in reasonCode, not here.  [distinct reason codes for different statuses can be enforced using invariants if they are universal bindings]." ];
-       fhir:ElementDefinition.alias [
-         fhir:value "Suspended Reason";
-         fhir:index 0
-       ], [
-         fhir:value "Cancelled Reason";
-         fhir:index 1
-       ];
+       fhir:index 32;
+       fhir:Element.id [ fhir:value "CommunicationRequest.reasonCode" ];
+       fhir:ElementDefinition.path [ fhir:value "CommunicationRequest.reasonCode" ];
+       fhir:ElementDefinition.short [ fhir:value "Why is communication needed?" ];
+       fhir:ElementDefinition.definition [ fhir:value "Describes why the request is being made in coded or textual form." ];
+       fhir:ElementDefinition.comment [ fhir:value "Textual reasons can be captured using reasonCode.text." ];
        fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
-       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
        fhir:ElementDefinition.base [
-         fhir:ElementDefinition.base.path [ fhir:value "CommunicationRequest.statusReason" ];
+         fhir:ElementDefinition.base.path [ fhir:value "CommunicationRequest.reasonCode" ];
          fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
-         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
        ];
        fhir:ElementDefinition.type [
          fhir:index 0;
          fhir:ElementDefinition.type.code [ fhir:value "CodeableConcept" ]
        ];
+       fhir:ElementDefinition.constraint [
+         fhir:index 0;
+         fhir:ElementDefinition.constraint.key [ fhir:value "ele-1" ];
+         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
+         fhir:ElementDefinition.constraint.human [ fhir:value "All FHIR elements must have a @value or children" ];
+         fhir:ElementDefinition.constraint.expression [ fhir:value "hasValue() or (children().count() > id.count())" ];
+         fhir:ElementDefinition.constraint.xpath [ fhir:value "@value|f:*|h:div" ];
+         fhir:ElementDefinition.constraint.source [
+           fhir:value "http://hl7.org/fhir/StructureDefinition/Element";
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+         ]
+       ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
        fhir:ElementDefinition.binding [
          fhir:Element.extension [
            fhir:index 0;
            fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName" ];
-           fhir:Extension.valueString [ fhir:value "CommunicationRequestStatusReason" ]
+           fhir:Extension.valueString [ fhir:value "CommunicationReason" ]
          ];
          fhir:ElementDefinition.binding.strength [ fhir:value "example" ];
-         fhir:ElementDefinition.binding.description [ fhir:value "Codes identifying the reason for the current state of a request." ]
-       ];
-       fhir:ElementDefinition.mapping [
-         fhir:index 0;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "workflow" ];
-         fhir:ElementDefinition.mapping.map [ fhir:value "Request.statusReason" ]
-       ], [
-         fhir:index 1;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
-         fhir:ElementDefinition.mapping.map [ fhir:value ".inboundRelationship[typeCode=SUBJ].source[classCode=CACT, moodCode=EVN].reasonCOde" ]
-       ]
-     ], [
-       fhir:index 31;
-       fhir:Element.id [ fhir:value "CommunicationRequest.subject" ];
-       fhir:ElementDefinition.path [ fhir:value "CommunicationRequest.subject" ];
-       fhir:ElementDefinition.short [ fhir:value "Focus of message" ];
-       fhir:ElementDefinition.definition [ fhir:value "The patient or group that is the focus of this communication request." ];
-       fhir:ElementDefinition.alias [
-         fhir:value "patient";
-         fhir:index 0
-       ];
-       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
-       fhir:ElementDefinition.max [ fhir:value "1" ];
-       fhir:ElementDefinition.base [
-         fhir:ElementDefinition.base.path [ fhir:value "CommunicationRequest.subject" ];
-         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
-         fhir:ElementDefinition.base.max [ fhir:value "1" ]
-       ];
-       fhir:ElementDefinition.type [
-         fhir:index 0;
-         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
-         fhir:ElementDefinition.type.targetProfile [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Patient";
-           fhir:index 0;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Patient>
-         ], [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Group";
-           fhir:index 1;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Group>
+         fhir:ElementDefinition.binding.description [ fhir:value "Codes for describing reasons for the occurrence of a communication." ];
+         fhir:ElementDefinition.binding.valueSet [
+           fhir:value "http://terminology.hl7.org/ValueSet/v3-ActReason";
+           fhir:link <http://terminology.hl7.org/ValueSet/v3-ActReason>
          ]
        ];
        fhir:ElementDefinition.mapping [
          fhir:index 0;
          fhir:ElementDefinition.mapping.identity [ fhir:value "workflow" ];
-         fhir:ElementDefinition.mapping.map [ fhir:value "Request.subject" ]
+         fhir:ElementDefinition.mapping.map [ fhir:value "Request.reasonCode" ]
        ], [
          fhir:index 1;
          fhir:ElementDefinition.mapping.identity [ fhir:value "w5" ];
-         fhir:ElementDefinition.mapping.map [ fhir:value "FiveWs.subject[x]" ]
+         fhir:ElementDefinition.mapping.map [ fhir:value "FiveWs.why[x]" ]
        ], [
          fhir:index 2;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value ".reasonCode" ]
+       ]
+     ], [
+       fhir:index 33;
+       fhir:Element.id [ fhir:value "CommunicationRequest.reasonReference" ];
+       fhir:ElementDefinition.path [ fhir:value "CommunicationRequest.reasonReference" ];
+       fhir:ElementDefinition.short [ fhir:value "Why is communication needed?" ];
+       fhir:ElementDefinition.definition [ fhir:value "Indicates another resource whose existence justifies this request." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "CommunicationRequest.reasonReference" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
+         fhir:ElementDefinition.type.targetProfile [
+           fhir:value "http://hl7.org/fhir/StructureDefinition/Condition";
+           fhir:index 0;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Condition>
+         ], [
+           fhir:value "http://hl7.org/fhir/StructureDefinition/Observation";
+           fhir:index 1;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Observation>
+         ], [
+           fhir:value "http://hl7.org/fhir/StructureDefinition/DiagnosticReport";
+           fhir:index 2;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/DiagnosticReport>
+         ], [
+           fhir:value "http://hl7.org/fhir/StructureDefinition/DocumentReference";
+           fhir:index 3;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/DocumentReference>
+         ]
+       ];
+       fhir:ElementDefinition.constraint [
+         fhir:index 0;
+         fhir:ElementDefinition.constraint.key [ fhir:value "ele-1" ];
+         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
+         fhir:ElementDefinition.constraint.human [ fhir:value "All FHIR elements must have a @value or children" ];
+         fhir:ElementDefinition.constraint.expression [ fhir:value "hasValue() or (children().count() > id.count())" ];
+         fhir:ElementDefinition.constraint.xpath [ fhir:value "@value|f:*|h:div" ];
+         fhir:ElementDefinition.constraint.source [
+           fhir:value "http://hl7.org/fhir/StructureDefinition/Element";
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+         ]
+       ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "workflow" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "Request.reasonReference" ]
+       ], [
+         fhir:index 1;
          fhir:ElementDefinition.mapping.identity [ fhir:value "w5" ];
-         fhir:ElementDefinition.mapping.map [ fhir:value "FiveWs.subject" ]
+         fhir:ElementDefinition.mapping.map [ fhir:value "FiveWs.why[x]" ]
+       ], [
+         fhir:index 2;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value ".outboundRelationship[typeCode=RSON].target" ]
+       ]
+     ], [
+       fhir:index 34;
+       fhir:Element.id [ fhir:value "CommunicationRequest.note" ];
+       fhir:ElementDefinition.path [ fhir:value "CommunicationRequest.note" ];
+       fhir:ElementDefinition.short [ fhir:value "Comments made about communication request" ];
+       fhir:ElementDefinition.definition [ fhir:value "Comments made about the request by the requester, sender, recipient, subject or other participants." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "CommunicationRequest.note" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Annotation" ]
+       ];
+       fhir:ElementDefinition.constraint [
+         fhir:index 0;
+         fhir:ElementDefinition.constraint.key [ fhir:value "ele-1" ];
+         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
+         fhir:ElementDefinition.constraint.human [ fhir:value "All FHIR elements must have a @value or children" ];
+         fhir:ElementDefinition.constraint.expression [ fhir:value "hasValue() or (children().count() > id.count())" ];
+         fhir:ElementDefinition.constraint.xpath [ fhir:value "@value|f:*|h:div" ];
+         fhir:ElementDefinition.constraint.source [
+           fhir:value "http://hl7.org/fhir/StructureDefinition/Element";
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+         ]
+       ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "workflow" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "Request.note" ]
+       ], [
+         fhir:index 1;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value ".inboundRelationship(typeCode=SUBJ].source[classCode=ANNGEN, moodCode=EVN].value[xsi:type=ST]" ]
        ]
      ]
   ];
@@ -1428,59 +1864,30 @@
        ]
      ], [
        fhir:index 1;
-       fhir:Element.id [ fhir:value "CommunicationRequest.about" ];
-       fhir:ElementDefinition.path [ fhir:value "CommunicationRequest.about" ];
-       fhir:ElementDefinition.short [ fhir:value "Resources that pertain to this communication request" ];
-       fhir:ElementDefinition.definition [ fhir:value "Other resources that pertain to this communication request and to which this communication request should be associated." ];
-       fhir:ElementDefinition.comment [ fhir:value "Don't use CommunicationRequest.about element when a more specific element exists, such as basedOn, reasonReference, or replaces." ];
+       fhir:Element.id [ fhir:value "CommunicationRequest.identifier" ];
+       fhir:ElementDefinition.path [ fhir:value "CommunicationRequest.identifier" ];
+       fhir:ElementDefinition.short [ fhir:value "Unique identifier" ];
+       fhir:ElementDefinition.definition [ fhir:value "Business identifiers assigned to this communication request by the performer or other systems which remain constant as the resource is updated and propagates from server to server." ];
+       fhir:ElementDefinition.comment [ fhir:value "This is a business identifier, not a resource identifier (see [discussion](resource.html#identifiers)).  It is best practice for the identifier to only appear on a single resource instance, however business practices may occasionally dictate that multiple resource instances with the same identifier can exist - possibly even with different resource types.  For example, multiple Patient and a Person resource instance might share the same social insurance number." ];
+       fhir:ElementDefinition.requirements [ fhir:value "Allows identification of the communication request as it is known by various participating systems and in a way that remains consistent across servers." ];
        fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
        fhir:ElementDefinition.max [ fhir:value "*" ];
        fhir:ElementDefinition.type [
          fhir:index 0;
-         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
-         fhir:ElementDefinition.type.targetProfile [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Resource";
-           fhir:index 0;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Resource>
-         ]
-       ];
-       fhir:ElementDefinition.mapping [
-         fhir:index 0;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "workflow" ];
-         fhir:ElementDefinition.mapping.map [ fhir:value "Request.supportingInfo" ]
-       ], [
-         fhir:index 1;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "w5" ];
-         fhir:ElementDefinition.mapping.map [ fhir:value "FiveWs.context" ]
-       ]
-     ], [
-       fhir:index 2;
-       fhir:Element.id [ fhir:value "CommunicationRequest.authoredOn" ];
-       fhir:ElementDefinition.path [ fhir:value "CommunicationRequest.authoredOn" ];
-       fhir:ElementDefinition.short [ fhir:value "When request transitioned to being actionable" ];
-       fhir:ElementDefinition.definition [ fhir:value "For draft requests, indicates the date of initial creation.  For requests with other statuses, indicates the date of activation." ];
-       fhir:ElementDefinition.alias [
-         fhir:value "createdOn";
-         fhir:index 0
-       ];
-       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
-       fhir:ElementDefinition.max [ fhir:value "1" ];
-       fhir:ElementDefinition.type [
-         fhir:index 0;
-         fhir:ElementDefinition.type.code [ fhir:value "dateTime" ]
+         fhir:ElementDefinition.type.code [ fhir:value "Identifier" ]
        ];
        fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
        fhir:ElementDefinition.mapping [
          fhir:index 0;
          fhir:ElementDefinition.mapping.identity [ fhir:value "workflow" ];
-         fhir:ElementDefinition.mapping.map [ fhir:value "Request.authoredOn" ]
+         fhir:ElementDefinition.mapping.map [ fhir:value "Request.identifier" ]
        ], [
          fhir:index 1;
          fhir:ElementDefinition.mapping.identity [ fhir:value "w5" ];
-         fhir:ElementDefinition.mapping.map [ fhir:value "FiveWs.recorded" ]
+         fhir:ElementDefinition.mapping.map [ fhir:value "FiveWs.identifier" ]
        ]
      ], [
-       fhir:index 3;
+       fhir:index 2;
        fhir:Element.id [ fhir:value "CommunicationRequest.basedOn" ];
        fhir:ElementDefinition.path [ fhir:value "CommunicationRequest.basedOn" ];
        fhir:ElementDefinition.short [ fhir:value "Fulfills plan or proposal" ];
@@ -1512,7 +1919,145 @@
          fhir:ElementDefinition.mapping.map [ fhir:value ".outboundRelationship[typeCode=FLFS].target" ]
        ]
      ], [
+       fhir:index 3;
+       fhir:Element.id [ fhir:value "CommunicationRequest.replaces" ];
+       fhir:ElementDefinition.path [ fhir:value "CommunicationRequest.replaces" ];
+       fhir:ElementDefinition.short [ fhir:value "Request(s) replaced by this request" ];
+       fhir:ElementDefinition.definition [ fhir:value "Completed or terminated request(s) whose function is taken by this new request." ];
+       fhir:ElementDefinition.comment [ fhir:value "The replacement could be because the initial request was immediately rejected (due to an issue) or because the previous request was completed, but the need for the action described by the request remains ongoing." ];
+       fhir:ElementDefinition.requirements [ fhir:value "Allows tracing the continuation of a therapy or administrative process instantiated through multiple requests." ];
+       fhir:ElementDefinition.alias [
+         fhir:value "supersedes";
+         fhir:index 0
+       ], [
+         fhir:value "prior";
+         fhir:index 1
+       ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
+         fhir:ElementDefinition.type.targetProfile [
+           fhir:value "http://hl7.org/fhir/StructureDefinition/CommunicationRequest";
+           fhir:index 0;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/CommunicationRequest>
+         ]
+       ];
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "workflow" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "Request.replaces" ]
+       ], [
+         fhir:index 1;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value ".outboundRelationship[typeCode=RPLC].target" ]
+       ]
+     ], [
        fhir:index 4;
+       fhir:Element.id [ fhir:value "CommunicationRequest.groupIdentifier" ];
+       fhir:ElementDefinition.path [ fhir:value "CommunicationRequest.groupIdentifier" ];
+       fhir:ElementDefinition.short [ fhir:value "Composite request this is part of" ];
+       fhir:ElementDefinition.definition [ fhir:value "A shared identifier common to all requests that were authorized more or less simultaneously by a single author, representing the identifier of the requisition, prescription or similar form." ];
+       fhir:ElementDefinition.comment [ fhir:value "Requests are linked either by a \"basedOn\" relationship (i.e. one request is fulfilling another) or by having a common requisition.  Requests that are part of the same requisition are generally treated independently from the perspective of changing their state or maintaining them after initial creation." ];
+       fhir:ElementDefinition.alias [
+         fhir:value "grouperId";
+         fhir:index 0
+       ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Identifier" ]
+       ];
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "workflow" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "Request.groupIdentifier" ]
+       ], [
+         fhir:index 1;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value ".inboundRelationship(typeCode=COMP].source[moodCode=INT].identifier" ]
+       ]
+     ], [
+       fhir:index 5;
+       fhir:Element.id [ fhir:value "CommunicationRequest.status" ];
+       fhir:ElementDefinition.path [ fhir:value "CommunicationRequest.status" ];
+       fhir:ElementDefinition.short [ fhir:value "draft | active | on-hold | revoked | completed | entered-in-error | unknown" ];
+       fhir:ElementDefinition.definition [ fhir:value "The status of the proposal or order." ];
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "code" ]
+       ];
+       fhir:ElementDefinition.isModifier [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifierReason [ fhir:value "This element is labelled as a modifier because it is a status element that contains status entered-in-error which means that the resource should not be treated as valid." ];
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.binding [
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName" ];
+           fhir:Extension.valueString [ fhir:value "CommunicationRequestStatus" ]
+         ];
+         fhir:ElementDefinition.binding.strength [ fhir:value "required" ];
+         fhir:ElementDefinition.binding.description [ fhir:value "The status of the communication request." ];
+         fhir:ElementDefinition.binding.valueSet [
+           fhir:value "http://hl7.org/fhir/ValueSet/request-status|4.0.1";
+           fhir:link <http://hl7.org/fhir/ValueSet/request-status|4.0.1>
+         ]
+       ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "workflow" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "Request.status" ]
+       ], [
+         fhir:index 1;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "w5" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "FiveWs.status" ]
+       ]
+     ], [
+       fhir:index 6;
+       fhir:Element.id [ fhir:value "CommunicationRequest.statusReason" ];
+       fhir:ElementDefinition.path [ fhir:value "CommunicationRequest.statusReason" ];
+       fhir:ElementDefinition.short [ fhir:value "Reason for current status" ];
+       fhir:ElementDefinition.definition [ fhir:value "Captures the reason for the current state of the CommunicationRequest." ];
+       fhir:ElementDefinition.comment [ fhir:value "This is generally only used for \"exception\" statuses such as \"suspended\" or \"cancelled\".  The reason why the CommunicationRequest was created at all is captured in reasonCode, not here.  [distinct reason codes for different statuses can be enforced using invariants if they are universal bindings]." ];
+       fhir:ElementDefinition.alias [
+         fhir:value "Suspended Reason";
+         fhir:index 0
+       ], [
+         fhir:value "Cancelled Reason";
+         fhir:index 1
+       ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "CodeableConcept" ]
+       ];
+       fhir:ElementDefinition.binding [
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName" ];
+           fhir:Extension.valueString [ fhir:value "CommunicationRequestStatusReason" ]
+         ];
+         fhir:ElementDefinition.binding.strength [ fhir:value "example" ];
+         fhir:ElementDefinition.binding.description [ fhir:value "Codes identifying the reason for the current state of a request." ]
+       ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "workflow" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "Request.statusReason" ]
+       ], [
+         fhir:index 1;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value ".inboundRelationship[typeCode=SUBJ].source[classCode=CACT, moodCode=EVN].reasonCOde" ]
+       ]
+     ], [
+       fhir:index 7;
        fhir:Element.id [ fhir:value "CommunicationRequest.category" ];
        fhir:ElementDefinition.path [ fhir:value "CommunicationRequest.category" ];
        fhir:ElementDefinition.short [ fhir:value "Message category" ];
@@ -1543,227 +2088,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "FiveWs.class" ]
        ]
      ], [
-       fhir:index 5;
-       fhir:Element.id [ fhir:value "CommunicationRequest.doNotPerform" ];
-       fhir:ElementDefinition.path [ fhir:value "CommunicationRequest.doNotPerform" ];
-       fhir:ElementDefinition.short [ fhir:value "True if request is prohibiting action" ];
-       fhir:ElementDefinition.definition [ fhir:value "If true indicates that the CommunicationRequest is asking for the specified action to *not* occur." ];
-       fhir:ElementDefinition.comment [ fhir:value "The attributes provided with the request qualify what is not to be done." ];
-       fhir:ElementDefinition.alias [
-         fhir:value "prohibited";
-         fhir:index 0
-       ];
-       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
-       fhir:ElementDefinition.max [ fhir:value "1" ];
-       fhir:ElementDefinition.type [
-         fhir:index 0;
-         fhir:ElementDefinition.type.code [ fhir:value "boolean" ]
-       ];
-       fhir:ElementDefinition.meaningWhenMissing [ fhir:value "If do not perform is not specified, the request is a positive request e.g. \"do perform\"" ];
-       fhir:ElementDefinition.isModifier [ fhir:value "true"^^xsd:boolean ];
-       fhir:ElementDefinition.isModifierReason [ fhir:value "If true this element negates the specified action. For Example,  instead of a request for a communication, it is a request for the communication to not occur." ];
-       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
-       fhir:ElementDefinition.mapping [
-         fhir:index 0;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "workflow" ];
-         fhir:ElementDefinition.mapping.map [ fhir:value "Request.doNotPerform" ]
-       ]
-     ], [
-       fhir:index 6;
-       fhir:Element.id [ fhir:value "CommunicationRequest.encounter" ];
-       fhir:ElementDefinition.path [ fhir:value "CommunicationRequest.encounter" ];
-       fhir:ElementDefinition.short [ fhir:value "Encounter created as part of" ];
-       fhir:ElementDefinition.definition [ fhir:value "The Encounter during which this CommunicationRequest was created or to which the creation of this record is tightly associated." ];
-       fhir:ElementDefinition.comment [ fhir:value "This will typically be the encounter the event occurred within, but some activities may be initiated prior to or after the official completion of an encounter but still be tied to the context of the encounter." ];
-       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
-       fhir:ElementDefinition.max [ fhir:value "1" ];
-       fhir:ElementDefinition.type [
-         fhir:index 0;
-         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
-         fhir:ElementDefinition.type.targetProfile [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Encounter";
-           fhir:index 0;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Encounter>
-         ]
-       ];
-       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
-       fhir:ElementDefinition.mapping [
-         fhir:index 0;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "workflow" ];
-         fhir:ElementDefinition.mapping.map [ fhir:value "Request.context" ]
-       ], [
-         fhir:index 1;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "w5" ];
-         fhir:ElementDefinition.mapping.map [ fhir:value "FiveWs.context" ]
-       ]
-     ], [
-       fhir:index 7;
-       fhir:Element.id [ fhir:value "CommunicationRequest.groupIdentifier" ];
-       fhir:ElementDefinition.path [ fhir:value "CommunicationRequest.groupIdentifier" ];
-       fhir:ElementDefinition.short [ fhir:value "Composite request this is part of" ];
-       fhir:ElementDefinition.definition [ fhir:value "A shared identifier common to all requests that were authorized more or less simultaneously by a single author, representing the identifier of the requisition, prescription or similar form." ];
-       fhir:ElementDefinition.comment [ fhir:value "Requests are linked either by a \"basedOn\" relationship (i.e. one request is fulfilling another) or by having a common requisition.  Requests that are part of the same requisition are generally treated independently from the perspective of changing their state or maintaining them after initial creation." ];
-       fhir:ElementDefinition.alias [
-         fhir:value "grouperId";
-         fhir:index 0
-       ];
-       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
-       fhir:ElementDefinition.max [ fhir:value "1" ];
-       fhir:ElementDefinition.type [
-         fhir:index 0;
-         fhir:ElementDefinition.type.code [ fhir:value "Identifier" ]
-       ];
-       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
-       fhir:ElementDefinition.mapping [
-         fhir:index 0;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "workflow" ];
-         fhir:ElementDefinition.mapping.map [ fhir:value "Request.groupIdentifier" ]
-       ], [
-         fhir:index 1;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
-         fhir:ElementDefinition.mapping.map [ fhir:value ".inboundRelationship(typeCode=COMP].source[moodCode=INT].identifier" ]
-       ]
-     ], [
        fhir:index 8;
-       fhir:Element.id [ fhir:value "CommunicationRequest.identifier" ];
-       fhir:ElementDefinition.path [ fhir:value "CommunicationRequest.identifier" ];
-       fhir:ElementDefinition.short [ fhir:value "Unique identifier" ];
-       fhir:ElementDefinition.definition [ fhir:value "Business identifiers assigned to this communication request by the performer or other systems which remain constant as the resource is updated and propagates from server to server." ];
-       fhir:ElementDefinition.comment [ fhir:value "This is a business identifier, not a resource identifier (see [discussion](resource.html#identifiers)).  It is best practice for the identifier to only appear on a single resource instance, however business practices may occasionally dictate that multiple resource instances with the same identifier can exist - possibly even with different resource types.  For example, multiple Patient and a Person resource instance might share the same social insurance number." ];
-       fhir:ElementDefinition.requirements [ fhir:value "Allows identification of the communication request as it is known by various participating systems and in a way that remains consistent across servers." ];
-       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
-       fhir:ElementDefinition.max [ fhir:value "*" ];
-       fhir:ElementDefinition.type [
-         fhir:index 0;
-         fhir:ElementDefinition.type.code [ fhir:value "Identifier" ]
-       ];
-       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
-       fhir:ElementDefinition.mapping [
-         fhir:index 0;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "workflow" ];
-         fhir:ElementDefinition.mapping.map [ fhir:value "Request.identifier" ]
-       ], [
-         fhir:index 1;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "w5" ];
-         fhir:ElementDefinition.mapping.map [ fhir:value "FiveWs.identifier" ]
-       ]
-     ], [
-       fhir:index 9;
-       fhir:Element.id [ fhir:value "CommunicationRequest.medium" ];
-       fhir:ElementDefinition.path [ fhir:value "CommunicationRequest.medium" ];
-       fhir:ElementDefinition.short [ fhir:value "A channel of communication" ];
-       fhir:ElementDefinition.definition [ fhir:value "A channel that was used for this communication (e.g. email, fax)." ];
-       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
-       fhir:ElementDefinition.max [ fhir:value "*" ];
-       fhir:ElementDefinition.type [
-         fhir:index 0;
-         fhir:ElementDefinition.type.code [ fhir:value "CodeableConcept" ]
-       ];
-       fhir:ElementDefinition.binding [
-         fhir:Element.extension [
-           fhir:index 0;
-           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName" ];
-           fhir:Extension.valueString [ fhir:value "CommunicationMedium" ]
-         ];
-         fhir:ElementDefinition.binding.strength [ fhir:value "example" ];
-         fhir:ElementDefinition.binding.description [ fhir:value "Codes for communication mediums such as phone, fax, email, in person, etc." ];
-         fhir:ElementDefinition.binding.valueSet [
-           fhir:value "http://terminology.hl7.org/ValueSet/v3-ParticipationMode";
-           fhir:link <http://terminology.hl7.org/ValueSet/v3-ParticipationMode>
-         ]
-       ]
-     ], [
-       fhir:index 10;
-       fhir:Element.id [ fhir:value "CommunicationRequest.note" ];
-       fhir:ElementDefinition.path [ fhir:value "CommunicationRequest.note" ];
-       fhir:ElementDefinition.short [ fhir:value "Comments made about communication request" ];
-       fhir:ElementDefinition.definition [ fhir:value "Comments made about the request by the requester, sender, recipient, subject or other participants." ];
-       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
-       fhir:ElementDefinition.max [ fhir:value "*" ];
-       fhir:ElementDefinition.type [
-         fhir:index 0;
-         fhir:ElementDefinition.type.code [ fhir:value "Annotation" ]
-       ];
-       fhir:ElementDefinition.mapping [
-         fhir:index 0;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "workflow" ];
-         fhir:ElementDefinition.mapping.map [ fhir:value "Request.note" ]
-       ], [
-         fhir:index 1;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
-         fhir:ElementDefinition.mapping.map [ fhir:value ".inboundRelationship(typeCode=SUBJ].source[classCode=ANNGEN, moodCode=EVN].value[xsi:type=ST]" ]
-       ]
-     ], [
-       fhir:index 11;
-       fhir:Element.id [ fhir:value "CommunicationRequest.occurrence[x]" ];
-       fhir:ElementDefinition.path [ fhir:value "CommunicationRequest.occurrence[x]" ];
-       fhir:ElementDefinition.short [ fhir:value "When scheduled" ];
-       fhir:ElementDefinition.definition [ fhir:value "The time when this communication is to occur." ];
-       fhir:ElementDefinition.alias [
-         fhir:value "timing";
-         fhir:index 0
-       ];
-       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
-       fhir:ElementDefinition.max [ fhir:value "1" ];
-       fhir:ElementDefinition.type [
-         fhir:index 0;
-         fhir:ElementDefinition.type.code [ fhir:value "dateTime" ]
-       ], [
-         fhir:index 1;
-         fhir:ElementDefinition.type.code [ fhir:value "Period" ]
-       ];
-       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
-       fhir:ElementDefinition.mapping [
-         fhir:index 0;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "workflow" ];
-         fhir:ElementDefinition.mapping.map [ fhir:value "Request.occurrence[x]" ]
-       ], [
-         fhir:index 1;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "w5" ];
-         fhir:ElementDefinition.mapping.map [ fhir:value "FiveWs.planned" ]
-       ]
-     ], [
-       fhir:index 12;
-       fhir:Element.id [ fhir:value "CommunicationRequest.payload" ];
-       fhir:ElementDefinition.path [ fhir:value "CommunicationRequest.payload" ];
-       fhir:ElementDefinition.short [ fhir:value "Message payload" ];
-       fhir:ElementDefinition.definition [ fhir:value "Text, attachment(s), or resource(s) to be communicated to the recipient." ];
-       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
-       fhir:ElementDefinition.max [ fhir:value "*" ];
-       fhir:ElementDefinition.type [
-         fhir:index 0;
-         fhir:ElementDefinition.type.code [ fhir:value "BackboneElement" ]
-       ]
-     ], [
-       fhir:index 13;
-       fhir:Element.id [ fhir:value "CommunicationRequest.payload.content[x]" ];
-       fhir:ElementDefinition.path [ fhir:value "CommunicationRequest.payload.content[x]" ];
-       fhir:ElementDefinition.short [ fhir:value "Message part content" ];
-       fhir:ElementDefinition.definition [ fhir:value "The communicated content (or for multi-part communications, one portion of the communication)." ];
-       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
-       fhir:ElementDefinition.max [ fhir:value "1" ];
-       fhir:ElementDefinition.type [
-         fhir:index 0;
-         fhir:ElementDefinition.type.code [ fhir:value "string" ]
-       ], [
-         fhir:index 1;
-         fhir:ElementDefinition.type.code [ fhir:value "Attachment" ]
-       ], [
-         fhir:index 2;
-         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
-         fhir:ElementDefinition.type.targetProfile [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Resource";
-           fhir:index 0;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Resource>
-         ]
-       ];
-       fhir:ElementDefinition.mapping [
-         fhir:index 0;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "workflow" ];
-         fhir:ElementDefinition.mapping.map [ fhir:value "Request.note" ]
-       ]
-     ], [
-       fhir:index 14;
        fhir:Element.id [ fhir:value "CommunicationRequest.priority" ];
        fhir:ElementDefinition.path [ fhir:value "CommunicationRequest.priority" ];
        fhir:ElementDefinition.short [ fhir:value "routine | urgent | asap | stat" ];
@@ -1799,90 +2124,301 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "FiveWs.grade" ]
        ]
      ], [
-       fhir:index 15;
-       fhir:Element.id [ fhir:value "CommunicationRequest.reasonCode" ];
-       fhir:ElementDefinition.path [ fhir:value "CommunicationRequest.reasonCode" ];
-       fhir:ElementDefinition.short [ fhir:value "Why is communication needed?" ];
-       fhir:ElementDefinition.definition [ fhir:value "Describes why the request is being made in coded or textual form." ];
-       fhir:ElementDefinition.comment [ fhir:value "Textual reasons can be captured using reasonCode.text." ];
+       fhir:index 9;
+       fhir:Element.id [ fhir:value "CommunicationRequest.doNotPerform" ];
+       fhir:ElementDefinition.path [ fhir:value "CommunicationRequest.doNotPerform" ];
+       fhir:ElementDefinition.short [ fhir:value "True if request is prohibiting action" ];
+       fhir:ElementDefinition.definition [ fhir:value "If true indicates that the CommunicationRequest is asking for the specified action to *not* occur." ];
+       fhir:ElementDefinition.comment [ fhir:value "The attributes provided with the request qualify what is not to be done." ];
+       fhir:ElementDefinition.alias [
+         fhir:value "prohibited";
+         fhir:index 0
+       ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "boolean" ]
+       ];
+       fhir:ElementDefinition.meaningWhenMissing [ fhir:value "If do not perform is not specified, the request is a positive request e.g. \"do perform\"" ];
+       fhir:ElementDefinition.isModifier [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifierReason [ fhir:value "If true this element negates the specified action. For Example,  instead of a request for a communication, it is a request for the communication to not occur." ];
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "workflow" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "Request.doNotPerform" ]
+       ]
+     ], [
+       fhir:index 10;
+       fhir:Element.id [ fhir:value "CommunicationRequest.medium" ];
+       fhir:ElementDefinition.path [ fhir:value "CommunicationRequest.medium" ];
+       fhir:ElementDefinition.short [ fhir:value "A channel of communication" ];
+       fhir:ElementDefinition.definition [ fhir:value "A channel that was used for this communication (e.g. email, fax)." ];
        fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
        fhir:ElementDefinition.max [ fhir:value "*" ];
        fhir:ElementDefinition.type [
          fhir:index 0;
          fhir:ElementDefinition.type.code [ fhir:value "CodeableConcept" ]
        ];
-       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
        fhir:ElementDefinition.binding [
          fhir:Element.extension [
            fhir:index 0;
            fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName" ];
-           fhir:Extension.valueString [ fhir:value "CommunicationReason" ]
+           fhir:Extension.valueString [ fhir:value "CommunicationMedium" ]
          ];
          fhir:ElementDefinition.binding.strength [ fhir:value "example" ];
-         fhir:ElementDefinition.binding.description [ fhir:value "Codes for describing reasons for the occurrence of a communication." ];
+         fhir:ElementDefinition.binding.description [ fhir:value "Codes for communication mediums such as phone, fax, email, in person, etc." ];
          fhir:ElementDefinition.binding.valueSet [
-           fhir:value "http://terminology.hl7.org/ValueSet/v3-ActReason";
-           fhir:link <http://terminology.hl7.org/ValueSet/v3-ActReason>
+           fhir:value "http://terminology.hl7.org/ValueSet/v3-ParticipationMode";
+           fhir:link <http://terminology.hl7.org/ValueSet/v3-ParticipationMode>
+         ]
+       ]
+     ], [
+       fhir:index 11;
+       fhir:Element.id [ fhir:value "CommunicationRequest.subject" ];
+       fhir:ElementDefinition.path [ fhir:value "CommunicationRequest.subject" ];
+       fhir:ElementDefinition.short [ fhir:value "Focus of message" ];
+       fhir:ElementDefinition.definition [ fhir:value "The patient or group that is the focus of this communication request." ];
+       fhir:ElementDefinition.alias [
+         fhir:value "patient";
+         fhir:index 0
+       ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
+         fhir:ElementDefinition.type.targetProfile [
+           fhir:value "http://hl7.org/fhir/StructureDefinition/Patient";
+           fhir:index 0;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Patient>
+         ], [
+           fhir:value "http://hl7.org/fhir/StructureDefinition/Group";
+           fhir:index 1;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Group>
          ]
        ];
        fhir:ElementDefinition.mapping [
          fhir:index 0;
          fhir:ElementDefinition.mapping.identity [ fhir:value "workflow" ];
-         fhir:ElementDefinition.mapping.map [ fhir:value "Request.reasonCode" ]
+         fhir:ElementDefinition.mapping.map [ fhir:value "Request.subject" ]
        ], [
          fhir:index 1;
          fhir:ElementDefinition.mapping.identity [ fhir:value "w5" ];
-         fhir:ElementDefinition.mapping.map [ fhir:value "FiveWs.why[x]" ]
+         fhir:ElementDefinition.mapping.map [ fhir:value "FiveWs.subject[x]" ]
        ], [
          fhir:index 2;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
-         fhir:ElementDefinition.mapping.map [ fhir:value ".reasonCode" ]
+         fhir:ElementDefinition.mapping.identity [ fhir:value "w5" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "FiveWs.subject" ]
        ]
      ], [
-       fhir:index 16;
-       fhir:Element.id [ fhir:value "CommunicationRequest.reasonReference" ];
-       fhir:ElementDefinition.path [ fhir:value "CommunicationRequest.reasonReference" ];
-       fhir:ElementDefinition.short [ fhir:value "Why is communication needed?" ];
-       fhir:ElementDefinition.definition [ fhir:value "Indicates another resource whose existence justifies this request." ];
+       fhir:index 12;
+       fhir:Element.id [ fhir:value "CommunicationRequest.about" ];
+       fhir:ElementDefinition.path [ fhir:value "CommunicationRequest.about" ];
+       fhir:ElementDefinition.short [ fhir:value "Resources that pertain to this communication request" ];
+       fhir:ElementDefinition.definition [ fhir:value "Other resources that pertain to this communication request and to which this communication request should be associated." ];
+       fhir:ElementDefinition.comment [ fhir:value "Don't use CommunicationRequest.about element when a more specific element exists, such as basedOn, reasonReference, or replaces." ];
        fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
        fhir:ElementDefinition.max [ fhir:value "*" ];
        fhir:ElementDefinition.type [
          fhir:index 0;
          fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
          fhir:ElementDefinition.type.targetProfile [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Condition";
+           fhir:value "http://hl7.org/fhir/StructureDefinition/Resource";
            fhir:index 0;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Condition>
-         ], [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Observation";
-           fhir:index 1;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Observation>
-         ], [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/DiagnosticReport";
-           fhir:index 2;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DiagnosticReport>
-         ], [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/DocumentReference";
-           fhir:index 3;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DocumentReference>
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Resource>
+         ]
+       ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "workflow" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "Request.supportingInfo" ]
+       ], [
+         fhir:index 1;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "w5" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "FiveWs.context" ]
+       ]
+     ], [
+       fhir:index 13;
+       fhir:Element.id [ fhir:value "CommunicationRequest.encounter" ];
+       fhir:ElementDefinition.path [ fhir:value "CommunicationRequest.encounter" ];
+       fhir:ElementDefinition.short [ fhir:value "Encounter created as part of" ];
+       fhir:ElementDefinition.definition [ fhir:value "The Encounter during which this CommunicationRequest was created or to which the creation of this record is tightly associated." ];
+       fhir:ElementDefinition.comment [ fhir:value "This will typically be the encounter the event occurred within, but some activities may be initiated prior to or after the official completion of an encounter but still be tied to the context of the encounter." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
+         fhir:ElementDefinition.type.targetProfile [
+           fhir:value "http://hl7.org/fhir/StructureDefinition/Encounter";
+           fhir:index 0;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Encounter>
          ]
        ];
        fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
        fhir:ElementDefinition.mapping [
          fhir:index 0;
          fhir:ElementDefinition.mapping.identity [ fhir:value "workflow" ];
-         fhir:ElementDefinition.mapping.map [ fhir:value "Request.reasonReference" ]
+         fhir:ElementDefinition.mapping.map [ fhir:value "Request.context" ]
        ], [
          fhir:index 1;
          fhir:ElementDefinition.mapping.identity [ fhir:value "w5" ];
-         fhir:ElementDefinition.mapping.map [ fhir:value "FiveWs.why[x]" ]
+         fhir:ElementDefinition.mapping.map [ fhir:value "FiveWs.context" ]
+       ]
+     ], [
+       fhir:index 14;
+       fhir:Element.id [ fhir:value "CommunicationRequest.payload" ];
+       fhir:ElementDefinition.path [ fhir:value "CommunicationRequest.payload" ];
+       fhir:ElementDefinition.short [ fhir:value "Message payload" ];
+       fhir:ElementDefinition.definition [ fhir:value "Text, attachment(s), or resource(s) to be communicated to the recipient." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "BackboneElement" ]
+       ]
+     ], [
+       fhir:index 15;
+       fhir:Element.id [ fhir:value "CommunicationRequest.payload.content[x]" ];
+       fhir:ElementDefinition.path [ fhir:value "CommunicationRequest.payload.content[x]" ];
+       fhir:ElementDefinition.short [ fhir:value "Message part content" ];
+       fhir:ElementDefinition.definition [ fhir:value "The communicated content (or for multi-part communications, one portion of the communication)." ];
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "string" ]
+       ], [
+         fhir:index 1;
+         fhir:ElementDefinition.type.code [ fhir:value "Attachment" ]
        ], [
          fhir:index 2;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
-         fhir:ElementDefinition.mapping.map [ fhir:value ".outboundRelationship[typeCode=RSON].target" ]
+         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
+         fhir:ElementDefinition.type.targetProfile [
+           fhir:value "http://hl7.org/fhir/StructureDefinition/Resource";
+           fhir:index 0;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Resource>
+         ]
+       ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "workflow" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "Request.note" ]
+       ]
+     ], [
+       fhir:index 16;
+       fhir:Element.id [ fhir:value "CommunicationRequest.occurrence[x]" ];
+       fhir:ElementDefinition.path [ fhir:value "CommunicationRequest.occurrence[x]" ];
+       fhir:ElementDefinition.short [ fhir:value "When scheduled" ];
+       fhir:ElementDefinition.definition [ fhir:value "The time when this communication is to occur." ];
+       fhir:ElementDefinition.alias [
+         fhir:value "timing";
+         fhir:index 0
+       ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "dateTime" ]
+       ], [
+         fhir:index 1;
+         fhir:ElementDefinition.type.code [ fhir:value "Period" ]
+       ];
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "workflow" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "Request.occurrence[x]" ]
+       ], [
+         fhir:index 1;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "w5" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "FiveWs.planned" ]
        ]
      ], [
        fhir:index 17;
+       fhir:Element.id [ fhir:value "CommunicationRequest.authoredOn" ];
+       fhir:ElementDefinition.path [ fhir:value "CommunicationRequest.authoredOn" ];
+       fhir:ElementDefinition.short [ fhir:value "When request transitioned to being actionable" ];
+       fhir:ElementDefinition.definition [ fhir:value "For draft requests, indicates the date of initial creation.  For requests with other statuses, indicates the date of activation." ];
+       fhir:ElementDefinition.alias [
+         fhir:value "createdOn";
+         fhir:index 0
+       ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "dateTime" ]
+       ];
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "workflow" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "Request.authoredOn" ]
+       ], [
+         fhir:index 1;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "w5" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "FiveWs.recorded" ]
+       ]
+     ], [
+       fhir:index 18;
+       fhir:Element.id [ fhir:value "CommunicationRequest.requester" ];
+       fhir:ElementDefinition.path [ fhir:value "CommunicationRequest.requester" ];
+       fhir:ElementDefinition.short [ fhir:value "Who/what is requesting service" ];
+       fhir:ElementDefinition.definition [ fhir:value "The device, individual, or organization who initiated the request and has responsibility for its activation." ];
+       fhir:ElementDefinition.alias [
+         fhir:value "author";
+         fhir:index 0
+       ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
+         fhir:ElementDefinition.type.targetProfile [
+           fhir:value "http://hl7.org/fhir/StructureDefinition/Practitioner";
+           fhir:index 0;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Practitioner>
+         ], [
+           fhir:value "http://hl7.org/fhir/StructureDefinition/PractitionerRole";
+           fhir:index 1;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/PractitionerRole>
+         ], [
+           fhir:value "http://hl7.org/fhir/StructureDefinition/Organization";
+           fhir:index 2;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Organization>
+         ], [
+           fhir:value "http://hl7.org/fhir/StructureDefinition/Patient";
+           fhir:index 3;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Patient>
+         ], [
+           fhir:value "http://hl7.org/fhir/StructureDefinition/RelatedPerson";
+           fhir:index 4;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/RelatedPerson>
+         ], [
+           fhir:value "http://hl7.org/fhir/StructureDefinition/Device";
+           fhir:index 5;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Device>
+         ]
+       ];
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "workflow" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "Request.requester" ]
+       ], [
+         fhir:index 1;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "w5" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "FiveWs.author" ]
+       ], [
+         fhir:index 2;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value ".participation[typeCode=AUT].role" ]
+       ]
+     ], [
+       fhir:index 19;
        fhir:Element.id [ fhir:value "CommunicationRequest.recipient" ];
        fhir:ElementDefinition.path [ fhir:value "CommunicationRequest.recipient" ];
        fhir:ElementDefinition.short [ fhir:value "Message recipient" ];
@@ -1940,97 +2476,6 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "FiveWs.actor" ]
        ]
      ], [
-       fhir:index 18;
-       fhir:Element.id [ fhir:value "CommunicationRequest.replaces" ];
-       fhir:ElementDefinition.path [ fhir:value "CommunicationRequest.replaces" ];
-       fhir:ElementDefinition.short [ fhir:value "Request(s) replaced by this request" ];
-       fhir:ElementDefinition.definition [ fhir:value "Completed or terminated request(s) whose function is taken by this new request." ];
-       fhir:ElementDefinition.comment [ fhir:value "The replacement could be because the initial request was immediately rejected (due to an issue) or because the previous request was completed, but the need for the action described by the request remains ongoing." ];
-       fhir:ElementDefinition.requirements [ fhir:value "Allows tracing the continuation of a therapy or administrative process instantiated through multiple requests." ];
-       fhir:ElementDefinition.alias [
-         fhir:value "supersedes";
-         fhir:index 0
-       ], [
-         fhir:value "prior";
-         fhir:index 1
-       ];
-       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
-       fhir:ElementDefinition.max [ fhir:value "*" ];
-       fhir:ElementDefinition.type [
-         fhir:index 0;
-         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
-         fhir:ElementDefinition.type.targetProfile [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/CommunicationRequest";
-           fhir:index 0;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/CommunicationRequest>
-         ]
-       ];
-       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
-       fhir:ElementDefinition.mapping [
-         fhir:index 0;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "workflow" ];
-         fhir:ElementDefinition.mapping.map [ fhir:value "Request.replaces" ]
-       ], [
-         fhir:index 1;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
-         fhir:ElementDefinition.mapping.map [ fhir:value ".outboundRelationship[typeCode=RPLC].target" ]
-       ]
-     ], [
-       fhir:index 19;
-       fhir:Element.id [ fhir:value "CommunicationRequest.requester" ];
-       fhir:ElementDefinition.path [ fhir:value "CommunicationRequest.requester" ];
-       fhir:ElementDefinition.short [ fhir:value "Who/what is requesting service" ];
-       fhir:ElementDefinition.definition [ fhir:value "The device, individual, or organization who initiated the request and has responsibility for its activation." ];
-       fhir:ElementDefinition.alias [
-         fhir:value "author";
-         fhir:index 0
-       ];
-       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
-       fhir:ElementDefinition.max [ fhir:value "1" ];
-       fhir:ElementDefinition.type [
-         fhir:index 0;
-         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
-         fhir:ElementDefinition.type.targetProfile [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Practitioner";
-           fhir:index 0;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Practitioner>
-         ], [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/PractitionerRole";
-           fhir:index 1;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/PractitionerRole>
-         ], [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Organization";
-           fhir:index 2;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Organization>
-         ], [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Patient";
-           fhir:index 3;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Patient>
-         ], [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/RelatedPerson";
-           fhir:index 4;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/RelatedPerson>
-         ], [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Device";
-           fhir:index 5;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Device>
-         ]
-       ];
-       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
-       fhir:ElementDefinition.mapping [
-         fhir:index 0;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "workflow" ];
-         fhir:ElementDefinition.mapping.map [ fhir:value "Request.requester" ]
-       ], [
-         fhir:index 1;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "w5" ];
-         fhir:ElementDefinition.mapping.map [ fhir:value "FiveWs.author" ]
-       ], [
-         fhir:index 2;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
-         fhir:ElementDefinition.mapping.map [ fhir:value ".participation[typeCode=AUT].role" ]
-       ]
-     ], [
        fhir:index 20;
        fhir:Element.id [ fhir:value "CommunicationRequest.sender" ];
        fhir:ElementDefinition.path [ fhir:value "CommunicationRequest.sender" ];
@@ -2083,116 +2528,107 @@
        ]
      ], [
        fhir:index 21;
-       fhir:Element.id [ fhir:value "CommunicationRequest.status" ];
-       fhir:ElementDefinition.path [ fhir:value "CommunicationRequest.status" ];
-       fhir:ElementDefinition.short [ fhir:value "draft | active | on-hold | revoked | completed | entered-in-error | unknown" ];
-       fhir:ElementDefinition.definition [ fhir:value "The status of the proposal or order." ];
-       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
-       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:Element.id [ fhir:value "CommunicationRequest.reasonCode" ];
+       fhir:ElementDefinition.path [ fhir:value "CommunicationRequest.reasonCode" ];
+       fhir:ElementDefinition.short [ fhir:value "Why is communication needed?" ];
+       fhir:ElementDefinition.definition [ fhir:value "Describes why the request is being made in coded or textual form." ];
+       fhir:ElementDefinition.comment [ fhir:value "Textual reasons can be captured using reasonCode.text." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
        fhir:ElementDefinition.type [
          fhir:index 0;
-         fhir:ElementDefinition.type.code [ fhir:value "code" ]
+         fhir:ElementDefinition.type.code [ fhir:value "CodeableConcept" ]
        ];
-       fhir:ElementDefinition.isModifier [ fhir:value "true"^^xsd:boolean ];
-       fhir:ElementDefinition.isModifierReason [ fhir:value "This element is labelled as a modifier because it is a status element that contains status entered-in-error which means that the resource should not be treated as valid." ];
        fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
        fhir:ElementDefinition.binding [
          fhir:Element.extension [
            fhir:index 0;
            fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName" ];
-           fhir:Extension.valueString [ fhir:value "CommunicationRequestStatus" ]
+           fhir:Extension.valueString [ fhir:value "CommunicationReason" ]
          ];
-         fhir:ElementDefinition.binding.strength [ fhir:value "required" ];
-         fhir:ElementDefinition.binding.description [ fhir:value "The status of the communication request." ];
+         fhir:ElementDefinition.binding.strength [ fhir:value "example" ];
+         fhir:ElementDefinition.binding.description [ fhir:value "Codes for describing reasons for the occurrence of a communication." ];
          fhir:ElementDefinition.binding.valueSet [
-           fhir:value "http://hl7.org/fhir/ValueSet/request-status|4.0.1";
-           fhir:link <http://hl7.org/fhir/ValueSet/request-status|4.0.1>
+           fhir:value "http://terminology.hl7.org/ValueSet/v3-ActReason";
+           fhir:link <http://terminology.hl7.org/ValueSet/v3-ActReason>
          ]
        ];
        fhir:ElementDefinition.mapping [
          fhir:index 0;
          fhir:ElementDefinition.mapping.identity [ fhir:value "workflow" ];
-         fhir:ElementDefinition.mapping.map [ fhir:value "Request.status" ]
+         fhir:ElementDefinition.mapping.map [ fhir:value "Request.reasonCode" ]
        ], [
          fhir:index 1;
          fhir:ElementDefinition.mapping.identity [ fhir:value "w5" ];
-         fhir:ElementDefinition.mapping.map [ fhir:value "FiveWs.status" ]
+         fhir:ElementDefinition.mapping.map [ fhir:value "FiveWs.why[x]" ]
+       ], [
+         fhir:index 2;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value ".reasonCode" ]
        ]
      ], [
        fhir:index 22;
-       fhir:Element.id [ fhir:value "CommunicationRequest.statusReason" ];
-       fhir:ElementDefinition.path [ fhir:value "CommunicationRequest.statusReason" ];
-       fhir:ElementDefinition.short [ fhir:value "Reason for current status" ];
-       fhir:ElementDefinition.definition [ fhir:value "Captures the reason for the current state of the CommunicationRequest." ];
-       fhir:ElementDefinition.comment [ fhir:value "This is generally only used for \"exception\" statuses such as \"suspended\" or \"cancelled\".  The reason why the CommunicationRequest was created at all is captured in reasonCode, not here.  [distinct reason codes for different statuses can be enforced using invariants if they are universal bindings]." ];
-       fhir:ElementDefinition.alias [
-         fhir:value "Suspended Reason";
-         fhir:index 0
-       ], [
-         fhir:value "Cancelled Reason";
-         fhir:index 1
-       ];
+       fhir:Element.id [ fhir:value "CommunicationRequest.reasonReference" ];
+       fhir:ElementDefinition.path [ fhir:value "CommunicationRequest.reasonReference" ];
+       fhir:ElementDefinition.short [ fhir:value "Why is communication needed?" ];
+       fhir:ElementDefinition.definition [ fhir:value "Indicates another resource whose existence justifies this request." ];
        fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
-       fhir:ElementDefinition.max [ fhir:value "1" ];
-       fhir:ElementDefinition.type [
-         fhir:index 0;
-         fhir:ElementDefinition.type.code [ fhir:value "CodeableConcept" ]
-       ];
-       fhir:ElementDefinition.binding [
-         fhir:Element.extension [
-           fhir:index 0;
-           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName" ];
-           fhir:Extension.valueString [ fhir:value "CommunicationRequestStatusReason" ]
-         ];
-         fhir:ElementDefinition.binding.strength [ fhir:value "example" ];
-         fhir:ElementDefinition.binding.description [ fhir:value "Codes identifying the reason for the current state of a request." ]
-       ];
-       fhir:ElementDefinition.mapping [
-         fhir:index 0;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "workflow" ];
-         fhir:ElementDefinition.mapping.map [ fhir:value "Request.statusReason" ]
-       ], [
-         fhir:index 1;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
-         fhir:ElementDefinition.mapping.map [ fhir:value ".inboundRelationship[typeCode=SUBJ].source[classCode=CACT, moodCode=EVN].reasonCOde" ]
-       ]
-     ], [
-       fhir:index 23;
-       fhir:Element.id [ fhir:value "CommunicationRequest.subject" ];
-       fhir:ElementDefinition.path [ fhir:value "CommunicationRequest.subject" ];
-       fhir:ElementDefinition.short [ fhir:value "Focus of message" ];
-       fhir:ElementDefinition.definition [ fhir:value "The patient or group that is the focus of this communication request." ];
-       fhir:ElementDefinition.alias [
-         fhir:value "patient";
-         fhir:index 0
-       ];
-       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
-       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
        fhir:ElementDefinition.type [
          fhir:index 0;
          fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
          fhir:ElementDefinition.type.targetProfile [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Patient";
+           fhir:value "http://hl7.org/fhir/StructureDefinition/Condition";
            fhir:index 0;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Patient>
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Condition>
          ], [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Group";
+           fhir:value "http://hl7.org/fhir/StructureDefinition/Observation";
            fhir:index 1;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Group>
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Observation>
+         ], [
+           fhir:value "http://hl7.org/fhir/StructureDefinition/DiagnosticReport";
+           fhir:index 2;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/DiagnosticReport>
+         ], [
+           fhir:value "http://hl7.org/fhir/StructureDefinition/DocumentReference";
+           fhir:index 3;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/DocumentReference>
          ]
+       ];
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "workflow" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "Request.reasonReference" ]
+       ], [
+         fhir:index 1;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "w5" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "FiveWs.why[x]" ]
+       ], [
+         fhir:index 2;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value ".outboundRelationship[typeCode=RSON].target" ]
+       ]
+     ], [
+       fhir:index 23;
+       fhir:Element.id [ fhir:value "CommunicationRequest.note" ];
+       fhir:ElementDefinition.path [ fhir:value "CommunicationRequest.note" ];
+       fhir:ElementDefinition.short [ fhir:value "Comments made about communication request" ];
+       fhir:ElementDefinition.definition [ fhir:value "Comments made about the request by the requester, sender, recipient, subject or other participants." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Annotation" ]
        ];
        fhir:ElementDefinition.mapping [
          fhir:index 0;
          fhir:ElementDefinition.mapping.identity [ fhir:value "workflow" ];
-         fhir:ElementDefinition.mapping.map [ fhir:value "Request.subject" ]
+         fhir:ElementDefinition.mapping.map [ fhir:value "Request.note" ]
        ], [
          fhir:index 1;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "w5" ];
-         fhir:ElementDefinition.mapping.map [ fhir:value "FiveWs.subject[x]" ]
-       ], [
-         fhir:index 2;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "w5" ];
-         fhir:ElementDefinition.mapping.map [ fhir:value "FiveWs.subject" ]
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value ".inboundRelationship(typeCode=SUBJ].source[classCode=ANNGEN, moodCode=EVN].value[xsi:type=ST]" ]
        ]
      ]
   ] .

@@ -9,7 +9,7 @@
   fhir:nodeRole fhir:treeRoot;
   fhir:Resource.id [ fhir:value "CoverageEligibilityResponse"];
   fhir:Resource.meta [
-     fhir:Meta.lastUpdated [ fhir:value "2021-08-16T03:59:23.356+05:30"^^xsd:dateTime ]
+     fhir:Meta.lastUpdated [ fhir:value "2021-08-16T09:29:23.356+11:00"^^xsd:dateTime ]
   ];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
@@ -1343,7 +1343,11 @@
          fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
          fhir:ElementDefinition.constraint.human [ fhir:value "SHALL contain a category or a billcode but not both." ];
          fhir:ElementDefinition.constraint.expression [ fhir:value "category.exists() xor productOrService.exists()" ];
-         fhir:ElementDefinition.constraint.xpath [ fhir:value "exists(f:category) or exists(f:productOrService)" ]
+         fhir:ElementDefinition.constraint.xpath [ fhir:value "exists(f:category) or exists(f:productOrService)" ];
+         fhir:ElementDefinition.constraint.source [
+           fhir:value "http://hl7.org/fhir/StructureDefinition/CoverageEligibilityResponse";
+           fhir:link <http://hl7.org/fhir/StructureDefinition/CoverageEligibilityResponse>
+         ]
        ], [
          fhir:index 1;
          fhir:ElementDefinition.constraint.key [ fhir:value "ele-1" ];

@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "CoverageEligibilityResponse",
   "meta": {
-    "lastUpdated": "2021-08-16T03:59:23.356+05:30"
+    "lastUpdated": "2021-08-16T09:29:23.356+11:00"
   },
   "text": {
     "status": "generated",
@@ -1263,7 +1263,8 @@
             "severity": "error",
             "human": "SHALL contain a category or a billcode but not both.",
             "expression": "category.exists() xor productOrService.exists()",
-            "xpath": "exists(f:category) or exists(f:productOrService)"
+            "xpath": "exists(f:category) or exists(f:productOrService)",
+            "source": "http://hl7.org/fhir/StructureDefinition/CoverageEligibilityResponse"
           },
           {
             "key": "ele-1",

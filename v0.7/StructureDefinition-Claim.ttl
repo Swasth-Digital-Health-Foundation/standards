@@ -9,7 +9,7 @@
   fhir:nodeRole fhir:treeRoot;
   fhir:Resource.id [ fhir:value "Claim"];
   fhir:Resource.meta [
-     fhir:Meta.lastUpdated [ fhir:value "2019-11-01T03:59:23.356+05:30"^^xsd:dateTime ]
+     fhir:Meta.lastUpdated [ fhir:value "2019-11-01T09:29:23.356+11:00"^^xsd:dateTime ]
   ];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];

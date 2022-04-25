@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "CommunicationRequest",
   "meta": {
-    "lastUpdated": "2019-11-01T03:59:23.356+05:30"
+    "lastUpdated": "2019-11-01T09:29:23.356+11:00"
   },
   "text": {
     "status": "generated",
@@ -69,7 +69,7 @@
   "kind": "resource",
   "abstract": false,
   "type": "CommunicationRequest",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/DomainResource",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/CommunicationRequest",
   "derivation": "specialization",
   "snapshot": {
     "element": [
@@ -81,7 +81,7 @@
         "min": 0,
         "max": "*",
         "base": {
-          "path": "DomainResource",
+          "path": "CommunicationRequest",
           "min": 0,
           "max": "*"
         },
@@ -367,16 +367,6 @@
       {
         "id": "CommunicationRequest.extension",
         "path": "CommunicationRequest.extension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "description": "Extensions are always sliced by (at least) url",
-          "rules": "open"
-        },
         "short": "Additional content defined by implementations",
         "definition": "May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
         "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
@@ -426,16 +416,6 @@
       {
         "id": "CommunicationRequest.modifierExtension",
         "path": "CommunicationRequest.modifierExtension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "description": "Extensions are always sliced by (at least) url",
-          "rules": "open"
-        },
         "short": "Extensions that cannot be ignored",
         "definition": "May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
         "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
@@ -485,66 +465,44 @@
         ]
       },
       {
-        "id": "CommunicationRequest.about",
-        "path": "CommunicationRequest.about",
-        "short": "Resources that pertain to this communication request",
-        "definition": "Other resources that pertain to this communication request and to which this communication request should be associated.",
-        "comment": "Don't use CommunicationRequest.about element when a more specific element exists, such as basedOn, reasonReference, or replaces.",
+        "id": "CommunicationRequest.identifier",
+        "path": "CommunicationRequest.identifier",
+        "short": "Unique identifier",
+        "definition": "Business identifiers assigned to this communication request by the performer or other systems which remain constant as the resource is updated and propagates from server to server.",
+        "comment": "This is a business identifier, not a resource identifier (see [discussion](resource.html#identifiers)).  It is best practice for the identifier to only appear on a single resource instance, however business practices may occasionally dictate that multiple resource instances with the same identifier can exist - possibly even with different resource types.  For example, multiple Patient and a Person resource instance might share the same social insurance number.",
+        "requirements": "Allows identification of the communication request as it is known by various participating systems and in a way that remains consistent across servers.",
         "min": 0,
         "max": "*",
         "base": {
-          "path": "CommunicationRequest.about",
+          "path": "CommunicationRequest.identifier",
           "min": 0,
           "max": "*"
         },
         "type": [
           {
-            "code": "Reference",
-            "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/Resource"
-            ]
+            "code": "Identifier"
           }
         ],
-        "mapping": [
+        "constraint": [
           {
-            "identity": "workflow",
-            "map": "Request.supportingInfo"
-          },
-          {
-            "identity": "w5",
-            "map": "FiveWs.context"
-          }
-        ]
-      },
-      {
-        "id": "CommunicationRequest.authoredOn",
-        "path": "CommunicationRequest.authoredOn",
-        "short": "When request transitioned to being actionable",
-        "definition": "For draft requests, indicates the date of initial creation.  For requests with other statuses, indicates the date of activation.",
-        "alias": [
-          "createdOn"
-        ],
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "CommunicationRequest.authoredOn",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "dateTime"
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
+        "isModifier": false,
         "isSummary": true,
         "mapping": [
           {
             "identity": "workflow",
-            "map": "Request.authoredOn"
+            "map": "Request.identifier"
           },
           {
             "identity": "w5",
-            "map": "FiveWs.recorded"
+            "map": "FiveWs.identifier"
           }
         ]
       },
@@ -572,6 +530,17 @@
             ]
           }
         ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "isModifier": false,
         "isSummary": true,
         "mapping": [
           {
@@ -581,6 +550,206 @@
           {
             "identity": "rim",
             "map": ".outboundRelationship[typeCode=FLFS].target"
+          }
+        ]
+      },
+      {
+        "id": "CommunicationRequest.replaces",
+        "path": "CommunicationRequest.replaces",
+        "short": "Request(s) replaced by this request",
+        "definition": "Completed or terminated request(s) whose function is taken by this new request.",
+        "comment": "The replacement could be because the initial request was immediately rejected (due to an issue) or because the previous request was completed, but the need for the action described by the request remains ongoing.",
+        "requirements": "Allows tracing the continuation of a therapy or administrative process instantiated through multiple requests.",
+        "alias": [
+          "supersedes",
+          "prior"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "CommunicationRequest.replaces",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/CommunicationRequest"
+            ]
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "isModifier": false,
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "workflow",
+            "map": "Request.replaces"
+          },
+          {
+            "identity": "rim",
+            "map": ".outboundRelationship[typeCode=RPLC].target"
+          }
+        ]
+      },
+      {
+        "id": "CommunicationRequest.groupIdentifier",
+        "path": "CommunicationRequest.groupIdentifier",
+        "short": "Composite request this is part of",
+        "definition": "A shared identifier common to all requests that were authorized more or less simultaneously by a single author, representing the identifier of the requisition, prescription or similar form.",
+        "comment": "Requests are linked either by a \"basedOn\" relationship (i.e. one request is fulfilling another) or by having a common requisition.  Requests that are part of the same requisition are generally treated independently from the perspective of changing their state or maintaining them after initial creation.",
+        "alias": [
+          "grouperId"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "CommunicationRequest.groupIdentifier",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Identifier"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "isModifier": false,
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "workflow",
+            "map": "Request.groupIdentifier"
+          },
+          {
+            "identity": "rim",
+            "map": ".inboundRelationship(typeCode=COMP].source[moodCode=INT].identifier"
+          }
+        ]
+      },
+      {
+        "id": "CommunicationRequest.status",
+        "path": "CommunicationRequest.status",
+        "short": "draft | active | on-hold | revoked | completed | entered-in-error | unknown",
+        "definition": "The status of the proposal or order.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "CommunicationRequest.status",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "isModifier": true,
+        "isModifierReason": "This element is labelled as a modifier because it is a status element that contains status entered-in-error which means that the resource should not be treated as valid.",
+        "isSummary": true,
+        "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+              "valueString": "CommunicationRequestStatus"
+            }
+          ],
+          "strength": "required",
+          "description": "The status of the communication request.",
+          "valueSet": "http://hl7.org/fhir/ValueSet/request-status|4.0.1"
+        },
+        "mapping": [
+          {
+            "identity": "workflow",
+            "map": "Request.status"
+          },
+          {
+            "identity": "w5",
+            "map": "FiveWs.status"
+          }
+        ]
+      },
+      {
+        "id": "CommunicationRequest.statusReason",
+        "path": "CommunicationRequest.statusReason",
+        "short": "Reason for current status",
+        "definition": "Captures the reason for the current state of the CommunicationRequest.",
+        "comment": "This is generally only used for \"exception\" statuses such as \"suspended\" or \"cancelled\".  The reason why the CommunicationRequest was created at all is captured in reasonCode, not here.  [distinct reason codes for different statuses can be enforced using invariants if they are universal bindings].",
+        "alias": [
+          "Suspended Reason",
+          "Cancelled Reason"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "CommunicationRequest.statusReason",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+              "valueString": "CommunicationRequestStatusReason"
+            }
+          ],
+          "strength": "example",
+          "description": "Codes identifying the reason for the current state of a request."
+        },
+        "mapping": [
+          {
+            "identity": "workflow",
+            "map": "Request.statusReason"
+          },
+          {
+            "identity": "rim",
+            "map": ".inboundRelationship[typeCode=SUBJ].source[classCode=CACT, moodCode=EVN].reasonCOde"
           }
         ]
       },
@@ -602,6 +771,18 @@
             "code": "CodeableConcept"
           }
         ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "isModifier": false,
+        "isSummary": false,
         "binding": {
           "extension": [
             {
@@ -617,6 +798,58 @@
           {
             "identity": "w5",
             "map": "FiveWs.class"
+          }
+        ]
+      },
+      {
+        "id": "CommunicationRequest.priority",
+        "path": "CommunicationRequest.priority",
+        "short": "routine | urgent | asap | stat",
+        "definition": "Characterizes how quickly the proposed act must be initiated. Includes concepts such as stat, urgent, routine.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "CommunicationRequest.priority",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "meaningWhenMissing": "If missing, this task should be performed with normal priority",
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "isModifier": false,
+        "isSummary": true,
+        "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+              "valueString": "CommunicationPriority"
+            }
+          ],
+          "strength": "required",
+          "description": "Codes indicating the relative importance of a communication request.",
+          "valueSet": "http://hl7.org/fhir/ValueSet/request-priority|4.0.1"
+        },
+        "mapping": [
+          {
+            "identity": "workflow",
+            "map": "Request.priority"
+          },
+          {
+            "identity": "w5",
+            "map": "FiveWs.grade"
           }
         ]
       },
@@ -642,6 +875,16 @@
           }
         ],
         "meaningWhenMissing": "If do not perform is not specified, the request is a positive request e.g. \"do perform\"",
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
         "isModifier": true,
         "isModifierReason": "If true this element negates the specified action. For Example,  instead of a request for a communication, it is a request for the communication to not occur.",
         "isSummary": true,
@@ -649,6 +892,142 @@
           {
             "identity": "workflow",
             "map": "Request.doNotPerform"
+          }
+        ]
+      },
+      {
+        "id": "CommunicationRequest.medium",
+        "path": "CommunicationRequest.medium",
+        "short": "A channel of communication",
+        "definition": "A channel that was used for this communication (e.g. email, fax).",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "CommunicationRequest.medium",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+              "valueString": "CommunicationMedium"
+            }
+          ],
+          "strength": "example",
+          "description": "Codes for communication mediums such as phone, fax, email, in person, etc.",
+          "valueSet": "http://terminology.hl7.org/ValueSet/v3-ParticipationMode"
+        }
+      },
+      {
+        "id": "CommunicationRequest.subject",
+        "path": "CommunicationRequest.subject",
+        "short": "Focus of message",
+        "definition": "The patient or group that is the focus of this communication request.",
+        "alias": [
+          "patient"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "CommunicationRequest.subject",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Patient",
+              "http://hl7.org/fhir/StructureDefinition/Group"
+            ]
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "isModifier": false,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "workflow",
+            "map": "Request.subject"
+          },
+          {
+            "identity": "w5",
+            "map": "FiveWs.subject[x]"
+          },
+          {
+            "identity": "w5",
+            "map": "FiveWs.subject"
+          }
+        ]
+      },
+      {
+        "id": "CommunicationRequest.about",
+        "path": "CommunicationRequest.about",
+        "short": "Resources that pertain to this communication request",
+        "definition": "Other resources that pertain to this communication request and to which this communication request should be associated.",
+        "comment": "Don't use CommunicationRequest.about element when a more specific element exists, such as basedOn, reasonReference, or replaces.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "CommunicationRequest.about",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Resource"
+            ]
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "isModifier": false,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "workflow",
+            "map": "Request.supportingInfo"
+          },
+          {
+            "identity": "w5",
+            "map": "FiveWs.context"
           }
         ]
       },
@@ -673,6 +1052,17 @@
             ]
           }
         ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "isModifier": false,
         "isSummary": true,
         "mapping": [
           {
@@ -682,162 +1072,6 @@
           {
             "identity": "w5",
             "map": "FiveWs.context"
-          }
-        ]
-      },
-      {
-        "id": "CommunicationRequest.groupIdentifier",
-        "path": "CommunicationRequest.groupIdentifier",
-        "short": "Composite request this is part of",
-        "definition": "A shared identifier common to all requests that were authorized more or less simultaneously by a single author, representing the identifier of the requisition, prescription or similar form.",
-        "comment": "Requests are linked either by a \"basedOn\" relationship (i.e. one request is fulfilling another) or by having a common requisition.  Requests that are part of the same requisition are generally treated independently from the perspective of changing their state or maintaining them after initial creation.",
-        "alias": [
-          "grouperId"
-        ],
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "CommunicationRequest.groupIdentifier",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "Identifier"
-          }
-        ],
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "workflow",
-            "map": "Request.groupIdentifier"
-          },
-          {
-            "identity": "rim",
-            "map": ".inboundRelationship(typeCode=COMP].source[moodCode=INT].identifier"
-          }
-        ]
-      },
-      {
-        "id": "CommunicationRequest.identifier",
-        "path": "CommunicationRequest.identifier",
-        "short": "Unique identifier",
-        "definition": "Business identifiers assigned to this communication request by the performer or other systems which remain constant as the resource is updated and propagates from server to server.",
-        "comment": "This is a business identifier, not a resource identifier (see [discussion](http://hl7.org/fhir/R4/resource.html#identifiers)).  It is best practice for the identifier to only appear on a single resource instance, however business practices may occasionally dictate that multiple resource instances with the same identifier can exist - possibly even with different resource types.  For example, multiple Patient and a Person resource instance might share the same social insurance number.",
-        "requirements": "Allows identification of the communication request as it is known by various participating systems and in a way that remains consistent across servers.",
-        "min": 0,
-        "max": "*",
-        "base": {
-          "path": "CommunicationRequest.identifier",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "Identifier"
-          }
-        ],
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "workflow",
-            "map": "Request.identifier"
-          },
-          {
-            "identity": "w5",
-            "map": "FiveWs.identifier"
-          }
-        ]
-      },
-      {
-        "id": "CommunicationRequest.medium",
-        "path": "CommunicationRequest.medium",
-        "short": "A channel of communication",
-        "definition": "A channel that was used for this communication (e.g. email, fax).",
-        "min": 0,
-        "max": "*",
-        "base": {
-          "path": "CommunicationRequest.medium",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "CodeableConcept"
-          }
-        ],
-        "binding": {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
-              "valueString": "CommunicationMedium"
-            }
-          ],
-          "strength": "example",
-          "description": "Codes for communication mediums such as phone, fax, email, in person, etc.",
-          "valueSet": "http://terminology.hl7.org/ValueSet/v3-ParticipationMode"
-        }
-      },
-      {
-        "id": "CommunicationRequest.note",
-        "path": "CommunicationRequest.note",
-        "short": "Comments made about communication request",
-        "definition": "Comments made about the request by the requester, sender, recipient, subject or other participants.",
-        "min": 0,
-        "max": "*",
-        "base": {
-          "path": "CommunicationRequest.note",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "Annotation"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "workflow",
-            "map": "Request.note"
-          },
-          {
-            "identity": "rim",
-            "map": ".inboundRelationship(typeCode=SUBJ].source[classCode=ANNGEN, moodCode=EVN].value[xsi:type=ST]"
-          }
-        ]
-      },
-      {
-        "id": "CommunicationRequest.occurrence[x]",
-        "path": "CommunicationRequest.occurrence[x]",
-        "short": "When scheduled",
-        "definition": "The time when this communication is to occur.",
-        "alias": [
-          "timing"
-        ],
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "CommunicationRequest.occurrence[x]",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "dateTime"
-          },
-          {
-            "code": "Period"
-          }
-        ],
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "workflow",
-            "map": "Request.occurrence[x]"
-          },
-          {
-            "identity": "w5",
-            "map": "FiveWs.planned"
           }
         ]
       },
@@ -856,6 +1090,154 @@
         "type": [
           {
             "code": "BackboneElement"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "CommunicationRequest.payload.id",
+        "path": "CommunicationRequest.payload.id",
+        "representation": [
+          "xmlAttr"
+        ],
+        "short": "Unique id for inter-element referencing",
+        "definition": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Element.id",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type",
+                "valueUrl": "string"
+              }
+            ],
+            "code": "http://hl7.org/fhirpath/System.String"
+          }
+        ],
+        "isModifier": false,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "id": "CommunicationRequest.payload.extension",
+        "path": "CommunicationRequest.payload.extension",
+        "short": "Additional content defined by implementations",
+        "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "alias": [
+          "extensions",
+          "user content"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Element.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          },
+          {
+            "key": "ext-1",
+            "severity": "error",
+            "human": "Must have either extensions or value[x], not both",
+            "expression": "extension.exists() != value.exists()",
+            "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), \"value\")])",
+            "source": "http://hl7.org/fhir/StructureDefinition/Extension"
+          }
+        ],
+        "isModifier": false,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "id": "CommunicationRequest.payload.modifierExtension",
+        "path": "CommunicationRequest.payload.modifierExtension",
+        "short": "Extensions that cannot be ignored even if unrecognized",
+        "definition": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
+        "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "requirements": "Modifier extensions allow for extensions that *cannot* be safely ignored to be clearly distinguished from the vast majority of extensions which can be safely ignored.  This promotes interoperability by eliminating the need for implementers to prohibit the presence of extensions. For further information, see the [definition of modifier extensions](http://hl7.org/fhir/R4/extensibility.html#modifierExtension).",
+        "alias": [
+          "extensions",
+          "user content",
+          "modifiers"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "BackboneElement.modifierExtension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          },
+          {
+            "key": "ext-1",
+            "severity": "error",
+            "human": "Must have either extensions or value[x], not both",
+            "expression": "extension.exists() != value.exists()",
+            "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), \"value\")])",
+            "source": "http://hl7.org/fhir/StructureDefinition/Extension"
+          }
+        ],
+        "isModifier": true,
+        "isModifierReason": "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them",
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
           }
         ]
       },
@@ -885,6 +1267,18 @@
             ]
           }
         ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "isModifier": false,
+        "isSummary": false,
         "mapping": [
           {
             "identity": "workflow",
@@ -893,43 +1287,246 @@
         ]
       },
       {
-        "id": "CommunicationRequest.priority",
-        "path": "CommunicationRequest.priority",
-        "short": "routine | urgent | asap | stat",
-        "definition": "Characterizes how quickly the proposed act must be initiated. Includes concepts such as stat, urgent, routine.",
+        "id": "CommunicationRequest.occurrence[x]",
+        "path": "CommunicationRequest.occurrence[x]",
+        "short": "When scheduled",
+        "definition": "The time when this communication is to occur.",
+        "alias": [
+          "timing"
+        ],
         "min": 0,
         "max": "1",
         "base": {
-          "path": "CommunicationRequest.priority",
+          "path": "CommunicationRequest.occurrence[x]",
           "min": 0,
           "max": "1"
         },
         "type": [
           {
-            "code": "code"
+            "code": "dateTime"
+          },
+          {
+            "code": "Period"
           }
         ],
-        "meaningWhenMissing": "If missing, this task should be performed with normal priority",
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "isModifier": false,
         "isSummary": true,
-        "binding": {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
-              "valueString": "CommunicationPriority"
-            }
-          ],
-          "strength": "required",
-          "description": "Codes indicating the relative importance of a communication request.",
-          "valueSet": "http://hl7.org/fhir/ValueSet/request-priority|4.0.1"
-        },
         "mapping": [
           {
             "identity": "workflow",
-            "map": "Request.priority"
+            "map": "Request.occurrence[x]"
           },
           {
             "identity": "w5",
-            "map": "FiveWs.grade"
+            "map": "FiveWs.planned"
+          }
+        ]
+      },
+      {
+        "id": "CommunicationRequest.authoredOn",
+        "path": "CommunicationRequest.authoredOn",
+        "short": "When request transitioned to being actionable",
+        "definition": "For draft requests, indicates the date of initial creation.  For requests with other statuses, indicates the date of activation.",
+        "alias": [
+          "createdOn"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "CommunicationRequest.authoredOn",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "isModifier": false,
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "workflow",
+            "map": "Request.authoredOn"
+          },
+          {
+            "identity": "w5",
+            "map": "FiveWs.recorded"
+          }
+        ]
+      },
+      {
+        "id": "CommunicationRequest.requester",
+        "path": "CommunicationRequest.requester",
+        "short": "Who/what is requesting service",
+        "definition": "The device, individual, or organization who initiated the request and has responsibility for its activation.",
+        "alias": [
+          "author"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "CommunicationRequest.requester",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Practitioner",
+              "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
+              "http://hl7.org/fhir/StructureDefinition/Organization",
+              "http://hl7.org/fhir/StructureDefinition/Patient",
+              "http://hl7.org/fhir/StructureDefinition/RelatedPerson",
+              "http://hl7.org/fhir/StructureDefinition/Device"
+            ]
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "isModifier": false,
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "workflow",
+            "map": "Request.requester"
+          },
+          {
+            "identity": "w5",
+            "map": "FiveWs.author"
+          },
+          {
+            "identity": "rim",
+            "map": ".participation[typeCode=AUT].role"
+          }
+        ]
+      },
+      {
+        "id": "CommunicationRequest.recipient",
+        "path": "CommunicationRequest.recipient",
+        "short": "Message recipient",
+        "definition": "The entity (e.g. person, organization, clinical information system, device, group, or care team) which is the intended target of the communication.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "CommunicationRequest.recipient",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Device",
+              "http://hl7.org/fhir/StructureDefinition/Organization",
+              "http://hl7.org/fhir/StructureDefinition/Patient",
+              "http://hl7.org/fhir/StructureDefinition/Practitioner",
+              "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
+              "http://hl7.org/fhir/StructureDefinition/RelatedPerson",
+              "http://hl7.org/fhir/StructureDefinition/Group",
+              "http://hl7.org/fhir/StructureDefinition/CareTeam",
+              "http://hl7.org/fhir/StructureDefinition/HealthcareService"
+            ]
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "isModifier": false,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "workflow",
+            "map": "Request.performer"
+          },
+          {
+            "identity": "w5",
+            "map": "FiveWs.actor"
+          }
+        ]
+      },
+      {
+        "id": "CommunicationRequest.sender",
+        "path": "CommunicationRequest.sender",
+        "short": "Message sender",
+        "definition": "The entity (e.g. person, organization, clinical information system, or device) which is to be the source of the communication.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "CommunicationRequest.sender",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Device",
+              "http://hl7.org/fhir/StructureDefinition/Organization",
+              "http://hl7.org/fhir/StructureDefinition/Patient",
+              "http://hl7.org/fhir/StructureDefinition/Practitioner",
+              "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
+              "http://hl7.org/fhir/StructureDefinition/RelatedPerson",
+              "http://hl7.org/fhir/StructureDefinition/HealthcareService"
+            ]
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "isModifier": false,
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "workflow",
+            "map": "Request.performer"
+          },
+          {
+            "identity": "w5",
+            "map": "FiveWs.actor"
           }
         ]
       },
@@ -951,6 +1548,17 @@
             "code": "CodeableConcept"
           }
         ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "isModifier": false,
         "isSummary": true,
         "binding": {
           "extension": [
@@ -1001,6 +1609,17 @@
             ]
           }
         ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "isModifier": false,
         "isSummary": true,
         "mapping": [
           {
@@ -1018,41 +1637,117 @@
         ]
       },
       {
-        "id": "CommunicationRequest.recipient",
-        "path": "CommunicationRequest.recipient",
-        "short": "Message recipient",
-        "definition": "The entity (e.g. person, organization, clinical information system, device, group, or care team) which is the intended target of the communication.",
+        "id": "CommunicationRequest.note",
+        "path": "CommunicationRequest.note",
+        "short": "Comments made about communication request",
+        "definition": "Comments made about the request by the requester, sender, recipient, subject or other participants.",
         "min": 0,
         "max": "*",
         "base": {
-          "path": "CommunicationRequest.recipient",
+          "path": "CommunicationRequest.note",
           "min": 0,
           "max": "*"
         },
         "type": [
           {
-            "code": "Reference",
-            "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/Device",
-              "http://hl7.org/fhir/StructureDefinition/Organization",
-              "http://hl7.org/fhir/StructureDefinition/Patient",
-              "http://hl7.org/fhir/StructureDefinition/Practitioner",
-              "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
-              "http://hl7.org/fhir/StructureDefinition/RelatedPerson",
-              "http://hl7.org/fhir/StructureDefinition/Group",
-              "http://hl7.org/fhir/StructureDefinition/CareTeam",
-              "http://hl7.org/fhir/StructureDefinition/HealthcareService"
-            ]
+            "code": "Annotation"
           }
         ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "isModifier": false,
+        "isSummary": false,
         "mapping": [
           {
             "identity": "workflow",
-            "map": "Request.performer"
+            "map": "Request.note"
+          },
+          {
+            "identity": "rim",
+            "map": ".inboundRelationship(typeCode=SUBJ].source[classCode=ANNGEN, moodCode=EVN].value[xsi:type=ST]"
+          }
+        ]
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "CommunicationRequest",
+        "path": "CommunicationRequest",
+        "short": "A request for information to be sent to a receiver",
+        "definition": "A request to convey information; e.g. the CDS system proposes that an alert be sent to a responsible provider, the CDS system proposes that the public health agency be notified about a reportable condition.",
+        "min": 0,
+        "max": "*",
+        "mapping": [
+          {
+            "identity": "workflow",
+            "map": "Request"
+          }
+        ]
+      },
+      {
+        "id": "CommunicationRequest.identifier",
+        "path": "CommunicationRequest.identifier",
+        "short": "Unique identifier",
+        "definition": "Business identifiers assigned to this communication request by the performer or other systems which remain constant as the resource is updated and propagates from server to server.",
+        "comment": "This is a business identifier, not a resource identifier (see [discussion](resource.html#identifiers)).  It is best practice for the identifier to only appear on a single resource instance, however business practices may occasionally dictate that multiple resource instances with the same identifier can exist - possibly even with different resource types.  For example, multiple Patient and a Person resource instance might share the same social insurance number.",
+        "requirements": "Allows identification of the communication request as it is known by various participating systems and in a way that remains consistent across servers.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Identifier"
+          }
+        ],
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "workflow",
+            "map": "Request.identifier"
           },
           {
             "identity": "w5",
-            "map": "FiveWs.actor"
+            "map": "FiveWs.identifier"
+          }
+        ]
+      },
+      {
+        "id": "CommunicationRequest.basedOn",
+        "path": "CommunicationRequest.basedOn",
+        "short": "Fulfills plan or proposal",
+        "definition": "A plan or proposal that is fulfilled in whole or in part by this request.",
+        "requirements": "Allows tracing of authorization for the request and tracking whether proposals/recommendations were acted upon.",
+        "alias": [
+          "fulfills"
+        ],
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Resource"
+            ]
+          }
+        ],
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "workflow",
+            "map": "Request.basedOn"
+          },
+          {
+            "identity": "rim",
+            "map": ".outboundRelationship[typeCode=FLFS].target"
           }
         ]
       },
@@ -1069,11 +1764,6 @@
         ],
         "min": 0,
         "max": "*",
-        "base": {
-          "path": "CommunicationRequest.replaces",
-          "min": 0,
-          "max": "*"
-        },
         "type": [
           {
             "code": "Reference",
@@ -1095,84 +1785,30 @@
         ]
       },
       {
-        "id": "CommunicationRequest.requester",
-        "path": "CommunicationRequest.requester",
-        "short": "Who/what is requesting service",
-        "definition": "The device, individual, or organization who initiated the request and has responsibility for its activation.",
+        "id": "CommunicationRequest.groupIdentifier",
+        "path": "CommunicationRequest.groupIdentifier",
+        "short": "Composite request this is part of",
+        "definition": "A shared identifier common to all requests that were authorized more or less simultaneously by a single author, representing the identifier of the requisition, prescription or similar form.",
+        "comment": "Requests are linked either by a \"basedOn\" relationship (i.e. one request is fulfilling another) or by having a common requisition.  Requests that are part of the same requisition are generally treated independently from the perspective of changing their state or maintaining them after initial creation.",
         "alias": [
-          "author"
+          "grouperId"
         ],
         "min": 0,
         "max": "1",
-        "base": {
-          "path": "CommunicationRequest.requester",
-          "min": 0,
-          "max": "1"
-        },
         "type": [
           {
-            "code": "Reference",
-            "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/Practitioner",
-              "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
-              "http://hl7.org/fhir/StructureDefinition/Organization",
-              "http://hl7.org/fhir/StructureDefinition/Patient",
-              "http://hl7.org/fhir/StructureDefinition/RelatedPerson",
-              "http://hl7.org/fhir/StructureDefinition/Device"
-            ]
+            "code": "Identifier"
           }
         ],
         "isSummary": true,
         "mapping": [
           {
             "identity": "workflow",
-            "map": "Request.requester"
-          },
-          {
-            "identity": "w5",
-            "map": "FiveWs.author"
+            "map": "Request.groupIdentifier"
           },
           {
             "identity": "rim",
-            "map": ".participation[typeCode=AUT].role"
-          }
-        ]
-      },
-      {
-        "id": "CommunicationRequest.sender",
-        "path": "CommunicationRequest.sender",
-        "short": "Message sender",
-        "definition": "The entity (e.g. person, organization, clinical information system, or device) which is to be the source of the communication.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "CommunicationRequest.sender",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/Device",
-              "http://hl7.org/fhir/StructureDefinition/Organization",
-              "http://hl7.org/fhir/StructureDefinition/Patient",
-              "http://hl7.org/fhir/StructureDefinition/Practitioner",
-              "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
-              "http://hl7.org/fhir/StructureDefinition/RelatedPerson",
-              "http://hl7.org/fhir/StructureDefinition/HealthcareService"
-            ]
-          }
-        ],
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "workflow",
-            "map": "Request.performer"
-          },
-          {
-            "identity": "w5",
-            "map": "FiveWs.actor"
+            "map": ".inboundRelationship(typeCode=COMP].source[moodCode=INT].identifier"
           }
         ]
       },
@@ -1183,11 +1819,6 @@
         "definition": "The status of the proposal or order.",
         "min": 1,
         "max": "1",
-        "base": {
-          "path": "CommunicationRequest.status",
-          "min": 1,
-          "max": "1"
-        },
         "type": [
           {
             "code": "code"
@@ -1230,11 +1861,6 @@
         ],
         "min": 0,
         "max": "1",
-        "base": {
-          "path": "CommunicationRequest.statusReason",
-          "min": 0,
-          "max": "1"
-        },
         "type": [
           {
             "code": "CodeableConcept"
@@ -1258,148 +1884,6 @@
           {
             "identity": "rim",
             "map": ".inboundRelationship[typeCode=SUBJ].source[classCode=CACT, moodCode=EVN].reasonCOde"
-          }
-        ]
-      },
-      {
-        "id": "CommunicationRequest.subject",
-        "path": "CommunicationRequest.subject",
-        "short": "Focus of message",
-        "definition": "The patient or group that is the focus of this communication request.",
-        "alias": [
-          "patient"
-        ],
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "CommunicationRequest.subject",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/Patient",
-              "http://hl7.org/fhir/StructureDefinition/Group"
-            ]
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "workflow",
-            "map": "Request.subject"
-          },
-          {
-            "identity": "w5",
-            "map": "FiveWs.subject[x]"
-          },
-          {
-            "identity": "w5",
-            "map": "FiveWs.subject"
-          }
-        ]
-      }
-    ]
-  },
-  "differential": {
-    "element": [
-      {
-        "id": "CommunicationRequest",
-        "path": "CommunicationRequest",
-        "short": "A request for information to be sent to a receiver",
-        "definition": "A request to convey information; e.g. the CDS system proposes that an alert be sent to a responsible provider, the CDS system proposes that the public health agency be notified about a reportable condition.",
-        "min": 0,
-        "max": "*",
-        "mapping": [
-          {
-            "identity": "workflow",
-            "map": "Request"
-          }
-        ]
-      },
-      {
-        "id": "CommunicationRequest.about",
-        "path": "CommunicationRequest.about",
-        "short": "Resources that pertain to this communication request",
-        "definition": "Other resources that pertain to this communication request and to which this communication request should be associated.",
-        "comment": "Don't use CommunicationRequest.about element when a more specific element exists, such as basedOn, reasonReference, or replaces.",
-        "min": 0,
-        "max": "*",
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/Resource"
-            ]
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "workflow",
-            "map": "Request.supportingInfo"
-          },
-          {
-            "identity": "w5",
-            "map": "FiveWs.context"
-          }
-        ]
-      },
-      {
-        "id": "CommunicationRequest.authoredOn",
-        "path": "CommunicationRequest.authoredOn",
-        "short": "When request transitioned to being actionable",
-        "definition": "For draft requests, indicates the date of initial creation.  For requests with other statuses, indicates the date of activation.",
-        "alias": [
-          "createdOn"
-        ],
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "dateTime"
-          }
-        ],
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "workflow",
-            "map": "Request.authoredOn"
-          },
-          {
-            "identity": "w5",
-            "map": "FiveWs.recorded"
-          }
-        ]
-      },
-      {
-        "id": "CommunicationRequest.basedOn",
-        "path": "CommunicationRequest.basedOn",
-        "short": "Fulfills plan or proposal",
-        "definition": "A plan or proposal that is fulfilled in whole or in part by this request.",
-        "requirements": "Allows tracing of authorization for the request and tracking whether proposals/recommendations were acted upon.",
-        "alias": [
-          "fulfills"
-        ],
-        "min": 0,
-        "max": "*",
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/Resource"
-            ]
-          }
-        ],
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "workflow",
-            "map": "Request.basedOn"
-          },
-          {
-            "identity": "rim",
-            "map": ".outboundRelationship[typeCode=FLFS].target"
           }
         ]
       },
@@ -1435,6 +1919,42 @@
         ]
       },
       {
+        "id": "CommunicationRequest.priority",
+        "path": "CommunicationRequest.priority",
+        "short": "routine | urgent | asap | stat",
+        "definition": "Characterizes how quickly the proposed act must be initiated. Includes concepts such as stat, urgent, routine.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "meaningWhenMissing": "If missing, this task should be performed with normal priority",
+        "isSummary": true,
+        "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+              "valueString": "CommunicationPriority"
+            }
+          ],
+          "strength": "required",
+          "description": "Codes indicating the relative importance of a communication request.",
+          "valueSet": "http://hl7.org/fhir/ValueSet/request-priority|4.0.1"
+        },
+        "mapping": [
+          {
+            "identity": "workflow",
+            "map": "Request.priority"
+          },
+          {
+            "identity": "w5",
+            "map": "FiveWs.grade"
+          }
+        ]
+      },
+      {
         "id": "CommunicationRequest.doNotPerform",
         "path": "CommunicationRequest.doNotPerform",
         "short": "True if request is prohibiting action",
@@ -1458,88 +1978,6 @@
           {
             "identity": "workflow",
             "map": "Request.doNotPerform"
-          }
-        ]
-      },
-      {
-        "id": "CommunicationRequest.encounter",
-        "path": "CommunicationRequest.encounter",
-        "short": "Encounter created as part of",
-        "definition": "The Encounter during which this CommunicationRequest was created or to which the creation of this record is tightly associated.",
-        "comment": "This will typically be the encounter the event occurred within, but some activities may be initiated prior to or after the official completion of an encounter but still be tied to the context of the encounter.",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/Encounter"
-            ]
-          }
-        ],
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "workflow",
-            "map": "Request.context"
-          },
-          {
-            "identity": "w5",
-            "map": "FiveWs.context"
-          }
-        ]
-      },
-      {
-        "id": "CommunicationRequest.groupIdentifier",
-        "path": "CommunicationRequest.groupIdentifier",
-        "short": "Composite request this is part of",
-        "definition": "A shared identifier common to all requests that were authorized more or less simultaneously by a single author, representing the identifier of the requisition, prescription or similar form.",
-        "comment": "Requests are linked either by a \"basedOn\" relationship (i.e. one request is fulfilling another) or by having a common requisition.  Requests that are part of the same requisition are generally treated independently from the perspective of changing their state or maintaining them after initial creation.",
-        "alias": [
-          "grouperId"
-        ],
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "Identifier"
-          }
-        ],
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "workflow",
-            "map": "Request.groupIdentifier"
-          },
-          {
-            "identity": "rim",
-            "map": ".inboundRelationship(typeCode=COMP].source[moodCode=INT].identifier"
-          }
-        ]
-      },
-      {
-        "id": "CommunicationRequest.identifier",
-        "path": "CommunicationRequest.identifier",
-        "short": "Unique identifier",
-        "definition": "Business identifiers assigned to this communication request by the performer or other systems which remain constant as the resource is updated and propagates from server to server.",
-        "comment": "This is a business identifier, not a resource identifier (see [discussion](resource.html#identifiers)).  It is best practice for the identifier to only appear on a single resource instance, however business practices may occasionally dictate that multiple resource instances with the same identifier can exist - possibly even with different resource types.  For example, multiple Patient and a Person resource instance might share the same social insurance number.",
-        "requirements": "Allows identification of the communication request as it is known by various participating systems and in a way that remains consistent across servers.",
-        "min": 0,
-        "max": "*",
-        "type": [
-          {
-            "code": "Identifier"
-          }
-        ],
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "workflow",
-            "map": "Request.identifier"
-          },
-          {
-            "identity": "w5",
-            "map": "FiveWs.identifier"
           }
         ]
       },
@@ -1568,55 +2006,91 @@
         }
       },
       {
-        "id": "CommunicationRequest.note",
-        "path": "CommunicationRequest.note",
-        "short": "Comments made about communication request",
-        "definition": "Comments made about the request by the requester, sender, recipient, subject or other participants.",
-        "min": 0,
-        "max": "*",
-        "type": [
-          {
-            "code": "Annotation"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "workflow",
-            "map": "Request.note"
-          },
-          {
-            "identity": "rim",
-            "map": ".inboundRelationship(typeCode=SUBJ].source[classCode=ANNGEN, moodCode=EVN].value[xsi:type=ST]"
-          }
-        ]
-      },
-      {
-        "id": "CommunicationRequest.occurrence[x]",
-        "path": "CommunicationRequest.occurrence[x]",
-        "short": "When scheduled",
-        "definition": "The time when this communication is to occur.",
+        "id": "CommunicationRequest.subject",
+        "path": "CommunicationRequest.subject",
+        "short": "Focus of message",
+        "definition": "The patient or group that is the focus of this communication request.",
         "alias": [
-          "timing"
+          "patient"
         ],
         "min": 0,
         "max": "1",
         "type": [
           {
-            "code": "dateTime"
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Patient",
+              "http://hl7.org/fhir/StructureDefinition/Group"
+            ]
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "workflow",
+            "map": "Request.subject"
           },
           {
-            "code": "Period"
+            "identity": "w5",
+            "map": "FiveWs.subject[x]"
+          },
+          {
+            "identity": "w5",
+            "map": "FiveWs.subject"
+          }
+        ]
+      },
+      {
+        "id": "CommunicationRequest.about",
+        "path": "CommunicationRequest.about",
+        "short": "Resources that pertain to this communication request",
+        "definition": "Other resources that pertain to this communication request and to which this communication request should be associated.",
+        "comment": "Don't use CommunicationRequest.about element when a more specific element exists, such as basedOn, reasonReference, or replaces.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Resource"
+            ]
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "workflow",
+            "map": "Request.supportingInfo"
+          },
+          {
+            "identity": "w5",
+            "map": "FiveWs.context"
+          }
+        ]
+      },
+      {
+        "id": "CommunicationRequest.encounter",
+        "path": "CommunicationRequest.encounter",
+        "short": "Encounter created as part of",
+        "definition": "The Encounter during which this CommunicationRequest was created or to which the creation of this record is tightly associated.",
+        "comment": "This will typically be the encounter the event occurred within, but some activities may be initiated prior to or after the official completion of an encounter but still be tied to the context of the encounter.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Encounter"
+            ]
           }
         ],
         "isSummary": true,
         "mapping": [
           {
             "identity": "workflow",
-            "map": "Request.occurrence[x]"
+            "map": "Request.context"
           },
           {
             "identity": "w5",
-            "map": "FiveWs.planned"
+            "map": "FiveWs.context"
           }
         ]
       },
@@ -1662,38 +2136,165 @@
         ]
       },
       {
-        "id": "CommunicationRequest.priority",
-        "path": "CommunicationRequest.priority",
-        "short": "routine | urgent | asap | stat",
-        "definition": "Characterizes how quickly the proposed act must be initiated. Includes concepts such as stat, urgent, routine.",
+        "id": "CommunicationRequest.occurrence[x]",
+        "path": "CommunicationRequest.occurrence[x]",
+        "short": "When scheduled",
+        "definition": "The time when this communication is to occur.",
+        "alias": [
+          "timing"
+        ],
         "min": 0,
         "max": "1",
         "type": [
           {
-            "code": "code"
+            "code": "dateTime"
+          },
+          {
+            "code": "Period"
           }
         ],
-        "meaningWhenMissing": "If missing, this task should be performed with normal priority",
         "isSummary": true,
-        "binding": {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
-              "valueString": "CommunicationPriority"
-            }
-          ],
-          "strength": "required",
-          "description": "Codes indicating the relative importance of a communication request.",
-          "valueSet": "http://hl7.org/fhir/ValueSet/request-priority|4.0.1"
-        },
         "mapping": [
           {
             "identity": "workflow",
-            "map": "Request.priority"
+            "map": "Request.occurrence[x]"
           },
           {
             "identity": "w5",
-            "map": "FiveWs.grade"
+            "map": "FiveWs.planned"
+          }
+        ]
+      },
+      {
+        "id": "CommunicationRequest.authoredOn",
+        "path": "CommunicationRequest.authoredOn",
+        "short": "When request transitioned to being actionable",
+        "definition": "For draft requests, indicates the date of initial creation.  For requests with other statuses, indicates the date of activation.",
+        "alias": [
+          "createdOn"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "workflow",
+            "map": "Request.authoredOn"
+          },
+          {
+            "identity": "w5",
+            "map": "FiveWs.recorded"
+          }
+        ]
+      },
+      {
+        "id": "CommunicationRequest.requester",
+        "path": "CommunicationRequest.requester",
+        "short": "Who/what is requesting service",
+        "definition": "The device, individual, or organization who initiated the request and has responsibility for its activation.",
+        "alias": [
+          "author"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Practitioner",
+              "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
+              "http://hl7.org/fhir/StructureDefinition/Organization",
+              "http://hl7.org/fhir/StructureDefinition/Patient",
+              "http://hl7.org/fhir/StructureDefinition/RelatedPerson",
+              "http://hl7.org/fhir/StructureDefinition/Device"
+            ]
+          }
+        ],
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "workflow",
+            "map": "Request.requester"
+          },
+          {
+            "identity": "w5",
+            "map": "FiveWs.author"
+          },
+          {
+            "identity": "rim",
+            "map": ".participation[typeCode=AUT].role"
+          }
+        ]
+      },
+      {
+        "id": "CommunicationRequest.recipient",
+        "path": "CommunicationRequest.recipient",
+        "short": "Message recipient",
+        "definition": "The entity (e.g. person, organization, clinical information system, device, group, or care team) which is the intended target of the communication.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Device",
+              "http://hl7.org/fhir/StructureDefinition/Organization",
+              "http://hl7.org/fhir/StructureDefinition/Patient",
+              "http://hl7.org/fhir/StructureDefinition/Practitioner",
+              "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
+              "http://hl7.org/fhir/StructureDefinition/RelatedPerson",
+              "http://hl7.org/fhir/StructureDefinition/Group",
+              "http://hl7.org/fhir/StructureDefinition/CareTeam",
+              "http://hl7.org/fhir/StructureDefinition/HealthcareService"
+            ]
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "workflow",
+            "map": "Request.performer"
+          },
+          {
+            "identity": "w5",
+            "map": "FiveWs.actor"
+          }
+        ]
+      },
+      {
+        "id": "CommunicationRequest.sender",
+        "path": "CommunicationRequest.sender",
+        "short": "Message sender",
+        "definition": "The entity (e.g. person, organization, clinical information system, or device) which is to be the source of the communication.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Device",
+              "http://hl7.org/fhir/StructureDefinition/Organization",
+              "http://hl7.org/fhir/StructureDefinition/Patient",
+              "http://hl7.org/fhir/StructureDefinition/Practitioner",
+              "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
+              "http://hl7.org/fhir/StructureDefinition/RelatedPerson",
+              "http://hl7.org/fhir/StructureDefinition/HealthcareService"
+            ]
+          }
+        ],
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "workflow",
+            "map": "Request.performer"
+          },
+          {
+            "identity": "w5",
+            "map": "FiveWs.actor"
           }
         ]
       },
@@ -1772,250 +2373,25 @@
         ]
       },
       {
-        "id": "CommunicationRequest.recipient",
-        "path": "CommunicationRequest.recipient",
-        "short": "Message recipient",
-        "definition": "The entity (e.g. person, organization, clinical information system, device, group, or care team) which is the intended target of the communication.",
+        "id": "CommunicationRequest.note",
+        "path": "CommunicationRequest.note",
+        "short": "Comments made about communication request",
+        "definition": "Comments made about the request by the requester, sender, recipient, subject or other participants.",
         "min": 0,
         "max": "*",
         "type": [
           {
-            "code": "Reference",
-            "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/Device",
-              "http://hl7.org/fhir/StructureDefinition/Organization",
-              "http://hl7.org/fhir/StructureDefinition/Patient",
-              "http://hl7.org/fhir/StructureDefinition/Practitioner",
-              "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
-              "http://hl7.org/fhir/StructureDefinition/RelatedPerson",
-              "http://hl7.org/fhir/StructureDefinition/Group",
-              "http://hl7.org/fhir/StructureDefinition/CareTeam",
-              "http://hl7.org/fhir/StructureDefinition/HealthcareService"
-            ]
+            "code": "Annotation"
           }
         ],
         "mapping": [
           {
             "identity": "workflow",
-            "map": "Request.performer"
-          },
-          {
-            "identity": "w5",
-            "map": "FiveWs.actor"
-          }
-        ]
-      },
-      {
-        "id": "CommunicationRequest.replaces",
-        "path": "CommunicationRequest.replaces",
-        "short": "Request(s) replaced by this request",
-        "definition": "Completed or terminated request(s) whose function is taken by this new request.",
-        "comment": "The replacement could be because the initial request was immediately rejected (due to an issue) or because the previous request was completed, but the need for the action described by the request remains ongoing.",
-        "requirements": "Allows tracing the continuation of a therapy or administrative process instantiated through multiple requests.",
-        "alias": [
-          "supersedes",
-          "prior"
-        ],
-        "min": 0,
-        "max": "*",
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/CommunicationRequest"
-            ]
-          }
-        ],
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "workflow",
-            "map": "Request.replaces"
+            "map": "Request.note"
           },
           {
             "identity": "rim",
-            "map": ".outboundRelationship[typeCode=RPLC].target"
-          }
-        ]
-      },
-      {
-        "id": "CommunicationRequest.requester",
-        "path": "CommunicationRequest.requester",
-        "short": "Who/what is requesting service",
-        "definition": "The device, individual, or organization who initiated the request and has responsibility for its activation.",
-        "alias": [
-          "author"
-        ],
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/Practitioner",
-              "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
-              "http://hl7.org/fhir/StructureDefinition/Organization",
-              "http://hl7.org/fhir/StructureDefinition/Patient",
-              "http://hl7.org/fhir/StructureDefinition/RelatedPerson",
-              "http://hl7.org/fhir/StructureDefinition/Device"
-            ]
-          }
-        ],
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "workflow",
-            "map": "Request.requester"
-          },
-          {
-            "identity": "w5",
-            "map": "FiveWs.author"
-          },
-          {
-            "identity": "rim",
-            "map": ".participation[typeCode=AUT].role"
-          }
-        ]
-      },
-      {
-        "id": "CommunicationRequest.sender",
-        "path": "CommunicationRequest.sender",
-        "short": "Message sender",
-        "definition": "The entity (e.g. person, organization, clinical information system, or device) which is to be the source of the communication.",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/Device",
-              "http://hl7.org/fhir/StructureDefinition/Organization",
-              "http://hl7.org/fhir/StructureDefinition/Patient",
-              "http://hl7.org/fhir/StructureDefinition/Practitioner",
-              "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
-              "http://hl7.org/fhir/StructureDefinition/RelatedPerson",
-              "http://hl7.org/fhir/StructureDefinition/HealthcareService"
-            ]
-          }
-        ],
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "workflow",
-            "map": "Request.performer"
-          },
-          {
-            "identity": "w5",
-            "map": "FiveWs.actor"
-          }
-        ]
-      },
-      {
-        "id": "CommunicationRequest.status",
-        "path": "CommunicationRequest.status",
-        "short": "draft | active | on-hold | revoked | completed | entered-in-error | unknown",
-        "definition": "The status of the proposal or order.",
-        "min": 1,
-        "max": "1",
-        "type": [
-          {
-            "code": "code"
-          }
-        ],
-        "isModifier": true,
-        "isModifierReason": "This element is labelled as a modifier because it is a status element that contains status entered-in-error which means that the resource should not be treated as valid.",
-        "isSummary": true,
-        "binding": {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
-              "valueString": "CommunicationRequestStatus"
-            }
-          ],
-          "strength": "required",
-          "description": "The status of the communication request.",
-          "valueSet": "http://hl7.org/fhir/ValueSet/request-status|4.0.1"
-        },
-        "mapping": [
-          {
-            "identity": "workflow",
-            "map": "Request.status"
-          },
-          {
-            "identity": "w5",
-            "map": "FiveWs.status"
-          }
-        ]
-      },
-      {
-        "id": "CommunicationRequest.statusReason",
-        "path": "CommunicationRequest.statusReason",
-        "short": "Reason for current status",
-        "definition": "Captures the reason for the current state of the CommunicationRequest.",
-        "comment": "This is generally only used for \"exception\" statuses such as \"suspended\" or \"cancelled\".  The reason why the CommunicationRequest was created at all is captured in reasonCode, not here.  [distinct reason codes for different statuses can be enforced using invariants if they are universal bindings].",
-        "alias": [
-          "Suspended Reason",
-          "Cancelled Reason"
-        ],
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "CodeableConcept"
-          }
-        ],
-        "binding": {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
-              "valueString": "CommunicationRequestStatusReason"
-            }
-          ],
-          "strength": "example",
-          "description": "Codes identifying the reason for the current state of a request."
-        },
-        "mapping": [
-          {
-            "identity": "workflow",
-            "map": "Request.statusReason"
-          },
-          {
-            "identity": "rim",
-            "map": ".inboundRelationship[typeCode=SUBJ].source[classCode=CACT, moodCode=EVN].reasonCOde"
-          }
-        ]
-      },
-      {
-        "id": "CommunicationRequest.subject",
-        "path": "CommunicationRequest.subject",
-        "short": "Focus of message",
-        "definition": "The patient or group that is the focus of this communication request.",
-        "alias": [
-          "patient"
-        ],
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/Patient",
-              "http://hl7.org/fhir/StructureDefinition/Group"
-            ]
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "workflow",
-            "map": "Request.subject"
-          },
-          {
-            "identity": "w5",
-            "map": "FiveWs.subject[x]"
-          },
-          {
-            "identity": "w5",
-            "map": "FiveWs.subject"
+            "map": ".inboundRelationship(typeCode=SUBJ].source[classCode=ANNGEN, moodCode=EVN].value[xsi:type=ST]"
           }
         ]
       }

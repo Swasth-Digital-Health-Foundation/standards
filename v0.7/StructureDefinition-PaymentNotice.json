@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "PaymentNotice",
   "meta": {
-    "lastUpdated": "2019-11-01T03:59:23.356+05:30"
+    "lastUpdated": "2019-11-01T09:29:23.356+11:00"
   },
   "text": {
     "status": "generated",
