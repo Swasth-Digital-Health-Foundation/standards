@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Bundle xmlns="http://hl7.org/fhir">
-  <id value="986de8d9-4ca6-4137-bb6a-057ffe55d3d6"/>
+  <id value="4e22d2fc-8722-43b0-808b-ebd707bf6c50"/>
   <meta>
-    <lastUpdated value="2022-04-25T23:08:30.421+05:30"/>
+    <lastUpdated value="2022-05-05T15:22:45.669+05:30"/>
   </meta>
   <type value="collection"/>
   <entry>
@@ -548,7 +548,7 @@
         </text>
         <url value="https://fhir-ig-demo/ValueSet/medical-speciality-type-provider"/>
         <version value="0.0.1"/>
-        <name value="Medical Speciality Type Provider"/>
+        <name value="MedicalSpecialityTypeProvider"/>
         <status value="active"/>
         <date value="2021-09-07"/>
         <publisher value="HL7 International - HCX"/>
@@ -1214,7 +1214,7 @@
         </text>
         <url value="https://fhir-ig-demo/ValueSet/procedure-type-description"/>
         <version value="0.0.1"/>
-        <name value="Procedure Type Description"/>
+        <name value="ProcedureTypeDescriptions"/>
         <status value="active"/>
         <date value="2021-09-07"/>
         <publisher value="HL7 International - HCX"/>
@@ -1808,7 +1808,7 @@
         </text>
         <url value="https://fhir-ig-demo/ValueSet/claim-denial-codes"/>
         <version value="0.0.1"/>
-        <name value="Claim Denial Codes"/>
+        <name value="ClaimDenialCodes"/>
         <status value="active"/>
         <date value="2021-08-15"/>
         <publisher value="HL7 International - HCX"/>
@@ -2231,7 +2231,7 @@
         </text>
         <url value="https://fhir-ig-demo/ValueSet/claim-service-categories"/>
         <version value="0.0.1"/>
-        <name value="Claim Service Categories"/>
+        <name value="ClaimServiceCategories"/>
         <status value="active"/>
         <date value="2021-08-15"/>
         <publisher value="HL7 International - HCX"/>
@@ -2610,7 +2610,7 @@
         </text>
         <url value="https://fhir-ig-demo/ValueSet/claim-service-codes"/>
         <version value="0.0.1"/>
-        <name value="Claim Service Codes"/>
+        <name value="ClaimServiceCodes"/>
         <status value="active"/>
         <date value="2021-08-15"/>
         <publisher value="HL7 International - HCX"/>
@@ -2937,7 +2937,7 @@
         </text>
         <url value="https://fhir-ig-demo/ValueSet/health-service-provider-role"/>
         <version value="0.0.1"/>
-        <name value="health-service-provider-role"/>
+        <name value="HealthServiceProviderRoles"/>
         <status value="active"/>
         <date value="2021-09-07"/>
         <publisher value="HL7 International - HCX"/>
@@ -3352,7 +3352,7 @@
         </text>
         <url value="https://fhir-ig-demo/ValueSet/insurance-company-owners"/>
         <version value="0.0.1"/>
-        <name value="Insurance Company Owners"/>
+        <name value="InsuranceCompanyOwners"/>
         <status value="active"/>
         <date value="2021-09-07"/>
         <publisher value="HL7 International - HCX"/>

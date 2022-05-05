@@ -29,6 +29,13 @@
   "fhirVersion": [
     "4.0.1"
   ],
+  "dependsOn": [
+    {
+      "uri": "https://nrces.in/ndhm/fhir/r4/ImplementationGuide/ndhm.in",
+      "packageId": "ndhm.in",
+      "version": "2.0.1"
+    }
+  ],
   "definition": {
     "extension": [
       {

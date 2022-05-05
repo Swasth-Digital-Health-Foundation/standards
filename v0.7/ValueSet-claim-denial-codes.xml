@@ -7,7 +7,7 @@
   </text>
   <url value="https://fhir-ig-demo/ValueSet/claim-denial-codes"/>
   <version value="0.0.1"/>
-  <name value="Claim Denial Codes"/>
+  <name value="ClaimDenialCodes"/>
   <status value="active"/>
   <date value="2021-08-15"/>
   <publisher value="HL7 International - HCX"/>

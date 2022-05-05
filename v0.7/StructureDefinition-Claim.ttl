@@ -5259,9 +5259,9 @@
          fhir:index 0;
          fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
          fhir:ElementDefinition.type.targetProfile [
-           fhir:value "https://nrces.in/ndhm/fhir/r4/StructureDefinition-Encounter.html";
+           fhir:value "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Encounter";
            fhir:index 0;
-           fhir:link <https://nrces.in/ndhm/fhir/r4/StructureDefinition-Encounter.html>
+           fhir:link <https://nrces.in/ndhm/fhir/r4/StructureDefinition/Encounter>
          ]
        ];
        fhir:ElementDefinition.constraint [
@@ -7210,9 +7210,9 @@
          fhir:index 0;
          fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
          fhir:ElementDefinition.type.targetProfile [
-           fhir:value "https://nrces.in/ndhm/fhir/r4/StructureDefinition-Encounter.html";
+           fhir:value "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Encounter";
            fhir:index 0;
-           fhir:link <https://nrces.in/ndhm/fhir/r4/StructureDefinition-Encounter.html>
+           fhir:link <https://nrces.in/ndhm/fhir/r4/StructureDefinition/Encounter>
          ]
        ];
        fhir:ElementDefinition.constraint [

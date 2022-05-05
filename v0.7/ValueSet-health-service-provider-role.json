@@ -7,7 +7,7 @@
   },
   "url": "https://fhir-ig-demo/ValueSet/health-service-provider-role",
   "version": "0.0.1",
-  "name": "health-service-provider-role",
+  "name": "HealthServiceProviderRoles",
   "status": "active",
   "date": "2021-09-07",
   "publisher": "HL7 International - HCX",

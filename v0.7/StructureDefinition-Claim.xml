@@ -4087,7 +4087,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
       </base>
       <type>
         <code value="Reference"/>
-        <targetProfile value="https://nrces.in/ndhm/fhir/r4/StructureDefinition-Encounter.html"/>
+        <targetProfile value="https://nrces.in/ndhm/fhir/r4/StructureDefinition/Encounter"/>
       </type>
       <constraint>
         <key value="ele-1"/>
@@ -5549,7 +5549,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
       </base>
       <type>
         <code value="Reference"/>
-        <targetProfile value="https://nrces.in/ndhm/fhir/r4/StructureDefinition-Encounter.html"/>
+        <targetProfile value="https://nrces.in/ndhm/fhir/r4/StructureDefinition/Encounter"/>
       </type>
       <constraint>
         <key value="ele-1"/>

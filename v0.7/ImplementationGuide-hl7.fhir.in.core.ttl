@@ -35,6 +35,15 @@
      fhir:value "4.0.1";
      fhir:index 0
   ];
+  fhir:ImplementationGuide.dependsOn [
+     fhir:index 0;
+     fhir:ImplementationGuide.dependsOn.uri [
+       fhir:value "https://nrces.in/ndhm/fhir/r4/ImplementationGuide/ndhm.in";
+       fhir:link <https://nrces.in/ndhm/fhir/r4/ImplementationGuide/ndhm.in>
+     ];
+     fhir:ImplementationGuide.dependsOn.packageId [ fhir:value "ndhm.in" ];
+     fhir:ImplementationGuide.dependsOn.version [ fhir:value "2.0.1" ]
+  ];
   fhir:ImplementationGuide.definition [
      fhir:Element.extension [
        fhir:index 0;

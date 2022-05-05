@@ -388,7 +388,7 @@ Address {[]} {[]}Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDef
 "Claim.item.subSite","","","",0,*,"","","","CodeableConcept {[]} {[]}
 ","Anatomical sub-location","A region or surface of the bodySite, e.g. limb region or tooth surface(s).","","Allows insurer to validate specific procedures.","","","","","","","",,"example","The code for the tooth surface and surface combinations.","http://hl7.org/fhir/ValueSet/surface","",,,,"Claim.item.subSite",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"Claim.item.encounter","","","",0,*,"","","","Reference {[]} {[CanonicalType[https://nrces.in/ndhm/fhir/r4/StructureDefinition-Encounter.html]]}
+"Claim.item.encounter","","","",0,*,"","","","Reference {[]} {[CanonicalType[https://nrces.in/ndhm/fhir/r4/StructureDefinition/Encounter]]}
 ","Encounters related to this billed item","The Encounters during which this Claim was created or to which the creation of this record is tightly associated.","This will typically be the encounter the event occurred within, but some activities may be initiated prior to or after the official completion of an encounter but still be tied to the context of the encounter.","Used in some jurisdictions to link clinical events to claim items.","","","","","","","",,,,,"",,,,"Claim.item.encounter",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","Request.context"
 "Claim.item.detail","","","",0,*,"","","","BackboneElement {[]} {[]}

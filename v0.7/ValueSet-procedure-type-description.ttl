@@ -14,7 +14,7 @@
   ];
   fhir:ValueSet.url [ fhir:value "https://fhir-ig-demo/ValueSet/procedure-type-description"];
   fhir:ValueSet.version [ fhir:value "0.0.1"];
-  fhir:ValueSet.name [ fhir:value "Procedure Type Description"];
+  fhir:ValueSet.name [ fhir:value "ProcedureTypeDescriptions"];
   fhir:ValueSet.status [ fhir:value "active"];
   fhir:ValueSet.date [ fhir:value "2021-09-07"^^xsd:date];
   fhir:ValueSet.publisher [ fhir:value "HL7 International - HCX"];

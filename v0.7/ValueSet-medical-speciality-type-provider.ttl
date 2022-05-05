@@ -14,7 +14,7 @@
   ];
   fhir:ValueSet.url [ fhir:value "https://fhir-ig-demo/ValueSet/medical-speciality-type-provider"];
   fhir:ValueSet.version [ fhir:value "0.0.1"];
-  fhir:ValueSet.name [ fhir:value "Medical Speciality Type Provider"];
+  fhir:ValueSet.name [ fhir:value "MedicalSpecialityTypeProvider"];
   fhir:ValueSet.status [ fhir:value "active"];
   fhir:ValueSet.date [ fhir:value "2021-09-07"^^xsd:date];
   fhir:ValueSet.publisher [ fhir:value "HL7 International - HCX"];

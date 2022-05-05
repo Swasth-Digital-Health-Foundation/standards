@@ -7,7 +7,7 @@
   },
   "url": "https://fhir-ig-demo/ValueSet/claim-service-codes",
   "version": "0.0.1",
-  "name": "Claim Service Codes",
+  "name": "ClaimServiceCodes",
   "status": "active",
   "date": "2021-08-15",
   "publisher": "HL7 International - HCX",

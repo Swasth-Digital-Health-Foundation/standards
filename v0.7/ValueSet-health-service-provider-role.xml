@@ -7,7 +7,7 @@
   </text>
   <url value="https://fhir-ig-demo/ValueSet/health-service-provider-role"/>
   <version value="0.0.1"/>
-  <name value="health-service-provider-role"/>
+  <name value="HealthServiceProviderRoles"/>
   <status value="active"/>
   <date value="2021-09-07"/>
   <publisher value="HL7 International - HCX"/>

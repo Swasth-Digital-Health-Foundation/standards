@@ -7,7 +7,7 @@
   </text>
   <url value="https://fhir-ig-demo/ValueSet/procedure-type-description"/>
   <version value="0.0.1"/>
-  <name value="Procedure Type Description"/>
+  <name value="ProcedureTypeDescriptions"/>
   <status value="active"/>
   <date value="2021-09-07"/>
   <publisher value="HL7 International - HCX"/>

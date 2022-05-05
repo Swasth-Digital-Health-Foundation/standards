@@ -7,7 +7,7 @@
   },
   "url": "https://fhir-ig-demo/ValueSet/insurance-company-owners",
   "version": "0.0.1",
-  "name": "Insurance Company Owners",
+  "name": "InsuranceCompanyOwners",
   "status": "active",
   "date": "2021-09-07",
   "publisher": "HL7 International - HCX",

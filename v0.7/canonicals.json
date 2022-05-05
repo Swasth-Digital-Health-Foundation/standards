@@ -11,49 +11,49 @@
     "type": "ValueSet",
     "url": "https://fhir-ig-demo/ValueSet/claim-denial-codes",
     "version": "0.0.1",
-    "name": "Claim Denial Codes"
+    "name": "ClaimDenialCodes"
   },
   {
     "id": "claim-service-categories",
     "type": "ValueSet",
     "url": "https://fhir-ig-demo/ValueSet/claim-service-categories",
     "version": "0.0.1",
-    "name": "Claim Service Categories"
+    "name": "ClaimServiceCategories"
   },
   {
     "id": "claim-service-codes",
     "type": "ValueSet",
     "url": "https://fhir-ig-demo/ValueSet/claim-service-codes",
     "version": "0.0.1",
-    "name": "Claim Service Codes"
+    "name": "ClaimServiceCodes"
   },
   {
     "id": "health-service-provider-role",
     "type": "ValueSet",
     "url": "https://fhir-ig-demo/ValueSet/health-service-provider-role",
     "version": "0.0.1",
-    "name": "health-service-provider-role"
+    "name": "HealthServiceProviderRoles"
   },
   {
     "id": "insurance-company-owners",
     "type": "ValueSet",
     "url": "https://fhir-ig-demo/ValueSet/insurance-company-owners",
     "version": "0.0.1",
-    "name": "Insurance Company Owners"
+    "name": "InsuranceCompanyOwners"
   },
   {
     "id": "medical-speciality-type-provider",
     "type": "ValueSet",
     "url": "https://fhir-ig-demo/ValueSet/medical-speciality-type-provider",
     "version": "0.0.1",
-    "name": "Medical Speciality Type Provider"
+    "name": "MedicalSpecialityTypeProvider"
   },
   {
     "id": "procedure-type-description",
     "type": "ValueSet",
     "url": "https://fhir-ig-demo/ValueSet/procedure-type-description",
     "version": "0.0.1",
-    "name": "Procedure Type Description"
+    "name": "ProcedureTypeDescriptions"
   },
   {
     "id": "Claim",
