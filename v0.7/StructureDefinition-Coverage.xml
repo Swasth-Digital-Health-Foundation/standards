@@ -45,7 +45,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
     <valueCode value="trial-use"/>
   </extension>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
-    <valueInteger value="2"/>
+    <valueInteger value="0"/>
   </extension>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-security-category">
     <valueCode value="patient"/>
@@ -54,16 +54,16 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
     <valueCode value="fm"/>
   </extension>
   <url value="https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-Coverage.html"/>
-  <version value="0.0.1"/>
+  <version value="0.7.0"/>
   <name value="Coverage"/>
   <status value="draft"/>
   <date value="2019-11-01T09:29:23+11:00"/>
-  <publisher value="HL7 International - HCX"/>
+  <publisher value="HCX Open Community"/>
   <contact>
-    <name value="HL7 International - HCX"/>
+    <name value="HCX Open Community"/>
     <telecom>
       <system value="url"/>
-      <value value="https://www.swasth.app/"/>
+      <value value="http://hcxprotocol.io/"/>
     </telecom>
   </contact>
   <description value="Financial instrument which may be used to reimburse or pay for health care products and services. Includes both insurance and self-payment."/>

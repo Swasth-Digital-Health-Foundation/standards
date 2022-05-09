@@ -19,7 +19,7 @@
     },
     {
       "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
-      "valueInteger": 2
+      "valueInteger": 0
     },
     {
       "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-security-category",
@@ -31,18 +31,18 @@
     }
   ],
   "url": "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-ClaimResponse.html",
-  "version": "0.0.1",
+  "version": "0.7.0",
   "name": "ClaimResponse",
   "status": "draft",
   "date": "2019-11-01T09:29:23+11:00",
-  "publisher": "HL7 International - HCX",
+  "publisher": "HCX Open Community",
   "contact": [
     {
-      "name": "HL7 International - HCX",
+      "name": "HCX Open Community",
       "telecom": [
         {
           "system": "url",
-          "value": "https://www.swasth.app/"
+          "value": "http://hcxprotocol.io/"
         }
       ]
     }

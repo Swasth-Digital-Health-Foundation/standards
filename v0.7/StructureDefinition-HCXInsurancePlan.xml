@@ -71,16 +71,16 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
     <valueCode value="pa"/>
   </extension>
   <url value="https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-HCXInsurancePlan.html"/>
-  <version value="0.0.1"/>
+  <version value="0.7.0"/>
   <name value="HCXInsurancePlan"/>
   <status value="draft"/>
   <date value="2021-12-28"/>
-  <publisher value="HL7 International - HCX"/>
+  <publisher value="HCX Open Community"/>
   <contact>
-    <name value="HL7 International - HCX"/>
+    <name value="HCX Open Community"/>
     <telecom>
       <system value="url"/>
-      <value value="https://www.swasth.app/"/>
+      <value value="http://hcxprotocol.io/"/>
     </telecom>
   </contact>
   <description value="Details of a Health Insurance product/plan provided by an organization."/>

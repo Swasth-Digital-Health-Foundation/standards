@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Bundle xmlns="http://hl7.org/fhir">
-  <id value="4e22d2fc-8722-43b0-808b-ebd707bf6c50"/>
+  <id value="d641aa51-1652-40be-8d2a-40d2d0abcd38"/>
   <meta>
-    <lastUpdated value="2022-05-05T15:22:45.669+05:30"/>
+    <lastUpdated value="2022-05-09T20:20:28.031+05:30"/>
   </meta>
   <type value="collection"/>
   <entry>
-    <fullUrl value="https://fhir-ig-demo/ValueSet/medical-speciality-type-provider"/>
+    <fullUrl value="https://hcxprotocol.io/fhir/r4/ValueSet/medical-speciality-type-provider"/>
     <resource>
       <ValueSet>
         <id value="medical-speciality-type-provider"/>
@@ -546,17 +546,17 @@
             </table>
           </div>
         </text>
-        <url value="https://fhir-ig-demo/ValueSet/medical-speciality-type-provider"/>
-        <version value="0.0.1"/>
+        <url value="https://hcxprotocol.io/fhir/r4/ValueSet/medical-speciality-type-provider"/>
+        <version value="0.7.0"/>
         <name value="MedicalSpecialityTypeProvider"/>
         <status value="active"/>
         <date value="2021-09-07"/>
-        <publisher value="HL7 International - HCX"/>
+        <publisher value="HCX Open Community"/>
         <contact>
-          <name value="HL7 International - HCX"/>
+          <name value="HCX Open Community"/>
           <telecom>
             <system value="url"/>
-            <value value="https://www.swasth.app/"/>
+            <value value="http://hcxprotocol.io/"/>
           </telecom>
         </contact>
         <description value="This is the value set that includes the codes to identify the medical specialty provider"/>
@@ -997,7 +997,7 @@
     </resource>
   </entry>
   <entry>
-    <fullUrl value="https://fhir-ig-demo/ValueSet/procedure-type-description"/>
+    <fullUrl value="https://hcxprotocol.io/fhir/r4/ValueSet/procedure-type-description"/>
     <resource>
       <ValueSet>
         <id value="procedure-type-description"/>
@@ -1212,17 +1212,17 @@
             </table>
           </div>
         </text>
-        <url value="https://fhir-ig-demo/ValueSet/procedure-type-description"/>
-        <version value="0.0.1"/>
+        <url value="https://hcxprotocol.io/fhir/r4/ValueSet/procedure-type-description"/>
+        <version value="0.7.0"/>
         <name value="ProcedureTypeDescriptions"/>
         <status value="active"/>
         <date value="2021-09-07"/>
-        <publisher value="HL7 International - HCX"/>
+        <publisher value="HCX Open Community"/>
         <contact>
-          <name value="HL7 International - HCX"/>
+          <name value="HCX Open Community"/>
           <telecom>
             <system value="url"/>
-            <value value="https://www.swasth.app/"/>
+            <value value="http://hcxprotocol.io/"/>
           </telecom>
         </contact>
         <description value="This is the value set that includes the codes to identify the procedure type description and services are provided"/>
@@ -1393,7 +1393,7 @@
     </resource>
   </entry>
   <entry>
-    <fullUrl value="https://fhir-ig-demo/ValueSet/claim-denial-codes"/>
+    <fullUrl value="https://hcxprotocol.io/fhir/r4/ValueSet/claim-denial-codes"/>
     <resource>
       <ValueSet>
         <id value="claim-denial-codes"/>
@@ -1806,17 +1806,17 @@
             </table>
           </div>
         </text>
-        <url value="https://fhir-ig-demo/ValueSet/claim-denial-codes"/>
-        <version value="0.0.1"/>
+        <url value="https://hcxprotocol.io/fhir/r4/ValueSet/claim-denial-codes"/>
+        <version value="0.7.0"/>
         <name value="ClaimDenialCodes"/>
         <status value="active"/>
         <date value="2021-08-15"/>
-        <publisher value="HL7 International - HCX"/>
+        <publisher value="HCX Open Community"/>
         <contact>
-          <name value="HL7 International - HCX"/>
+          <name value="HCX Open Community"/>
           <telecom>
             <system value="url"/>
-            <value value="https://www.swasth.app/"/>
+            <value value="http://hcxprotocol.io/"/>
           </telecom>
         </contact>
         <description value="This is the value set that includes the codes for understanding of the adjudication result and explaining variance from expected amount"/>
@@ -2152,7 +2152,7 @@
     </resource>
   </entry>
   <entry>
-    <fullUrl value="https://fhir-ig-demo/ValueSet/claim-service-categories"/>
+    <fullUrl value="https://hcxprotocol.io/fhir/r4/ValueSet/claim-service-categories"/>
     <resource>
       <ValueSet>
         <id value="claim-service-categories"/>
@@ -2229,17 +2229,17 @@
             </table>
           </div>
         </text>
-        <url value="https://fhir-ig-demo/ValueSet/claim-service-categories"/>
-        <version value="0.0.1"/>
+        <url value="https://hcxprotocol.io/fhir/r4/ValueSet/claim-service-categories"/>
+        <version value="0.7.0"/>
         <name value="ClaimServiceCategories"/>
         <status value="active"/>
         <date value="2021-08-15"/>
-        <publisher value="HL7 International - HCX"/>
+        <publisher value="HCX Open Community"/>
         <contact>
-          <name value="HL7 International - HCX"/>
+          <name value="HCX Open Community"/>
           <telecom>
             <system value="url"/>
-            <value value="https://www.swasth.app/"/>
+            <value value="http://hcxprotocol.io/"/>
           </telecom>
         </contact>
         <description value="This is the value set that includes the codes to identify the general type of benefits under which products and services are provided"/>
@@ -2295,7 +2295,7 @@
     </resource>
   </entry>
   <entry>
-    <fullUrl value="https://fhir-ig-demo/ValueSet/claim-service-codes"/>
+    <fullUrl value="https://hcxprotocol.io/fhir/r4/ValueSet/claim-service-codes"/>
     <resource>
       <ValueSet>
         <id value="claim-service-codes"/>
@@ -2608,17 +2608,17 @@
             </table>
           </div>
         </text>
-        <url value="https://fhir-ig-demo/ValueSet/claim-service-codes"/>
-        <version value="0.0.1"/>
+        <url value="https://hcxprotocol.io/fhir/r4/ValueSet/claim-service-codes"/>
+        <version value="0.7.0"/>
         <name value="ClaimServiceCodes"/>
         <status value="active"/>
         <date value="2021-08-15"/>
-        <publisher value="HL7 International - HCX"/>
+        <publisher value="HCX Open Community"/>
         <contact>
-          <name value="HL7 International - HCX"/>
+          <name value="HCX Open Community"/>
           <telecom>
             <system value="url"/>
-            <value value="https://www.swasth.app/"/>
+            <value value="http://hcxprotocol.io/"/>
           </telecom>
         </contact>
         <description value="This is the value set that includes the codes to identify the general type of benefits under which products and services are provided"/>
@@ -2834,7 +2834,7 @@
     </resource>
   </entry>
   <entry>
-    <fullUrl value="https://fhir-ig-demo/ValueSet/health-service-provider-role"/>
+    <fullUrl value="https://hcxprotocol.io/fhir/r4/ValueSet/health-service-provider-role"/>
     <resource>
       <ValueSet>
         <id value="health-service-provider-role"/>
@@ -2935,17 +2935,17 @@
             </table>
           </div>
         </text>
-        <url value="https://fhir-ig-demo/ValueSet/health-service-provider-role"/>
-        <version value="0.0.1"/>
+        <url value="https://hcxprotocol.io/fhir/r4/ValueSet/health-service-provider-role"/>
+        <version value="0.7.0"/>
         <name value="HealthServiceProviderRoles"/>
         <status value="active"/>
         <date value="2021-09-07"/>
-        <publisher value="HL7 International - HCX"/>
+        <publisher value="HCX Open Community"/>
         <contact>
-          <name value="HL7 International - HCX"/>
+          <name value="HCX Open Community"/>
           <telecom>
             <system value="url"/>
-            <value value="https://www.swasth.app/"/>
+            <value value="http://hcxprotocol.io/"/>
           </telecom>
         </contact>
         <description value="This is the value set that includes the codes to identify health service provider"/>
@@ -3021,7 +3021,7 @@
     </resource>
   </entry>
   <entry>
-    <fullUrl value="https://fhir-ig-demo/ValueSet/insurance-company-owners"/>
+    <fullUrl value="https://hcxprotocol.io/fhir/r4/ValueSet/insurance-company-owners"/>
     <resource>
       <ValueSet>
         <id value="insurance-company-owners"/>
@@ -3350,17 +3350,17 @@
             </table>
           </div>
         </text>
-        <url value="https://fhir-ig-demo/ValueSet/insurance-company-owners"/>
-        <version value="0.0.1"/>
+        <url value="https://hcxprotocol.io/fhir/r4/ValueSet/insurance-company-owners"/>
+        <version value="0.7.0"/>
         <name value="InsuranceCompanyOwners"/>
         <status value="active"/>
         <date value="2021-09-07"/>
-        <publisher value="HL7 International - HCX"/>
+        <publisher value="HCX Open Community"/>
         <contact>
-          <name value="HL7 International - HCX"/>
+          <name value="HCX Open Community"/>
           <telecom>
             <system value="url"/>
-            <value value="https://www.swasth.app/"/>
+            <value value="http://hcxprotocol.io/"/>
           </telecom>
         </contact>
         <description value="This is the value set that includes the codes to identify the insurance company owners"/>

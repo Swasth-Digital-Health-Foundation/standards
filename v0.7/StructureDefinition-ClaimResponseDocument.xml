@@ -53,7 +53,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
     <valueCode value="trial-use"/>
   </extension>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
-    <valueInteger value="2"/>
+    <valueInteger value="0"/>
   </extension>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-security-category">
     <valueCode value="not-classified"/>
@@ -62,16 +62,16 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
     <valueCode value="sd"/>
   </extension>
   <url value="https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-ClaimResponseDocument.html"/>
-  <version value="0.0.1"/>
+  <version value="0.7.0"/>
   <name value="ClaimResponseDocument"/>
   <status value="draft"/>
   <date value="2021-08-14T17:23:00.000+05:30"/>
-  <publisher value="HL7 International - HCX"/>
+  <publisher value="HCX Open Community"/>
   <contact>
-    <name value="HL7 International - HCX"/>
+    <name value="HCX Open Community"/>
     <telecom>
       <system value="url"/>
-      <value value="https://www.swasth.app/"/>
+      <value value="http://hcxprotocol.io/"/>
     </telecom>
   </contact>
   <description value="A set of healthcare-related information that is assembled together into a single logical package that provides a single coherent statement of meaning, establishes its own context and that has clinical attestation with regard to who is making the statement. A Composition defines the structure and narrative content necessary for a document. However, a Composition alone does not constitute a document. Rather, the Composition must be the first entry in a Bundle where Bundle.type=document, and any other resources referenced from Composition must be included as subsequent entries in the Bundle (for example Patient, Practitioner, Encounter, etc.)."/>

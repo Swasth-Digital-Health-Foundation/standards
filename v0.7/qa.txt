@@ -1,10 +1,10 @@
-﻿HCXCore : Validation Results
+﻿HCXFHIRImplementationGuide : Validation Results
 =========================================
 
-err = 1, warn = 35, info = 1
-IG Publisher Version: 1.1.115 Out of date - current version is 1.1.117
-Generated Thu May 05 15:23:46 IST 2022. FHIR version 4.0.1 for ig#0.0.1 (canonical = https://fhir-ig-demo)
- Build Errors : 1 / 1 / 0
+err = 1, warn = 34, info = 1
+IG Publisher Version: 1.1.118
+Generated Mon May 09 20:21:30 IST 2022. FHIR version 4.0.1 for hcxprotocol.io#0.7.0 (canonical = https://hcxprotocol.io/fhir/r4)
+ Build Errors : 1 / 0 / 0
  /Users/rayulu/work/Sanketika/Swasth/repository/IG-Publisher/input/hcx-definitions/structuredefinition-Claim : 0 / 1 / 1
  /Users/rayulu/work/Sanketika/Swasth/repository/IG-Publisher/input/hcx-definitions/structuredefinition-ClaimRequestDocument : 0 / 1 / 1
  /Users/rayulu/work/Sanketika/Swasth/repository/IG-Publisher/input/hcx-definitions/structuredefinition-ClaimResponse : 0 / 3 / 1
@@ -38,7 +38,6 @@ Generated Thu May 05 15:23:46 IST 2022. FHIR version 4.0.1 for ig#0.0.1 (canonic
 </table>
 == n/a ==
 ERROR: ImplementationGuide.definition.parameter[23].value: Supressed messages file not found
-WARNING: ImplementationGuide.id: The Implementation Guide Resource id should be ig
 == input/hcx-definitions/StructureDefinition-Claim.json ==
 WARNING: StructureDefinition.where(url = 'https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-Claim.html'): The Implementation Guide contains no examples for this profile
 == input/hcx-definitions/StructureDefinition-ClaimRequestDocument.json ==

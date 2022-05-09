@@ -1,8 +1,8 @@
 {
-  "version": "0.0.1",
+  "version": "0.7.0",
   "fhirVersion": [
     "4.0.1"
   ],
-  "date": "20220505152226",
-  "name": "ig"
+  "date": "20220509201951",
+  "name": "hcxprotocol.io"
 }

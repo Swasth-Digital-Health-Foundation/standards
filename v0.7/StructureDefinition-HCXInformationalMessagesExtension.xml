@@ -24,17 +24,17 @@
 <tr><td colspan="5" class="hierarchy"><br/><a href="http://hl7.org/fhir/R4/formats.html#table" title="Legend for this format"><img src="http://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr></table></div>
   </text>
   <url value="https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-HCXInformationalMessagesExtension.html"/>
-  <version value="0.0.1"/>
+  <version value="0.7.0"/>
   <name value="HCXInformationalMessagesExtension"/>
   <title value="HCX Informational Messages Extension"/>
   <status value="active"/>
   <date value="2021-12-27"/>
-  <publisher value="HL7 International - HCX"/>
+  <publisher value="HCX Open Community"/>
   <contact>
-    <name value="HL7 International - HCX"/>
+    <name value="HCX Open Community"/>
     <telecom>
       <system value="url"/>
-      <value value="https://www.swasth.app/"/>
+      <value value="http://hcxprotocol.io/"/>
     </telecom>
   </contact>
   <description value="Extension to include informational messages."/>

@@ -1,6 +1,6 @@
 {
-  "package": "ig",
-  "version": "0.0.1",
+  "package": "hcxprotocol.io",
+  "version": "0.7.0",
   "fhirVersion": "4.0.1",
   "extensions": [
     {

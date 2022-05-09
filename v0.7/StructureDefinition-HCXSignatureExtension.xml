@@ -13,19 +13,19 @@
     <valueCode value="fhir"/>
   </extension>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
-    <valueInteger value="1"/>
+    <valueInteger value="0"/>
   </extension>
   <url value="https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-HCXSignatureExtension.html"/>
-  <version value="0.0.1"/>
+  <version value="0.7.0"/>
   <name value="HCXSignatureExtension"/>
   <status value="draft"/>
   <date value="2021-08-20"/>
-  <publisher value="HL7 International - HCX"/>
+  <publisher value="HCX Open Community"/>
   <contact>
-    <name value="HL7 International - HCX"/>
+    <name value="HCX Open Community"/>
     <telecom>
       <system value="url"/>
-      <value value="https://www.swasth.app/"/>
+      <value value="http://hcxprotocol.io/"/>
     </telecom>
   </contact>
   <description value="Represents a wet or electronic signature for either the form overall or for the question or item it's associated with."/>

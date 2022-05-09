@@ -5,7 +5,7 @@
 
 # - resource -------------------------------------------------------------------
 
-<https://fhir-ig-demo/StructureDefinition/CoverageEligibilityResponseDocument> a fhir:StructureDefinition;
+<https://hcxprotocol.io/fhir/r4/StructureDefinition/CoverageEligibilityResponseDocument> a fhir:StructureDefinition;
   fhir:nodeRole fhir:treeRoot;
   fhir:Resource.id [ fhir:value "CoverageEligibilityResponseDocument"];
   fhir:Resource.meta [
@@ -26,7 +26,7 @@
   ], [
      fhir:index 2;
      fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm" ];
-     fhir:Extension.valueInteger [ fhir:value "2"^^xsd:integer ]
+     fhir:Extension.valueInteger [ fhir:value "0"^^xsd:integer ]
   ], [
      fhir:index 3;
      fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-security-category" ];
@@ -37,18 +37,18 @@
      fhir:Extension.valueCode [ fhir:value "sd" ]
   ];
   fhir:StructureDefinition.url [ fhir:value "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-CoverageEligibilityResponseDocument.html"];
-  fhir:StructureDefinition.version [ fhir:value "0.0.1"];
+  fhir:StructureDefinition.version [ fhir:value "0.7.0"];
   fhir:StructureDefinition.name [ fhir:value "CovereageEligibilityResponseDocument"];
   fhir:StructureDefinition.status [ fhir:value "draft"];
   fhir:StructureDefinition.date [ fhir:value "2021-08-16T17:23:00.000+05:30"^^xsd:dateTime];
-  fhir:StructureDefinition.publisher [ fhir:value "HL7 International - HCX"];
+  fhir:StructureDefinition.publisher [ fhir:value "HCX Open Community"];
   fhir:StructureDefinition.contact [
      fhir:index 0;
-     fhir:ContactDetail.name [ fhir:value "HL7 International - HCX" ];
+     fhir:ContactDetail.name [ fhir:value "HCX Open Community" ];
      fhir:ContactDetail.telecom [
        fhir:index 0;
        fhir:ContactPoint.system [ fhir:value "url" ];
-       fhir:ContactPoint.value [ fhir:value "https://www.swasth.app/" ]
+       fhir:ContactPoint.value [ fhir:value "http://hcxprotocol.io/" ]
      ]
   ];
   fhir:StructureDefinition.description [ fhir:value "A set of healthcare-related information that is assembled together into a single logical package that provides a single coherent statement of meaning, establishes its own context and that has clinical attestation with regard to who is making the statement. A Composition defines the structure and narrative content necessary for a document. However, a Composition alone does not constitute a document. Rather, the Composition must be the first entry in a Bundle where Bundle.type=document, and any other resources referenced from Composition must be included as subsequent entries in the Bundle (for example Patient, Practitioner, Encounter, etc.)."];
@@ -2985,7 +2985,7 @@
 
 # - ontology header ------------------------------------------------------------
 
-<https://fhir-ig-demo/StructureDefinition/CoverageEligibilityResponseDocument.ttl> a owl:Ontology;
+<https://hcxprotocol.io/fhir/r4/StructureDefinition/CoverageEligibilityResponseDocument.ttl> a owl:Ontology;
   owl:imports fhir:fhir.ttl .
 
 # -------------------------------------------------------------------------------------

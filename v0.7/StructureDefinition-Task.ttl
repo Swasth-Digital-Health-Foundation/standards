@@ -5,7 +5,7 @@
 
 # - resource -------------------------------------------------------------------
 
-<https://fhir-ig-demo/StructureDefinition/Task> a fhir:StructureDefinition;
+<https://hcxprotocol.io/fhir/r4/StructureDefinition/Task> a fhir:StructureDefinition;
   fhir:nodeRole fhir:treeRoot;
   fhir:Resource.id [ fhir:value "Task"];
   fhir:Resource.meta [
@@ -26,7 +26,7 @@
   ], [
      fhir:index 2;
      fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm" ];
-     fhir:Extension.valueInteger [ fhir:value "2"^^xsd:integer ]
+     fhir:Extension.valueInteger [ fhir:value "0"^^xsd:integer ]
   ], [
      fhir:index 3;
      fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-security-category" ];
@@ -37,18 +37,18 @@
      fhir:Extension.valueCode [ fhir:value "oo" ]
   ];
   fhir:StructureDefinition.url [ fhir:value "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-Task.html"];
-  fhir:StructureDefinition.version [ fhir:value "0.0.1"];
+  fhir:StructureDefinition.version [ fhir:value "0.7.0"];
   fhir:StructureDefinition.name [ fhir:value "Task"];
   fhir:StructureDefinition.status [ fhir:value "draft"];
   fhir:StructureDefinition.date [ fhir:value "2019-11-01T09:29:23+11:00"^^xsd:dateTime];
-  fhir:StructureDefinition.publisher [ fhir:value "HL7 International - HCX"];
+  fhir:StructureDefinition.publisher [ fhir:value "HCX Open Community"];
   fhir:StructureDefinition.contact [
      fhir:index 0;
-     fhir:ContactDetail.name [ fhir:value "HL7 International - HCX" ];
+     fhir:ContactDetail.name [ fhir:value "HCX Open Community" ];
      fhir:ContactDetail.telecom [
        fhir:index 0;
        fhir:ContactPoint.system [ fhir:value "url" ];
-       fhir:ContactPoint.value [ fhir:value "https://www.swasth.app/" ]
+       fhir:ContactPoint.value [ fhir:value "http://hcxprotocol.io/" ]
      ]
   ];
   fhir:StructureDefinition.description [ fhir:value "A task to be performed."];
@@ -4628,7 +4628,7 @@
 
 # - ontology header ------------------------------------------------------------
 
-<https://fhir-ig-demo/StructureDefinition/Task.ttl> a owl:Ontology;
+<https://hcxprotocol.io/fhir/r4/StructureDefinition/Task.ttl> a owl:Ontology;
   owl:imports fhir:fhir.ttl .
 
 # -------------------------------------------------------------------------------------

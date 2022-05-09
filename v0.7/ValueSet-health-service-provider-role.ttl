@@ -5,26 +5,26 @@
 
 # - resource -------------------------------------------------------------------
 
-<https://fhir-ig-demo/ValueSet/health-service-provider-role> a fhir:ValueSet;
+<https://hcxprotocol.io/fhir/r4/ValueSet/health-service-provider-role> a fhir:ValueSet;
   fhir:nodeRole fhir:treeRoot;
   fhir:Resource.id [ fhir:value "health-service-provider-role"];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
      fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 13 concepts</p><p>All codes in this table are from the system <code>http://hcp.org/codes/health-service-provider</code></p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-health-service-provider-1\"> </a>  1</td><td>Primary Care Provider Referring Provider.</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-health-service-provider-2\"> </a>  2</td><td>Referring Provider.</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-health-service-provider-3\"> </a>  3</td><td>Treating Provider.</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-health-service-provider-4\"> </a>  4</td><td>Attending Provider.</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-health-service-provider-5\"> </a>  5</td><td>Admitting Provider.</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-health-service-provider-6\"> </a>  6</td><td>Consulting Provider.</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-health-service-provider-7\"> </a>  7</td><td>Ordering Provider.</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-health-service-provider-8\"> </a>  8</td><td>Dispensing Provider.</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-health-service-provider-9\"> </a>  9</td><td>Discharge Provider.</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-health-service-provider-10\"> </a>  10</td><td>Secondary Care Provider.</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-health-service-provider-11\"> </a>  11</td><td>Tertiary Care Provider.</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-health-service-provider-12\"> </a>  12</td><td>Transfusion Provider.</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hcp.org-codes-health-service-provider-13\"> </a>  13</td><td>Others.</td></tr></table></div>"
   ];
-  fhir:ValueSet.url [ fhir:value "https://fhir-ig-demo/ValueSet/health-service-provider-role"];
-  fhir:ValueSet.version [ fhir:value "0.0.1"];
+  fhir:ValueSet.url [ fhir:value "https://hcxprotocol.io/fhir/r4/ValueSet/health-service-provider-role"];
+  fhir:ValueSet.version [ fhir:value "0.7.0"];
   fhir:ValueSet.name [ fhir:value "HealthServiceProviderRoles"];
   fhir:ValueSet.status [ fhir:value "active"];
   fhir:ValueSet.date [ fhir:value "2021-09-07"^^xsd:date];
-  fhir:ValueSet.publisher [ fhir:value "HL7 International - HCX"];
+  fhir:ValueSet.publisher [ fhir:value "HCX Open Community"];
   fhir:ValueSet.contact [
      fhir:index 0;
-     fhir:ContactDetail.name [ fhir:value "HL7 International - HCX" ];
+     fhir:ContactDetail.name [ fhir:value "HCX Open Community" ];
      fhir:ContactDetail.telecom [
        fhir:index 0;
        fhir:ContactPoint.system [ fhir:value "url" ];
-       fhir:ContactPoint.value [ fhir:value "https://www.swasth.app/" ]
+       fhir:ContactPoint.value [ fhir:value "http://hcxprotocol.io/" ]
      ]
   ];
   fhir:ValueSet.description [ fhir:value "This is the value set that includes the codes to identify health service provider"];
@@ -100,7 +100,7 @@
 
 # - ontology header ------------------------------------------------------------
 
-<https://fhir-ig-demo/ValueSet/health-service-provider-role.ttl> a owl:Ontology;
+<https://hcxprotocol.io/fhir/r4/ValueSet/health-service-provider-role.ttl> a owl:Ontology;
   owl:imports fhir:fhir.ttl .
 
 # -------------------------------------------------------------------------------------
