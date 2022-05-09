@@ -7,55 +7,6 @@
     "name": "HCXFHIRImplementationGuide"
   },
   {
-    "id": "claim-denial-codes",
-    "type": "ValueSet",
-    "url": "https://hcxprotocol.io/fhir/r4/ValueSet/claim-denial-codes",
-    "version": "0.7.0",
-    "name": "ClaimDenialCodes"
-  },
-  {
-    "id": "claim-service-categories",
-    "type": "ValueSet",
-    "url": "https://hcxprotocol.io/fhir/r4/ValueSet/claim-service-categories",
-    "version": "0.7.0",
-    "name": "ClaimServiceCategories"
-  },
-  {
-    "id": "claim-service-codes",
-    "type": "ValueSet",
-    "url": "https://hcxprotocol.io/fhir/r4/ValueSet/claim-service-codes",
-    "version": "0.7.0",
-    "name": "ClaimServiceCodes"
-  },
-  {
-    "id": "health-service-provider-role",
-    "type": "ValueSet",
-    "url": "https://hcxprotocol.io/fhir/r4/ValueSet/health-service-provider-role",
-    "version": "0.7.0",
-    "name": "HealthServiceProviderRoles"
-  },
-  {
-    "id": "insurance-company-owners",
-    "type": "ValueSet",
-    "url": "https://hcxprotocol.io/fhir/r4/ValueSet/insurance-company-owners",
-    "version": "0.7.0",
-    "name": "InsuranceCompanyOwners"
-  },
-  {
-    "id": "medical-speciality-type-provider",
-    "type": "ValueSet",
-    "url": "https://hcxprotocol.io/fhir/r4/ValueSet/medical-speciality-type-provider",
-    "version": "0.7.0",
-    "name": "MedicalSpecialityTypeProvider"
-  },
-  {
-    "id": "procedure-type-description",
-    "type": "ValueSet",
-    "url": "https://hcxprotocol.io/fhir/r4/ValueSet/procedure-type-description",
-    "version": "0.7.0",
-    "name": "ProcedureTypeDescriptions"
-  },
-  {
     "id": "Claim",
     "type": "StructureDefinition",
     "url": "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-Claim.html",
@@ -208,5 +159,54 @@
     "url": "https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-Task.html",
     "version": "0.7.0",
     "name": "Task"
+  },
+  {
+    "id": "claim-denial-codes",
+    "type": "ValueSet",
+    "url": "https://swasth-digital-health-foundation.github.io/standards/v0.7/ValueSet-claim-denial-codes.html",
+    "version": "0.7.0",
+    "name": "ClaimDenialCodes"
+  },
+  {
+    "id": "claim-service-categories",
+    "type": "ValueSet",
+    "url": "https://swasth-digital-health-foundation.github.io/standards/v0.7/ValueSet-claim-service-categories.html",
+    "version": "0.7.0",
+    "name": "ClaimServiceCategories"
+  },
+  {
+    "id": "claim-service-codes",
+    "type": "ValueSet",
+    "url": "https://swasth-digital-health-foundation.github.io/standards/v0.7/ValueSet-claim-service-codes.html",
+    "version": "0.7.0",
+    "name": "ClaimServiceCodes"
+  },
+  {
+    "id": "health-service-provider-role",
+    "type": "ValueSet",
+    "url": "https://swasth-digital-health-foundation.github.io/standards/v0.7/ValueSet-health-service-provider-role.html",
+    "version": "0.7.0",
+    "name": "HealthServiceProviderRoles"
+  },
+  {
+    "id": "insurance-company-owners",
+    "type": "ValueSet",
+    "url": "https://swasth-digital-health-foundation.github.io/standards/v0.7/ValueSet-insurance-company-owners.html",
+    "version": "0.7.0",
+    "name": "InsuranceCompanyOwners"
+  },
+  {
+    "id": "medical-speciality-type-provider",
+    "type": "ValueSet",
+    "url": "https://swasth-digital-health-foundation.github.io/standards/v0.7/ValueSet-medical-speciality-type-provider.html",
+    "version": "0.7.0",
+    "name": "MedicalSpecialityTypeProvider"
+  },
+  {
+    "id": "procedure-type-description",
+    "type": "ValueSet",
+    "url": "https://swasth-digital-health-foundation.github.io/standards/v0.7/ValueSet-procedure-type-description.html",
+    "version": "0.7.0",
+    "name": "ProcedureTypeDescriptions"
   }
 ]

@@ -1,13 +1,13 @@
 ﻿HCXFHIRImplementationGuide : Validation Results
 =========================================
 
-err = 1, warn = 34, info = 1
+err = 1, warn = 32, info = 1
 IG Publisher Version: 1.1.118
-Generated Mon May 09 20:21:30 IST 2022. FHIR version 4.0.1 for hcxprotocol.io#0.7.0 (canonical = https://hcxprotocol.io/fhir/r4)
+Generated Mon May 09 23:10:12 IST 2022. FHIR version 4.0.1 for hcxprotocol.io#0.7.0 (canonical = https://hcxprotocol.io/fhir/r4)
  Build Errors : 1 / 0 / 0
  /Users/rayulu/work/Sanketika/Swasth/repository/IG-Publisher/input/hcx-definitions/structuredefinition-Claim : 0 / 1 / 1
  /Users/rayulu/work/Sanketika/Swasth/repository/IG-Publisher/input/hcx-definitions/structuredefinition-ClaimRequestDocument : 0 / 1 / 1
- /Users/rayulu/work/Sanketika/Swasth/repository/IG-Publisher/input/hcx-definitions/structuredefinition-ClaimResponse : 0 / 3 / 1
+ /Users/rayulu/work/Sanketika/Swasth/repository/IG-Publisher/input/hcx-definitions/structuredefinition-ClaimResponse : 0 / 1 / 1
  /Users/rayulu/work/Sanketika/Swasth/repository/IG-Publisher/input/hcx-definitions/structuredefinition-ClaimResponseDocument : 0 / 1 / 1
  /Users/rayulu/work/Sanketika/Swasth/repository/IG-Publisher/input/hcx-definitions/structuredefinition-Communication : 0 / 1 / 1
  /Users/rayulu/work/Sanketika/Swasth/repository/IG-Publisher/input/hcx-definitions/structuredefinition-CommunicationDocument : 0 / 1 / 1
@@ -43,8 +43,6 @@ WARNING: StructureDefinition.where(url = 'https://swasth-digital-health-foundati
 == input/hcx-definitions/StructureDefinition-ClaimRequestDocument.json ==
 WARNING: StructureDefinition.where(url = 'https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-ClaimRequestDocument.html'): The Implementation Guide contains no examples for this profile
 == input/hcx-definitions/StructureDefinition-ClaimResponse.json ==
-WARNING: StructureDefinition/ClaimResponse: StructureDefinition.differential.element[6].binding: The valueSet reference https://swasth-digital-health-foundation.github.io/standards/v0.7/ValueSet-claim-denial-codes.html on element ClaimResponse.item.adjudication.reason could not be resolved
-WARNING: StructureDefinition/ClaimResponse: StructureDefinition.snapshot.element[35].binding: The valueSet reference https://swasth-digital-health-foundation.github.io/standards/v0.7/ValueSet-claim-denial-codes.html on element ClaimResponse.item.adjudication.reason could not be resolved
 WARNING: StructureDefinition.where(url = 'https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-ClaimResponse.html'): The Implementation Guide contains no examples for this profile
 == input/hcx-definitions/StructureDefinition-ClaimResponseDocument.json ==
 WARNING: StructureDefinition.where(url = 'https://swasth-digital-health-foundation.github.io/standards/v0.7/StructureDefinition-ClaimResponseDocument.html'): The Implementation Guide contains no examples for this profile

@@ -3,9 +3,9 @@
   "name": "HCXFHIRImplementationGuide",
   "package-id": "hcxprotocol.io",
   "ig-ver": "0.7.0",
-  "date": "Mon, 09 May, 2022 20:20:28 +0530",
+  "date": "Mon, 09 May, 2022 23:09:07 +0530",
   "errs": 1,
-  "warnings": 34,
+  "warnings": 32,
   "hints": 1,
   "version": "4.0.1",
   "tool": "5.0.0-snapshot1 (3)"
