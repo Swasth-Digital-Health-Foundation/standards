@@ -6,8 +6,8 @@
     "description": "HCX FHIR Template",
     "author": "Manjunath Davanam",
     "canonical": "http://fhir.org/templates/hcx-ig-template-local",
-    "base": "fhir.base.template",
+    "base": "hl7.base.template",
     "dependencies": {
-        "fhir.base.template": "current"
+        "hl7.base.template": "current"
         }
     }

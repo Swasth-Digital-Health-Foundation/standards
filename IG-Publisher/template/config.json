@@ -187,14 +187,6 @@
       "format": "{{[type]}}-{{[id]}}.{{[fmt]}}.html",
       "change-history": "{{[type]}}-{{[id]}}.change.history.html"
     },
-    "ConceptMap": {
-      "template-base": "template/layouts/layout-conceptmap.html",
-      "template-format": "template/layouts/layout-instance-format.html",
-      "template-change-history": "template/layouts/layout-changehistory.html",
-      "base": "{{[type]}}-{{[id]}}.html",
-      "format": "{{[type]}}-{{[id]}}.{{[fmt]}}.html",
-      "change-history": "{{[type]}}-{{[id]}}.change.history.html"
-    },
     "ValueSet": {
       "template-base": "template/layouts/layout-valueset.html",
       "template-format": "template/layouts/layout-instance-format.html",
@@ -203,10 +195,138 @@
       "format": "{{[type]}}-{{[id]}}.{{[fmt]}}.html",
       "change-history": "{{[type]}}-{{[id]}}.change.history.html"
     },
+    "ActivityDefinition": {
+      "template-base": "template/layouts/layout-canonical.html",
+      "template-format": "template/layouts/layout-instance-format.html",
+      "template-change-history": "template/layouts/layout-changehistory.html",
+      "base": "{{[type]}}-{{[id]}}.html",
+      "format": "{{[type]}}-{{[id]}}.{{[fmt]}}.html",
+      "change-history": "{{[type]}}-{{[id]}}.change.history.html"
+    },
+    "CapabilityStatement": {
+      "template-base": "template/layouts/layout-canonical.html",
+      "template-format": "template/layouts/layout-instance-format.html",
+      "template-change-history": "template/layouts/layout-changehistory.html",
+      "base": "{{[type]}}-{{[id]}}.html",
+      "format": "{{[type]}}-{{[id]}}.{{[fmt]}}.html",
+      "change-history": "{{[type]}}-{{[id]}}.change.history.html"
+    },
+    "ConceptMap": {
+      "template-base": "template/layouts/layout-conceptmap.html",
+      "template-format": "template/layouts/layout-instance-format.html",
+      "template-change-history": "template/layouts/layout-changehistory.html",
+      "base": "{{[type]}}-{{[id]}}.html",
+      "format": "{{[type]}}-{{[id]}}.{{[fmt]}}.html",
+      "change-history": "{{[type]}}-{{[id]}}.change.history.html"
+    },
+    "EventDefinition": {
+      "template-base": "template/layouts/layout-canonical.html",
+      "template-format": "template/layouts/layout-instance-format.html",
+      "template-change-history": "template/layouts/layout-changehistory.html",
+      "base": "{{[type]}}-{{[id]}}.html",
+      "format": "{{[type]}}-{{[id]}}.{{[fmt]}}.html",
+      "change-history": "{{[type]}}-{{[id]}}.change.history.html"
+    },
+    "GraphDefinition": {
+      "template-base": "template/layouts/layout-canonical.html",
+      "template-format": "template/layouts/layout-instance-format.html",
+      "template-change-history": "template/layouts/layout-changehistory.html",
+      "base": "{{[type]}}-{{[id]}}.html",
+      "format": "{{[type]}}-{{[id]}}.{{[fmt]}}.html",
+      "change-history": "{{[type]}}-{{[id]}}.change.history.html"
+    },
+    "Library": {
+      "template-base": "template/layouts/layout-canonical.html",
+      "template-format": "template/layouts/layout-instance-format.html",
+      "template-change-history": "template/layouts/layout-changehistory.html",
+      "base": "{{[type]}}-{{[id]}}.html",
+      "format": "{{[type]}}-{{[id]}}.{{[fmt]}}.html",
+      "change-history": "{{[type]}}-{{[id]}}.change.history.html"
+    },
+    "Measure": {
+      "template-base": "template/layouts/layout-canonical.html",
+      "template-format": "template/layouts/layout-instance-format.html",
+      "template-change-history": "template/layouts/layout-changehistory.html",
+      "base": "{{[type]}}-{{[id]}}.html",
+      "format": "{{[type]}}-{{[id]}}.{{[fmt]}}.html",
+      "change-history": "{{[type]}}-{{[id]}}.change.history.html"
+    },
+    "MeasureDefinition": {
+      "template-base": "template/layouts/layout-canonical.html",
+      "template-format": "template/layouts/layout-instance-format.html",
+      "template-change-history": "template/layouts/layout-changehistory.html",
+      "base": "{{[type]}}-{{[id]}}.html",
+      "format": "{{[type]}}-{{[id]}}.{{[fmt]}}.html",
+      "change-history": "{{[type]}}-{{[id]}}.change.history.html"
+    },
+    "MessageDefinition": {
+      "template-base": "template/layouts/layout-canonical.html",
+      "template-format": "template/layouts/layout-instance-format.html",
+      "template-change-history": "template/layouts/layout-changehistory.html",
+      "base": "{{[type]}}-{{[id]}}.html",
+      "format": "{{[type]}}-{{[id]}}.{{[fmt]}}.html",
+      "change-history": "{{[type]}}-{{[id]}}.change.history.html"
+    },
+    "NamingSystem": {
+      "template-base": "template/layouts/layout-canonical.html",
+      "template-format": "template/layouts/layout-instance-format.html",
+      "template-change-history": "template/layouts/layout-changehistory.html",
+      "base": "{{[type]}}-{{[id]}}.html",
+      "format": "{{[type]}}-{{[id]}}.{{[fmt]}}.html",
+      "change-history": "{{[type]}}-{{[id]}}.change.history.html"
+    },
+    "OperationDefinition": {
+      "template-base": "template/layouts/layout-canonical.html",
+      "template-format": "template/layouts/layout-instance-format.html",
+      "template-change-history": "template/layouts/layout-changehistory.html",
+      "base": "{{[type]}}-{{[id]}}.html",
+      "format": "{{[type]}}-{{[id]}}.{{[fmt]}}.html",
+      "change-history": "{{[type]}}-{{[id]}}.change.history.html"
+    },
+    "PlanDefinition": {
+      "template-base": "template/layouts/layout-canonical.html",
+      "template-format": "template/layouts/layout-instance-format.html",
+      "template-change-history": "template/layouts/layout-changehistory.html",
+      "base": "{{[type]}}-{{[id]}}.html",
+      "format": "{{[type]}}-{{[id]}}.{{[fmt]}}.html",
+      "change-history": "{{[type]}}-{{[id]}}.change.history.html"
+    },
+    "Questionnaire": {
+      "template-base": "template/layouts/layout-canonical.html",
+      "template-format": "template/layouts/layout-instance-format.html",
+      "template-change-history": "template/layouts/layout-changehistory.html",
+      "base": "{{[type]}}-{{[id]}}.html",
+      "format": "{{[type]}}-{{[id]}}.{{[fmt]}}.html",
+      "change-history": "{{[type]}}-{{[id]}}.change.history.html"
+    },
+    "SearchParameter": {
+      "template-base": "template/layouts/layout-canonical.html",
+      "template-format": "template/layouts/layout-instance-format.html",
+      "template-change-history": "template/layouts/layout-changehistory.html",
+      "base": "{{[type]}}-{{[id]}}.html",
+      "format": "{{[type]}}-{{[id]}}.{{[fmt]}}.html",
+      "change-history": "{{[type]}}-{{[id]}}.change.history.html"
+    },
+    "StructureMap": {
+      "template-base": "template/layouts/layout-canonical.html",
+      "template-format": "template/layouts/layout-instance-format.html",
+      "template-change-history": "template/layouts/layout-changehistory.html",
+      "base": "{{[type]}}-{{[id]}}.html",
+      "format": "{{[type]}}-{{[id]}}.{{[fmt]}}.html",
+      "change-history": "{{[type]}}-{{[id]}}.change.history.html"
+    },
+    "TerminologyCapabilities": {
+      "template-base": "template/layouts/layout-canonical.html",
+      "template-format": "template/layouts/layout-instance-format.html",
+      "template-change-history": "template/layouts/layout-changehistory.html",
+      "base": "{{[type]}}-{{[id]}}.html",
+      "format": "{{[type]}}-{{[id]}}.{{[fmt]}}.html",
+      "change-history": "{{[type]}}-{{[id]}}.change.history.html"
+    },
     "_documentation": "this object contains the default publishing policy for different types. Anything not mentioned defaults to true"
   },
-  "script": "scripts/ant.xml",
   "_extraTemplates-documentation": "This array of objects identifies additional templates available for generation for different resource types",
   "_formats-documentation": "Lists the formats in the order format-specific pages should be generated.  (Note that suppressed formats won\u0027t appear, even if listed here.)",
-  "_pre-process-documentation": "This array of objects indicates data being converted from existing files using scripts to support dependency checking when performing continuous builds"
+  "_pre-process-documentation": "This array of objects indicates data being converted from existing files using scripts to support dependency checking when performing continuous builds",
+  "script": "scripts/ant-hl7.xml"
 }

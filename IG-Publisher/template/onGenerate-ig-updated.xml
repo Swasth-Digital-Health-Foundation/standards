@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ImplementationGuide xmlns="http://hl7.org/fhir">
-   <id value="hl7.fhir.in.core"/>
+   <id value="hl7.fhir.uv.hcx"/>
    <text>
       <status value="extensions"/>
       <div xmlns="http://www.w3.org/1999/xhtml">
@@ -13,24 +13,29 @@ These requirements were originally developed, balloted, and published in FHIR DS
          </div>
       </div>
    </text>
-   <url value="https://fhir-ig-demo/ImplementationGuide/ig"/>
-   <version value="0.0.1"/>
-   <name value="HCX Core"/>
+   <url value="https://hcxprotocol.io/fhir/r4/ImplementationGuide/hl7.fhir.uv.hcx"/>
+   <version value="0.7.0"/>
+   <name value="HCXFHIRImplementationGuide"/>
    <title value="FHIR Implementation Guide for HCX"/>
    <status value="draft"/>
-   <date value="2021-08-24"/>
-   <publisher value="HL7 International - HCX"/>
+   <date value="2022-04-01"/>
+   <publisher value="HCX Open Community"/>
    <contact>
-      <name value="HL7 International - HCX"/>
+      <name value="HCX Open Community"/>
       <telecom>
          <system value="url"/>
-         <value value="https://www.swasth.app/"/>
+         <value value="http://hcxprotocol.io/"/>
       </telecom>
    </contact>
    <description value="The US Core Implementation Guide is based on FHIR Version R4 and defines the minimum conformance requirements for accessing patient data. The Argonaut pilot implementations, ONC 2015 Edition Common Clinical Data Set (CCDS), and ONC U.S. Core Data for Interoperability (USCDI) v1 provided the requirements for this guide. The prior Argonaut search and vocabulary requirements, based on FHIR DSTU2, are updated in this guide to support FHIR Version R4. This guide was used as the basis for further testing and guidance by the Argonaut Project Team to provide additional content and guidance specific to Data Query Access for purpose of ONC Certification testing. These profiles are the foundation for future US Realm FHIR implementation guides. In addition to Argonaut, they are used by DAF-Research, QI-Core, and CIMI. Under the guidance of HL7 and the HL7 US Realm Steering Committee, the content will expand in future versions to meet the needs specific to the US Realm.&#xA;These requirements were originally developed, balloted, and published in FHIR DSTU2 as part of the Office of the National Coordinator for Health Information Technology (ONC) sponsored Data Access Framework (DAF) project. For more information on how DAF became US Core see the US Core change notes."/>
-   <packageId value="ig"/>
+   <packageId value="hcxprotocol.io"/>
    <license value="CC0-1.0"/>
    <fhirVersion value="4.0.1"/>
+   <dependsOn>
+      <uri value="https://nrces.in/ndhm/fhir/r4/ImplementationGuide/ndhm.in"/>
+      <packageId value="ndhm.in"/>
+      <version value="2.0.1"/>
+   </dependsOn>
    <definition>
 
 
@@ -61,7 +66,10 @@ These requirements were originally developed, balloted, and published in FHIR DS
 
 
 
-
+      <grouping id="-ex-example">
+         <name value="Example: Example Instances"/>
+         <description value="These are example instances that show what data produced and consumed by systems conforming with this implementation guide might look like"/>
+      </grouping>
 
       <resource>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/CoverageEligibilityResponseDocument">
@@ -136,19 +144,19 @@ These requirements were originally developed, balloted, and published in FHIR DS
          <groupingId value="-str-profile"/>
       </resource>
       <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/hcp-signature">
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/HCXSignatureExtension">
             <valueString value="SearchParameter"/>
          </extension>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
             <valueString value="StructureDefinition:extension"/>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="StructureDefinition-hcp-signature.html"/>
+            <valueUri value="StructureDefinition-HCXSignatureExtension.html"/>
          </extension>
          <reference>
-            <reference value="StructureDefinition/hcp-signature"/>
+            <reference value="StructureDefinition/HCXSignatureExtension"/>
          </reference>
-         <name value="HCX CoverageEligibility HCP Signature"/>
+         <name value="HCX Signature Extension"/>
          <description value="**Search by subject - a patient**  &#xA;**NOTE**: This US Core SearchParameter definition extends the usage context of the&#xA;[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)&#xA; - multipleAnd&#xA; - multipleOr&#xA; - comparator&#xA; - modifier&#xA; - chain"/>
          <exampleBoolean value="false"/>
          <groupingId value="-str-extension"/>
@@ -170,6 +178,21 @@ These requirements were originally developed, balloted, and published in FHIR DS
          <description value="**Search by subject - a patient**  &#xA;**NOTE**: This US Core SearchParameter definition extends the usage context of the&#xA;[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)&#xA; - multipleAnd&#xA; - multipleOr&#xA; - comparator&#xA; - modifier&#xA; - chain"/>
          <exampleBoolean value="false"/>
          <groupingId value="-str-profile"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Bundle"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Bundle-CoverageEligibilityRequestDocument-example-01.html"/>
+         </extension>
+         <reference>
+            <reference value="Bundle/CoverageEligibilityRequestDocument-example-01"/>
+         </reference>
+         <name value="HCX Coverage Eligibility Request Document example"/>
+         <description value="**Search by subject - a patient**  &#xA;**NOTE**: This US Core SearchParameter definition extends the usage context of the&#xA;[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)&#xA; - multipleAnd&#xA; - multipleOr&#xA; - comparator&#xA; - modifier&#xA; - chain"/>
+         <exampleCanonical value="https://ig.hcxprotocol.io/v0.7/StructureDefinition-CoverageEligibilityRequestDocument.html"/>
+         <groupingId value="-ex-example"/>
       </resource>
       <resource>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/ClaimResponseDocument">
@@ -226,19 +249,19 @@ These requirements were originally developed, balloted, and published in FHIR DS
          <groupingId value="-str-profile"/>
       </resource>
       <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/Condition">
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/Claim">
             <valueString value="SearchParameter"/>
          </extension>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
             <valueString value="StructureDefinition:resource"/>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="StructureDefinition-Condition.html"/>
+            <valueUri value="StructureDefinition-Claim.html"/>
          </extension>
          <reference>
-            <reference value="StructureDefinition/Condition"/>
+            <reference value="StructureDefinition/Claim"/>
          </reference>
-         <name value="HCX Condition"/>
+         <name value="HCX Claim"/>
          <description value="**Search by subject - a patient**  &#xA;**NOTE**: This US Core SearchParameter definition extends the usage context of the&#xA;[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)&#xA; - multipleAnd&#xA; - multipleOr&#xA; - comparator&#xA; - modifier&#xA; - chain"/>
          <exampleBoolean value="false"/>
          <groupingId value="-str-profile"/>
@@ -262,24 +285,6 @@ These requirements were originally developed, balloted, and published in FHIR DS
          <groupingId value="-str-profile"/>
       </resource>
       <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/Encounter">
-            <valueString value="SearchParameter"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="StructureDefinition:resource"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="StructureDefinition-Encounter.html"/>
-         </extension>
-         <reference>
-            <reference value="StructureDefinition/Encounter"/>
-         </reference>
-         <name value="HCX Encounter"/>
-         <description value="**Search by subject - a patient**  &#xA;**NOTE**: This US Core SearchParameter definition extends the usage context of the&#xA;[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)&#xA; - multipleAnd&#xA; - multipleOr&#xA; - comparator&#xA; - modifier&#xA; - chain"/>
-         <exampleBoolean value="false"/>
-         <groupingId value="-str-profile"/>
-      </resource>
-      <resource>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/CoverageEligibilityRequest">
             <valueString value="SearchParameter"/>
          </extension>
@@ -298,6 +303,21 @@ These requirements were originally developed, balloted, and published in FHIR DS
          <groupingId value="-str-profile"/>
       </resource>
       <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="CoverageEligibilityRequest"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="CoverageEligibilityRequest-example.html"/>
+         </extension>
+         <reference>
+            <reference value="CoverageEligibilityRequest/example"/>
+         </reference>
+         <name value="HCX Coverage Eligibility Request example"/>
+         <description value="**Search by subject - a patient**  &#xA;**NOTE**: This US Core SearchParameter definition extends the usage context of the&#xA;[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)&#xA; - multipleAnd&#xA; - multipleOr&#xA; - comparator&#xA; - modifier&#xA; - chain"/>
+         <exampleCanonical value="https://ig.hcxprotocol.io/v0.7/StructureDefinition-CoverageEligibilityRequest.html"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/CoverageEligibilityResponse">
             <valueString value="SearchParameter"/>
          </extension>
@@ -311,42 +331,6 @@ These requirements were originally developed, balloted, and published in FHIR DS
             <reference value="StructureDefinition/CoverageEligibilityResponse"/>
          </reference>
          <name value="HCX Coverage Eligibility Response"/>
-         <description value="**Search by subject - a patient**  &#xA;**NOTE**: This US Core SearchParameter definition extends the usage context of the&#xA;[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)&#xA; - multipleAnd&#xA; - multipleOr&#xA; - comparator&#xA; - modifier&#xA; - chain"/>
-         <exampleBoolean value="false"/>
-         <groupingId value="-str-profile"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/Organization">
-            <valueString value="SearchParameter"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="StructureDefinition:resource"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="StructureDefinition-Organization.html"/>
-         </extension>
-         <reference>
-            <reference value="StructureDefinition/Organization"/>
-         </reference>
-         <name value="HCX Organization"/>
-         <description value="**Search by subject - a patient**  &#xA;**NOTE**: This US Core SearchParameter definition extends the usage context of the&#xA;[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)&#xA; - multipleAnd&#xA; - multipleOr&#xA; - comparator&#xA; - modifier&#xA; - chain"/>
-         <exampleBoolean value="false"/>
-         <groupingId value="-str-profile"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/Patient">
-            <valueString value="SearchParameter"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="StructureDefinition:resource"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="StructureDefinition-Patient.html"/>
-         </extension>
-         <reference>
-            <reference value="StructureDefinition/Patient"/>
-         </reference>
-         <name value="HCX Patient"/>
          <description value="**Search by subject - a patient**  &#xA;**NOTE**: This US Core SearchParameter definition extends the usage context of the&#xA;[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)&#xA; - multipleAnd&#xA; - multipleOr&#xA; - comparator&#xA; - modifier&#xA; - chain"/>
          <exampleBoolean value="false"/>
          <groupingId value="-str-profile"/>
@@ -478,73 +462,19 @@ These requirements were originally developed, balloted, and published in FHIR DS
          <groupingId value="-str-extension"/>
       </resource>
       <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/Practitioner">
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/CommunicationDocument">
             <valueString value="SearchParameter"/>
          </extension>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
             <valueString value="StructureDefinition:resource"/>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="StructureDefinition-Practitioner.html"/>
+            <valueUri value="StructureDefinition-CommunicationDocument.html"/>
          </extension>
          <reference>
-            <reference value="StructureDefinition/Practitioner"/>
+            <reference value="StructureDefinition/CommunicationDocument"/>
          </reference>
-         <name value="HCX Practitioner"/>
-         <description value="**Search by subject - a patient**  &#xA;**NOTE**: This US Core SearchParameter definition extends the usage context of the&#xA;[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)&#xA; - multipleAnd&#xA; - multipleOr&#xA; - comparator&#xA; - modifier&#xA; - chain"/>
-         <exampleBoolean value="false"/>
-         <groupingId value="-str-profile"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/organization-extension">
-            <valueString value="SearchParameter"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="StructureDefinition:extension"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="StructureDefinition-organization-extension.html"/>
-         </extension>
-         <reference>
-            <reference value="StructureDefinition/organization-extension"/>
-         </reference>
-         <name value="HCX Organization Extension"/>
-         <description value="**Search by subject - a patient**  &#xA;**NOTE**: This US Core SearchParameter definition extends the usage context of the&#xA;[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)&#xA; - multipleAnd&#xA; - multipleOr&#xA; - comparator&#xA; - modifier&#xA; - chain"/>
-         <exampleBoolean value="false"/>
-         <groupingId value="-str-extension"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/PreAuthorizationRequest">
-            <valueString value="SearchParameter"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="StructureDefinition:resource"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="StructureDefinition-PreAuthorizationRequest.html"/>
-         </extension>
-         <reference>
-            <reference value="StructureDefinition/PreAuthorizationRequest"/>
-         </reference>
-         <name value="HCX PreAuthorization Request"/>
-         <description value="**Search by subject - a patient**  &#xA;**NOTE**: This US Core SearchParameter definition extends the usage context of the&#xA;[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)&#xA; - multipleAnd&#xA; - multipleOr&#xA; - comparator&#xA; - modifier&#xA; - chain"/>
-         <exampleBoolean value="false"/>
-         <groupingId value="-str-profile"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/PreAuthorizationResponse">
-            <valueString value="SearchParameter"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="StructureDefinition:resource"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="StructureDefinition-PreAuthorizationResponse.html"/>
-         </extension>
-         <reference>
-            <reference value="StructureDefinition/PreAuthorizationResponse"/>
-         </reference>
-         <name value="HCX PreAuthorization Response"/>
+         <name value="HCX Communication Document"/>
          <description value="**Search by subject - a patient**  &#xA;**NOTE**: This US Core SearchParameter definition extends the usage context of the&#xA;[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)&#xA; - multipleAnd&#xA; - multipleOr&#xA; - comparator&#xA; - modifier&#xA; - chain"/>
          <exampleBoolean value="false"/>
          <groupingId value="-str-profile"/>
@@ -563,24 +493,6 @@ These requirements were originally developed, balloted, and published in FHIR DS
             <reference value="StructureDefinition/Task"/>
          </reference>
          <name value="HCX Task"/>
-         <description value="**Search by subject - a patient**  &#xA;**NOTE**: This US Core SearchParameter definition extends the usage context of the&#xA;[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)&#xA; - multipleAnd&#xA; - multipleOr&#xA; - comparator&#xA; - modifier&#xA; - chain"/>
-         <exampleBoolean value="false"/>
-         <groupingId value="-str-profile"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/PractitionerRole">
-            <valueString value="SearchParameter"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="StructureDefinition:resource"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="StructureDefinition-PractitionerRole.html"/>
-         </extension>
-         <reference>
-            <reference value="StructureDefinition/PractitionerRole"/>
-         </reference>
-         <name value="HCX Practitioner Role"/>
          <description value="**Search by subject - a patient**  &#xA;**NOTE**: This US Core SearchParameter definition extends the usage context of the&#xA;[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)&#xA; - multipleAnd&#xA; - multipleOr&#xA; - comparator&#xA; - modifier&#xA; - chain"/>
          <exampleBoolean value="false"/>
          <groupingId value="-str-profile"/>
@@ -717,12 +629,18 @@ These requirements were originally developed, balloted, and published in FHIR DS
          <generation value="html"/>
          <page>
             <nameUrl value="index.html"/>
+            <title value="HCX FHIR Implementation Guide"/>
             <generation value="html"/>
          </page>
          <page>
             <nameUrl value="profiles.html"/>
             <title value="Profiles"/>
             <generation value="html"/>
+            <page>
+               <nameUrl value="StructureDefinition-Claim.html"/>
+               <title value="HCX Claim"/>
+               <generation value="generated"/>
+            </page>
             <page>
                <nameUrl value="StructureDefinition-ClaimResponse.html"/>
                <title value="HCX Claim Response"/>
@@ -759,18 +677,13 @@ These requirements were originally developed, balloted, and published in FHIR DS
                <generation value="generated"/>
             </page>
             <page>
-               <nameUrl value="StructureDefinition-Condition.html"/>
-               <title value="HCX Condition"/>
-               <generation value="generated"/>
-            </page>
-            <page>
-               <nameUrl value="StructureDefinition-Encounter.html"/>
-               <title value="HCX Encounter"/>
-               <generation value="generated"/>
-            </page>
-            <page>
                <nameUrl value="StructureDefinition-CoverageEligibilityRequest.html"/>
                <title value="HCX Coverage Eligibility Request"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="CoverageEligibilityRequest-example.html"/>
+               <title value="HCX Coverage Eligibility Request Example"/>
                <generation value="generated"/>
             </page>
             <page>
@@ -784,13 +697,18 @@ These requirements were originally developed, balloted, and published in FHIR DS
                <generation value="generated"/>
             </page>
             <page>
-               <nameUrl value="StructureDefinition-hcp-signature.html"/>
-               <title value="HCX HCP Signature"/>
+               <nameUrl value="StructureDefinition-HCXSignatureExtension.html"/>
+               <title value="HCX Signature Extension"/>
                <generation value="generated"/>
             </page>
             <page>
                <nameUrl value="StructureDefinition-CoverageEligibilityRequestDocument.html"/>
                <title value="HCX Coverage Eligibility Request Document"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="Bundle-CoverageEligibilityRequestDocument-example-01.html"/>
+               <title value="HCX Coverage Eligibility Request Document example"/>
                <generation value="generated"/>
             </page>
             <page>
@@ -815,22 +733,12 @@ These requirements were originally developed, balloted, and published in FHIR DS
             </page>
             <page>
                <nameUrl value="StructureDefinition-CoverageEligibilityRequest.html"/>
-               <title value="HCX Coverage Eligibility Request "/>
+               <title value="HCX Coverage Eligibility Request"/>
                <generation value="generated"/>
             </page>
             <page>
                <nameUrl value="StructureDefinition-CoverageEligibilityResponse.html"/>
                <title value="HCX Coverage Eligibility Response"/>
-               <generation value="generated"/>
-            </page>
-            <page>
-               <nameUrl value="StructureDefinition-Organization.html"/>
-               <title value="HCX Organization"/>
-               <generation value="generated"/>
-            </page>
-            <page>
-               <nameUrl value="StructureDefinition-Patient.html"/>
-               <title value="HCX Patient"/>
                <generation value="generated"/>
             </page>
             <page>
@@ -844,28 +752,8 @@ These requirements were originally developed, balloted, and published in FHIR DS
                <generation value="generated"/>
             </page>
             <page>
-               <nameUrl value="StructureDefinition-Practitioner.html"/>
-               <title value="HCX Practitioner"/>
-               <generation value="generated"/>
-            </page>
-            <page>
-               <nameUrl value="StructureDefinition-PractitionerRole.html"/>
-               <title value="HCX Practitioner Role"/>
-               <generation value="generated"/>
-            </page>
-            <page>
-               <nameUrl value="StructureDefinition-organization-extension.html"/>
-               <title value="HCX Organization Extension"/>
-               <generation value="generated"/>
-            </page>
-            <page>
-               <nameUrl value="StructureDefinition-PreAuthorizationRequest.html"/>
-               <title value="HCX Pre Authorization Request"/>
-               <generation value="generated"/>
-            </page>
-            <page>
-               <nameUrl value="StructureDefinition-PreAuthorizationResponse.html"/>
-               <title value="HCX Pre Authorization Response"/>
+               <nameUrl value="StructureDefinition-CommunicationDocument.html"/>
+               <title value="HCX Communication Document"/>
                <generation value="generated"/>
             </page>
             <page>
@@ -964,18 +852,13 @@ These requirements were originally developed, balloted, and published in FHIR DS
                <generation value="generated"/>
             </page>
             <page>
-               <nameUrl value="StructureDefinition-Condition.html"/>
-               <title value="HCX Condition"/>
+               <nameUrl value="StructureDefinition-Claim.html"/>
+               <title value="HCX Claim"/>
                <generation value="generated"/>
             </page>
             <page>
                <nameUrl value="StructureDefinition-Coverage.html"/>
                <title value="HCX Coverage"/>
-               <generation value="generated"/>
-            </page>
-            <page>
-               <nameUrl value="StructureDefinition-Encounter.html"/>
-               <title value="HCX Encounter"/>
                <generation value="generated"/>
             </page>
             <page>
@@ -989,16 +872,6 @@ These requirements were originally developed, balloted, and published in FHIR DS
                <generation value="generated"/>
             </page>
             <page>
-               <nameUrl value="StructureDefinition-Organization.html"/>
-               <title value="HCX Organization"/>
-               <generation value="generated"/>
-            </page>
-            <page>
-               <nameUrl value="StructureDefinition-Patient.html"/>
-               <title value="HCX Patient"/>
-               <generation value="generated"/>
-            </page>
-            <page>
                <nameUrl value="StructureDefinition-PaymentNotice.html"/>
                <title value="HCX Payment Notice"/>
                <generation value="generated"/>
@@ -1009,18 +882,8 @@ These requirements were originally developed, balloted, and published in FHIR DS
                <generation value="generated"/>
             </page>
             <page>
-               <nameUrl value="StructureDefinition-Practitioner.html"/>
-               <title value="HCX Practitioner"/>
-               <generation value="generated"/>
-            </page>
-            <page>
-               <nameUrl value="StructureDefinition-PreAuthorizationRequest.html"/>
-               <title value="HCX PreAuthorization Request"/>
-               <generation value="generated"/>
-            </page>
-            <page>
-               <nameUrl value="StructureDefinition-PreAuthorizationResponse.html"/>
-               <title value="HCX PreAuthorization Response"/>
+               <nameUrl value="StructureDefinition-CommunicationDocument.html"/>
+               <title value="HCX Communication Document"/>
                <generation value="generated"/>
             </page>
             <page>
@@ -1029,13 +892,8 @@ These requirements were originally developed, balloted, and published in FHIR DS
                <generation value="generated"/>
             </page>
             <page>
-               <nameUrl value="StructureDefinition-PractitionerRole.html"/>
-               <title value="HCX Practitioner Role"/>
-               <generation value="generated"/>
-            </page>
-            <page>
-               <nameUrl value="StructureDefinition-hcp-signature.html"/>
-               <title value="HCX CoverageEligibility HCP Signature"/>
+               <nameUrl value="StructureDefinition-HCXSignatureExtension.html"/>
+               <title value="HCX Signature Extension"/>
                <generation value="generated"/>
             </page>
             <page>
@@ -1061,11 +919,6 @@ These requirements were originally developed, balloted, and published in FHIR DS
             <page>
                <nameUrl value="StructureDefinition-HCXProofOfIdentificationExtension.html"/>
                <title value="HCX Diagnostic DocumentsExtension"/>
-               <generation value="generated"/>
-            </page>
-            <page>
-               <nameUrl value="StructureDefinition-organization-extension.html"/>
-               <title value="HCX Organization Extension"/>
                <generation value="generated"/>
             </page>
             <page>
@@ -1103,6 +956,16 @@ These requirements were originally developed, balloted, and published in FHIR DS
                <title value="HCX insurance-company-owners"/>
                <generation value="generated"/>
             </page>
+            <page>
+               <nameUrl value="Bundle-CoverageEligibilityRequestDocument-example-01.html"/>
+               <title value="HCX Coverage Eligibility Request Document example"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="CoverageEligibilityRequest-example.html"/>
+               <title value="HCX Coverage Eligibility Request example"/>
+               <generation value="generated"/>
+            </page>
          </page>
       </page>
       <parameter>
@@ -1119,7 +982,15 @@ These requirements were originally developed, balloted, and published in FHIR DS
       </parameter>
       <parameter>
          <code value="path-resource"/>
-         <value value="input/hcx-v2-definitions"/>
+         <value value="input/hcx-definitions"/>
+      </parameter>
+      <parameter>
+         <code value="generate-turtle"/>
+         <value value="n"/>
+      </parameter>
+      <parameter>
+         <code value="excludettl"/>
+         <value value="y"/>
       </parameter>
       <parameter>
          <code value="path-resource"/>
@@ -1203,7 +1074,7 @@ These requirements were originally developed, balloted, and published in FHIR DS
       </parameter>
       <parameter>
          <code value="path-history"/>
-         <value value="https://fhir-ig-demo/history.html"/>
+         <value value="https://hcxprotocol.io/fhir/r4/history.html"/>
       </parameter>
       <parameter>
          <code value="template-html"/>

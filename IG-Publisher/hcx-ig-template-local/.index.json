@@ -1,4 +1,23 @@
 ﻿{
   "index-version": 1,
-  "files": []
+  "files": [
+    {
+      "filename": "onGenerate-ig-working.json",
+      "resourceType": "ImplementationGuide",
+      "id": "hl7.fhir.uv.hcx",
+      "url": "https://hcxprotocol.io/fhir/r4/ImplementationGuide/hl7.fhir.uv.hcx",
+      "version": "0.7.0"
+    },
+    {
+      "filename": "onGenerate-validation.json",
+      "resourceType": "OperationOutcome"
+    },
+    {
+      "filename": "onLoad-ig-working.json",
+      "resourceType": "ImplementationGuide",
+      "id": "hl7.fhir.uv.hcx",
+      "url": "https://hcxprotocol.io/fhir/r4/ImplementationGuide/hl7.fhir.uv.hcx",
+      "version": "0.7.0"
+    }
+  ]
 }

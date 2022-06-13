@@ -55,9 +55,9 @@
   <target name="onGenerate.data">
     <xslt in="${onGenerate.ig.source}xml" out="${ig.temp}/_data/artifacts.json" style="${ig.scripts}/onGenerate.data.xslt"/>
   </target>
-<!-- <target name="onGenerate.r5-schemas" depends="onGenerate.checkVersions" if="R5">
+  <target name="onGenerate.r5-schemas" depends="onGenerate.checkVersions" if="R5">
     <getSchemas version="R5" url="http://build.fhir.org/"/>
-</target> -->
+  </target>
   <target name="onGenerate.r4-schemas" depends="onGenerate.checkVersions" if="R4">
     <getSchemas version="R4" url="http://hl7.org/fhir/R4/"/>
   </target>
@@ -70,9 +70,7 @@
   <target name="onGenerate.r2-schemas" depends="onGenerate.checkVersions" if="R2">
     <getSchemas version="R2" url="http://hl7.org/fhir/DSTU2/"/>
   </target>
-<target name="onGenerate.schemas" depends="onGenerate.r4-schemas,onGenerate.r3-schemas,onGenerate.r2b-schemas,onGenerate.r2-schemas"/>
-<!-- <target name="onGenerate.schemas" depends="onGenerate.r5-schemas,onGenerate.r4-schemas,onGenerate.r3-schemas,onGenerate.r2b-schemas,onGenerate.r2-schemas"/> -->
-
+  <target name="onGenerate.schemas" depends="onGenerate.r5-schemas,onGenerate.r4-schemas,onGenerate.r3-schemas,onGenerate.r2b-schemas,onGenerate.r2-schemas"/>
   <target name="onGenerate.setup">
     <property name="dir.input" value="${ig.root}/${folder.input}"/>
     <property name="dir.temp.includes" value="${ig.temp}/_includes" relative="yes"/>
