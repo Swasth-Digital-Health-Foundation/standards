@@ -1,5 +1,4 @@
-# ig-template-hl7
+# ig-template-base
+package-id = fhir.base.template
 
-package id = hl7.base.template
-
-Base template for HL7 International-published IGs.  Foundation for family-specific templates
+Base IG template managed by HL7 but usable by anyone (no logos).  The foundation for most HL7-published IGs

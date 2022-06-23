@@ -325,8 +325,8 @@
     },
     "_documentation": "this object contains the default publishing policy for different types. Anything not mentioned defaults to true"
   },
+  "script": "scripts/ant.xml",
   "_extraTemplates-documentation": "This array of objects identifies additional templates available for generation for different resource types",
   "_formats-documentation": "Lists the formats in the order format-specific pages should be generated.  (Note that suppressed formats won\u0027t appear, even if listed here.)",
-  "_pre-process-documentation": "This array of objects indicates data being converted from existing files using scripts to support dependency checking when performing continuous builds",
-  "script": "scripts/ant-hl7.xml"
+  "_pre-process-documentation": "This array of objects indicates data being converted from existing files using scripts to support dependency checking when performing continuous builds"
 }
