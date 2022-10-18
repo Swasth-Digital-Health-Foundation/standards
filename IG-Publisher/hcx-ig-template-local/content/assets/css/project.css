@@ -226,6 +226,7 @@ body {
   background-color: var(--publish-box-bg-color);
   border: var(--publish-box-border);
   padding: 5px;
+  display: none;
 }
 
 .dragon {
